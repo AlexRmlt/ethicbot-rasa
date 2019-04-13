@@ -1,0 +1,126 @@
+%YAML 1.1
+---
+actions:
+- action_create_stakeholder
+- utter_next_stakeholder
+- utter_thanks
+- utter_ask_impact_positive
+- utter_ask_impact_negative
+- action_create_option
+- action_choose_decider
+- utter_confirm_stakeholders
+- utter_ask_impact
+- utter_intro
+- utter_submit_model
+- utter_confirm_decider
+- utter_ask_options
+- action_update_consequence
+- utter_ask_consequences
+- utter_ask_stakeholders
+- utter_next_consequence
+- utter_next_option
+- utter_goodbye
+- action_intro
+- action_update_stakeholder
+- action_create_consequence
+- action_choose_affected_stakeholder
+- utter_ask_quantity
+entities:
+- plural
+- quantity
+- name
+- sentiment
+- stakeholder
+intents:
+- consequence
+- deny
+- positive
+- decider
+- option
+- negative
+- greeting
+- stakeholder
+- affirm
+- quantity
+- goodbye
+- thanks
+slots:
+  action_return:
+    type: bool
+  amount_stakeholders:
+    type: text
+  decider:
+    type: text
+  name:
+    type: text
+  option:
+    type: text
+  plural:
+    type: categorical
+    values:
+    - singular
+    - specific_plural
+    - unspecific_plural
+  sentiment:
+    type: categorical
+    values:
+    - pos
+    - neg
+    - neu
+  stakeholder:
+    type: text
+templates:
+  utter_ask_consequences:
+  - text: For which of these persons would this decision have consequences?
+  utter_ask_impact:
+  - text: Would that have any positive or negative effects for {name}?
+  utter_ask_impact_negative:
+  - text: For {name} this would be rather unpleasant, right?
+  utter_ask_impact_positive:
+  - text: That would be a good thing for {name}, right?
+  utter_ask_options:
+  - text: And what would be the most obvious option that {decider} could choose?
+  utter_ask_quantity:
+  - text: Can you tell me approximately how many persons there are?
+  - text: From how many persons does this group consist exactly?
+  - text: How many people are we talking about?
+  utter_ask_stakeholders:
+  - text: 'First: Which persons or groups of people are all in the situation involved?
+      Please call me one sentence at a time, first the first one.'
+  utter_confirm_decider:
+  - text: The moral decision is made by {decider}.
+  utter_confirm_stakeholders:
+  - text: All right. As far as I understand {amount_stakeholders} different people
+      or groups of people are involved.
+  utter_default:
+  - text: Sorry, I didn't catch that.
+  utter_goodbye:
+  - text: See you later
+  - text: Bye Bye
+  - text: Goodbye
+  - text: Bye
+  utter_got_it:
+  - text: I got it.
+  utter_intro:
+  - text: Hello! I will now try to understand your situation.
+  utter_next_consequence:
+  - text: For whom would this decision still have consequences and how would they
+      look like?
+  - text: Would this have any consequences for anybody else?
+  - text: Would that affect anyone else?
+  utter_next_option:
+  - text: Are there any further options?
+  - text: What could be another option?
+  - text: Which possibility could you imagine as well?
+  - text: What would be another option that {decider} could choose?
+  utter_next_stakeholder:
+  - text: Are there any other people involved? Please name the next one.
+  - text: Are further people involved? If so, name the next one.
+  - text: Any other persons?
+  - text: Other persons to be named?
+  utter_submit_model:
+  - text: Well, I think I got everything.
+  utter_thanks:
+  - text: No problem!
+  - text: Never mind
+  - text: My pleasure
