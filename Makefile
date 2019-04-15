@@ -31,7 +31,7 @@ train-nlu:
 		-v $(shell pwd)/config:/app/config \
 		-v $(shell pwd)/components:/app/components \
 		-v $(shell pwd)/modules:/app/modules \
-		ethicbot-nlu:latest \
+		aroemelt/ethicbot:nlu \
 		run \
 		python -m rasa_nlu.train \
 		-c config/nlu_config.yml \
@@ -44,7 +44,7 @@ train-core:
 		-v $(shell pwd):/app/project \
 		-v $(shell pwd)/../models/rasa_core:/app/models \
 		-v $(shell pwd)/config:/app/config \
-		ethicbot-core:latest \
+		aroemelt/ethicbot:core \
 		run \
 		python -m rasa_core.train \
 		-d project/domain.yml \
