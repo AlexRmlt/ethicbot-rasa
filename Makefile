@@ -1,10 +1,8 @@
-.PHONY: run clean train-nlu train-core train-nlu-local train-core-local train-interactive action-server
+.PHONY: clean train-nlu train-core train-nlu-local train-core-local train-interactive action-server
 
 TEST_PATH=./
 
 help:
-	@echo "    run"
-	@echo "       Start all components as composed docker services"
 	@echo "    clean"
 	@echo "        Remove python artifacts and build artifacts."
 	@echo "    train-nlu"
@@ -19,9 +17,6 @@ help:
 	@echo "        Starts interactive training session"
 	@echo "    action-server"
 	@echo "        Starts the server for custom action."
-
-run:
-	docker-compose up
 
 clean:
 	find . -name '*.pyc' -exec rm -f {} +
