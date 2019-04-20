@@ -6,6 +6,10 @@ from word2number import w2n
 inf = inflect.engine()
 nlp = spacy.load('en_core_web_md')
 
+nlp.Defaults.stop_words.add("could")
+nlp.Defaults.stop_words.add("make")
+nlp.Defaults.stop_words.add("do")
+
 def get_associations(message):
 	verbs = []
 	doc = nlp(message)

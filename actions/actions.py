@@ -117,21 +117,22 @@ class UpdateStakeholder(Action):
 				sh['decider'] = True		
 				events.append(SlotSet('decider', sh['name']))
 				action_return = True
-
-			if (tracker.latest_message['intent'].get('name') == 'quantity'):
+				mind.memorize(sh)
+				dispatcher.utter_template('utter_got_it', tracker)
+			elif (tracker.latest_message['intent'].get('name') == 'quantity'):
 				sources = [ next(tracker.get_latest_entity_values('quantity'), -1),
 							tracker.get_slot('stakeholder'),
 							tracker.latest_message['text'] ]
 				quantity = nlu.get_quantity_from_sources(sources)
 
 				if quantity != -1:
-					sh['quantity'] = quantity
+					sh['amount'] = quantity
 					action_return = True
 					mind.memorize(sh)
 					dispatcher.utter_template('utter_got_it', tracker)
 				else:
 					action_return = False
-		except AttributeError:
+		except (AttributeError, TypeError):
 			events.append(SlotSet('name', None))
 			action_return = False
 
@@ -228,11 +229,11 @@ class UpdateConsequence(Action):
 
 	def run(self, dispatcher, tracker, domain):
 		action_return = False
-		consequence = mind.get_consequence_by_stakeholder(tracker.get_slot('name'))
 
 		# Update unclassified impact
-		# TODO: add intent and handling for true neutral impact
 		try:
+			consequence = mind.get_consequence_by_stakeholder(tracker.get_slot('name'))
+
 			if (tracker.get_slot('sentiment') == 'pos' or \
 				tracker.latest_message['intent'].get('name') == 'positive'):
 				consequence['impact'] = 1
@@ -241,13 +242,13 @@ class UpdateConsequence(Action):
 				consequence['impact'] = -1
 			else:
 				if (tracker.latest_message['intent'].get('name') == 'deny'):
-					consequence['impact'] = consequence['impact'] * -1
+					consequence['impact'] = consequence['impact'] * -1					
 
 			if consequence['impact'] != 0:
 				consequence.memorize()
 				dispatcher.utter_template('utter_got_it', tracker)
 				action_return = True
-		except AttributeError:
+		except (AttributeError, TypeError):
 			action_return = False
 
 		return [SlotSet("action_return", action_return)]
@@ -286,3 +287,36 @@ class ChooseAffectedStakeholder(Action):
 			buttons.append({ 'title': sh['name'], 'payload': '/consequence{"name": "' + sh['name'] + '"}'})
 		dispatcher.utter_button_message(message, buttons)
 		return []
+
+class EvaluationUtilitarism(Action):
+	"""
+	Evaluate the gathered information using utilitarism ethics principle
+	"""
+	def name(self):
+		return 'action_evaluation_utilitarism'
+
+	def run(self, dispatcher, tracker, domain):
+		data = mind.get_all()
+		r = requests.post(const.API_UTILITARISM, json=data)
+
+		if r.status_code == 200:
+			dispatcher.utter_message(r.text)
+		else:
+			dispatcher.utter_template('utter_evaluation_failure', tracker)
+
+
+class EvaluationDeontology(Action):
+	"""
+	Evaluate the gathered information using deontology ethics principle
+	"""
+	def name(self):
+		return 'action_evaluation_deontology'
+
+	def run(self, dispatcher, tracker, domain):
+		data = mind.get_all()
+		r = requests.post(const.API_DEONTOLOGY, json=data)
+
+		if r.status_code == 200:
+			dispatcher.utter_message(r.text)
+		else:
+			dispatcher.utter_template('utter_evaluation_failure', tracker)

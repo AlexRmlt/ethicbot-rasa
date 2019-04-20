@@ -1,49 +1,55 @@
 %YAML 1.1
 ---
 actions:
-- action_create_stakeholder
-- utter_next_stakeholder
-- utter_thanks
-- utter_ask_impact_positive
 - utter_ask_impact_negative
-- action_create_option
-- action_choose_decider
-- utter_confirm_stakeholders
-- utter_ask_impact
-- utter_intro
-- utter_submit_model
-- utter_confirm_decider
-- utter_ask_options
-- action_update_consequence
-- utter_ask_consequences
-- utter_ask_stakeholders
-- utter_next_consequence
-- utter_next_option
-- utter_goodbye
-- action_intro
-- action_update_stakeholder
-- action_create_consequence
+- action_evaluation_utilitarism
+- utter_thanks
 - action_choose_affected_stakeholder
+- utter_next_consequence
+- utter_next_stakeholder
+- utter_ask_method
+- utter_next_option
+- action_choose_decider
+- utter_goodbye
+- utter_intro
+- action_create_stakeholder
+- action_create_option
+- action_intro
+- utter_ask_consequences
+- action_evaluation_deontology
+- utter_ask_options
+- utter_confirm_decider
 - utter_ask_quantity
+- action_create_consequence
+- utter_ask_impact
+- action_update_consequence
+- utter_ask_impact_positive
+- utter_got_everything
+- utter_ask_stakeholders
+- utter_confirm_stakeholders
+- action_update_stakeholder
 entities:
-- plural
-- quantity
-- name
 - sentiment
+- name
+- quantity
 - stakeholder
+- plural
 intents:
-- consequence
-- deny
+- utilitarism
 - positive
+- consequence
 - decider
-- option
-- negative
+- neutral
 - greeting
 - stakeholder
-- affirm
+- deny
+- option
 - quantity
+- negative
+- affirm
 - goodbye
 - thanks
+- dontknow
 slots:
   action_return:
     type: bool
@@ -73,11 +79,20 @@ templates:
   utter_ask_consequences:
   - text: For which of these persons would this decision have consequences?
   utter_ask_impact:
-  - text: Would that have any positive or negative effects for {name}?
+  - text: Would the effects be more positive or more negative for {name}?
+  - text: Would that be more positive or more negative for {name}?
+  - text: Would you consider the effects on {name} to be more negative or more positive?
   utter_ask_impact_negative:
   - text: For {name} this would be rather unpleasant, right?
   utter_ask_impact_positive:
   - text: That would be a good thing for {name}, right?
+  utter_ask_method:
+  - buttons:
+    - payload: /utilitarism
+      title: Utilitarism
+    - payload: /deontology
+      title: Deontology
+    text: Which ethical principle should I apply for evaluation?
   utter_ask_options:
   - text: And what would be the most obvious option that {decider} could choose?
   utter_ask_quantity:
@@ -85,8 +100,8 @@ templates:
   - text: From how many persons does this group consist exactly?
   - text: How many people are we talking about?
   utter_ask_stakeholders:
-  - text: 'First: Which persons or groups of people are all in the situation involved?
-      Please call me one sentence at a time, first the first one.'
+  - text: 'First: Which persons or groups of people are all involved in the situation?
+      Please tell me in one sentence, one after the other.'
   utter_confirm_decider:
   - text: The moral decision is made by {decider}.
   utter_confirm_stakeholders:
@@ -94,18 +109,26 @@ templates:
       or groups of people are involved.
   utter_default:
   - text: Sorry, I didn't catch that.
+  utter_evaluation_failure:
+  - text: I am currently not able to process your request. Sorry for that!
   utter_goodbye:
   - text: See you later
   - text: Bye Bye
   - text: Goodbye
   - text: Bye
+  utter_got_everything:
+  - text: Well, I think I got everything.
   utter_got_it:
   - text: I got it.
+  - text: I understand.
+  - text: All right.
+  - text: Okay.
+  - text: I see.
   utter_intro:
   - text: Hello! I will now try to understand your situation.
   utter_next_consequence:
-  - text: For whom would this decision still have consequences and how would they
-      look like?
+  - text: For whom would this decision have consequences and what would they look
+      like?
   - text: Would this have any consequences for anybody else?
   - text: Would that affect anyone else?
   utter_next_option:
@@ -118,8 +141,6 @@ templates:
   - text: Are further people involved? If so, name the next one.
   - text: Any other persons?
   - text: Other persons to be named?
-  utter_submit_model:
-  - text: Well, I think I got everything.
   utter_thanks:
   - text: No problem!
   - text: Never mind
