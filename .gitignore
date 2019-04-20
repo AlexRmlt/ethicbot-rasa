@@ -1,2 +1,3 @@
 docker-services/
 playground.ipynb
+__pycache__/
