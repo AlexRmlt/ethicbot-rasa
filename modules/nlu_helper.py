@@ -6,19 +6,6 @@ from word2number import w2n
 inf = inflect.engine()
 nlp = spacy.load('en_core_web_md')
 
-nlp.Defaults.stop_words.add("could")
-nlp.Defaults.stop_words.add("make")
-nlp.Defaults.stop_words.add("do")
-
-def get_associations(message):
-	verbs = []
-	doc = nlp(message)
-
-	for token in doc:
-   		if token.pos_ == 'VERB' and not token.is_stop:
-   			verbs.append(token.lemma_)
-	return verbs
-
 def get_quantity_from_sources(sources):
 	"""
 	Return the quantity that is found first in the list of sources
@@ -39,3 +26,15 @@ def get_quantity(entity):
 			pass
 	return -1
 
+def get_associated_verbs(message):
+	"""
+	- DEPRECATED -
+	Identify verbs in the message which could be associated with actions
+	"""
+	verbs = []
+	doc = nlp(message)
+
+	for token in doc:
+   		if token.pos_ == 'VERB' and not token.is_stop:
+   			verbs.append(token.lemma_)
+	return verbs

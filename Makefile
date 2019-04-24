@@ -48,7 +48,7 @@ train-core:
 		run \
 		python -m rasa_core.train \
 		-d project/domain.yml \
-		-s project/data/stories.md \
+		-s project/data/stories \
 		-o models \
 		-c config/policies.yml
 
@@ -56,12 +56,12 @@ train-nlu-local:
 	python -m rasa_nlu.train -c config/nlu_config.yml --data data/nlu.md -o ../models --fixed_model_name nlu --project current
 
 train-core-local:
-	python -m rasa_core.train -d domain.yml -s data/stories.md -o ../models/current/dialogue -c policies.yml
+	python -m rasa_core.train -d domain.yml -s data/stories -o ../models/current/dialogue -c policies.yml
 
 train-interactive:
-	python -m rasa_core.train interactive -o ../models/current/dialogue -d domain.yml -c config/policies.yml -s data/stories.md \
+	python -m rasa_core.train interactive -o ../models/current/dialogue -d domain.yml -c config/policies.yml -s data/stories \
   		--nlu ../models/current/nlu --endpoints config/endpoints_local.yml
 	
 action-server:
-	python -m rasa_core_sdk.endpoint --actions actions.actions
+	python -m rasa_core_sdk.endpoint --actions actions
 

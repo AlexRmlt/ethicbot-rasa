@@ -1,61 +1,82 @@
 %YAML 1.1
 ---
 actions:
-- utter_ask_impact_negative
-- action_evaluation_utilitarism
-- utter_thanks
-- action_choose_affected_stakeholder
-- utter_next_consequence
+- utter_too_bad
+- utter_next_deed
+- utter_ask_guess_quantity
+- action_update_context
 - utter_next_stakeholder
-- utter_ask_method
-- utter_next_option
-- action_choose_decider
-- utter_goodbye
-- utter_intro
-- action_create_stakeholder
-- action_create_option
-- action_intro
-- utter_ask_consequences
-- action_evaluation_deontology
-- utter_ask_options
-- utter_confirm_decider
-- utter_ask_quantity
-- action_create_consequence
-- utter_ask_impact
-- action_update_consequence
-- utter_ask_impact_positive
-- utter_got_everything
-- utter_ask_stakeholders
-- utter_confirm_stakeholders
+- utter_ask_deed
+- utter_next_method
+- utter_ask_identified_deed
+- action_update_deed
+- utter_ask_moral_question
 - action_update_stakeholder
+- action_update_option
+- utter_ask_consequences
+- action_create_consequence
+- action_intro
+- utter_next_consequence
+- action_create_option
+- utter_thanks
+- utter_ask_impact_negative
+- utter_ask_stakeholders
+- utter_confirm_decider
+- utter_ask_impact
+- action_choose_affected_stakeholder
+- utter_ask_options
+- utter_got_everything
+- action_create_stakeholder
+- utter_next_option
+- action_evaluation_deontology
+- action_evaluation_utilitarism
+- utter_ask_universalizable
+- utter_goodbye
+- action_choose_decider
+- utter_confirm_stakeholders
+- utter_ask_method
+- utter_ask_impact_positive
+- utter_ask_quantity
+- action_create_deed
+- utter_ask_impact_weight
+- utter_intro
+- action_update_consequence
 entities:
-- sentiment
-- name
-- quantity
-- stakeholder
 - plural
+- deed
+- stakeholder
+- name
+- sentiment
+- quantity
 intents:
-- utilitarism
-- positive
-- consequence
-- decider
-- neutral
+- dontknow
 - greeting
 - stakeholder
-- deny
-- option
 - quantity
+- option
+- correct
+- consequence
+- positive
+- deed
+- wrong
 - negative
+- deny
+- moralquestion
+- utilitarism
 - affirm
+- deontology
+- decider
+- neutral
 - goodbye
 - thanks
-- dontknow
 slots:
   action_return:
     type: bool
   amount_stakeholders:
     type: text
   decider:
+    type: text
+  deed:
     type: text
   name:
     type: text
@@ -73,19 +94,57 @@ slots:
     - pos
     - neg
     - neu
-  stakeholder:
-    type: text
+    - compound
 templates:
+  utter_too_bad:
+  - text: Okay, no problem.
+  - text: That's too bad, but never mind.
+  - text: Alright, no big deal.
   utter_ask_consequences:
   - text: For which of these persons would this decision have consequences?
+  utter_ask_deed:
+  - text: I am interested in the concrete actions contained in this possibility and
+      their moral dimension. Could you list one by one which morally valid actions
+      are important for this option?
+  utter_ask_guess_quantity:
+  - text: Could you please have a rough guess?
+  - text: Could you estimate the number roughly?
+  - text: Can you give me an approximate number? That would be helpful.
+  utter_ask_identified_deed:
+  - buttons:
+    - payload: /correct
+      title: Relevant
+    - payload: /wrong
+      title: Unimportant
+    text: '"{deed}" - that sounds to me like an act which is associated with this
+      option. Can I consider this an action of moral relevance or is it unimportant?'
+  - buttons:
+    - payload: /correct
+      title: Relevant
+    - payload: /wrong
+      title: Unimportant
+    text: I am wondering if "{deed}" is an action of moral relevance in this context.
+      Should I consider it relevant or is it unimportant?
   utter_ask_impact:
   - text: Would the effects be more positive or more negative for {name}?
   - text: Would that be more positive or more negative for {name}?
   - text: Would you consider the effects on {name} to be more negative or more positive?
   utter_ask_impact_negative:
-  - text: For {name} this would be rather unpleasant, right?
+  - buttons:
+    - payload: /correct
+      title: Correct
+    - payload: /wrong
+      title: Wrong
+    text: For {name} this would be rather unpleasant, right?
   utter_ask_impact_positive:
-  - text: That would be a good thing for {name}, right?
+  - buttons:
+    - payload: /correct
+      title: Correct
+    - payload: /wrong
+      title: Wrong
+    text: That would be a good thing for {name}, right?
+  utter_ask_impact_weight:
+  - text: Could you estimate how severe the impact would be? On a scale of 1 to 10?
   utter_ask_method:
   - buttons:
     - payload: /utilitarism
@@ -93,8 +152,13 @@ templates:
     - payload: /deontology
       title: Deontology
     text: Which ethical principle should I apply for evaluation?
+  utter_ask_moral_question:
+  - text: Now, if you had to break it down to one sentence - How would you define
+      the moral question?
   utter_ask_options:
   - text: And what would be the most obvious option that {decider} could choose?
+  - text: Could you describe the first option coming to your mind that {decider} could
+      choose?
   utter_ask_quantity:
   - text: Can you tell me approximately how many persons there are?
   - text: From how many persons does this group consist exactly?
@@ -102,6 +166,13 @@ templates:
   utter_ask_stakeholders:
   - text: 'First: Which persons or groups of people are all involved in the situation?
       Please tell me in one sentence, one after the other.'
+  utter_ask_universalizable:
+  - buttons:
+    - payload: /correct
+      title: 'Yes'
+    - payload: /wrong
+      title: 'No'
+    text: Could you want this particular action to become a general rule for everyone?
   utter_confirm_decider:
   - text: The moral decision is made by {decider}.
   utter_confirm_stakeholders:
@@ -109,6 +180,7 @@ templates:
       or groups of people are involved.
   utter_default:
   - text: Sorry, I didn't catch that.
+  - text: Could you please rephrase that?
   utter_evaluation_failure:
   - text: I am currently not able to process your request. Sorry for that!
   utter_goodbye:
@@ -116,8 +188,11 @@ templates:
   - text: Bye Bye
   - text: Goodbye
   - text: Bye
+  - text: Okay, bye!
   utter_got_everything:
   - text: Well, I think I got everything.
+  - text: I think that is all for the moment.
+  - text: Okay, I think that is enough information for now.
   utter_got_it:
   - text: I got it.
   - text: I understand.
@@ -131,6 +206,16 @@ templates:
       like?
   - text: Would this have any consequences for anybody else?
   - text: Would that affect anyone else?
+  utter_next_deed:
+  - text: Are there any further actions of moral relevance implied by this option?
+      If so, please name me the next one.
+  utter_next_method:
+  - buttons:
+    - payload: /affirm
+      title: 'Yes'
+    - payload: /deny
+      title: Not this time
+    text: Do you want me to evaluate using another ethics principle?
   utter_next_option:
   - text: Are there any further options?
   - text: What could be another option?
@@ -141,6 +226,10 @@ templates:
   - text: Are further people involved? If so, name the next one.
   - text: Any other persons?
   - text: Other persons to be named?
+  utter_not_sure:
+  - text: Hmmm...
+  - text: Hm, that's a bit tricky.
+  - text: Not sure I understood you 100%, but let's move on.
   utter_thanks:
   - text: No problem!
   - text: Never mind

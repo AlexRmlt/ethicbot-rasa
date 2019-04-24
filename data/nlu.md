@@ -3,12 +3,11 @@
 - Exactly
 - Sure
 - Right
-- Correct
 - Yeah
 - Indeed
 - Ok
 - Okay
-- absolutely correct
+- /affirm
 
 ## intent:consequence
 - [Five persons](stakeholder:five persons) would get overrun and die
@@ -42,25 +41,53 @@
 - [The Saxons](name) could not watch the match for the time of the interruption
 - [Daniel](name) would then suffer for a longer time
 - [The Saxons](name) could continue watching the football match
-- [The patient](stakeholder:the Patient) could then be prevented from being harmed
+- [The patient](stakeholder:the patient) could then be prevented from being harmed
 - [The overseer](stakeholder:the overseer) would have to take further action
 - [The patient](stakeholder:the patient) would potentially be harmed due to him not taking the medication
 - [Greta](name) would possibly be saved from health issues
 - [The overseer](stakeholder:the overseer) would have to take action in order to treat the patient
 - [Greta](name) would most likely be harmed as she would not take her medication
 - [Tanja](name) would maybe get in trouble as the patient is harmed
-- [Patrick](name:patrick) would get help and take his medicine
-- [Patrick](name:patrick) would not get the benefit of his medication
-- [](sentiment:neu)[Werner](name:werner)[](plural:singular)Werner would get overrun by the train and die
-- [](sentiment:neu)[The Rhinelanders](name:the rhinelanders)[](plural:singular)The Rhinelanders would survive
-- [](sentiment:neu)[](plural:singular)Then [the Rhinelanders](name:the rhinelanders) would get overrun and killed
-- [](sentiment:neu)[Werner](name:werner)[](plural:singular)Werner would survive
-- [](sentiment:neu)[](plural:singular)Amelie would get overrun by the train and die
-- [](sentiment:neu)[The](stakeholder:the)[](plural:singular)The [Palatines](name:palatines) would all get overrun and die
-- Jörg could be saved from the bad consequences of not taking his medicine
+- [Patrick](name) would get help and take his medicine
+- [Patrick](name) would not get the benefit of his medication
+- [](sentiment:neu)[Werner](name)[](plural:singular)Werner would get overrun by the train and die
+- [](sentiment:neu)[The Rhinelanders](name:the Rhinelanders)[](plural:singular)The Rhinelanders would survive
+- Then [the Rhinelanders](name) would get overrun and killed
+- [](sentiment:neu)[Werner](name)[](plural:singular)Werner would survive
+- Amelie would get overrun by the train and die
+- [](sentiment:neu)[The](stakeholder:the)[](plural:singular)[The Palatines](name:the Palatines) would all get overrun and die
+- [Jörg](name) could be saved from the bad consequences of not taking his medicine
 - [](sentiment:neu)[The overseer](stakeholder:the overseer)[](plural:singular)The overseer would have to take action
-- [](sentiment:neu)[Jörg](name:jörg)[](plural:singular)Jörg would then most likely be harmed because he would not take his medicine
-- [](sentiment:neu)[](plural:singular)Maybe his desease would become worse or he would even die
+- [](sentiment:neu)[Jörg](name)[](plural:singular)Jörg would then most likely be harmed because he would not take his medicine
+- Maybe his desease would become worse or he would even die
+- [](sentiment:neu)[The Bavarians](name:the Bavarians)[](plural:singular)The Bavarians would survive
+- [](sentiment:neu)[Nathan](name)[](plural:singular)Nathan would get overrun by the train and die
+- [](sentiment:neu)[The Bavarians](name:the Bavarians)[](plural:singular)The Bavarians would get overrun by the train and die
+- [](sentiment:neu)[Nathan](name)[](plural:singular)Nathan would survive
+- [](sentiment:neu)[Uwe](name)[](plural:singular)Uwe would possibly be convinced and would get a proper treatment
+- [](sentiment:neu)[Uwe](name)[](plural:singular)Uwe would then die earlier due to the lack of treatment
+- [Zoe](name) would then live for a longer time than without the therapy
+- [Zoe](name) would then die earlier
+- [](sentiment:compound)[Samuel](name:samuel)[](plural:singular)Samuel would be rescued and would not have to suffer anymore
+- [](sentiment:neu)[Greta](name)[](plural:singular)Greta would not lose her limb
+- [](sentiment:neu)[Greta](name)[](plural:singular)Greta would propably lose her limb
+- [](sentiment:neu)[The Swabians](name:the swabians)[](plural:singular)The Swabians would get rescued
+- [](sentiment:neu)[The Hessians](name:the hessians)[](plural:singular)The Hessians would not get rescued
+- [](sentiment:neu)[The Hessians](name:the hessians)[](plural:singular)The Hessians would be saved
+- [](sentiment:neu)[The Swabians](name:the swabians)[](plural:singular)The Swabians would then be left behind
+
+## intent:correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
 
 ## intent:decider
 - [The first person](stakeholder:the first person) makes the moral decision
@@ -101,8 +128,30 @@
 - /decider[{"name": "Werner"}](name:Werner)
 - /decider[{"name": "Daniel"}](name:Daniel)
 - [](sentiment:neu)[A person](stakeholder:a person)[](plural:singular)A person must decide if he flips a switch that would make the train redirect to the side track
-- [](sentiment:neu)[](plural:singular)there is [a person](stakeholder) who must decide if he flips a switch that would redirect the train to the side track
+- there is [a person](stakeholder) who must decide if he flips a switch that would redirect the train to the side track
 - /decider[{"name": "Frank"}](name:Frank)
+- There is [a person](stakeholder) that must decide if he flips a switch which redirects the train
+- [A healthcare professional](stakeholder) has to decide if he tries to change the patients mind or doesn't
+- [A healthcare professional](stakeholder) must decide if he convinces the patient of taking the chemotherapy
+- /decider[{"name": "Olga"}](name:Olga)
+- [I](stakeholder) must decide if I interrupt the game to help the injured person or wait until the match is finished
+- /decider[{"name": "Uwe"}](name:Uwe)
+- /decider[{"plural": "singular"}](plural:singular)
+- [](sentiment:neu)[A healthcare professional](stakeholder:a healthcare professional)[](plural:singular)A healthcare professional must decide if he tries to change the patient's mind or accept the patient's decision as final
+- [](sentiment:neu)[A healthcare professional](stakeholder:a healthcare professional)[](plural:singular)A healthcare professional who must decide if he tries to change the patients mind
+- yes, there is a person who must decide if he redir[ects the](stakeholder:a person) train
+- /decider[{"name": "Tanja"}](name:Tanja)
+
+## intent:deed
+- [Lying](deed) to Katharina
+- The option implies most propably [saving the patients life](deed)
+- I would say, [trying to prevent the patient from losing a limb](deed)
+- [Refusing to prevent the limb loss](deed) can be considered an action of moral relevance
+- [Accepting ones decision](deed) is also a moral act
+- The act of rescui[ng people](deed:the act of rescuing people)
+- Also, leaving the group with fewer persons behind
+- That would imply leaving the larger group behind
+- [](sentiment:neu)[](plural:unspecific_plural)Saving the other group
 
 ## intent:deny
 - No
@@ -136,30 +185,71 @@
 - no one else would be affected
 - No other consequences
 - That was all I can think of
-- [](sentiment:neu)[](plural:singular)Thats all
-- [](sentiment:neu)[](plural:singular)There are no other consequences
-- [](sentiment:neu)[](plural:singular)there are no other consequences
-- [](sentiment:neu)[](plural:singular)There is no other option than the two
+- Thats all
+- There are no other consequences
+- there are no other consequences
+- There is no other option than the two
 - No other persons are involved
 - [](sentiment:neg)[](plural:singular)No
 - no other consequences to be named
-- [](sentiment:neu)[](plural:singular)there is no other option
-- [](sentiment:neu)[](plural:singular)Thats all
+- there is no other option
+- Thats all
 - not at all
 - [](sentiment:neg)[](plural:singular)No further consequences
-- [](sentiment:neu)[](plural:singular)No I don't think so
+- No I don't think so
 - [](sentiment:neg)[](plural:singular)no
 - [](sentiment:neg)[](plural:singular)no other consequences
+- [](sentiment:neg)[](plural:singular)no other consequences
+- there are no other options
+- [](sentiment:neg)[](plural:singular)no
+- [](sentiment:neg)[](plural:singular)no
+- No one else would be affected
+- THere are no other options
+- thats all
+- There are no other consequences
+- [](sentiment:neg)[](plural:singular)no
+- there are no other options
+- Thats all
+- No I don't think so
+- [](sentiment:neg)[](plural:singular)No
+- There are no other options
+- [](sentiment:neg)[](plural:singular)no
+- [](sentiment:neg)[](plural:singular)No other consequences
+- [](sentiment:neg)[](plural:singular)no
+- there is no other option
+- [](sentiment:neg)[](plural:singular)no
+- [](sentiment:neu)[](plural:singular)No, i do not know it exactly
+- [](sentiment:neg)[](plural:singular)no
+- [](sentiment:neu)[](plural:singular)No, that was all
+- [](sentiment:neg)[](plural:singular)No
+- [](sentiment:neg)[](plural:singular)No
+- [](sentiment:neg)[](plural:singular)no
+- [](sentiment:neu)[](plural:singular)no other actions i could think of
+- [](sentiment:neg)[](plural:singular)no
+- [](sentiment:neu)[](plural:singular)no other actions to be named
+- [](sentiment:neu)[](plural:singular)no, not at all
 - [](sentiment:neg)[](plural:singular)no other consequences
 - [](sentiment:neu)[](plural:singular)there are no other options
 - [](sentiment:neg)[](plural:singular)no
+- [](sentiment:neu)[](plural:singular)thats all
+- [](sentiment:neg)[](plural:singular)No
+- [](sentiment:neg)[](plural:singular)No, no one else would be affected
 - [](sentiment:neg)[](plural:singular)no
-- [](sentiment:neu)[](plural:singular)No one else would be affected
-- [](sentiment:neu)[](plural:singular)THere are no other options
+- [](sentiment:neg)[](plural:singular)no
+- [](sentiment:neu)[](plural:singular)there is no other option
+- /deny
+
+## intent:deontology
+- /deontology
+- /deontology
 
 ## intent:dontknow
 - I have no idea, but there are really many
 - I don't know it exactly
+- I don't know it exactly
+- I do not know it
+- I do not know it exactly
+- No, I have no idea
 
 ## intent:goodbye
 - okay see you later
@@ -224,11 +314,28 @@
 - hi
 - hi
 - /greeting
-- [](sentiment:neu)[](plural:singular)Hi
+- Hi
+- hi
+- hi
+- hi
+- hi
+- hihi
+- hi
+- hi
 - [](sentiment:neu)[](plural:singular)hi
 - [](sentiment:neu)[](plural:singular)hi
 - [](sentiment:neu)[](plural:singular)hi
 - [](sentiment:neu)[](plural:singular)hi
+- [](sentiment:neu)[](plural:singular)hi
+- [](sentiment:neu)[](plural:singular)hey
+- [](sentiment:neu)[](plural:singular)hi
+- [](sentiment:neu)[](plural:singular)hi
+- [](sentiment:neu)[](plural:singular)hi
+- [](sentiment:neu)[](plural:singular)hi
+
+## intent:moralquestion
+- Should you take action in killing a person if it can prevent the death of a lar[ger numb](stakeholder:a person)er of people?
+- How should the robot decide which path he has to take?
 
 ## intent:negative
 - That would be really bad for [Benjamin](name)!
@@ -245,13 +352,20 @@
 - That would be negative for [the Saxons](name)
 - That would be very negative for him!
 - This would be really negative
-- [](sentiment:neu)[](plural:singular)That would be very negative for Greta
-- [](sentiment:neu)[](plural:singular)That would be negative for Tanja
-- [](sentiment:neu)[](plural:singular)that would be slightly negative for him
-- [](sentiment:neu)[](plural:singular)That would be very negative for him
-- [](sentiment:neu)[](plural:singular)That would be really negative for them
+- That would be very negative for Greta
+- That would be negative for Tanja
+- that would be slightly negative for him
+- That would be very negative for him
+- That would be really negative for them
 - [](sentiment:neg)[](plural:singular)that would be very negative
-- [](sentiment:neu)[](plural:singular)That would be very negative for them
+- That would be very negative for them
+- [](sentiment:neg)[](plural:singular)That would be absolutely negative
+- [](sentiment:neg)[](plural:singular)negative
+- That would be negative for him
+- [](sentiment:neg)[](plural:singular)negative
+- [](sentiment:neg)[](plural:singular)That would be quite negative
+- more negative of course
+- the effects would be very negative
 
 ## intent:neutral
 - It would be ok, neither positive nor negative consequences
@@ -259,44 +373,59 @@
 - It would be okay for him, no negative or positive consequences
 
 ## intent:option
-- She could make the decision to flip the switch
-- He could decide to flip the switch
-- He could flip the switch
-- He could refuse to flip the switch
-- Flip the switch
-- Do nothing
-- We could interrupt the game
-- She could flip the switch in order to redirect the train
-- She could interrupt the TV broadcast to help the injured person
-- She could decide that the broadcast hast to be interrupted
-- He could flip the switch so that the train overruns only one person instead of five
-- Flip the switch so that only one person dies
-- Flip the switch in order to only kill the person on the side track
-- He could flip the switch in order to make the train go on the side track
-- He could just do nothing
-- She could press the switch and make the train switch the track
-- He could flip the switch in order to make the train redirect to the side track
-- He could interrup the TV broadcast to help the injured person
-- She could flip a switch which would lead the train to the side track
-- He could interrupt the worldcup match
-- When Esther asks her about Werner, she could refuse to tell her that she hides him
-- She could press a button that redirects the train to the side track
-- He could flip the switch and redirect the train
-- [Nathan](name) could refrain from flipping the switch and just do nothing
-- She could interrupt the broadcast in order to help Daniel
-- She could do nothing and let the broadcast continue
-- He could notify the overseer in order to prevent damage from the patient
-- He could refrain from notifying the overseer
-- He should notify the overseer and tell him that the patient can not respond
-- Werner could also refrain from notifying the overseer and just do nothing
-- He can notify the overseer
-- Daniel could just do nothing
-- [](sentiment:neu)[](plural:singular)He could flip the switch in order to make the train redirect to the side track
-- [](sentiment:neu)[](plural:singular)Harald could refrain from flipping the switch and just do nothing
-- [](sentiment:neu)[](plural:singular)he could flip the switch in order to redirect the train
-- [](sentiment:neu)[](plural:singular)He could refrain from flipping the switch an just wait for the train
-- Notify the overseer because the patient does not take the medication as intended
-- [](sentiment:neu)[](plural:singular)He could not tell the overseer and just do nothing
+- She could make the decision to [flip the switch](deed)
+- He could decide to [flip the switch](deed)
+- He could [flip the switch](deed)
+- He could [refuse to flip the switch](deed)
+- [Flip the switch](deed)
+- [Do nothing](deed)
+- We could [interrupt the game](deed)
+- She could [flip the switch](deed) in order to [redirect the train](deed)
+- She could [interrupt the TV broadcast](deed) to [help the injured person](deed)
+- She could [decide that the broadcast hast to be interrupted](deed)
+- He could [flip the switch](deed) so that the [train overruns only one person](deed) instead of five
+- [Flip the switch](deed) so that only [one person dies](deed)
+- [Flip the switch](deed) in order to only [kill the person](deed) on the side track
+- He could [flip the switch](deed) in order to [make the train go](deed) on the side track
+- He could just [do nothing](deed)
+- She could [press the switch](deed) and [make the train switch the track](deed)
+- He could [flip the switch](deed) in order to [make the train redirect](deed) to the side track
+- He could [interrupt the TV broadcast](deed) to [help the injured person](deed)
+- She could [flip a switch](deed) which would [lead the train to the side track](deed)
+- He could [interrupt the worldcup match](deed)
+- When Esther asks her about Werner, she could [refuse to tell](deed) her that she hides him
+- She could [press a button](deed) that [redirects the train](deed) to the side track
+- He could [flip the switch](deed) and [redirect the train](deed)
+- [Nathan](name) could [refrain from flipping the switch](deed) and just [do nothing](deed)
+- She could [interrupt the broadcast](deed) in order to [help Daniel](deed)
+- She could [do nothing](deed) and [let the broadcast continue](deed)
+- He could [notify the overseer](deed) in order to [prevent damage](deed) from the patient
+- He could [refrain from notifying](deed) the overseer
+- He should [notify the overseer](deed) and [tell him](deed) that the patient can not respond
+- Werner could also [refrain from notifying the overseer](deed) and just [do nothing](deed)
+- He can [notify the overseer](deed)
+- Daniel could just [do nothing](deed)
+- He could [flip the switch](deed) in order to [make the train redirect](deed) to the side track
+- Harald could [refrain from flipping the switch](deed) and just [do nothing](deed)
+- he could [flip the switch](deed) in order to [redirect the train](deed)
+- He could [refrain from flipping the switch](deed) and just [wait for the train](deed)
+- [Notify the overseer](deed) because the patient does not take the medication as intended
+- He could [not tell the overseer](deed) and just [do nothing](deed)
+- She could [flip the switch](deed) to [rescue the Bavarians](deed)
+- She could [refuse to flip the switch](deed) and [just do nothing](deed)
+- He could [try to change Haralds mind](deed) because the chemotherapy would extend his life by multiple months
+- He could [accept the patients will](deed) and [not try to convince him](deed)
+- She should [convince the patient](deed) in order to [extend his lifespan](deed)
+- She could also [accept her decision](deed) and [not try to convince her](deed)
+- [](sentiment:neu)[](plural:singular)She could [flip the switch](deed) in order to [redirect the train](deed)
+- [](sentiment:neu)[](plural:singular)She could [interrupt the game](deed) and [help the injured person](deed), because otherwise he has to suffer for a longer time
+- [](sentiment:neu)[](plural:singular)He could [lie to Katharina](deed) about Nathan being in her house
+- [](sentiment:neu)[](plural:singular)He could [flip a switch](deed) that redirects the train in order to save the Palatines
+- [](sentiment:neu)[](plural:singular)He can try to [change patient's mind](deed)
+- [](sentiment:neu)[](plural:singular)She could [try to change the patients mind](deed) to prevent him from losing his limb
+- Viola could also [accept Greta's decision](deed) of not taking the surgery
+- [](sentiment:neu)[](plural:unspecific_plural)She could take path A to rescue the larger amount of people
+- [](sentiment:neu)[](plural:unspecific_plural)Tanja could also take path B to rescue the other group
 
 ## intent:positive
 - That would be positive for him
@@ -312,30 +441,62 @@
 - That would be very positive for [Daniel](name)
 - That would be positive for them
 - That would be very positive for him
-- [](sentiment:neu)[](plural:singular)That would be positive for Greta
-- [](sentiment:neu)[](plural:singular)That would be positive for Patrick
-- [](sentiment:neu)[](plural:singular)That would be positive for them
-- [](sentiment:neu)[](plural:singular)That would be positive for him
-- [](sentiment:neu)[](plural:singular)Wrong, this would be good for [Frank](name:frank)
+- That would be positive for Greta
+- That would be positive for Patrick
+- That would be positive for them
+- That would be positive for him
+- Wrong, this would be good for [Frank](name:frank)
+- That would be really positive for them
+- [](sentiment:pos)[](plural:singular)positive
+- The effects would overall be positive because he would live longer
+- That would be positive for her
+- [](sentiment:compound)[](plural:singular)This would be very positive
+- [](sentiment:pos)[](plural:singular)Definitely positive
+- [](sentiment:neu)[](plural:singular)that would be positive for them
+- [](sentiment:pos)[](plural:singular)more positive
 
 ## intent:quantity
-- [Five persons](stakeholder:five persons)
 - [5](quantity)
 - [five](quantity:5)
 - altogether [five](quantity:5)
 - there are [5](quantity) altogether
-- [three persons](stakeholder)
 - [five](quantity:5)
-- [Five people](stakeholder:five people)
-- [Five people](stakeholder:five people)
-- There are [five people](stakeholder)
 - About [ten people](stakeholder)
-- [Five people](stakeholder:five people)
 - [5](quantity)
-- [](sentiment:neu)[Five people](stakeholder:five people)[](plural:specific_plural)Five people
-- [](sentiment:neu)[five](quantity:5)[](plural:singular)five dogs
+- [10](quantity)
+- [](sentiment:neg)[5](quantity)[](plural:singular)5
+- [](sentiment:neu)[10](quantity)[](plural:singular)10
+- [](sentiment:neu)[10](quantity)[](plural:singular)10
+- [](sentiment:neu)[10](quantity)[](plural:singular)10
+- [4](quantity)
+- about [7](quantity) i guess
+- i think [10](quantity)
+- about [5](quantity)
+- [9](quantity)
+- [](sentiment:neu)[12](quantity)[](plural:singular)12
+- [](sentiment:neu)[](plural:singular)Maybe [7](quantity)
+- [](sentiment:neu)[13](quantity)[](plural:singular)13
+- [](sentiment:pos)[](plural:singular)Solid 8
+- [](sentiment:neg)[8](quantity)[](plural:singular)8
+- 46 persons total[](stakeholder:46 persons)
+- [](sentiment:neu)[](plural:specific_plural)About [ten people](stakeholder)
+- [](sentiment:neu)[](plural:singular)Maybe two
+- [](sentiment:neu)[](plural:singular)maybe [9](quantity)
+- i would say 8
+- [](sentiment:neg)[7](quantity)[](plural:singular)7
+- [](sentiment:neg)[9](quantity)[](plural:singular)9
+- [](sentiment:neu)[](plural:singular)Only one
+- [](sentiment:neu)[](plural:singular)Maybe about 20
+- [](sentiment:neu)[](plural:specific_plural)I think about [ten people](stakeholder)
 
 ## intent:stakeholder
+- [](sentiment:neu)[Five people](stakeholder:five people)[](plural:specific_plural)Five people
+- [](sentiment:neu)[five](quantity:5)[](plural:singular)five dogs
+- [Five people](stakeholder:five people)
+- There are [five people](stakeholder)
+- [Five people](stakeholder:five people)
+- [three persons](stakeholder)
+- [Five persons](stakeholder:five persons)
 - [Hans](name:hans) is involved
 - Among others there is [Hans](name:hans)
 - Involved in the situation is [Hans](name:hans)
@@ -423,10 +584,35 @@
 - [](sentiment:neu)[](plural:unspecific_plural)There is [a group of people](stakeholder) on the tracks where a train is about to arrive and overrun them
 - [](sentiment:neu)[Another person](stakeholder:another person)[](plural:singular)Another person is on a side track where normally no train would come up
 - [](sentiment:neu)[](plural:unspecific_plural)there is a group of dogs laying on the tracks
-- [](sentiment:neu)[](plural:singular)on a side track there is cat
+- on a side track there is cat
 - a healthcare aide[ has to supervise](stakeholder:a healthcare aide) if a patient takes his medication correctly
 - [](sentiment:neu)[The patient](stakeholder:the patient)[](plural:singular)The patient, who refuses to take his medication when reminded by the healthcare aide
 - [](sentiment:neu)[An overseer](stakeholder:an Overseer)[](plural:singular)An overseer, who can be notified by the healthcare aide if assistance is required
+- [](sentiment:neu)[](plural:unspecific_plural)There is [a group of people](stakeholder) standing on the tracks where a train is about to arrive and hit them
+- Then there is [a single person](stakeholder) standing on a side track where no train would normally come up
+- There is [a patient](stakeholder) suffering from cancer who refuses further chemotherapy
+- [](sentiment:neu)[A patient](stakeholder:a patient)[](plural:singular)A patient who suffers from incurable cancer refuses to accept a chemotherapy that would extend his life by multiple months
+- [](sentiment:neu)[](plural:unspecific_plural)there is [a group of people](stakeholder) on the tracks
+- [](sentiment:neu)[one other person](stakeholder)[](plural:singular)one other person stands on a side track
+- [](sentiment:neu)[the third person](stakeholder)[](plural:singular)the third person stands in front of a switch that can redirect the train to the side track
+- [](sentiment:neu)[A person](stakeholder:a person)[](plural:singular)A person lies injured in the broadcasting room of a TV station
+- [](sentiment:neu)[A large group of people](stakeholder:a large group of people)[](plural:unspecific_plural)A large group of people is watching a football match that is broadcasted from the TV station
+- [](sentiment:neu)[A person](stakeholder:a person)[](plural:singular)A person who is chased by another person and hides in the house of a third person
+- [](sentiment:neu)[The person](stakeholder:the person)[](plural:singular)The person, who is chasing Nathan
+- [](sentiment:neu)[The person](stakeholder:the person)[](plural:singular)The person, who hides Nathan in his house
+- [](sentiment:neu)[A group of people](stakeholder:a group of people)[](plural:unspecific_plural)A group of people stands on the tracks
+- [](sentiment:neu)[Another person](stakeholder:another person)[](plural:singular)Another person stands on the side track
+- [A patient](stakeholder:a patient) refuses to have surgery that would save his life and correct a disfigurement because he fears that he may never wake up from anesthesia
+- [A patient](stakeholder:a patient), who refuses to have minor surgery that could prevent him from losing a limb because he fears he may never wake up if he has anesthesia.
+- [](sentiment:neu)[](plural:singular)first there is [a person](stakeholder) on the tracks
+- [](sentiment:neu)[](plural:unspecific_plural)there is [a group of people](stakeholder) on the main tracks
+- There is a robot whose mission is to save people after a natural catastrophe
+- [](sentiment:neu)[A group of people](stakeholder:a group of people)[](plural:unspecific_plural)A group of people is located in a place to be reached if the robot takes path A
+- [](sentiment:neu)[](plural:unspecific_plural)There is [another group of people](stakeholder) in a place that can be reached by path B which consists of less people than the Swabians
+- [](sentiment:neu)[](plural:unspecific_plural)First there is a robot who must rescue people after a natural catastrophe
+- [](sentiment:neu)[](plural:unspecific_plural)There is [a group of people](stakeholder) that must be rescued in one direction
+- [](sentiment:neu)[](plural:unspecific_plural)Then there is another, slightly smaller group in the other direction
+- [](sentiment:neu)[A group of people](stakeholder:a group of people)[](plural:unspecific_plural)A group of people is standing on the main tracks
 
 ## intent:thanks
 - you helped a lot thank you
@@ -472,6 +658,20 @@
 - /utilitarism
 - /utilitarism
 - /utilitarism
+- /utilitarism
+- /utilitarism
+- /utilitarism
+- /utilitarism
+
+## intent:wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
 
 ## synonym:5
 - five
@@ -482,20 +682,48 @@
 ## synonym:Esther
 - {"name": "Esther"}
 
+## synonym:Frank
+- {"name": "Frank"}
+- frank
+
+## synonym:Hans
+- hans
+
 ## synonym:Harald
 - {"stakeholder": "Harald"}
 
 ## synonym:Jones
 - jones
 
+## synonym:Jörg
+- jörg
+
 ## synonym:Katharina
 - {"name": "Katharina"}
 
+## synonym:Nathan
+- nathan
+
+## synonym:Olga
+- {"name": "Olga"}
+
+## synonym:Patrick
+- patrick
+
 ## synonym:Tanja
 - {"stakeholder":"Tanja"}
+- {"name": "Tanja"}
+
+## synonym:Uwe
+- {"name": "Uwe"}
+- uwe
+
+## synonym:We
+- we
 
 ## synonym:Werner
 - {"name": "Werner"}
+- werner
 
 ## synonym:a fat man
 - A fat man
@@ -509,14 +737,27 @@
 ## synonym:a group of seven people
 - A group of seven people
 
+## synonym:a healthcare aide
+-  has to supervise
+- has to supervise
+
+## synonym:a healthcare professional
+- A healthcare professional
+
 ## synonym:a large group of people
 - A large group of people
 
 ## synonym:a lot of people
 - A lot of people
 
+## synonym:a patient
+- A patient
+- to have
+
 ## synonym:a person
 - A person
+- ects the
+- ger numb
 
 ## synonym:a person, named jones
 - a person, named Jones
@@ -527,7 +768,7 @@
 ## synonym:a third person
 - A third person
 
-## synonym:an overseer
+## synonym:an Overseer
 - An overseer
 
 ## synonym:another person
@@ -539,14 +780,11 @@
 ## synonym:five persons
 - Five persons
 
+## synonym:frank
+- Frank
+
 ## synonym:hans
 - Hans
-
-## synonym:i
-- I
-
-## synonym:jones
-- Jones
 
 ## synonym:many people
 - Many people
@@ -557,11 +795,8 @@
 ## synonym:one person
 - One person
 
-## synonym:palatines
-- Palatines
-
-## synonym:patrick
-- Patrick
+## synonym:samuel
+- Samuel
 
 ## synonym:singular
 - {"plural": "singular"}
@@ -572,11 +807,29 @@
 ## synonym:the
 - The
 
+## synonym:the Bavarians
+- The Bavarians
+- The bavarians
+
+## synonym:the Palatines
+- The Palatines
+- the palatines
+
+## synonym:the Rhinelanders
+- The Rhinelanders
+- the rhinelanders
+
+## synonym:the act of rescuing people
+- ng people
+
 ## synonym:the first person
 - The first person
 
 ## synonym:the five persons
 - The five persons
+
+## synonym:the hessians
+- The Hessians
 
 ## synonym:the last person
 - The last person
@@ -590,9 +843,11 @@
 ## synonym:the patient
 - The patient
 
-## synonym:the rhinelanders
-- The Rhinelanders
-- the Rhinelanders
+## synonym:the person
+- The person
+
+## synonym:the swabians
+- The Swabians
 
 ## synonym:the third person
 - The third person
@@ -602,6 +857,3 @@
 
 ## synonym:we
 - We
-
-## synonym:werner
-- Werner

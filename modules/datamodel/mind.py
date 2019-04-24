@@ -16,8 +16,20 @@ def memorize(obj):
 def amnesia():
 	db.purge()
 
-def get_all():
-	return db.all()
+def get_full_model():
+	data = db.all()
+	for ent in data:
+		ent['id'] = ent.doc_id
+
+	return data
+
+def get_context_singleton():
+	from . import Context
+	context = db.get(q.type == 'Context')
+	if context == None:
+		context = Context({}).memorize()
+
+	return context
 
 def by_id(i):
 	doc = db.get(doc_id=i)
@@ -53,9 +65,15 @@ def get_stakeholders_by_synonym(synonym):
 		stakeholders.append(Stakeholder(sh))
 	return stakeholders
 
-def get_consequence_by_stakeholder(stakeholder):
+def get_deed(label):
+	from . import Deed
+	d = db.get(q.label.matches(label, flags=re.IGNORECASE))
+	return Deed(d) if d != None else None
+
+def get_consequence(stakeholder, option):
 	from . import Consequence
-	cons = db.get(q.affected_stakeholder.matches(stakeholder, flags=re.IGNORECASE))
+	cons = db.get((q.affected_stakeholder.matches(stakeholder, flags=re.IGNORECASE)) \
+		& (q.option == option))
 	return Consequence(cons) if cons != None else None
 
 def get_decider():
