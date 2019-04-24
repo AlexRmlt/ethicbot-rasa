@@ -63,5 +63,5 @@ train-interactive:
   		--nlu ../models/current/nlu --endpoints config/endpoints_local.yml
 	
 action-server:
-	python -m rasa_core_sdk.endpoint --actions actions
+	python -m rasa_core_sdk.endpoint --actions actions.actions
 
