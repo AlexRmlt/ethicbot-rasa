@@ -1,6 +1,8 @@
 from tinydb import TinyDB, Query
 import importlib
 import re
+from operator import attrgetter
+
 
 db = TinyDB('db.json')
 q = Query()
@@ -56,6 +58,11 @@ def stakeholder_exists(name):
 def get_stakeholder_by_name(name):
 	from . import Stakeholder
 	sh = db.get(q.name.matches(name, flags=re.IGNORECASE))
+	return Stakeholder(sh) if sh != None else None
+
+def get_recent_stakeholder():
+	from . import Stakeholder
+	sh = db.search(q.type == 'Stakeholder')[-1]
 	return Stakeholder(sh) if sh != None else None
 
 def get_stakeholders_by_synonym(synonym):

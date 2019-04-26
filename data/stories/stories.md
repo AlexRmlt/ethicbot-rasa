@@ -700,3 +700,42 @@
     - utter_too_bad
     - utter_next_stakeholder
 
+## Generated Story -7621104021135621718
+* greeting
+    - action_intro
+* stakeholder{"stakeholder": "a group of people", "plural": "unspecific_plural"}
+    - slot{"plural": "unspecific_plural"}
+    - action_create_stakeholder
+    - slot{"amount_stakeholders": 1}
+    - slot{"action_return": false}
+    - utter_ask_quantity
+* quantity{"quantity": "5", "CARDINAL": "5"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_ask_name_plural
+* dontknow
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* stakeholder{"stakeholder": "a single person", "plural": "singular"}
+    - slot{"plural": "singular"}
+    - action_create_stakeholder
+    - slot{"amount_stakeholders": 2}
+    - slot{"action_return": true}
+    - utter_ask_name_singular
+* name
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* decider{"stakeholder": "a person"}
+    - action_create_stakeholder
+    - slot{"amount_stakeholders": 3}
+    - slot{"action_return": true}
+    - utter_ask_name_singular
+* deny
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* deny
+    - utter_confirm_stakeholders
+

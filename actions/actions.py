@@ -19,13 +19,14 @@ import modules.datamodel.mind as mind
 from modules.datamodel import Stakeholder, Option, Consequence, Deed, Context
 
 logger = logging.getLogger(__name__)
+logging.basicConfig(format='%(asctime)s %(message)s', filename='rasa.log', level=logging.DEBUG)
 
 
 class Intro(Action):
 	""" 
 	Initial Action to be executed
 	
-	Triggered by:
+	Triggered by: (TODO: map to greeting)
 	* Intent 'greeting'
 
 	Required slots: /
@@ -93,8 +94,6 @@ class CreateStakeholder(Action):
 	* action_return = True if stakeholder was created with correct amount
 	* action_return = False if stakeholder was created with unspecific amount (-1)
 	* amount_stakeholders = amount of stakeholders in the datamodel after inserting the new one
-	* name = the inserted stakeholders name
-	* decider = name of the inserted stakeholder, if he is the decider
 	"""
 	def name(self):
 		return "action_create_stakeholder"
@@ -113,7 +112,6 @@ class CreateStakeholder(Action):
 
 		# Is the stakeholder recognized as the decider?
 		if (tracker.latest_message['intent'].get('name') == 'decider'):
-			events.append(SlotSet("decider", sh['name']))
 			sh['decider'] = True
 
 		# Remember synonym, maybe the user refuses to call the person by its new name
@@ -121,11 +119,9 @@ class CreateStakeholder(Action):
 
 		sh.memorize() 
 
-		events.append(SlotSet("name", sh['name']))
 		events.append(SlotSet("amount_stakeholders", mind.get_amount_stakeholders()))
 		events.append(SlotSet("action_return", sh['amount'] != -1))
 
-		dispatcher.utter_message('Alright, from now on I will use the name "{}"!'.format(sh['name']))
 		return events
 
 
@@ -136,9 +132,12 @@ class UpdateStakeholder(Action):
 	Triggered by:
 	* Intent 'quantity'
 	* Intent 'decider'
+	* Intent 'name'
+	* Intent 'correct' 	(user confirmed name recognized by the bot)
+	* Intent 'dontknow'	(user does not know the proposed stakeholders name)
+	* Intent 'deny'		(user does not tell the proposed stakeholders name)
 
-	Required slots:
-	* name == stakeholder to be updated
+	Required slots: /
 
 	Returns:
 	* action_return = True if stakeholder was successfully updated
@@ -150,16 +149,21 @@ class UpdateStakeholder(Action):
 
 	def run(self, dispatcher, tracker, domain):
 		events = []
-		sh = mind.get_stakeholder_by_name(tracker.get_slot('name'))
 		action_return = False
 
+		# The last inserted stakeholder is the one we are talking about
+		sh = mind.get_recent_stakeholder()
+
 		try:
+			# Intent: decider
 			if (tracker.latest_message['intent'].get('name') == 'decider'):
 				sh['decider'] = True		
 				events.append(SlotSet('decider', sh['name']))
-				action_return = True
 				mind.memorize(sh)
 				dispatcher.utter_template('utter_got_it', tracker)
+				action_return = True
+
+			# Intent: quantity
 			elif (tracker.latest_message['intent'].get('name') == 'quantity'):
 				sources = [ next(tracker.get_latest_entity_values('quantity'), -1),
 							next(tracker.get_latest_entity_values('stakeholder'), None),
@@ -173,11 +177,43 @@ class UpdateStakeholder(Action):
 					dispatcher.utter_template('utter_got_it', tracker)
 				else:
 					action_return = False
-		except (AttributeError, TypeError):
+
+			# Intent: name or correct
+			elif (tracker.latest_message['intent'].get('name') == 'name') \
+				or (tracker.latest_message['intent'].get('name') == 'correct'):
+
+				name = tracker.get_slot('name')
+				
+				if not name == None:
+					sh.set_name(name).memorize()
+					dispatcher.utter_message('Alright, from now on I will use the name "{}"!'.format(sh['name']))
+				else:
+					sh.set_name().memorize()
+					dispatcher.utter_message('I am not sure if I understood the name correctly. To avoid misunderstandings I will just use the name "{}"!'.format(sh['name']))
+
+				if (sh['decider'] == True):
+					events.append(SlotSet('decider', sh['name']))
+				
+				action_return = True
+
+			# Intent: dontknow or deny
+			elif (tracker.latest_message['intent'].get('name') == 'dontknow') \
+				or (tracker.latest_message['intent'].get('name') == 'deny'):
+
+				sh.set_name().memorize()
+				dispatcher.utter_message('Okay, I will just use the name "{}" from now on!'.format(sh['name']))
+				
+				if (sh['decider'] == True):
+					events.append(SlotSet('decider', sh['name']))
+
+				action_return = True
+
+		except (AttributeError, TypeError) as e:
+			logging.warning('Exception updating Stakeholder: ' + str(e))
 			events.append(SlotSet('name', None))
 			action_return = False
 
-		events.append(SlotSet("action_return", action_return))
+		events.append(SlotSet('action_return', action_return))
 		return events
 
 
@@ -255,7 +291,8 @@ class UpdateOption(Action):
 				action_return = True
 				events.append(SlotSet("deed", current_deed))
 				dispatcher.utter_template('utter_got_it', tracker)
-		except (AttributeError, TypeError):
+		except (AttributeError, TypeError) as e:
+			logging.warning('Exception updating Option: ' + str(e))
 			action_return = False
 			dispatcher.utter_template('utter_not_sure', tracker)
 
@@ -358,7 +395,8 @@ class UpdateDeed(Action):
 				events.append(SlotSet("deed", None))
 				del option['deeds']
 
-		except (AttributeError, TypeError):
+		except (AttributeError, TypeError) as e:
+			logging.warning('Exception updating deed: ' + str(e))
 			action_return = False
 			dispatcher.utter_template('utter_not_sure', tracker)
 
@@ -407,7 +445,8 @@ class CreateConsequence(Action):
 			consequence = Consequence({"option": option, "affected_stakeholder": sh['name'], "impact": impact}).memorize()
 			if impact != 0:
 				action_return = True
-		except (AttributeError, TypeError):
+		except (AttributeError, TypeError) as e:
+			logging.warning('Exception creating consequence: ' + str(e))
 			# If we do not find a distinct name, let the user choose from possible stakeholders
 			events.append(SlotSet('name', None))
 			action_return = False
@@ -465,7 +504,8 @@ class UpdateConsequence(Action):
 				consequence.memorize()
 				dispatcher.utter_template('utter_got_it', tracker)
 				action_return = True
-		except (AttributeError, TypeError):
+		except (AttributeError, TypeError) as e:
+			logging.warning('Exception updating consequence: ' + str(e))
 			action_return = False
 			dispatcher.utter_template('utter_not_sure', tracker)
 

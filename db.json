@@ -1,1 +1,1 @@
-{"_default":{"1":{"decider":false,"amount":-1,"name":"the Rhinelanders","synonym":"a group of people","type":"Stakeholder"}}}
+{"_default":{"1":{"decider":false,"amount":5,"synonym":"a group of people","type":"Stakeholder","name":"the Swabians"},"2":{"decider":false,"amount":1,"synonym":"a single person","type":"Stakeholder","name":"Tanja"},"3":{"decider":true,"amount":1,"synonym":"a person","type":"Stakeholder","name":"Lars"}}}

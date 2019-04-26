@@ -8,3 +8,6 @@ modules/__pycache__/
 modules/datamodel/__pycache__/
 components/__pycache__/
 actions/__pycache__/
+
+rasa.log
+test.py

@@ -1,58 +1,65 @@
 %YAML 1.1
 ---
 actions:
-- utter_too_bad
-- utter_next_deed
-- utter_ask_guess_quantity
-- action_update_context
-- utter_next_stakeholder
-- utter_ask_deed
-- utter_next_method
-- utter_ask_identified_deed
-- action_update_deed
-- utter_ask_moral_question
-- action_update_stakeholder
-- action_update_option
-- utter_ask_consequences
-- action_create_consequence
-- action_intro
-- utter_next_consequence
-- action_create_option
-- utter_thanks
-- utter_ask_impact_negative
-- utter_ask_stakeholders
-- utter_confirm_decider
-- utter_ask_impact
-- action_choose_affected_stakeholder
-- utter_ask_options
-- utter_got_everything
-- action_create_stakeholder
-- utter_next_option
-- action_evaluation_deontology
-- action_evaluation_utilitarism
-- utter_ask_universalizable
-- utter_goodbye
-- action_choose_decider
-- utter_confirm_stakeholders
-- utter_ask_method
-- utter_ask_impact_positive
-- utter_ask_quantity
-- action_create_deed
 - utter_ask_impact_weight
-- utter_intro
+- utter_next_stakeholder
+- utter_next_deed
+- utter_got_everything
+- utter_confirm_stakeholders
+- utter_ask_universalizable
+- utter_ask_identified_deed
+- action_update_context
+- action_evaluation_utilitarism
+- utter_ask_name_singular
+- utter_ask_moral_question
+- utter_next_consequence
+- utter_ask_options
 - action_update_consequence
+- action_intro
+- action_choose_decider
+- utter_ask_method
+- action_update_option
+- utter_ask_impact_positive
+- utter_too_bad
+- utter_ask_stakeholders
+- action_choose_affected_stakeholder
+- utter_ask_impact_negative
+- utter_ask_guess_quantity
+- utter_thanks
+- utter_next_method
+- utter_intro
+- utter_ask_name_plural
+- action_create_consequence
+- utter_ask_quantity
+- action_evaluation_deontology
+- utter_goodbye
+- action_create_option
+- utter_confirm_decider
+- utter_next_option
+- utter_ask_consequences
+- utter_ask_impact
+- action_update_stakeholder
+- utter_ask_identified_name
+- utter_ask_deed
+- action_create_deed
+- action_create_stakeholder
+- action_update_deed
 entities:
-- plural
-- deed
 - stakeholder
 - name
-- sentiment
+- deed
 - quantity
+- sentiment
+- plural
+- CARDINAL
 intents:
 - dontknow
 - greeting
 - stakeholder
+- name
 - quantity
+- deny
+- decider
 - option
 - correct
 - consequence
@@ -60,12 +67,10 @@ intents:
 - deed
 - wrong
 - negative
-- deny
 - moralquestion
 - utilitarism
 - affirm
 - deontology
-- decider
 - neutral
 - goodbye
 - thanks
@@ -96,16 +101,11 @@ slots:
     - neu
     - compound
 templates:
-  utter_too_bad:
-  - text: Okay, no problem.
-  - text: That's too bad, but never mind.
-  - text: Alright, no big deal.
   utter_ask_consequences:
   - text: For which of these persons would this decision have consequences?
   utter_ask_deed:
   - text: I am interested in the concrete actions contained in this possibility and
-      their moral dimension. Could you list one by one which morally valid actions
-      are important for this option?
+      their moral dimension. Can you think of a morally valid action implied by this option? If so, please name it.
   utter_ask_guess_quantity:
   - text: Could you please have a rough guess?
   - text: Could you estimate the number roughly?
@@ -125,6 +125,13 @@ templates:
       title: Unimportant
     text: I am wondering if "{deed}" is an action of moral relevance in this context.
       Should I consider it relevant or is it unimportant?
+  utter_ask_identified_name:
+  - buttons:
+    - payload: /correct
+      title: 'Yes'
+    - payload: /wrong
+      title: 'No'
+    text: '"{name}" - Is this the name of the person you are talking about?'
   utter_ask_impact:
   - text: Would the effects be more positive or more negative for {name}?
   - text: Would that be more positive or more negative for {name}?
@@ -155,6 +162,18 @@ templates:
   utter_ask_moral_question:
   - text: Now, if you had to break it down to one sentence - How would you define
       the moral question?
+  utter_ask_name_plural:
+  - text: Can you give me a name? That would make it easier for me to recognize who
+      you are talking about.
+  - text: Do you have a name for this group I can use when we are talking about them?
+      I think that would simplify things.
+  - text: Do you have any name or term I can use for this group? That would make it
+      easier for me.
+  utter_ask_name_singular:
+  - text: Does this person have a name? If so, please tell me.
+  - text: Can you give me a name for this person? Then I will use it later on.
+  - text: Do you have a name I can assign to this person? That would make it easier
+      for me to recognize who we are talking about.
   utter_ask_options:
   - text: And what would be the most obvious option that {decider} could choose?
   - text: Could you describe the first option coming to your mind that {decider} could
@@ -234,3 +253,7 @@ templates:
   - text: No problem!
   - text: Never mind
   - text: My pleasure
+  utter_too_bad:
+  - text: Okay, no problem.
+  - text: That's too bad, but never mind.
+  - text: Alright, no big deal.
