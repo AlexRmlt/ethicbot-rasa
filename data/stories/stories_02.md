@@ -7,7 +7,7 @@
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "Samuel"}
+    - slot{"PERSON": "Samuel"}
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": true}
     - utter_next_stakeholder
@@ -15,7 +15,7 @@
     - slot{"plural": "unspecific_plural"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "the Palatines"}
+    - slot{"PERSON": "the Palatines"}
     - slot{"amount_stakeholders": 2}
     - slot{"action_return": false}
     - utter_ask_quantity
@@ -26,7 +26,7 @@
 * decider
     - action_create_stakeholder
     - slot{"decider": "Amelie"}
-    - slot{"name": "Amelie"}
+    - slot{"PERSON": "Amelie"}
     - slot{"amount_stakeholders": 3}
     - slot{"action_return": true}
     - utter_next_stakeholder
@@ -67,16 +67,16 @@
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - utter_ask_consequences
-* consequence{"sentiment": "compound", "name": "samuel", "plural": "singular"}
-    - slot{"name": "samuel"}
+* consequence{"sentiment": "neu", "PERSON": "samuel", "plural": "singular"}
+    - slot{"PERSON": "samuel"}
     - slot{"plural": "singular"}
-    - slot{"sentiment": "compound"}
+    - slot{"sentiment": "neu"}
     - action_create_consequence
     - slot{"action_return": false}
     - utter_ask_impact
-* positive{"sentiment": "compound", "plural": "singular"}
+* positive{"sentiment": "neu", "plural": "singular"}
     - slot{"plural": "singular"}
-    - slot{"sentiment": "compound"}
+    - slot{"sentiment": "neu"}
     - action_update_consequence
     - slot{"action_return": true}
     - utter_ask_impact_weight
@@ -96,7 +96,7 @@
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "Nathan"}
+    - slot{"PERSON": "Nathan"}
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": true}
     - utter_next_stakeholder
@@ -104,7 +104,7 @@
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "Katharina"}
+    - slot{"PERSON": "Katharina"}
     - slot{"amount_stakeholders": 2}
     - slot{"action_return": true}
     - utter_next_stakeholder
@@ -112,7 +112,7 @@
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "Uwe"}
+    - slot{"PERSON": "Uwe"}
     - slot{"amount_stakeholders": 3}
     - slot{"action_return": true}
     - utter_next_stakeholder
@@ -121,8 +121,8 @@
     - slot{"sentiment": "neg"}
     - utter_confirm_stakeholders
     - action_choose_decider
-* decider{"name": "Uwe"}
-    - slot{"name": "Uwe"}
+* decider{"PERSON": "Uwe"}
+    - slot{"PERSON": "Uwe"}
     - action_update_stakeholder
     - slot{"decider": "Uwe"}
     - slot{"action_return": true}
@@ -151,7 +151,7 @@
     - slot{"plural": "unspecific_plural"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "the Palatines"}
+    - slot{"PERSON": "the Palatines"}
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": false}
     - utter_ask_quantity
@@ -165,7 +165,7 @@
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "Daniel"}
+    - slot{"PERSON": "Daniel"}
     - slot{"amount_stakeholders": 2}
     - slot{"action_return": true}
     - utter_next_stakeholder
@@ -178,7 +178,7 @@
     - slot{"plural": "singular"}
     - action_create_stakeholder
     - slot{"decider": "Samuel"}
-    - slot{"name": "Samuel"}
+    - slot{"PERSON": "Samuel"}
     - slot{"amount_stakeholders": 3}
     - slot{"action_return": true}
     - utter_ask_options
@@ -202,7 +202,7 @@
     - action_intro
 * stakeholder{"stakeholder": "a patient"}
     - action_create_stakeholder
-    - slot{"name": "Tanja"}
+    - slot{"PERSON": "Tanja"}
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": true}
     - utter_next_stakeholder
@@ -211,7 +211,7 @@
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
     - slot{"decider": "Lars"}
-    - slot{"name": "Lars"}
+    - slot{"PERSON": "Lars"}
     - slot{"amount_stakeholders": 2}
     - slot{"action_return": true}
     - utter_next_stakeholder
@@ -249,7 +249,7 @@
     - action_intro
 * stakeholder{"stakeholder": "a patient"}
     - action_create_stakeholder
-    - slot{"name": "Greta"}
+    - slot{"PERSON": "Greta"}
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": true}
     - utter_next_stakeholder
@@ -258,7 +258,7 @@
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
     - slot{"decider": "Viola"}
-    - slot{"name": "Viola"}
+    - slot{"PERSON": "Viola"}
     - slot{"amount_stakeholders": 2}
     - slot{"action_return": true}
     - utter_next_stakeholder
@@ -296,8 +296,8 @@
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - utter_ask_consequences
-* consequence{"sentiment": "neu", "name": "greta", "plural": "singular"}
-    - slot{"name": "greta"}
+* consequence{"sentiment": "neu", "PERSON": "Greta", "plural": "singular"}
+    - slot{"PERSON": "greta"}
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_consequence
@@ -342,8 +342,8 @@
 * correct
     - action_update_deed
     - utter_ask_consequences
-* consequence{"sentiment": "neu", "name": "greta", "plural": "singular"}
-    - slot{"name": "greta"}
+* consequence{"sentiment": "neu", "PERSON": "greta", "plural": "singular"}
+    - slot{"PERSON": "greta"}
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_consequence
@@ -383,7 +383,7 @@
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "Viola"}
+    - slot{"PERSON": "Viola"}
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": true}
     - utter_next_stakeholder
@@ -391,7 +391,7 @@
     - slot{"plural": "unspecific_plural"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "the Bavarians"}
+    - slot{"PERSON": "the Bavarians"}
     - slot{"amount_stakeholders": 2}
     - slot{"action_return": false}
     - utter_ask_quantity
@@ -402,7 +402,7 @@
 * decider{"stakeholder": "a person"}
     - action_create_stakeholder
     - slot{"decider": "the Hessians"}
-    - slot{"name": "the Hessians"}
+    - slot{"PERSON": "the Hessians"}
     - slot{"amount_stakeholders": 4}
     - slot{"action_return": false}
     - utter_next_stakeholder
@@ -422,7 +422,7 @@
     - action_intro
 * stakeholder
     - action_create_stakeholder
-    - slot{"name": "Tanja"}
+    - slot{"PERSON": "Tanja"}
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": true}
     - utter_next_stakeholder
@@ -430,7 +430,7 @@
     - slot{"plural": "unspecific_plural"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "the Swabians"}
+    - slot{"PERSON": "the Swabians"}
     - slot{"amount_stakeholders": 2}
     - slot{"action_return": false}
     - utter_ask_quantity
@@ -444,7 +444,7 @@
     - slot{"plural": "unspecific_plural"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "the Hessians"}
+    - slot{"PERSON": "the Hessians"}
     - slot{"amount_stakeholders": 3}
     - slot{"action_return": false}
     - utter_ask_quantity
@@ -460,7 +460,7 @@
     - utter_confirm_stakeholders
     - action_choose_decider
 * decider{"name": "Tanja"}
-    - slot{"name": "Tanja"}
+    - slot{"PERSON": "Tanja"}
     - action_update_stakeholder
     - slot{"decider": "Tanja"}
     - slot{"action_return": true}
@@ -501,8 +501,8 @@
     - slot{"plural": "singular"}
     - slot{"sentiment": "neg"}
     - utter_ask_consequences
-* consequence{"sentiment": "neu", "name": "the swabians", "plural": "singular"}
-    - slot{"name": "the swabians"}
+* consequence{"sentiment": "neu", "PERSON": "the swabians", "plural": "singular"}
+    - slot{"PERSON": "the swabians"}
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_consequence
@@ -520,8 +520,8 @@
     - action_update_consequence
     - slot{"action_return": true}
     - utter_next_consequence
-* consequence{"sentiment": "neu", "name": "the hessians", "plural": "singular"}
-    - slot{"name": "the hessians"}
+* consequence{"sentiment": "neu", "PERSON": "the hessians", "plural": "singular"}
+    - slot{"PERSON": "the hessians"}
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_consequence
@@ -573,8 +573,8 @@
     - slot{"plural": "singular"}
     - slot{"sentiment": "neg"}
     - utter_ask_consequences
-* consequence{"sentiment": "neu", "name": "the hessians", "plural": "singular"}
-    - slot{"name": "the hessians"}
+* consequence{"sentiment": "neu", "PERSON": "the hessians", "plural": "singular"}
+    - slot{"PERSON": "the hessians"}
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_consequence
@@ -592,8 +592,8 @@
     - action_update_consequence
     - slot{"action_return": true}
     - utter_next_consequence
-* consequence{"sentiment": "neu", "name": "the swabians", "plural": "singular"}
-    - slot{"name": "the swabians"}
+* consequence{"sentiment": "neu", "PERSON": "the swabians", "plural": "singular"}
+    - slot{"PERSON": "the swabians"}
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_consequence
@@ -638,7 +638,7 @@
     - slot{"plural": "unspecific_plural"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "the Hessians"}
+    - slot{"PERSON": "the Hessians"}
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": false}
     - utter_ask_quantity
@@ -652,7 +652,7 @@
     - slot{"plural": "unspecific_plural"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "the Bavarians"}
+    - slot{"PERSON": "the Bavarians"}
     - slot{"amount_stakeholders": 2}
     - slot{"action_return": false}
     - utter_ask_quantity
@@ -668,7 +668,7 @@
     - slot{"plural": "unspecific_plural"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "the Palatines"}
+    - slot{"PERSON": "the Palatines"}
     - slot{"amount_stakeholders": 3}
     - slot{"action_return": false}
     - utter_ask_quantity
@@ -690,7 +690,7 @@
     - slot{"plural": "unspecific_plural"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "the Rhinelanders"}
+    - slot{"PERSON": "the Rhinelanders"}
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": false}
     - utter_ask_quantity
@@ -738,4 +738,322 @@
     - utter_next_stakeholder
 * deny
     - utter_confirm_stakeholders
+
+## Generated Story 6199862161884845419
+* greeting
+    - action_intro
+* stakeholder{"stakeholder": "a group of people", "plural": "unspecific_plural", "moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - slot{"plural": "unspecific_plural"}
+    - action_create_stakeholder
+    - slot{"amount_stakeholders": 1}
+    - slot{"action_return": false}
+    - utter_ask_quantity
+* quantity{"quantity": "7", "CARDINAL": "7"}
+    - action_update_stakeholder
+    - slot{"plural": "specific_plural"}
+    - slot{"action_return": true}
+    - utter_ask_name_plural
+* dontknow
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* stakeholder{"plural": "singular", "moralstatus": "animal"}
+    - slot{"moralstatus": "animal"}
+    - slot{"plural": "singular"}
+    - action_create_stakeholder
+    - slot{"amount_stakeholders": 2}
+    - slot{"action_return": true}
+    - utter_ask_name_singular
+* name
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_ask_moral_status
+* moralstatus
+    - utter_ask_moral_status_weight
+* quantity{"quantity": "5", "CARDINAL": "5"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+
+## Generated Story -7074071357169509213
+* greeting
+    - action_intro
+* stakeholder{"PERSON": "Jones", "ORDINAL": "First", "PERSON": "Jones", "plural": "singular"}
+    - slot{"PERSON": "Jones"}
+    - slot{"plural": "singular"}
+    - action_create_stakeholder
+    - slot{"amount_stakeholders": 1}
+    - slot{"action_return": true}
+    - utter_ask_moral_status
+* moralstatus{"moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* stakeholder{"plural": "unspecific_plural", "moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - slot{"plural": "unspecific_plural"}
+    - action_create_stakeholder
+    - slot{"amount_stakeholders": 2}
+    - slot{"action_return": false}
+    - utter_ask_quantity
+* dontknow
+    - utter_ask_guess_quantity
+* quantity{"CARDINAL": "about 3 million"}
+    - action_update_stakeholder
+    - slot{"plural": "specific_plural"}
+    - slot{"action_return": true}
+    - utter_ask_name_plural
+* name
+    - action_update_stakeholder
+    - slot{"PERSON": "Jones"}
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+
+## Generated Story 192684572851654829
+* greeting
+    - action_intro
+* stakeholder{"PERSON": "David", "plural": "singular"}
+    - slot{"plural": "singular"}
+    - action_create_stakeholder
+    - slot{"amount_stakeholders": 1}
+    - slot{"action_return": true}
+    - utter_ask_identified_name
+* correct
+    - action_update_stakeholder
+    - slot{"PERSON": "Inga"}
+    - slot{"action_return": true}
+    - utter_ask_moral_status
+* moralstatus{"moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* stakeholder{"plural": "unspecific_plural", "moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - slot{"plural": "unspecific_plural"}
+    - action_create_stakeholder
+    - slot{"amount_stakeholders": 2}
+    - slot{"action_return": false}
+    - utter_ask_quantity
+* deny
+    - utter_ask_guess_quantity
+* quantity{"CARDINAL": "About 6 million"}
+    - action_update_stakeholder
+    - slot{"plural": "specific_plural"}
+    - slot{"action_return": true}
+    - utter_ask_name_plural
+* deny{"CARDINAL": "one"}
+    - action_update_stakeholder
+    - slot{"PERSON": "the Saxons"}
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+
+## Generated Story 6540634725673596884
+* greeting
+    - action_intro
+* stakeholder{"PERSON": "Jones", "ORDINAL": "First", "plural": "singular"}
+    - slot{"PERSON": "Jones"}
+    - slot{"plural": "singular"}
+    - action_create_stakeholder
+    - slot{"amount_stakeholders": 1}
+    - slot{"action_return": true}
+    - utter_ask_identified_name
+* correct
+    - action_update_stakeholder
+    - slot{"PERSON": "Werner"}
+    - slot{"action_return": true}
+    - utter_ask_moral_status
+* moralstatus{"moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* stakeholder{"stakeholder": "a large group of people", "plural": "unspecific_plural", "moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - slot{"plural": "unspecific_plural"}
+    - action_create_stakeholder
+    - slot{"amount_stakeholders": 2}
+    - slot{"action_return": false}
+    - utter_ask_quantity
+* quantity{"CARDINAL": "3 million"}
+    - action_update_stakeholder
+    - slot{"plural": "specific_plural"}
+    - slot{"action_return": true}
+    - utter_ask_name_plural
+* dontknow
+    - action_update_stakeholder
+    - slot{"PERSON": "the Rhinelanders"}
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* stakeholder{"plural": "singular", "moralstatus": "animal"}
+    - slot{"moralstatus": "animal"}
+    - slot{"plural": "singular"}
+    - action_create_stakeholder
+    - slot{"amount_stakeholders": 3}
+    - slot{"action_return": true}
+    - utter_ask_name_singular
+* name{"PERSON": "Fluffy"}
+    - slot{"PERSON": "Fluffy"}
+    - action_update_stakeholder
+    - slot{"PERSON": "Fluffy"}
+    - slot{"action_return": true}
+    - utter_ask_moral_status_weight
+* quantity{"CARDINAL": "8"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* decider{"stakeholder": "one person", "CARDINAL": "one"}
+
+## Generated Story -7388436401191886344
+* greeting
+    - action_intro
+* decider
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 1}
+    - slot{"action_return": false}
+
+## Generated Story -4815676424493487830
+* greeting
+    - action_intro
+* decider{"ORG": "Path A or Path B", "plural": "unspecific_plural"}
+    - slot{"plural": "unspecific_plural"}
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 1}
+    - slot{"action_return": false}
+    - utter_ask_quantity
+* quantity
+    - action_update_stakeholder
+    - slot{"plural": "specific_plural"}
+    - slot{"action_return": true}
+
+## Generated Story -2308450246546178712
+* greeting
+    - action_intro
+* decider{"ORG": "Path A or Path B", "plural": "unspecific_plural"}
+    - slot{"plural": "unspecific_plural"}
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 1}
+    - slot{"action_return": false}
+    - utter_ask_quantity
+* quantity{"CARDINAL": "one"}
+    - action_update_stakeholder
+    - slot{"plural": "singular"}
+    - slot{"action_return": true}
+    - utter_ask_name_singular
+* deny
+    - action_update_stakeholder
+    - slot{"decider": "Carla"}
+    - slot{"PERSON": "Carla"}
+    - slot{"action_return": true}
+    - utter_ask_moral_status
+* moralstatus{"moralstatus": "machine"}
+    - slot{"moralstatus": "machine"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* stakeholder{"PERSON": "Carla", "plural": "unspecific_plural", "moralstatus": "human"}
+    - slot{"PERSON": "Carla"}
+    - slot{"moralstatus": "human"}
+    - slot{"plural": "unspecific_plural"}
+    - action_create_stakeholder
+    - slot{"amount_stakeholders": 2}
+    - slot{"action_return": false}
+    - utter_ask_quantity
+* quantity{"CARDINAL": "7"}
+    - action_update_stakeholder
+    - slot{"plural": "specific_plural"}
+    - slot{"action_return": true}
+    - utter_ask_name_plural
+* dontknow
+    - action_update_stakeholder
+    - slot{"PERSON": "the Hessians"}
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* stakeholder{"stakeholder": "another group", "plural": "unspecific_plural", "moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - slot{"plural": "unspecific_plural"}
+    - action_create_stakeholder
+    - slot{"amount_stakeholders": 3}
+    - slot{"action_return": false}
+    - utter_ask_quantity
+* dontknow
+    - utter_ask_guess_quantity
+* quantity{"stakeholder": "ten people", "CARDINAL": "ten"}
+    - action_update_stakeholder
+    - slot{"plural": "specific_plural"}
+    - slot{"action_return": true}
+    - utter_ask_name_plural
+* deny
+    - action_update_stakeholder
+    - slot{"PERSON": "the Palatines"}
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* deny
+    - utter_confirm_stakeholders
+    - utter_confirm_decider
+    - utter_ask_moral_question
+* moralquestion
+    - utter_ask_options
+* option
+    - action_create_option
+    - slot{"deed": null}
+    - slot{"option": 4}
+    - slot{"action_return": true}
+    - utter_ask_deed
+* deed{"stakeholder": "ten people", "CARDINAL": "ten"}
+    - action_create_deed
+    - slot{"deed": "Rescuing ten people"}
+    - slot{"action_return": true}
+    - utter_ask_universalizable
+* correct
+    - action_update_deed
+    - slot{"deed": null}
+    - slot{"action_return": true}
+    - utter_next_deed
+* deed
+    - action_create_deed
+    - slot{"deed": "Leaving the other group behind."}
+    - slot{"action_return": true}
+    - utter_ask_universalizable
+* wrong
+    - action_update_deed
+    - slot{"deed": null}
+    - slot{"action_return": true}
+    - utter_next_deed
+* deny
+    - utter_ask_consequences
+* consequence{"ORG": "Palatines", "sentiment": "pos"}
+    - slot{"sentiment": "pos"}
+    - action_create_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact_positive
+* correct
+    - utter_ask_impact_weight
+* quantity{"CARDINAL": "8"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_next_consequence
+* consequence{"NORP": "Hessians", "sentiment": "neg"}
+    - slot{"sentiment": "neg"}
+    - action_create_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact_negative
+* correct
+    - utter_ask_impact_weight
+* quantity{"CARDINAL": "10"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_next_consequence
+* deny
+    - utter_next_option
+* option{"ORG": "Carla", "ORDINAL": "first", "NORP": "Hessians"}
+    - action_create_option
+    - slot{"deed": null}
+    - slot{"option": 9}
+    - slot{"action_return": true}
 

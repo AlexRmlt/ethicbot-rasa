@@ -1,73 +1,80 @@
 %YAML 1.1
 ---
 actions:
-- utter_ask_impact_weight
-- utter_next_stakeholder
-- utter_next_deed
-- utter_got_everything
-- utter_confirm_stakeholders
-- utter_ask_universalizable
-- utter_ask_identified_deed
-- action_update_context
-- action_evaluation_utilitarism
-- utter_ask_name_singular
-- utter_ask_moral_question
-- utter_next_consequence
-- utter_ask_options
-- action_update_consequence
-- action_intro
-- action_choose_decider
-- utter_ask_method
-- action_update_option
-- utter_ask_impact_positive
-- utter_too_bad
-- utter_ask_stakeholders
-- action_choose_affected_stakeholder
-- utter_ask_impact_negative
-- utter_ask_guess_quantity
+- utter_ask_inherent_evil
 - utter_thanks
-- utter_next_method
-- utter_intro
-- utter_ask_name_plural
-- action_create_consequence
-- utter_ask_quantity
-- action_evaluation_deontology
-- utter_goodbye
-- action_create_option
-- utter_confirm_decider
-- utter_next_option
 - utter_ask_consequences
-- utter_ask_impact
-- action_update_stakeholder
-- utter_ask_identified_name
-- utter_ask_deed
-- action_create_deed
-- action_create_stakeholder
+- action_create_option
+- utter_ask_moral_status
+- utter_ask_impact_positive
+- action_evaluation_deontology
+- utter_next_method
+- utter_ask_name_singular
+- action_evaluation_utilitarism
+- utter_got_everything
+- utter_ask_impact_weight
+- action_choose_decider
+- utter_ask_universalizable
+- utter_confirm_decider
+- utter_ask_method
 - action_update_deed
+- action_update_stakeholder
+- utter_next_stakeholder
+- utter_ask_impact
+- utter_confirm_stakeholders
+- utter_ask_stakeholders
+- action_update_option
+- action_create_deed
+- action_choose_affected_stakeholder
+- utter_ask_moral_question
+- utter_ask_impact_negative
+- utter_next_consequence
+- utter_next_option
+- action_update_consequence
+- utter_ask_quantity
+- utter_ask_identified_name
+- action_update_context
+- utter_ask_deed
+- utter_ask_moral_status_weight
+- action_create_stakeholder
+- utter_ask_options
+- action_intro
+- utter_goodbye
+- utter_too_bad
+- action_create_consequence
+- utter_ask_name_plural
+- utter_ask_identified_deed
+- utter_intro
+- utter_next_deed
+- utter_ask_guess_quantity
 entities:
-- stakeholder
-- name
-- deed
-- quantity
+- moralstatus
 - sentiment
-- plural
-- CARDINAL
-intents:
-- dontknow
-- greeting
+- NORP
 - stakeholder
-- name
+- PERSON
+- CARDINAL
+- ORDINAL
+- deed
+- ORG
+- plural
+intents:
 - quantity
-- deny
 - decider
+- moralquestion
 - option
+- stakeholder
+- greeting
 - correct
 - consequence
-- positive
-- deed
 - wrong
+- deny
+- moralstatus
+- dontknow
+- deed
+- name
+- positive
 - negative
-- moralquestion
 - utilitarism
 - affirm
 - deontology
@@ -75,6 +82,8 @@ intents:
 - goodbye
 - thanks
 slots:
+  PERSON:
+    type: text
   action_return:
     type: bool
   amount_stakeholders:
@@ -83,8 +92,13 @@ slots:
     type: text
   deed:
     type: text
-  name:
-    type: text
+  moralstatus:
+    type: categorical
+    values:
+    - human
+    - machine
+    - animal
+    - other
   option:
     type: text
   plural:
@@ -99,13 +113,14 @@ slots:
     - pos
     - neg
     - neu
-    - compound
 templates:
   utter_ask_consequences:
   - text: For which of these persons would this decision have consequences?
+  - text: For whom would this decision have consequences and what would they look like?
   utter_ask_deed:
   - text: I am interested in the concrete actions contained in this possibility and
-      their moral dimension. Can you think of a morally valid action implied by this option? If so, please name it.
+      their moral dimension. Can you think of a morally valid action implied by this
+      option? If so, please name it.
   utter_ask_guess_quantity:
   - text: Could you please have a rough guess?
   - text: Could you estimate the number roughly?
@@ -131,25 +146,25 @@ templates:
       title: 'Yes'
     - payload: /wrong
       title: 'No'
-    text: '"{name}" - Is this the name of the person you are talking about?'
+    text: '"{PERSON}" is the name of the person you are talking about, right?'
   utter_ask_impact:
-  - text: Would the effects be more positive or more negative for {name}?
-  - text: Would that be more positive or more negative for {name}?
-  - text: Would you consider the effects on {name} to be more negative or more positive?
+  - text: Would the effects be more positive or more negative for {PERSON}?
+  - text: Would that be more positive or more negative for {PERSON}?
+  - text: Would you consider the effects on {PERSON} to be more negative or more positive?
   utter_ask_impact_negative:
   - buttons:
     - payload: /correct
       title: Correct
     - payload: /wrong
       title: Wrong
-    text: For {name} this would be rather unpleasant, right?
+    text: For {PERSON} this would be rather unpleasant, right?
   utter_ask_impact_positive:
   - buttons:
     - payload: /correct
       title: Correct
     - payload: /wrong
       title: Wrong
-    text: That would be a good thing for {name}, right?
+    text: That would be a good thing for {PERSON}, right?
   utter_ask_impact_weight:
   - text: Could you estimate how severe the impact would be? On a scale of 1 to 10?
   utter_ask_method:
@@ -162,6 +177,20 @@ templates:
   utter_ask_moral_question:
   - text: Now, if you had to break it down to one sentence - How would you define
       the moral question?
+  utter_ask_moral_status:
+  - buttons:
+    - payload: '/moralstatus{"moralstatus": "human"}'
+      title: Human
+    - payload: '/moralstatus{"moralstatus": "machine"}'
+      title: Machine
+    - payload: '/moralstatus{"moralstatus": "animal"}'
+      title: Animal
+    - payload: '/moralstatus{"moralstatus": "other"}'
+      title: Other
+    text: Can you tell me what kind of class {PERSON} would belong to?
+  utter_ask_moral_status_weight:
+  - text: Compared to a human, how high would you rate the moral significance of {PERSON}
+      on a scale of 1 to 10?
   utter_ask_name_plural:
   - text: Can you give me a name? That would make it easier for me to recognize who
       you are talking about.
@@ -179,9 +208,9 @@ templates:
   - text: Could you describe the first option coming to your mind that {decider} could
       choose?
   utter_ask_quantity:
-  - text: Can you tell me approximately how many persons there are?
+  - text: Can you tell me approximately how many persons the group you are talking about consists?
   - text: From how many persons does this group consist exactly?
-  - text: How many people are we talking about?
+  - text: How many people are we talking about for the group you are describing?
   utter_ask_stakeholders:
   - text: 'First: Which persons or groups of people are all involved in the situation?
       Please tell me in one sentence, one after the other.'
@@ -192,6 +221,13 @@ templates:
     - payload: /wrong
       title: 'No'
     text: Could you want this particular action to become a general rule for everyone?
+  utter_ask_inherent_evil:
+  - buttons:
+    - payload: /affirm
+      title: 'It is inherently evil.'
+    - payload: /deny
+      title: 'It would cause other problems.'
+    text: Is that because you'd feel the action was evil in itself? Or is it just not suitable for becoming a general rule because that would cause certain problems?
   utter_confirm_decider:
   - text: The moral decision is made by {decider}.
   utter_confirm_stakeholders:
@@ -221,8 +257,6 @@ templates:
   utter_intro:
   - text: Hello! I will now try to understand your situation.
   utter_next_consequence:
-  - text: For whom would this decision have consequences and what would they look
-      like?
   - text: Would this have any consequences for anybody else?
   - text: Would that affect anyone else?
   utter_next_deed:

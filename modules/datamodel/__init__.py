@@ -1,5 +1,6 @@
 from . import mind
 import random
+import modules.constants as const
 
 aliases = ['Amelie', 'Benjamin', 'Carla', 'Daniel', 'Esther', 'Frank', 'Greta', 'Harald', 'Inga', 'Jörg',
 			'Katharina', 'Lars', 'Michelle', 'Nathan', 'Olga', 'Patrick', 'Roswitha', 'Samuel', 'Tanja', 'Uwe', 'Viola', 'Werner', 'Zoe']
@@ -47,6 +48,21 @@ class Stakeholder(Entity):
 					while (mind.stakeholder_exists(name)):
 						name = random.choice(collective)
 			self['name'] = name
+		return self
+
+	def set_moral_status(self, ms):
+		self['moral_status'] = ms
+		if ms == const.MS_HUMAN:
+			self['moral_status_weight'] = 1
+		elif ms == const.MS_MACHINE:
+			self['moral_status_weight'] = 0
+		else:
+			self['moral_status_weight'] = -1
+		return self
+
+	def set_moral_status_weight(self, w):
+		weight = w / 10
+		self['moral_status_weight'] = weight
 		return self
 
 class Option(Entity):

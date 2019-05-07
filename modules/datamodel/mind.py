@@ -62,7 +62,10 @@ def get_stakeholder_by_name(name):
 
 def get_recent_stakeholder():
 	from . import Stakeholder
-	sh = db.search(q.type == 'Stakeholder')[-1]
+	try:
+		sh = db.search(q.type == 'Stakeholder')[-1]
+	except IndexError:
+		return None
 	return Stakeholder(sh) if sh != None else None
 
 def get_stakeholders_by_synonym(synonym):

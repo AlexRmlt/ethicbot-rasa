@@ -88,12 +88,13 @@ class CreateStakeholder(Action):
 
 	Required slots:
 	* plural == singular or plural of stakeholder to be created
-	* stakeholder == synonym the user used to introduce the stakeholder
+	* moralstatus == moral status of the stakeholder (human, machine or animal)
 
 	Returns:
 	* action_return = True if stakeholder was created with correct amount
 	* action_return = False if stakeholder was created with unspecific amount (-1)
 	* amount_stakeholders = amount of stakeholders in the datamodel after inserting the new one
+	* moralstatus = None if no moral status was detected, to prevent that a previous status is considered again
 	"""
 	def name(self):
 		return "action_create_stakeholder"
@@ -101,21 +102,36 @@ class CreateStakeholder(Action):
 	def run(self, dispatcher, tracker, domain):
 		events = []
 
+		sh = Stakeholder({	
+			'decider': False, 
+			'moral_status': const.MS_OTHER, 
+			'moral_status_weight': -1
+		})
+
 		# Do we know whether it is a single stakeholder or a group of people?
 		if (tracker.get_slot('plural') == const.SINGULAR):
-			sh = Stakeholder({"decider": False, "amount": 1})
+			sh['amount'] = 1
 		else:
 			sources = [ next(tracker.get_latest_entity_values('stakeholder'), None),
-						next(tracker.get_latest_entity_values('quantity'), -1) ]
+						next(tracker.get_latest_entity_values('CARDINAL'), -1) ]
 			quantity = nlu.get_quantity_from_sources(sources)
-			sh = Stakeholder({"decider": False, "amount": int(quantity)})
+			sh['amount'] = int(quantity)
+
+		# Is a moral status identified?
+		moralstatus = next(tracker.get_latest_entity_values('moralstatus'), None)
+		if moralstatus == None:
+			events.append(SlotSet('moralstatus', None))
+		else:
+			sh.set_moral_status(moralstatus)
 
 		# Is the stakeholder recognized as the decider?
 		if (tracker.latest_message['intent'].get('name') == 'decider'):
 			sh['decider'] = True
 
 		# Remember synonym, maybe the user refuses to call the person by its new name
-		sh['synonym'] = next(tracker.get_latest_entity_values('stakeholder'), None)
+		synonym = next(tracker.get_latest_entity_values('stakeholder'), None)
+		if not synonym == None:
+			sh['synonym'] = synonym
 
 		sh.memorize() 
 
@@ -130,12 +146,13 @@ class UpdateStakeholder(Action):
 	Update an existing stakeholder
 
 	Triggered by:
-	* Intent 'quantity'
+	* Intent 'quantity'		(user specified the amount of stakeholders OR the moral status weight, hopefully between 1 and 10)
 	* Intent 'decider'
 	* Intent 'name'
-	* Intent 'correct' 	(user confirmed name recognized by the bot)
-	* Intent 'dontknow'	(user does not know the proposed stakeholders name)
-	* Intent 'deny'		(user does not tell the proposed stakeholders name)
+	* Intent 'correct' 		(user confirmed name recognized by the bot)
+	* Intent 'dontknow'		(user does not know the proposed stakeholders name)
+	* Intent 'deny'			(user does not tell the proposed stakeholders name)
+	* Intent 'moralstatus'	
 
 	Required slots: /
 
@@ -143,6 +160,8 @@ class UpdateStakeholder(Action):
 	* action_return = True if stakeholder was successfully updated
 	* action_return = False if no update was made
 	* decider = name of the stakeholder if he is the decider
+	* PERSON = name of the stakeholder if it was freshly assigned
+	* plural = specific_plural if amount was detected or None if detection failed
 	"""
 	def name(self):
 		return "action_update_stakeholder"
@@ -165,24 +184,47 @@ class UpdateStakeholder(Action):
 
 			# Intent: quantity
 			elif (tracker.latest_message['intent'].get('name') == 'quantity'):
-				sources = [ next(tracker.get_latest_entity_values('quantity'), -1),
-							next(tracker.get_latest_entity_values('stakeholder'), None),
-							tracker.latest_message['text'] ]
-				quantity = nlu.get_quantity_from_sources(sources)
+				# We always ask for the amount of stakeholders before we ask for moral status
+				# Plural slot must be set to 'unspecific_plural', else we would not ask
+				# If detection of stakeholder amount failed, plural slot is set to None
+				# Thus: if the slot is still set to 'unspecific_plural', we are asking for the amount
+				if tracker.get_slot('plural') == const.UNSPECIFIC_PLURAL:
+					sources = [ next(tracker.get_latest_entity_values('CARDINAL'), -1),
+								next(tracker.get_latest_entity_values('stakeholder'), None),
+								tracker.latest_message['text'] ]
+					quantity = nlu.get_quantity_from_sources(sources)
 
-				if quantity != -1:
-					sh['amount'] = quantity
-					action_return = True
-					mind.memorize(sh)
-					dispatcher.utter_template('utter_got_it', tracker)
+					if quantity != -1:		
+						sh['amount'] = quantity
+						mind.memorize(sh)
+						action_return = True
+
+						if quantity > 1:
+							dispatcher.utter_message('I see, {} are involved.'.format(sh['amount']))
+							events.append(SlotSet('plural', const.SPECIFIC_PLURAL))
+						else:
+							dispatcher.utter_message('Okay, so its only one single person. Got that wrong at first.')
+							events.append(SlotSet('plural', const.SINGULAR))
+					else:
+						logging.warning('Could not determine amount of stakeholders in message classified as quantity')
+						action_return = False
+						events.append(SlotSet('plural', None))
+					
+				# Else we asked for the moral status
 				else:
-					action_return = False
+					sources = [ next(tracker.get_latest_entity_values('CARDINAL'), -1),
+								tracker.latest_message['text'] ]
+					weight = nlu.get_quantity_from_sources(sources)
+					
+					sh.set_moral_status_weight(weight).memorize()
+					dispatcher.utter_message('Okay, I will consider the moral status of {} to be a proportion of {} compared to a human.'.format(sh['name'], sh['moral_status_weight']))
+					action_return = True
 
 			# Intent: name or correct
 			elif (tracker.latest_message['intent'].get('name') == 'name') \
 				or (tracker.latest_message['intent'].get('name') == 'correct'):
 
-				name = tracker.get_slot('name')
+				name = tracker.get_slot('PERSON')
 				
 				if not name == None:
 					sh.set_name(name).memorize()
@@ -193,7 +235,8 @@ class UpdateStakeholder(Action):
 
 				if (sh['decider'] == True):
 					events.append(SlotSet('decider', sh['name']))
-				
+				events.append(SlotSet('PERSON', sh['name']))
+
 				action_return = True
 
 			# Intent: dontknow or deny
@@ -205,12 +248,19 @@ class UpdateStakeholder(Action):
 				
 				if (sh['decider'] == True):
 					events.append(SlotSet('decider', sh['name']))
+				events.append(SlotSet('PERSON', sh['name']))
 
+				action_return = True
+
+			# Intent: moralstatus
+			elif (tracker.latest_message['intent'].get('name') == 'moralstatus'):
+				sh.set_moral_status(tracker.get_slot('moralstatus')).memorize()
+				dispatcher.utter_template('utter_got_it', tracker)
 				action_return = True
 
 		except (AttributeError, TypeError) as e:
 			logging.warning('Exception updating Stakeholder: ' + str(e))
-			events.append(SlotSet('name', None))
+			events.append(SlotSet('PERSON', None))
 			action_return = False
 
 		events.append(SlotSet('action_return', action_return))
@@ -352,7 +402,10 @@ class UpdateDeed(Action):
 	Update an existing Deed
 
 	Triggered by:
-	* 
+	* Intent 'correct' after 'utter_ask_universalizable'
+	* Intent 'wrong' after 'utter_ask_universalizable'
+	* Intent 'affirm' after 'utter_ask_inherent_evil'
+	* Intent 'deny' after 'utter_ask_inherent_evil'
 
 	Required slots: /
 
@@ -370,30 +423,39 @@ class UpdateDeed(Action):
 
 		try:
 			deed = mind.get_deed(tracker.get_slot('deed'))
-
-			# Update universalizability
+		
+			# Update universalizability and inherent_evil
 			if (tracker.latest_message['intent'].get('name') == 'correct'):
 				deed['universalizable'] = True
+				deed['inherent_evil'] = False
+				action_return = True
 			elif (tracker.latest_message['intent'].get('name') == 'wrong'):
 				deed['universalizable'] = False
-
-			if ('universalizable' in deed):
-				deed.memorize()
 				action_return = True
+			elif (tracker.latest_message['intent'].get('name') == 'affirm'):
+				deed['inherent_evil'] = True
+				action_return = True
+			elif (tracker.latest_message['intent'].get('name') == 'deny'):
+				deed['inherent_evil'] = False
+				action_return = True
+			
+			if action_return == True:
+				deed.memorize()
 				dispatcher.utter_template('utter_got_it', tracker)
 
 			# Remove current and select next deed from list, if available
-			option = mind.by_id(int(tracker.get_slot('option')))
+			if ('universalizable' in deed and 'inherent_evil' in deed):
+				option = mind.by_id(int(tracker.get_slot('option')))
 
-			if deed['label'] in option['deeds']:
-				option['deeds'].remove(deed['label'])
-				option.memorize()
+				if deed['label'] in option['deeds']:
+					option['deeds'].remove(deed['label'])
+					option.memorize()
 
-			if len(option['deeds']) > 0:
-				events.append(SlotSet("deed", option['deeds'][0]))
-			else:
-				events.append(SlotSet("deed", None))
-				del option['deeds']
+				if len(option['deeds']) > 0:
+					events.append(SlotSet("deed", option['deeds'][0]))
+				else:
+					events.append(SlotSet("deed", None))
+					del option['deeds']
 
 		except (AttributeError, TypeError) as e:
 			logging.warning('Exception updating deed: ' + str(e))
@@ -439,7 +501,7 @@ class CreateConsequence(Action):
 			impact = 0
 
 		# Find out, which stakeholder is affected by this consequence
-		sh = mind.get_stakeholder_by_name(tracker.get_slot('name'))
+		sh = mind.get_stakeholder_by_name(next(tracker.get_latest_entity_values('PERSON'), None))
 
 		try:
 			consequence = Consequence({"option": option, "affected_stakeholder": sh['name'], "impact": impact}).memorize()
@@ -448,7 +510,7 @@ class CreateConsequence(Action):
 		except (AttributeError, TypeError) as e:
 			logging.warning('Exception creating consequence: ' + str(e))
 			# If we do not find a distinct name, let the user choose from possible stakeholders
-			events.append(SlotSet('name', None))
+			events.append(SlotSet('PERSON', None))
 			action_return = False
 			
 		events.append(SlotSet('action_return', action_return))
@@ -480,7 +542,7 @@ class UpdateConsequence(Action):
 		intent = tracker.latest_message['intent'].get('name')
 
 		try:
-			consequence = mind.get_consequence(tracker.get_slot('name'), tracker.get_slot('option'))
+			consequence = mind.get_consequence(tracker.get_slot('PERSON'), tracker.get_slot('option'))
 			old_impact = consequence['impact']
 
 			# Update impact
@@ -494,7 +556,7 @@ class UpdateConsequence(Action):
 				consequence['impact'] = consequence['impact'] * -1
 				
 			elif (intent == 'quantity'):
-				sources = [ next(tracker.get_latest_entity_values('quantity'), -1),
+				sources = [ next(tracker.get_latest_entity_values('CARDINAL'), -1),
 							tracker.latest_message['text'] ]
 				quantity = nlu.get_quantity_from_sources(sources)
 				if quantity != -1:

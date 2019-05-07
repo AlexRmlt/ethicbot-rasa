@@ -39,7 +39,7 @@ class IntentInformation(Component):
 
         * Stakeholder:
         ** plural
-        ** moral_status 
+        ** moralstatus 
         
         """
         extracted = []
@@ -52,7 +52,7 @@ class IntentInformation(Component):
             # Get sentiment
             sentiment, confidence = nlu.get_sentiment(message.text)
             extracted.append(self.convert_to_rasa('sentiment', sentiment, confidence))
-        elif (intent == 'stakeholder'):
+        elif (intent == 'stakeholder' or intent == 'decider'):
             entities = message.get("entities")
 
             # Get plural or singular
@@ -66,7 +66,10 @@ class IntentInformation(Component):
             extracted.append(self.convert_to_rasa('plural', plural))
 
             # Get moral status
-            
+            moralstatus = nlu.get_moral_status(message.text)
+            if not moralstatus == None: 
+                extracted.append(self.convert_to_rasa('moralstatus', moralstatus))
+
         message.set("entities",
                 message.get("entities", []) + extracted,
                 add_to_output=True)

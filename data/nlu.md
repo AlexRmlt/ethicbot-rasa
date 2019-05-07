@@ -14,69 +14,76 @@
 - [Five persons](stakeholder:five persons) would be overrun and get killed
 - Then only [one person](stakeholder) would get killed
 - Only [the person on the side track](stakeholder) would get overrun
-- [Michelle](name) would get overrun and die
-- [Nathan](name) would suffer less pain
-- [Werner](name) would not have to suffer so much pain
-- [Benjamin](name) would get overrun and get killed
-- [Benjamin](name) would get overrun and die
-- [The Swabians](name) would live
-- [Frank](name) would get overrun and die
+- [Michelle](PERSON) would get overrun and die
+- [Nathan](PERSON) would suffer less pain
+- [Werner](PERSON) would not have to suffer so much pain
+- [Benjamin](PERSON) would get overrun and get killed
+- [Benjamin](PERSON) would get overrun and die
+- [The Swabians](PERSON) would live
+- [Frank](PERSON) would get overrun and die
 - [The five persons](stakeholder:the five persons) on the other track would survive
-- [The Rhinelanders](name) would all survive
-- [The Rhinelanders](name) would all get overrun and die
-- [Uwe](name) would not be overrun and survive
-- Then [Jörg](name) would get overrun
-- [The Swabians](name) would survive
+- [The Rhinelanders](PERSON) would all survive
+- [The Rhinelanders](PERSON) would all get overrun and die
+- [Uwe](PERSON) would not be overrun and survive
+- Then [Jörg](PERSON) would get overrun
+- [The Swabians](PERSON) would survive
 - This would have very negative consequences
-- [Frank](name) would get overrun by the train die
-- [Nathan](name) would be overrun by the train and get killed
-- [Patrick](name) would suffer less as we could help him
-- Then [Werner](name) would not be discovered by Esther
-- [The Rhinelanders](name) would get overrun by the train and die
-- [Benjamin](name) would get overrun and die
-- [The Rhinelanders](name) would survive
-- [The Rhinelanders](name) would then be overrun by the train and die
-- [Benjamin](name) would survive
-- [Daniel](name) would then suffer less
-- [The Saxons](name) could not watch the match for the time of the interruption
-- [Daniel](name) would then suffer for a longer time
-- [The Saxons](name) could continue watching the football match
+- [Frank](PERSON) would get overrun by the train die
+- [Nathan](PERSON) would be overrun by the train and get killed
+- [Patrick](PERSON) would suffer less as we could help him
+- Then [Werner](PERSON) would not be discovered by Esther
+- [The Rhinelanders](PERSON) would get overrun by the train and die
+- [Benjamin](PERSON) would get overrun and die
+- [The Rhinelanders](PERSON) would survive
+- [The Rhinelanders](PERSON) would then be overrun by the train and die
+- [Benjamin](PERSON) would survive
+- [Daniel](PERSON) would then suffer less
+- [The Saxons](PERSON) could not watch the match for the time of the interruption
+- [Daniel](PERSON) would then suffer for a longer time
+- [The Saxons](PERSON) could continue watching the football match
 - [The patient](stakeholder:the patient) could then be prevented from being harmed
 - [The overseer](stakeholder:the overseer) would have to take further action
 - [The patient](stakeholder:the patient) would potentially be harmed due to him not taking the medication
-- [Greta](name) would possibly be saved from health issues
+- [Greta](PERSON) would possibly be saved from health issues
 - [The overseer](stakeholder:the overseer) would have to take action in order to treat the patient
-- [Greta](name) would most likely be harmed as she would not take her medication
-- [Tanja](name) would maybe get in trouble as the patient is harmed
-- [Patrick](name) would get help and take his medicine
-- [Patrick](name) would not get the benefit of his medication
-- [Werner](name)Werner would get overrun by the train and die
-- [The Rhinelanders](name:the Rhinelanders)The Rhinelanders would survive
-- Then [the Rhinelanders](name) would get overrun and killed
-- [Werner](name)Werner would survive
+- [Greta](PERSON) would most likely be harmed as she would not take her medication
+- [Tanja](PERSON) would maybe get in trouble as the patient is harmed
+- [Patrick](PERSON) would get help and take his medicine
+- [Patrick](PERSON) would not get the benefit of his medication
+- [Werner](PERSON)Werner would get overrun by the train and die
+- [The Rhinelanders](PERSON:the Rhinelanders)The Rhinelanders would survive
+- Then [the Rhinelanders](PERSON) would get overrun and killed
+- [Werner](PERSON)Werner would survive
 - Amelie would get overrun by the train and die
-- [The](stakeholder:the)[The Palatines](name:the Palatines) would all get overrun and die
-- [Jörg](name) could be saved from the bad consequences of not taking his medicine
+- [The](stakeholder:the)[The Palatines](PERSON:the Palatines) would all get overrun and die
+- [Jörg](PERSON) could be saved from the bad consequences of not taking his medicine
 - [The overseer](stakeholder:the overseer)The overseer would have to take action
-- [Jörg](name)Jörg would then most likely be harmed because he would not take his medicine
+- [Jörg](PERSON)Jörg would then most likely be harmed because he would not take his medicine
 - Maybe his desease would become worse or he would even die
-- [The Bavarians](name:the Bavarians)The Bavarians would survive
-- [Nathan](name)Nathan would get overrun by the train and die
-- [The Bavarians](name:the Bavarians)The Bavarians would get overrun by the train and die
-- [Nathan](name)Nathan would survive
-- [Uwe](name)Uwe would possibly be convinced and would get a proper treatment
-- [Uwe](name)Uwe would then die earlier due to the lack of treatment
-- [Zoe](name) would then live for a longer time than without the therapy
-- [Zoe](name) would then die earlier
-- [Samuel](name:samuel)Samuel would be rescued and would not have to suffer anymore
-- [Greta](name)Greta would not lose her limb
-- [Greta](name)Greta would propably lose her limb
-- [The Swabians](name:the swabians)The Swabians would get rescued
-- [The Hessians](name:the hessians)The Hessians would not get rescued
-- [The Hessians](name:the hessians)The Hessians would be saved
-- [The Swabians](name:the swabians)The Swabians would then be left behind
+- [The Bavarians](PERSON:the Bavarians)The Bavarians would survive
+- [Nathan](PERSON)Nathan would get overrun by the train and die
+- [The Bavarians](PERSON:the Bavarians)The Bavarians would get overrun by the train and die
+- [Nathan](PERSON)Nathan would survive
+- [Uwe](PERSON)Uwe would possibly be convinced and would get a proper treatment
+- [Uwe](PERSON)Uwe would then die earlier due to the lack of treatment
+- [Zoe](PERSON) would then live for a longer time than without the therapy
+- [Zoe](PERSON) would then die earlier
+- [Samuel](PERSON:samuel)Samuel would be rescued and would not have to suffer anymore
+- [Greta](PERSON)Greta would not lose her limb
+- [Greta](PERSON)Greta would propably lose her limb
+- [The Swabians](PERSON:the swabians)The Swabians would get rescued
+- [The Hessians](PERSON:the hessians)The Hessians would not get rescued
+- [The Hessians](PERSON:the hessians)The Hessians would be saved
+- [The Swabians](PERSON:the swabians)The Swabians would then be left behind
+- [](sentiment:pos)The [Palatines](ORG) would be saved.
+- [](sentiment:neg)The [Hessians](NORP) would be left and not get any help.
 
 ## intent:correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
 - /correct
 - /correct
 - /correct
@@ -114,34 +121,38 @@
 - And then there is [a person](stakeholder) who has to decide whether he flips a switch
 - /decider[{"stakeholder": "Harald"}](stakeholder:Harald)
 - [We](stakeholder:we) have to make the decision whether we will flip a switch that redirects a train
-- /decider[{"name": "Esther"}](name:Esther)
+- /decider[{"PERSON": "Esther"}](PERSON:Esther)
 - /decider[{"plural": "singular"}](plural:singular)
 - [The third person](stakeholder:the third person) has to decide whether he will flip switch that makes the train redirect from the main track to the side track
 - [We](stakeholder:we) have to make the decision if we interrupt the broadcast to rescue the injured person
 - /decider[{"plural": "singular"}](plural:singular)
 - [We](stakeholder:we) have to make a decision
-- /decider[{"name": "Katharina"}](name:Katharina)
+- /decider[{"PERSON": "Katharina"}](PERSON:Katharina)
 - /decider[{"plural": "singular"}](plural:singular)
 - [a third person](stakeholder) stands in front of a switch that redirects the incoming train and has to decide whether to flip the switch or not
 - /decider[{"plural": "singular"}](plural:singular)
 - There is [a healthcare aide](stakeholder) whose obligation is to remind a patient to take his prescibed medicine
-- /decider[{"name": "Werner"}](name:Werner)
-- /decider[{"name": "Daniel"}](name:Daniel)
+- /decider[{"PERSON": "Werner"}](PERSON:Werner)
+- /decider[{"PERSON": "Daniel"}](PERSON:Daniel)
 - [A person](stakeholder:a person)A person must decide if he flips a switch that would make the train redirect to the side track
 - there is [a person](stakeholder) who must decide if he flips a switch that would redirect the train to the side track
-- /decider[{"name": "Frank"}](name:Frank)
+- /decider[{"PERSON": "Frank"}](PERSON:Frank)
 - There is [a person](stakeholder) that must decide if he flips a switch which redirects the train
 - [A healthcare professional](stakeholder) has to decide if he tries to change the patients mind or doesn't
 - [A healthcare professional](stakeholder) must decide if he convinces the patient of taking the chemotherapy
-- /decider[{"name": "Olga"}](name:Olga)
+- /decider[{"PERSON": "Olga"}](PERSON:Olga)
 - [I](stakeholder) must decide if I interrupt the game to help the injured person or wait until the match is finished
-- /decider[{"name": "Uwe"}](name:Uwe)
+- /decider[{"PERSON": "Uwe"}](PERSON:Uwe)
 - /decider[{"plural": "singular"}](plural:singular)
 - [A healthcare professional](stakeholder:a healthcare professional)A healthcare professional must decide if he tries to change the patient's mind or accept the patient's decision as final
 - [A healthcare professional](stakeholder:a healthcare professional)A healthcare professional who must decide if he tries to change the patients mind
 - yes, there is a person who must decide if he redir[ects the](stakeholder:a person) train
-- /decider[{"name": "Tanja"}](name:Tanja)
+- /decider[{"PERSON": "Tanja"}](PERSON:Tanja)
 - There is [a person](stakeholder) who must decide if he flips a switch that redirects the train
+- Then there is [one person](stakeholder)[one](CARDINAL) person, who must decide if he interrupts the game or not
+- There is a robot who must decide to take either path A or path B to attempt to rescue persons after a natural disaster
+- [](plural:unspecific_plural)A robot must decide to take either [Path A or Path B](ORG) to attempt to rescue persons after a natural disaster.
+- [](plural:unspecific_plural)A robot must decide to take either [Path A or Path B](ORG) to attempt to rescue persons after a natural disaster.
 
 ## intent:deed
 - [Lying](deed) to Katharina
@@ -151,8 +162,10 @@
 - [Accepting ones decision](deed) is also a moral act
 - The act of rescui[ng people](deed:the act of rescuing people)
 - Also, leaving the group with fewer persons behind
-- That would imply leaving the larger group behind
-- [](plural:unspecific_plural)Saving the other group
+- That would imply [leaving](deed) the larger group behind
+- [](plural:unspecific_plural)[Saving](deed) the other group
+- [Rescuing](deed) [ten people](stakeholder)[](CARDINAL:ten)
+- [Leaving](deed) the other group behind.
 
 ## intent:deny
 - No
@@ -241,6 +254,13 @@
 - /deny
 - no
 - no other people
+- No, I can't tell it
+- No, I don't have [one](CARDINAL)
+- No, the robot does not have a name.
+- No.
+- No, that was all.
+- No, I can't think of another one.
+- There are no other consequences.
 
 ## intent:deontology
 - /deontology
@@ -254,6 +274,11 @@
 - I do not know it exactly
 - No, I have no idea
 - I have no idea
+- no, i have no idea
+- Sorry, I have no idea
+- I have no idea
+- I don't know any name for them.
+- I don't know the exact amount.
 
 ## intent:goodbye
 - okay see you later
@@ -337,33 +362,51 @@
 - hi
 - hi
 - hi
+- hi
+- hi
+- hi
+- hi
+- hi
+- Hi!
+- Hi
 
 ## intent:moralquestion
-- Should you take action in killing a person if it can prevent the death of a lar[ger numb](stakeholder:a person)er of people?
+- Should you take action in killing a person if it can prevent the death of a larger number of people?
 - How should the robot decide which path he has to take?
+- What are the important parameters to decide which group the robot tries to rescue?
+
+## intent:moralstatus
+- /moralstatus{"moralstatus": "animal"}
+- /moralstatus[{"moralstatus": "human"}](moralstatus:human)
+- /moralstatus[{"moralstatus": "human"}](moralstatus:human)
+- /moralstatus[{"moralstatus": "human"}](moralstatus:human)
+- /moralstatus[{"moralstatus": "machine"}](moralstatus:machine)
 
 ## intent:name
-- Call him [Frank](name)
-- His name is [Frank](name)
-- [Frank](name)
-- You can use the name [Frank](name)
-- He is called [Frank](name)
-- Use the term [Frank](name)
+- Call him [Frank](PERSON)
+- His name is [Frank](PERSON)
+- [Frank](PERSON)
+- You can use the name [Frank](PERSON)
+- He is called [Frank](PERSON)
+- Use the term [Frank](PERSON)
 - Call him Andreas
+- His name is Gregor
+- Call them "the fans"
+- Call him [Fluffy](PERSON)
 
 ## intent:negative
-- That would be really bad for [Benjamin](name)!
+- That would be really bad for [Benjamin](PERSON)!
 - That would be extremely bad for him
 - negative
 - This would be rather bad
-- For [Frank](name) this would be bad
+- For [Frank](PERSON) this would be bad
 - Indeed very negative
 - Very bad
 - Extremely bad
 - Surely this would be bad
-- That would be extremely negative for [Frank](name)
-- That would be very negative for [Benjamin](name)
-- That would be negative for [the Saxons](name)
+- That would be extremely negative for [Frank](PERSON)
+- That would be very negative for [Benjamin](PERSON)
+- That would be negative for [the Saxons](PERSON)
 - That would be very negative for him!
 - This would be really negative
 - That would be very negative for Greta
@@ -410,7 +453,7 @@
 - When Esther asks her about Werner, she could [refuse to tell](deed) her that she hides him
 - She could [press a button](deed) that [redirects the train](deed) to the side track
 - He could [flip the switch](deed) and [redirect the train](deed)
-- [Nathan](name) could [refrain from flipping the switch](deed) and just [do nothing](deed)
+- [Nathan](PERSON) could [refrain from flipping the switch](deed) and just [do nothing](deed)
 - She could [interrupt the broadcast](deed) in order to [help Daniel](deed)
 - She could [do nothing](deed) and [let the broadcast continue](deed)
 - He could [notify the overseer](deed) in order to [prevent damage](deed) from the patient
@@ -438,28 +481,30 @@
 - He can try to [change patient's mind](deed)
 - She could [try to change the patients mind](deed) to prevent him from losing his limb
 - Viola could also [accept Greta's decision](deed) of not taking the surgery
-- [](plural:unspecific_plural)She could take path A to rescue the larger amount of people
-- [](plural:unspecific_plural)Tanja could also take path B to rescue the other group
+- [](plural:unspecific_plural)She could take path A to [rescue](deed) the larger amount of people
+- [](plural:unspecific_plural)Tanja could also take path B to [rescue](deed) the other group
+- She could take path B to [rescue](deed) the greater amount of people.
+- [Carla](PERSON) could also take path A [first](ORDINAL) and [rescue](deed) the [Hessians](NORP).
 
 ## intent:positive
 - That would be positive for him
 - positive
 - This would be very positive
-- For [the Swabians](name) this would be rather positive
+- For [the Swabians](PERSON) this would be rather positive
 - This would be absolutely positive for [the five people](stakeholder)
 - For them it would be really good
 - This would be good
 - That would be very positive for him
-- For [the Rhinelanders](name) this would be very positive
+- For [the Rhinelanders](PERSON) this would be very positive
 - No, it would be absolutely good
-- That would be very positive for [Daniel](name)
+- That would be very positive for [Daniel](PERSON)
 - That would be positive for them
 - That would be very positive for him
 - That would be positive for Greta
 - That would be positive for Patrick
 - That would be positive for them
 - That would be positive for him
-- Wrong, this would be good for [Frank](name:frank)
+- Wrong, this would be good for [Frank](PERSON:frank)
 - That would be really positive for them
 - positive
 - The effects would overall be positive because he would live longer
@@ -470,54 +515,66 @@
 - more positive
 
 ## intent:quantity
-- [5](quantity)
-- [five](quantity:5)
-- altogether [five](quantity:5)
-- there are [5](quantity) altogether
-- [five](quantity:5)
+- [5](CARDINAL)
+- [five](CARDINAL)
+- altogether [five](CARDINAL)
+- there are [5](CARDINAL) altogether
+- [five](CARDINAL:5)
 - About [ten people](stakeholder)
-- [5](quantity)
-- [10](quantity)
-- [5](quantity)5
-- [10](quantity)10
-- [10](quantity)10
-- [10](quantity)10
-- [4](quantity)
-- about [7](quantity) i guess
-- i think [10](quantity)
-- about [5](quantity)
-- [9](quantity)
-- [12](quantity)12
-- Maybe [7](quantity)
-- [13](quantity)13
-- Solid [8](quantity)
-- [8](quantity)8
+- [5](CARDINAL)
+- [10](CARDINAL)
+- [5](CARDINAL)5
+- [10](CARDINAL)10
+- [10](CARDINAL)10
+- [10](CARDINAL)10
+- [4](CARDINAL)
+- about [7](CARDINAL) i guess
+- i think [10](CARDINAL)
+- about [5](CARDINAL)
+- [9](CARDINAL)
+- [12](CARDINAL)12
+- Maybe [7](CARDINAL)
+- [13](CARDINAL)13
+- Solid [8](CARDINAL)
+- [8](CARDINAL)8
 - 46 persons total[](stakeholder:46 persons)
 - [](plural:specific_plural)About [ten people](stakeholder)
 - Maybe two
-- maybe [9](quantity)
+- maybe [9](CARDINAL)
 - i would say 8
-- [7](quantity)7
-- [9](quantity)9
+- [7](CARDINAL)7
+- [9](CARDINAL)9
 - Only one
 - Maybe about 20
 - [](plural:specific_plural)I think about [ten people](stakeholder)
-- [5](quantity)[5](CARDINAL)
+- [5](CARDINAL)[5](CARDINAL)
+- [7](CARDINAL)[7](CARDINAL)
+- [5](CARDINAL)[5](CARDINAL)
+- I think [about 3 million](CARDINAL) people
+- [About 6 million](CARDINAL) I guess
+- I think [3 million](CARDINAL)
+- I would say [8](CARDINAL)
+- It is one robot.
+- It is one single robot.[](CARDINAL:one)
+- Maybe [7](CARDINAL)[7](CARDINAL) people.
+- It could be [ten people](stakeholder)[ten](CARDINAL) people.
+- [8](CARDINAL)[8](CARDINAL)
+- Let us say [10](CARDINAL).
 
 ## intent:stakeholder
 - [Five people](stakeholder:five people)[](plural:specific_plural)Five people
-- [five](quantity:5)five dogs
+- [five](CARDINAL:5)five dogs
 - [Five people](stakeholder:five people)
 - There are [five people](stakeholder)
 - [Five people](stakeholder:five people)
 - [three persons](stakeholder)
 - [Five persons](stakeholder:five persons)
-- [Hans](name:hans) is involved
-- Among others there is [Hans](name:hans)
-- Involved in the situation is [Hans](name:hans)
-- [Hans](name:hans)
-- First there is [Hans](name:hans)
-- [Hans](name:hans) is involved in the situation
+- [Hans](PERSON:hans) is involved
+- Among others there is [Hans](PERSON:hans)
+- Involved in the situation is [Hans](PERSON:hans)
+- [Hans](PERSON:hans)
+- First there is [Hans](PERSON:hans)
+- [Hans](PERSON:hans) is involved in the situation
 - [Five persons](stakeholder:five persons) lie on the tracks and get overrun if the switch is not flipped
 - [One other person](stakeholder) lies on a track
 - [Five persons](stakeholder:five persons), who lie on a track
@@ -547,7 +604,7 @@
 - [A lot of people](stakeholder:a lot of people) are watching a football match in the moment
 - [Another person](stakeholder) versteckt die erste Person in ihrem Haus
 - And there is [another person](stakeholder), who chases the first one
-- [Jones](name) had an accident in the studio of a TV broadcaster
+- [Jones](PERSON) had an accident in the studio of a TV broadcaster
 - [Many people](stakeholder:many people) watch a worldcup game which still lasts over an hour
 - First there is [a group of people](stakeholder) standing on the tracks
 - There is [one single person](stakeholder) lying on a side track
@@ -568,11 +625,11 @@
 - [Three people](stakeholder:three people) are standing on the main track and would be overrun if a train arrived
 - There is [a group of eight people](stakeholder) standing on the tracks
 - [Another person](stakeholder:another person) is standing on a side track
-- There is [a person](stakeholder) named [Jones](name) in the studio of a TV broadcast who has been injured
+- There is [a person](stakeholder) named [Jones](PERSON) in the studio of a TV broadcast who has been injured
 - [A lot of people](stakeholder:a lot of people) are watching a worldcup match which is broadcastet from the TV station
 - There is [a bunch of people](stakeholder) standing on a railway track
 - [Another person](stakeholder:another person) is standing on a side track
-- [Jones](name) is lying injured in a TV studio and suffers great pain
+- [Jones](PERSON) is lying injured in a TV studio and suffers great pain
 - [A lot of people](stakeholder:a lot of people) are watching a worldcup match which is broadcasted by the TV station
 - first there is [someone](stakeholder) who is chased by another person
 - Then there is [the person who chases Werner](stakeholder)
@@ -586,7 +643,7 @@
 - [Another person](stakeholder:another person) stands on a side track where no train would normally appear
 - first there is [a group consisting of five people](stakeholder) standing on the tracks
 - [another person](stakeholder) is standing on a side track
-- first there is [jones](name:Jones), who lies injured in a tv broadcasting station
+- first there is [jones](PERSON:Jones), who lies injured in a tv broadcasting station
 - There is [a large group of people](stakeholder) watching a football match which is broadcasted by the TV sender
 - Then there is [the patient](stakeholder), who refuses to take the medicine when reminded
 - There is [an overseer](stakeholder) who can be notified if it is necessary to take action regarding the treatment
@@ -630,6 +687,17 @@
 - [A group of people](stakeholder:a group of people)[](plural:unspecific_plural)A group of people is standing on the main tracks
 - [](plural:unspecific_plural)There is [a group of people](stakeholder) standing on the tracks
 - [](plural:singular)There is [a single person](stakeholder) standing on a side track
+- [](plural:unspecific_plural)[](moralstatus:human)there is [a group of people](stakeholder) on the tracks
+- [](plural:singular)[](moralstatus:animal)there is [a dog](stakeholder) on the side track
+- [First](ORDINAL)[](plural:singular)First we have [Jones](PERSON)[Jones](PERSON), who lies injured in the broadcasting room of a TV station
+- [](plural:unspecific_plural)[](moralstatus:human)Then there is [a large crowd of people](stakeholder) who are watching a football match which is broadcasted from the TV station
+- [](plural:singular)There is [David](PERSON), lying injured in a TV station
+- [](plural:unspecific_plural)[](moralstatus:human)There is a huge amount of people watching a football match
+- [First](ORDINAL)[](plural:singular)First, there is [Jones](PERSON)[Jones](PERSON), who lies in the broadcasting room of a TV station and is severely injured
+- [A large group of people](stakeholder:a large group of people)[](plural:unspecific_plural)[](moralstatus:human)A large group of people is watching a football match
+- [](plural:singular)[](moralstatus:animal)There is [a dog](stakeholder) which is also involved in the situation
+- [](plural:unspecific_plural)[](moralstatus:human)If [Carla](PERSON) takes path A, she will reach a group of people who have to be rescued.
+- [](plural:unspecific_plural)[](moralstatus:human)There is [another group](stakeholder) of persons to be rescued. They can be reached taking path B.
 
 ## intent:thanks
 - you helped a lot thank you
@@ -689,18 +757,19 @@
 - /wrong
 - /wrong
 - /wrong
+- /wrong
 
 ## synonym:5
 - five
 
 ## synonym:Daniel
-- {"name": "Daniel"}
+- {"PERSON": "Daniel"}
 
 ## synonym:Esther
-- {"name": "Esther"}
+- {"PERSON": "Esther"}
 
 ## synonym:Frank
-- {"name": "Frank"}
+- {"PERSON": "Frank"}
 - frank
 
 ## synonym:Hans
@@ -716,30 +785,30 @@
 - jörg
 
 ## synonym:Katharina
-- {"name": "Katharina"}
+- {"PERSON": "Katharina"}
 
 ## synonym:Nathan
 - nathan
 
 ## synonym:Olga
-- {"name": "Olga"}
+- {"PERSON": "Olga"}
 
 ## synonym:Patrick
 - patrick
 
 ## synonym:Tanja
 - {"stakeholder":"Tanja"}
-- {"name": "Tanja"}
+- {"PERSON": "Tanja"}
 
 ## synonym:Uwe
-- {"name": "Uwe"}
+- {"PERSON": "Uwe"}
 - uwe
 
 ## synonym:We
 - we
 
 ## synonym:Werner
-- {"name": "Werner"}
+- {"PERSON": "Werner"}
 - werner
 
 ## synonym:a fat man
@@ -802,6 +871,9 @@
 
 ## synonym:hans
 - Hans
+
+## synonym:human
+- {"moralstatus": "human"}
 
 ## synonym:many people
 - Many people

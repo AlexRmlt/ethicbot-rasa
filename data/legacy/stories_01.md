@@ -13,7 +13,7 @@
     - slot{"plural": "unspecific_plural"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "the Bavarians"}
+    - slot{"PERSON": "the Bavarians"}
     - slot{"amount_stakeholders": 1}
     - utter_ask_quantity
 * quantity{"sentiment": "neu", "quantity": "five", "plural": "specific_plural"}
@@ -29,7 +29,7 @@
     - slot{"plural": "unspecific_plural"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "the Bavarians"}
+    - slot{"PERSON": "the Bavarians"}
     - slot{"amount_stakeholders": 1}
     - utter_ask_quantity
 * quantity{"sentiment": "neu", "stakeholder": "five people", "plural": "specific_plural"}
@@ -39,14 +39,14 @@
     - utter_next_stakeholder
 * stakeholder{"stakeholder": "one single person"}
     - action_create_stakeholder
-    - slot{"name": "Uwe"}
+    - slot{"PERSON": "Uwe"}
     - slot{"amount_stakeholders": 2}
     - utter_next_stakeholder
 * stakeholder{"sentiment": "neu", "stakeholder": "a third person", "plural": "singular"}
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "Tanja"}
+    - slot{"PERSON": "Tanja"}
     - slot{"amount_stakeholders": 3}
     - utter_next_stakeholder
 * deny{"sentiment": "neg", "plural": "singular"}
@@ -54,8 +54,8 @@
     - slot{"sentiment": "neg"}
     - utter_confirm_stakeholders
     - action_choose_decider
-* decider{"name": "Tanja"}
-    - slot{"name": "Tanja"}
+* decider{"PERSON": "Tanja"}
+    - slot{"PERSON": "Tanja"}
     - action_update_stakeholder
     - slot{"decider": "Tanja"}
     - utter_ask_options
@@ -69,7 +69,7 @@
     - slot{"plural": "unspecific_plural"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "the Swabians"}
+    - slot{"PERSON": "the Swabians"}
     - slot{"amount_stakeholders": 1}
     - utter_ask_quantity
 * quantity{"sentiment": "neu", "stakeholder": "five people", "plural": "specific_plural"}
@@ -81,14 +81,14 @@
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "Viola"}
+    - slot{"PERSON": "Viola"}
     - slot{"amount_stakeholders": 2}
     - utter_next_stakeholder
 * decider{"sentiment": "neu", "stakeholder": "a third person", "plural": "singular"}
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "Roswitha"}
+    - slot{"PERSON": "Roswitha"}
     - slot{"decider": "Roswitha"}
     - slot{"amount_stakeholders": 3}
     - utter_next_stakeholder
@@ -108,19 +108,19 @@
     - slot{"plural": "specific_plural"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "the Swabians"}
+    - slot{"PERSON": "the Swabians"}
     - slot{"amount_stakeholders": 1}
     - utter_next_stakeholder
 * stakeholder{"stakeholder": "one single person"}
     - action_create_stakeholder
-    - slot{"name": "Uwe"}
+    - slot{"PERSON": "Uwe"}
     - slot{"amount_stakeholders": 2}
     - utter_next_stakeholder
 * decider{"sentiment": "neu", "stakeholder": "a person", "plural": "singular"}
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "Uwe"}
+    - slot{"PERSON": "Uwe"}
     - slot{"decider": "Uwe"}
     - slot{"amount_stakeholders": 3}
     - utter_next_stakeholder
@@ -140,21 +140,21 @@
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "Harald"}
+    - slot{"PERSON": "Harald"}
     - slot{"amount_stakeholders": 1}
     - utter_next_stakeholder
 * stakeholder{"sentiment": "neu", "stakeholder": "a group of six people", "plural": "specific_plural"}
     - slot{"plural": "specific_plural"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "the Saxons"}
+    - slot{"PERSON": "the Saxons"}
     - slot{"amount_stakeholders": 2}
     - utter_next_stakeholder
 * stakeholder{"sentiment": "neu", "stakeholder": "another person", "plural": "singular"}
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "Nathan"}
+    - slot{"PERSON": "Nathan"}
     - slot{"amount_stakeholders": 3}
     - utter_next_stakeholder
 * deny{"sentiment": "neg", "plural": "singular"}
@@ -162,7 +162,7 @@
     - slot{"sentiment": "neg"}
     - utter_confirm_stakeholders
     - action_choose_decider
-* decider{"name": "Harald"}
+* decider{"PERSON": "Harald"}
     - action_update_stakeholder
     - slot{"decider": "Harald"}
     - utter_ask_options
@@ -176,20 +176,20 @@
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "Werner"}
+    - slot{"PERSON": "Werner"}
     - slot{"decider": "Werner"}
     - slot{"amount_stakeholders": 1}
     - utter_next_stakeholder
 * stakeholder{"stakeholder": "one person"}
     - action_create_stakeholder
-    - slot{"name": "Roswitha"}
+    - slot{"PERSON": "Roswitha"}
     - slot{"amount_stakeholders": 2}
     - utter_next_stakeholder
 * stakeholder{"sentiment": "neu", "stakeholder": "a group of seven people", "plural": "specific_plural"}
     - slot{"plural": "specific_plural"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "the Bavarians"}
+    - slot{"PERSON": "the Bavarians"}
     - slot{"amount_stakeholders": 3}
     - utter_next_stakeholder
 * deny
@@ -206,7 +206,7 @@
     - slot{"plural": "unspecific_plural"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "the Saxons"}
+    - slot{"PERSON": "the Saxons"}
     - slot{"amount_stakeholders": 1}
     - utter_ask_quantity
 * quantity{"stakeholder": "five people"}
@@ -216,14 +216,14 @@
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "Lars"}
+    - slot{"PERSON": "Lars"}
     - slot{"amount_stakeholders": 2}
     - utter_next_stakeholder
 * stakeholder{"sentiment": "neu", "stakeholder": "the last person", "plural": "singular"}
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "Esther"}
+    - slot{"PERSON": "Esther"}
     - slot{"amount_stakeholders": 3}
     - utter_next_stakeholder
 * deny{"sentiment": "neu", "plural": "singular"}
@@ -231,8 +231,8 @@
     - slot{"sentiment": "neu"}
     - utter_confirm_stakeholders
     - action_choose_decider
-* decider{"name": "Esther"}
-    - slot{"name": "Esther"}
+* decider{"PERSON": "Esther"}
+    - slot{"PERSON": "Esther"}
     - action_update_stakeholder
     - slot{"decider": "Esther"}
     - utter_ask_options
@@ -244,14 +244,14 @@
     - action_intro
 * stakeholder{"stakeholder": "one person"}
     - action_create_stakeholder
-    - slot{"name": "Lars"}
+    - slot{"PERSON": "Lars"}
     - slot{"amount_stakeholders": 1}
     - utter_next_stakeholder
 * stakeholder{"sentiment": "neu", "stakeholder": "three people", "plural": "specific_plural"}
     - slot{"plural": "specific_plural"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "the Swabians"}
+    - slot{"PERSON": "the Swabians"}
     - slot{"amount_stakeholders": 2}
     - utter_next_stakeholder
 * deny{"sentiment": "neu", "plural": "singular"}
@@ -262,7 +262,7 @@
 * decider{"plural": "singular"}
     - slot{"plural": "singular"}
     - action_create_stakeholder
-    - slot{"name": "Nathan"}
+    - slot{"PERSON": "Nathan"}
     - slot{"decider": "Nathan"}
     - slot{"amount_stakeholders": 3}
     - utter_ask_options
@@ -276,21 +276,21 @@
     - slot{"plural": "specific_plural"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "the Swabians"}
+    - slot{"PERSON": "the Swabians"}
     - slot{"amount_stakeholders": 1}
     - utter_next_stakeholder
 * stakeholder{"sentiment": "neu", "stakeholder": "another person", "plural": "singular"}
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "Frank"}
+    - slot{"PERSON": "Frank"}
     - slot{"amount_stakeholders": 2}
     - utter_next_stakeholder
 * decider{"sentiment": "neu", "stakeholder": "the third person", "plural": "singular"}
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "Werner"}
+    - slot{"PERSON": "Werner"}
     - slot{"decider": "Werner"}
     - slot{"amount_stakeholders": 3}
     - utter_next_stakeholder
@@ -322,8 +322,8 @@
     - utter_next_deed
 * deny
     - utter_ask_consequences
-* consequence{"name": "Frank"}
-    - slot{"name": "Frank"}
+* consequence{"PERSON": "Frank"}
+    - slot{"PERSON": "Frank"}
     - action_create_consequence
     - utter_ask_impact
 * negative{"sentiment": "neu", "plural": "singular"}
@@ -335,17 +335,17 @@
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_intro
-* stakeholder{"stakeholder": "a person", "name": "jones"}
-    - slot{"name": "jones"}
+* stakeholder{"stakeholder": "a person", "PERSON": "jones"}
+    - slot{"PERSON": "jones"}
     - action_create_stakeholder
-    - slot{"name": "Viola"}
+    - slot{"PERSON": "Viola"}
     - slot{"amount_stakeholders": 1}
     - utter_next_stakeholder
 * stakeholder{"sentiment": "neu", "stakeholder": "a lot of people", "plural": "unspecific_plural"}
     - slot{"plural": "unspecific_plural"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "the Saxons"}
+    - slot{"PERSON": "the Saxons"}
     - slot{"amount_stakeholders": 2}
     - utter_ask_quantity
 * deny{"stakeholder": "i"}
@@ -354,7 +354,7 @@
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "Samuel"}
+    - slot{"PERSON": "Samuel"}
     - slot{"decider": "Samuel"}
     - slot{"amount_stakeholders": 3}
     - utter_next_stakeholder
@@ -378,7 +378,7 @@
     - slot{"plural": "unspecific_plural"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "the Saxons"}
+    - slot{"PERSON": "the Saxons"}
     - slot{"amount_stakeholders": 1}
     - utter_ask_quantity
 * quantity{"stakeholder": "ten people"}
@@ -388,7 +388,7 @@
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "Nathan"}
+    - slot{"PERSON": "Nathan"}
     - slot{"amount_stakeholders": 2}
     - utter_next_stakeholder
 * deny{"sentiment": "neu", "plural": "singular"}
@@ -399,7 +399,7 @@
 * decider{"plural": "singular"}
     - slot{"plural": "singular"}
     - action_create_stakeholder
-    - slot{"name": "Zoe"}
+    - slot{"PERSON": "Zoe"}
     - slot{"decider": "Zoe"}
     - slot{"amount_stakeholders": 3}
     - utter_ask_options
@@ -409,8 +409,8 @@
     - action_create_option
     - slot{"option": 4}
     - utter_ask_consequences
-* consequence{"name": "Nathan"}
-    - slot{"name": "Nathan"}
+* consequence{"PERSON": "Nathan"}
+    - slot{"PERSON": "Nathan"}
     - action_create_consequence
 
 ## Generated Story 8014866812133259312
@@ -418,17 +418,17 @@
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_intro
-* stakeholder{"name": "Jones"}
-    - slot{"name": "Jones"}
+* stakeholder{"PERSON": "Jones"}
+    - slot{"PERSON": "Jones"}
     - action_create_stakeholder
-    - slot{"name": "Patrick"}
+    - slot{"PERSON": "Patrick"}
     - slot{"amount_stakeholders": 1}
     - utter_next_stakeholder
 * stakeholder{"sentiment": "neu", "stakeholder": "a lot of people", "plural": "unspecific_plural"}
     - slot{"plural": "unspecific_plural"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "the Bavarians"}
+    - slot{"PERSON": "the Bavarians"}
     - slot{"amount_stakeholders": 2}
     - utter_ask_quantity
 * deny
@@ -437,7 +437,7 @@
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "Samuel"}
+    - slot{"PERSON": "Samuel"}
     - slot{"decider": "Samuel"}
     - slot{"amount_stakeholders": 5}
     - utter_next_stakeholder
@@ -453,8 +453,8 @@
     - action_create_option
     - slot{"option": 6}
     - utter_ask_consequences
-* consequence{"name": "Patrick"}
-    - slot{"name": "Patrick"}
+* consequence{"PERSON": "Patrick"}
+    - slot{"PERSON": "Patrick"}
     - action_create_consequence
     - utter_ask_impact
 * positive{"sentiment": "neu", "plural": "singular"}
@@ -471,13 +471,13 @@
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "Werner"}
+    - slot{"PERSON": "Werner"}
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": true}
     - utter_next_stakeholder
 * stakeholder{"stakeholder": "the person who chases Werner"}
     - action_create_stakeholder
-    - slot{"name": "Esther"}
+    - slot{"PERSON": "Esther"}
     - slot{"amount_stakeholders": 2}
     - slot{"action_return": true}
     - utter_next_stakeholder
@@ -485,7 +485,7 @@
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "Katharina"}
+    - slot{"PERSON": "Katharina"}
     - slot{"amount_stakeholders": 3}
     - slot{"action_return": true}
     - utter_next_stakeholder
@@ -494,20 +494,20 @@
     - slot{"sentiment": "neu"}
     - utter_confirm_stakeholders
     - action_choose_decider
-* decider{"name": "Katharina"}
-    - slot{"name": "Katharina"}
+* decider{"PERSON": "Katharina"}
+    - slot{"PERSON": "Katharina"}
     - action_update_stakeholder
     - slot{"decider": "Katharina"}
     - slot{"action_return": true}
     - utter_ask_options
-* option{"name": "Werner"}
-    - slot{"name": "Werner"}
+* option{"PERSON": "Werner"}
+    - slot{"PERSON": "Werner"}
     - action_create_option
     - slot{"option": 4}
     - slot{"action_return": true}
     - utter_ask_consequences
-* consequence{"name": "Esther"}
-    - slot{"name": "Esther"}
+* consequence{"PERSON": "Esther"}
+    - slot{"PERSON": "Esther"}
     - action_create_consequence
 
 ## Generated Story -4361855438106255996
@@ -517,7 +517,7 @@
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "Olga"}
+    - slot{"PERSON": "Olga"}
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": true}
     - utter_next_stakeholder
@@ -536,7 +536,7 @@
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "Olga"}
+    - slot{"PERSON": "Olga"}
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": true}
     - utter_next_stakeholder
@@ -553,7 +553,7 @@
     - slot{"plural": "unspecific_plural"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "the Hessians"}
+    - slot{"PERSON": "the Hessians"}
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": false}
     - utter_ask_quantity
@@ -572,7 +572,7 @@
     - slot{"plural": "unspecific_plural"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "the Rhinelanders"}
+    - slot{"PERSON": "the Rhinelanders"}
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": false}
     - utter_ask_quantity
@@ -586,7 +586,7 @@
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "Nathan"}
+    - slot{"PERSON": "Nathan"}
     - slot{"amount_stakeholders": 2}
     - slot{"action_return": true}
     - utter_next_stakeholder
@@ -599,7 +599,7 @@
     - slot{"plural": "singular"}
     - action_create_stakeholder
     - slot{"decider": "Katharina"}
-    - slot{"name": "Katharina"}
+    - slot{"PERSON": "Katharina"}
     - slot{"amount_stakeholders": 3}
     - slot{"action_return": true}
     - utter_ask_options
@@ -610,8 +610,8 @@
     - slot{"option": 4}
     - slot{"action_return": true}
     - utter_ask_consequences
-* consequence{"name": "The Rhinelanders"}
-    - slot{"name": "The Rhinelanders"}
+* consequence{"PERSON": "The Rhinelanders"}
+    - slot{"PERSON": "The Rhinelanders"}
 
 ## Generated Story -2408831251863862597
 * greeting{"sentiment": "neu", "plural": "singular"}
@@ -622,7 +622,7 @@
     - slot{"plural": "specific_plural"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "the Rhinelanders"}
+    - slot{"PERSON": "the Rhinelanders"}
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": true}
     - utter_next_stakeholder
@@ -630,7 +630,7 @@
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "Benjamin"}
+    - slot{"PERSON": "Benjamin"}
     - slot{"amount_stakeholders": 2}
     - slot{"action_return": true}
     - utter_next_stakeholder
@@ -639,7 +639,7 @@
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
     - slot{"decider": "Nathan"}
-    - slot{"name": "Nathan"}
+    - slot{"PERSON": "Nathan"}
     - slot{"amount_stakeholders": 3}
     - slot{"action_return": true}
     - utter_next_stakeholder
@@ -656,13 +656,13 @@
     - slot{"option": 4}
     - slot{"action_return": true}
     - utter_ask_consequences
-* consequence{"name": "Benjamin"}
-    - slot{"name": "Benjamin"}
+* consequence{"PERSON": "Benjamin"}
+    - slot{"PERSON": "Benjamin"}
     - action_create_consequence
     - slot{"action_return": false}
     - utter_ask_impact
-* negative{"name": "Benjamin"}
-    - slot{"name": "Benjamin"}
+* negative{"PERSON": "Benjamin"}
+    - slot{"PERSON": "Benjamin"}
     - action_update_consequence
     - slot{"action_return": true}
     - utter_ask_impact_weight
@@ -670,13 +670,13 @@
     - action_update_consequence
     - slot{"action_return": true}
     - utter_next_consequence
-* consequence{"name": "the Rhinelanders"}
-    - slot{"name": "the Rhinelanders"}
+* consequence{"PERSON": "the Rhinelanders"}
+    - slot{"PERSON": "the Rhinelanders"}
     - action_create_consequence
     - slot{"action_return": false}
     - utter_ask_impact
-* positive{"name": "the Rhinelanders"}
-    - slot{"name": "the Rhinelanders"}
+* positive{"PERSON": "the Rhinelanders"}
+    - slot{"PERSON": "the Rhinelanders"}
     - action_update_consequence
     - slot{"action_return": true}
     - utter_ask_impact_weight
@@ -688,21 +688,21 @@
     - slot{"plural": "singular"}
     - slot{"sentiment": "neg"}
     - utter_next_option
-* option{"name": "Nathan"}
-    - slot{"name": "Nathan"}
+* option{"PERSON": "Nathan"}
+    - slot{"PERSON": "Nathan"}
     - action_create_option
     - slot{"option": 7}
     - slot{"action_return": true}
     - utter_ask_consequences
-* consequence{"name": "the Rhinelanders"}
-    - slot{"name": "the Rhinelanders"}
+* consequence{"PERSON": "the Rhinelanders"}
+    - slot{"PERSON": "the Rhinelanders"}
     - action_create_consequence
     - slot{"action_return": true}
     - utter_ask_impact_negative
 * correct
     - utter_next_consequence
-* consequence{"name": "Benjamin"}
-    - slot{"name": "Benjamin"}
+* consequence{"PERSON": "Benjamin"}
+    - slot{"PERSON": "Benjamin"}
     - action_create_consequence
     - slot{"action_return": true}
     - utter_ask_impact_negative
@@ -725,10 +725,10 @@
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_intro
-* stakeholder{"name": "jones"}
-    - slot{"name": "jones"}
+* stakeholder{"PERSON": "jones"}
+    - slot{"PERSON": "jones"}
     - action_create_stakeholder
-    - slot{"name": "Daniel"}
+    - slot{"PERSON": "Daniel"}
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": true}
     - utter_next_stakeholder
@@ -736,7 +736,7 @@
     - slot{"plural": "unspecific_plural"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "the Saxons"}
+    - slot{"PERSON": "the Saxons"}
     - slot{"amount_stakeholders": 2}
     - slot{"action_return": false}
     - utter_ask_quantity
@@ -753,12 +753,12 @@
     - slot{"plural": "singular"}
     - action_create_stakeholder
     - slot{"decider": "Carla"}
-    - slot{"name": "Carla"}
+    - slot{"PERSON": "Carla"}
     - slot{"amount_stakeholders": 3}
     - slot{"action_return": true}
     - utter_ask_options
-* option{"name": "Daniel"}
-    - slot{"name": "Daniel"}
+* option{"PERSON": "Daniel"}
+    - slot{"PERSON": "Daniel"}
     - action_create_option
     - slot{"option": 4}
     - slot{"action_return": true}
@@ -769,8 +769,8 @@
     - action_create_consequence
     - slot{"action_return": false}
     - utter_ask_impact
-* positive{"name": "Daniel"}
-    - slot{"name": "Daniel"}
+* positive{"PERSON": "Daniel"}
+    - slot{"PERSON": "Daniel"}
     - action_update_consequence
     - slot{"action_return": true}
     - utter_ask_impact_weight
@@ -778,13 +778,13 @@
     - action_update_consequence
     - slot{"action_return": true}
     - utter_next_consequence
-* consequence{"name": "The Saxons"}
-    - slot{"name": "The Saxons"}
+* consequence{"PERSON": "The Saxons"}
+    - slot{"PERSON": "The Saxons"}
     - action_create_consequence
     - slot{"action_return": false}
     - utter_ask_impact
-* negative{"name": "the Saxons"}
-    - slot{"name": "the Saxons"}
+* negative{"PERSON": "the Saxons"}
+    - slot{"PERSON": "the Saxons"}
     - action_update_consequence
     - slot{"action_return": true}
     - utter_ask_impact_weight
@@ -803,8 +803,8 @@
     - slot{"option": 7}
     - slot{"action_return": true}
     - utter_ask_consequences
-* consequence{"name": "Daniel"}
-    - slot{"name": "Daniel"}
+* consequence{"PERSON": "Daniel"}
+    - slot{"PERSON": "Daniel"}
     - action_create_consequence
     - slot{"action_return": false}
     - utter_ask_impact
@@ -818,8 +818,8 @@
     - action_update_consequence
     - slot{"action_return": true}
     - utter_next_consequence
-* consequence{"name": "the Saxons"}
-    - slot{"name": "the Saxons"}
+* consequence{"PERSON": "the Saxons"}
+    - slot{"PERSON": "the Saxons"}
     - action_create_consequence
     - slot{"action_return": false}
     - utter_ask_impact
@@ -845,19 +845,19 @@
 * decider{"stakeholder": "a healthcare aide"}
     - action_create_stakeholder
     - slot{"decider": "the Palatines"}
-    - slot{"name": "the Palatines"}
+    - slot{"PERSON": "the Palatines"}
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": false}
     - utter_next_stakeholder
 * stakeholder{"stakeholder": "the patient"}
     - action_create_stakeholder
-    - slot{"name": "the Rhinelanders"}
+    - slot{"PERSON": "the Rhinelanders"}
     - slot{"amount_stakeholders": 2}
     - slot{"action_return": false}
     - utter_next_stakeholder
 * stakeholder{"stakeholder": "an overseer"}
     - action_create_stakeholder
-    - slot{"name": "the Swabians"}
+    - slot{"PERSON": "the Swabians"}
     - slot{"amount_stakeholders": 3}
     - slot{"action_return": false}
     - utter_next_stakeholder
@@ -944,7 +944,7 @@
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "Werner"}
+    - slot{"PERSON": "Werner"}
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": true}
     - utter_next_stakeholder
@@ -952,7 +952,7 @@
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "Greta"}
+    - slot{"PERSON": "Greta"}
     - slot{"amount_stakeholders": 2}
     - slot{"action_return": true}
     - utter_next_stakeholder
@@ -960,7 +960,7 @@
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "Tanja"}
+    - slot{"PERSON": "Tanja"}
     - slot{"amount_stakeholders": 3}
     - slot{"action_return": true}
     - utter_next_stakeholder
@@ -969,8 +969,8 @@
     - slot{"sentiment": "neu"}
     - utter_confirm_stakeholders
     - action_choose_decider
-* decider{"name": "Werner"}
-    - slot{"name": "Werner"}
+* decider{"PERSON": "Werner"}
+    - slot{"PERSON": "Werner"}
     - action_update_stakeholder
     - slot{"decider": "Werner"}
     - slot{"action_return": true}
@@ -1066,13 +1066,13 @@
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "Daniel"}
+    - slot{"PERSON": "Daniel"}
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": true}
     - utter_next_stakeholder
 * stakeholder{"stakeholder": "a patient"}
     - action_create_stakeholder
-    - slot{"name": "Patrick"}
+    - slot{"PERSON": "Patrick"}
     - slot{"amount_stakeholders": 2}
     - slot{"action_return": true}
     - utter_next_stakeholder
@@ -1080,15 +1080,15 @@
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "Inga"}
+    - slot{"PERSON": "Inga"}
     - slot{"amount_stakeholders": 3}
     - slot{"action_return": true}
     - utter_next_stakeholder
 * deny
     - utter_confirm_stakeholders
     - action_choose_decider
-* decider{"name": "Daniel"}
-    - slot{"name": "Daniel"}
+* decider{"PERSON": "Daniel"}
+    - slot{"PERSON": "Daniel"}
     - action_update_stakeholder
     - slot{"decider": "Daniel"}
     - slot{"action_return": true}
@@ -1100,8 +1100,8 @@
     - slot{"option": 4}
     - slot{"action_return": true}
     - utter_ask_consequences
-* consequence{"sentiment": "neu", "name": "patrick", "plural": "singular"}
-    - slot{"name": "patrick"}
+* consequence{"sentiment": "neu", "PERSON": "patrick", "plural": "singular"}
+    - slot{"PERSON": "patrick"}
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_consequence
@@ -1121,14 +1121,14 @@
     - slot{"plural": "singular"}
     - slot{"sentiment": "neg"}
     - utter_next_option
-* option{"name": "daniel"}
-    - slot{"name": "daniel"}
+* option{"PERSON": "daniel"}
+    - slot{"PERSON": "daniel"}
     - action_create_option
     - slot{"option": 6}
     - slot{"action_return": true}
     - utter_ask_consequences
-* consequence{"sentiment": "neu", "name": "patrick", "plural": "singular"}
-    - slot{"name": "patrick"}
+* consequence{"sentiment": "neu", "PERSON": "patrick", "plural": "singular"}
+    - slot{"PERSON": "patrick"}
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_consequence
@@ -1163,7 +1163,7 @@
     - slot{"plural": "unspecific_plural"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "the Rhinelanders"}
+    - slot{"PERSON": "the Rhinelanders"}
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": false}
     - utter_ask_quantity
@@ -1177,7 +1177,7 @@
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "Werner"}
+    - slot{"PERSON": "Werner"}
     - slot{"amount_stakeholders": 2}
     - slot{"action_return": true}
     - utter_next_stakeholder
@@ -1186,7 +1186,7 @@
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
     - slot{"decider": "Harald"}
-    - slot{"name": "Harald"}
+    - slot{"PERSON": "Harald"}
     - slot{"amount_stakeholders": 3}
     - slot{"action_return": true}
     - utter_next_stakeholder
@@ -1203,8 +1203,8 @@
     - slot{"option": 4}
     - slot{"action_return": true}
     - utter_ask_consequences
-* consequence{"sentiment": "neu", "name": "werner", "plural": "singular"}
-    - slot{"name": "werner"}
+* consequence{"sentiment": "neu", "PERSON": "werner", "plural": "singular"}
+    - slot{"PERSON": "werner"}
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_consequence
@@ -1220,8 +1220,8 @@
     - action_update_consequence
     - slot{"action_return": true}
     - utter_next_consequence
-* consequence{"sentiment": "neu", "name": "the rhinelanders", "plural": "singular"}
-    - slot{"name": "the rhinelanders"}
+* consequence{"sentiment": "neu", "PERSON": "the rhinelanders", "plural": "singular"}
+    - slot{"PERSON": "the rhinelanders"}
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_consequence
@@ -1246,8 +1246,8 @@
     - slot{"option": 7}
     - slot{"action_return": true}
     - utter_ask_consequences
-* consequence{"sentiment": "neu", "name": "the rhinelanders", "plural": "singular"}
-    - slot{"name": "the rhinelanders"}
+* consequence{"sentiment": "neu", "PERSON": "the rhinelanders", "plural": "singular"}
+    - slot{"PERSON": "the rhinelanders"}
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_consequence
@@ -1263,8 +1263,8 @@
     - action_update_consequence
     - slot{"action_return": true}
     - utter_next_consequence
-* consequence{"sentiment": "neu", "name": "werner", "plural": "singular"}
-    - slot{"name": "werner"}
+* consequence{"sentiment": "neu", "PERSON": "werner", "plural": "singular"}
+    - slot{"PERSON": "werner"}
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_consequence
@@ -1301,7 +1301,7 @@
     - slot{"plural": "unspecific_plural"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "the Palatines"}
+    - slot{"PERSON": "the Palatines"}
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": false}
     - utter_ask_quantity
@@ -1315,7 +1315,7 @@
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "Amelie"}
+    - slot{"PERSON": "Amelie"}
     - slot{"amount_stakeholders": 2}
     - slot{"action_return": true}
     - utter_next_stakeholder
@@ -1324,7 +1324,7 @@
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
     - slot{"decider": "Nathan"}
-    - slot{"name": "Nathan"}
+    - slot{"PERSON": "Nathan"}
     - slot{"amount_stakeholders": 3}
     - slot{"action_return": true}
     - utter_next_stakeholder
@@ -1368,12 +1368,12 @@
     - slot{"option": 6}
     - slot{"action_return": true}
     - utter_ask_consequences
-* consequence{"sentiment": "neu", "stakeholder": "the", "name": "palatines", "plural": "singular"}
-    - slot{"name": "palatines"}
+* consequence{"sentiment": "neu", "stakeholder": "the", "PERSON": "palatines", "plural": "singular"}
+    - slot{"PERSON": "palatines"}
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_consequence
-    - slot{"name": null}
+    - slot{"PERSON": null}
     - slot{"action_return": false}
     - utter_ask_impact
 * negative{"sentiment": "neu", "plural": "singular"}
@@ -1404,7 +1404,7 @@
     - action_intro
 * stakeholder{"stakeholder": "a healthcare aide"}
     - action_create_stakeholder
-    - slot{"name": "Frank"}
+    - slot{"PERSON": "Frank"}
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": true}
     - utter_next_stakeholder
@@ -1412,7 +1412,7 @@
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "J\u00f6rg"}
+    - slot{"PERSON": "J\u00f6rg"}
     - slot{"amount_stakeholders": 2}
     - slot{"action_return": true}
     - utter_next_stakeholder
@@ -1420,7 +1420,7 @@
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "Katharina"}
+    - slot{"PERSON": "Katharina"}
     - slot{"amount_stakeholders": 3}
     - slot{"action_return": true}
     - utter_next_stakeholder
@@ -1429,8 +1429,8 @@
     - slot{"sentiment": "neg"}
     - utter_confirm_stakeholders
     - action_choose_decider
-* decider{"name": "Frank"}
-    - slot{"name": "Frank"}
+* decider{"PERSON": "Frank"}
+    - slot{"PERSON": "Frank"}
     - action_update_stakeholder
     - slot{"decider": "Frank"}
     - slot{"action_return": true}
@@ -1444,8 +1444,8 @@
     - action_create_consequence
     - slot{"action_return": true}
     - utter_ask_impact_negative
-* positive{"sentiment": "neu", "name": "frank", "plural": "singular"}
-    - slot{"name": "frank"}
+* positive{"sentiment": "neu", "PERSON": "frank", "plural": "singular"}
+    - slot{"PERSON": "frank"}
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_update_consequence
@@ -1474,8 +1474,8 @@
     - slot{"option": 7}
     - slot{"action_return": true}
     - utter_ask_consequences
-* consequence{"sentiment": "neu", "name": "j\u00f6rg", "plural": "singular"}
-    - slot{"name": "j\u00f6rg"}
+* consequence{"sentiment": "neu", "PERSON": "j\u00f6rg", "plural": "singular"}
+    - slot{"PERSON": "j\u00f6rg"}
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_consequence
@@ -1510,7 +1510,7 @@
     - slot{"plural": "unspecific_plural"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "the Bavarians"}
+    - slot{"PERSON": "the Bavarians"}
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": false}
     - utter_ask_quantity
@@ -1524,7 +1524,7 @@
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "Nathan"}
+    - slot{"PERSON": "Nathan"}
     - slot{"amount_stakeholders": 2}
     - slot{"action_return": true}
     - utter_next_stakeholder
@@ -1533,7 +1533,7 @@
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
     - slot{"decider": "Olga"}
-    - slot{"name": "Olga"}
+    - slot{"PERSON": "Olga"}
     - slot{"amount_stakeholders": 3}
     - slot{"action_return": true}
     - utter_next_stakeholder
@@ -1550,8 +1550,8 @@
     - slot{"option": 4}
     - slot{"action_return": true}
     - utter_ask_consequences
-* consequence{"sentiment": "neu", "name": "the bavarians", "plural": "singular"}
-    - slot{"name": "the bavarians"}
+* consequence{"sentiment": "neu", "PERSON": "the bavarians", "plural": "singular"}
+    - slot{"PERSON": "the bavarians"}
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_consequence
@@ -1569,8 +1569,8 @@
     - action_update_consequence
     - slot{"action_return": true}
     - utter_next_consequence
-* consequence{"sentiment": "neu", "name": "nathan", "plural": "singular"}
-    - slot{"name": "nathan"}
+* consequence{"sentiment": "neu", "PERSON": "nathan", "plural": "singular"}
+    - slot{"PERSON": "nathan"}
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_consequence
@@ -1599,8 +1599,8 @@
     - slot{"option": 7}
     - slot{"action_return": true}
     - utter_ask_consequences
-* consequence{"sentiment": "neu", "name": "the bavarians", "plural": "singular"}
-    - slot{"name": "the bavarians"}
+* consequence{"sentiment": "neu", "PERSON": "the bavarians", "plural": "singular"}
+    - slot{"PERSON": "the bavarians"}
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_consequence
@@ -1618,8 +1618,8 @@
     - action_update_consequence
     - slot{"action_return": true}
     - utter_next_consequence
-* consequence{"sentiment": "neu", "name": "nathan", "plural": "singular"}
-    - slot{"name": "nathan"}
+* consequence{"sentiment": "neu", "PERSON": "nathan", "plural": "singular"}
+    - slot{"PERSON": "nathan"}
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_consequence
@@ -1658,7 +1658,7 @@
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "Harald"}
+    - slot{"PERSON": "Harald"}
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": true}
     - utter_next_stakeholder
@@ -1667,7 +1667,7 @@
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
     - slot{"decider": "Uwe"}
-    - slot{"name": "Uwe"}
+    - slot{"PERSON": "Uwe"}
     - slot{"amount_stakeholders": 2}
     - slot{"action_return": true}
     - utter_next_stakeholder
@@ -1684,8 +1684,8 @@
     - slot{"option": 3}
     - slot{"action_return": true}
     - utter_ask_consequences
-* consequence{"sentiment": "neu", "name": "uwe", "plural": "singular"}
-    - slot{"name": "uwe"}
+* consequence{"sentiment": "neu", "PERSON": "uwe", "plural": "singular"}
+    - slot{"PERSON": "uwe"}
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_consequence
@@ -1710,8 +1710,8 @@
     - slot{"option": 5}
     - slot{"action_return": true}
     - utter_ask_consequences
-* consequence{"sentiment": "neu", "name": "uwe", "plural": "singular"}
-    - slot{"name": "uwe"}
+* consequence{"sentiment": "neu", "PERSON": "uwe", "plural": "singular"}
+    - slot{"PERSON": "uwe"}
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_consequence
@@ -1748,7 +1748,7 @@
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "Zoe"}
+    - slot{"PERSON": "Zoe"}
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": true}
     - utter_next_stakeholder
@@ -1757,7 +1757,7 @@
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
     - slot{"decider": "Esther"}
-    - slot{"name": "Esther"}
+    - slot{"PERSON": "Esther"}
     - slot{"amount_stakeholders": 2}
     - slot{"action_return": true}
     - utter_next_stakeholder
@@ -1842,7 +1842,7 @@
     - slot{"plural": "unspecific_plural"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "the Hessians"}
+    - slot{"PERSON": "the Hessians"}
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": false}
     - utter_ask_quantity
@@ -1856,7 +1856,7 @@
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "Roswitha"}
+    - slot{"PERSON": "Roswitha"}
     - slot{"amount_stakeholders": 2}
     - slot{"action_return": true}
     - utter_next_stakeholder
@@ -1864,7 +1864,7 @@
     - slot{"plural": "singular"}
     - slot{"sentiment": "neu"}
     - action_create_stakeholder
-    - slot{"name": "Olga"}
+    - slot{"PERSON": "Olga"}
     - slot{"amount_stakeholders": 3}
     - slot{"action_return": true}
     - utter_next_stakeholder
@@ -1873,8 +1873,8 @@
     - slot{"sentiment": "neg"}
     - utter_confirm_stakeholders
     - action_choose_decider
-* decider{"name": "Olga"}
-    - slot{"name": "Olga"}
+* decider{"PERSON": "Olga"}
+    - slot{"PERSON": "Olga"}
     - action_update_stakeholder
     - slot{"decider": "Olga"}
     - slot{"action_return": true}
