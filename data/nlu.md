@@ -8,6 +8,7 @@
 - Ok
 - Okay
 - /affirm
+- /affirm
 
 ## intent:consequence
 - [Five persons](stakeholder:five persons) would get overrun and die
@@ -77,8 +78,12 @@
 - [The Swabians](PERSON:the swabians)The Swabians would then be left behind
 - [](sentiment:pos)The [Palatines](ORG) would be saved.
 - [](sentiment:neg)The [Hessians](NORP) would be left and not get any help.
+- [](sentiment:neg)Ahmed would be crushed and die
 
 ## intent:correct
+- /correct
+- /correct
+- /correct
 - /correct
 - /correct
 - /correct
@@ -153,6 +158,7 @@
 - There is a robot who must decide to take either path A or path B to attempt to rescue persons after a natural disaster
 - [](plural:unspecific_plural)A robot must decide to take either [Path A or Path B](ORG) to attempt to rescue persons after a natural disaster.
 - [](plural:unspecific_plural)A robot must decide to take either [Path A or Path B](ORG) to attempt to rescue persons after a natural disaster.
+- /decider[{"name": "Mark"}](name:Mark)
 
 ## intent:deed
 - [Lying](deed) to Katharina
@@ -166,6 +172,8 @@
 - [](plural:unspecific_plural)[Saving](deed) the other group
 - [Rescuing](deed) [ten people](stakeholder)[](CARDINAL:ten)
 - [Leaving](deed) the other group behind.
+- It would mean crushing Achmed and killin[g him](PERSON:Achmed)
+- [Rescuing](deed:rescuing) himself and his crewmembers
 
 ## intent:deny
 - No
@@ -261,6 +269,10 @@
 - No, that was all.
 - No, I can't think of another one.
 - There are no other consequences.
+- No
+- No, that was all
+- No, that was all
+- No, at least I do not know one
 
 ## intent:deontology
 - /deontology
@@ -279,6 +291,7 @@
 - I have no idea
 - I don't know any name for them.
 - I don't know the exact amount.
+- I don't know the exact amount
 
 ## intent:goodbye
 - okay see you later
@@ -369,6 +382,9 @@
 - hi
 - Hi!
 - Hi
+- Hi
+- hi
+- hi
 
 ## intent:moralquestion
 - Should you take action in killing a person if it can prevent the death of a larger number of people?
@@ -381,6 +397,8 @@
 - /moralstatus[{"moralstatus": "human"}](moralstatus:human)
 - /moralstatus[{"moralstatus": "human"}](moralstatus:human)
 - /moralstatus[{"moralstatus": "machine"}](moralstatus:machine)
+- /moralstatus[{"moralstatus": "human"}](moralstatus:human)
+- /moralstatus[{"moralstatus": "human"}](moralstatus:human)
 
 ## intent:name
 - Call him [Frank](PERSON)
@@ -393,6 +411,9 @@
 - His name is Gregor
 - Call them "the fans"
 - Call him [Fluffy](PERSON)
+- His name is [Mark](PERSON)
+- Call him [Achmed](PERSON)
+- His name is [Johannes](PERSON)
 
 ## intent:negative
 - That would be really bad for [Benjamin](PERSON)!
@@ -485,6 +506,7 @@
 - [](plural:unspecific_plural)Tanja could also take path B to [rescue](deed) the other group
 - She could take path B to [rescue](deed) the greater amount of people.
 - [Carla](PERSON) could also take path A [first](ORDINAL) and [rescue](deed) the [Hessians](NORP).
+- [Mark](ORG) could activate an emergency access hatch between the upper and lower sections of the ship using an emergency switch to get to the lower part with enough remaining oxygen
 
 ## intent:positive
 - That would be positive for him
@@ -560,6 +582,9 @@
 - It could be [ten people](stakeholder)[ten](CARDINAL) people.
 - [8](CARDINAL)[8](CARDINAL)
 - Let us say [10](CARDINAL).
+- I'd say [5](CARDINAL)[5](CARDINAL) people
+- [10](CARDINAL)[10](CARDINAL)
+- Its just [one](CARDINAL)
 
 ## intent:stakeholder
 - [Five people](stakeholder:five people)[](plural:specific_plural)Five people
@@ -569,12 +594,12 @@
 - [Five people](stakeholder:five people)
 - [three persons](stakeholder)
 - [Five persons](stakeholder:five persons)
-- [Hans](PERSON:hans) is involved
-- Among others there is [Hans](PERSON:hans)
-- Involved in the situation is [Hans](PERSON:hans)
-- [Hans](PERSON:hans)
-- First there is [Hans](PERSON:hans)
-- [Hans](PERSON:hans) is involved in the situation
+- [Hans](PERSON) is involved
+- Among others there is [Hans](PERSON)
+- Involved in the situation is [Hans](PERSON)
+- [Hans](PERSON)
+- First there is [Hans](PERSON)
+- [Hans](PERSON) is involved in the situation
 - [Five persons](stakeholder:five persons) lie on the tracks and get overrun if the switch is not flipped
 - [One other person](stakeholder) lies on a track
 - [Five persons](stakeholder:five persons), who lie on a track
@@ -698,6 +723,11 @@
 - [](plural:singular)[](moralstatus:animal)There is [a dog](stakeholder) which is also involved in the situation
 - [](plural:unspecific_plural)[](moralstatus:human)If [Carla](PERSON) takes path A, she will reach a group of people who have to be rescued.
 - [](plural:unspecific_plural)[](moralstatus:human)There is [another group](stakeholder) of persons to be rescued. They can be reached taking path B.
+- [Mark](ORG)[](plural:singular)[](moralstatus:human)Mark is a crewperson on a marine-research submarine traveling underneath a large iceberg.
+- [](plural:unspecific_plural)[](moralstatus:human)There are more people in the upper section of the ship, where they all have not enough oxygen to survive for a longer time
+- [](plural:singular)A single crewmember is in the lower section where enough oxygen is remaining, but he is lying unconscious on the ground
+- [](plural:singular)There is a man on the tracks
+- [](plural:unspecific_plural)There is a robot who must look for trapped people after a natural catastrophe
 
 ## intent:thanks
 - you helped a lot thank you
@@ -758,9 +788,13 @@
 - /wrong
 - /wrong
 - /wrong
+- /wrong
 
 ## synonym:5
 - five
+
+## synonym:Achmed
+- g him
 
 ## synonym:Daniel
 - {"PERSON": "Daniel"}
@@ -774,6 +808,7 @@
 
 ## synonym:Hans
 - hans
+- Hans
 
 ## synonym:Harald
 - {"stakeholder": "Harald"}
@@ -786,6 +821,9 @@
 
 ## synonym:Katharina
 - {"PERSON": "Katharina"}
+
+## synonym:Mark
+- {"name": "Mark"}
 
 ## synonym:Nathan
 - nathan
@@ -869,11 +907,11 @@
 ## synonym:frank
 - Frank
 
-## synonym:hans
-- Hans
-
 ## synonym:human
 - {"moralstatus": "human"}
+
+## synonym:machine
+- {"moralstatus": "machine"}
 
 ## synonym:many people
 - Many people
@@ -883,6 +921,9 @@
 
 ## synonym:one person
 - One person
+
+## synonym:rescuing
+- Rescuing
 
 ## synonym:samuel
 - Samuel

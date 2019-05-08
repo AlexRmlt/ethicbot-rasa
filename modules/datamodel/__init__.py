@@ -16,8 +16,8 @@ class Entity(dict):
 		except AttributeError:
 			self.doc_id = -1
 
-	def memorize(self):
-		self.doc_id = mind.memorize(self)
+	def memorize(self, s_id):
+		self.doc_id = mind.memorize(s_id, self)
 		return self
 
 
@@ -30,22 +30,22 @@ class Stakeholder(Entity):
 		except AttributeError:
 			self.doc_id = -1
 	
-	def set_name(self, name=None):
+	def set_name(self, s_id, name=None):
 		if not 'name' in self:
 			if name == None: # No name provided -> set random name
 				try:
 					if self['amount'] == 1:
 						name = random.choice(aliases) 
-						while (mind.stakeholder_exists(name)):
+						while (mind.stakeholder_exists(s_id, name)):
 							name = random.choice(aliases)
 					else:
 						name = random.choice(collective) 
-						while (mind.stakeholder_exists(name)):
+						while (mind.stakeholder_exists(s_id, name)):
 							name = random.choice(collective)
 				except KeyError:
 					self['amount'] = -1
 					name = random.choice(collective) 
-					while (mind.stakeholder_exists(name)):
+					while (mind.stakeholder_exists(s_id, name)):
 						name = random.choice(collective)
 			self['name'] = name
 		return self

@@ -7,34 +7,38 @@ from operator import attrgetter
 db = TinyDB('db.json')
 q = Query()
 
-def memorize(obj):
+
+def memorize(s_id, obj):
 	obj['type'] = obj.__class__.__name__
 
 	try:
-		return db.update(obj, doc_ids=[obj.doc_id])[0] if obj.doc_id != -1 else db.insert(obj)
+		return current(s_id).update(obj, doc_ids=[obj.doc_id])[0] if obj.doc_id != -1 else current(s_id).insert(obj)
 	except AttributeError:
-		return db.insert(obj)
+		return current(s_id).insert(obj)
+
+def current(s_id):
+	return db.table(s_id)
 
 def amnesia():
 	db.purge()
 
-def get_full_model():
-	data = db.all()
+def get_full_model(s_id):
+	data = current(s_id).all()
 	for ent in data:
 		ent['id'] = ent.doc_id
 
 	return data
 
-def get_context_singleton():
+def get_context_singleton(s_id):
 	from . import Context
-	context = db.get(q.type == 'Context')
+	context = current(s_id).get(q.type == 'Context')
 	if context == None:
 		context = Context({}).memorize()
 
 	return context
 
-def by_id(i):
-	doc = db.get(doc_id=i)
+def by_id(s_id, i):
+	doc = current(s_id).get(doc_id=i)
 	try:
 		module = importlib.import_module('modules.datamodel')
 		class_ = getattr(module, doc['type'])
@@ -42,51 +46,54 @@ def by_id(i):
 		raise
 	return class_(doc)
 
-def get_stakeholders():
+def get_stakeholders(s_id):
 	from . import Stakeholder
 	stakeholders = []
-	for sh in db.search(q.type == 'Stakeholder'):
+	for sh in current(s_id).search(q.type == 'Stakeholder'):
 		stakeholders.append(Stakeholder(sh))
 	return stakeholders
 
-def get_amount_stakeholders():
-	return db.count(q.type == 'Stakeholder')
+def get_amount_stakeholders(s_id):
+	return current(s_id).count(q.type == 'Stakeholder')
 
-def stakeholder_exists(name):
-	return db.contains(q.name == name)
+def stakeholder_exists(s_id, name):
+	return current(s_id).contains(q.name == name)
 
-def get_stakeholder_by_name(name):
-	from . import Stakeholder
-	sh = db.get(q.name.matches(name, flags=re.IGNORECASE))
-	return Stakeholder(sh) if sh != None else None
-
-def get_recent_stakeholder():
+def get_stakeholder_by_name(s_id, name):
 	from . import Stakeholder
 	try:
-		sh = db.search(q.type == 'Stakeholder')[-1]
+		sh = current(s_id).get(q.name.matches(name, flags=re.IGNORECASE))
+	except TypeError:
+		return None
+	return Stakeholder(sh) if sh != None else None
+
+def get_recent_stakeholder(s_id):
+	from . import Stakeholder
+	try:
+		sh = current(s_id).search(q.type == 'Stakeholder')[-1]
 	except IndexError:
 		return None
 	return Stakeholder(sh) if sh != None else None
 
-def get_stakeholders_by_synonym(synonym):
+def get_stakeholders_by_synonym(s_id, synonym):
 	from . import Stakeholder
 	stakeholders = []
-	for sh in db.search(q.synonym.matches(synonym, flags=re.IGNORECASE)):
+	for sh in current(s_id).search(q.synonym.matches(synonym, flags=re.IGNORECASE)):
 		stakeholders.append(Stakeholder(sh))
 	return stakeholders
 
-def get_deed(label):
+def get_deed(s_id, label):
 	from . import Deed
-	d = db.get(q.label.matches(label, flags=re.IGNORECASE))
+	d = current(s_id).get(q.label.matches(label, flags=re.IGNORECASE))
 	return Deed(d) if d != None else None
 
-def get_consequence(stakeholder, option):
+def get_consequence(s_id, stakeholder, option):
 	from . import Consequence
-	cons = db.get((q.affected_stakeholder.matches(stakeholder, flags=re.IGNORECASE)) \
+	cons = current(s_id).get((q.affected_stakeholder.matches(stakeholder, flags=re.IGNORECASE)) \
 		& (q.option == option))
 	return Consequence(cons) if cons != None else None
 
-def get_decider():
+def get_decider(s_id):
 	from . import Stakeholder
-	decider = db.get(q.decider == True)
+	decider = current(s_id).get(q.decider == True)
 	return Stakeholder(decider) if decider != None else None

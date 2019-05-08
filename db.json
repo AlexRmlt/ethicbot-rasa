@@ -1,1 +1,24 @@
-{"_default":{"1":{"decider":true,"moral_status":"machine","moral_status_weight":0,"amount":1,"type":"Stakeholder","name":"Carla"},"2":{"decider":false,"moral_status":"human","moral_status_weight":1,"amount":7,"type":"Stakeholder","name":"the Hessians"},"3":{"decider":false,"moral_status":"human","moral_status_weight":1,"amount":10,"synonym":"another group","type":"Stakeholder","name":"the Palatines"},"4":{"deeds":[],"type":"Option"},"5":{"label":"Rescuing ten people","option":4,"type":"Deed","universalizable":true},"6":{"label":"Leaving the other group behind.","option":4,"type":"Deed","universalizable":false},"7":{"option":4,"affected_stakeholder":"the Palatines","impact":80,"type":"Consequence"},"8":{"option":4,"affected_stakeholder":"the Palatines","impact":-1,"type":"Consequence"},"9":{"deeds":[],"type":"Option"}}}
+{
+  "_default": {},
+  "e940cd7e7045494389af3a87dbc1012d": {},
+  "3b0a52d54e3a42b297bcf0f02a0c6711": {
+    "1": {
+      "decider": false,
+      "moral_status": "human",
+      "moral_status_weight": 1,
+      "amount": 1,
+      "type": "Stakeholder",
+      "name": "Johannes"
+    }
+  },
+  "5a3bfddc617e4c2bb7e2857a23a11a02": {
+    "1": {
+      "decider": false,
+      "moral_status": "other",
+      "moral_status_weight": -1,
+      "amount": 1,
+      "type": "Stakeholder",
+      "name": "Samuel"
+    }
+  }
+}

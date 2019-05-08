@@ -37,7 +37,6 @@ class Intro(Action):
 		return "action_intro"
 
 	def run(self, dispatcher, tracker, domain):
-		mind.amnesia()
 		dispatcher.utter_template('utter_intro', tracker)
 		dispatcher.utter_template('utter_ask_stakeholders', tracker)
 
@@ -63,9 +62,9 @@ class UpdateContext(Action):
 		action_return = False
 
 		if (tracker.latest_message['intent'].get('name') == 'moralquestion'):
-			context = mind.get_context_singleton()
+			context = mind.get_context_singleton(tracker.sender_id)
 			context['moralquestion'] = tracker.latest_message['text']
-			context.memorize()
+			context.memorize(tracker.sender_id)
 			
 			dispatcher.utter_template('utter_got_it', tracker)
 			action_return = True
@@ -133,9 +132,9 @@ class CreateStakeholder(Action):
 		if not synonym == None:
 			sh['synonym'] = synonym
 
-		sh.memorize() 
+		sh.memorize(tracker.sender_id) 
 
-		events.append(SlotSet("amount_stakeholders", mind.get_amount_stakeholders()))
+		events.append(SlotSet("amount_stakeholders", mind.get_amount_stakeholders(tracker.sender_id)))
 		events.append(SlotSet("action_return", sh['amount'] != -1))
 
 		return events
@@ -170,15 +169,17 @@ class UpdateStakeholder(Action):
 		events = []
 		action_return = False
 
-		# The last inserted stakeholder is the one we are talking about
-		sh = mind.get_recent_stakeholder()
+		# In general, the last inserted stakeholder is the one we are talking about
+		sh = mind.get_recent_stakeholder(tracker.sender_id)
 
 		try:
 			# Intent: decider
 			if (tracker.latest_message['intent'].get('name') == 'decider'):
+				# In this case, the stakeholder to be updated comes with the button payload
+				sh = mind.get_stakeholder_by_name(tracker.sender_id, next(tracker.get_latest_entity_values('name'), None))
 				sh['decider'] = True		
 				events.append(SlotSet('decider', sh['name']))
-				mind.memorize(sh)
+				mind.memorize(tracker.sender_id, sh)
 				dispatcher.utter_template('utter_got_it', tracker)
 				action_return = True
 
@@ -196,7 +197,7 @@ class UpdateStakeholder(Action):
 
 					if quantity != -1:		
 						sh['amount'] = quantity
-						mind.memorize(sh)
+						mind.memorize(tracker.sender_id, sh)
 						action_return = True
 
 						if quantity > 1:
@@ -216,7 +217,7 @@ class UpdateStakeholder(Action):
 								tracker.latest_message['text'] ]
 					weight = nlu.get_quantity_from_sources(sources)
 					
-					sh.set_moral_status_weight(weight).memorize()
+					sh.set_moral_status_weight(weight).memorize(tracker.sender_id)
 					dispatcher.utter_message('Okay, I will consider the moral status of {} to be a proportion of {} compared to a human.'.format(sh['name'], sh['moral_status_weight']))
 					action_return = True
 
@@ -227,10 +228,10 @@ class UpdateStakeholder(Action):
 				name = tracker.get_slot('PERSON')
 				
 				if not name == None:
-					sh.set_name(name).memorize()
+					sh.set_name(s_id=tracker.sender_id, name=name).memorize(tracker.sender_id)
 					dispatcher.utter_message('Alright, from now on I will use the name "{}"!'.format(sh['name']))
 				else:
-					sh.set_name().memorize()
+					sh.set_name(s_id=tracker.sender_id).memorize(tracker.sender_id)
 					dispatcher.utter_message('I am not sure if I understood the name correctly. To avoid misunderstandings I will just use the name "{}"!'.format(sh['name']))
 
 				if (sh['decider'] == True):
@@ -243,7 +244,7 @@ class UpdateStakeholder(Action):
 			elif (tracker.latest_message['intent'].get('name') == 'dontknow') \
 				or (tracker.latest_message['intent'].get('name') == 'deny'):
 
-				sh.set_name().memorize()
+				sh.set_name(s_id=tracker.sender_id).memorize(tracker.sender_id)
 				dispatcher.utter_message('Okay, I will just use the name "{}" from now on!'.format(sh['name']))
 				
 				if (sh['decider'] == True):
@@ -254,7 +255,7 @@ class UpdateStakeholder(Action):
 
 			# Intent: moralstatus
 			elif (tracker.latest_message['intent'].get('name') == 'moralstatus'):
-				sh.set_moral_status(tracker.get_slot('moralstatus')).memorize()
+				sh.set_moral_status(tracker.get_slot('moralstatus')).memorize(tracker.sender_id)
 				dispatcher.utter_template('utter_got_it', tracker)
 				action_return = True
 
@@ -293,7 +294,7 @@ class CreateOption(Action):
 	def run(self, dispatcher, tracker, domain):
 		deeds = list(tracker.get_latest_entity_values('deed'))
 		opt = Option({"deeds": deeds})
-		option_id = opt.memorize().doc_id
+		option_id = opt.memorize(tracker.sender_id).doc_id
 
 		if len(deeds) > 0:
 			current_deed = deeds[0]
@@ -326,11 +327,11 @@ class UpdateOption(Action):
 		events = []
 
 		try:
-			option = mind.by_id(int(tracker.get_slot('option')))
+			option = mind.by_id(tracker.sender_id, int(tracker.get_slot('option')))
 
 			if (tracker.latest_message['intent'].get('name') == 'wrong'):
 				option['deeds'].remove(tracker.get_slot('deed'))
-				option.memorize()
+				option.memorize(tracker.sender_id)
 
 				if len(option['deeds']) > 0:
 					current_deed = option['deeds'][0]
@@ -388,7 +389,7 @@ class CreateDeed(Action):
 			label = tracker.get_slot('deed')
 
 		if not label == None:
-			deed = Deed({"label": label, "option": tracker.get_slot('option')}).memorize()
+			deed = Deed({"label": label, "option": tracker.get_slot('option')}).memorize(tracker.sender_id)
 			action_return = True
 		else:
 			dispatcher.utter_template('utter_not_sure', tracker)
@@ -422,7 +423,7 @@ class UpdateDeed(Action):
 		events = []
 
 		try:
-			deed = mind.get_deed(tracker.get_slot('deed'))
+			deed = mind.get_deed(tracker.sender_id, tracker.get_slot('deed'))
 		
 			# Update universalizability and inherent_evil
 			if (tracker.latest_message['intent'].get('name') == 'correct'):
@@ -440,16 +441,16 @@ class UpdateDeed(Action):
 				action_return = True
 			
 			if action_return == True:
-				deed.memorize()
+				deed.memorize(tracker.sender_id)
 				dispatcher.utter_template('utter_got_it', tracker)
 
 			# Remove current and select next deed from list, if available
 			if ('universalizable' in deed and 'inherent_evil' in deed):
-				option = mind.by_id(int(tracker.get_slot('option')))
+				option = mind.by_id(tracker.sender_id, int(tracker.get_slot('option')))
 
 				if deed['label'] in option['deeds']:
 					option['deeds'].remove(deed['label'])
-					option.memorize()
+					option.memorize(tracker.sender_id)
 
 				if len(option['deeds']) > 0:
 					events.append(SlotSet("deed", option['deeds'][0]))
@@ -501,10 +502,10 @@ class CreateConsequence(Action):
 			impact = 0
 
 		# Find out, which stakeholder is affected by this consequence
-		sh = mind.get_stakeholder_by_name(next(tracker.get_latest_entity_values('PERSON'), None))
+		sh = mind.get_stakeholder_by_name(tracker.sender_id, next(tracker.get_latest_entity_values('PERSON'), None))
 
 		try:
-			consequence = Consequence({"option": option, "affected_stakeholder": sh['name'], "impact": impact}).memorize()
+			consequence = Consequence({"option": option, "affected_stakeholder": sh['name'], "impact": impact}).memorize(tracker.sender_id)
 			if impact != 0:
 				action_return = True
 		except (AttributeError, TypeError) as e:
@@ -542,7 +543,7 @@ class UpdateConsequence(Action):
 		intent = tracker.latest_message['intent'].get('name')
 
 		try:
-			consequence = mind.get_consequence(tracker.get_slot('PERSON'), tracker.get_slot('option'))
+			consequence = mind.get_consequence(tracker.sender_id, tracker.get_slot('PERSON'), tracker.get_slot('option'))
 			old_impact = consequence['impact']
 
 			# Update impact
@@ -563,7 +564,7 @@ class UpdateConsequence(Action):
 					consequence['impact'] = consequence['impact'] * quantity
 
 			if consequence['impact'] != old_impact:
-				consequence.memorize()
+				consequence.memorize(tracker.sender_id)
 				dispatcher.utter_template('utter_got_it', tracker)
 				action_return = True
 		except (AttributeError, TypeError) as e:
@@ -590,7 +591,7 @@ class ChooseDecider(Action):
 		message = "Out of this persons, who is the one to make the moral decision?"
 		buttons = []
 
-		for sh in mind.get_stakeholders():
+		for sh in mind.get_stakeholders(tracker.sender_id):
 			buttons.append({ 'title': sh['name'], 'payload': '/decider{"name": "' + sh['name'] + '"}'})
 
 		buttons.append({ "title": "Somebody else", "payload": '/decider{"plural": "' + const.SINGULAR + '"}' })
@@ -610,8 +611,8 @@ class ChooseAffectedStakeholder(Action):
 		buttons = []
 		message = "On which person would this decision have an impact?"
 
-		for sh in mind.get_stakeholders():
-			buttons.append({ 'title': sh['name'], 'payload': '/consequence{"name": "' + sh['name'] + '"}'})
+		for sh in mind.get_stakeholders(tracker.sender_id):
+			buttons.append({ 'title': sh['name'], 'payload': '/consequence{"PERSON": "' + sh['name'] + '"}'})
 		dispatcher.utter_button_message(message, buttons)
 		return []
 
@@ -629,7 +630,7 @@ class EvaluationUtilitarism(Action):
 		return 'action_evaluation_utilitarism'
 
 	def run(self, dispatcher, tracker, domain):
-		data = mind.get_full_model()
+		data = mind.get_full_model(tracker.sender_id)
 		r = requests.post(const.API_UTILITARISM, json=data)
 
 		if r.status_code == 200:
@@ -646,10 +647,25 @@ class EvaluationDeontology(Action):
 		return 'action_evaluation_deontology'
 
 	def run(self, dispatcher, tracker, domain):
-		data = mind.get_full_model()
+		data = mind.get_full_model(tracker.sender_id)
 		r = requests.post(const.API_DEONTOLOGY, json=data)
 
 		if r.status_code == 200:
 			dispatcher.utter_message(r.text)
 		else:
 			dispatcher.utter_template('utter_evaluation_failure', tracker)
+
+
+###############################################################################
+#################### --- NOT CALLABLE FROM RASA --- ###########################
+###############################################################################
+class GetDataModel(Action):
+	"""
+	Retrieve datamodel for a distinct sender
+	"""
+	def name(self):
+		return 'getdatamodel'
+
+	def run(self, dispatcher, tracker, domain):
+		data = mind.get_full_model(tracker.sender_id)
+		return data
