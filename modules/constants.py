@@ -7,5 +7,5 @@ MS_MACHINE = 'machine'
 MS_ANIMAL = 'animal'
 MS_OTHER = 'other'
 
-API_UTILITARISM = 'http://80.190.117.198:443/utilitarism'	
-API_DEONTOLOGY = 'http://80.190.117.198:443/deontology'
+API_UTILITARISM = 'https://ethicapi.herokuapp.com/utilitarism'	
+API_DEONTOLOGY = 'https://ethicapi.herokuapp.com/deontology'
