@@ -8,4 +8,4 @@ tracker_store:
   db: rasa
   collection: conversations
   username: rasa
-  password: rasa
+  password: asar
