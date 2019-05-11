@@ -9,5 +9,7 @@ modules/datamodel/__pycache__/
 components/__pycache__/
 actions/__pycache__/
 
+config/endpoints*
+
 rasa.log
 test.py
