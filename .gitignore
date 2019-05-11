@@ -14,3 +14,4 @@ config/endpoints*
 db.json
 rasa.log
 test.py
+story_graph.dot
