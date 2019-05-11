@@ -11,5 +11,6 @@ actions/__pycache__/
 
 config/endpoints*
 
+db.json
 rasa.log
 test.py
