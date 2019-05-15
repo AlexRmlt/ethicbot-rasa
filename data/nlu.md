@@ -20,6 +20,12 @@
 - /affirm
 - /affirm
 - /affirm
+- /affirm
+- /affirm
+- /affirm
+- /affirm
+- /affirm
+- /affirm
 
 ## intent:consequence
 - [Five persons](stakeholder:five persons) would get overrun and die
@@ -118,8 +124,78 @@
 - [Amelie](PERSON)[](sentiment:neu)Amelie could live a few days longer than expected.
 - [Samuel](PERSON:samuel) would not get any money from his life insurance that he can give to his family.
 - [Greta](PERSON:greta)[Greta](DATE)[](sentiment:neu)Greta would also not receive any money from the life insurance.
+- [Amelie](PERSON)[](sentiment:neg)Amelie would die from being overheated by the furnace
+- [The Swabians](PERSON:the swabians)[](sentiment:neg)The [Swabians](NORP) would suffer from the uncomfortable heat produced by the furnace but they would survive.
+- [Jane](PERSON)[](sentiment:neg)Jane would suffer greatly from the loss of her baby.
+- [The Swabians](PERSON:the swabians)[](sentiment:neg)The [Swabians](NORP) would get killed by the soldiers.
+- [Amelie](PERSON) would survive as she is less t[han 2 years old.](DATE:less than 2 years old)[](CARDINAL:2)
+- [Jane](PERSON)[](sentiment:neg)Jane would also be killed by the soldiers.
+- [Jörg](PERSON)[Jörg](PERSON)[](sentiment:neg)Jörg would get crushed by the emergency access hatch and die.
+- [](sentiment:neu)The [Palatines](ORG) would have enough oxygen to survive
+- /consequence[{"PERSON": "the Palatines"}](PERSON:the Palatines)
+- [Mark](PERSON:mark)[Mark](ORG)[](sentiment:neu)Mark would also survive
+- [Jörg](PERSON)[Jörg](PERSON)[](sentiment:neu)Jörg would survive because in the lower part of the ship there would be enough oxygen for him.
+- [](sentiment:neg)The [Palatines](ORG) would die because the oxygen would not suffice for all of them.
+- /consequence[{"PERSON": "the Palatines"}](PERSON:the Palatines)
+- [Mark](PERSON:mark)[Mark](ORG)[](sentiment:pos)Mark would suffocate as well
+- [Katharina](ORG)[](sentiment:neg)Katharina would be dead as she gets hit by the trolley.
+- /consequence[{"PERSON": "Katharina"}](PERSON:Katharina)
+- [](sentiment:neu)The [Palatines](ORG) would survive as the approaching trolley is stopped.
+- /consequence[{"PERSON": "the Palatines"}](PERSON:the Palatines)
+- [](sentiment:neg)The [Palatines](ORG) would get overrun by the trolley and die.
+- /consequence[{"PERSON": "the Palatines"}](PERSON:the Palatines)
+- [Katharina](ORG)[](sentiment:neu)Katharina would not get pushed on the tracks and therefore survive.
+- /consequence[{"PERSON": "Katharina"}](PERSON:Katharina)
+- [Herbert](PERSON)[](sentiment:neg)Herbert would die from his injuries
+- [Zoe](PERSON:zoe)[](sentiment:neu)Zoe would survive
+- [Heather](PERSON:heather)[Heather](ORG)[](sentiment:neu)Heather would survive too
+- [Herbert](PERSON)[](sentiment:neu)Herbert would survive due to taking the medicine
+- [Heather](PERSON:heather)[Heather](ORG)[](sentiment:neg)Heather and the others would die from having not enough oxygen
 
 ## intent:correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
 - /correct
 - /correct
 - /correct
@@ -244,6 +320,10 @@
 - /decider[{"name": "Ken"}](name:Ken)
 - /decider[{"name": "Patrick"}](name:Patrick)
 - /decider[{"name": "Mary"}](name:Mary)
+- /decider[{"name": "Jane"}](name:Jane)
+- /decider[{"name": "mark"}](name:mark)
+- /decider[{"name": "molly"}](name:molly)
+- /decider[{"name": "heather"}](name:heather)
 
 ## intent:deed
 - [Lying](deed) to Katharina
@@ -272,6 +352,17 @@
 - It would mean refraining from saving himself and the children
 - This implies killing a person
 - It also means helping [Samuels](PERSON) family
+- It would mean killing her baby because the heat of the furnace would overheat the child.
+- There is also the action of saving her and the others life.
+- It would mean [saving the lives](deed) of his crewmembers and himself
+- It would also mean killing [Jörg](PERSON)[ bec](PERSON:Jörg)ause his body would get crushed by the emergency access hatch.
+- The option implies letting his crew and himself die by lack of oxygen.
+- It would imply killing [Katharina](LOC).
+- It would also mean [saving the lives](deed) of the Palatines.
+- Also it would imply letting the workmen die.
+- Letting the crewmember die is for sure an action of moral relevance.
+- [Saving](deed:saving) the rest of her crews lives
+- [Saving the life](deed:saving the life) of her fellow crewmember
 
 ## intent:deny
 - No
@@ -408,6 +499,27 @@
 - I don't think so
 - No
 - There is no other possibility
+- That was all
+- Thats all
+- No, thats all
+- /deny
+- No thats all
+- No thats all
+- No thats all
+- These were all consequences
+- No that were all
+- No name specified
+- No that was all
+- No he hasn't
+- That was them, no one else to name
+- No that was all
+- No
+- no that was it
+- no other persons
+- no
+- no thats all
+- /deny
+- no i don't think so
 
 ## intent:deontology
 - /deontology
@@ -435,6 +547,8 @@
 - That can not be told exactly
 - That is not exactly known
 - No, I have no idea
+- I don't know it exactly
+- I don't know any name
 
 ## intent:goodbye
 - okay see you later
@@ -533,6 +647,11 @@
 - hi
 - hi
 - hey
+- hi
+- hi
+- hi
+- hi
+- hi
 
 ## intent:moralquestion
 - Should you take action in killing a person if it can prevent the death of a larger number of people?
@@ -545,6 +664,15 @@
 - /moralstatus[{"moralstatus": "human"}](moralstatus:human)
 - /moralstatus[{"moralstatus": "human"}](moralstatus:human)
 - /moralstatus[{"moralstatus": "machine"}](moralstatus:machine)
+- /moralstatus[{"moralstatus": "human"}](moralstatus:human)
+- /moralstatus[{"moralstatus": "human"}](moralstatus:human)
+- /moralstatus[{"moralstatus": "human"}](moralstatus:human)
+- /moralstatus[{"moralstatus": "human"}](moralstatus:human)
+- /moralstatus[{"moralstatus": "human"}](moralstatus:human)
+- /moralstatus[{"moralstatus": "human"}](moralstatus:human)
+- /moralstatus[{"moralstatus": "human"}](moralstatus:human)
+- /moralstatus[{"moralstatus": "human"}](moralstatus:human)
+- /moralstatus[{"moralstatus": "human"}](moralstatus:human)
 - /moralstatus[{"moralstatus": "human"}](moralstatus:human)
 - /moralstatus[{"moralstatus": "human"}](moralstatus:human)
 - /moralstatus[{"moralstatus": "human"}](moralstatus:human)
@@ -578,6 +706,13 @@
 - Call them "the [eight](CARDINAL) children"
 - Call them "the terrorists".
 - Call him "Dad"
+- Call them "the townspeople"
+- You can name them "the soldiers".
+- Use the name "the crewmembers"
+- Call him Dennis
+- Use the term "workmen"
+- Call them "the workmen"
+- Call him [Herbert](PERSON)
 
 ## intent:negative
 - That would be really bad for [Benjamin](PERSON)!
@@ -684,6 +819,14 @@
 - He can refuse the offer to torture and [kill one](deed)[one](CARDINAL) of his colleagues.
 - Mary can, as asked by [Samuel](PERSON:samuel), go up to his fathers room in the hospital and smother his father with a pillow.
 - Mary could also refuse to help [Samuel](PERSON:samuel) and [refrain from killing](deed) his father.
+- As the baby's crying is going to summon the soldiers, [Jane](PERSON) could turn on the noisy furnace to block the sound.
+- She could also just let her baby cry and [do nothing](deed) to prevent the soldiers from hearing it.
+- As in the upper part of the ship, the remaining oxygen is too low for everyone to survive, [mark](PERSON) could release an an emergency access hatch between the upper and lower sections of the ship.
+- [Mark](PERSON:mark)[Mark](ORG) could also [refrain from](deed) releasing the hatch using the emergency switch to spare the life of [Jörg](PERSON)
+- [Molly](ORG:molly)[ coul](ORG:Molly)d push Katharina [from the ](ORG:Katharina)bridge and onto the tracks so that her large body stops the incoming trolley.
+- She could [refrain from pushing](deed) [Katharina](LOC) on the tracks and let the runaway trolley pass.
+- She could [refuse to](deed) give medical aid to the injured crewmember because there is not enough oxygen for all of them.
+- [Heather](ORG) could also give the medicine to [Herbert](PERSON) saving his life
 
 ## intent:positive
 - That would be positive for him
@@ -716,6 +859,14 @@
 - Definitely positive
 - It would be positive indeed
 - Positive in principle
+- The effects would be all positive
+- This would be positive for him
+- For [Jörg](PERSON)[ the](PERSON:Jörg) effects would be positive
+- Definitely positive
+- that would be positive for her
+- more positive
+- positive
+- positive
 
 ## intent:quantity
 - [5](CARDINAL)
@@ -800,6 +951,36 @@
 - [75](CARDINAL)
 - [6](CARDINAL)
 - [6](CARDINAL) or so
+- It is [only one](CARDINAL)[only one](CARDINAL) person
+- Maybe [10](CARDINAL)[10](CARDINAL) people
+- I'd say [about 5](CARDINAL)[5](CARDINAL)
+- [10](CARDINAL)[10](CARDINAL)
+- Maybe it's a [90 percent](PERCENT) probability
+- [Only 2](CARDINAL)[2](CARDINAL) I think
+- [9](CARDINAL)[9](CARDINAL)
+- [10](CARDINAL)[10](CARDINAL)
+- [8](CARDINAL)[8](CARDINAL)
+- [10](CARDINAL)[10](CARDINAL)
+- [6](CARDINAL) people
+- [10](CARDINAL)[10](CARDINAL)
+- Let say [8](CARDINAL)[8](CARDINAL)
+- [8](CARDINAL)[8](CARDINAL)
+- [7](CARDINAL)[7](CARDINAL)
+- At [most 80%](PERCENT)[80%](PERCENT:80 %)
+- [10](CARDINAL)[10](CARDINAL)
+- [10](CARDINAL)[10](CARDINAL)
+- [5](CARDINAL)[5](CARDINAL) as I said before
+- Its [only one](CARDINAL)[only one](CARDINAL) person
+- [five persons](stakeholder)[](CARDINAL:5)
+- [10](CARDINAL)[10](CARDINAL)
+- [8](CARDINAL)[8](CARDINAL)
+- [10](CARDINAL)[10](CARDINAL)
+- [7](CARDINAL)[7](CARDINAL)
+- [10](CARDINAL)[10](CARDINAL)
+- [6](CARDINAL)[6](CARDINAL)
+- [6](CARDINAL)[6](CARDINAL)
+- [6](CARDINAL)[6](CARDINAL)
+- [10](CARDINAL)[10](CARDINAL)
 
 ## intent:stakeholder
 - [Four expedition agents](stakeholder) are trapped in a mine.
@@ -966,6 +1147,22 @@
 - [A](stakeholder:a)[](plural:singular)[](moralstatus:human)A young man sitting next to [Mary](PERSON) explains that his father is very ill and has a week to live at most, but his life insurance policy is about to expire at [midnight](TIME).
 - [Samuels](PERSON)[](plural:singular)Samuels family is in desperate need of the money the life insurance would give to them.
 - [Samuels](ORG)[](plural:singular)Samuels father who will die within [the next 7 days](DATE)[7](CARDINAL) days.
+- [The first person](stakeholder:the first person)[](plural:unspecific_plural)[](moralstatus:human)The [first](ORDINAL) person involved is [Jane](PERSON). Her village has been invaded by enemy soldier and she is hiding with fellow townspeople in [two](CARDINAL) rooms of the cellar of a large house.
+- [](plural:unspecific_plural)[](moralstatus:human)With her there is [a group of other people](stakeholder) from the town hiding in the cellar.
+- [Jane](PERSON)[](plural:singular)Jane's baby is in the [second](ORDINAL) room and is about to start crying.
+- [](plural:unspecific_plural)A group of enemy soldiers is approaching to search the house they are hiding in for valuables. They have orders to kill all remaining civilians over [the age of two](DATE).
+- [Mark](PERSON:mark)[Mark](ORG)[](plural:singular)[](moralstatus:human)Mark is [a crewperson](stakeholder) on a marine-research submarine traveling underneath a large iceberg.
+- [A group](stakeholder:a group)[](plural:unspecific_plural)A group of other crewmembers are with him in the upper section of the ship.
+- [One](CARDINAL)[](plural:singular)One crewmember, who is severely injured and lying unconscious, is in the lower section of the ship.
+- [Five](CARDINAL:5)[Five](CARDINAL:5)[](plural:unspecific_plural)[](moralstatus:human)Five workmen stand on the tracks where a runaway trolley is heading towards them.
+- [Molly](PERSON:molly)[Molly](ORG)[](plural:unspecific_plural)[](moralstatus:human)Molly is on a footbridge over the tracks, in between the approaching trolley and the [five](CARDINAL:5) workmen.
+- [](plural:singular)Next to her on this footbridge is a stranger who happens to be very large.
+- [Five](CARDINAL:5)[Five](CARDINAL:5)[](plural:unspecific_plural)[](moralstatus:human)Five workmen are standing on the tracks where a runaway trolley is approaching them.
+- [Molly](PERSON:molly)[Molly](ORG)[](plural:singular)Molly is standing on a footbridge over the tracks.
+- [](plural:singular)Next to her there is a very large stranger.
+- [Heather](PERSON:heather)[Heather](ORG)[](plural:singular)[](moralstatus:human)Heather is part of a [four](CARDINAL)-person mining expedition.
+- [](plural:singular)With her there are [two](CARDINAL) other crewmembers trapped in a cave-in of a mine.
+- [One](CARDINAL:one)[One](CARDINAL)[](plural:singular)One of the crewmembers has crushed legs from a rock that fell onto them and will die if he does not receive medical attention.
 
 ## intent:thanks
 - you helped a lot thank you
@@ -1056,10 +1253,28 @@
 - /wrong
 - /wrong
 - /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
 
 ## synonym:5
 - five
 - Five
+
+## synonym:80 %
+- 80%
 
 ## synonym:Achmed
 - g him
@@ -1075,6 +1290,10 @@
 - {"name": "Frank"}
 - frank
 
+## synonym:Greta
+-  woul
+- woul
+
 ## synonym:Hans
 - hans
 - Hans
@@ -1085,14 +1304,22 @@
 ## synonym:Inga
 - {"PERSON": "Inga"}
 
+## synonym:Jane
+- {"name": "Jane"}
+
 ## synonym:Jones
 - jones
 
 ## synonym:Jörg
+-  bec
+-  the
+- bec
+- the
 - jörg
 
 ## synonym:Katharina
 - {"PERSON": "Katharina"}
+- from the 
 
 ## synonym:Ken
 - {"name": "Ken"}
@@ -1100,8 +1327,12 @@
 ## synonym:Mark
 - {"name": "Mark"}
 
+## synonym:Mary
+- {"name": "Mary"}
+
 ## synonym:Molly
 - {"name": "Molly"}
+-  coul
 
 ## synonym:Nathan
 - nathan
@@ -1132,11 +1363,17 @@
 - {"PERSON": "Werner"}
 - werner
 
+## synonym:a
+- A
+
 ## synonym:a fat man
 - A fat man
 
 ## synonym:a few persons
 - A few persons
+
+## synonym:a group
+- A group
 
 ## synonym:a group of people
 - A group of people
@@ -1196,14 +1433,28 @@
 ## synonym:frank
 - Frank
 
+## synonym:greta
+- Greta
+
 ## synonym:human
 - {"moralstatus": "human"}
+
+## synonym:less than 2 years old
+- han 2 years old.
 
 ## synonym:machine
 - {"moralstatus": "machine"}
 
 ## synonym:many people
 - Many people
+
+## synonym:mark
+- Mark
+- {"name": "mark"}
+
+## synonym:molly
+- {"name": "molly"}
+- Molly
 
 ## synonym:one other person
 - One other person
