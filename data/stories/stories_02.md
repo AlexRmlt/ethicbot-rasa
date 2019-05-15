@@ -411,9 +411,6 @@
     - slot{"sentiment": "neg"}
     - utter_confirm_stakeholders
     - utter_confirm_decider
-    - utter_ask_moral_question
-* moralquestion{"stakeholder": "a person"}
-    - action_update_context
 
 ## Generated Story 7305082844865428284
 * greeting{"sentiment": "neu", "plural": "singular"}
@@ -463,10 +460,6 @@
     - slot{"PERSON": "Tanja"}
     - action_update_stakeholder
     - slot{"decider": "Tanja"}
-    - slot{"action_return": true}
-    - utter_ask_moral_question
-* moralquestion
-    - action_update_context
     - slot{"action_return": true}
     - utter_ask_options
 * option{"sentiment": "neu", "plural": "unspecific_plural"}
@@ -996,8 +989,6 @@
 * deny
     - utter_confirm_stakeholders
     - utter_confirm_decider
-    - utter_ask_moral_question
-* moralquestion
     - utter_ask_options
 * option
     - action_create_option

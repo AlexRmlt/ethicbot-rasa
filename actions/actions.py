@@ -149,6 +149,7 @@ class UpdateStakeholder(Action):
 	* Intent 'decider'
 	* Intent 'name'
 	* Intent 'correct' 		(user confirmed name recognized by the bot)
+	* Intent 'wrong' 		(user rejected name recognized by the bot)
 	* Intent 'dontknow'		(user does not know the proposed stakeholders name)
 	* Intent 'deny'			(user does not tell the proposed stakeholders name)
 	* Intent 'moralstatus'	
@@ -225,14 +226,28 @@ class UpdateStakeholder(Action):
 			elif (tracker.latest_message['intent'].get('name') == 'name') \
 				or (tracker.latest_message['intent'].get('name') == 'correct'):
 
-				name = tracker.get_slot('PERSON')
-				
+				if tracker.latest_message['intent'].get('name') == 'correct':
+					name = tracker.get_slot('PERSON')
+				else:
+					name = next(tracker.get_latest_entity_values('PERSON'), None)
+
 				if not name == None:
 					sh.set_name(s_id=tracker.sender_id, name=name).memorize(tracker.sender_id)
 					dispatcher.utter_message('Alright, from now on I will use the name "{}"!'.format(sh['name']))
 				else:
 					sh.set_name(s_id=tracker.sender_id).memorize(tracker.sender_id)
 					dispatcher.utter_message('I am not sure if I understood the name correctly. To avoid misunderstandings I will just use the name "{}"!'.format(sh['name']))
+
+				if (sh['decider'] == True):
+					events.append(SlotSet('decider', sh['name']))
+				events.append(SlotSet('PERSON', sh['name']))
+
+				action_return = True
+
+			# Intent: wrong
+			elif (tracker.latest_message['intent'].get('name') == 'wrong'):
+				sh.set_name(s_id=tracker.sender_id).memorize(tracker.sender_id)
+				dispatcher.utter_message('Okay, then I will just use the name "{}" when talking about this person.'.format(sh['name']))
 
 				if (sh['decider'] == True):
 					events.append(SlotSet('decider', sh['name']))
@@ -505,9 +520,14 @@ class CreateConsequence(Action):
 		sh = mind.get_stakeholder_by_name(tracker.sender_id, next(tracker.get_latest_entity_values('PERSON'), None))
 
 		try:
-			consequence = Consequence({"option": option, "affected_stakeholder": sh['name'], "impact": impact}).memorize(tracker.sender_id)
-			if impact != 0:
-				action_return = True
+			consequence = Consequence({
+				"option": option, 
+				"affected_stakeholder": sh['name'], 
+				"impact": impact,
+				"probability": 1
+			}).memorize(tracker.sender_id)
+			
+			action_return = True
 		except (AttributeError, TypeError) as e:
 			logging.warning('Exception creating consequence: ' + str(e))
 			# If we do not find a distinct name, let the user choose from possible stakeholders
@@ -527,7 +547,7 @@ class UpdateConsequence(Action):
 	* Intent 'negative'
 	* Intent 'correct'
 	* Intent 'wrong'
-	* Intent 'quantity'
+	* Intent 'quantity' (user specified the impact weight OR the probability)
 
 	Required slots: /
 
@@ -560,10 +580,22 @@ class UpdateConsequence(Action):
 				sources = [ next(tracker.get_latest_entity_values('CARDINAL'), -1),
 							tracker.latest_message['text'] ]
 				quantity = nlu.get_quantity_from_sources(sources)
-				if quantity != -1:
-					consequence['impact'] = consequence['impact'] * quantity
 
-			if consequence['impact'] != old_impact:
+				if quantity != -1:
+					# If impact is still 1 or -1, we set this value first
+					if (consequence['impact'] == 1 or consequence['impact'] == -1):
+						# Store 1.1 as impact if the user provides 1 so that the update can be recognized
+						if quantity == 1: quantity = 1.1	
+						consequence['impact'] = consequence['impact'] * quantity
+					# Else it is asked for the probability
+					else:
+						consequence['probability'] = float(quantity / 100)
+						# Correct the 1.1 value if necessary because we don't need it as an indicator for the update anymore
+						if consequence['impact'] == 1.1: consequence['impact'] = 1
+						if consequence['impact'] == -1.1: consequence['impact'] = -1
+							
+
+			if (consequence['impact'] != old_impact or consequence['probability'] != 1):
 				consequence.memorize(tracker.sender_id)
 				dispatcher.utter_template('utter_got_it', tracker)
 				action_return = True
@@ -625,6 +657,7 @@ class ChooseAffectedStakeholder(Action):
 class EvaluationUtilitarism(Action):
 	"""
 	Evaluate the gathered information using utilitarism ethics principle
+	(TODO: map to intent 'utilitarism')
 	"""
 	def name(self):
 		return 'action_evaluation_utilitarism'
@@ -642,6 +675,7 @@ class EvaluationUtilitarism(Action):
 class EvaluationDeontology(Action):
 	"""
 	Evaluate the gathered information using deontology ethics principle
+	(TODO: map to intent 'deontology')
 	"""
 	def name(self):
 		return 'action_evaluation_deontology'
@@ -657,7 +691,7 @@ class EvaluationDeontology(Action):
 
 
 ###############################################################################
-#################### --- NOT CALLABLE FROM RASA --- ###########################
+##################### --- DO NOT CALL FROM RASA --- ###########################
 ###############################################################################
 class GetDataModel(Action):
 	"""

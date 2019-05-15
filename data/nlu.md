@@ -9,6 +9,17 @@
 - Okay
 - /affirm
 - /affirm
+- /affirm
+- /affirm
+- /affirm
+- /affirm
+- /affirm
+- /affirm
+- /affirm
+- /affirm#
+- /affirm
+- /affirm
+- /affirm
 
 ## intent:consequence
 - [Five persons](stakeholder:five persons) would get overrun and die
@@ -76,11 +87,80 @@
 - [The Hessians](PERSON:the hessians)The Hessians would not get rescued
 - [The Hessians](PERSON:the hessians)The Hessians would be saved
 - [The Swabians](PERSON:the swabians)The Swabians would then be left behind
-- [](sentiment:pos)The [Palatines](ORG) would be saved.
+- [](sentiment:pos)[The Palatines](PERSON) would be saved.
 - [](sentiment:neg)The [Hessians](NORP) would be left and not get any help.
 - [](sentiment:neg)Ahmed would be crushed and die
+- [The Saxons](PERSON:the saxons)[](sentiment:neu)The [Saxons](PERSON) and [Frank](PERSON:frank)[Frank](PERSON:frank) would survive
+- [Jörg](PERSON)[Jörg](PERSON)[](sentiment:neg)Jörg would propably die very soon
+- [Jörg](PERSON)[Jörg](PERSON)[](sentiment:pos)Jörg would have a higher probability of surviving
+- [The Saxons](PERSON:the saxons) would be in danger of suffocating due to the[ lack ](ORG:Saxons)of oxygen
+- [The five workmen](stakeholder:the five workmen)[](sentiment:neg)The [five](CARDINAL:5) workmen would all get killed
+- /consequence[{"PERSON": "the Palatines"}](PERSON:the Palatines)
+- [Nathan](PERSON), who stands on the side track, would survive
+- [Nathan](PERSON)[Nathan](ORG)[](sentiment:neg)Nathan would die from being overrun by the trolley.
+- [](sentiment:pos)The [Palatines](ORG) would all be saved from the approaching trolley and survive.
+- /consequence[{"PERSON": "the Palatines"}](PERSON:the Palatines)
+- [Inga](PERSON) would die from taking the medication.
+- [The Saxons](PERSON:the saxons)[](sentiment:neu)The [Saxons](ORG) would be prevented from catching HIV.
+- [The Saxons](PERSON:the saxons)[](sentiment:neg)The [Saxons](ORG) would get infected with HIV.
+- [Inga](GPE)[](sentiment:neu)Inga would not be poisened by her doctor and survive.
+- /consequence[{"PERSON": "Inga"}](PERSON:Inga)
+- [Amelie](PERSON)[](sentiment:neg)Amelie would suffer pain from being tortured and eventually die.
+- [Tom](PERSON)[](sentiment:pos)Tom and the [eight](CARDINAL) children would survive and come free.
+- /consequence[{"PERSON": "the Rhinelanders"}](PERSON:the Rhinelanders)
+- [The Saxons](PERSON:the saxons)[](sentiment:neg)The [Saxons](ORG) would get killed nevertheless.
+- [The Saxons](PERSON:the saxons)[](sentiment:neg)The [Saxons](ORG) would get killed
+- [Patrick](PERSON)[Patrick](ORG)[](sentiment:neg)Patrick is also going to be killed.
+- [The Rhinelanders](PERSON:the Rhinelanders)[](sentiment:neg)The Rhinelanders would die as well.
+- [Amelie](PERSON)[](sentiment:neg)Amelie would suffocate and die a bit earlier than expected
+- [Greta](PERSON:greta)[ woul](DATE:Greta)d earn a substantial amount of money from the life insurance.
+- [Samuel](PERSON:samuel) would be happy about the money he receives for supporting his family.
+- [Amelie](PERSON)[](sentiment:neu)Amelie could live a few days longer than expected.
+- [Samuel](PERSON:samuel) would not get any money from his life insurance that he can give to his family.
+- [Greta](PERSON:greta)[Greta](DATE)[](sentiment:neu)Greta would also not receive any money from the life insurance.
 
 ## intent:correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
 - /correct
 - /correct
 - /correct
@@ -159,6 +239,11 @@
 - [](plural:unspecific_plural)A robot must decide to take either [Path A or Path B](ORG) to attempt to rescue persons after a natural disaster.
 - [](plural:unspecific_plural)A robot must decide to take either [Path A or Path B](ORG) to attempt to rescue persons after a natural disaster.
 - /decider[{"name": "Mark"}](name:Mark)
+- /decider[{"name": "Frank"}](name:Frank)
+- /decider[{"name": "Molly"}](name:Molly)
+- /decider[{"name": "Ken"}](name:Ken)
+- /decider[{"name": "Patrick"}](name:Patrick)
+- /decider[{"name": "Mary"}](name:Mary)
 
 ## intent:deed
 - [Lying](deed) to Katharina
@@ -174,6 +259,19 @@
 - [Leaving](deed) the other group behind.
 - It would mean crushing Achmed and killin[g him](PERSON:Achmed)
 - [Rescuing](deed:rescuing) himself and his crewmembers
+- It would also mean saving the rest of the crew
+- [Saving Jörgs](PERSON) live would be a moral action
+- [Killing Nathan](ORG) by pushing him off the bridge
+- [Saving the lives](deed:saving the lives) of the five workmen[](CARDINAL:5)
+- This would imply actively killing [Inga](PERSON).
+- It could also mean [saving the lives](deed) of many people.
+- Refraining from abusing the patient-doctor mutual trust would be a morally relevant action
+- One must also consider the action of not saving many people from the threat of being infected with HIV.
+- Torturing his fellow hostage
+- [Saving](deed:saving) the eight [child](CARDINAL:eight)ren is also implied by this option
+- It would mean refraining from saving himself and the children
+- This implies killing a person
+- It also means helping [Samuels](PERSON) family
 
 ## intent:deny
 - No
@@ -273,8 +371,48 @@
 - No, that was all
 - No, that was all
 - No, at least I do not know one
+- No other persons
+- No, not at all
+- No thats all
+- No, thats it
+- No
+- No, there are no other options
+- /deny
+- No, there is no name
+- No, thats all
+- No
+- no
+- Not at all
+- No, that was all
+- There is no other option
+- /deny
+- No, thats all
+- No thats all
+- No one I can think of
+- Not at all
+- No one else would be affected
+- That was the last option
+- /deny
+- Thats all
+- That was it
+- No, that was it
+- /deny
+- no
+- No one else is affected
+- No further options
+- /deny
+- That was all
+- /deny
+- No further actions
+- There are no other consequences.
+- I don't think so
+- No
+- There is no other possibility
 
 ## intent:deontology
+- /deontology
+- /deontology
+- /deontology
 - /deontology
 - /deontology
 
@@ -292,6 +430,11 @@
 - I don't know any name for them.
 - I don't know the exact amount.
 - I don't know the exact amount
+- I don't know any name
+- I do not know the name
+- That can not be told exactly
+- That is not exactly known
+- No, I have no idea
 
 ## intent:goodbye
 - okay see you later
@@ -385,6 +528,11 @@
 - Hi
 - hi
 - hi
+- Hi
+- hi
+- hi
+- hi
+- hey
 
 ## intent:moralquestion
 - Should you take action in killing a person if it can prevent the death of a larger number of people?
@@ -397,6 +545,17 @@
 - /moralstatus[{"moralstatus": "human"}](moralstatus:human)
 - /moralstatus[{"moralstatus": "human"}](moralstatus:human)
 - /moralstatus[{"moralstatus": "machine"}](moralstatus:machine)
+- /moralstatus[{"moralstatus": "human"}](moralstatus:human)
+- /moralstatus[{"moralstatus": "human"}](moralstatus:human)
+- /moralstatus[{"moralstatus": "human"}](moralstatus:human)
+- /moralstatus[{"moralstatus": "human"}](moralstatus:human)
+- /moralstatus[{"moralstatus": "human"}](moralstatus:human)
+- /moralstatus[{"moralstatus": "human"}](moralstatus:human)
+- /moralstatus[{"moralstatus": "human"}](moralstatus:human)
+- /moralstatus[{"moralstatus": "human"}](moralstatus:human)
+- /moralstatus[{"moralstatus": "human"}](moralstatus:human)
+- /moralstatus[{"moralstatus": "human"}](moralstatus:human)
+- /moralstatus[{"moralstatus": "human"}](moralstatus:human)
 - /moralstatus[{"moralstatus": "human"}](moralstatus:human)
 - /moralstatus[{"moralstatus": "human"}](moralstatus:human)
 
@@ -414,6 +573,11 @@
 - His name is [Mark](PERSON)
 - Call him [Achmed](PERSON)
 - His name is [Johannes](PERSON)
+- Her name is [Heather](GPE)
+- Call them "the threatened group".
+- Call them "the [eight](CARDINAL) children"
+- Call them "the terrorists".
+- Call him "Dad"
 
 ## intent:negative
 - That would be really bad for [Benjamin](PERSON)!
@@ -444,6 +608,9 @@
 - That would be quite negative
 - more negative of course
 - the effects would be very negative
+- [Propably](ORG) very negative
+- The effects would be more negative
+- negative
 
 ## intent:neutral
 - It would be ok, neither positive nor negative consequences
@@ -506,7 +673,17 @@
 - [](plural:unspecific_plural)Tanja could also take path B to [rescue](deed) the other group
 - She could take path B to [rescue](deed) the greater amount of people.
 - [Carla](PERSON) could also take path A [first](ORDINAL) and [rescue](deed) the [Hessians](NORP).
-- [Mark](ORG) could activate an emergency access hatch between the upper and lower sections of the ship using an emergency switch to get to the lower part with enough remaining oxygen
+- [Mark](PERSON) could activate an emergency access hatch between the upper and lower sections of the ship using an emergency switch to get to the lower part with enough remaining oxygen
+- He could [refuse to give the injured person](deed) medical aid, so that the remaining oxygen is enough for him and the other crewmembers
+- [Frank](PERSON:frank)[Frank](PERSON:frank) could also give medication to [Jörg](PERSON) and hope that the remaining oxygen will suffice
+- She could just [do nothing](deed), so that the trolley proceeds.
+- [Molly](ORG) could push [Nathan off the](LAW) bridge and onto the tracks below, where his large body will stop the trolley, causing his death.
+- It occurs to [Ken](PERSON) that he could [contaminate his medication](deed) by putting an untraceable poison in it that will [kill him](deed) before he gets a chance to infect others.
+- As [Ken](PERSON) is bound by doctor-patient confidentiality, he could choose to [remain silent](deed) and just let [Inga](PERSON) execute her plan.
+- [Tom](PERSON) is given the option to torture and [kill one](deed)[one](CARDINAL) of his fellow hostages whom he does not like.
+- He can refuse the offer to torture and [kill one](deed)[one](CARDINAL) of his colleagues.
+- Mary can, as asked by [Samuel](PERSON:samuel), go up to his fathers room in the hospital and smother his father with a pillow.
+- Mary could also refuse to help [Samuel](PERSON:samuel) and [refrain from killing](deed) his father.
 
 ## intent:positive
 - That would be positive for him
@@ -535,6 +712,10 @@
 - Definitely positive
 - that would be positive for them
 - more positive
+- they would be all positive
+- Definitely positive
+- It would be positive indeed
+- Positive in principle
 
 ## intent:quantity
 - [5](CARDINAL)
@@ -585,10 +766,49 @@
 - I'd say [5](CARDINAL)[5](CARDINAL) people
 - [10](CARDINAL)[10](CARDINAL)
 - Its just [one](CARDINAL)
+- [Three people](stakeholder:three people)[](CARDINAL:Three)
+- [8](CARDINAL)[8](CARDINAL)
+- I'd say [10](CARDINAL)[10](CARDINAL)
+- [9](CARDINAL)[9](CARDINAL)
+- Maybe [5](CARDINAL)[5](CARDINAL)
+- [10](CARDINAL)[10](CARDINAL)
+- Like [8](CARDINAL)[8](CARDINAL)
+- [10](CARDINAL)[10](CARDINAL)
+- [9](CARDINAL)[9](CARDINAL)
+- It is [only one](CARDINAL) person
+- Maybe 50 persons
+- I'd say [ten](CARDINAL)
+- Lets say [7](CARDINAL)[7](CARDINAL)
+- [8](CARDINAL)[8](CARDINAL)
+- I'd estimate it [80 percent](PERCENT)
+- Solid [9](CARDINAL)[9](CARDINAL)
+- It is [only one](CARDINAL)[only one](CARDINAL) person
+- [8](CARDINAL), as I said before
+- Its [only one](CARDINAL) person
+- Surely [10](CARDINAL)[10](CARDINAL)
+- [9](CARDINAL)[9](CARDINAL)
+- [10](CARDINAL)[10](CARDINAL)
+- [10](CARDINAL)[10](CARDINAL)
+- [10](CARDINAL)[10](CARDINAL)
+- [10](CARDINAL)[10](CARDINAL)
+- [1](CARDINAL)
+- Maybe [7](CARDINAL)[7](CARDINAL)
+- I think [90%](PERCENT)
+- [5](CARDINAL)[5](CARDINAL)
+- [80%](PERCENT)
+- Like [2](CARDINAL)
+- [75](CARDINAL)
+- [6](CARDINAL)
+- [6](CARDINAL) or so
 
 ## intent:stakeholder
+- [Four expedition agents](stakeholder) are trapped in a mine.
+- [Four other persons](stakeholder) are trapped in the mine.
+- [One of her crew members](stakeholder), whose legs have been crushed by a rock, will die without medical attention.
+- [Molly](PERSON) is on a footbridge over the tracks, in between the approaching trolley and the five workmen.
+- [Heather](PERSON) is part of a four-person mining expedition.
 - [Five people](stakeholder:five people)[](plural:specific_plural)Five people
-- [five](CARDINAL:5)five dogs
+- [five](CARDINAL:5)[five dogs](stakeholder)
 - [Five people](stakeholder:five people)
 - There are [five people](stakeholder)
 - [Five people](stakeholder:five people)
@@ -723,11 +943,29 @@
 - [](plural:singular)[](moralstatus:animal)There is [a dog](stakeholder) which is also involved in the situation
 - [](plural:unspecific_plural)[](moralstatus:human)If [Carla](PERSON) takes path A, she will reach a group of people who have to be rescued.
 - [](plural:unspecific_plural)[](moralstatus:human)There is [another group](stakeholder) of persons to be rescued. They can be reached taking path B.
-- [Mark](ORG)[](plural:singular)[](moralstatus:human)Mark is a crewperson on a marine-research submarine traveling underneath a large iceberg.
+- [Mark](PERSON)[](plural:singular)[](moralstatus:human)Mark is [a crewperson](stakeholder) on a marine-research submarine traveling underneath a large iceberg.
 - [](plural:unspecific_plural)[](moralstatus:human)There are more people in the upper section of the ship, where they all have not enough oxygen to survive for a longer time
-- [](plural:singular)A single crewmember is in the lower section where enough oxygen is remaining, but he is lying unconscious on the ground
-- [](plural:singular)There is a man on the tracks
-- [](plural:unspecific_plural)There is a robot who must look for trapped people after a natural catastrophe
+- [](plural:singular)[A single crewmember](stakeholder) is in the lower section where enough oxygen is remaining, but he is lying unconscious on the ground
+- [](plural:singular)There is [a man](stakeholder) on the tracks
+- [](plural:unspecific_plural)There is [a robot](stakeholder) who must look for trapped people after a natural catastrophe
+- [](plural:singular)There is [Heather](GPE), who is part of a mining expedition
+- [](plural:unspecific_plural)[](moralstatus:human)With [Frank](PERSON:frank)[Frank](PERSON:frank), there are [three](CARDINAL) other persons who are also part of the expedition
+- [One](CARDINAL)[](plural:singular)One of the crewmembers legs are crushed and he is severly injured
+- [Five workmen](stakeholder:five workmen)[Five](CARDINAL:5)[](plural:specific_plural)[](moralstatus:human)Five workmen are currently working on the tracks where a trolley is heading down towards them. If the trolley is not stopped somehow, they will be killed.
+- [](plural:singular)[](moralstatus:human)There is [Molly](PERSON), who is on a footbridge over the tracks, in between the approaching trolley and the [five](CARDINAL:5) workmen.
+- [](plural:singular)Next to [Molly](ORG) on this footbridge is a stranger who happens to be very large.
+- [First](ORDINAL)[](plural:singular)First there is [Ken](PERSON), who is a doctor
+- [](plural:unspecific_plural)[](moralstatus:human)Then there is [a patient](stakeholder), who is HIV positive and is about to receive a blood transfusion prior to being released from the hospital. The patient tells [Ken](PERSON) that he [ ](NORP)intents to infect as many people as possible with HIV after receiving his medicine.
+- [](plural:unspecific_plural)[](moralstatus:human)You can also assume a large group of people who would be affected if [Inga](GPE) carries out her plan to infect as many people as possible with HIV.
+- [Tom](PERSON)[](plural:unspecific_plural)Tom is part of a group of ecologists who live in a remote stretch of jungle.
+- [](plural:unspecific_plural)[](moralstatus:human)Part of the group of ecologists are also [8](CARDINAL) children.
+- [](plural:unspecific_plural)A group of paramilitary terrorists, who has taken the ecologists crew hostage
+- [One](CARDINAL) of the terrorists takes a liking to [Tom](PERSON). He informs [Tom](PERSON) that his leader intends to [kill him](deed) and the rest of the hostages [the following morning](TIME).
+- [](plural:singular)There is one hostage who is not liked by [Esther](PERSON) and she wants [Tom](PERSON) to torture and [kill](deed) this particular hostage as an act of good faith.
+- [](plural:singular)There is [Mary](PERSON) who is in a hospital lounge waiting to visit a sick friend.
+- [A](stakeholder:a)[](plural:singular)[](moralstatus:human)A young man sitting next to [Mary](PERSON) explains that his father is very ill and has a week to live at most, but his life insurance policy is about to expire at [midnight](TIME).
+- [Samuels](PERSON)[](plural:singular)Samuels family is in desperate need of the money the life insurance would give to them.
+- [Samuels](ORG)[](plural:singular)Samuels father who will die within [the next 7 days](DATE)[7](CARDINAL) days.
 
 ## intent:thanks
 - you helped a lot thank you
@@ -777,8 +1015,37 @@
 - /utilitarism
 - /utilitarism
 - /utilitarism
+- /utilitarism
+- /utilitarism
+- /utilitarism
+- /utilitarism
 
 ## intent:wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
 - /wrong
 - /wrong
 - /wrong
@@ -792,6 +1059,7 @@
 
 ## synonym:5
 - five
+- Five
 
 ## synonym:Achmed
 - g him
@@ -804,6 +1072,7 @@
 
 ## synonym:Frank
 - {"PERSON": "Frank"}
+- {"name": "Frank"}
 - frank
 
 ## synonym:Hans
@@ -812,6 +1081,9 @@
 
 ## synonym:Harald
 - {"stakeholder": "Harald"}
+
+## synonym:Inga
+- {"PERSON": "Inga"}
 
 ## synonym:Jones
 - jones
@@ -822,8 +1094,14 @@
 ## synonym:Katharina
 - {"PERSON": "Katharina"}
 
+## synonym:Ken
+- {"name": "Ken"}
+
 ## synonym:Mark
 - {"name": "Mark"}
+
+## synonym:Molly
+- {"name": "Molly"}
 
 ## synonym:Nathan
 - nathan
@@ -832,7 +1110,12 @@
 - {"PERSON": "Olga"}
 
 ## synonym:Patrick
+- {"name": "Patrick"}
 - patrick
+
+## synonym:Saxons
+-  lack 
+- lack
 
 ## synonym:Tanja
 - {"stakeholder":"Tanja"}
@@ -898,11 +1181,17 @@
 ## synonym:another person
 - Another person
 
+## synonym:eight
+- child
+
 ## synonym:five people
 - Five people
 
 ## synonym:five persons
 - Five persons
+
+## synonym:five workmen
+- Five workmen
 
 ## synonym:frank
 - Frank
@@ -928,6 +1217,12 @@
 ## synonym:samuel
 - Samuel
 
+## synonym:saving
+- Saving
+
+## synonym:saving the lives
+- Saving the lives
+
 ## synonym:singular
 - {"plural": "singular"}
 
@@ -943,10 +1238,12 @@
 
 ## synonym:the Palatines
 - The Palatines
+- {"PERSON": "the Palatines"}
 - the palatines
 
 ## synonym:the Rhinelanders
 - The Rhinelanders
+- {"PERSON": "the Rhinelanders"}
 - the rhinelanders
 
 ## synonym:the act of rescuing people
@@ -957,6 +1254,9 @@
 
 ## synonym:the five persons
 - The five persons
+
+## synonym:the five workmen
+- The five workmen
 
 ## synonym:the hessians
 - The Hessians
@@ -975,6 +1275,9 @@
 
 ## synonym:the person
 - The person
+
+## synonym:the saxons
+- The Saxons
 
 ## synonym:the swabians
 - The Swabians

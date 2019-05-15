@@ -1,84 +1,91 @@
 %YAML 1.1
 ---
 actions:
-- utter_ask_identified_name
-- utter_ask_quantity
-- action_choose_decider
-- action_intro
-- utter_ask_impact_negative
-- utter_ask_name_plural
-- utter_ask_universalizable
 - utter_next_option
-- utter_ask_moral_question
-- utter_ask_moral_status_weight
-- action_update_stakeholder
-- action_evaluation_deontology
-- action_create_deed
+- action_update_context
+- utter_ask_name_singular
 - utter_ask_options
-- utter_thanks
-- utter_ask_consequences
-- utter_got_everything
-- utter_next_consequence
 - action_create_consequence
-- utter_ask_inherent_evil
-- action_choose_affected_stakeholder
-- utter_confirm_stakeholders
-- utter_too_bad
-- utter_next_deed
+- utter_ask_consequences
+- utter_ask_moral_status_weight
+- utter_ask_quantity
 - action_update_option
 - utter_ask_impact_positive
-- utter_ask_impact
-- utter_intro
-- utter_ask_name_singular
-- utter_ask_stakeholders
-- action_update_context
-- utter_ask_deed
-- utter_confirm_decider
-- action_update_deed
-- utter_ask_guess_quantity
-- action_create_option
+- utter_next_consequence
+- utter_ask_name_plural
+- utter_next_method
+- utter_ask_consequence_definite
 - action_evaluation_utilitarism
 - utter_ask_identified_deed
-- utter_ask_impact_weight
+- action_update_deed
 - utter_next_stakeholder
+- utter_ask_deed
 - utter_ask_method
-- utter_next_method
-- utter_goodbye
-- action_create_stakeholder
+- utter_ask_moral_question
+- utter_ask_impact_weight
+- utter_ask_stakeholders
 - action_update_consequence
+- utter_ask_inherent_evil
+- utter_thanks
+- utter_ask_universalizable
+- utter_ask_impact_negative
+- utter_intro
+- utter_ask_consequence_probability
+- utter_too_bad
+- utter_next_deed
+- action_evaluation_deontology
+- action_create_option
 - utter_ask_moral_status
+- action_update_stakeholder
+- action_create_stakeholder
+- utter_got_everything
+- action_create_deed
+- utter_ask_impact
+- action_choose_affected_stakeholder
+- action_choose_decider
+- utter_goodbye
+- utter_ask_guess_quantity
+- action_intro
+- utter_ask_identified_name
+- utter_confirm_decider
+- utter_confirm_stakeholders
 entities:
-- sentiment
 - plural
-- ORG
-- CARDINAL
-- ORDINAL
-- stakeholder
-- deed
-- name
+- TIME
+- LAW
 - PERSON
-- moralstatus
-- NORP
-intents:
-- greeting
-- quantity
-- stakeholder
-- deny
-- moralstatus
-- name
-- option
-- consequence
-- affirm
-- wrong
 - deed
-- correct
-- decider
-- dontknow
-- moralquestion
+- DATE
+- stakeholder
+- moralstatus
+- sentiment
+- PERCENT
+- NORP
+- ORDINAL
+- ORG
+- GPE
+- CARDINAL
+- name
+intents:
+- quantity
+- deed
+- stakeholder
+- moralstatus
 - positive
 - negative
+- affirm
+- correct
+- greeting
+- consequence
+- decider
+- deny
+- wrong
+- name
+- option
 - utilitarism
+- dontknow
 - deontology
+- moralquestion
 - neutral
 - goodbye
 - thanks
@@ -115,6 +122,16 @@ slots:
     - neg
     - neu
 templates:
+  utter_ask_consequence_definite:
+  - buttons:
+    - payload: /correct
+      title: It's definitely going to happen
+    - payload: /wrong
+      title: It's not 100% sure
+    text: Is this consequence definitely going to happen? Or is there a possibility
+      that it will not occur?
+  utter_ask_consequence_probability:
+  - text: How high would you estimate the probability in percent?
   utter_ask_consequences:
   - text: For which of these persons would this decision have consequences?
   - text: For whom would this decision have consequences and what would they look
