@@ -27,7 +27,7 @@ clean:
 train-nlu:
 	docker run \
 		-v $(shell pwd):/app/project \
-		-v $(shell pwd)/../models/rasa_nlu:/app/models \
+		-v $(shell pwd)/models/rasa_nlu:/app/models \
 		-v $(shell pwd)/config:/app/config \
 		-v $(shell pwd)/components:/app/components \
 		-v $(shell pwd)/modules:/app/modules \
@@ -42,7 +42,7 @@ train-nlu:
 train-core:
 	docker run \
 		-v $(shell pwd):/app/project \
-		-v $(shell pwd)/../models/rasa_core:/app/models \
+		-v $(shell pwd)/models/rasa_core:/app/models \
 		-v $(shell pwd)/config:/app/config \
 		aroemelt/ethicbot:core \
 		run \
@@ -53,14 +53,14 @@ train-core:
 		-c config/policies.yml
 
 train-nlu-local:
-	python -m rasa_nlu.train -c config/nlu_config.yml --data data/nlu.md -o ../models --fixed_model_name nlu --project current
+	python -m rasa_nlu.train -c config/nlu_config.yml --data data/nlu.md -o models --fixed_model_name nlu --project current
 
 train-core-local:
-	python -m rasa_core.train -d domain.yml -s data/stories -o ../models/current/dialogue -c policies.yml
+	python -m rasa_core.train -d domain.yml -s data/stories -o models/current/dialogue -c policies.yml
 
 train-interactive:
-	python -m rasa_core.train interactive -o ../models/current/dialogue -d domain.yml -c config/policies.yml -s data/stories \
-  		--nlu ../models/current/nlu --endpoints config/endpoints_local.yml
+	python -m rasa_core.train interactive -o models/current/dialogue -d domain.yml -c config/policies.yml -s data/stories \
+  		--nlu models/current/nlu --endpoints config/endpoints_local.yml
 	
 action-server:
 	python -m rasa_core_sdk.endpoint --actions actions.actions

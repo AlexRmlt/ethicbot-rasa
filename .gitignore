@@ -1,4 +1,5 @@
 docker-services/
+models/
 
 playground.ipynb
 .ipynb_checkpoints/
