@@ -31,6 +31,7 @@
 - /affirm
 - /affirm
 - /affirm
+- /affirm
 
 ## intent:consequence
 - [Five persons](stakeholder:five persons) would get overrun and die
@@ -177,8 +178,17 @@
 - [Carla](PERSON:carla)[Carla](PERSON)[](sentiment:neg)Carla would die anyway
 - [](sentiment:neg)Viola would then get killed by the guard.
 - /consequence[{"PERSON": "Viola"}](PERSON:Viola)
+- [Inga](PERSON:inga)[](sentiment:pos)Inga could propably be saved from dying of her injuries
+- [Michelle](PERSON:michelle)[ would m](PERSON:Michelle)ost definitely bleed to death if she does not receive medical care immediately
+- [Roswitha](PERSON)[](sentiment:neg)Roswitha would most definitely die
+- [Michelle](PERSON)[](sentiment:neg)Michelle could possibly be saved from bleeding to death
 
 ## intent:correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
 - /correct
 - /correct
 - /correct
@@ -378,6 +388,7 @@
 - /decider[{"PERSON": "Doug"}](PERSON:Doug)
 - /decider[{"PERSON": "Carrie"}](PERSON:Carrie)
 - /decider[{"PERSON": "Inga"}](PERSON:Inga)
+- /decider[{"PERSON": "Inga"}](PERSON:Inga)
 
 ## intent:deed
 - [Lying](deed) to Katharina
@@ -425,6 +436,9 @@
 - Killing her own son
 - Saving an innocent persons life.
 - It would mean letting an innocent person get killed
+- [Saving her life](deed:saving her life)
+- [Ignoring Michelle](PERSON) could be a morally condemnable action as she needs also medical attention
+- [Saving the life](deed:saving the life) of [Michelle](PERSON)
 
 ## intent:deny
 - No
@@ -596,6 +610,12 @@
 - no there are not
 - No
 - Thats all
+- The person does not have a name
+- no thats all
+- No further actions
+- Not at all
+- thats all i can think of
+- None I can think of
 
 ## intent:deontology
 - /deontology
@@ -627,6 +647,10 @@
 - I don't know any name
 - I don't have a name for them
 - I don't know the name.
+- I don't know
+- I don't know it exactly
+- I have no idea
+- No, I just don't know it
 
 ## intent:goodbye
 - okay see you later
@@ -733,6 +757,7 @@
 - hi
 - hi
 - hi
+- hi
 
 ## intent:moralquestion
 - Should you take action in killing a person if it can prevent the death of a larger number of people?
@@ -745,6 +770,8 @@
 - /moralstatus[{"moralstatus": "human"}](moralstatus:human)
 - /moralstatus[{"moralstatus": "human"}](moralstatus:human)
 - /moralstatus[{"moralstatus": "machine"}](moralstatus:machine)
+- /moralstatus[{"moralstatus": "human"}](moralstatus:human)
+- /moralstatus[{"moralstatus": "human"}](moralstatus:human)
 - /moralstatus[{"moralstatus": "human"}](moralstatus:human)
 - /moralstatus[{"moralstatus": "human"}](moralstatus:human)
 - /moralstatus[{"moralstatus": "human"}](moralstatus:human)
@@ -804,6 +831,7 @@
 - Call him [Herbert](PERSON)
 - Her name is [Carrie](PERSON)
 - Call this person [Frank](PERSON:frank)[Frank](PERSON:frank)
+- Call him Andreas
 
 ## intent:negative
 - That would be really bad for [Benjamin](PERSON)!
@@ -924,6 +952,8 @@
 - She could also just [do nothing](deed) and let the fumes go to the room with [four people](stakeholder)[four](CARDINAL) people.
 - She could pull the chair from underneath her son and therefore cause his death
 - [Inga](PERSON:inga) could also refuse to pull the chair from her child
+- She could immediately turn to her wife and try to save her life.
+- She could also look after [Michelle](PERSON) [first](ORDINAL) and try to save her life.
 
 ## intent:positive
 - That would be positive for him
@@ -1103,6 +1133,12 @@
 - [7](CARDINAL)[7](CARDINAL)
 - [10](CARDINAL)[10](CARDINAL)
 - [10](CARDINAL)[10](CARDINAL)
+- [8](CARDINAL)[8](CARDINAL)
+- Maybe she has a [20%](PERCENT) chance
+- [10](CARDINAL)[10](CARDINAL)
+- Might be a [90%](PERCENT:90 %)[90%](PERCENT) probability
+- [10](CARDINAL)[10](CARDINAL)
+- [8](CARDINAL)[8](CARDINAL)
 
 ## intent:stakeholder
 - [Four expedition agents](stakeholder) are trapped in a mine.
@@ -1294,6 +1330,9 @@
 - [](plural:singular)There is an inmate in a concentration camp.
 - [](plural:singular)There is [Inga](PERSON:inga)[Inga](GPE)'s son who is about to be hung by a sadistic guard for trying to escape.
 - [](plural:singular)There is some other innocent inmate, who will be killed by the guard if [Inga](GPE) does not pull the chair from underneath [Carla](PERSON:carla)[Carla](PERSON).
+- [](plural:singular)There is an emergency worker that has just been called to the scene of an accident.
+- [](plural:singular)When arriving she sees that the crashed car belongs to her wife who is trapped inside
+- [](plural:singular)[](moralstatus:human)Trapped with her in the car there is [a man](stakeholder) who is obviously her lover with whom she's been having an affair.
 
 ## intent:thanks
 - you helped a lot thank you
@@ -1349,6 +1388,12 @@
 - /utilitarism
 
 ## intent:wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
 - /wrong
 - /wrong
 - /wrong
@@ -1493,8 +1538,8 @@
 ## synonym:Molly
 - {"PERSON": "Molly"}
 -  coul
-- {"name": "Molly"}
 - coul
+- {"name": "Molly"}
 
 ## synonym:Nathan
 - nathan
@@ -1518,6 +1563,9 @@
 ## synonym:Uwe
 - {"PERSON": "Uwe"}
 - uwe
+
+## synonym:Viola
+- {"PERSON": "Viola"}
 
 ## synonym:We
 - we
@@ -1584,6 +1632,9 @@
 ## synonym:another person
 - Another person
 
+## synonym:carla
+- Carla
+
 ## synonym:eight
 - child
 
@@ -1615,6 +1666,9 @@
 
 ## synonym:human
 - {"moralstatus": "human"}
+
+## synonym:inga
+- Inga
 
 ## synonym:less than 2 years old
 - han 2 years old.

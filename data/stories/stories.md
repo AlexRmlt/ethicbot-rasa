@@ -2649,3 +2649,202 @@
 * thanks
     - utter_thanks
 
+## Generated Story 7740751080933251549
+* greeting
+    - action_intro
+* stakeholder{"plural": "singular"}
+    - slot{"plural": "singular"}
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 1}
+    - slot{"action_return": true}
+    - utter_ask_name_singular
+* dontknow
+    - action_update_stakeholder
+    - slot{"PERSON": "Inga"}
+    - slot{"action_return": true}
+    - utter_ask_moral_status
+* moralstatus{"moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* stakeholder{"plural": "singular"}
+    - slot{"plural": "singular"}
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 2}
+    - slot{"action_return": true}
+    - utter_ask_name_singular
+* deny
+    - action_update_stakeholder
+    - slot{"PERSON": "Roswitha"}
+    - slot{"action_return": true}
+    - utter_ask_moral_status
+* moralstatus{"moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* stakeholder{"stakeholder": "a man", "plural": "singular", "moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - slot{"plural": "singular"}
+    - action_create_stakeholder
+    - slot{"amount_stakeholders": 3}
+    - slot{"action_return": true}
+    - utter_ask_name_singular
+* name
+    - action_update_stakeholder
+    - slot{"PERSON": "Michelle"}
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* deny
+    - utter_confirm_stakeholders
+    - action_choose_decider
+* decider{"PERSON": "Inga"}
+    - slot{"PERSON": "Inga"}
+    - action_update_stakeholder
+    - slot{"decider": "Inga"}
+    - slot{"action_return": true}
+    - utter_ask_options
+* option
+    - action_create_option
+    - slot{"deed": null}
+    - slot{"option": 4}
+    - slot{"action_return": true}
+    - utter_ask_deed
+* deed{"deed": "saving her life"}
+    - slot{"deed": "saving her life"}
+    - action_create_deed
+    - slot{"action_return": true}
+    - utter_ask_universalizable
+* correct
+    - action_update_deed
+    - slot{"deed": null}
+    - slot{"action_return": true}
+    - utter_next_deed
+* deed{"PERSON": "Ignoring Michelle"}
+    - slot{"PERSON": "Ignoring Michelle"}
+    - action_create_deed
+    - slot{"deed": "Ignoring Michelle could be a morally condemnable action as she needs also medical attention"}
+    - slot{"action_return": true}
+    - utter_ask_universalizable
+* wrong
+    - action_update_deed
+    - slot{"action_return": true}
+    - utter_ask_inherent_evil
+* affirm
+    - action_update_deed
+    - slot{"deed": null}
+    - slot{"action_return": true}
+    - utter_next_deed
+* deny
+    - utter_ask_consequences
+* consequence{"PERSON": "inga", "sentiment": "pos"}
+    - slot{"PERSON": "inga"}
+    - slot{"sentiment": "pos"}
+    - action_create_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact_positive
+* correct
+    - utter_ask_impact_weight
+* quantity{"CARDINAL": "8"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_consequence_definite
+* wrong
+    - utter_ask_consequence_probability
+* dontknow
+    - utter_ask_guess_quantity
+* quantity{"PERCENT": "20%"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_next_consequence
+* consequence{"PERSON": "Michelle"}
+    - slot{"PERSON": "Michelle"}
+    - action_create_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact_positive
+* wrong
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact_weight
+* quantity{"CARDINAL": "10"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_consequence_definite
+* wrong
+    - utter_ask_consequence_probability
+* quantity{"PERCENT": "90%"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_next_consequence
+* deny
+    - utter_next_option
+* option{"PERSON": "Michelle", "ORDINAL": "first"}
+    - slot{"PERSON": "Michelle"}
+    - action_create_option
+    - slot{"deed": null}
+    - slot{"option": 9}
+    - slot{"action_return": true}
+    - utter_ask_deed
+* deed{"deed": "saving the life", "PERSON": "Michelle"}
+    - slot{"PERSON": "Michelle"}
+    - slot{"deed": "saving the life"}
+    - action_create_deed
+    - slot{"action_return": true}
+    - utter_ask_universalizable
+* correct
+    - action_update_deed
+    - slot{"deed": null}
+    - slot{"action_return": true}
+    - utter_next_deed
+* deny
+    - utter_ask_consequences
+* consequence{"PERSON": "Roswitha", "sentiment": "neg"}
+    - slot{"PERSON": "Roswitha"}
+    - slot{"sentiment": "neg"}
+    - action_create_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact_negative
+* correct
+    - utter_ask_impact_weight
+* quantity{"CARDINAL": "10"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_consequence_definite
+* correct
+    - utter_next_consequence
+* consequence{"PERSON": "Michelle", "sentiment": "neg"}
+    - slot{"PERSON": "Michelle"}
+    - slot{"sentiment": "neg"}
+    - action_create_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact_negative
+* wrong
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact_weight
+* quantity{"CARDINAL": "8"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_consequence_definite
+* wrong
+    - utter_ask_consequence_probability
+* dontknow
+    - utter_ask_guess_quantity
+* dontknow
+    - utter_too_bad
+    - utter_next_consequence
+* deny
+    - utter_next_option
+* deny
+    - utter_got_everything
+    - utter_ask_method
+* deontology
+    - action_evaluation_deontology
+    - utter_next_method
+* deny
+    - utter_goodbye
+* thanks
+    - utter_thanks
