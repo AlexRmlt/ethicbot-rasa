@@ -26,6 +26,11 @@
 - /affirm
 - /affirm
 - /affirm
+- /affirm
+- /affirm
+- /affirm
+- /affirm
+- /affirm
 
 ## intent:consequence
 - [Five persons](stakeholder:five persons) would get overrun and die
@@ -151,8 +156,54 @@
 - [Heather](PERSON:heather)[Heather](ORG)[](sentiment:neu)Heather would survive too
 - [Herbert](PERSON)[](sentiment:neu)Herbert would survive due to taking the medicine
 - [Heather](PERSON:heather)[Heather](ORG)[](sentiment:neg)Heather and the others would die from having not enough oxygen
+- [The Rhinelanders](PERSON:the Rhinelanders)[](sentiment:neg)The Rhinelanders would drown in the ocean.
+- [](sentiment:neu)The [Hessians](NORP:hessians)[Hessians](NORP) would propably survive in the lifeboat.
+- /consequence[{"PERSON": "the Hessians"}](PERSON:the Hessians)
+- [Doug](PERSON)[](sentiment:neu)Doug would also survive
+- [The Rhinelanders](PERSON:the Rhinelanders)[](sentiment:neu)The Rhinelanders could enter the lifeboat and would eventually survive.
+- [Doug](PERSON)[](sentiment:neg)Doug would also get in danger of drowning in the ocean as the overloaded boat is sinking.
+- [](sentiment:neg)The [Hessians](NORP:hessians)[Hessians](NORP) would get in danger as the boat is overloaded and might sink.
+- /consequence[{"PERSON": "the Hessians"}](PERSON:the Hessians)
+- [Frank](PERSON:frank)[Frank](PERSON:frank)[](sentiment:neg)Frank would die as the fumes will enter the room and [kill him](deed).
+- [](sentiment:neu)The [Hessians](NORP:hessians)[Hessians](NORP:hessians) would live
+- /consequence[{"PERSON": "the Hessians"}](PERSON:the Hessians)
+- [](sentiment:neg)The [Hessians](NORP:hessians)[Hessians](NORP:hessians) would die from the fumes entering their room.
+- /consequence[{"PERSON": "the Hessians"}](PERSON:the Hessians)
+- [Frank](PERSON:frank)[Frank](PERSON:frank)[](sentiment:neu)Frank would survive
+- [Carla](PERSON:carla)[Carla](PERSON)[](sentiment:neg)Carla would be hung and die
+- [Inga](PERSON:inga)[Inga](GPE)[](sentiment:neg)Inga would have to live with the fact that she has killed her own child which would make her suffer greatly
+- [](sentiment:pos)Viola would not get killed by the sadistic guard
+- /consequence[{"PERSON": "Viola"}](PERSON:Viola)
+- [Carla](PERSON:carla)[Carla](PERSON)[](sentiment:neg)Carla would die anyway
+- [](sentiment:neg)Viola would then get killed by the guard.
+- /consequence[{"PERSON": "Viola"}](PERSON:Viola)
 
 ## intent:correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
 - /correct
 - /correct
 - /correct
@@ -314,16 +365,19 @@
 - There is a robot who must decide to take either path A or path B to attempt to rescue persons after a natural disaster
 - [](plural:unspecific_plural)A robot must decide to take either [Path A or Path B](ORG) to attempt to rescue persons after a natural disaster.
 - [](plural:unspecific_plural)A robot must decide to take either [Path A or Path B](ORG) to attempt to rescue persons after a natural disaster.
-- /decider[{"name": "Mark"}](name:Mark)
-- /decider[{"name": "Frank"}](name:Frank)
-- /decider[{"name": "Molly"}](name:Molly)
-- /decider[{"name": "Ken"}](name:Ken)
-- /decider[{"name": "Patrick"}](name:Patrick)
-- /decider[{"name": "Mary"}](name:Mary)
-- /decider[{"name": "Jane"}](name:Jane)
-- /decider[{"name": "mark"}](name:mark)
-- /decider[{"name": "molly"}](name:molly)
-- /decider[{"name": "heather"}](name:heather)
+- /decider[{"PERSON": "Mark"}](PERSON:Mark)
+- /decider[{"PERSON": "Frank"}](PERSON:Frank)
+- /decider[{"PERSON": "Molly"}](PERSON:Molly)
+- /decider[{"PERSON": "Ken"}](PERSON:Ken)
+- /decider[{"PERSON": "Patrick"}](PERSON:Patrick)
+- /decider[{"PERSON": "Mary"}](PERSON:Mary)
+- /decider[{"PERSON": "Jane"}](PERSON:Jane)
+- /decider[{"PERSON": "mark"}](PERSON:mark)
+- /decider[{"PERSON": "molly"}](PERSON:molly)
+- /decider[{"PERSON": "heather"}](PERSON:heather)
+- /decider[{"PERSON": "Doug"}](PERSON:Doug)
+- /decider[{"PERSON": "Carrie"}](PERSON:Carrie)
+- /decider[{"PERSON": "Inga"}](PERSON:Inga)
 
 ## intent:deed
 - [Lying](deed) to Katharina
@@ -363,6 +417,14 @@
 - Letting the crewmember die is for sure an action of moral relevance.
 - [Saving](deed:saving) the rest of her crews lives
 - [Saving the life](deed:saving the life) of her fellow crewmember
+- Also [saving his life](deed) and the lives of the other passengers.
+- [Saving](deed:saving) the old peoples lives.
+- It also implies bringing the lives of all passengers in the lifeboat in danger.
+- It means avoiding the death of the [four](CARDINAL) patients.
+- It also means killing the single person in the other room.
+- Killing her own son
+- Saving an innocent persons life.
+- It would mean letting an innocent person get killed
 
 ## intent:deny
 - No
@@ -520,6 +582,20 @@
 - no thats all
 - /deny
 - no i don't think so
+- That was it
+- No further actions
+- No
+- no
+- No
+- No thats all
+- there is no next one
+- Thats all for the consequences
+- /deny
+- thats all
+- Thats all for now
+- no there are not
+- No
+- Thats all
 
 ## intent:deontology
 - /deontology
@@ -549,6 +625,8 @@
 - No, I have no idea
 - I don't know it exactly
 - I don't know any name
+- I don't have a name for them
+- I don't know the name.
 
 ## intent:goodbye
 - okay see you later
@@ -652,6 +730,9 @@
 - hi
 - hi
 - hi
+- hi
+- hi
+- hi
 
 ## intent:moralquestion
 - Should you take action in killing a person if it can prevent the death of a larger number of people?
@@ -664,6 +745,14 @@
 - /moralstatus[{"moralstatus": "human"}](moralstatus:human)
 - /moralstatus[{"moralstatus": "human"}](moralstatus:human)
 - /moralstatus[{"moralstatus": "machine"}](moralstatus:machine)
+- /moralstatus[{"moralstatus": "human"}](moralstatus:human)
+- /moralstatus[{"moralstatus": "human"}](moralstatus:human)
+- /moralstatus[{"moralstatus": "human"}](moralstatus:human)
+- /moralstatus[{"moralstatus": "human"}](moralstatus:human)
+- /moralstatus[{"moralstatus": "human"}](moralstatus:human)
+- /moralstatus[{"moralstatus": "human"}](moralstatus:human)
+- /moralstatus[{"moralstatus": "human"}](moralstatus:human)
+- /moralstatus[{"moralstatus": "human"}](moralstatus:human)
 - /moralstatus[{"moralstatus": "human"}](moralstatus:human)
 - /moralstatus[{"moralstatus": "human"}](moralstatus:human)
 - /moralstatus[{"moralstatus": "human"}](moralstatus:human)
@@ -701,7 +790,7 @@
 - His name is [Mark](PERSON)
 - Call him [Achmed](PERSON)
 - His name is [Johannes](PERSON)
-- Her name is [Heather](GPE)
+- Her name is [Heather](PERSON)
 - Call them "the threatened group".
 - Call them "the [eight](CARDINAL) children"
 - Call them "the terrorists".
@@ -713,6 +802,8 @@
 - Use the term "workmen"
 - Call them "the workmen"
 - Call him [Herbert](PERSON)
+- Her name is [Carrie](PERSON)
+- Call this person [Frank](PERSON:frank)[Frank](PERSON:frank)
 
 ## intent:negative
 - That would be really bad for [Benjamin](PERSON)!
@@ -827,6 +918,12 @@
 - She could [refrain from pushing](deed) [Katharina](LOC) on the tracks and let the runaway trolley pass.
 - She could [refuse to](deed) give medical aid to the injured crewmember because there is not enough oxygen for all of them.
 - [Heather](ORG) could also give the medicine to [Herbert](PERSON) saving his life
+- Doug could [refuse](deed) to throw the rope in order to save himself and the other lifeboat passengers.
+- He could throw a rope for the old people to help them get on board of the lifeboat.
+- She can hit a switch that will cause the fumes to bypass the room containing the [four](CARDINAL) patients.
+- She could also just [do nothing](deed) and let the fumes go to the room with [four people](stakeholder)[four](CARDINAL) people.
+- She could pull the chair from underneath her son and therefore cause his death
+- [Inga](PERSON:inga) could also refuse to pull the chair from her child
 
 ## intent:positive
 - That would be positive for him
@@ -867,6 +964,11 @@
 - more positive
 - positive
 - positive
+- That would be positive for them
+- ABsolutely positive
+- more positive
+- More positive
+- positive of course
 
 ## intent:quantity
 - [5](CARDINAL)
@@ -980,6 +1082,26 @@
 - [6](CARDINAL)[6](CARDINAL)
 - [6](CARDINAL)[6](CARDINAL)
 - [6](CARDINAL)[6](CARDINAL)
+- [10](CARDINAL)[10](CARDINAL)
+- [About 20](CARDINAL) I'd guess
+- [10](CARDINAL)[10](CARDINAL)
+- [90](PERCENT)[90](CARDINAL)
+- [8](CARDINAL)[8](CARDINAL)
+- They might have a 50% chance to survi[ve](PERCENT:50%)
+- [7](CARDINAL)[7](CARDINAL)
+- I'd estimate it [50%](PERCENT)
+- [9](CARDINAL)[9](CARDINAL)
+- Maybe [30%](PERCENT)
+- [6](CARDINAL)[6](CARDINAL)
+- Maybe [80%](PERCENT:80 %)[80%](PERCENT:80 %)
+- [10](CARDINAL)[10](CARDINAL)
+- [8](CARDINAL)[8](CARDINAL)
+- [10](CARDINAL)[10](CARDINAL)
+- [7](CARDINAL)[7](CARDINAL)
+- [10](CARDINAL)[10](CARDINAL)
+- [9](CARDINAL)[9](CARDINAL)
+- [7](CARDINAL)[7](CARDINAL)
+- [10](CARDINAL)[10](CARDINAL)
 - [10](CARDINAL)[10](CARDINAL)
 
 ## intent:stakeholder
@@ -1163,6 +1285,15 @@
 - [Heather](PERSON:heather)[Heather](ORG)[](plural:singular)[](moralstatus:human)Heather is part of a [four](CARDINAL)-person mining expedition.
 - [](plural:singular)With her there are [two](CARDINAL) other crewmembers trapped in a cave-in of a mine.
 - [One](CARDINAL:one)[One](CARDINAL)[](plural:singular)One of the crewmembers has crushed legs from a rock that fell onto them and will die if he does not receive medical attention.
+- [Doug](PERSON)[](plural:singular)Doug is on a cruise ship when there is a fire on board, and the ship has to be abandoned.
+- [](plural:unspecific_plural)[](moralstatus:human)The lifeboats are carrying many more people than they were designed to carry and they are sitting dangerously low in the water.
+- [A group of old people](stakeholder:a group of old people) are in the water and ask Doug to throw them a rope so[ the](PERSON:Doug)y can come aboard the lifeboat.
+- [Carrie](ORG)[](plural:singular)Carrie is a doctor working in a hospital.
+- [Four of her patients](stakeholder:four of her patients)[Four](CARDINAL)[](plural:specific_plural)Four of her patients are in a certain room of the hospital. There are deadly fumes rising up through the hospital’s ventilation system that will [kill the four](deed)[four](CARDINAL) if she does nothing.
+- [](plural:singular)In another room there is [one](CARDINAL) of her patients.
+- [](plural:singular)There is an inmate in a concentration camp.
+- [](plural:singular)There is [Inga](PERSON:inga)[Inga](GPE)'s son who is about to be hung by a sadistic guard for trying to escape.
+- [](plural:singular)There is some other innocent inmate, who will be killed by the guard if [Inga](GPE) does not pull the chair from underneath [Carla](PERSON:carla)[Carla](PERSON).
 
 ## intent:thanks
 - you helped a lot thank you
@@ -1268,10 +1399,27 @@
 - /wrong
 - /wrong
 - /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
 
 ## synonym:5
 - five
 - Five
+
+## synonym:50%
+- ve
 
 ## synonym:80 %
 - 80%
@@ -1279,8 +1427,16 @@
 ## synonym:Achmed
 - g him
 
+## synonym:Carrie
+- {"PERSON": "Carrie"}
+
 ## synonym:Daniel
 - {"PERSON": "Daniel"}
+
+## synonym:Doug
+- {"PERSON": "Doug"}
+-  the
+- {"name": "Doug"}
 
 ## synonym:Esther
 - {"PERSON": "Esther"}
@@ -1305,6 +1461,7 @@
 - {"PERSON": "Inga"}
 
 ## synonym:Jane
+- {"PERSON": "Jane"}
 - {"name": "Jane"}
 
 ## synonym:Jones
@@ -1312,27 +1469,32 @@
 
 ## synonym:Jörg
 -  bec
--  the
-- bec
 - the
+- bec
 - jörg
 
 ## synonym:Katharina
 - {"PERSON": "Katharina"}
 - from the 
+- from the
 
 ## synonym:Ken
+- {"PERSON": "Ken"}
 - {"name": "Ken"}
 
 ## synonym:Mark
+- {"PERSON": "Mark"}
 - {"name": "Mark"}
 
 ## synonym:Mary
+- {"PERSON": "Mary"}
 - {"name": "Mary"}
 
 ## synonym:Molly
-- {"name": "Molly"}
+- {"PERSON": "Molly"}
 -  coul
+- {"name": "Molly"}
+- coul
 
 ## synonym:Nathan
 - nathan
@@ -1341,6 +1503,7 @@
 - {"PERSON": "Olga"}
 
 ## synonym:Patrick
+- {"PERSON": "Patrick"}
 - {"name": "Patrick"}
 - patrick
 
@@ -1374,6 +1537,9 @@
 
 ## synonym:a group
 - A group
+
+## synonym:a group of old people
+- A group of old people
 
 ## synonym:a group of people
 - A group of people
@@ -1430,11 +1596,22 @@
 ## synonym:five workmen
 - Five workmen
 
+## synonym:four of her patients
+- Four of her patients
+
 ## synonym:frank
 - Frank
 
 ## synonym:greta
 - Greta
+
+## synonym:heather
+- Heather
+- {"PERSON": "heather"}
+- {"name": "heather"}
+
+## synonym:hessians
+- Hessians
 
 ## synonym:human
 - {"moralstatus": "human"}
@@ -1450,11 +1627,16 @@
 
 ## synonym:mark
 - Mark
+- {"PERSON": "mark"}
 - {"name": "mark"}
 
 ## synonym:molly
-- {"name": "molly"}
+- {"PERSON": "molly"}
 - Molly
+- {"name": "molly"}
+
+## synonym:one
+- One
 
 ## synonym:one other person
 - One other person
@@ -1471,6 +1653,9 @@
 ## synonym:saving
 - Saving
 
+## synonym:saving the life
+- Saving the life
+
 ## synonym:saving the lives
 - Saving the lives
 
@@ -1486,6 +1671,9 @@
 ## synonym:the Bavarians
 - The Bavarians
 - The bavarians
+
+## synonym:the Hessians
+- {"PERSON": "the Hessians"}
 
 ## synonym:the Palatines
 - The Palatines
@@ -1541,3 +1729,6 @@
 
 ## synonym:we
 - We
+
+## synonym:zoe
+- Zoe

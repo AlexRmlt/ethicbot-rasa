@@ -177,7 +177,7 @@ class UpdateStakeholder(Action):
 			# Intent: decider
 			if (tracker.latest_message['intent'].get('name') == 'decider'):
 				# In this case, the stakeholder to be updated comes with the button payload
-				sh = mind.get_stakeholder_by_name(tracker.sender_id, next(tracker.get_latest_entity_values('name'), None))
+				sh = mind.get_stakeholder_by_name(tracker.sender_id, next(tracker.get_latest_entity_values('PERSON'), None))
 				sh['decider'] = True		
 				events.append(SlotSet('decider', sh['name']))
 				mind.memorize(tracker.sender_id, sh)
@@ -624,7 +624,7 @@ class ChooseDecider(Action):
 		buttons = []
 
 		for sh in mind.get_stakeholders(tracker.sender_id):
-			buttons.append({ 'title': sh['name'], 'payload': '/decider{"name": "' + sh['name'] + '"}'})
+			buttons.append({ 'title': sh['name'], 'payload': '/decider{"PERSON": "' + sh['name'] + '"}'})
 
 		buttons.append({ "title": "Somebody else", "payload": '/decider{"plural": "' + const.SINGULAR + '"}' })
 		dispatcher.utter_button_message(message, buttons)
