@@ -2848,3 +2848,192 @@
     - utter_goodbye
 * thanks
     - utter_thanks
+    
+## Generated Story 1978581040960796565
+* greeting
+    - action_intro
+* stakeholder{"plural": "singular", "moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - slot{"plural": "singular"}
+    - action_create_stakeholder
+    - slot{"amount_stakeholders": 1}
+    - slot{"action_return": true}
+    - utter_ask_name_singular
+* name{"PERSON": "mark"}
+    - slot{"PERSON": "mark"}
+    - action_update_stakeholder
+    - slot{"PERSON": "mark"}
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* stakeholder{"PERSON": "mark", "plural": "singular"}
+    - slot{"PERSON": "mark"}
+    - slot{"plural": "singular"}
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 2}
+    - slot{"action_return": true}
+    - utter_ask_identified_name
+* wrong
+    - action_update_stakeholder
+    - slot{"PERSON": "Viola"}
+    - slot{"action_return": true}
+    - utter_ask_moral_status
+* moralstatus{"moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* stakeholder{"PERSON": "mark", "ORG": "mark", "plural": "singular"}
+    - slot{"PERSON": "mark"}
+    - slot{"plural": "singular"}
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 3}
+    - slot{"action_return": true}
+    - utter_ask_identified_name
+* wrong
+    - action_update_stakeholder
+    - slot{"PERSON": "Zoe"}
+    - slot{"action_return": true}
+    - utter_ask_moral_status
+* moralstatus{"moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* deny
+    - utter_confirm_stakeholders
+    - action_choose_decider
+* decider{"PERSON": "mark"}
+    - slot{"PERSON": "mark"}
+    - action_update_stakeholder
+    - slot{"decider": "mark"}
+    - slot{"action_return": true}
+    - utter_ask_options
+* option{"deed": "tell his friend"}
+    - slot{"deed": "tell his friend"}
+    - action_create_option
+    - slot{"deed": "tell his friend"}
+    - slot{"option": 4}
+    - slot{"action_return": true}
+    - utter_ask_identified_deed
+* correct
+    - action_create_deed
+    - slot{"action_return": true}
+    - utter_ask_universalizable
+* wrong
+    - action_update_deed
+    - slot{"action_return": true}
+    - utter_ask_inherent_evil
+* deny
+    - action_update_deed
+    - slot{"deed": null}
+    - slot{"action_return": true}
+    - utter_next_deed
+* deed
+    - action_create_deed
+    - slot{"deed": "Violating the companies policy of information security"}
+    - slot{"action_return": true}
+    - utter_ask_universalizable
+* wrong
+    - action_update_deed
+    - slot{"action_return": true}
+    - utter_ask_inherent_evil
+* affirm
+    - action_update_deed
+    - slot{"deed": null}
+    - slot{"action_return": true}
+    - utter_next_deed
+* deny
+    - utter_ask_consequences
+* consequence{"PERSON": "mark"}
+    - slot{"PERSON": "mark"}
+    - action_create_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact
+* negative
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact_weight
+* quantity{"CARDINAL": "5"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_consequence_definite
+* wrong
+    - utter_ask_consequence_probability
+* quantity{"PERCENT": "95 percent"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_next_consequence
+* consequence{"sentiment": "neu"}
+    - slot{"sentiment": "neu"}
+    - action_create_consequence
+    - slot{"PERSON": null}
+    - slot{"action_return": false}
+    - action_choose_affected_stakeholder
+* consequence{"PERSON": "Viola"}
+    - slot{"PERSON": "Viola"}
+    - action_create_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact
+* negative
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact_weight
+* quantity{"CARDINAL": "4"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_consequence_definite
+* correct
+    - utter_next_consequence
+* consequence{"PERSON": "zoe"}
+    - slot{"PERSON": "zoe"}
+    - action_create_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact
+* neutral
+    - utter_next_consequence
+* deny
+    - utter_next_option
+* option{"PERSON": "mark", "ORG": "mark"}
+    - slot{"PERSON": "mark"}
+    - action_create_option
+    - slot{"deed": null}
+    - slot{"option": 10}
+    - slot{"action_return": true}
+    - utter_ask_deed
+* deed
+    - action_create_deed
+    - slot{"deed": "Complying to the companies laws"}
+    - slot{"action_return": true}
+    - utter_ask_universalizable
+* correct
+    - action_update_deed
+    - slot{"deed": null}
+    - slot{"action_return": true}
+    - utter_next_deed
+* deed
+    - action_create_deed
+    - slot{"deed": "Hiding information from a good friend"}
+    - slot{"action_return": true}
+    - utter_ask_universalizable
+* wrong
+    - action_update_deed
+    - slot{"action_return": true}
+    - utter_ask_inherent_evil
+* affirm
+    - action_update_deed
+    - slot{"deed": null}
+    - slot{"action_return": true}
+    - utter_next_deed
+* deny
+    - utter_ask_consequences
+* deny
+    - utter_next_option
+* deny
+    - utter_got_everything
+    - utter_ask_method
+* utilitarism
+    - action_evaluation_utilitarism
+    - utter_next_method
+

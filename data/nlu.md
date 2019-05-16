@@ -16,7 +16,9 @@
 - /affirm
 - /affirm
 - /affirm
-- /affirm#
+- /affirm
+- /affirm
+- /affirm
 - /affirm
 - /affirm
 - /affirm
@@ -182,8 +184,15 @@
 - [Michelle](PERSON:michelle)[ would m](PERSON:Michelle)ost definitely bleed to death if she does not receive medical care immediately
 - [Roswitha](PERSON)[](sentiment:neg)Roswitha would most definitely die
 - [Michelle](PERSON)[](sentiment:neg)Michelle could possibly be saved from bleeding to death
+- [Mark](PERSON:mark)[ wou](PERSON:mark)ld very likely get fired for revealing information from a staff email.
+- [](sentiment:neu)Viola's affair would be discovered by her husband and she'd propably get in big trouble
+- /consequence[{"PERSON": "Viola"}](PERSON:Viola)
+- [Zoe](PERSON:zoe) would know about his wife's affair.
 
 ## intent:correct
+- /correct
+- /correct
+- /correct
 - /correct
 - /correct
 - /correct
@@ -389,6 +398,7 @@
 - /decider[{"PERSON": "Carrie"}](PERSON:Carrie)
 - /decider[{"PERSON": "Inga"}](PERSON:Inga)
 - /decider[{"PERSON": "Inga"}](PERSON:Inga)
+- /decider[{"PERSON": "mark"}](PERSON:mark)
 
 ## intent:deed
 - [Lying](deed) to Katharina
@@ -439,6 +449,9 @@
 - [Saving her life](deed:saving her life)
 - [Ignoring Michelle](PERSON) could be a morally condemnable action as she needs also medical attention
 - [Saving the life](deed:saving the life) of [Michelle](PERSON)
+- Violating the companies policy of information security
+- Complying to the companies laws
+- Hiding information from a good friend
 
 ## intent:deny
 - No
@@ -616,6 +629,13 @@
 - Not at all
 - thats all i can think of
 - None I can think of
+- These are all involved persons
+- /deny
+- No further actions I can think of
+- I don't think so
+- Thats all for now
+- In this case there would not arise any consequences
+- That were all possible options
 
 ## intent:deontology
 - /deontology
@@ -758,6 +778,7 @@
 - hi
 - hi
 - hi
+- hi
 
 ## intent:moralquestion
 - Should you take action in killing a person if it can prevent the death of a larger number of people?
@@ -770,6 +791,8 @@
 - /moralstatus[{"moralstatus": "human"}](moralstatus:human)
 - /moralstatus[{"moralstatus": "human"}](moralstatus:human)
 - /moralstatus[{"moralstatus": "machine"}](moralstatus:machine)
+- /moralstatus[{"moralstatus": "human"}](moralstatus:human)
+- /moralstatus[{"moralstatus": "human"}](moralstatus:human)
 - /moralstatus[{"moralstatus": "human"}](moralstatus:human)
 - /moralstatus[{"moralstatus": "human"}](moralstatus:human)
 - /moralstatus[{"moralstatus": "human"}](moralstatus:human)
@@ -832,6 +855,7 @@
 - Her name is [Carrie](PERSON)
 - Call this person [Frank](PERSON:frank)[Frank](PERSON:frank)
 - Call him Andreas
+- Call him [Mark](PERSON:mark)[Mark](PERSON:mark)
 
 ## intent:negative
 - That would be really bad for [Benjamin](PERSON)!
@@ -865,11 +889,14 @@
 - [Propably](ORG) very negative
 - The effects would be more negative
 - negative
+- The effects would be very negative for him because he needs the job to support his family
+- More negative for sure
 
 ## intent:neutral
 - It would be ok, neither positive nor negative consequences
 - That would have neither positive nor negative effects
 - It would be okay for him, no negative or positive consequences
+- It would be neither completely good nor completely bad. He would most definitely be angry but also thankful for knowing it.
 
 ## intent:option
 - She could make the decision to [flip the switch](deed)
@@ -954,6 +981,8 @@
 - [Inga](PERSON:inga) could also refuse to pull the chair from her child
 - She could immediately turn to her wife and try to save her life.
 - She could also look after [Michelle](PERSON) [first](ORDINAL) and try to save her life.
+- He could [tell his friend](deed) that his wife is betraying him
+- [Mark](PERSON:mark)[Mark](ORG:mark) could also decide to hide the information from his friend and stick to the company rules.
 
 ## intent:positive
 - That would be positive for him
@@ -1139,6 +1168,9 @@
 - Might be a [90%](PERCENT:90 %)[90%](PERCENT) probability
 - [10](CARDINAL)[10](CARDINAL)
 - [8](CARDINAL)[8](CARDINAL)
+- [5](CARDINAL)[5](CARDINAL)
+- Approximately a [95 percent](PERCENT) chance
+- [4](CARDINAL)[4](CARDINAL)
 
 ## intent:stakeholder
 - [Four expedition agents](stakeholder) are trapped in a mine.
@@ -1333,6 +1365,9 @@
 - [](plural:singular)There is an emergency worker that has just been called to the scene of an accident.
 - [](plural:singular)When arriving she sees that the crashed car belongs to her wife who is trapped inside
 - [](plural:singular)[](moralstatus:human)Trapped with her in the car there is [a man](stakeholder) who is obviously her lover with whom she's been having an affair.
+- [](plural:singular)[](moralstatus:human)A guy works as a network administrator for a rather large company and is responsible for scanning emails marked as spam and releasing them on request.
+- [](plural:singular)Then there is the wife of a very good friend of [Mark](PERSON:mark)[Mark](PERSON:mark). She asks him to release a mail which [Mark](PERSON:mark) notices comes from her lover she is having an affair with.
+- [](plural:singular)Finally there is [Mark](PERSON:mark)[Mark](ORG:mark)'s good friend whose wife is betraying him without him knowing
 
 ## intent:thanks
 - you helped a lot thank you
@@ -1372,6 +1407,7 @@
 - thanx
 
 ## intent:utilitarism
+- /utilitarism
 - /utilitarism
 - /utilitarism
 - /utilitarism
@@ -1458,6 +1494,12 @@
 - /wrong
 - /wrong
 - /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
 
 ## synonym:5
 - five
@@ -1468,6 +1510,9 @@
 
 ## synonym:80 %
 - 80%
+
+## synonym:90 %
+- 90%
 
 ## synonym:Achmed
 - g him
@@ -1534,6 +1579,9 @@
 ## synonym:Mary
 - {"PERSON": "Mary"}
 - {"name": "Mary"}
+
+## synonym:Michelle
+-  would m
 
 ## synonym:Molly
 - {"PERSON": "Molly"}
@@ -1684,6 +1732,9 @@
 - {"PERSON": "mark"}
 - {"name": "mark"}
 
+## synonym:michelle
+- Michelle
+
 ## synonym:molly
 - {"PERSON": "molly"}
 - Molly
@@ -1706,6 +1757,9 @@
 
 ## synonym:saving
 - Saving
+
+## synonym:saving her life
+- Saving her life
 
 ## synonym:saving the life
 - Saving the life
