@@ -1,4 +1,4 @@
-docker-services/
+docker-images/
 models/
 
 playground.ipynb
