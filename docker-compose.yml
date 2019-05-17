@@ -4,7 +4,7 @@ services:
   rasa_core:
     image: aroemelt/ethicbot:core
     ports:
-      - 5000:5005
+      - 8080:5005
     volumes:
       - ./models/rasa_core:/app/models
       - ./config:/app/config
