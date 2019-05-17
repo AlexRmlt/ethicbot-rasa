@@ -1,5 +1,0 @@
-spacy
-inflect
-word2number
-tinydb
-nltk

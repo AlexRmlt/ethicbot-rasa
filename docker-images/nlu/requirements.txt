@@ -1,4 +1,0 @@
-spacy
-nltk
-inflect
-word2number
