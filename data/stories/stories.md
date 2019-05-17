@@ -3037,3 +3037,158 @@
     - action_evaluation_utilitarism
     - utter_next_method
 
+## Generated Story -7493447606517739501
+* greeting
+    - action_intro
+* stakeholder{"stakeholder": "a group of five people", "CARDINAL": "5", "plural": "specific_plural", "moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - slot{"plural": "specific_plural"}
+    - action_create_stakeholder
+    - slot{"amount_stakeholders": 1}
+    - slot{"action_return": true}
+    - utter_ask_name_plural
+* deny
+    - action_update_stakeholder
+    - slot{"PERSON": "the Rhinelanders"}
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* stakeholder{"plural": "unspecific_plural", "moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - slot{"plural": "unspecific_plural"}
+    - action_create_stakeholder
+    - slot{"amount_stakeholders": 2}
+    - slot{"action_return": false}
+    - utter_ask_quantity
+* quantity{"CARDINAL": "only one"}
+    - action_update_stakeholder
+    - slot{"plural": "singular"}
+    - slot{"action_return": true}
+    - utter_ask_name_singular
+* name{"PERSON": "carla"}
+    - slot{"PERSON": "carla"}
+    - action_update_stakeholder
+    - slot{"PERSON": "carla"}
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* deny
+    - utter_confirm_stakeholders
+    - action_choose_decider
+* decider{"PERSON": "the Rhinelanders"}
+    - slot{"PERSON": "the Rhinelanders"}
+    - action_update_stakeholder
+    - slot{"decider": "the Rhinelanders"}
+    - slot{"action_return": true}
+    - utter_ask_options
+* stakeholder{"CARDINAL": "one", "plural": "singular"}
+    - slot{"plural": "singular"}
+    - action_create_option
+    - slot{"deed": null}
+    - slot{"option": 3}
+    - slot{"action_return": true}
+    - utter_ask_deed
+* deed
+    - action_create_deed
+    - slot{"deed": "Using the dynamite means killing the pregnant woman"}
+    - slot{"action_return": true}
+    - utter_ask_universalizable
+* wrong
+    - action_update_deed
+    - slot{"action_return": true}
+    - utter_ask_inherent_evil
+* affirm
+    - action_update_deed
+    - slot{"deed": null}
+    - slot{"action_return": true}
+    - utter_next_deed
+* deny
+    - utter_ask_consequences
+* consequence{"PERSON": "carla", "ORG": "carla", "sentiment": "neg"}
+    - slot{"PERSON": "carla"}
+    - slot{"sentiment": "neg"}
+    - action_create_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact_negative
+* correct
+    - utter_ask_impact_weight
+* quantity{"CARDINAL": "10"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_consequence_definite
+* correct
+    - utter_next_consequence
+* consequence{"PERSON": "the Rhinelanders", "sentiment": "neg"}
+    - slot{"PERSON": "the Rhinelanders"}
+    - slot{"sentiment": "neg"}
+    - action_create_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact_negative
+* wrong
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact_weight
+* quantity{"CARDINAL": "7"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_consequence_definite
+* correct
+    - utter_next_consequence
+* deny
+    - utter_next_option
+* option
+    - action_create_option
+    - slot{"deed": null}
+    - slot{"option": 7}
+    - slot{"action_return": true}
+    - utter_ask_deed
+* dontknow
+    - utter_ask_consequences
+* consequence{"PERSON": "carla", "sentiment": "neu"}
+    - slot{"PERSON": "carla"}
+    - slot{"sentiment": "neu"}
+    - action_create_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact
+* positive
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact_weight
+* quantity{"CARDINAL": "8"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_consequence_definite
+* wrong
+    - utter_ask_consequence_probability
+* quantity{"PERCENT": "90 %"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_next_consequence
+* consequence{"PERSON": "the Rhinelanders", "sentiment": "neg"}
+    - slot{"PERSON": "the Rhinelanders"}
+    - slot{"sentiment": "neg"}
+    - action_create_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact_negative
+* correct
+    - utter_ask_impact_weight
+* quantity{"CARDINAL": "10"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_consequence_definite
+* correct
+    - utter_next_consequence
+* deny
+    - utter_next_option
+* deny
+    - utter_got_everything
+    - utter_ask_method
+* utilitarism
+    - action_evaluation_utilitarism
+    - utter_next_method
+* affirm
+    - utter_ask_method
+* deontology
+    - action_evaluation_deontology
+    - utter_next_method
+* deny
+    - utter_goodbye
+

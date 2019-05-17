@@ -34,6 +34,8 @@
 - /affirm
 - /affirm
 - /affirm
+- /affirm
+- /affirm
 
 ## intent:consequence
 - [Five persons](stakeholder:five persons) would get overrun and die
@@ -188,8 +190,17 @@
 - [](sentiment:neu)Viola's affair would be discovered by her husband and she'd propably get in big trouble
 - /consequence[{"PERSON": "Viola"}](PERSON:Viola)
 - [Zoe](PERSON:zoe) would know about his wife's affair.
+- [Carla](PERSON:carla)[Carla](ORG:carla)[](sentiment:neg)Carla would get killed by the explosion.
+- [The Rhinelanders](PERSON:the Rhinelanders)[](sentiment:neg)The Rhinelanders could escape from the cave they are currently trapped in
+- [Carla](PERSON:carla)[Carla](PERSON:carla)[](sentiment:neu)Carla would eventually survive because her head is out of the cave.
+- [The Rhinelanders](PERSON:the Rhinelanders)[](sentiment:neg)The Rhinelanders would all drown in the cave.
 
 ## intent:correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
 - /correct
 - /correct
 - /correct
@@ -399,6 +410,7 @@
 - /decider[{"PERSON": "Inga"}](PERSON:Inga)
 - /decider[{"PERSON": "Inga"}](PERSON:Inga)
 - /decider[{"PERSON": "mark"}](PERSON:mark)
+- /decider[{"PERSON": "the Rhinelanders"}](PERSON:the Rhinelanders)
 
 ## intent:deed
 - [Lying](deed) to Katharina
@@ -452,6 +464,7 @@
 - Violating the companies policy of information security
 - Complying to the companies laws
 - Hiding information from a good friend
+- Using the dynamite means killing the pregnant woman
 
 ## intent:deny
 - No
@@ -636,8 +649,16 @@
 - Thats all for now
 - In this case there would not arise any consequences
 - That were all possible options
+- No I don't have a name for them
+- Thats all
+- No
+- It would not have any consequences for anybody else
+- There no other consequences
+- I don't think so
+- /deny
 
 ## intent:deontology
+- /deontology
 - /deontology
 - /deontology
 - /deontology
@@ -671,6 +692,7 @@
 - I don't know it exactly
 - I have no idea
 - No, I just don't know it
+- I have no idea
 
 ## intent:goodbye
 - okay see you later
@@ -779,6 +801,7 @@
 - hi
 - hi
 - hi
+- hi
 
 ## intent:moralquestion
 - Should you take action in killing a person if it can prevent the death of a larger number of people?
@@ -856,6 +879,7 @@
 - Call this person [Frank](PERSON:frank)[Frank](PERSON:frank)
 - Call him Andreas
 - Call him [Mark](PERSON:mark)[Mark](PERSON:mark)
+- Call her [Carla](PERSON:carla)[Carla](PERSON:carla)
 
 ## intent:negative
 - That would be really bad for [Benjamin](PERSON)!
@@ -983,6 +1007,7 @@
 - She could also look after [Michelle](PERSON) [first](ORDINAL) and try to save her life.
 - He could [tell his friend](deed) that his wife is betraying him
 - [Mark](PERSON:mark)[Mark](ORG:mark) could also decide to hide the information from his friend and stick to the company rules.
+- They could just not use the dynamite
 
 ## intent:positive
 - That would be positive for him
@@ -1028,6 +1053,7 @@
 - more positive
 - More positive
 - positive of course
+- I would consider them positive
 
 ## intent:quantity
 - [5](CARDINAL)
@@ -1171,6 +1197,12 @@
 - [5](CARDINAL)[5](CARDINAL)
 - Approximately a [95 percent](PERCENT) chance
 - [4](CARDINAL)[4](CARDINAL)
+- It's [only one](CARDINAL) person
+- [10](CARDINAL)[10](CARDINAL)
+- [7](CARDINAL)[7](CARDINAL)
+- [8](CARDINAL)[8](CARDINAL)
+- Maybe [90%](PERCENT:90 %)[90%](PERCENT:90 %)
+- [10](CARDINAL)[10](CARDINAL)
 
 ## intent:stakeholder
 - [Four expedition agents](stakeholder) are trapped in a mine.
@@ -1368,6 +1400,9 @@
 - [](plural:singular)[](moralstatus:human)A guy works as a network administrator for a rather large company and is responsible for scanning emails marked as spam and releasing them on request.
 - [](plural:singular)Then there is the wife of a very good friend of [Mark](PERSON:mark)[Mark](PERSON:mark). She asks him to release a mail which [Mark](PERSON:mark) notices comes from her lover she is having an affair with.
 - [](plural:singular)Finally there is [Mark](PERSON:mark)[Mark](ORG:mark)'s good friend whose wife is betraying him without him knowing
+- [](plural:specific_plural)[](moralstatus:human)A pregnant woman leading [a group of five people](stakeholder)[five](CARDINAL:5) people out of a cave on a coast, who is stuck in the mouth of that cave.
+- [](plural:unspecific_plural)[](moralstatus:human)Other than the group, there is the pregnant woman who is stuck in the cave
+- [One](CARDINAL:one)[One](CARDINAL:one)[](plural:singular)One of them has with him a stick of dynamite which they could use to escape the cave before they are down
 
 ## intent:thanks
 - you helped a lot thank you
@@ -1422,8 +1457,12 @@
 - /utilitarism
 - /utilitarism
 - /utilitarism
+- /utilitarism
 
 ## intent:wrong
+- /wrong
+- /wrong
+- /wrong
 - /wrong
 - /wrong
 - /wrong
@@ -1582,6 +1621,7 @@
 
 ## synonym:Michelle
 -  would m
+- would m
 
 ## synonym:Molly
 - {"PERSON": "Molly"}
@@ -1729,6 +1769,7 @@
 
 ## synonym:mark
 - Mark
+-  wou
 - {"PERSON": "mark"}
 - {"name": "mark"}
 
