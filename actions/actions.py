@@ -230,6 +230,8 @@ class UpdateStakeholder(Action):
 					name = tracker.get_slot('PERSON')
 				else:
 					name = next(tracker.get_latest_entity_values('PERSON'), None)
+					if name == None:
+						name = next(tracker.get_latest_entity_values('stakeholder'), None)
 
 				if not name == None:
 					sh.set_name(s_id=tracker.sender_id, name=name).memorize(tracker.sender_id)
@@ -626,7 +628,8 @@ class ChooseDecider(Action):
 		for sh in mind.get_stakeholders(tracker.sender_id):
 			buttons.append({ 'title': sh['name'], 'payload': '/decider{"PERSON": "' + sh['name'] + '"}'})
 
-		buttons.append({ "title": "Somebody else", "payload": '/decider{"plural": "' + const.SINGULAR + '"}' })
+		buttons.append({ "title": "Some other person", "payload": '/decider{"plural": "' + const.SINGULAR + '"}' })
+		buttons.append({ "title": "Some other group of people", "payload": '/decider{"plural": "' + const.PLURAL + '"}' })
 		dispatcher.utter_button_message(message, buttons)
 
 		return []
