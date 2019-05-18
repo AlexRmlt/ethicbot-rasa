@@ -112,7 +112,7 @@ class CreateStakeholder(Action):
 			sh['amount'] = 1
 		else:
 			sources = [ next(tracker.get_latest_entity_values('stakeholder'), None),
-						next(tracker.get_latest_entity_values('CARDINAL'), -1) ]
+						next(tracker.get_latest_entity_values('quantity'), -1) ]
 			quantity = nlu.get_quantity_from_sources(sources)
 			sh['amount'] = int(quantity)
 
@@ -160,7 +160,7 @@ class UpdateStakeholder(Action):
 	* action_return = True if stakeholder was successfully updated
 	* action_return = False if no update was made
 	* decider = name of the stakeholder if he is the decider
-	* PERSON = name of the stakeholder if it was freshly assigned
+	* name = name of the stakeholder if it was freshly assigned
 	* plural = specific_plural if amount was detected or None if detection failed
 	"""
 	def name(self):
@@ -177,7 +177,7 @@ class UpdateStakeholder(Action):
 			# Intent: decider
 			if (tracker.latest_message['intent'].get('name') == 'decider'):
 				# In this case, the stakeholder to be updated comes with the button payload
-				sh = mind.get_stakeholder_by_name(tracker.sender_id, next(tracker.get_latest_entity_values('PERSON'), None))
+				sh = mind.get_stakeholder_by_name(tracker.sender_id, next(tracker.get_latest_entity_values('name'), None))
 				sh['decider'] = True		
 				events.append(SlotSet('decider', sh['name']))
 				mind.memorize(tracker.sender_id, sh)
@@ -191,7 +191,7 @@ class UpdateStakeholder(Action):
 				# If detection of stakeholder amount failed, plural slot is set to None
 				# Thus: if the slot is still set to 'unspecific_plural', we are asking for the amount
 				if tracker.get_slot('plural') == const.UNSPECIFIC_PLURAL:
-					sources = [ next(tracker.get_latest_entity_values('CARDINAL'), -1),
+					sources = [ next(tracker.get_latest_entity_values('quantity'), -1),
 								next(tracker.get_latest_entity_values('stakeholder'), None),
 								tracker.latest_message['text'] ]
 					quantity = nlu.get_quantity_from_sources(sources)
@@ -214,7 +214,7 @@ class UpdateStakeholder(Action):
 					
 				# Else we asked for the moral status
 				else:
-					sources = [ next(tracker.get_latest_entity_values('CARDINAL'), -1),
+					sources = [ next(tracker.get_latest_entity_values('quantity'), -1),
 								tracker.latest_message['text'] ]
 					weight = nlu.get_quantity_from_sources(sources)
 					
@@ -227,9 +227,9 @@ class UpdateStakeholder(Action):
 				or (tracker.latest_message['intent'].get('name') == 'correct'):
 
 				if tracker.latest_message['intent'].get('name') == 'correct':
-					name = tracker.get_slot('PERSON')
+					name = tracker.get_slot('name')
 				else:
-					name = next(tracker.get_latest_entity_values('PERSON'), None)
+					name = next(tracker.get_latest_entity_values('name'), None)
 					if name == None:
 						name = next(tracker.get_latest_entity_values('stakeholder'), None)
 
@@ -242,7 +242,7 @@ class UpdateStakeholder(Action):
 
 				if (sh['decider'] == True):
 					events.append(SlotSet('decider', sh['name']))
-				events.append(SlotSet('PERSON', sh['name']))
+				events.append(SlotSet('name', sh['name']))
 
 				action_return = True
 
@@ -253,7 +253,7 @@ class UpdateStakeholder(Action):
 
 				if (sh['decider'] == True):
 					events.append(SlotSet('decider', sh['name']))
-				events.append(SlotSet('PERSON', sh['name']))
+				events.append(SlotSet('name', sh['name']))
 
 				action_return = True
 
@@ -266,7 +266,7 @@ class UpdateStakeholder(Action):
 				
 				if (sh['decider'] == True):
 					events.append(SlotSet('decider', sh['name']))
-				events.append(SlotSet('PERSON', sh['name']))
+				events.append(SlotSet('name', sh['name']))
 
 				action_return = True
 
@@ -278,7 +278,7 @@ class UpdateStakeholder(Action):
 
 		except (AttributeError, TypeError) as e:
 			logging.warning('Exception updating Stakeholder: ' + str(e))
-			events.append(SlotSet('PERSON', None))
+			events.append(SlotSet('name', None))
 			action_return = False
 
 		events.append(SlotSet('action_return', action_return))
@@ -519,7 +519,9 @@ class CreateConsequence(Action):
 			impact = 0
 
 		# Find out, which stakeholder is affected by this consequence
-		sh = mind.get_stakeholder_by_name(tracker.sender_id, next(tracker.get_latest_entity_values('PERSON'), None))
+		sh = mind.get_stakeholder_by_name(tracker.sender_id, next(tracker.get_latest_entity_values('name'), None))
+		if sh == None:
+			sh = mind.get_stakeholder_by_name(tracker.sender_id, next(tracker.get_latest_entity_values('stakeholder'), None))
 
 		try:
 			consequence = Consequence({
@@ -533,7 +535,7 @@ class CreateConsequence(Action):
 		except (AttributeError, TypeError) as e:
 			logging.warning('Exception creating consequence: ' + str(e))
 			# If we do not find a distinct name, let the user choose from possible stakeholders
-			events.append(SlotSet('PERSON', None))
+			events.append(SlotSet('name', None))
 			action_return = False
 			
 		events.append(SlotSet('action_return', action_return))
@@ -565,7 +567,7 @@ class UpdateConsequence(Action):
 		intent = tracker.latest_message['intent'].get('name')
 
 		try:
-			consequence = mind.get_consequence(tracker.sender_id, tracker.get_slot('PERSON'), tracker.get_slot('option'))
+			consequence = mind.get_consequence(tracker.sender_id, tracker.get_slot('name'), tracker.get_slot('option'))
 			old_impact = consequence['impact']
 
 			# Update impact
@@ -579,7 +581,7 @@ class UpdateConsequence(Action):
 				consequence['impact'] = consequence['impact'] * -1
 				
 			elif (intent == 'quantity'):
-				sources = [ next(tracker.get_latest_entity_values('CARDINAL'), -1),
+				sources = [ next(tracker.get_latest_entity_values('quantity'), -1),
 							tracker.latest_message['text'] ]
 				quantity = nlu.get_quantity_from_sources(sources)
 
@@ -626,10 +628,10 @@ class ChooseDecider(Action):
 		buttons = []
 
 		for sh in mind.get_stakeholders(tracker.sender_id):
-			buttons.append({ 'title': sh['name'], 'payload': '/decider{"PERSON": "' + sh['name'] + '"}'})
+			buttons.append({ 'title': sh['name'], 'payload': '/decider{"name": "' + sh['name'] + '"}'})
 
 		buttons.append({ "title": "Some other person", "payload": '/decider{"plural": "' + const.SINGULAR + '"}' })
-		buttons.append({ "title": "Some other group of people", "payload": '/decider{"plural": "' + const.PLURAL + '"}' })
+		buttons.append({ "title": "Some other group of people", "payload": '/decider{"plural": "' + const.UNSPECIFIC_PLURAL + '"}' })
 		dispatcher.utter_button_message(message, buttons)
 
 		return []
@@ -647,7 +649,7 @@ class ChooseAffectedStakeholder(Action):
 		message = "On which person would this decision have an impact?"
 
 		for sh in mind.get_stakeholders(tracker.sender_id):
-			buttons.append({ 'title': sh['name'], 'payload': '/consequence{"PERSON": "' + sh['name'] + '"}'})
+			buttons.append({ 'title': sh['name'], 'payload': '/consequence{"name": "' + sh['name'] + '"}'})
 		dispatcher.utter_button_message(message, buttons)
 		return []
 

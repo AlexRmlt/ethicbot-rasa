@@ -1,89 +1,79 @@
 %YAML 1.1
 ---
 actions:
-- utter_next_consequence
-- utter_ask_impact
-- utter_ask_identified_deed
-- utter_ask_method
-- utter_next_option
-- utter_ask_deed
-- action_update_context
-- utter_confirm_stakeholders
-- action_choose_decider
-- utter_confirm_decider
-- utter_ask_name_singular
-- utter_ask_identified_name
-- action_evaluation_utilitarism
-- utter_ask_consequence_probability
-- utter_thanks
-- action_create_deed
-- utter_ask_inherent_evil
-- utter_next_deed
-- utter_got_everything
-- action_choose_affected_stakeholder
-- action_create_option
-- utter_ask_consequences
-- utter_goodbye
-- action_create_consequence
-- utter_ask_guess_quantity
-- utter_ask_universalizable
-- utter_ask_impact_negative
-- action_update_consequence
-- action_create_stakeholder
-- utter_ask_impact_positive
 - utter_next_method
-- action_update_stakeholder
-- utter_ask_moral_status
-- utter_intro
-- utter_ask_moral_question
-- utter_ask_stakeholders
-- action_evaluation_deontology
-- action_intro
-- utter_next_stakeholder
-- utter_ask_name_plural
 - utter_ask_consequence_definite
 - utter_ask_options
 - utter_ask_moral_status_weight
-- action_update_option
-- utter_too_bad
+- utter_ask_impact
+- utter_ask_name_plural
 - utter_ask_impact_weight
-- utter_ask_quantity
 - action_update_deed
+- utter_ask_impact_positive
+- utter_too_bad
+- action_update_context
+- utter_ask_consequence_probability
+- utter_ask_identified_name
+- utter_next_consequence
+- utter_goodbye
+- utter_ask_identified_deed
+- utter_got_everything
+- utter_next_option
+- action_evaluation_deontology
+- utter_next_deed
+- utter_ask_inherent_evil
+- action_update_consequence
+- action_update_option
+- action_create_stakeholder
+- utter_thanks
+- utter_next_stakeholder
+- utter_ask_moral_question
+- action_choose_decider
+- utter_confirm_decider
+- utter_ask_consequences
+- action_update_stakeholder
+- utter_ask_moral_status
+- action_create_option
+- action_create_deed
+- action_intro
+- utter_ask_method
+- utter_ask_guess_quantity
+- action_create_consequence
+- action_evaluation_utilitarism
+- utter_ask_name_singular
+- utter_ask_impact_negative
+- utter_ask_quantity
+- utter_ask_stakeholders
+- utter_ask_deed
+- action_choose_affected_stakeholder
+- utter_confirm_stakeholders
+- utter_intro
+- utter_ask_universalizable
 entities:
-- PERCENT
-- sentiment
-- ORDINAL
-- TIME
-- ORG
-- NORP
-- LOC
 - plural
 - deed
-- DATE
-- name
-- moralstatus
-- CARDINAL
-- PERSON
-- GPE
-- LAW
-- stakeholder
-intents:
-- wrong
-- option
-- greeting
-- deny
-- deed
-- decider
-- consequence
-- name
-- moralstatus
-- correct
-- stakeholder
-- dontknow
-- affirm
 - quantity
-- negative
+- name
+- stakeholder
+- moralstatus
+- sentiment
+intents:
+- deny
+- decider
+- greeting
+- deed
+- quantity
+- name
+- affirm
+- correct
+- consequence
+- wrong
+- stakeholder
 - utilitarism
+- moralstatus
+- option
+- negative
+- dontknow
 - deontology
 - positive
 - neutral
@@ -91,8 +81,6 @@ intents:
 - goodbye
 - thanks
 slots:
-  PERSON:
-    type: text
   action_return:
     type: bool
   amount_stakeholders:
@@ -108,6 +96,8 @@ slots:
     - machine
     - animal
     - other
+  name:
+    type: text
   option:
     type: text
   plural:
@@ -166,25 +156,25 @@ templates:
       title: 'Yes'
     - payload: /wrong
       title: 'No'
-    text: '"{PERSON}" is the name of the person you are talking about, right?'
+    text: '"{name}" is the name of the person you are talking about, right?'
   utter_ask_impact:
-  - text: Would the effects be more positive or more negative for {PERSON}?
-  - text: Would that be more positive or more negative for {PERSON}?
-  - text: Would you consider the effects on {PERSON} to be more negative or more positive?
+  - text: Would the effects be more positive or more negative for {name}?
+  - text: Would that be more positive or more negative for {name}?
+  - text: Would you consider the effects on {name} to be more negative or more positive?
   utter_ask_impact_negative:
   - buttons:
     - payload: /correct
       title: Correct
     - payload: /wrong
       title: Wrong
-    text: For {PERSON} this would be rather unpleasant, right?
+    text: For {name} this would be rather unpleasant, right?
   utter_ask_impact_positive:
   - buttons:
     - payload: /correct
       title: Correct
     - payload: /wrong
       title: Wrong
-    text: That would be a good thing for {PERSON}, right?
+    text: That would be a good thing for {name}, right?
   utter_ask_impact_weight:
   - text: Could you estimate how severe the impact would be? On a scale of 1 to 10?
   utter_ask_inherent_evil:
@@ -215,9 +205,9 @@ templates:
       title: Animal
     - payload: '/moralstatus{"moralstatus": "other"}'
       title: Other
-    text: Can you tell me what kind of class {PERSON} would belong to?
+    text: Can you tell me what kind of class {name} would belong to?
   utter_ask_moral_status_weight:
-  - text: Compared to a human, how high would you rate the moral significance of {PERSON}
+  - text: Compared to a human, how high would you rate the moral significance of {name}
       on a scale of 1 to 10?
   utter_ask_name_plural:
   - text: Can you give me a name? That would make it easier for me to recognize who
