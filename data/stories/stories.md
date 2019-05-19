@@ -4117,3 +4117,404 @@
 * deny
     - utter_goodbye
 
+## Generated Story -6641505184854451966
+* greeting
+    - action_intro
+* stakeholder{"plural": "singular"}
+    - slot{"plural": "singular"}
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 1}
+    - slot{"action_return": true}
+    - utter_ask_name_singular
+* name
+    - action_update_stakeholder
+    - slot{"name": "Nathan"}
+    - slot{"action_return": true}
+    - utter_ask_moral_status
+* moralstatus{"moralstatus": "other"}
+    - slot{"moralstatus": "other"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_ask_moral_status_weight
+* dontknow
+    - utter_too_bad
+    - utter_next_stakeholder
+* stakeholder
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 2}
+    - slot{"action_return": true}
+    - utter_ask_name_singular
+* deny
+    - action_update_stakeholder
+    - slot{"name": "Uwe"}
+    - slot{"action_return": true}
+    - utter_ask_moral_status
+* moralstatus{"moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* stakeholder{"plural": "unspecific_plural", "moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - slot{"plural": "unspecific_plural"}
+    - action_create_stakeholder
+    - slot{"amount_stakeholders": 3}
+    - slot{"action_return": false}
+    - utter_ask_quantity
+* quantity
+    - action_update_stakeholder
+    - slot{"plural": "singular"}
+    - slot{"action_return": true}
+    - utter_ask_name_singular
+* name{"stakeholder": "the child"}
+    - action_update_stakeholder
+    - slot{"name": "the child"}
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* deny
+    - utter_confirm_stakeholders
+    - action_choose_decider
+* decider{"plural": "singular"}
+    - slot{"plural": "singular"}
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 4}
+    - slot{"action_return": true}
+    - utter_ask_name_singular
+* deny{"stakeholder": "the person"}
+    - action_update_stakeholder
+    - slot{"decider": "Werner"}
+    - slot{"name": "Werner"}
+    - slot{"action_return": true}
+    - utter_ask_moral_status
+* moralstatus{"moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_ask_options
+* option
+    - action_create_option
+    - slot{"deed": null}
+    - slot{"option": 5}
+    - slot{"action_return": true}
+    - utter_ask_deed
+* deed{"deed": "letting the child"}
+    - slot{"deed": "letting the child"}
+    - action_create_deed
+    - slot{"action_return": true}
+    - utter_ask_universalizable
+* wrong
+    - action_update_deed
+    - slot{"action_return": true}
+    - utter_ask_inherent_evil
+* affirm
+    - action_update_deed
+    - slot{"deed": null}
+    - slot{"action_return": true}
+    - utter_next_deed
+* deed{"deed": "saving"}
+    - slot{"deed": "saving"}
+    - action_create_deed
+    - slot{"action_return": true}
+    - utter_ask_universalizable
+* correct
+    - action_update_deed
+    - slot{"deed": null}
+    - slot{"action_return": true}
+    - utter_next_deed
+* deny
+    - utter_ask_consequences
+* consequence
+    - action_create_consequence
+    - slot{"name": null}
+    - slot{"action_return": false}
+    - action_choose_affected_stakeholder
+* consequence{"name": "the child"}
+    - slot{"name": "the child"}
+    - action_create_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact
+* negative
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact_weight
+* quantity{"quantity": "10"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_consequence_definite
+* correct
+    - utter_next_consequence
+* consequence
+    - action_create_consequence
+    - slot{"name": null}
+    - slot{"action_return": false}
+    - action_choose_affected_stakeholder
+* consequence{"name": "Uwe"}
+    - slot{"name": "Uwe"}
+    - action_create_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact
+* positive
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact_weight
+* quantity{"quantity": "10"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_consequence_definite
+* wrong
+    - utter_ask_consequence_probability
+* dontknow
+    - utter_ask_guess_quantity
+* quantity{"quantity": "80"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_next_consequence
+* deny
+    - utter_next_option
+* option
+    - action_create_option
+    - slot{"deed": null}
+    - slot{"option": 10}
+    - slot{"action_return": true}
+    - utter_ask_deed
+* deed{"deed": "protecting"}
+    - slot{"deed": "protecting"}
+    - action_create_deed
+    - slot{"action_return": true}
+    - utter_ask_universalizable
+* correct
+    - action_update_deed
+    - slot{"deed": null}
+    - slot{"action_return": true}
+    - utter_next_deed
+* deny
+    - utter_ask_consequences
+* consequence{"sentiment": "pos"}
+    - slot{"sentiment": "pos"}
+    - action_create_consequence
+    - slot{"name": null}
+    - slot{"action_return": false}
+    - action_choose_affected_stakeholder
+* consequence{"name": "the child"}
+    - slot{"name": "the child"}
+    - action_create_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact_positive
+* correct
+    - utter_ask_impact_weight
+* quantity{"quantity": "5"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_consequence_definite
+* correct
+    - utter_next_consequence
+* consequence{"sentiment": "pos"}
+    - slot{"sentiment": "pos"}
+    - action_create_consequence
+    - slot{"name": null}
+    - slot{"action_return": false}
+    - action_choose_affected_stakeholder
+* consequence{"name": "Uwe"}
+    - slot{"name": "Uwe"}
+    - action_create_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact_positive
+* wrong
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact_weight
+* quantity{"quantity": "1"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_consequence_definite
+* correct
+    - utter_next_consequence
+* deny
+    - utter_next_option
+* deny
+    - utter_got_everything
+    - utter_ask_method
+* utilitarism
+    - action_evaluation_utilitarism
+    - utter_next_method
+* affirm
+    - utter_ask_method
+* deontology
+    - action_evaluation_deontology
+    - utter_next_method
+* deny
+    - utter_goodbye
+
+## Generated Story -369197456957833744
+* greeting
+    - action_intro
+* stakeholder{"stakeholder": "one person", "plural": "singular", "moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - slot{"plural": "singular"}
+    - action_create_stakeholder
+    - slot{"amount_stakeholders": 1}
+    - slot{"action_return": true}
+    - utter_ask_name_singular
+* dontknow
+    - action_update_stakeholder
+    - slot{"name": "Greta"}
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* stakeholder{"quantity": "150", "plural": "unspecific_plural", "moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - slot{"plural": "unspecific_plural"}
+    - action_create_stakeholder
+    - slot{"amount_stakeholders": 2}
+    - slot{"action_return": true}
+    - utter_ask_quantity
+* quantity{"quantity": "150"}
+    - action_update_stakeholder
+    - slot{"plural": "specific_plural"}
+    - slot{"action_return": true}
+    - utter_ask_name_plural
+* name
+    - action_update_stakeholder
+    - slot{"name": "the Palatines"}
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* stakeholder{"stakeholder": "a lot of people", "plural": "unspecific_plural", "moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - slot{"plural": "unspecific_plural"}
+    - action_create_stakeholder
+    - slot{"amount_stakeholders": 3}
+    - slot{"action_return": false}
+    - utter_ask_quantity
+* dontknow
+    - utter_ask_guess_quantity
+* quantity{"quantity": "200"}
+    - action_update_stakeholder
+    - slot{"plural": "specific_plural"}
+    - slot{"action_return": true}
+    - utter_ask_name_plural
+* deny
+    - action_update_stakeholder
+    - slot{"name": "the Swabians"}
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* deny
+    - utter_confirm_stakeholders
+    - action_choose_decider
+* decider{"name": "Greta"}
+    - slot{"name": "Greta"}
+    - action_update_stakeholder
+    - slot{"decider": "Greta"}
+    - slot{"action_return": true}
+    - utter_ask_options
+* option{"deed": "kill the attackers"}
+    - slot{"deed": "kill the attackers"}
+    - action_create_option
+    - slot{"deed": "kill the attackers"}
+    - slot{"option": 4}
+    - slot{"action_return": true}
+    - utter_ask_identified_deed
+* correct
+    - action_create_deed
+    - slot{"action_return": true}
+    - utter_ask_universalizable
+* wrong
+    - action_update_deed
+    - slot{"action_return": true}
+    - utter_ask_inherent_evil
+* affirm
+    - action_update_deed
+    - slot{"deed": null}
+    - slot{"action_return": true}
+    - utter_next_deed
+* deed
+    - action_create_deed
+    - slot{"deed": "Saving people on the ground who are possibly threatened can be considered a moral action"}
+    - slot{"action_return": true}
+    - utter_ask_universalizable
+* correct
+    - action_update_deed
+    - slot{"deed": null}
+    - slot{"action_return": true}
+    - utter_next_deed
+* deny
+    - utter_ask_consequences
+* consequence{"name": "the Palatines", "sentiment": "neg"}
+    - slot{"name": "the Palatines"}
+    - slot{"sentiment": "neg"}
+    - action_create_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact_negative
+* correct
+    - utter_ask_impact_weight
+* quantity{"quantity": "10"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_consequence_definite
+* wrong
+    - utter_ask_consequence_probability
+* quantity{"quantity": "90"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_next_consequence
+* deny
+    - utter_next_option
+* option
+    - action_create_option
+    - slot{"deed": null}
+    - slot{"option": 8}
+    - slot{"action_return": true}
+    - utter_ask_deed
+* deny
+    - utter_ask_consequences
+* consequence
+    - action_create_consequence
+    - slot{"name": null}
+    - slot{"action_return": false}
+    - action_choose_affected_stakeholder
+* consequence{"name": "the Swabians"}
+    - slot{"name": "the Swabians"}
+    - action_create_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact
+* negative
+    - action_update_consequence
+    - slot{"action_return": false}
+    - utter_ask_impact_weight
+* quantity{"quantity": "10"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_consequence_definite
+* wrong
+    - utter_ask_consequence_probability
+* quantity{"quantity": "50"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_next_consequence
+* consequence{"name": "the Palatines", "sentiment": "neg"}
+    - slot{"name": "the Palatines"}
+    - slot{"sentiment": "neg"}
+    - action_create_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact_negative
+* correct
+    - utter_ask_impact_weight
+* quantity{"quantity": "10"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_consequence_definite
+* wrong
+    - utter_ask_consequence_probability
+* dontknow
+    - utter_ask_guess_quantity
+* quantity{"quantity": "75"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_next_consequence
+* deny
+    - utter_next_option
+* deny
+    - utter_got_everything
+    - utter_ask_method
+

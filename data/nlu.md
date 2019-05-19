@@ -41,6 +41,9 @@
 - /affirm
 - /affirm
 - /affirm
+- /affirm
+- /affirm
+- /affirm
 
 ## intent:consequence
 - [Five persons](stakeholder:five persons) would get overrun and die
@@ -223,8 +226,30 @@
 - [The passengers](stakeholder:the passengers)[](sentiment:pos)The passengers would have a better chance to survive
 - /consequence[{"name": "the passengers"}](name:the passengers)
 - [The passengers](stakeholder:the passengers)[](sentiment:neg)The passengers would possibly die in the overcrowded lifeboat
+- [The child](stakeholder) would suffer unimaginable pain
+- /consequence[{"name": "the child"}](name:the child)
+- For humanity it would mean that nearly everything bad would come to an end if the alien keeps its promise
+- /consequence[{"name": "Uwe"}](name:Uwe)
+- [](sentiment:pos)[The child](stakeholder) would be kept save and would not have to suffer
+- /consequence[{"name": "the child"}](name:the child)
+- [](sentiment:pos)The world would then not turn into the promised peaceful utopia
+- /consequence[{"name": "Uwe"}](name:Uwe)
+- [The Palatines](name:the Palatines)[](sentiment:neg)The Palatines would all die as the plane crashes in the desert
+- There is a possibility that the attackers would kill many people
+- /consequence[{"name": "the Swabians"}](name:the Swabians)
+- [The Palatines](name:the Palatines)[](sentiment:neg)The Palatines would most definitely die anyway
 
 ## intent:correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
 - /correct
 - /correct
 - /correct
@@ -468,6 +493,8 @@
 - /decider[{"plural": "singular"}](plural:singular)
 - /decider[{"name": "Lars"}](name:Lars)
 - [](plural:unspecific_plural)[](moralstatus:human)A captain is on an overcrowded lifeboat and has to decide if he forces some people to go over board in order to save the rest
+- /decider[{"plural": "singular"}](plural:singular)
+- /decider[{"name": "Greta"}](name:Greta)
 
 ## intent:deed
 - [Lying](deed) to Katharina
@@ -534,6 +561,10 @@
 - [Being loyal](deed) to people relying on him
 - It would essentially mean [killing](deed) this people
 - It also implies [saving the rest of the people](deed) on the boat
+- [Letting the child gettin tormented](deed) by the alien
+- [Saving humanity](deed)
+- [Protecting](deed:protecting) an innocent child from great suffering
+- [Saving people](deed) on the ground who are possibly threatened can be considered a moral action
 
 ## intent:deny
 - No
@@ -757,8 +788,25 @@
 - Those were indeed all possible consequences
 - There is no other option
 - /deny
+- Of course not
+- No other people are involved
+- [The person](stakeholder:the person) has no name
+- No
+- No that were all affected people
+- No
+- No it would not
+- There is no other option
+- /deny
+- No idea how to call them
+- No other persons
+- No, there are no further morally relevant actions
+- Other than that, nobody would be affected
+- I actually can't think of something like that
+- I do not think so
+- I think this were all possible options
 
 ## intent:deontology
+- /deontology
 - /deontology
 - /deontology
 - /deontology
@@ -803,6 +851,11 @@
 - I don't know the exact amount
 - I don't know the name
 - I don't know the name
+- I have no idea actually
+- You can't know it definitely actually
+- No idea what his name is
+- That can not be known beforehand
+- I don't know it exactly
 
 ## intent:goodbye
 - okay see you later
@@ -917,6 +970,8 @@
 - hi
 - hi
 - hi
+- hi
+- hi
 
 ## intent:moralquestion
 - Should you take action in killing a person if it can prevent the death of a larger number of people?
@@ -971,6 +1026,9 @@
 - /moralstatus[{"moralstatus": "human"}](moralstatus:human)
 - /moralstatus[{"moralstatus": "human"}](moralstatus:human)
 - /moralstatus[{"moralstatus": "human"}](moralstatus:human)
+- /moralstatus[{"moralstatus": "other"}](moralstatus:other)
+- /moralstatus[{"moralstatus": "human"}](moralstatus:human)
+- /moralstatus[{"moralstatus": "human"}](moralstatus:human)
 
 ## intent:name
 - Call him [Frank](name)
@@ -1009,6 +1067,9 @@
 - Call them "[the passengers](stakeholder)"
 - Call him "[the captain](stakeholder)"
 - You can use the name "[the passengers](stakeholder)"
+- The name is the alien
+- You can use the term "[the child](stakeholder)"
+- You can use the name [the passengers](stakeholder)
 
 ## intent:negative
 - That would be really bad for [Benjamin](name)!
@@ -1046,6 +1107,8 @@
 - More negative for sure
 - Very negative
 - Very negative indeed
+- That would be absolutely negative for the child
+- The effects would be fatal
 
 ## intent:neutral
 - It would be ok, neither positive nor negative consequences
@@ -1145,10 +1208,14 @@
 - He could [remain silent](deed) and [wait what the officers will do](deed)
 - She could choose to [torture](deed) the madmans wife in order to get the information about the bombs
 - [Roswitha](name) could also choose not to [torture](deed) [Olga](name) as it is against the law.
-- He can swim to another lifeboat where his friend is that has room for one additional person left
-- Lars could also stay with the passengers and [help them](deed) keeping the boat above the water
-- He could force the Palatines to go over board
-- Otherwise he could keep everyone on board
+- He can [swim to another lifeboat](deed) where his friend is that has room for one additional person left
+- Lars could also [stay with the passengers](deed) and [help them](deed) keeping the boat above the water
+- He could [force the Palatines to go over board](deed)
+- Otherwise he could [keep everyone on board](deed)
+- He could [hand over the child](deed) for the alien to [torture](deed) it
+- Another option would be [not to hand over the child](deed) to alien
+- It would be an option [to damage the ventilation system](deed) causing poisonous fumes to fill the cockpit in order to [kill the attackers](deed)
+- She could [not take any action](deed) and hope that the attackers don't harm any uninvolved persons
 
 ## intent:positive
 - That would be positive for him
@@ -1195,6 +1262,7 @@
 - More positive
 - positive of course
 - I would consider them positive
+- The effects would be extremely positive
 
 ## intent:quantity
 - [5](quantity)
@@ -1378,6 +1446,20 @@
 - Maybe [80](quantity) percent
 - [10](quantity)
 - They might have a chance of [20](quantity) percent or so
+- Only one child
+- [10](quantity)
+- [10](quantity)
+- Okay, let's say [80](quantity)%
+- At least [5](quantity)
+- It would not change anything, so you can say only [1](quantity)
+- Exactly [150](quantity) people
+- Could be around 100 or [200](quantity) people
+- [10](quantity)
+- [90](quantity) percent
+- [10](quantity)
+- Around [50](quantity)%
+- [10](quantity)
+- Ok, how about [75](quantity)%
 
 ## intent:stakeholder
 - [Four expedition agents](stakeholder) are trapped in a mine.
@@ -1591,6 +1673,12 @@
 - [](plural:unspecific_plural)With him on the lifeboat, there is [a group of passengers](stakeholder) and they try to prevent the boat from sinking by carrying out the water with their hands
 - [](plural:specific_plural)[](moralstatus:human)There are [30 people](stakeholder) on the boat which is designed for only [7](quantity) people
 - [The weaker people](stakeholder:the weaker people) on the boat have to be considered separately because they may be forced to leave the boat
+- [](plural:singular)There is [an alien](stakeholder) who visits the earth and promises to turn the planet into a peaceful utopia
+- There is literally [the whole population of the earth](stakeholder) that would be affected by the aliens actions
+- [](plural:unspecific_plural)[](moralstatus:human)[The alien](stakeholder) demands a little child for him to perform hideous scientific experiments on as a price
+- [One person](stakeholder:one person)[](plural:singular)[](moralstatus:human)One person is travelling with a plane that was hijacked by attackers
+- [](plural:unspecific_plural)[](moralstatus:human)There are all in all [150](quantity) people on board of the hijacked plane
+- [A lot of people](stakeholder:a lot of people)[](plural:unspecific_plural)[](moralstatus:human)A lot of people on the ground could be in danger if the attackers fly the plain in to a building or something like that
 
 ## intent:thanks
 - you helped a lot thank you
@@ -1630,6 +1718,7 @@
 - thanx
 
 ## intent:utilitarism
+- /utilitarism
 - /utilitarism
 - /utilitarism
 - /utilitarism
@@ -1750,8 +1839,16 @@
 - /wrong
 - /wrong
 - /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
+- /wrong
 
 ## synonym:1
+- one
 - One
 
 ## synonym:3
@@ -1813,6 +1910,7 @@
 
 ## synonym:Jörg
 -  the
+- the
 - jörg
 
 ## synonym:Katharina
@@ -1889,6 +1987,7 @@
 
 ## synonym:a healthcare aide
 -  has to supervise
+- has to supervise
 
 ## synonym:a healthcare professional
 - A healthcare professional
@@ -1938,6 +2037,9 @@
 ## synonym:killing
 - Killing
 
+## synonym:letting the child
+- Letting the child
+
 ## synonym:machine
 - {"moralstatus": "machine"}
 
@@ -1950,8 +2052,17 @@
 ## synonym:one person
 - One person
 
+## synonym:other
+- {"moralstatus": "other"}
+
+## synonym:protecting
+- Protecting
+
 ## synonym:rescuing
 - Rescuing
+
+## synonym:saving
+- Saving
 
 ## synonym:saving her life
 - Saving her life
@@ -1992,6 +2103,9 @@
 ## synonym:the Swabians
 - The Swabians
 
+## synonym:the child
+- {"name": "the child"}
+
 ## synonym:the first person
 - The first person
 
@@ -2012,6 +2126,7 @@
 
 ## synonym:the passengers
 - The passengers
+- {"name": "the passengers"}
 
 ## synonym:the patient
 - The patient
@@ -2021,6 +2136,9 @@
 
 ## synonym:the third person
 - The third person
+
+## synonym:the weaker people
+- The weaker people
 
 ## synonym:three people
 - Three people

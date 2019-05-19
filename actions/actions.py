@@ -104,7 +104,7 @@ class CreateStakeholder(Action):
 		sh = Stakeholder({	
 			'decider': False, 
 			'moral_status': const.MS_OTHER, 
-			'moral_status_weight': -1
+			'moral_status_weight': 1
 		})
 
 		# Do we know whether it is a single stakeholder or a group of people?
