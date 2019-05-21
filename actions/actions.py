@@ -707,7 +707,18 @@ class EvaluationUtilitarism(Action):
 
         if r.status_code == 200:
             response = r.json()
-            dispatcher.utter_attachment(response['url'])
+            
+            #dispatcher.utter_attachment(response['url'])
+            message = {
+                "attachment": {
+                    "type":"image",
+                    "payload":{
+                        "title":"Report: utilitarism",
+                        "src": response['url']
+                    }
+                }
+            }
+            dispatcher.utter_custom_message(message)
         else:
             dispatcher.utter_template('utter_evaluation_failure', tracker)
 
@@ -726,7 +737,18 @@ class EvaluationDeontology(Action):
 
         if r.status_code == 200:
             response = r.json()
-            dispatcher.utter_attachment(response['url'])
+            
+            #dispatcher.utter_attachment(response['url'])
+            message = {
+                "attachment": {
+                    "type":"image",
+                    "payload":{
+                        "title":"Report: deontology",
+                        "src": response['url']
+                    }
+                }
+            }
+            dispatcher.utter_custom_message(message)
         else:
             dispatcher.utter_template('utter_evaluation_failure', tracker)
 

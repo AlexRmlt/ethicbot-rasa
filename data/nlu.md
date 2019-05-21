@@ -52,6 +52,8 @@
 - /affirm
 
 ## intent:consequence
+- [The children](stakeholder) would not get any money to receive proper food, clothing and medical care.
+- [Florin](name) would get arrested by the police and receive a penalty
 - [Five persons](stakeholder:five persons) would get overrun and die
 - [Five persons](stakeholder:five persons) would be overrun and get killed
 - Then only [one person](stakeholder) would get killed
@@ -524,6 +526,7 @@
 - /decider[{"name": "jane"}](name:jane)
 
 ## intent:deed
+- [Reporting a crime](deed) would be a moral action
 - [Lying](deed) to Katharina
 - The option implies most propably [saving the patients life](deed)
 - I would say, [trying to prevent the patient from losing a limb](deed)
@@ -596,6 +599,8 @@
 - It also means [saving the lives](deed) of [5](quantity) people
 
 ## intent:deny
+- there would not be any consequences
+- He does not have a name
 - No
 - No that was all
 - That was all
@@ -1086,6 +1091,8 @@
 - /moralstatus[{"moralstatus": "human"}](moralstatus:human)
 
 ## intent:name
+- Use the name "[the children](stakeholder)"
+- My name is [Alex](name)
 - Call him [Frank](name)
 - His name is [Frank](name)
 - [Frank](name)
@@ -1182,6 +1189,7 @@
 - It would not matter that much actually
 
 ## intent:option
+- He can [report the crime](deed) to the police
 - She could make the decision to [flip the switch](deed)
 - He could decide to [flip the switch](deed)
 - He could [flip the switch](deed)
@@ -1537,6 +1545,7 @@
 - [9](quantity)
 
 ## intent:stakeholder
+- Then there is [myself](stakeholder) and I witnessed the robbery
 - [One of her crew members](stakeholder), whose legs have been crushed by a rock, will die without medical attention.
 - [Molly](name) is on a footbridge over the tracks, in between the approaching trolley and the five workmen.
 - [Heather](name) is part of a four-person mining expedition.
@@ -1690,7 +1699,7 @@
 - [Jane](name:jane)'s husband one puts accidentally poison in his coffee, thinking it is cream
 - I am a skilled doctor
 - There is [a sixth patient](stakeholder), who is dying of an incurable disease, and is [a](stakeholder) compatible organ donor for the five other patients
-- There is [a man who](stakeholder) robs a bank and donates the money to a local orphanage
+- There is [a man](stakeholder) who robs a bank and donates the money to a local orphanage
 - [a man](stakeholder) robs a bank, but instead of keeping the money for himself, he donates it to a local orphanage
 - [A robber](stakeholder) has robbed a bank
 - [A robber](stakeholder) who robbed a bank to donate the money to the local orphanage
@@ -1698,6 +1707,7 @@
 - [I](stakeholder) witnessed a robbery
 
 ## intent:stakeholdergroup
+- There are [the children](stakeholder) of the orphanage which is struggling for funding
 - [Four expedition agents](stakeholder) are trapped in a mine.
 - [Four other persons](stakeholder) are trapped in the mine.
 - [Five people](stakeholder:five people)Five people
