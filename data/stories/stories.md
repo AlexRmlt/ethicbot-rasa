@@ -1,9 +1,8 @@
 ## Generated Story 4250896942926339107
 * greeting
     - action_intro
-* stakeholder{"stakeholder": "five workmen", "quantity": "5", "plural": "specific_plural", "moralstatus": "human"}
+* stakeholdergroup{"stakeholder": "five workmen", "quantity": "5", "moralstatus": "human"}
     - slot{"moralstatus": "human"}
-    - slot{"plural": "specific_plural"}
     - action_create_stakeholder
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": true}
@@ -13,25 +12,27 @@
     - slot{"name": "the Palatines"}
     - slot{"action_return": true}
     - utter_next_stakeholder
-* stakeholder{"name": "Molly", "quantity": "5", "plural": "singular", "moralstatus": "human"}
+* stakeholder{"name": "Molly", "quantity": "5", "moralstatus": "human"}
     - slot{"name": "Molly"}
     - slot{"moralstatus": "human"}
-    - slot{"plural": "singular"}
     - action_create_stakeholder
     - slot{"amount_stakeholders": 2}
     - slot{"action_return": true}
+    - action_check_identified_name
+    - slot{"action_return": false}
     - utter_ask_identified_name
 * correct
     - action_update_stakeholder
     - slot{"name": "Molly"}
     - slot{"action_return": true}
     - utter_next_stakeholder
-* stakeholder{"name": "Molly", "plural": "singular"}
-    - slot{"plural": "singular"}
+* stakeholder{"name": "Molly"}
     - action_create_stakeholder
     - slot{"moralstatus": null}
     - slot{"amount_stakeholders": 3}
     - slot{"action_return": true}
+    - action_check_identified_name
+    - slot{"action_return": false}
     - utter_ask_identified_name
 * wrong
     - action_update_stakeholder
@@ -195,13 +196,14 @@
 ## Generated Story 7358352807131470407
 * greeting
     - action_intro
-* stakeholder{"name": "Ken", "plural": "singular"}
+* stakeholder{"name": "Ken"}
     - slot{"name": "Ken"}
-    - slot{"plural": "singular"}
     - action_create_stakeholder
     - slot{"moralstatus": null}
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": true}
+    - action_check_identified_name
+    - slot{"action_return": false}
     - utter_ask_identified_name
 * correct
     - action_update_stakeholder
@@ -213,27 +215,26 @@
     - action_update_stakeholder
     - slot{"action_return": true}
     - utter_next_stakeholder
-* stakeholder{"stakeholder": "a patient", "name": "Ken", "plural": "unspecific_plural", "moralstatus": "human"}
+* stakeholdergroup{"stakeholder": "a patient", "name": "Ken", "moralstatus": "human"}
     - slot{"name": "Ken"}
     - slot{"moralstatus": "human"}
-    - slot{"plural": "unspecific_plural"}
     - action_create_stakeholder
     - slot{"amount_stakeholders": 2}
     - slot{"action_return": false}
     - utter_ask_quantity
 * quantity{"quantity": "only one"}
     - action_update_stakeholder
-    - slot{"plural": "singular"}
     - slot{"action_return": true}
+    - action_check_identified_name
+    - slot{"action_return": false}
     - utter_ask_identified_name
 * wrong
     - action_update_stakeholder
     - slot{"name": "Inga"}
     - slot{"action_return": true}
     - utter_next_stakeholder
-* stakeholder{"plural": "unspecific_plural", "moralstatus": "human"}
+* stakeholdergroup{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
-    - slot{"plural": "unspecific_plural"}
     - action_create_stakeholder
     - slot{"amount_stakeholders": 3}
     - slot{"action_return": false}
@@ -242,7 +243,6 @@
     - utter_ask_guess_quantity
 * quantity
     - action_update_stakeholder
-    - slot{"plural": "specific_plural"}
     - slot{"action_return": true}
     - utter_ask_name_plural
 * name
@@ -416,9 +416,8 @@
 ## Generated Story -6025756364314501582
 * greeting
     - action_intro
-* stakeholder{"name": "Tom", "plural": "unspecific_plural"}
+* stakeholdergroup{"name": "Tom"}
     - slot{"name": "Tom"}
-    - slot{"plural": "unspecific_plural"}
     - action_create_stakeholder
     - slot{"moralstatus": null}
     - slot{"amount_stakeholders": 1}
@@ -426,8 +425,9 @@
     - utter_ask_quantity
 * quantity{"quantity": "only one"}
     - action_update_stakeholder
-    - slot{"plural": "singular"}
     - slot{"action_return": true}
+    - action_check_identified_name
+    - slot{"action_return": false}
     - utter_ask_identified_name
 * correct
     - action_update_stakeholder
@@ -439,16 +439,14 @@
     - action_update_stakeholder
     - slot{"action_return": true}
     - utter_next_stakeholder
-* stakeholder{"quantity": "8", "plural": "unspecific_plural", "moralstatus": "human"}
+* stakeholdergroup{"quantity": "8", "moralstatus": "human"}
     - slot{"moralstatus": "human"}
-    - slot{"plural": "unspecific_plural"}
     - action_create_stakeholder
     - slot{"amount_stakeholders": 2}
     - slot{"action_return": true}
     - utter_ask_quantity
 * quantity{"quantity": "8"}
     - action_update_stakeholder
-    - slot{"plural": "specific_plural"}
     - slot{"action_return": true}
     - utter_ask_name_plural
 * name{"quantity": "eight"}
@@ -456,8 +454,7 @@
     - slot{"name": "the Rhinelanders"}
     - slot{"action_return": true}
     - utter_next_stakeholder
-* stakeholder{"plural": "unspecific_plural"}
-    - slot{"plural": "unspecific_plural"}
+* stakeholdergroup
     - action_create_stakeholder
     - slot{"moralstatus": null}
     - slot{"amount_stakeholders": 3}
@@ -478,7 +475,7 @@
     - action_update_stakeholder
     - slot{"action_return": true}
     - utter_next_stakeholder
-* stakeholder{"quantity": "One", "name": "Tom", "deed": "kill him"}
+* stakeholdergroup{"quantity": "One", "name": "Tom", "deed": "kill him"}
     - slot{"name": "Tom"}
     - slot{"deed": "kill him"}
     - action_create_stakeholder
@@ -488,8 +485,9 @@
     - utter_ask_quantity
 * quantity{"quantity": "only one"}
     - action_update_stakeholder
-    - slot{"plural": "singular"}
     - slot{"action_return": true}
+    - action_check_identified_name
+    - slot{"action_return": false}
     - utter_ask_identified_name
 * wrong
     - action_update_stakeholder
@@ -501,14 +499,15 @@
     - action_update_stakeholder
     - slot{"action_return": true}
     - utter_next_stakeholder
-* stakeholder{"deed": "kill", "name": "Tom", "plural": "singular"}
+* stakeholder{"deed": "kill", "name": "Tom"}
     - slot{"name": "Tom"}
     - slot{"deed": "kill"}
-    - slot{"plural": "singular"}
     - action_create_stakeholder
     - slot{"moralstatus": null}
     - slot{"amount_stakeholders": 5}
     - slot{"action_return": true}
+    - action_check_identified_name
+    - slot{"action_return": false}
     - utter_ask_identified_name
 * wrong
     - action_update_stakeholder
@@ -714,13 +713,14 @@
 ## Generated Story -5384821882511551639
 * greeting
     - action_intro
-* stakeholder{"name": "Mary", "plural": "singular"}
+* stakeholder{"name": "Mary"}
     - slot{"name": "Mary"}
-    - slot{"plural": "singular"}
     - action_create_stakeholder
     - slot{"moralstatus": null}
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": true}
+    - action_check_identified_name
+    - slot{"action_return": false}
     - utter_ask_identified_name
 * correct
     - action_update_stakeholder
@@ -732,26 +732,28 @@
     - action_update_stakeholder
     - slot{"action_return": true}
     - utter_next_stakeholder
-* stakeholder{"stakeholder": "a", "name": "Mary", "plural": "singular", "moralstatus": "human"}
+* stakeholder{"stakeholder": "a", "name": "Mary", "moralstatus": "human"}
     - slot{"name": "Mary"}
     - slot{"moralstatus": "human"}
-    - slot{"plural": "singular"}
     - action_create_stakeholder
     - slot{"amount_stakeholders": 2}
     - slot{"action_return": true}
+    - action_check_identified_name
+    - slot{"action_return": false}
     - utter_ask_identified_name
 * wrong
     - action_update_stakeholder
     - slot{"name": "Samuel"}
     - slot{"action_return": true}
     - utter_next_stakeholder
-* stakeholder{"name": "Samuels", "plural": "singular"}
+* stakeholder{"name": "Samuels"}
     - slot{"name": "Samuels"}
-    - slot{"plural": "singular"}
     - action_create_stakeholder
     - slot{"moralstatus": null}
     - slot{"amount_stakeholders": 3}
     - slot{"action_return": true}
+    - action_check_identified_name
+    - slot{"action_return": false}
     - utter_ask_identified_name
 * wrong
     - action_update_stakeholder
@@ -763,8 +765,7 @@
     - action_update_stakeholder
     - slot{"action_return": true}
     - utter_next_stakeholder
-* stakeholder{"quantity": "7", "name": "Samuel", "plural": "singular"}
-    - slot{"plural": "singular"}
+* stakeholder{"quantity": "7", "name": "Samuel"}
     - action_create_stakeholder
     - slot{"moralstatus": null}
     - slot{"amount_stakeholders": 4}
@@ -969,27 +970,26 @@
 ## Generated Story 3846139624378699522
 * greeting
     - action_intro
-* stakeholder{"stakeholder": "the first person", "name": "Jane", "quantity": "two", "plural": "unspecific_plural", "moralstatus": "human"}
+* stakeholdergroup{"stakeholder": "the first person", "name": "Jane", "quantity": "two", "moralstatus": "human"}
     - slot{"name": "Jane"}
     - slot{"moralstatus": "human"}
-    - slot{"plural": "unspecific_plural"}
     - action_create_stakeholder
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": true}
     - utter_ask_quantity
 * quantity{"quantity": "only one"}
     - action_update_stakeholder
-    - slot{"plural": "singular"}
     - slot{"action_return": true}
+    - action_check_identified_name
+    - slot{"action_return": false}
     - utter_ask_identified_name
 * correct
     - action_update_stakeholder
     - slot{"name": "Jane"}
     - slot{"action_return": true}
     - utter_next_stakeholder
-* stakeholder{"stakeholder": "a group of other people", "plural": "unspecific_plural", "moralstatus": "human"}
+* stakeholdergroup{"stakeholder": "a group of other people", "moralstatus": "human"}
     - slot{"moralstatus": "human"}
-    - slot{"plural": "unspecific_plural"}
     - action_create_stakeholder
     - slot{"amount_stakeholders": 2}
     - slot{"action_return": false}
@@ -998,7 +998,6 @@
     - utter_ask_guess_quantity
 * quantity{"quantity": "10"}
     - action_update_stakeholder
-    - slot{"plural": "specific_plural"}
     - slot{"action_return": true}
     - utter_ask_name_plural
 * name
@@ -1006,13 +1005,14 @@
     - slot{"name": "the Swabians"}
     - slot{"action_return": true}
     - utter_next_stakeholder
-* stakeholder{"name": "Jane", "plural": "singular"}
+* stakeholder{"name": "Jane"}
     - slot{"name": "Jane"}
-    - slot{"plural": "singular"}
     - action_create_stakeholder
     - slot{"moralstatus": null}
     - slot{"amount_stakeholders": 3}
     - slot{"action_return": true}
+    - action_check_identified_name
+    - slot{"action_return": false}
     - utter_ask_identified_name
 * wrong
     - action_update_stakeholder
@@ -1024,8 +1024,7 @@
     - action_update_stakeholder
     - slot{"action_return": true}
     - utter_next_stakeholder
-* stakeholder{"plural": "unspecific_plural"}
-    - slot{"plural": "unspecific_plural"}
+* stakeholdergroup
     - action_create_stakeholder
     - slot{"moralstatus": null}
     - slot{"amount_stakeholders": 4}
@@ -1033,7 +1032,6 @@
     - utter_ask_quantity
 * quantity{"quantity": "about 5"}
     - action_update_stakeholder
-    - slot{"plural": "specific_plural"}
     - slot{"action_return": true}
     - utter_ask_name_plural
 * name
@@ -1219,21 +1217,21 @@
 ## Generated Story 1277434377440136980
 * greeting
     - action_intro
-* stakeholder{"name": "Mark", "stakeholder": "a crewperson", "plural": "singular", "moralstatus": "human"}
+* stakeholder{"name": "Mark", "stakeholder": "a crewperson", "moralstatus": "human"}
     - slot{"name": "mark"}
     - slot{"moralstatus": "human"}
-    - slot{"plural": "singular"}
     - action_create_stakeholder
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": true}
+    - action_check_identified_name
+    - slot{"action_return": false}
     - utter_ask_identified_name
 * correct
     - action_update_stakeholder
     - slot{"name": "mark"}
     - slot{"action_return": true}
     - utter_next_stakeholder
-* stakeholder{"stakeholder": "a group", "plural": "unspecific_plural"}
-    - slot{"plural": "unspecific_plural"}
+* stakeholdergroup{"stakeholder": "a group"}
     - action_create_stakeholder
     - slot{"moralstatus": null}
     - slot{"amount_stakeholders": 2}
@@ -1241,7 +1239,6 @@
     - utter_ask_quantity
 * quantity{"quantity": "6"}
     - action_update_stakeholder
-    - slot{"plural": "specific_plural"}
     - slot{"action_return": true}
     - utter_ask_name_plural
 * name
@@ -1254,8 +1251,7 @@
     - action_update_stakeholder
     - slot{"action_return": true}
     - utter_next_stakeholder
-* stakeholder{"quantity": "One", "plural": "singular"}
-    - slot{"plural": "singular"}
+* stakeholder{"quantity": "One"}
     - action_create_stakeholder
     - slot{"moralstatus": null}
     - slot{"amount_stakeholders": 3}
@@ -1470,16 +1466,14 @@
 ## Generated Story 5601750309873569494
 * greeting
     - action_intro
-* stakeholder{"quantity": "5", "plural": "unspecific_plural", "moralstatus": "human"}
+* stakeholdergroup{"quantity": "5", "moralstatus": "human"}
     - slot{"moralstatus": "human"}
-    - slot{"plural": "unspecific_plural"}
     - action_create_stakeholder
     - slot{"amount_stakeholders": 2}
     - slot{"action_return": true}
     - utter_ask_quantity
 * quantity{"quantity": "5"}
     - action_update_stakeholder
-    - slot{"plural": "specific_plural"}
     - slot{"action_return": true}
     - utter_ask_name_plural
 * name
@@ -1487,26 +1481,25 @@
     - slot{"name": "the Swabians"}
     - slot{"action_return": true}
     - utter_next_stakeholder
-* stakeholder{"name": "Molly", "quantity": "5", "plural": "unspecific_plural", "moralstatus": "human"}
+* stakeholdergroup{"name": "Molly", "quantity": "5", "moralstatus": "human"}
     - slot{"name": "molly"}
     - slot{"moralstatus": "human"}
-    - slot{"plural": "unspecific_plural"}
     - action_create_stakeholder
     - slot{"amount_stakeholders": 3}
     - slot{"action_return": true}
     - utter_ask_quantity
 * quantity{"quantity": "only one"}
     - action_update_stakeholder
-    - slot{"plural": "singular"}
     - slot{"action_return": true}
+    - action_check_identified_name
+    - slot{"action_return": false}
     - utter_ask_identified_name
 * correct
     - action_update_stakeholder
     - slot{"name": "molly"}
     - slot{"action_return": true}
     - utter_next_stakeholder
-* stakeholder{"plural": "singular"}
-    - slot{"plural": "singular"}
+* stakeholder
     - action_create_stakeholder
     - slot{"moralstatus": null}
     - slot{"amount_stakeholders": 4}
@@ -1529,16 +1522,14 @@
 ## Generated Story -8606621332840856950
 * greeting
     - action_intro
-* stakeholder{"quantity": "5", "plural": "unspecific_plural", "moralstatus": "human"}
+* stakeholdergroup{"quantity": "5", "moralstatus": "human"}
     - slot{"moralstatus": "human"}
-    - slot{"plural": "unspecific_plural"}
     - action_create_stakeholder
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": true}
     - utter_ask_quantity
 * quantity{"stakeholder": "five persons", "quantity": "5"}
     - action_update_stakeholder
-    - slot{"plural": "specific_plural"}
     - slot{"action_return": true}
     - utter_ask_name_plural
 * name
@@ -1546,13 +1537,14 @@
     - slot{"name": "the Palatines"}
     - slot{"action_return": true}
     - utter_next_stakeholder
-* stakeholder{"name": "Molly", "plural": "singular"}
+* stakeholder{"name": "Molly"}
     - slot{"name": "molly"}
-    - slot{"plural": "singular"}
     - action_create_stakeholder
     - slot{"moralstatus": null}
     - slot{"amount_stakeholders": 2}
     - slot{"action_return": true}
+    - action_check_identified_name
+    - slot{"action_return": false}
     - utter_ask_identified_name
 * correct
     - action_update_stakeholder
@@ -1564,8 +1556,7 @@
     - action_update_stakeholder
     - slot{"action_return": true}
     - utter_next_stakeholder
-* stakeholder{"plural": "singular"}
-    - slot{"plural": "singular"}
+* stakeholder
     - action_create_stakeholder
     - slot{"moralstatus": null}
     - slot{"amount_stakeholders": 3}
@@ -1756,21 +1747,21 @@
 ## Generated Story 5900225719431929188
 * greeting
     - action_intro
-* stakeholder{"name": "Heather", "quantity": "four", "plural": "singular", "moralstatus": "human"}
+* stakeholder{"name": "Heather", "quantity": "four", "moralstatus": "human"}
     - slot{"name": "heather"}
     - slot{"moralstatus": "human"}
-    - slot{"plural": "singular"}
     - action_create_stakeholder
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": true}
+    - action_check_identified_name
+    - slot{"action_return": false}
     - utter_ask_identified_name
 * correct
     - action_update_stakeholder
     - slot{"name": "heather"}
     - slot{"action_return": true}
     - utter_next_stakeholder
-* stakeholder{"quantity": "two", "plural": "singular"}
-    - slot{"plural": "singular"}
+* stakeholder{"quantity": "two"}
     - action_create_stakeholder
     - slot{"moralstatus": null}
     - slot{"amount_stakeholders": 2}
@@ -1786,8 +1777,7 @@
     - action_update_stakeholder
     - slot{"action_return": true}
     - utter_next_stakeholder
-* stakeholder{"quantity": "One", "plural": "singular"}
-    - slot{"plural": "singular"}
+* stakeholder{"quantity": "One"}
     - action_create_stakeholder
     - slot{"moralstatus": null}
     - slot{"amount_stakeholders": 3}
@@ -1970,13 +1960,14 @@
 ## Generated Story -5279776952862841305
 * greeting
     - action_intro
-* stakeholder{"name": "Doug", "plural": "singular"}
+* stakeholder{"name": "Doug"}
     - slot{"name": "Doug"}
-    - slot{"plural": "singular"}
     - action_create_stakeholder
     - slot{"moralstatus": null}
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": true}
+    - action_check_identified_name
+    - slot{"action_return": false}
     - utter_ask_identified_name
 * correct
     - action_update_stakeholder
@@ -1988,16 +1979,14 @@
     - action_update_stakeholder
     - slot{"action_return": true}
     - utter_next_stakeholder
-* stakeholder{"plural": "unspecific_plural", "moralstatus": "human"}
+* stakeholdergroup{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
-    - slot{"plural": "unspecific_plural"}
     - action_create_stakeholder
     - slot{"amount_stakeholders": 2}
     - slot{"action_return": false}
     - utter_ask_quantity
 * quantity{"quantity": "About 20"}
     - action_update_stakeholder
-    - slot{"plural": "specific_plural"}
     - slot{"action_return": true}
     - utter_ask_name_plural
 * dontknow
@@ -2010,6 +1999,8 @@
     - action_create_stakeholder
     - slot{"moralstatus": null}
     - slot{"amount_stakeholders": 3}
+    - slot{"action_return": false}
+    - action_check_identified_name
     - slot{"action_return": false}
     - utter_ask_identified_name
 * wrong
@@ -2232,8 +2223,7 @@
 ## Generated Story 7321710744913522518
 * greeting
     - action_intro
-* stakeholder{"name": "Carrie", "plural": "singular"}
-    - slot{"plural": "singular"}
+* stakeholder{"name": "Carrie"}
     - action_create_stakeholder
     - slot{"moralstatus": null}
     - slot{"amount_stakeholders": 1}
@@ -2250,9 +2240,8 @@
     - action_update_stakeholder
     - slot{"action_return": true}
     - utter_next_stakeholder
-* stakeholder{"stakeholder": "four of her patients", "deed": "kill the four", "quantity": "four", "plural": "specific_plural"}
+* stakeholdergroup{"stakeholder": "four of her patients", "deed": "kill the four", "quantity": "four"}
     - slot{"deed": "kill the four"}
-    - slot{"plural": "specific_plural"}
     - action_create_stakeholder
     - slot{"moralstatus": null}
     - slot{"amount_stakeholders": 2}
@@ -2268,8 +2257,7 @@
     - action_update_stakeholder
     - slot{"action_return": true}
     - utter_next_stakeholder
-* stakeholder{"quantity": "one", "plural": "singular"}
-    - slot{"plural": "singular"}
+* stakeholder{"quantity": "one"}
     - action_create_stakeholder
     - slot{"moralstatus": null}
     - slot{"amount_stakeholders": 3}
@@ -2437,8 +2425,7 @@
 ## Generated Story -8888859435742633065
 * greeting
     - action_intro
-* stakeholder{"plural": "singular"}
-    - slot{"plural": "singular"}
+* stakeholder
     - action_create_stakeholder
     - slot{"moralstatus": null}
     - slot{"amount_stakeholders": 1}
@@ -2454,13 +2441,14 @@
     - action_update_stakeholder
     - slot{"action_return": true}
     - utter_next_stakeholder
-* stakeholder{"name": "Inga", "plural": "singular"}
+* stakeholder{"name": "Inga"}
     - slot{"name": "Inga"}
-    - slot{"plural": "singular"}
     - action_create_stakeholder
     - slot{"moralstatus": null}
     - slot{"amount_stakeholders": 2}
     - slot{"action_return": true}
+    - action_check_identified_name
+    - slot{"action_return": false}
     - utter_ask_identified_name
 * wrong
     - action_update_stakeholder
@@ -2472,13 +2460,14 @@
     - action_update_stakeholder
     - slot{"action_return": true}
     - utter_next_stakeholder
-* stakeholder{"name": "Carla", "plural": "singular"}
+* stakeholder{"name": "Carla"}
     - slot{"name": "Carla"}
-    - slot{"plural": "singular"}
     - action_create_stakeholder
     - slot{"moralstatus": null}
     - slot{"amount_stakeholders": 3}
     - slot{"action_return": true}
+    - action_check_identified_name
+    - slot{"action_return": false}
     - utter_ask_identified_name
 * wrong
     - action_update_stakeholder
@@ -2652,8 +2641,7 @@
 ## Generated Story 7740751080933251549
 * greeting
     - action_intro
-* stakeholder{"plural": "singular"}
-    - slot{"plural": "singular"}
+* stakeholder
     - action_create_stakeholder
     - slot{"moralstatus": null}
     - slot{"amount_stakeholders": 1}
@@ -2669,8 +2657,7 @@
     - action_update_stakeholder
     - slot{"action_return": true}
     - utter_next_stakeholder
-* stakeholder{"plural": "singular"}
-    - slot{"plural": "singular"}
+* stakeholder
     - action_create_stakeholder
     - slot{"moralstatus": null}
     - slot{"amount_stakeholders": 2}
@@ -2686,9 +2673,8 @@
     - action_update_stakeholder
     - slot{"action_return": true}
     - utter_next_stakeholder
-* stakeholder{"stakeholder": "a man", "plural": "singular", "moralstatus": "human"}
+* stakeholder{"stakeholder": "a man", "moralstatus": "human"}
     - slot{"moralstatus": "human"}
-    - slot{"plural": "singular"}
     - action_create_stakeholder
     - slot{"amount_stakeholders": 3}
     - slot{"action_return": true}
@@ -2852,9 +2838,8 @@
 ## Generated Story 1978581040960796565
 * greeting
     - action_intro
-* stakeholder{"plural": "singular", "moralstatus": "human"}
+* stakeholder{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
-    - slot{"plural": "singular"}
     - action_create_stakeholder
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": true}
@@ -2865,13 +2850,14 @@
     - slot{"name": "mark"}
     - slot{"action_return": true}
     - utter_next_stakeholder
-* stakeholder{"name": "mark", "plural": "singular"}
+* stakeholder{"name": "mark"}
     - slot{"name": "mark"}
-    - slot{"plural": "singular"}
     - action_create_stakeholder
     - slot{"moralstatus": null}
     - slot{"amount_stakeholders": 2}
     - slot{"action_return": true}
+    - action_check_identified_name
+    - slot{"action_return": false}
     - utter_ask_identified_name
 * wrong
     - action_update_stakeholder
@@ -2883,13 +2869,14 @@
     - action_update_stakeholder
     - slot{"action_return": true}
     - utter_next_stakeholder
-* stakeholder{"name": "Mark", "plural": "singular"}
+* stakeholder{"name": "Mark"}
     - slot{"name": "Mark"}
-    - slot{"plural": "singular"}
     - action_create_stakeholder
     - slot{"moralstatus": null}
     - slot{"amount_stakeholders": 3}
     - slot{"action_return": true}
+    - action_check_identified_name
+    - slot{"action_return": false}
     - utter_ask_identified_name
 * wrong
     - action_update_stakeholder
@@ -3040,9 +3027,8 @@
 ## Generated Story -7493447606517739501
 * greeting
     - action_intro
-* stakeholder{"stakeholder": "a group of five people", "quantity": "5", "plural": "specific_plural", "moralstatus": "human"}
+* stakeholdergroup{"stakeholder": "a group of five people", "quantity": "5", "moralstatus": "human"}
     - slot{"moralstatus": "human"}
-    - slot{"plural": "specific_plural"}
     - action_create_stakeholder
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": true}
@@ -3052,16 +3038,14 @@
     - slot{"name": "the Rhinelanders"}
     - slot{"action_return": true}
     - utter_next_stakeholder
-* stakeholder{"plural": "unspecific_plural", "moralstatus": "human"}
+* stakeholdergroup{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
-    - slot{"plural": "unspecific_plural"}
     - action_create_stakeholder
     - slot{"amount_stakeholders": 2}
     - slot{"action_return": false}
     - utter_ask_quantity
 * quantity{"quantity": "only one"}
     - action_update_stakeholder
-    - slot{"plural": "singular"}
     - slot{"action_return": true}
     - utter_ask_name_singular
 * name{"name": "carla"}
@@ -3079,8 +3063,7 @@
     - slot{"decider": "the Rhinelanders"}
     - slot{"action_return": true}
     - utter_ask_options
-* stakeholder{"quantity": "one", "plural": "singular"}
-    - slot{"plural": "singular"}
+* stakeholder{"quantity": "one"}
     - action_create_option
     - slot{"deed": null}
     - slot{"option": 3}
@@ -3195,16 +3178,14 @@
 ## Generated Story 599148369303593516
 * greeting
     - action_intro
-* stakeholder{"stakeholder": "a person", "plural": "unspecific_plural", "moralstatus": "human"}
+* stakeholdergroup{"stakeholder": "a person", "moralstatus": "human"}
     - slot{"moralstatus": "human"}
-    - slot{"plural": "unspecific_plural"}
     - action_create_stakeholder
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": false}
     - utter_ask_quantity
 * quantity{"quantity": "one"}
     - action_update_stakeholder
-    - slot{"plural": "singular"}
     - slot{"action_return": true}
     - utter_ask_name_singular
 * deny
@@ -3212,8 +3193,7 @@
     - slot{"name": "Inga"}
     - slot{"action_return": true}
     - utter_next_stakeholder
-* stakeholder{"quantity": "7", "plural": "singular"}
-    - slot{"plural": "singular"}
+* stakeholder{"quantity": "7"}
     - action_create_stakeholder
     - slot{"moralstatus": null}
     - slot{"amount_stakeholders": 2}
@@ -3229,8 +3209,7 @@
     - action_update_stakeholder
     - slot{"action_return": true}
     - utter_next_stakeholder
-* stakeholder{"quantity": "7", "plural": "singular"}
-    - slot{"plural": "singular"}
+* stakeholder{"quantity": "7"}
     - action_create_stakeholder
     - slot{"moralstatus": null}
     - slot{"amount_stakeholders": 3}
@@ -3372,8 +3351,7 @@
 ## Generated Story -2022503381031583469
 * greeting
     - action_intro
-* stakeholder{"plural": "unspecific_plural"}
-    - slot{"plural": "unspecific_plural"}
+* stakeholdergroup
     - action_create_stakeholder
     - slot{"moralstatus": null}
     - slot{"amount_stakeholders": 1}
@@ -3381,7 +3359,6 @@
     - utter_ask_quantity
 * quantity{"quantity": "only one"}
     - action_update_stakeholder
-    - slot{"plural": "singular"}
     - slot{"action_return": true}
     - utter_ask_name_singular
 * name{"name": "Carl"}
@@ -3411,9 +3388,8 @@
     - action_update_stakeholder
     - slot{"action_return": true}
     - utter_next_stakeholder
-* stakeholder{"plural": "singular", "moralstatus": "animal"}
+* stakeholder{"moralstatus": "animal"}
     - slot{"moralstatus": "animal"}
-    - slot{"plural": "singular"}
     - action_create_stakeholder
     - slot{"amount_stakeholders": 3}
     - slot{"action_return": true}
@@ -3587,16 +3563,14 @@
 ## Generated Story -8382762037602468367
 * greeting
     - action_intro
-* stakeholder{"plural": "unspecific_plural", "moralstatus": "human"}
+* stakeholdergroup{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
-    - slot{"plural": "unspecific_plural"}
     - action_create_stakeholder
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": false}
     - utter_ask_quantity
 * quantity{"stakeholder": "one person", "quantity": "one"}
     - action_update_stakeholder
-    - slot{"plural": "singular"}
     - slot{"action_return": true}
     - utter_ask_name_singular
 * deny
@@ -3604,9 +3578,8 @@
     - slot{"name": "Olga"}
     - slot{"action_return": true}
     - utter_next_stakeholder
-* stakeholder{"quantity": "Hundreds", "plural": "unspecific_plural", "moralstatus": "human"}
+* stakeholdergroup{"quantity": "Hundreds", "moralstatus": "human"}
     - slot{"moralstatus": "human"}
-    - slot{"plural": "unspecific_plural"}
     - action_create_stakeholder
     - slot{"amount_stakeholders": 2}
     - slot{"action_return": false}
@@ -3615,7 +3588,6 @@
     - utter_ask_guess_quantity
 * quantity{"quantity": "500"}
     - action_update_stakeholder
-    - slot{"plural": "specific_plural"}
     - slot{"action_return": true}
     - utter_ask_name_plural
 * deny
@@ -3642,8 +3614,7 @@
 * deny
     - utter_confirm_stakeholders
     - action_choose_decider
-* decider{"plural": "singular"}
-    - slot{"plural": "singular"}
+* decider
     - action_create_stakeholder
     - slot{"moralstatus": null}
     - slot{"amount_stakeholders": 4}
@@ -3784,9 +3755,8 @@
 ## Generated Story -7566024354162496183
 * greeting
     - action_intro
-* stakeholder{"stakeholder": "a person", "plural": "singular", "moralstatus": "human"}
+* stakeholder{"stakeholder": "a person", "moralstatus": "human"}
     - slot{"moralstatus": "human"}
-    - slot{"plural": "singular"}
     - action_create_stakeholder
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": true}
@@ -3796,8 +3766,7 @@
     - slot{"name": "Lars"}
     - slot{"action_return": true}
     - utter_next_stakeholder
-* stakeholder{"stakeholder": "a group of passengers", "plural": "unspecific_plural"}
-    - slot{"plural": "unspecific_plural"}
+* stakeholdergroup{"stakeholder": "a group of passengers"}
     - action_create_stakeholder
     - slot{"moralstatus": null}
     - slot{"amount_stakeholders": 2}
@@ -3805,7 +3774,6 @@
     - utter_ask_quantity
 * quantity{"quantity": "9"}
     - action_update_stakeholder
-    - slot{"plural": "specific_plural"}
     - slot{"action_return": true}
     - utter_ask_name_plural
 * name{"stakeholder": "the passengers"}
@@ -3960,16 +3928,14 @@
 ## Generated Story -2566483661797900972
 * greeting
     - action_intro
-* decider{"plural": "unspecific_plural", "moralstatus": "human"}
+* decider{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
-    - slot{"plural": "unspecific_plural"}
     - action_create_stakeholder
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": false}
     - utter_ask_quantity
 * quantity{"quantity": "1"}
     - action_update_stakeholder
-    - slot{"plural": "singular"}
     - slot{"action_return": true}
     - utter_ask_name_singular
 * name{"stakeholder": "the captain"}
@@ -3978,9 +3944,8 @@
     - slot{"name": "the captain"}
     - slot{"action_return": true}
     - utter_next_stakeholder
-* stakeholder{"stakeholder": "30 people", "quantity": "7", "plural": "specific_plural", "moralstatus": "human"}
+* stakeholdergroup{"stakeholder": "30 people", "quantity": "7", "moralstatus": "human"}
     - slot{"moralstatus": "human"}
-    - slot{"plural": "specific_plural"}
     - action_create_stakeholder
     - slot{"amount_stakeholders": 2}
     - slot{"action_return": true}
@@ -4120,8 +4085,7 @@
 ## Generated Story -6641505184854451966
 * greeting
     - action_intro
-* stakeholder{"plural": "singular"}
-    - slot{"plural": "singular"}
+* stakeholder
     - action_create_stakeholder
     - slot{"moralstatus": null}
     - slot{"amount_stakeholders": 1}
@@ -4156,16 +4120,14 @@
     - action_update_stakeholder
     - slot{"action_return": true}
     - utter_next_stakeholder
-* stakeholder{"plural": "unspecific_plural", "moralstatus": "human"}
+* stakeholdergroup{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
-    - slot{"plural": "unspecific_plural"}
     - action_create_stakeholder
     - slot{"amount_stakeholders": 3}
     - slot{"action_return": false}
     - utter_ask_quantity
 * quantity
     - action_update_stakeholder
-    - slot{"plural": "singular"}
     - slot{"action_return": true}
     - utter_ask_name_singular
 * name{"stakeholder": "the child"}
@@ -4176,8 +4138,7 @@
 * deny
     - utter_confirm_stakeholders
     - action_choose_decider
-* decider{"plural": "singular"}
-    - slot{"plural": "singular"}
+* decider
     - action_create_stakeholder
     - slot{"moralstatus": null}
     - slot{"amount_stakeholders": 4}
@@ -4351,9 +4312,8 @@
 ## Generated Story -369197456957833744
 * greeting
     - action_intro
-* stakeholder{"stakeholder": "one person", "plural": "singular", "moralstatus": "human"}
+* stakeholder{"stakeholder": "one person", "moralstatus": "human"}
     - slot{"moralstatus": "human"}
-    - slot{"plural": "singular"}
     - action_create_stakeholder
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": true}
@@ -4363,16 +4323,14 @@
     - slot{"name": "Greta"}
     - slot{"action_return": true}
     - utter_next_stakeholder
-* stakeholder{"quantity": "150", "plural": "unspecific_plural", "moralstatus": "human"}
+* stakeholdergroup{"quantity": "150", "moralstatus": "human"}
     - slot{"moralstatus": "human"}
-    - slot{"plural": "unspecific_plural"}
     - action_create_stakeholder
     - slot{"amount_stakeholders": 2}
     - slot{"action_return": true}
     - utter_ask_quantity
 * quantity{"quantity": "150"}
     - action_update_stakeholder
-    - slot{"plural": "specific_plural"}
     - slot{"action_return": true}
     - utter_ask_name_plural
 * name
@@ -4380,9 +4338,8 @@
     - slot{"name": "the Palatines"}
     - slot{"action_return": true}
     - utter_next_stakeholder
-* stakeholder{"stakeholder": "a lot of people", "plural": "unspecific_plural", "moralstatus": "human"}
+* stakeholdergroup{"stakeholder": "a lot of people", "moralstatus": "human"}
     - slot{"moralstatus": "human"}
-    - slot{"plural": "unspecific_plural"}
     - action_create_stakeholder
     - slot{"amount_stakeholders": 3}
     - slot{"action_return": false}
@@ -4391,7 +4348,6 @@
     - utter_ask_guess_quantity
 * quantity{"quantity": "200"}
     - action_update_stakeholder
-    - slot{"plural": "specific_plural"}
     - slot{"action_return": true}
     - utter_ask_name_plural
 * deny
@@ -4511,6 +4467,380 @@
 * quantity{"quantity": "75"}
     - action_update_consequence
     - slot{"action_return": true}
+    - utter_next_consequence
+* deny
+    - utter_next_option
+* deny
+    - utter_got_everything
+    - utter_ask_method
+
+## Generated Story 6080478534332002306
+* greeting
+    - action_intro
+* stakeholder{"name": "tom"}
+    - slot{"name": "tom"}
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 1}
+    - slot{"action_return": false}
+    - action_check_identified_name
+    - slot{"action_return": false}
+    - utter_ask_identified_name
+* correct
+    - action_update_stakeholder
+    - slot{"name": "tom"}
+    - slot{"action_return": true}
+    - utter_ask_moral_status
+* moralstatus{"moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* stakeholder{"stakeholder": "tom's wife"}
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 3}
+    - slot{"action_return": true}
+    - utter_ask_name_singular
+* name{"name": "tom"}
+    - slot{"name": "tom"}
+    - action_update_stakeholder
+    - slot{"name": "tom"}
+    - slot{"action_return": true}
+    - utter_ask_moral_status
+* moralstatus{"moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* deny
+    - utter_confirm_stakeholders
+    - action_choose_decider
+
+## Generated Story -6408575720604844768
+* greeting
+    - action_intro
+* stakeholder{"name": "jane"}
+    - slot{"name": "jane"}
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 1}
+    - slot{"action_return": true}
+    - action_check_identified_name
+    - slot{"action_return": false}
+    - utter_ask_identified_name
+* correct
+    - action_update_stakeholder
+    - slot{"name": "jane"}
+    - slot{"action_return": true}
+    - utter_ask_moral_status
+* moralstatus{"moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* stakeholder{"name": "jane"}
+    - slot{"name": "jane"}
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 2}
+    - slot{"action_return": true}
+    - action_check_identified_name
+    - slot{"action_return": true}
+    - utter_ask_name_singular
+* name{"name": "jane"}
+    - slot{"name": "jane"}
+    - action_update_stakeholder
+    - slot{"name": "jane"}
+    - slot{"action_return": true}
+    - utter_ask_moral_status
+* moralstatus{"moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* deny
+    - utter_confirm_stakeholders
+    - action_choose_decider
+* decider{"name": "jane"}
+    - slot{"name": "jane"}
+    - action_update_stakeholder
+    - slot{"decider": "jane"}
+    - slot{"action_return": true}
+    - utter_ask_options
+* option{"deed": "hand over the antidote"}
+    - slot{"deed": "hand over the antidote"}
+    - action_create_option
+    - slot{"deed": "hand over the antidote"}
+    - slot{"option": 3}
+    - slot{"action_return": true}
+    - utter_ask_identified_deed
+* correct
+    - action_create_deed
+    - slot{"action_return": true}
+    - utter_ask_universalizable
+* wrong
+    - action_update_deed
+    - slot{"action_return": true}
+    - utter_ask_inherent_evil
+* deny
+    - action_update_deed
+    - slot{"deed": null}
+    - slot{"action_return": true}
+    - utter_next_deed
+* dontknow
+    - utter_ask_consequences
+* consequence{"sentiment": "pos"}
+    - slot{"sentiment": "pos"}
+    - action_create_consequence
+    - slot{"name": null}
+    - slot{"action_return": false}
+    - action_choose_affected_stakeholder
+* consequence{"name": "jane"}
+    - slot{"name": "jane"}
+    - action_create_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact_positive
+* correct
+    - utter_ask_impact_weight
+* quantity{"quantity": "8"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_consequence_definite
+* correct
+    - utter_next_consequence
+* consequence{"name": "jane", "sentiment": "neu"}
+    - slot{"name": "jane"}
+    - slot{"sentiment": "neu"}
+    - action_create_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact
+* negative
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact_weight
+* quantity{"quantity": "2"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_consequence_definite
+* correct
+    - utter_next_consequence
+* deny
+    - utter_next_option
+* option{"deed": "refuse to give the antidote"}
+    - slot{"deed": "refuse to give the antidote"}
+    - action_create_option
+    - slot{"deed": "refuse to give the antidote"}
+    - slot{"option": 7}
+    - slot{"action_return": true}
+    - utter_ask_identified_deed
+* correct
+    - action_create_deed
+    - slot{"action_return": true}
+    - utter_ask_universalizable
+* wrong
+    - action_update_deed
+    - slot{"action_return": true}
+    - utter_ask_inherent_evil
+* affirm
+    - action_update_deed
+    - slot{"deed": null}
+    - slot{"action_return": true}
+    - utter_next_deed
+* deny
+    - utter_ask_consequences
+* consequence{"name": "jane"}
+    - slot{"name": "jane"}
+    - action_create_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact
+* negative
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact_weight
+* quantity{"quantity": "10"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_consequence_definite
+* correct
+    - utter_next_consequence
+* deny
+    - utter_next_option
+* deny
+    - utter_got_everything
+    - utter_ask_method
+* utilitarism
+    - action_evaluation_utilitarism
+    - utter_next_method
+* affirm
+    - utter_ask_method
+* deontology
+    - action_evaluation_deontology
+    - utter_next_method
+
+## Generated Story -4965336235294374691
+* greeting
+    - action_intro
+* stakeholder
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 1}
+    - slot{"action_return": true}
+    - utter_ask_name_singular
+* name
+    - action_update_stakeholder
+    - slot{"name": "Yves"}
+    - slot{"action_return": true}
+    - utter_ask_moral_status
+* moralstatus{"moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* stakeholdergroup{"stakeholder": "five patients"}
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 2}
+    - slot{"action_return": true}
+    - utter_ask_name_plural
+* name{"stakeholder": "the patients"}
+    - action_update_stakeholder
+    - slot{"name": "the patients"}
+    - slot{"action_return": true}
+    - utter_ask_moral_status
+* moralstatus{"moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* stakeholder{"stakeholder": "a"}
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 3}
+    - slot{"action_return": true}
+    - utter_ask_name_singular
+* dontknow
+    - action_update_stakeholder
+    - slot{"name": "Glenn"}
+    - slot{"action_return": true}
+    - utter_ask_moral_status
+* moralstatus{"moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* deny
+    - utter_confirm_stakeholders
+    - action_choose_decider
+* /decider
+    - action_update_stakeholder
+    - slot{"action_return": false}
+    - utter_ask_options
+* option{"quantity": "5"}
+    - action_create_option
+    - slot{"deed": null}
+    - slot{"option": 4}
+    - slot{"action_return": true}
+    - utter_ask_deed
+* deed{"deed": "letting glenn die"}
+    - slot{"deed": "letting glenn die"}
+    - action_create_deed
+    - slot{"action_return": true}
+    - utter_ask_universalizable
+* wrong
+    - action_update_deed
+    - slot{"action_return": true}
+    - utter_ask_inherent_evil
+* affirm
+    - action_update_deed
+    - slot{"deed": null}
+    - slot{"action_return": true}
+    - utter_next_deed
+* deed{"deed": "saving the lives", "quantity": "5"}
+    - slot{"deed": "saving the lives"}
+    - action_create_deed
+    - slot{"action_return": true}
+    - utter_ask_universalizable
+* correct
+    - action_update_deed
+    - slot{"deed": null}
+    - slot{"action_return": true}
+    - utter_next_deed
+* deny
+    - utter_ask_consequences
+* consequence{"sentiment": "pos"}
+    - slot{"sentiment": "pos"}
+    - action_create_consequence
+    - slot{"name": null}
+    - slot{"action_return": false}
+    - action_choose_affected_stakeholder
+* consequence{"name": "the patients"}
+    - slot{"name": "the patients"}
+    - action_create_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact_positive
+* correct
+    - utter_ask_impact_weight
+* quantity{"quantity": "8"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_consequence_definite
+* correct
+    - utter_next_consequence
+* consequence{"sentiment": "neg"}
+    - slot{"sentiment": "neg"}
+    - action_create_consequence
+    - slot{"name": null}
+    - slot{"action_return": false}
+    - action_choose_affected_stakeholder
+* consequence{"name": "Glenn"}
+    - slot{"name": "Glenn"}
+    - action_create_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact_negative
+* correct
+    - utter_ask_impact_weight
+* quantity{"quantity": "10"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_consequence_definite
+* correct
+    - utter_next_consequence
+* deny
+    - utter_next_option
+* option
+    - action_create_option
+    - slot{"deed": null}
+    - slot{"option": 9}
+    - slot{"action_return": true}
+    - utter_ask_deed
+* dontknow
+    - utter_ask_consequences
+* consequence{"sentiment": "neu"}
+    - slot{"sentiment": "neu"}
+    - action_create_consequence
+    - slot{"name": null}
+    - slot{"action_return": false}
+    - action_choose_affected_stakeholder
+* consequence{"name": "Glenn"}
+    - slot{"name": "Glenn"}
+    - action_create_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact
+* neutral
+    - utter_next_consequence
+* consequence{"stakeholder": "the patients", "sentiment": "neg"}
+    - slot{"sentiment": "neg"}
+    - action_create_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact_negative
+* correct
+    - utter_ask_impact_weight
+* quantity{"quantity": "9"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_consequence_definite
+* correct
     - utter_next_consequence
 * deny
     - utter_next_option

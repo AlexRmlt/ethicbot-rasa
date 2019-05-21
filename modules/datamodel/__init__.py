@@ -2,8 +2,8 @@ from . import mind
 import random
 import modules.constants as const
 
-aliases = ['Amelie', 'Benjamin', 'Carla', 'Daniel', 'Esther', 'Frank', 'Greta', 'Harald', 'Inga', 'Jörg',
-			'Katharina', 'Lars', 'Michelle', 'Nathan', 'Olga', 'Patrick', 'Roswitha', 'Samuel', 'Tanja', 'Uwe', 'Viola', 'Werner', 'Zoe']
+aliases = ['Alex', 'Blue', 'Charlie', 'Dominique', 'Elia', 'Florin', 'Glenn', 'Hauke', 'Ike', 'Jesse', 'Kim', 'Luan', 'Maxi', 'Nicki', 
+    'Patrice', 'Quinn', 'Robin', 'Sascha', 'Toni', 'Uli', 'Vivian', 'Wanja', 'Xiao', 'Yves', 'Zisan']
 
 collective = ['the Saxons', 'the Rhinelanders', 'the Palatines', 'the Bavarians', 'the Swabians', 'the Hessians']
 

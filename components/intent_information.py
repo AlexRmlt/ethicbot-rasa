@@ -55,18 +55,19 @@ class IntentInformation(Component):
         elif (intent == 'stakeholder' or intent == 'decider'):
             entities = message.get("entities")
 
-            # Get plural or singular
             stakeholder = None
             for ent in entities:
                 if (ent['entity'] == 'stakeholder'):  
                     stakeholder = ent['value']
                     break
-
+            # Get plural or singular
+            # DEPRECATED: Replaced by own intent 'stakeholdergroup'
+            """
             plural = nlu.get_plural(message.text, stakeholder)
-            extracted.append(self.convert_to_rasa('plural', plural))
+            extracted.append(self.convert_to_rasa('plural', plural))"""
 
             # Get moral status
-            moralstatus = nlu.get_moral_status(message.text)
+            moralstatus = nlu.get_moral_status(stakeholder)
             if not moralstatus == None: 
                 extracted.append(self.convert_to_rasa('moralstatus', moralstatus))
 

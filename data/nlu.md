@@ -1,3 +1,6 @@
+## intent:/decider
+- //decider{"name": "Yves"}
+
 ## intent:affirm
 - Yes
 - Exactly
@@ -7,6 +10,9 @@
 - Indeed
 - Ok
 - Okay
+- /affirm
+- /affirm
+- /affirm
 - /affirm
 - /affirm
 - /affirm
@@ -238,8 +244,35 @@
 - There is a possibility that the attackers would kill many people
 - /consequence[{"name": "the Swabians"}](name:the Swabians)
 - [The Palatines](name:the Palatines)[](sentiment:neg)The Palatines would most definitely die anyway
+- [](sentiment:pos)Her husband could then be saved from dying
+- /consequence[{"name": "jane"}](name:jane)
+- [Jane](name:jane)[](sentiment:neu)Jane would have to endure the company of her husband for a longer time
+- [Jane](name:jane)'s husband would die
+- [](sentiment:pos)The patients could get organs and their lives would be saved
+- /consequence[{"name": "the patients"}](name:the patients)
+- [](sentiment:neg)Glenn would die immediately when his medication is suspended
+- /consequence[{"name": "Glenn"}](name:Glenn)
+- [](sentiment:neu)Glenn would live a few days longer
+- /consequence[{"name": "Glenn"}](name:Glenn)
+- [The patients](stakeholder:the patients)[](sentiment:neg)The patients would not get any organs and die sooner or later
 
 ## intent:correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
+- /correct
 - /correct
 - /correct
 - /correct
@@ -445,15 +478,11 @@
 - And then there is [a person](stakeholder) who has to decide whether he flips a switch
 - [We](stakeholder:we) have to make the decision whether we will flip a switch that redirects a train
 - /decider[{"name": "Esther"}](name:Esther)
-- /decider[{"plural": "singular"}](plural:singular)
 - [The third person](stakeholder:the third person) has to decide whether he will flip switch that makes the train redirect from the main track to the side track
 - [We](stakeholder:we) have to make the decision if we interrupt the broadcast to rescue the injured person
-- /decider[{"plural": "singular"}](plural:singular)
 - [We](stakeholder:we) have to make a decision
 - /decider[{"name": "Katharina"}](name:Katharina)
-- /decider[{"plural": "singular"}](plural:singular)
 - [a third person](stakeholder) stands in front of a switch that redirects the incoming train and has to decide whether to flip the switch or not
-- /decider[{"plural": "singular"}](plural:singular)
 - There is [a healthcare aide](stakeholder) whose obligation is to remind a patient to take his prescibed medicine
 - /decider[{"name": "Werner"}](name:Werner)
 - /decider[{"name": "Daniel"}](name:Daniel)
@@ -466,7 +495,6 @@
 - /decider[{"name": "Olga"}](name:Olga)
 - [I](stakeholder) must decide if I interrupt the game to help the injured person or wait until the match is finished
 - /decider[{"name": "Uwe"}](name:Uwe)
-- /decider[{"plural": "singular"}](plural:singular)
 - [A healthcare professional](stakeholder:a healthcare professional)A healthcare professional must decide if he tries to change the patient's mind or accept the patient's decision as final
 - [A healthcare professional](stakeholder:a healthcare professional)A healthcare professional who must decide if he tries to change the patients mind
 - yes, there is [a person](stakeholder) who must decide if he redirects the train
@@ -474,8 +502,8 @@
 - There is [a person](stakeholder) who must decide if he flips a switch that redirects the train
 - Then there is [one person](stakeholder)[one](quantity) person, who must decide if he interrupts the game or not
 - There is [a robot](stakeholder) who must decide to take either path A or path B to attempt to rescue persons after a natural disaster
-- [](plural:unspecific_plural)[A robot](stakeholder) must decide to take either Path A or Path B to attempt to rescue persons after a natural disaster.
-- [](plural:unspecific_plural)[A robot](stakeholder) must decide to take either Path A or Path B to attempt to rescue persons after a natural disaster.
+- [A robot](stakeholder) must decide to take either Path A or Path B to attempt to rescue persons after a natural disaster.
+- [A robot](stakeholder) must decide to take either Path A or Path B to attempt to rescue persons after a natural disaster.
 - /decider[{"name": "Mark"}](name:Mark)
 - /decider[{"name": "Frank"}](name:Frank)
 - /decider[{"name": "Molly"}](name:Molly)
@@ -490,11 +518,10 @@
 - /decider[{"name": "the Rhinelanders"}](name:the Rhinelanders)
 - /decider[{"name": "Inga"}](name:Inga)
 - /decider[{"name": "Carl"}](name:Carl)
-- /decider[{"plural": "singular"}](plural:singular)
 - /decider[{"name": "Lars"}](name:Lars)
-- [](plural:unspecific_plural)[](moralstatus:human)A captain is on an overcrowded lifeboat and has to decide if he forces some people to go over board in order to save the rest
-- /decider[{"plural": "singular"}](plural:singular)
+- [](moralstatus:human)A captain is on an overcrowded lifeboat and has to decide if he forces some people to go over board in order to save the rest
 - /decider[{"name": "Greta"}](name:Greta)
+- /decider[{"name": "jane"}](name:jane)
 
 ## intent:deed
 - [Lying](deed) to Katharina
@@ -565,6 +592,8 @@
 - [Saving humanity](deed)
 - [Protecting](deed:protecting) an innocent child from great suffering
 - [Saving people](deed) on the ground who are possibly threatened can be considered a moral action
+- It means [letting Glenn die](deed:letting glenn die)
+- It also means [saving the lives](deed) of [5](quantity) people
 
 ## intent:deny
 - No
@@ -804,8 +833,21 @@
 - I actually can't think of something like that
 - I do not think so
 - I think this were all possible options
+- No that was it
+- No one else is involved
+- /deny
+- No
+- I can'T think of any more
+- That would not affect anyone else
+- There is no other option
+- no thats all
+- I can't think of more actions
+- No
+- No
+- No further options
 
 ## intent:deontology
+- /deontology
 - /deontology
 - /deontology
 - /deontology
@@ -856,6 +898,9 @@
 - No idea what his name is
 - That can not be known beforehand
 - I don't know it exactly
+- I don't know
+- I don't know the name
+- I don't know any action
 
 ## intent:goodbye
 - okay see you later
@@ -972,6 +1017,9 @@
 - hi
 - hi
 - hi
+- hi
+- hi
+- hi
 
 ## intent:moralquestion
 - Should you take action in killing a person if it can prevent the death of a larger number of people?
@@ -1029,6 +1077,13 @@
 - /moralstatus[{"moralstatus": "other"}](moralstatus:other)
 - /moralstatus[{"moralstatus": "human"}](moralstatus:human)
 - /moralstatus[{"moralstatus": "human"}](moralstatus:human)
+- /moralstatus[{"moralstatus": "human"}](moralstatus:human)
+- /moralstatus[{"moralstatus": "human"}](moralstatus:human)
+- /moralstatus[{"moralstatus": "human"}](moralstatus:human)
+- /moralstatus[{"moralstatus": "human"}](moralstatus:human)
+- /moralstatus[{"moralstatus": "human"}](moralstatus:human)
+- /moralstatus[{"moralstatus": "human"}](moralstatus:human)
+- /moralstatus[{"moralstatus": "human"}](moralstatus:human)
 
 ## intent:name
 - Call him [Frank](name)
@@ -1070,6 +1125,13 @@
 - The name is the alien
 - You can use the term "[the child](stakeholder)"
 - You can use the name [the passengers](stakeholder)
+- His name is [George](name)
+- My name is [Andrea](name)
+- His name is [Manager](stakeholder)
+- You can call her [Tom's wife](stakeholder)
+- You can call him "[Jane](name:jane)'s husband"
+- My name is Alex
+- You can use the name "[the patients](stakeholder)"
 
 ## intent:negative
 - That would be really bad for [Benjamin](name)!
@@ -1109,12 +1171,15 @@
 - Very negative indeed
 - That would be absolutely negative for the child
 - The effects would be fatal
+- The effects would be more negative
+- Extremely negative
 
 ## intent:neutral
 - It would be ok, neither positive nor negative consequences
 - That would have neither positive nor negative effects
 - It would be okay for him, no negative or positive consequences
 - It would be neither completely good nor completely bad. He would most definitely be angry but also thankful for knowing it.
+- It would not matter that much actually
 
 ## intent:option
 - She could make the decision to [flip the switch](deed)
@@ -1168,8 +1233,8 @@
 - He can try to [change patient's mind](deed)
 - She could [try to change the patients mind](deed) to prevent him from losing his limb
 - Viola could also [accept Greta's decision](deed) of not taking the surgery
-- [](plural:unspecific_plural)She could take path A to [rescue](deed) the larger amount of people
-- [](plural:unspecific_plural)Tanja could also take path B to [rescue](deed) the other group
+- She could take path A to [rescue](deed) the larger amount of people
+- Tanja could also take path B to [rescue](deed) the other group
 - She could take path B to [rescue](deed) the greater amount of people.
 - [Carla](name) could also take path A first and [rescue](deed) [the Hessians](name).
 - [Mark](name) could [activate an emergency access hatch](deed) between the upper and lower sections of the ship using an emergency switch to [get to the lower part](deed) with enough remaining oxygen
@@ -1216,6 +1281,10 @@
 - Another option would be [not to hand over the child](deed) to alien
 - It would be an option [to damage the ventilation system](deed) causing poisonous fumes to fill the cockpit in order to [kill the attackers](deed)
 - She could [not take any action](deed) and hope that the attackers don't harm any uninvolved persons
+- She could [hand over the antidote](deed) to her husband to [save him](deed)
+- She could also [refuse to give the antidote](deed) to her husband and [let him die](deed)
+- He could stop giving medicine to Glenn in order to take his organs for the [five](quantity:5) patients
+- He could also continue giving medication to Glenn
 
 ## intent:positive
 - That would be positive for him
@@ -1460,43 +1529,33 @@
 - Around [50](quantity)%
 - [10](quantity)
 - Ok, how about [75](quantity)%
+- [8](quantity)
+- At least [2](quantity)
+- [10](quantity)
+- [8](quantity)
+- [10](quantity)
+- [9](quantity)
 
 ## intent:stakeholder
-- [Four expedition agents](stakeholder) are trapped in a mine.
-- [Four other persons](stakeholder) are trapped in the mine.
 - [One of her crew members](stakeholder), whose legs have been crushed by a rock, will die without medical attention.
 - [Molly](name) is on a footbridge over the tracks, in between the approaching trolley and the five workmen.
 - [Heather](name) is part of a four-person mining expedition.
-- [Five people](stakeholder:five people)[](plural:specific_plural)Five people
-- [five](quantity:5)[five dogs](stakeholder)
-- [Five people](stakeholder:five people)
-- There are [five people](stakeholder)
-- [Five people](stakeholder:five people)
-- [three persons](stakeholder)
-- [Five persons](stakeholder:five persons)
 - [Hans](name) is involved
 - Among others there is [Hans](name)
 - Involved in the situation is [Hans](name)
 - [Hans](name)
 - First there is [Hans](name)
 - [Hans](name) is involved in the situation
-- [Five persons](stakeholder:five persons) lie on the tracks and get overrun if the switch is not flipped
 - [One other person](stakeholder) lies on a track
-- [Five persons](stakeholder:five persons), who lie on a track
 - [a person](stakeholder) on a track
-- [Five persons](stakeholder:five persons) lay on the tracks and get killed by a train if the switch is not flipped
 - [One other person](stakeholder:one other person) lies on another track and gets killed if the switch is flipped
 - [a person](stakeholder) is involved
-- [Five persons](stakeholder:five persons) lie on another track
 - [someone](stakeholder) lies on a track
 - [someone](stakeholder) who lays on a track
 - [someone](stakeholder) who lies on a track and might get overrun
 - [A third person](stakeholder:a third person) is involved
-- [A group of people](stakeholder:a group of people) lies on a track
 - [Another person](stakeholder) lies on another track
-- Yes, [a group of people](stakeholder) on a track
-- [a person, named Jones](stakeholder:a person, named jones)
-- [A few persons](stakeholder:a few persons) who watch a football match
+- [a person](stakeholder) named [Jones](name)
 - [A fat man](stakeholder:a fat man), who stands over the tracks
 - First there is [a person](stakeholder), who is chased by someone
 - [A third person](stakeholder:a third person), whose door is knocked on
@@ -1506,50 +1565,34 @@
 - First there is [a person](stakeholder), who is chased by someone else
 - [The next person](stakeholder:the next person) owns a house in which the first person hides
 - [The first person](stakeholder:the first person) was injured through an accident in the studio
-- [A lot of people](stakeholder:a lot of people) are watching a football match in the moment
 - [Another person](stakeholder) versteckt die erste Person in ihrem Haus
 - And there is [another person](stakeholder), who chases the first one
 - [Jones](name) had an accident in the studio of a TV broadcaster
-- [Many people](stakeholder:many people) watch a worldcup game which still lasts over an hour
-- First there is [a group of people](stakeholder) standing on the tracks
 - There is [one single person](stakeholder) lying on a side track
 - [A third person](stakeholder:a third person) stands in front of a switch that redirects the train to another track
-- First there is [a group of people](stakeholder) standing on the tracks
 - Then there is [a single person](stakeholder) standing on a side track
-- First there is [a group of five people](stakeholder) standing on the tracks
 - Then there is [one single person](stakeholder) on a side track
 - There is [a person](stakeholder) standing in front of a switch which redirects a train
-- On the tracks, there is [a group of six people](stakeholder)
 - [Another person](stakeholder:another person) is on a side track
 - [One person](stakeholder:one person) stands on a side track where no train would normally drive on
-- [A group of seven people](stakeholder:a group of seven people) is located on the normal tracks where a train is about to arrive and run them over
-- First there is [a group of people](stakeholder) standing on the tracks
 - [A single person](stakeholder:a single person) is standing on a side track
 - [The last person](stakeholder:the last person) is standing in front of a switch
 - [One person](stakeholder:one person) stands on the side tracks where no train would normally come up
-- [Three people](stakeholder:three people) are standing on the main track and would be overrun if a train arrived
 - There is [a group of eight people](stakeholder) standing on the tracks
 - [Another person](stakeholder:another person) is standing on a side track
 - There is [a person](stakeholder) named [Jones](name) in the studio of a TV broadcast who has been injured
-- [A lot of people](stakeholder:a lot of people) are watching a worldcup match which is broadcastet from the TV station
 - There is [a bunch of people](stakeholder) standing on a railway track
 - [Another person](stakeholder:another person) is standing on a side track
 - [Jones](name) is lying injured in a TV studio and suffers great pain
-- [A lot of people](stakeholder:a lot of people) are watching a worldcup match which is broadcasted by the TV station
 - first there is [someone](stakeholder) who is chased by another person
 - Then there is [the person who chases Werner](stakeholder)
 - [The next person](stakeholder:the next person) hides Werner in his house
 - There is [a person](stakeholder) who lies on the ground injured in a TV station
-- [A large group of people](stakeholder:a large group of people) watches a worldcup match which is broadcasted from the TV station
 - There is [a person](stakeholder) who is injured in a TV station
-- [A lot of people](stakeholder:a lot of people) are watching a football match that is broadcasted from the TV station
-- There is [a group of people](stakeholder) standing on the tracks where a train is about to arrive
 - First, there is [a group of people](stakeholder) standing on the tracks
 - [Another person](stakeholder:another person) stands on a side track where no train would normally appear
-- first there is [a group consisting of five people](stakeholder) standing on the tracks
 - [another person](stakeholder) is standing on a side track
 - first there is [jones](name:Jones), who lies injured in a tv broadcasting station
-- There is [a large group of people](stakeholder) watching a football match which is broadcasted by the TV sender
 - Then there is [the patient](stakeholder), who refuses to take the medicine when reminded
 - There is [an overseer](stakeholder) who can be notified if it is necessary to take action regarding the treatment
 - [A healthcare aide](stakeholder) that shall remind a patient of taken prescribed medicine at a particular time
@@ -1558,127 +1601,177 @@
 - First there is [a healthcare aide](stakeholder) which supports patients in taking prescribed medicine at a given time
 - Then there is [a patient](stakeholder) who has to take medicine that would give him a small benefit, but can not respond
 - Also there is [an overseer](stakeholder) who must be notified when there are severe problems with the treatment of a patient
-- [](plural:unspecific_plural)There is [a group of people](stakeholder) on the tracks where a train is about to arrive and overrun them
 - [Another person](stakeholder:another person)Another person is on a side track where normally no train would come up
-- [](plural:unspecific_plural)there is a group of dogs laying on the tracks
-- on a side track there is cat
-- a healthcare aide[ has to supervise](stakeholder:a healthcare aide) if a patient takes his medication correctly
+- on a side track there is [a cat](stakeholder)
+- [a healthcare aide](stakeholder) has to supervise if a patient takes his medication correctly
 - [The patient](stakeholder:the patient)The patient, who refuses to take his medication when reminded by the healthcare aide
 - [An overseer](stakeholder:an Overseer)An overseer, who can be notified by the healthcare aide if assistance is required
-- [](plural:unspecific_plural)There is [a group of people](stakeholder) standing on the tracks where a train is about to arrive and hit them
 - Then there is [a single person](stakeholder) standing on a side track where no train would normally come up
 - There is [a patient](stakeholder) suffering from cancer who refuses further chemotherapy
 - [A patient](stakeholder:a patient)A patient who suffers from incurable cancer refuses to accept a chemotherapy that would extend his life by multiple months
-- [](plural:unspecific_plural)there is [a group of people](stakeholder) on the tracks
 - [one other person](stakeholder)one other person stands on a side track
 - [the third person](stakeholder)the third person stands in front of a switch that can redirect the train to the side track
 - [A person](stakeholder:a person)A person lies injured in the broadcasting room of a TV station
-- [A large group of people](stakeholder:a large group of people)[](plural:unspecific_plural)A large group of people is watching a football match that is broadcasted from the TV station
 - [A person](stakeholder:a person)A person who is chased by another person and hides in the house of a third person
 - [The person](stakeholder:the person)The person, who is chasing Nathan
 - [The person](stakeholder:the person)The person, who hides Nathan in his house
-- [A group of people](stakeholder:a group of people)[](plural:unspecific_plural)A group of people stands on the tracks
 - [Another person](stakeholder:another person)Another person stands on the side track
 - [A patient](stakeholder:a patient) refuses to have surgery that would save his life and correct a disfigurement because he fears that he may never wake up from anesthesia
 - [A patient](stakeholder:a patient), who refuses to have minor surgery that could prevent him from losing a limb because he fears he may never wake up if he has anesthesia.
 - first there is [a person](stakeholder) on the tracks
-- [](plural:unspecific_plural)there is [a group of people](stakeholder) on the main tracks
 - There is [a robot](stakeholder) whose mission is to save people after a natural catastrophe
-- [A group of people](stakeholder:a group of people)[](plural:unspecific_plural)A group of people is located in a place to be reached if the robot takes path A
-- [](plural:unspecific_plural)There is [another group of people](stakeholder) in a place that can be reached by path B which consists of less people than the Swabians
-- [](plural:unspecific_plural)First there is [a robot](stakeholder) who must rescue people after a natural catastrophe
-- [](plural:unspecific_plural)There is [a group of people](stakeholder) that must be rescued in one direction
-- [](plural:unspecific_plural)Then there is another, slightly [smaller group](stakeholder) in the other direction
-- [A group of people](stakeholder:a group of people)[](plural:unspecific_plural)A group of people is standing on the main tracks
-- [](plural:unspecific_plural)There is [a group of people](stakeholder) standing on the tracks
-- [](plural:singular)There is [a single person](stakeholder) standing on a side track
-- [](plural:unspecific_plural)[](moralstatus:human)there is [a group of people](stakeholder) on the tracks
-- [](plural:singular)[](moralstatus:animal)there is [a dog](stakeholder) on the side track
-- [](plural:singular)First we have [Jones](name)[Jones](name), who lies injured in the broadcasting room of a TV station
-- [](plural:unspecific_plural)[](moralstatus:human)Then there is [a large crowd of people](stakeholder) who are watching a football match which is broadcasted from the TV station
-- [](plural:singular)There is [David](name), lying injured in a TV station
-- [](plural:unspecific_plural)[](moralstatus:human)There is [a huge amount of people](stakeholder) watching a football match
-- [](plural:singular)First, there is [Jones](name)[Jones](name), who lies in the broadcasting room of a TV station and is severely injured
-- [A large group of people](stakeholder:a large group of people)[](plural:unspecific_plural)[](moralstatus:human)A large group of people is watching a football match
-- [](plural:singular)[](moralstatus:animal)There is [a dog](stakeholder) which is also involved in the situation
-- [](plural:unspecific_plural)[](moralstatus:human)If [Carla](name) takes path A, she will reach a group of people who have to be rescued.
-- [](plural:unspecific_plural)[](moralstatus:human)There is [another group](stakeholder) of persons to be rescued. They can be reached taking path B.
-- [Mark](name)[](plural:singular)[](moralstatus:human)Mark is [a crewperson](stakeholder) on a marine-research submarine traveling underneath a large iceberg.
-- [](plural:unspecific_plural)[](moralstatus:human)There are [more people](stakeholder) in the upper section of the ship, where they all have not enough oxygen to survive for a longer time
-- [](plural:singular)[A single crewmember](stakeholder) is in the lower section where enough oxygen is remaining, but he is lying unconscious on the ground
-- [](plural:singular)There is [a man](stakeholder) on the tracks
-- [](plural:unspecific_plural)There is [a robot](stakeholder) who must look for trapped people after a natural catastrophe
-- [](plural:singular)There is [Heather](name), who is part of a mining expedition
-- [](plural:unspecific_plural)[](moralstatus:human)With [Frank](name), there are [three other persons](stakeholder) who are also part of the expedition
-- [One](quantity)[](plural:singular)[One of the crewmembers](stakeholder) legs are crushed and he is severly injured
-- [Five workmen](stakeholder:five workmen)[Five](quantity:5)[](plural:specific_plural)[](moralstatus:human)Five workmen are currently working on the tracks where a trolley is heading down towards them. If the trolley is not stopped somehow, they will be killed.
-- [](plural:singular)[](moralstatus:human)There is [Molly](name), who is on a footbridge over the tracks, in between the approaching trolley and the [five](quantity:5) workmen.
-- [](plural:singular)Next to [Molly](name) on this footbridge is [a stranger](stakeholder) who happens to be very large.
-- [](plural:singular)First there is [Ken](name), who is a doctor
-- [](plural:unspecific_plural)[](moralstatus:human)Then there is [a patient](stakeholder), who is HIV positive and is about to receive a blood transfusion prior to being released from the hospital. The patient tells [Ken](name) that he intents to infect as many people as possible with HIV after receiving his medicine.
-- [](plural:unspecific_plural)[](moralstatus:human)You can also assume a large group of people who would be affected if [Inga](name) carries out her plan to infect as many people as possible with HIV.
-- [Tom](name)[](plural:unspecific_plural)Tom is part of a group of ecologists who live in a remote stretch of jungle.
-- [](plural:unspecific_plural)[](moralstatus:human)Part of the group of ecologists are also [8 children](stakeholder).
-- [](plural:unspecific_plural)[A group of paramilitary terrorists](stakeholder), who has taken the ecologists crew hostage
+- First there is [a robot](stakeholder) who must rescue people after a natural catastrophe
+- There is [a single person](stakeholder) standing on a side track
+- [](moralstatus:animal)there is [a dog](stakeholder) on the side track
+- First we have [Jones](name)[Jones](name), who lies injured in the broadcasting room of a TV station
+- There is [David](name), lying injured in a TV station
+- First, there is [Jones](name)[Jones](name), who lies in the broadcasting room of a TV station and is severely injured
+- [](moralstatus:animal)There is [a dog](stakeholder) which is also involved in the situation
+- [](moralstatus:human)If [Carla](name) takes path A, she will reach a group of people who have to be rescued.
+- [Mark](name)[](moralstatus:human)Mark is [a crewperson](stakeholder) on a marine-research submarine traveling underneath a large iceberg.
+- [A single crewmember](stakeholder) is in the lower section where enough oxygen is remaining, but he is lying unconscious on the ground
+- There is [a man](stakeholder) on the tracks
+- There is [a robot](stakeholder) who must look for trapped people after a natural catastrophe
+- There is [Heather](name), who is part of a mining expedition
+- [One](quantity)[One of the crewmembers](stakeholder) legs are crushed and he is severly injured
+- [](moralstatus:human)There is [Molly](name), who is on a footbridge over the tracks, in between the approaching trolley and the [five](quantity:5) workmen.
+- Next to [Molly](name) on this footbridge is [a stranger](stakeholder) who happens to be very large.
+- First there is [Ken](name), who is a doctor
+- [](moralstatus:human)Then there is [a patient](stakeholder), who is HIV positive and is about to receive a blood transfusion prior to being released from the hospital. The patient tells [Ken](name) that he intents to infect as many people as possible with HIV after receiving his medicine.
+- [Tom](name)Tom is part of a group of ecologists who live in a remote stretch of jungle.
 - [One of the terrorists](stakeholder) takes a liking to [Tom](name). He informs [Tom](name) that his leader intends to [kill him](deed) and the rest of the hostages the following morning.
-- [](plural:singular)There is [one hostage](stakeholder) who is not liked by [Esther](name) and she wants [Tom](name) to [torture](deed) and [kill](deed) this particular hostage as an act of good faith.
-- [](plural:singular)There is [Mary](name) who is in a hospital lounge waiting to visit a sick friend.
+- There is [one hostage](stakeholder) who is not liked by [Esther](name) and she wants [Tom](name) to [torture](deed) and [kill](deed) this particular hostage as an act of good faith.
+- There is [Mary](name) who is in a hospital lounge waiting to visit a sick friend.
 - [A young man](stakeholder) sitting next to [Mary](name) explains that his father is very ill and has a week to live at most, but his life insurance policy is about to expire at midnight.
-- (plural:singular)[Samuels family](stakeholder) is in desperate need of the money the life insurance would give to them.
 - [Samuels father](stakeholder) who will die within the next [7](quantity) days.
-- [The first person](stakeholder:the first person)[](plural:unspecific_plural)[](moralstatus:human)The first person involved is [Jane](name). Her village has been invaded by enemy soldier and she is hiding with fellow townspeople in [two](quantity) rooms of the cellar of a large house.
-- [](plural:unspecific_plural)[](moralstatus:human)With her there is [a group of other people](stakeholder) from the town hiding in the cellar.
-- [Jane](name)[](plural:singular)[Jane's baby](stakeholder) is in the second room and is about to start crying.
-- [](plural:unspecific_plural)[A group of enemy soldiers](stakeholder) is approaching to search the house they are hiding in for valuables. They have orders to kill all remaining civilians over the age of two.
-- [Mark](name)[](plural:singular)[](moralstatus:human)Mark is [a crewperson](stakeholder) on a marine-research submarine traveling underneath a large iceberg.
-- [A group](stakeholder:a group)[](plural:unspecific_plural)A group of other crewmembers are with him in the upper section of the ship.
-- [One](quantity)[](plural:singular)[One crewmember](stakeholder), who is severely injured and lying unconscious, is in the lower section of the ship.
-- [Five](quantity:5)[](plural:unspecific_plural)[](moralstatus:human)[Five workmen](stakeholder) stand on the tracks where a runaway trolley is heading towards them.
-- [Molly](name)[](plural:unspecific_plural)[](moralstatus:human)Molly is on a footbridge over the tracks, in between the approaching trolley and the [five](quantity:5) workmen.
-- [](plural:singular)Next to her on this footbridge is [a stranger](stakeholder) who happens to be very large.
-- [Five](quantity:5)[](plural:unspecific_plural)[](moralstatus:human)[Five workmen](stakeholder) are standing on the tracks where a runaway trolley is approaching them.
-- [Molly](name)[](plural:singular)Molly is standing on a footbridge over the tracks.
-- [](plural:singular)Next to her there is [a very large stranger](stakeholder).
-- [Heather](name)[](plural:singular)[](moralstatus:human)Heather is part of a [four](quantity:4)-person mining expedition.
-- [](plural:singular)With her there are [two other crewmembers](stakeholder) trapped in a cave-in of a mine.
-- [One](quantity:1)[](plural:singular)[One of the crewmembers](stakeholder) has crushed legs from a rock that fell onto them and will die if he does not receive medical attention.
-- [Doug](name)[](plural:singular)Doug is on a cruise ship when there is a fire on board, and the ship has to be abandoned.
-- [](plural:unspecific_plural)[](moralstatus:human)The lifeboats are carrying [many more people](stakeholder) than they were designed to carry and they are sitting dangerously low in the water.
-- [A group of old people](stakeholder:a group of old people) are in the water and ask [Doug](name) to throw them a rope so they can come aboard the lifeboat.
-- [Carrie](name)[](plural:singular)Carrie is a doctor working in a hospital.
-- [Four of her patients](stakeholder:four of her patients)[Four](quantity)[](plural:specific_plural)Four of her patients are in a certain room of the hospital. There are deadly fumes rising up through the hospital’s ventilation system that will [kill the four](deed)[four](quantity) if she does nothing.
-- [](plural:singular)In another room there is [one of her patients](stakeholder).
-- [](plural:singular)There is [an inmate](stakeholder) in a concentration camp.
-- [](plural:singular)There is [Inga's son](stakeholder) who is about to be hung by a sadistic guard for trying to escape.
-- [](plural:singular)There is [some other innocent inmate](stakeholder), who will be killed by the guard if [Inga](name) does not pull the chair from underneath [Carla](name).
-- [](plural:singular)There is [an emergency worker](stakeholder) that has just been called to the scene of an accident.
-- [](plural:singular)When arriving she sees that the crashed car belongs to [her wife](stakeholder) who is trapped inside
-- [](plural:singular)[](moralstatus:human)Trapped with her in the car there is [a man](stakeholder) who is obviously her lover with whom she's been having an affair.
-- [](plural:singular)[](moralstatus:human)[A guy](stakeholder) works as a network administrator for a rather large company and is responsible for scanning emails marked as spam and releasing them on request.
-- [](plural:singular)Then there is [the wife](stakeholder) of a very good friend of [Mark](name). She asks him to release a mail which [Mark](name) notices comes from her lover she is having an affair with.
-- [](plural:singular)Finally there is [Mark's good friend](stakeholder) whose wife is betraying him without him knowing
-- [](plural:specific_plural)[](moralstatus:human)[A pregnant woman](stakeholder) leading [a group of five people](stakeholder)[five](quantity:5) people out of a cave on a coast, who is stuck in the mouth of that cave.
-- [](plural:unspecific_plural)[](moralstatus:human)Other than the group, there is [the pregnant woman](stakeholder) who is stuck in the cave
-- [One](quantity:1)[](plural:singular)[One of them](stakeholder) has with him a stick of dynamite which they could use to escape the cave before they are down
-- [](plural:unspecific_plural)[](moralstatus:human)There is [a person](stakeholder) who is going on a holiday trip for the weekend with his family.
-- [](plural:singular)With [Inga](name) there is [her 7 years old daughter](stakeholder)
-- [](plural:singular)Also [her niece](stakeholder) is travelling with them, who is [7](quantity) as well
-- [](plural:unspecific_plural)There is [a father](stakeholder) with his family and they return from a holiday in Bali
+- [The first person](stakeholder:the first person)[](moralstatus:human)The first person involved is [Jane](name). Her village has been invaded by enemy soldier and she is hiding with fellow townspeople in [two](quantity) rooms of the cellar of a large house.
+- [Jane](name)[Jane's baby](stakeholder) is in the second room and is about to start crying.
+- [Mark](name)[](moralstatus:human)Mark is [a crewperson](stakeholder) on a marine-research submarine traveling underneath a large iceberg.
+- [One](quantity)[One crewmember](stakeholder), who is severely injured and lying unconscious, is in the lower section of the ship.
+- [Molly](name)[](moralstatus:human)Molly is on a footbridge over the tracks, in between the approaching trolley and the [five](quantity:5) workmen.
+- Next to her on this footbridge is [a stranger](stakeholder) who happens to be very large.
+- [Molly](name)Molly is standing on a footbridge over the tracks.
+- Next to her there is [a very large stranger](stakeholder).
+- [Heather](name)[](moralstatus:human)Heather is part of a [four](quantity:4)-person mining expedition.
+- [One](quantity:1)[One of the crewmembers](stakeholder) has crushed legs from a rock that fell onto them and will die if he does not receive medical attention.
+- [Doug](name)Doug is on a cruise ship when there is a fire on board, and the ship has to be abandoned.
+- [Carrie](name)Carrie is a doctor working in a hospital.
+- In another room there is [one of her patients](stakeholder).
+- There is [an inmate](stakeholder) in a concentration camp.
+- There is [Inga's son](stakeholder) who is about to be hung by a sadistic guard for trying to escape.
+- There is [some other innocent inmate](stakeholder), who will be killed by the guard if [Inga](name) does not pull the chair from underneath [Carla](name).
+- There is [an emergency worker](stakeholder) that has just been called to the scene of an accident.
+- When arriving she sees that the crashed car belongs to [her wife](stakeholder) who is trapped inside
+- [](moralstatus:human)Trapped with her in the car there is [a man](stakeholder) who is obviously her lover with whom she's been having an affair.
+- [](moralstatus:human)[A guy](stakeholder) works as a network administrator for a rather large company and is responsible for scanning emails marked as spam and releasing them on request.
+- Then there is [the wife](stakeholder) of a very good friend of [Mark](name). She asks him to release a mail which [Mark](name) notices comes from her lover she is having an affair with.
+- Finally there is [Mark's good friend](stakeholder) whose wife is betraying him without him knowing
+- [](moralstatus:human)[A pregnant woman](stakeholder) leading [a group of five people](stakeholder)[five](quantity:5) people out of a cave on a coast, who is stuck in the mouth of that cave.
+- [](moralstatus:human)Other than the group, there is [the pregnant woman](stakeholder) who is stuck in the cave
+- [One](quantity:1)[One of them](stakeholder) has with him a stick of dynamite which they could use to escape the cave before they are down
+- [](moralstatus:human)There is [a person](stakeholder) who is going on a holiday trip for the weekend with his family.
+- With [Inga](name) there is [her 7 years old daughter](stakeholder)
+- Also [her niece](stakeholder) is travelling with them, who is [7](quantity) as well
+- There is [a father](stakeholder) with his family and they return from a holiday in Bali
 - With him is [his wife](stakeholder)
-- [](plural:singular)[](moralstatus:animal)And last there is [their 18 years old son](stakeholder) whose bag has caught the attention of a sniffer dog looking for drugs
-- [](plural:unspecific_plural)[](moralstatus:human)First there is [a madman](stakeholder) who has planted several bombs in crowded areas and has been apprehended.
-- Hundreds[](plural:unspecific_plural)[](moralstatus:human)[Hundreds of people](stakeholder)'s lives are threatened by the madman's bombs.
+- [](moralstatus:animal)And last there is [their 18 years old son](stakeholder) whose bag has caught the attention of a sniffer dog looking for drugs
+- [](moralstatus:human)First there is [a madman](stakeholder) who has planted several bombs in crowded areas and has been apprehended.
 - Also [the madmans wife](stakeholder) is involved because the police is considering to torture her to make the terrorist talk.
-- [A person](stakeholder:a person)[](plural:singular)[](moralstatus:human)A person is on a lifeboat which is currently sinking
-- [](plural:unspecific_plural)With him on the lifeboat, there is [a group of passengers](stakeholder) and they try to prevent the boat from sinking by carrying out the water with their hands
-- [](plural:specific_plural)[](moralstatus:human)There are [30 people](stakeholder) on the boat which is designed for only [7](quantity) people
+- [A person](stakeholder:a person)[](moralstatus:human)A person is on a lifeboat which is currently sinking
+- There is [an alien](stakeholder) who visits the earth and promises to turn the planet into a peaceful utopia
+- [](moralstatus:human)[The alien](stakeholder) demands a little child for him to perform hideous scientific experiments on as a price
+- [One person](stakeholder:one person)[](moralstatus:human)One person is travelling with a plane that was hijacked by attackers
+- [My boss](stakeholder) is involved
+- [I](stakeholder) am involved myself
+- [Me](stakeholder)
+- There is [Tom](name:tom), hating his wife and wanting her dead.
+- Then there is [Tom's wife](stakeholder:tom's wife) who he hates.
+- [Jane](name:jane) hates her husband and would like to see him dead
+- [Jane](name:jane)'s husband one puts accidentally poison in his coffee, thinking it is cream
+- I am a skilled doctor
+- There is [a sixth patient](stakeholder), who is dying of an incurable disease, and is [a](stakeholder) compatible organ donor for the five other patients
+- There is [a man who](stakeholder) robs a bank and donates the money to a local orphanage
+- [a man](stakeholder) robs a bank, but instead of keeping the money for himself, he donates it to a local orphanage
+- [A robber](stakeholder) has robbed a bank
+- [A robber](stakeholder) who robbed a bank to donate the money to the local orphanage
+- Then there is [myself](stakeholder) and I witnessed the robbery
+- [I](stakeholder) witnessed a robbery
+
+## intent:stakeholdergroup
+- [Four expedition agents](stakeholder) are trapped in a mine.
+- [Four other persons](stakeholder) are trapped in the mine.
+- [Five people](stakeholder:five people)Five people
+- [five](quantity:5)[five dogs](stakeholder)
+- [Five people](stakeholder:five people)
+- There are [five people](stakeholder)
+- [Five people](stakeholder:five people)
+- [three persons](stakeholder)
+- [Five persons](stakeholder:five persons)
+- [Five persons](stakeholder:five persons) lie on the tracks and get overrun if the switch is not flipped
+- [Five persons](stakeholder:five persons), who lie on a track
+- [Five persons](stakeholder:five persons) lay on the tracks and get killed by a train if the switch is not flipped
+- [Five persons](stakeholder:five persons) lie on another track
+- [A group of people](stakeholder:a group of people) lies on a track
+- Yes, [a group of people](stakeholder) on a track
+- [A few persons](stakeholder:a few persons) who watch a football match
+- [A lot of people](stakeholder:a lot of people) are watching a football match in the moment
+- [Many people](stakeholder:many people) watch a worldcup game which still lasts over an hour
+- First there is [a group of people](stakeholder) standing on the tracks
+- First there is [a group of people](stakeholder) standing on the tracks
+- First there is [a group of five people](stakeholder) standing on the tracks
+- On the tracks, there is [a group of six people](stakeholder)
+- [A group of seven people](stakeholder:a group of seven people) is located on the normal tracks where a train is about to arrive and run them over
+- First there is [a group of people](stakeholder) standing on the tracks
+- [Three people](stakeholder:three people) are standing on the main track and would be overrun if a train arrived
+- [A lot of people](stakeholder:a lot of people) are watching a worldcup match which is broadcastet from the TV station
+- [A lot of people](stakeholder:a lot of people) are watching a worldcup match which is broadcasted by the TV station
+- [A large group of people](stakeholder:a large group of people) watches a worldcup match which is broadcasted from the TV station
+- [A lot of people](stakeholder:a lot of people) are watching a football match that is broadcasted from the TV station
+- There is [a group of people](stakeholder) standing on the tracks where a train is about to arrive
+- first there is [a group consisting of five people](stakeholder) standing on the tracks
+- There is [a large group of people](stakeholder) watching a football match which is broadcasted by the TV sender
+- There is [a group of people](stakeholder) on the tracks where a train is about to arrive and overrun them
+- there is [a group of dogs](stakeholder) laying on the tracks
+- There is [a group of people](stakeholder) standing on the tracks where a train is about to arrive and hit them
+- there is [a group of people](stakeholder) on the tracks
+- [A large group of people](stakeholder:a large group of people)A large group of people is watching a football match that is broadcasted from the TV station
+- [A group of people](stakeholder:a group of people)A group of people stands on the tracks
+- there is [a group of people](stakeholder) on the main tracks
+- [A group of people](stakeholder:a group of people)A group of people is located in a place to be reached if the robot takes path A
+- There is [another group of people](stakeholder) in a place that can be reached by path B which consists of less people than the Swabians
+- There is [a group of people](stakeholder) that must be rescued in one direction
+- Then there is another, slightly [smaller group](stakeholder) in the other direction
+- [A group of people](stakeholder:a group of people)A group of people is standing on the main tracks
+- There is [a group of people](stakeholder) standing on the tracks
+- [](moralstatus:human)there is [a group of people](stakeholder) on the tracks
+- [](moralstatus:human)Then there is [a large crowd of people](stakeholder) who are watching a football match which is broadcasted from the TV station
+- [](moralstatus:human)There is [a huge amount of people](stakeholder) watching a football match
+- [A large group of people](stakeholder:a large group of people)[](moralstatus:human)A large group of people is watching a football match
+- [](moralstatus:human)There is [another group](stakeholder) of persons to be rescued. They can be reached taking path B.
+- [](moralstatus:human)There are [more people](stakeholder) in the upper section of the ship, where they all have not enough oxygen to survive for a longer time
+- [](moralstatus:human)With [Frank](name), there are [three other persons](stakeholder) who are also part of the expedition
+- [Five workmen](stakeholder:five workmen)[Five](quantity:5)[](moralstatus:human)Five workmen are currently working on the tracks where a trolley is heading down towards them. If the trolley is not stopped somehow, they will be killed.
+- [](moralstatus:human)You can also assume [a large group of people](stakeholder) who would be affected if [Inga](name) carries out her plan to infect as many people as possible with HIV.
+- [](moralstatus:human)Part of the group of ecologists are also [8 children](stakeholder).
+- [A group of paramilitary terrorists](stakeholder), who has taken the ecologists crew hostage
+- [Samuels family](stakeholder) is in desperate need of the money the life insurance would give to them.
+- [](moralstatus:human)With her there is [a group of other people](stakeholder) from the town hiding in the cellar.
+- [A group of enemy soldiers](stakeholder) is approaching to search the house they are hiding in for valuables. They have orders to kill all remaining civilians over the age of two.
+- [A group](stakeholder:a group)A group of other crewmembers are with him in the upper section of the ship.
+- [Five](quantity:5)[](moralstatus:human)[Five workmen](stakeholder) stand on the tracks where a runaway trolley is heading towards them.
+- [Five](quantity:5)[](moralstatus:human)[Five workmen](stakeholder) are standing on the tracks where a runaway trolley is approaching them.
+- With her there are [two other crewmembers](stakeholder) trapped in a cave-in of a mine.
+- [](moralstatus:human)The lifeboats are carrying [many more people](stakeholder) than they were designed to carry and they are sitting dangerously low in the water.
+- [A group of old people](stakeholder:a group of old people) are in the water and ask [Doug](name) to throw them a rope so they can come aboard the lifeboat.
+- [Four of her patients](stakeholder:four of her patients)[Four](quantity)Four of her patients are in a certain room of the hospital. There are deadly fumes rising up through the hospital’s ventilation system that will [kill the four](deed)[four](quantity) if she does nothing.
+- Hundreds[](moralstatus:human)[Hundreds of people](stakeholder)'s lives are threatened by the madman's bombs.
+- With him on the lifeboat, there is [a group of passengers](stakeholder) and they try to prevent the boat from sinking by carrying out the water with their hands
+- [](moralstatus:human)There are [30 people](stakeholder) on the boat which is designed for only [7](quantity) people
 - [The weaker people](stakeholder:the weaker people) on the boat have to be considered separately because they may be forced to leave the boat
-- [](plural:singular)There is [an alien](stakeholder) who visits the earth and promises to turn the planet into a peaceful utopia
 - There is literally [the whole population of the earth](stakeholder) that would be affected by the aliens actions
-- [](plural:unspecific_plural)[](moralstatus:human)[The alien](stakeholder) demands a little child for him to perform hideous scientific experiments on as a price
-- [One person](stakeholder:one person)[](plural:singular)[](moralstatus:human)One person is travelling with a plane that was hijacked by attackers
-- [](plural:unspecific_plural)[](moralstatus:human)There are all in all [150](quantity) people on board of the hijacked plane
-- [A lot of people](stakeholder:a lot of people)[](plural:unspecific_plural)[](moralstatus:human)A lot of people on the ground could be in danger if the attackers fly the plain in to a building or something like that
+- [](moralstatus:human)There are all in all [150 people](stakeholder) on board of the hijacked plane
+- [A lot of people](stakeholder:a lot of people)[](moralstatus:human)A lot of people on the ground could be in danger if the attackers fly the plain in to a building or something like that
+- There are [five patients](stakeholder) who all need different organ transplants.
 
 ## intent:thanks
 - you helped a lot thank you
@@ -1737,8 +1830,12 @@
 - /utilitarism
 - /utilitarism
 - /utilitarism
+- /utilitarism
 
 ## intent:wrong
+- /wrong
+- /wrong
+- /wrong
 - /wrong
 - /wrong
 - /wrong
@@ -1885,6 +1982,7 @@
 - frank
 
 ## synonym:Greta
+- {"name": "Greta"}
 - greta
 
 ## synonym:Hans
@@ -1986,7 +2084,6 @@
 - A group of seven people
 
 ## synonym:a healthcare aide
--  has to supervise
 - has to supervise
 
 ## synonym:a healthcare professional
@@ -2034,6 +2131,10 @@
 ## synonym:human
 - {"moralstatus": "human"}
 
+## synonym:jane
+- {"name": "jane"}
+- Jane
+
 ## synonym:killing
 - Killing
 
@@ -2073,9 +2174,6 @@
 ## synonym:saving the lives
 - Saving the lives
 
-## synonym:singular
-- {"plural": "singular"}
-
 ## synonym:someone
 - Someone
 
@@ -2102,6 +2200,7 @@
 
 ## synonym:the Swabians
 - The Swabians
+- {"name": "the Swabians"}
 
 ## synonym:the child
 - {"name": "the child"}
@@ -2142,6 +2241,12 @@
 
 ## synonym:three people
 - Three people
+
+## synonym:tom
+- Tom
+
+## synonym:tom's wife
+- Tom's wife
 
 ## synonym:we
 - We

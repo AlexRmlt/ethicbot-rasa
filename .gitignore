@@ -1,9 +1,6 @@
 docker-images/
 models/
 
-playground.ipynb
-.ipynb_checkpoints/
-
 __pycache__/
 modules/__pycache__/
 modules/datamodel/__pycache__/
