@@ -215,7 +215,7 @@ class UpdateStakeholder(Action):
                     else:
                         logging.warning('Could not determine amount of stakeholders in message classified as quantity')
                         action_return = False
-                        events.append(SlotSet('plural', None))
+                        dispatcher.utter_template('utter_not_sure', tracker)
                     
                 # Else we asked for the moral status
                 else:
@@ -711,17 +711,13 @@ class EvaluationUtilitarism(Action):
         if r.status_code == 200:
             response = r.json()
             
-            #dispatcher.utter_attachment(response['url'])
-            message = {
-                "attachment": {
-                    "type":"image",
-                    "payload":{
-                        "title":"Report: utilitarism",
-                        "src": response['url']
-                    }
+            dispatcher.utter_attachment({
+                "type":"image",
+                "payload": {
+                    "title":"Report: utilitarism",
+                    "src": response['url']
                 }
-            }
-            dispatcher.utter_custom_message(message)
+            })
         else:
             dispatcher.utter_template('utter_evaluation_failure', tracker)
 
@@ -741,17 +737,13 @@ class EvaluationDeontology(Action):
         if r.status_code == 200:
             response = r.json()
             
-            #dispatcher.utter_attachment(response['url'])
-            message = {
-                "attachment": {
-                    "type":"image",
-                    "payload":{
-                        "title":"Report: deontology",
-                        "src": response['url']
-                    }
+            dispatcher.utter_attachment({
+                "type":"image",
+                "payload": {
+                    "title":"Report: deontology",
+                    "src": response['url']
                 }
-            }
-            dispatcher.utter_custom_message(message)
+            })
         else:
             dispatcher.utter_template('utter_evaluation_failure', tracker)
 
