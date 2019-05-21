@@ -19,7 +19,8 @@ actions:
 - action_update_context
 - action_create_option
 - action_create_stakeholder
-- utter_intro
+- utter_intro_1
+- utter_intro_2
 - utter_confirm_stakeholders
 - utter_ask_moral_question
 - utter_ask_identified_deed

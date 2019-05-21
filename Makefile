@@ -31,6 +31,7 @@ train-nlu:
 		-v $(shell pwd)/config:/app/config \
 		-v $(shell pwd)/components:/app/components \
 		-v $(shell pwd)/modules:/app/modules \
+		-v $(shell pwd)/data/lookup:/app/data/lookup \
 		aroemelt/ethicbot:nlu \
 		run \
 		python -m rasa_nlu.train \

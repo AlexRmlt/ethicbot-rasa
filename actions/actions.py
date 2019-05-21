@@ -711,13 +711,13 @@ class EvaluationUtilitarism(Action):
         if r.status_code == 200:
             response = r.json()
             
-            dispatcher.utter_attachment({
+            dispatcher.utter_attachment(json.dumps({
                 "type":"image",
                 "payload": {
-                    "title":"Report: utilitarism",
+                    "title": "Report: utilitarism",
                     "src": response['url']
                 }
-            })
+            }))
         else:
             dispatcher.utter_template('utter_evaluation_failure', tracker)
 
@@ -737,13 +737,13 @@ class EvaluationDeontology(Action):
         if r.status_code == 200:
             response = r.json()
             
-            dispatcher.utter_attachment({
+            dispatcher.utter_attachment(json.dumps({
                 "type":"image",
                 "payload": {
-                    "title":"Report: deontology",
+                    "title": "Report: deontology",
                     "src": response['url']
                 }
-            })
+            }))
         else:
             dispatcher.utter_template('utter_evaluation_failure', tracker)
 

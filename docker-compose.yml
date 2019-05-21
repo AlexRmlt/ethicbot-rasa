@@ -25,6 +25,7 @@ services:
       - ./config:/app/config
       - ./components:/app/components
       - ./modules:/app/modules
+      - ./data/lookup:/app/data/lookup
     command:
       - start
       - --path
