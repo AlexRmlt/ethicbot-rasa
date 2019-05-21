@@ -5,6 +5,12 @@ pipeline:
 - name: "intent_entity_featurizer_regex"
 - name: "intent_featurizer_spacy"
 - name: "ner_crf"
+  features: [
+              ["low", "title", "upper"],
+              ["bias", "low", "prefix5", "prefix2", "suffix5", "suffix3",
+               "suffix2", "upper", "title", "digit", "pattern"],
+              ["low", "title", "upper"]
+          ]
 #- name: "ner_spacy"
 - name: "ner_synonyms"
 - name: "intent_classifier_sklearn"

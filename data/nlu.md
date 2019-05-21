@@ -1,6 +1,3 @@
-## intent:/decider
-- //decider{"name": "Yves"}
-
 ## intent:affirm
 - Yes
 - Exactly
@@ -52,6 +49,15 @@
 - /affirm
 
 ## intent:consequence
+- [Vivian](name) would definitely die
+- [Dominique](name) might be arrested for the crime of stealing the cure
+- [The Hessians](name) would not get any money for the stolen cure
+- [Vivian](name) could get healed by the cure from his disease
+- [Uli](name) would get the chance to go to university
+- [Uli](name) would then do very well, and stand every chance of getting her desired university place
+- [Uli](name)'s final mark will be very poor and may harm her chances of being chosen for this university
+- [Uli](name) would not be able to attend the university she has dreamed of
+- [Uli](name) would get a permanent record and she will no longer be eligible to attend the prestigious university that she has dreamed of attending all through high school
 - [The children](stakeholder) would not get any money to receive proper food, clothing and medical care.
 - [Florin](name) would get arrested by the police and receive a penalty
 - [Five persons](stakeholder:five persons) would get overrun and die
@@ -246,15 +252,15 @@
 - There is a possibility that the attackers would kill many people
 - /consequence[{"name": "the Swabians"}](name:the Swabians)
 - [The Palatines](name:the Palatines)[](sentiment:neg)The Palatines would most definitely die anyway
-- [](sentiment:pos)Her husband could then be saved from dying
+- [](sentiment:pos)[Her husband](stakeholder) could then be saved from dying
 - /consequence[{"name": "jane"}](name:jane)
 - [Jane](name:jane)[](sentiment:neu)Jane would have to endure the company of her husband for a longer time
-- [Jane](name:jane)'s husband would die
-- [](sentiment:pos)The patients could get organs and their lives would be saved
+- [Jane's husband](stakeholder) would die
+- [](sentiment:pos)[The patients](stakeholder) could get organs and their lives would be saved
 - /consequence[{"name": "the patients"}](name:the patients)
-- [](sentiment:neg)Glenn would die immediately when his medication is suspended
+- [](sentiment:neg)[Glenn](name) would die immediately when his medication is suspended
 - /consequence[{"name": "Glenn"}](name:Glenn)
-- [](sentiment:neu)Glenn would live a few days longer
+- [](sentiment:neu)[Glenn](name) would live a few days longer
 - /consequence[{"name": "Glenn"}](name:Glenn)
 - [The patients](stakeholder:the patients)[](sentiment:neg)The patients would not get any organs and die sooner or later
 
@@ -526,6 +532,7 @@
 - /decider[{"name": "jane"}](name:jane)
 
 ## intent:deed
+- It would mean [tolerating her fraud attempt](deed)
 - [Reporting a crime](deed) would be a moral action
 - [Lying](deed) to Katharina
 - The option implies most propably [saving the patients life](deed)
@@ -599,6 +606,7 @@
 - It also means [saving the lives](deed) of [5](quantity) people
 
 ## intent:deny
+- No, there is no one else involved
 - there would not be any consequences
 - He does not have a name
 - No
@@ -862,6 +870,7 @@
 - /deontology
 
 ## intent:dontknow
+- Unfortunately I don't know her name
 - I have no idea, but there are really many
 - I don't know it exactly
 - I don't know it exactly
@@ -1090,7 +1099,11 @@
 - /moralstatus[{"moralstatus": "human"}](moralstatus:human)
 - /moralstatus[{"moralstatus": "human"}](moralstatus:human)
 
+## lookup:name
+data/lookup/names.txt
+
 ## intent:name
+- Use the name [Andre](name)
 - Use the name "[the children](stakeholder)"
 - My name is [Alex](name)
 - Call him [Frank](name)
@@ -1189,6 +1202,11 @@
 - It would not matter that much actually
 
 ## intent:option
+- She could also [do nothing](deed) to prevent the death of her partner
+- She could [break into his store](deed) one night after he has gone home and [steal](deed) the cure
+- [Quinn](name) could also mark the paper as though she believed it was her own work
+- She can also [refuse to accept the report](deed)
+- She could [report her plagiarisation](deed) to the school authorities
 - He can [report the crime](deed) to the police
 - She could make the decision to [flip the switch](deed)
 - He could decide to [flip the switch](deed)
@@ -1327,14 +1345,14 @@
 - Positive in principle
 - The effects would be all positive
 - This would be positive for him
-- For [Jörg](name)[ the](name:Jörg) effects would be positive
+- For [Jörg](name) the effects would be positive
 - Definitely positive
 - that would be positive for her
 - more positive
 - positive
 - positive
 - That would be positive for them
-- ABsolutely positive
+- Absolutely positive
 - more positive
 - More positive
 - positive of course
@@ -1342,6 +1360,7 @@
 - The effects would be extremely positive
 
 ## intent:quantity
+- It's not a group, only [one](quantity) person
 - [5](quantity)
 - [five](quantity)
 - altogether [five](quantity)
@@ -1381,8 +1400,8 @@
 - [About 6 million](quantity) I guess
 - I think [3 million](quantity)
 - I would say [8](quantity)
-- It is one robot.
-- It is one single robot.[](quantity:1)
+- It is [one](quantity) robot.
+- It is [one](quantity) single robot.[](quantity:1)
 - Maybe [7](quantity) people.
 - It could be [ten people](stakeholder)[ten](quantity) people.
 - [8](quantity)
@@ -1545,6 +1564,11 @@
 - [9](quantity)
 
 ## intent:stakeholder
+- [The druggist](stakeholder) is involved, who is selling the cure for ten times the amount it cost him to make it
+- [Vivian's partner](stakeholder) wants to get a cure for the disease that has been invented by one druggist who lives fairly close
+- [Someone](stakeholder) is dying from a rare disease
+- [One of the pupils](stakeholder) is a very bright and gifted girl who always achieved good grades
+- The first person is [an English teacher](stakeholder) at a high school.
 - Then there is [myself](stakeholder) and I witnessed the robbery
 - [One of her crew members](stakeholder), whose legs have been crushed by a rock, will die without medical attention.
 - [Molly](name) is on a footbridge over the tracks, in between the approaching trolley and the five workmen.

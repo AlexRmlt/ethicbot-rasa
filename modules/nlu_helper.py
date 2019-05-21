@@ -17,20 +17,20 @@ def get_moral_status(text):
     ms = None
 
     try:
-        with open('modules/wordlists/human.txt') as file:
+        with open('data/lookup/human.txt') as file:
             words = file.read().split(' ')
             if any(w in text.lower() for w in words):
                 assumed_human = True
                 ms = 'human'
 
-        with open('modules/wordlists/machine.txt') as file:
+        with open('data/lookup/machine.txt') as file:
             words = file.read().split(' ')
             if any(w in text.lower() for w in words):
                 assumed_machine = True
                 ms = 'machine'
 
         if not (assumed_human == True and assumed_machine == True):
-            with open('modules/wordlists/animal.txt') as file:
+            with open('data/lookup/animal.txt') as file:
                 words = file.read().split(' ')
                 if any(w in text.lower() for w in words):
                     assumed_animal = True
@@ -86,7 +86,7 @@ def get_plural(text, ent=None):
     Identify if the user is talking about a single person or a group
     """
     assumed_plural = False
-    with open('modules/wordlists/plural.txt') as file:
+    with open('data/lookup/plural.txt') as file:
         plw = file.read().split(' ')
         # If a stakeholder is provided, check it first
         if not ent == None:

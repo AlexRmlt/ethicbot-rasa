@@ -37,7 +37,8 @@ class Intro(Action):
         return "action_intro"
 
     def run(self, dispatcher, tracker, domain):
-        dispatcher.utter_template('utter_intro', tracker)
+        dispatcher.utter_template('utter_intro_1', tracker)
+        dispatcher.utter_template('utter_intro_2', tracker)
         dispatcher.utter_template('utter_ask_stakeholders', tracker)
 
 
@@ -679,9 +680,11 @@ class ChooseAffectedStakeholder(Action):
         return 'action_choose_affected_stakeholder'
 
     def run(self, dispatcher, tracker, domain):
+        dispatcher.utter_template(utter_reflect_choose_affected_stakeholder, tracker)
+
         buttons = []
         message = "On which person would this decision have an impact?"
-
+        
         for sh in mind.get_stakeholders(tracker.sender_id):
             buttons.append({ 'title': sh['name'], 'payload': '/consequence{"name": "' + sh['name'] + '"}'})
         dispatcher.utter_button_message(message, buttons)
