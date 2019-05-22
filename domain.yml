@@ -1,6 +1,7 @@
 %YAML 1.1
 ---
 actions:
+- utter_reflect_single_person 
 - utter_report_image
 - utter_starting_evaluation_1
 - utter_starting_evaluation_2
@@ -342,7 +343,7 @@ templates:
   utter_ask_stakeholders:
   - text: 'First: Which persons or groups of people are all involved in the situation?
       Please tell me in one sentence, one after the other.'
-  - text: First of all, I'd like to know who is engaged in the situation. Please name me all persons or group of persons in one sentence, starting with the first.
+  - text: First of all, I'd like to know who is engaged in the situation. Please name me all persons or groups of persons in one sentence, starting with the first.
   - text: The first aspect I am interested in is which persons are all involved in the situation. Please describe each person or group one by one to me in a single short sentences, starting with the first.
   - text: My first question to you is which people are involved in the situation. I need a short description for each person or group of people in one sentence, one at a time. Please start with the first one.
   utter_ask_universalizable:
@@ -486,6 +487,11 @@ templates:
   - text: I'm having trouble understanding the person for whom this would have consequences.
   - text: I think you pointed out who would be affected by this but I did not quite get it.
   - text: As far as I understood this consequence would have an impact on someone, but I did not understand exactly who it is.
+  utter_reflect_single_person:
+  - text: Okay, so its only one single person. Got that wrong at first.
+  - text: Well, I thought there were multiple people. So it's only one person, alright.
+  - text: I see, it's just one. Apparently I confused this person with a group of people.
+  - text: Apparently I confused this person with a group of people. I'll keep in mind that it's only one person.
   utter_starting_evaluation_1:
   - text: Okay, I'm starting the evaluation now. 
   - text: I'm going to evaluate the information you gave to me. 

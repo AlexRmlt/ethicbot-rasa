@@ -186,6 +186,8 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_utilitarism
+    - slot{"action_return": true}
+    - slot{"image": "url"}
     - utter_report_image
     - utter_next_method
 * affirm
@@ -194,6 +196,8 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_deontology
+    - slot{"action_return": true}
+    - slot{"image": "url"}
     - utter_report_image
     - utter_next_method
 * deny
@@ -412,6 +416,8 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_deontology
+    - slot{"action_return": true}
+    - slot{"image": "url"}
     - utter_report_image
     - utter_next_method
 * affirm
@@ -420,6 +426,8 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_utilitarism
+    - slot{"action_return": true}
+    - slot{"image": "url"}
     - utter_report_image
     - utter_next_method
 * deny
@@ -475,7 +483,8 @@
 * dontknow
     - utter_ask_guess_quantity
 * dontknow
-    - utter_too_bad
+    - action_update_stakeholder
+    - slot{"action_return": false}
     - utter_ask_name_plural
 * name
     - action_update_stakeholder
@@ -715,6 +724,8 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_utilitarism
+    - slot{"action_return": true}
+    - slot{"image": "url"}
     - utter_report_image
     - utter_next_method
 * affirm
@@ -723,6 +734,8 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_deontology
+    - slot{"action_return": true}
+    - slot{"image": "url"}
     - utter_report_image
     - utter_next_method
 * deny
@@ -978,6 +991,8 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_utilitarism
+    - slot{"action_return": true}
+    - slot{"image": "url"}
     - utter_report_image
     - utter_next_method
 * affirm
@@ -986,6 +1001,8 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_deontology
+    - slot{"action_return": true}
+    - slot{"image": "url"}
     - utter_report_image
     - utter_next_method
 * deny
@@ -1231,6 +1248,8 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_utilitarism
+    - slot{"action_return": true}
+    - slot{"image": "url"}
     - utter_report_image
     - utter_next_method
 * affirm
@@ -1239,6 +1258,8 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_deontology
+    - slot{"action_return": true}
+    - slot{"image": "url"}
     - utter_report_image
     - utter_next_method
 * deny
@@ -1486,6 +1507,8 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_deontology
+    - slot{"action_return": true}
+    - slot{"image": "url"}
     - utter_report_image
     - utter_next_method
 * affirm
@@ -1494,6 +1517,8 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_utilitarism
+    - slot{"action_return": true}
+    - slot{"image": "url"}
     - utter_report_image
     - utter_next_method
 * deny
@@ -1773,6 +1798,8 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_deontology
+    - slot{"action_return": true}
+    - slot{"image": "url"}
     - utter_report_image
     - utter_next_method
 * affirm
@@ -1781,6 +1808,8 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_utilitarism
+    - slot{"action_return": true}
+    - slot{"image": "url"}
     - utter_report_image
     - utter_next_method
 * deny
@@ -1992,6 +2021,8 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_utilitarism
+    - slot{"action_return": true}
+    - slot{"image": "url"}
     - utter_report_image
     - utter_next_method
 * affirm
@@ -2000,6 +2031,8 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_deontology
+    - slot{"action_return": true}
+    - slot{"image": "url"}
     - utter_report_image
     - utter_next_method
 * deny
@@ -2264,6 +2297,8 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_utilitarism
+    - slot{"action_return": true}
+    - slot{"image": "url"}
     - utter_report_image
     - utter_next_method
 * deny
@@ -2469,6 +2504,8 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_utilitarism
+    - slot{"action_return": true}
+    - slot{"image": "url"}
     - utter_report_image
     - utter_next_method
 * deny
@@ -2688,6 +2725,8 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_deontology
+    - slot{"action_return": true}
+    - slot{"image": "url"}
     - utter_report_image
     - utter_next_method
 * deny
@@ -2888,6 +2927,8 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_deontology
+    - slot{"action_return": true}
+    - slot{"image": "url"}
     - utter_report_image
     - utter_next_method
 * deny
@@ -3084,6 +3125,8 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_utilitarism
+    - slot{"action_return": true}
+    - slot{"image": "url"}
     - utter_report_image
     - utter_next_method
 
@@ -3231,6 +3274,8 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_utilitarism
+    - slot{"action_return": true}
+    - slot{"image": "url"}
     - utter_report_image
     - utter_next_method
 * affirm
@@ -3239,6 +3284,8 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_deontology
+    - slot{"action_return": true}
+    - slot{"image": "url"}
     - utter_report_image
     - utter_next_method
 * deny
@@ -3415,6 +3462,8 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_utilitarism
+    - slot{"action_return": true}
+    - slot{"image": "url"}
     - utter_report_image
     - utter_next_method
 * deny
@@ -4152,6 +4201,8 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_utilitarism
+    - slot{"action_return": true}
+    - slot{"image": "url"}
     - utter_report_image
     - utter_next_method
 * deny
@@ -4377,6 +4428,8 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_utilitarism
+    - slot{"action_return": true}
+    - slot{"image": "url"}
     - utter_report_image
     - utter_next_method
 * affirm
@@ -4385,6 +4438,8 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_deontology
+    - slot{"action_return": true}
+    - slot{"image": "url"}
     - utter_report_image
     - utter_next_method
 * deny
@@ -4754,6 +4809,8 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_utilitarism
+    - slot{"action_return": true}
+    - slot{"image": "url"}
     - utter_report_image
     - utter_next_method
 * affirm
@@ -4762,6 +4819,8 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_deontology
+    - slot{"action_return": true}
+    - slot{"image": "url"}
     - utter_report_image
     - utter_next_method
 
@@ -4934,4 +4993,3 @@
 * deny
     - utter_got_everything
     - utter_ask_method
-

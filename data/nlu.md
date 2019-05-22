@@ -1216,6 +1216,7 @@ data/lookup/names.txt
 - It would not matter that much actually
 
 ## intent:option
+- Quinn could also [just watch](deed) and [do nothing](deed)
 - He can [use dynamite](deed) to [bomb the way free](deed) [killing](deed) the pregnant woman
 - He can [refuse to pull the chair](deed)
 - He can [obey the guard](deed) and [pull the chair](deed)

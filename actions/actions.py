@@ -87,7 +87,6 @@ class CreateStakeholder(Action):
     * Intent 'decider'
 
     Required slots:
-    * plural == singular or plural of stakeholder to be created
     * moralstatus == moral status of the stakeholder (human, machine or animal)
 
     Returns:
@@ -106,15 +105,13 @@ class CreateStakeholder(Action):
             'decider': False, 
             'moral_status': const.MS_OTHER, 
             'moral_status_weight': 1,
-            'amount': -1
+            'amount': -1.1 # The 0.1 indicate that the amount was not asked for yet
         })
 
         # Do we know whether it is a single stakeholder or a group of people?
-        #if (tracker.get_slot('plural') == const.SINGULAR):
         if (tracker.latest_message['intent'].get('name') == 'stakeholder') or \
             (tracker.latest_message['intent'].get('name') == 'decider'):
             sh['amount'] = 1
-        #elif (tracker.get_slot('plural') == const.SPECIFIC_PLURAL):
         elif (tracker.latest_message['intent'].get('name') == 'stakeholdergroup'):
             sources = [ next(tracker.get_latest_entity_values('stakeholder'), None) ]
                         #next(tracker.get_latest_entity_values('quantity'), -1) ]
@@ -166,7 +163,6 @@ class UpdateStakeholder(Action):
     * action_return = False if no update was made
     * decider = name of the stakeholder if he is the decider
     * name = name of the stakeholder if it was freshly assigned
-    * plural = specific_plural if amount was detected or None if detection failed
     """
     def name(self):
         return "action_update_stakeholder"
@@ -192,32 +188,29 @@ class UpdateStakeholder(Action):
             # Intent: quantity
             elif (tracker.latest_message['intent'].get('name') == 'quantity'):
                 # We always ask for the amount of stakeholders before we ask for moral status
-                # Plural slot must be set to 'unspecific_plural', else we would not ask
-                # If detection of stakeholder amount failed, plural slot is set to None
-                # Thus: if the slot is still set to 'unspecific_plural', we are asking for the amount
-                if tracker.get_slot('plural') == const.UNSPECIFIC_PLURAL:
+                # Therefore: If the amount is still set to -1.1, we did not ask yet
+                if sh['amount'] == -1.1:
                     sources = [ next(tracker.get_latest_entity_values('quantity'), -1),
                                 next(tracker.get_latest_entity_values('stakeholder'), None),
                                 tracker.latest_message['text'] ]
                     quantity = nlu.get_quantity_from_sources(sources)
 
+                    sh['amount'] = quantity
+                    mind.memorize(tracker.sender_id, sh)
+                    
                     if quantity != -1:      
-                        sh['amount'] = quantity
-                        mind.memorize(tracker.sender_id, sh)
                         action_return = True
 
                         if quantity > 1:
                             dispatcher.utter_message('I see, {} are involved.'.format(sh['amount']))
-                            events.append(SlotSet('plural', const.SPECIFIC_PLURAL))
                         else:
-                            dispatcher.utter_message('Okay, so its only one single person. Got that wrong at first.')
-                            events.append(SlotSet('plural', const.SINGULAR))
+                            dispatcher.utter_template('utter_reflect_single_person', tracker)
                     else:
                         logging.warning('Could not determine amount of stakeholders in message classified as quantity')
                         action_return = False
                         dispatcher.utter_template('utter_not_sure', tracker)
                     
-                # Else we asked for the moral status
+                # Else we asked for the moral status weight
                 else:
                     sources = [ next(tracker.get_latest_entity_values('quantity'), -1),
                                 tracker.latest_message['text'] ]
@@ -270,14 +263,21 @@ class UpdateStakeholder(Action):
             elif (tracker.latest_message['intent'].get('name') == 'dontknow') \
                 or (tracker.latest_message['intent'].get('name') == 'deny'):
 
-                sh.set_name(s_id=tracker.sender_id).memorize(tracker.sender_id)
-                dispatcher.utter_message('Okay, I will just use the name "{}" from now on!'.format(sh['name']))
-                
-                if (sh['decider'] == True):
-                    events.append(SlotSet('decider', sh['name']))
-                events.append(SlotSet('name', sh['name']))
+                if sh['amount'] == -1.1:
+                    # Flag amount such that we know the question is through
+                    sh['amount'] = -1
+                    mind.memorize(tracker.sender_id, sh)
+                    action_return = False
+                    dispatcher.utter_template('utter_too_bad', tracker)
+                else:
+                    sh.set_name(s_id=tracker.sender_id).memorize(tracker.sender_id)
+                    dispatcher.utter_message('Okay, I will just use the name "{}" from now on!'.format(sh['name']))
+                    
+                    if (sh['decider'] == True):
+                        events.append(SlotSet('decider', sh['name']))
+                    events.append(SlotSet('name', sh['name']))
 
-                action_return = True
+                    action_return = True
 
             # Intent: moralstatus
             elif (tracker.latest_message['intent'].get('name') == 'moralstatus'):
