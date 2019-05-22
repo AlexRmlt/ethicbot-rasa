@@ -1,6 +1,9 @@
 %YAML 1.1
 ---
 actions:
+- utter_report_image
+- utter_starting_evaluation_1
+- utter_starting_evaluation_2
 - utter_ask_universalizable
 - utter_ask_impact_negative
 - action_update_consequence
@@ -109,6 +112,8 @@ slots:
     - pos
     - neg
     - neu
+  image:
+    type: text
 templates:
   utter_ask_consequence_definite:
   - buttons:
@@ -481,3 +486,22 @@ templates:
   - text: I'm having trouble understanding the person for whom this would have consequences.
   - text: I think you pointed out who would be affected by this but I did not quite get it.
   - text: As far as I understood this consequence would have an impact on someone, but I did not understand exactly who it is.
+  utter_starting_evaluation_1:
+  - text: Okay, I'm starting the evaluation now. 
+  - text: I'm going to evaluate the information you gave to me. 
+  - text: Alright, I'm now starting my analysis.
+  - text: I'll think about it for a short while. 
+  utter_starting_evaluation_2:
+  - text: Please have a moment of patience as I'm sorting things out.
+  - text: Please have a moment of patience.
+  - text: It could just take a moment.
+  - text: Please wait a moment.
+  utter_report_image:
+  - text: 'Here are the results of my evaluation:'
+    image: '{image}'
+  - text: 'This is what I understood about your situation:'
+    image: '{image}'
+  - text: 'These are the results of my analysis:'
+    image: '{image}'
+  - text: 'This is what I make out of the situation you described:'
+    image: '{image}'

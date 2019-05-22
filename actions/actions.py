@@ -705,21 +705,21 @@ class EvaluationUtilitarism(Action):
         return 'action_evaluation_utilitarism'
 
     def run(self, dispatcher, tracker, domain):
+        events = []
+
         data = mind.get_full_model(tracker.sender_id)
         r = requests.post(const.API_UTILITARISM, json=data)
 
         if r.status_code == 200:
             response = r.json()
-            
-            dispatcher.utter_attachment(json.dumps({
-                "type":"image",
-                "payload": {
-                    "title": "Report: utilitarism",
-                    "src": response['url']
-                }
-            }))
+            action_return = True
+            events.append(SlotSet('image', response['url']))
         else:
             dispatcher.utter_template('utter_evaluation_failure', tracker)
+            action_return = False
+
+        events.append(SlotSet('action_return', action_return))
+        return events
 
 
 class EvaluationDeontology(Action):
@@ -736,16 +736,14 @@ class EvaluationDeontology(Action):
 
         if r.status_code == 200:
             response = r.json()
-            
-            dispatcher.utter_attachment(json.dumps({
-                "type":"image",
-                "payload": {
-                    "title": "Report: deontology",
-                    "src": response['url']
-                }
-            }))
+            action_return = True
+            events.append(SlotSet('image', response['url']))
         else:
             dispatcher.utter_template('utter_evaluation_failure', tracker)
+            action_return = False
+
+        events.append(SlotSet('action_return', action_return))
+        return events
 
 
 ###############################################################################

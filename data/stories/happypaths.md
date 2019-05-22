@@ -183,11 +183,17 @@
     - utter_got_everything
     - utter_ask_method
 * utilitarism
+    - utter_starting_evaluation_1
+    - utter_starting_evaluation_2
+    - utter_starting_evaluation_1
+    - utter_starting_evaluation_2
     - action_evaluation_utilitarism
     - utter_next_method
 * affirm
     - utter_ask_method
 * deontology
+    - utter_starting_evaluation_1
+    - utter_starting_evaluation_2
     - action_evaluation_deontology
     - utter_next_method
 * deny
@@ -403,11 +409,17 @@
     - utter_got_everything
     - utter_ask_method
 * deontology
+    - utter_starting_evaluation_1
+    - utter_starting_evaluation_2
     - action_evaluation_deontology
     - utter_next_method
 * affirm
     - utter_ask_method
 * utilitarism
+    - utter_starting_evaluation_1
+    - utter_starting_evaluation_2
+    - utter_starting_evaluation_1
+    - utter_starting_evaluation_2
     - action_evaluation_utilitarism
     - utter_next_method
 * deny
@@ -700,11 +712,15 @@
     - utter_got_everything
     - utter_ask_method
 * utilitarism
+    - utter_starting_evaluation_1
+    - utter_starting_evaluation_2
     - action_evaluation_utilitarism
     - utter_next_method
 * affirm
     - utter_ask_method
 * deontology
+    - utter_starting_evaluation_1
+    - utter_starting_evaluation_2
     - action_evaluation_deontology
     - utter_next_method
 * deny
@@ -957,11 +973,15 @@
     - utter_got_everything
     - utter_ask_method
 * utilitarism
+    - utter_starting_evaluation_1
+    - utter_starting_evaluation_2
     - action_evaluation_utilitarism
     - utter_next_method
 * affirm
     - utter_ask_method
 * deontology
+    - utter_starting_evaluation_1
+    - utter_starting_evaluation_2
     - action_evaluation_deontology
     - utter_next_method
 * deny
@@ -1204,11 +1224,15 @@
     - utter_got_everything
     - utter_ask_method
 * utilitarism
+    - utter_starting_evaluation_1
+    - utter_starting_evaluation_2
     - action_evaluation_utilitarism
     - utter_next_method
 * affirm
     - utter_ask_method
 * deontology
+    - utter_starting_evaluation_1
+    - utter_starting_evaluation_2
     - action_evaluation_deontology
     - utter_next_method
 * deny
@@ -1453,11 +1477,15 @@
     - utter_got_everything
     - utter_ask_method
 * deontology
+    - utter_starting_evaluation_1
+    - utter_starting_evaluation_2
     - action_evaluation_deontology
     - utter_next_method
 * affirm
     - utter_ask_method
 * utilitarism
+    - utter_starting_evaluation_1
+    - utter_starting_evaluation_2
     - action_evaluation_utilitarism
     - utter_next_method
 * deny
@@ -1734,11 +1762,15 @@
     - utter_got_everything
     - utter_ask_method
 * deontology
+    - utter_starting_evaluation_1
+    - utter_starting_evaluation_2
     - action_evaluation_deontology
     - utter_next_method
 * affirm
     - utter_ask_method
 * utilitarism
+    - utter_starting_evaluation_1
+    - utter_starting_evaluation_2
     - action_evaluation_utilitarism
     - utter_next_method
 * deny
@@ -1947,11 +1979,15 @@
     - utter_got_everything
     - utter_ask_method
 * utilitarism
+    - utter_starting_evaluation_1
+    - utter_starting_evaluation_2
     - action_evaluation_utilitarism
     - utter_next_method
 * affirm
     - utter_ask_method
 * deontology
+    - utter_starting_evaluation_1
+    - utter_starting_evaluation_2
     - action_evaluation_deontology
     - utter_next_method
 * deny
@@ -2213,6 +2249,8 @@
     - utter_got_everything
     - utter_ask_method
 * utilitarism
+    - utter_starting_evaluation_1
+    - utter_starting_evaluation_2
     - action_evaluation_utilitarism
     - utter_next_method
 * deny
@@ -2415,6 +2453,8 @@
     - utter_got_everything
     - utter_ask_method
 * utilitarism
+    - utter_starting_evaluation_1
+    - utter_starting_evaluation_2
     - action_evaluation_utilitarism
     - utter_next_method
 * deny
@@ -2631,6 +2671,8 @@
     - utter_got_everything
     - utter_ask_method
 * deontology
+    - utter_starting_evaluation_1
+    - utter_starting_evaluation_2
     - action_evaluation_deontology
     - utter_next_method
 * deny
@@ -2828,6 +2870,8 @@
     - utter_got_everything
     - utter_ask_method
 * deontology
+    - utter_starting_evaluation_1
+    - utter_starting_evaluation_2
     - action_evaluation_deontology
     - utter_next_method
 * deny
@@ -3021,6 +3065,8 @@
     - utter_got_everything
     - utter_ask_method
 * utilitarism
+    - utter_starting_evaluation_1
+    - utter_starting_evaluation_2
     - action_evaluation_utilitarism
     - utter_next_method
 
@@ -3165,11 +3211,15 @@
     - utter_got_everything
     - utter_ask_method
 * utilitarism
+    - utter_starting_evaluation_1
+    - utter_starting_evaluation_2
     - action_evaluation_utilitarism
     - utter_next_method
 * affirm
     - utter_ask_method
 * deontology
+    - utter_starting_evaluation_1
+    - utter_starting_evaluation_2
     - action_evaluation_deontology
     - utter_next_method
 * deny
@@ -3343,6 +3393,8 @@
     - utter_got_everything
     - utter_ask_method
 * utilitarism
+    - utter_starting_evaluation_1
+    - utter_starting_evaluation_2
     - action_evaluation_utilitarism
     - utter_next_method
 * deny
@@ -4077,6 +4129,8 @@
     - utter_got_everything
     - utter_ask_method
 * utilitarism
+    - utter_starting_evaluation_1
+    - utter_starting_evaluation_2
     - action_evaluation_utilitarism
     - utter_next_method
 * deny
@@ -4299,11 +4353,15 @@
     - utter_got_everything
     - utter_ask_method
 * utilitarism
+    - utter_starting_evaluation_1
+    - utter_starting_evaluation_2
     - action_evaluation_utilitarism
     - utter_next_method
 * affirm
     - utter_ask_method
 * deontology
+    - utter_starting_evaluation_1
+    - utter_starting_evaluation_2
     - action_evaluation_deontology
     - utter_next_method
 * deny
@@ -4670,11 +4728,15 @@
     - utter_got_everything
     - utter_ask_method
 * utilitarism
+    - utter_starting_evaluation_1
+    - utter_starting_evaluation_2
     - action_evaluation_utilitarism
     - utter_next_method
 * affirm
     - utter_ask_method
 * deontology
+    - utter_starting_evaluation_1
+    - utter_starting_evaluation_2
     - action_evaluation_deontology
     - utter_next_method
 
