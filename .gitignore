@@ -10,9 +10,13 @@ actions/__pycache__/
 .ipynb_checkpoints/
 playground.ipynb
 
-config/endpoints*
+endpoints*
 
 db.json
 rasa.log
 test.py
 story_graph.dot
+
+rasa.db
+rasa_core.log
+tracker.db

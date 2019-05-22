@@ -1,4 +1,4 @@
-.PHONY: clean train train-local interactive actions
+.PHONY: clean train train-local interactive actions x
 
 export PYTHONPATH=$(shell pwd)
 
@@ -13,6 +13,8 @@ help:
 	@echo "        Starts interactive training session"
 	@echo "    actions"
 	@echo "        Starts the server for custom action."
+	@echo "    x"
+	@echo "        Starts rasa x web interface"
 
 clean:
 	find . -name '*.pyc' -exec rm -f {} +
@@ -24,14 +26,16 @@ train:
 	docker run \
 		-v $(shell pwd):/app \
   		aroemelt/ethicbot:rasa \
-  		train -c /app/config/config.yml --fixed-model-name current
+  		train --fixed-model-name current
 
 train-local:
-	rasa train -c config/config.yml --fixed-model-name current
+	rasa train --fixed-model-name current
 
 interactive:
-	rasa interactive -c config/config.yml --endpoints config/endpoints.yml
+	rasa interactive --endpoints endpoints_local.yml
 	
 actions:
 	rasa run actions --actions actions
 
+x:
+	rasa x
