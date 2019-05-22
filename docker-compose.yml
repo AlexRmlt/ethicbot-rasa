@@ -1,37 +1,18 @@
 version: '3.0'
 
 services:
-  rasa_core:
-    image: aroemelt/ethicbot:core
+  rasa:
+    image: aroemelt/ethicbot:rasa
     ports:
       - 8080:5005
     volumes:
-      - ./models/rasa_core:/app/models
-      - ./config:/app/config
+      - ./:/app
     command:
-      - start
-      - --core
-      - models
-      - -c
+      - run
+      - --connector
       - socketio
       - --endpoints
       - config/endpoints.yml
-      - -u
-      - current/
-  rasa_nlu:
-    image: aroemelt/ethicbot:nlu
-    volumes:
-      - ./models/rasa_nlu:/app/models
-      - ./config:/app/config
-      - ./components:/app/components
-      - ./modules:/app/modules
-      - ./data/lookup:/app/data/lookup
-    command:
-      - start
-      - --path
-      - models
-      - -c
-      - config/nlu_config.yml
   action_server:
     image: aroemelt/ethicbot:actions
     volumes:

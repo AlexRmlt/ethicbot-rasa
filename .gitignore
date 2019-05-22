@@ -8,6 +8,7 @@ components/__pycache__/
 actions/__pycache__/
 
 .ipynb_checkpoints/
+playground.ipynb
 
 config/endpoints*
 
@@ -15,4 +16,3 @@ db.json
 rasa.log
 test.py
 story_graph.dot
-playground.ipynb

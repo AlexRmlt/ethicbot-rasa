@@ -1,0 +1,29 @@
+# Configuration for Rasa NLU.
+language: "en"
+pipeline:
+- name: "SpacyNLP"
+- name: "SpacyTokenizer"
+- name: "RegexFeaturizer"
+- name: "SpacyFeaturizer"
+- name: "CRFEntityExtractor"
+  features: [
+              ["low", "title", "upper"],
+              ["bias", "low", "prefix5", "prefix2", "suffix5", "suffix3",
+               "suffix2", "upper", "title", "digit", "pattern"],
+              ["low", "title", "upper"]
+          ]
+- name: "EntitySynonymMapper"
+- name: "SklearnIntentClassifier"
+- name: "components.intent_information.IntentInformation"
+
+# Configuration for Rasa Core.
+policies:
+  - name: KerasPolicy
+    epochs: 100
+    max_history: 5
+  - name: MemoizationPolicy
+    max_history: 5
+  - name: MappingPolicy
+  - name: FallbackPolicy
+    fallback_action_name: 'action_default_fallback'
+

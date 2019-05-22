@@ -7,10 +7,10 @@ from __future__ import unicode_literals
 import logging
 import requests, json
 from typing import Dict, Text, Any, List, Union
-from rasa_core_sdk import Tracker
-from rasa_core_sdk import Action
-from rasa_core_sdk.events import SlotSet
-from rasa_core_sdk.forms import FormAction
+from rasa_sdk import Tracker
+from rasa_sdk import Action
+from rasa_sdk.events import SlotSet
+from rasa_sdk.forms import FormAction
 
 import modules.constants as const
 import modules.nlu_helper as nlu

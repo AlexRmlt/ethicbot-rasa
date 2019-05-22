@@ -1,9 +1,8 @@
-from rasa_nlu.components import Component
-from rasa_nlu import utils
-from rasa_nlu.model import Metadata
-import modules.constants as const
+from rasa.nlu.components import Component
+from rasa.nlu import utils
+from rasa.nlu.model import Metadata
 import modules.nlu_helper as nlu
-import os
+
 
 class IntentInformation(Component):
     """Sentiment identification"""

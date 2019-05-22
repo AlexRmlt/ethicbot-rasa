@@ -179,3 +179,47 @@
     - action_update_stakeholder
     - slot{"action_return": false}
     - utter_ask_name_plural
+
+## User answers affirm instead of telling the next stakeholder 1
+* moralstatus{"moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* affirm
+
+## User answers affirm instead of telling the next stakeholder 2
+* deny
+    - action_update_stakeholder
+    - slot{"name": "the Palatines"}
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* affirm
+    - utter_next_stakeholder
+
+## User answers affirm instead of telling the next stakeholder 3
+* correct
+    - action_update_stakeholder
+    - slot{"name": "Molly"}
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* affirm
+    - utter_next_stakeholder
+
+## User answers affirm instead of telling the next stakeholder 4
+* wrong
+    - action_update_stakeholder
+    - slot{"name": "Inga"}
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* affirm
+    - utter_next_stakeholder
+
+## User answers affirm instead of telling the next stakeholder 5
+* name
+    - action_update_stakeholder
+    - slot{"name": "Inga"}
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* affirm
+    - utter_next_stakeholder
