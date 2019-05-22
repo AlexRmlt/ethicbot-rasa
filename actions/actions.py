@@ -680,7 +680,7 @@ class ChooseAffectedStakeholder(Action):
         return 'action_choose_affected_stakeholder'
 
     def run(self, dispatcher, tracker, domain):
-        dispatcher.utter_template(utter_reflect_choose_affected_stakeholder, tracker)
+        dispatcher.utter_template('utter_reflect_choose_affected_stakeholder', tracker)
 
         buttons = []
         message = "On which person would this decision have an impact?"
@@ -731,6 +731,8 @@ class EvaluationDeontology(Action):
         return 'action_evaluation_deontology'
 
     def run(self, dispatcher, tracker, domain):
+        events = []
+
         data = mind.get_full_model(tracker.sender_id)
         r = requests.post(const.API_DEONTOLOGY, json=data)
 

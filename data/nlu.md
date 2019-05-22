@@ -50,6 +50,7 @@
 
 ## intent:consequence
 - [The son](stakeholder) would still die
+- [Elia](name) will die from the explosion
 - [The guard](stakeholder) would also get killed in this case
 - [The son](stakeholder) will die either way
 - [Alex](name) would have to bear the pain of having killed his own son
@@ -1109,6 +1110,7 @@
 data/lookup/names.txt
 
 ## intent:name
+- The name is [Melanie](name)
 - [Alex](name)
 - You can call him "[the guard](stakeholder)"
 - Use the name "[the son](stakeholder)"
@@ -1214,6 +1216,7 @@ data/lookup/names.txt
 - It would not matter that much actually
 
 ## intent:option
+- He can [use dynamite](deed) to [bomb the way free](deed) [killing](deed) the pregnant woman
 - He can [refuse to pull the chair](deed)
 - He can [obey the guard](deed) and [pull the chair](deed)
 - She could also [do nothing](deed) to prevent the death of her partner
@@ -1323,8 +1326,8 @@ data/lookup/names.txt
 - She could [not take any action](deed) and hope that the attackers don't harm any uninvolved persons
 - She could [hand over the antidote](deed) to her husband to [save him](deed)
 - She could also [refuse to give the antidote](deed) to her husband and [let him die](deed)
-- He could stop giving medicine to Glenn in order to take his organs for the [five](quantity:5) patients
-- He could also continue giving medication to Glenn
+- He could [stop giving medicine](deed) to Glenn in order to [take his organs](deed) for the [five](quantity:5) patients
+- He could also [continue giving medication](deed) to Glenn
 
 ## intent:positive
 - That would be positive for him
@@ -1578,6 +1581,7 @@ data/lookup/names.txt
 - [9](quantity)
 
 ## intent:stakeholder
+- [A pregnant woman](stakeholder) is leading a group of people through a cave when she gets stuck
 - Moreover there is [an innocent third person](stakeholder) the guard threatens to kill if I do not obey his order to pull the chair
 - [My son](stakeholder) ist about to be hung by a sadistic guard and he wants me to pull the chair from underneath his feet.
 - [I](stakeholder) am an inmate in a concentration camp
@@ -1751,6 +1755,8 @@ data/lookup/names.txt
 - [I](stakeholder) witnessed a robbery
 
 ## intent:stakeholdergroup
+- With her are [10 people](stakeholder) who follow behind her
+- [The group of people](stakeholder) following her
 - There are [the children](stakeholder) of the orphanage which is struggling for funding
 - [Four expedition agents](stakeholder) are trapped in a mine.
 - [Four other persons](stakeholder) are trapped in the mine.
