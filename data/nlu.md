@@ -49,7 +49,12 @@
 - /affirm
 
 ## intent:consequence
+- [The son](stakeholder) would still die
+- [The guard](stakeholder) would also get killed in this case
+- [The son](stakeholder) will die either way
+- [Alex](name) would have to bear the pain of having killed his own son
 - [Vivian](name) would definitely die
+- [The guard](stakeholder) would not be killed and survive
 - [Dominique](name) might be arrested for the crime of stealing the cure
 - [The Hessians](name) would not get any money for the stolen cure
 - [Vivian](name) could get healed by the cure from his disease
@@ -532,6 +537,7 @@
 - /decider[{"name": "jane"}](name:jane)
 
 ## intent:deed
+- [Saving the guards life](deed)
 - It would mean [tolerating her fraud attempt](deed)
 - [Reporting a crime](deed) would be a moral action
 - [Lying](deed) to Katharina
@@ -1103,6 +1109,12 @@
 data/lookup/names.txt
 
 ## intent:name
+- [Alex](name)
+- You can call him "[the guard](stakeholder)"
+- Use the name "[the son](stakeholder)"
+- My name is [Alex](name)
+- You can just call him "[Nicki's son](stakeholder)"
+- You can use the name [Alex](name)
 - Use the name [Andre](name)
 - Use the name "[the children](stakeholder)"
 - My name is [Alex](name)
@@ -1202,6 +1214,8 @@ data/lookup/names.txt
 - It would not matter that much actually
 
 ## intent:option
+- He can [refuse to pull the chair](deed)
+- He can [obey the guard](deed) and [pull the chair](deed)
 - She could also [do nothing](deed) to prevent the death of her partner
 - She could [break into his store](deed) one night after he has gone home and [steal](deed) the cure
 - [Quinn](name) could also mark the paper as though she believed it was her own work
@@ -1564,6 +1578,12 @@ data/lookup/names.txt
 - [9](quantity)
 
 ## intent:stakeholder
+- Moreover there is [an innocent third person](stakeholder) the guard threatens to kill if I do not obey his order to pull the chair
+- [My son](stakeholder) ist about to be hung by a sadistic guard and he wants me to pull the chair from underneath his feet.
+- [I](stakeholder) am an inmate in a concentration camp
+- The guard threatens to kill [an innocent inmate](stakeholder) if Nicki refuses to pull the chair
+- [Nicki's son](stakeholder) is about to be hung by a sadistic guard, who wants him to pull the chair from underneath his son's feet.
+- [A person](stakeholder) is captivated as an inmate in a concentration camp.
 - [The druggist](stakeholder) is involved, who is selling the cure for ten times the amount it cost him to make it
 - [Vivian's partner](stakeholder) wants to get a cure for the disease that has been invented by one druggist who lives fairly close
 - [Someone](stakeholder) is dying from a rare disease

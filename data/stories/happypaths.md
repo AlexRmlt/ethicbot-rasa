@@ -185,9 +185,8 @@
 * utilitarism
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
-    - utter_starting_evaluation_1
-    - utter_starting_evaluation_2
     - action_evaluation_utilitarism
+    - utter_report_image
     - utter_next_method
 * affirm
     - utter_ask_method
@@ -195,6 +194,7 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_deontology
+    - utter_report_image
     - utter_next_method
 * deny
     - utter_goodbye
@@ -412,15 +412,15 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_deontology
+    - utter_report_image
     - utter_next_method
 * affirm
     - utter_ask_method
 * utilitarism
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
-    - utter_starting_evaluation_1
-    - utter_starting_evaluation_2
     - action_evaluation_utilitarism
+    - utter_report_image
     - utter_next_method
 * deny
     - utter_goodbye
@@ -715,6 +715,7 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_utilitarism
+    - utter_report_image
     - utter_next_method
 * affirm
     - utter_ask_method
@@ -722,6 +723,7 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_deontology
+    - utter_report_image
     - utter_next_method
 * deny
     - utter_goodbye
@@ -976,6 +978,7 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_utilitarism
+    - utter_report_image
     - utter_next_method
 * affirm
     - utter_ask_method
@@ -983,6 +986,7 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_deontology
+    - utter_report_image
     - utter_next_method
 * deny
     - utter_goodbye
@@ -1227,6 +1231,7 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_utilitarism
+    - utter_report_image
     - utter_next_method
 * affirm
     - utter_ask_method
@@ -1234,6 +1239,7 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_deontology
+    - utter_report_image
     - utter_next_method
 * deny
     - utter_goodbye
@@ -1480,6 +1486,7 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_deontology
+    - utter_report_image
     - utter_next_method
 * affirm
     - utter_ask_method
@@ -1487,6 +1494,7 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_utilitarism
+    - utter_report_image
     - utter_next_method
 * deny
     - utter_goodbye
@@ -1765,6 +1773,7 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_deontology
+    - utter_report_image
     - utter_next_method
 * affirm
     - utter_ask_method
@@ -1772,6 +1781,7 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_utilitarism
+    - utter_report_image
     - utter_next_method
 * deny
     - utter_goodbye
@@ -1982,6 +1992,7 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_utilitarism
+    - utter_report_image
     - utter_next_method
 * affirm
     - utter_ask_method
@@ -1989,6 +2000,7 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_deontology
+    - utter_report_image
     - utter_next_method
 * deny
     - utter_goodbye
@@ -2252,6 +2264,7 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_utilitarism
+    - utter_report_image
     - utter_next_method
 * deny
     - utter_goodbye
@@ -2456,6 +2469,7 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_utilitarism
+    - utter_report_image
     - utter_next_method
 * deny
     - utter_goodbye
@@ -2674,6 +2688,7 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_deontology
+    - utter_report_image
     - utter_next_method
 * deny
     - utter_goodbye
@@ -2873,6 +2888,7 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_deontology
+    - utter_report_image
     - utter_next_method
 * deny
     - utter_goodbye
@@ -3068,6 +3084,7 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_utilitarism
+    - utter_report_image
     - utter_next_method
 
 ## Generated Story -7493447606517739501
@@ -3214,6 +3231,7 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_utilitarism
+    - utter_report_image
     - utter_next_method
 * affirm
     - utter_ask_method
@@ -3221,6 +3239,7 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_deontology
+    - utter_report_image
     - utter_next_method
 * deny
     - utter_goodbye
@@ -3396,6 +3415,7 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_utilitarism
+    - utter_report_image
     - utter_next_method
 * deny
     - utter_goodbye
@@ -4132,6 +4152,7 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_utilitarism
+    - utter_report_image
     - utter_next_method
 * deny
     - utter_goodbye
@@ -4356,6 +4377,7 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_utilitarism
+    - utter_report_image
     - utter_next_method
 * affirm
     - utter_ask_method
@@ -4363,6 +4385,7 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_deontology
+    - utter_report_image
     - utter_next_method
 * deny
     - utter_goodbye
@@ -4731,6 +4754,7 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_utilitarism
+    - utter_report_image
     - utter_next_method
 * affirm
     - utter_ask_method
@@ -4738,6 +4762,7 @@
     - utter_starting_evaluation_1
     - utter_starting_evaluation_2
     - action_evaluation_deontology
+    - utter_report_image
     - utter_next_method
 
 ## Generated Story -4965336235294374691
