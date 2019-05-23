@@ -49,15 +49,16 @@
 - /affirm
 
 ## intent:consequence
+- [the wife](stakeholder) would experience serious pain from the torturing
 - [The son](stakeholder) would still die
-- [Elia](name) will die from the explosion
+- [Elias](name) will die from the explosion
 - [The guard](stakeholder) would also get killed in this case
 - [The son](stakeholder) will die either way
 - [Alex](name) would have to bear the pain of having killed his own son
 - [Vivian](name) would definitely die
 - [The guard](stakeholder) would not be killed and survive
 - [Dominique](name) might be arrested for the crime of stealing the cure
-- [The Hessians](name) would not get any money for the stolen cure
+- [The Hessians] would not get any money for the stolen cure
 - [Vivian](name) could get healed by the cure from his disease
 - [Uli](name) would get the chance to go to university
 - [Uli](name) would then do very well, and stand every chance of getting her desired university place
@@ -236,7 +237,7 @@
 - [](sentiment:neg)[Olga](name) would also suffer if she knows her wife is being tortured.
 - If [Olga](name) acts as expected and tells the police the location of the bombs then many innocent lives could be saved
 - [](sentiment:neg)If the police does not succeed in finding the bombs, [the Swabians](name) will die
-- [](sentiment:neu)[The passengers](name:the passengers) would have less people trying to prevent the boat from sinking and might therefore drown
+- [](sentiment:neu)[The passengers](stakeholder:the passengers) would have less people trying to prevent the boat from sinking and might therefore drown
 - [](sentiment:pos)Lars would be saved
 - /consequence[{"name": "Lars"}](name:Lars)
 - [](sentiment:pos)[The passengers](name:the passengers) would have a better chance of surviving on the lifeboat
@@ -244,10 +245,8 @@
 - /consequence[{"name": "Lars"}](name:Lars)
 - [The Palatines](name:the Palatines)[](sentiment:neg)The Palatines would drown in the ocean
 - [The passengers](stakeholder:the passengers)[](sentiment:pos)The passengers would have a better chance to survive
-- /consequence[{"name": "the passengers"}](name:the passengers)
 - [The passengers](stakeholder:the passengers)[](sentiment:neg)The passengers would possibly die in the overcrowded lifeboat
 - [The child](stakeholder) would suffer unimaginable pain
-- /consequence[{"name": "the child"}](name:the child)
 - For humanity it would mean that nearly everything bad would come to an end if the alien keeps its promise
 - /consequence[{"name": "Uwe"}](name:Uwe)
 - [](sentiment:pos)[The child](stakeholder) would be kept save and would not have to suffer
@@ -535,7 +534,6 @@
 - /decider[{"name": "Lars"}](name:Lars)
 - [](moralstatus:human)A captain is on an overcrowded lifeboat and has to decide if he forces some people to go over board in order to save the rest
 - /decider[{"name": "Greta"}](name:Greta)
-- /decider[{"name": "jane"}](name:jane)
 
 ## intent:deed
 - [Saving the guards life](deed)
@@ -1107,10 +1105,8 @@
 - /moralstatus[{"moralstatus": "human"}](moralstatus:human)
 - /moralstatus[{"moralstatus": "human"}](moralstatus:human)
 
-## lookup:name
-data/lookup/names.txt
-
 ## intent:name
+- Use the name [the wife](stakeholder)
 - The name is [Melanie](name)
 - [Alex](name)
 - You can call him "[the guard](stakeholder)"
@@ -1130,7 +1126,7 @@ data/lookup/names.txt
 - Call him [Andreas](name)
 - His name is [Gregor](name)
 - Call them "[the fans](stakeholder)"
-- Call him [Fluffy](name)
+- Call him [Magnus](name)
 - His name is [Mark](name)
 - Call him [Achmed](name)
 - His name is [Johannes](name)
@@ -1157,15 +1153,15 @@ data/lookup/names.txt
 - Call them "[the passengers](stakeholder)"
 - Call him "[the captain](stakeholder)"
 - You can use the name "[the passengers](stakeholder)"
-- The name is the alien
+- The name is [the alien](stakeholder)
 - You can use the term "[the child](stakeholder)"
 - You can use the name [the passengers](stakeholder)
 - His name is [George](name)
 - My name is [Andrea](name)
 - His name is [Manager](stakeholder)
 - You can call her [Tom's wife](stakeholder)
-- You can call him "[Jane](name:jane)'s husband"
-- My name is Alex
+- You can call him "[Jane's husband](stakeholder)"
+- My name is [Alex](name)
 - You can use the name "[the patients](stakeholder)"
 
 ## intent:negative
@@ -1217,6 +1213,7 @@ data/lookup/names.txt
 - It would not matter that much actually
 
 ## intent:option
+- He can choose to [torture](deed) the madmans wife, maybe the madman then tells them the location of the bombs
 - She could also [be honest](deed) and [take the blame](deed) for the crime
 - It would be an option to [lie](deed) about being the one who actually caused the death of the person and [blame](deed) Uli
 - Quinn could also [just watch](deed) and [do nothing](deed)
@@ -1249,7 +1246,7 @@ data/lookup/names.txt
 - He could [interrupt the TV broadcast](deed) to [help the injured person](deed)
 - She could [flip a switch](deed) which would [lead the train to the side track](deed)
 - He could [interrupt the worldcup match](deed)
-- When Esther asks her about Werner, she could [refuse to tell](deed) her that she hides him
+- When Esther asks her about [Werner](name), she could [refuse to tell](deed) her that she hides him
 - She could [press a button](deed) that [redirects the train](deed) to the side track
 - He could [flip the switch](deed) and [redirect the train](deed)
 - [Nathan](name) could [refrain from flipping the switch](deed) and just [do nothing](deed)
@@ -1585,6 +1582,8 @@ data/lookup/names.txt
 - [9](quantity)
 
 ## intent:stakeholder
+- Then there is [the madmans wife](stakeholder) who the police officers consider to torture
+- [A madman](stakeholder) who has planted a few bombs and refuses to tell the police their location
 - Then [a woman](stakeholder) approaches him who thinks that she was the one who run over the dead person
 - [Some guy](stakeholder) is driving in his car to work when he causes a crash and runs someone over
 - [A pregnant woman](stakeholder) is leading a group of people through a cave when she gets stuck
@@ -1761,6 +1760,7 @@ data/lookup/names.txt
 - [I](stakeholder) witnessed a robbery
 
 ## intent:stakeholdergroup
+- [A large group of people](stakeholder) is threatened by the potential explosions of the bombs
 - With her are [10 people](stakeholder) who follow behind her
 - [The group of people](stakeholder) following her
 - There are [the children](stakeholder) of the orphanage which is struggling for funding

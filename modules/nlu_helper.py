@@ -10,6 +10,26 @@ inf = inflect.engine()
 nlp = spacy.load('en_core_web_md')
 sid = SentimentIntensityAnalyzer()
 
+def lookup_names(message):
+    """ Return name from lookup table
+        Caution: Only the first found name is returned! """
+    entities = message.get("entities")
+    names = [ent for ent in entities if ent.get('entity') == 'name']
+        
+    if len(names) > 0:
+        return None
+    else:
+        msg = nlp(message.text)
+        with open('data/lookup/names.txt') as file:
+            names = set(file.read().split('\n'))
+            for token in msg:
+                w = str(token).lower()
+                if w in names:
+                    start = message.text.lower().find(w)
+                    end = start + len(w)
+                    return (w, start, end)
+    return None
+
 def get_moral_status(text):
     assumed_human = False
     assumed_machine = False

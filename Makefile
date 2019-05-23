@@ -1,4 +1,4 @@
-.PHONY: clean train train-local interactive actions x
+.PHONY: clean train train-local interactive actions test-nlu x
 
 export PYTHONPATH=$(shell pwd)
 
@@ -15,6 +15,8 @@ help:
 	@echo "        Start interactive training session"
 	@echo "    actions"
 	@echo "        Start the server for custom action."
+	@echo "    test-nlu"
+	@echo "        Start an nlu test session"
 	@echo "    x"
 	@echo "        Start rasa x web interface"
 
@@ -38,6 +40,9 @@ interactive:
 	
 actions:
 	rasa run actions --actions actions
+
+test-nlu:
+	rasa shell nlu
 
 x:
 	rasa x
