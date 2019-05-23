@@ -613,6 +613,7 @@
 - It also means [saving the lives](deed) of [5](quantity) people
 
 ## intent:deny
+- I don't care which name you use
 - No, there is no one else involved
 - there would not be any consequences
 - He does not have a name
@@ -1216,6 +1217,8 @@ data/lookup/names.txt
 - It would not matter that much actually
 
 ## intent:option
+- She could also [be honest](deed) and [take the blame](deed) for the crime
+- It would be an option to [lie](deed) about being the one who actually caused the death of the person and [blame](deed) Uli
 - Quinn could also [just watch](deed) and [do nothing](deed)
 - He can [use dynamite](deed) to [bomb the way free](deed) [killing](deed) the pregnant woman
 - He can [refuse to pull the chair](deed)
@@ -1582,6 +1585,8 @@ data/lookup/names.txt
 - [9](quantity)
 
 ## intent:stakeholder
+- Then [a woman](stakeholder) approaches him who thinks that she was the one who run over the dead person
+- [Some guy](stakeholder) is driving in his car to work when he causes a crash and runs someone over
 - [A pregnant woman](stakeholder) is leading a group of people through a cave when she gets stuck
 - Moreover there is [an innocent third person](stakeholder) the guard threatens to kill if I do not obey his order to pull the chair
 - [My son](stakeholder) ist about to be hung by a sadistic guard and he wants me to pull the chair from underneath his feet.

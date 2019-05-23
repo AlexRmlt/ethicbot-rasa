@@ -26,7 +26,7 @@ class Intro(Action):
     """ 
     Initial Action to be executed
     
-    Triggered by: (TODO: map to greeting)
+    Triggered by:
     * Intent 'greeting'
 
     Required slots: /
@@ -40,7 +40,7 @@ class Intro(Action):
         dispatcher.utter_template('utter_intro_1', tracker)
         dispatcher.utter_template('utter_intro_2', tracker)
         dispatcher.utter_template('utter_ask_stakeholders', tracker)
-
+        
 
 class UpdateContext(Action):
     """
@@ -699,7 +699,6 @@ class ChooseAffectedStakeholder(Action):
 class EvaluationUtilitarism(Action):
     """
     Evaluate the gathered information using utilitarism ethics principle
-    (TODO: map to intent 'utilitarism')
     """
     def name(self):
         return 'action_evaluation_utilitarism'
@@ -713,7 +712,12 @@ class EvaluationUtilitarism(Action):
         if r.status_code == 200:
             response = r.json()
             action_return = True
-            events.append(SlotSet('image', response['url']))
+            message = {
+                "text": 'I have prepared a decision table that lists the utilitarian scores I calculated from your input:', 
+                "attachment": response['url'],
+                "image": response['url']
+            }
+            dispatcher.messages.append(message)
         else:
             dispatcher.utter_template('utter_evaluation_failure', tracker)
             action_return = False
@@ -725,7 +729,6 @@ class EvaluationUtilitarism(Action):
 class EvaluationDeontology(Action):
     """
     Evaluate the gathered information using deontology ethics principle
-    (TODO: map to intent 'deontology')
     """
     def name(self):
         return 'action_evaluation_deontology'
@@ -739,7 +742,12 @@ class EvaluationDeontology(Action):
         if r.status_code == 200:
             response = r.json()
             action_return = True
-            events.append(SlotSet('image', response['url']))
+            message = {
+                "text": 'I have derived a decision tree from the various options you have mentioned to me and made a deontological assessment of each action:', 
+                "attachment": response['url'],
+                "image": response['url']
+            }
+            dispatcher.messages.append(message)
         else:
             dispatcher.utter_template('utter_evaluation_failure', tracker)
             action_return = False

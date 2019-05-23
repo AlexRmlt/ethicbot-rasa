@@ -6,15 +6,17 @@ help:
 	@echo "    clean"
 	@echo "        Remove python artifacts and build artifacts."
 	@echo "    train"
-	@echo "        Trains nlu and core model in docker container"
+	@echo "        Train nlu and core model in docker container"
 	@echo "    train-local"
-	@echo "        Trains nlu and core model for local development"
+	@echo "        Train nlu and core model for local development"
+	@echo "    run-local"
+	@echo "        Run a local server"
 	@echo "    interactive"
-	@echo "        Starts interactive training session"
+	@echo "        Start interactive training session"
 	@echo "    actions"
-	@echo "        Starts the server for custom action."
+	@echo "        Start the server for custom action."
 	@echo "    x"
-	@echo "        Starts rasa x web interface"
+	@echo "        Start rasa x web interface"
 
 clean:
 	find . -name '*.pyc' -exec rm -f {} +

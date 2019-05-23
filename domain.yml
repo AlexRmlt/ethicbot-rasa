@@ -2,7 +2,6 @@
 ---
 actions:
 - utter_reflect_single_person 
-- utter_report_image
 - utter_starting_evaluation_1
 - utter_starting_evaluation_2
 - utter_ask_universalizable
@@ -113,8 +112,6 @@ slots:
     - pos
     - neg
     - neu
-  image:
-    type: text
 templates:
   utter_ask_consequence_definite:
   - buttons:
@@ -343,7 +340,7 @@ templates:
   utter_ask_stakeholders:
   - text: 'First: Which persons or groups of people are all involved in the situation?
       Please tell me in one sentence, one after the other.'
-  - text: First of all, I'd like to know who is engaged in the situation. Please name me all persons or groups of persons in one sentence, starting with the first.
+  - text: First of all, I'd like to know who is engaged in the situation. Please name me all persons or groups of persons one after the other, starting with the first.
   - text: The first aspect I am interested in is which persons are all involved in the situation. Please describe each person or group one by one to me in a single short sentences, starting with the first.
   - text: My first question to you is which people are involved in the situation. I need a short description for each person or group of people in one sentence, one at a time. Please start with the first one.
   utter_ask_universalizable:
@@ -502,12 +499,3 @@ templates:
   - text: Please have a moment of patience.
   - text: It could just take a moment.
   - text: Please wait a moment.
-  utter_report_image:
-  - text: 'Here are the results of my evaluation:'
-    image: '{image}'
-  - text: 'This is what I understood about your situation:'
-    image: '{image}'
-  - text: 'These are the results of my analysis:'
-    image: '{image}'
-  - text: 'This is what I make out of the situation you described:'
-    image: '{image}'
