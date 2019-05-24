@@ -1106,6 +1106,10 @@
 - /moralstatus[{"moralstatus": "human"}](moralstatus:human)
 
 ## intent:name
+- Her name is [Andrea](name)
+- [Shopkeeper](stakeholder)
+- [Andrea](name)
+- [Stranger](stakeholder)
 - Use the name [the wife](stakeholder)
 - The name is [Melanie](name)
 - [Alex](name)
@@ -1582,6 +1586,12 @@
 - [9](quantity)
 
 ## intent:stakeholder
+- Yes, [the shopkeeper](stakeholder) is involved, too
+- there was [this stranger](stakeholder)
+- Yes, there is [the shopkeeper](stakeholder)
+- [Me](stakeholder)
+- Yes, there is [me](stakeholder)
+- There is [this stranger](stakeholder) in the street
 - Then there is [the madmans wife](stakeholder) who the police officers consider to torture
 - [A madman](stakeholder) who has planted a few bombs and refuses to tell the police their location
 - Then [a woman](stakeholder) approaches him who thinks that she was the one who run over the dead person

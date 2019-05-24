@@ -27,7 +27,7 @@ def lookup_names(message):
                 if w in names:
                     start = message.text.lower().find(w)
                     end = start + len(w)
-                    return (w, start, end)
+                    return (w.capitalize(), start, end)
     return None
 
 def get_moral_status(text):

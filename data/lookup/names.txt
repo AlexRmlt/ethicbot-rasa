@@ -5203,7 +5203,6 @@ mame
 mami
 mamie
 mamoru
-man
 man-fai
 manami
 manas

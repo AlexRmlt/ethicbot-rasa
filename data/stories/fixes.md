@@ -223,3 +223,16 @@
     - utter_next_stakeholder
 * affirm
     - utter_next_stakeholder
+
+## Name is falsly recognized as stakeholder
+* stakeholder
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 4}
+    - slot{"action_return": true}
+    - utter_ask_name_singular
+* stakeholder
+    - action_update_stakeholder
+    - slot{"name": "Katharina"}
+    - slot{"action_return": true}
+    - utter_ask_moral_status

@@ -285,6 +285,32 @@ class UpdateStakeholder(Action):
                 dispatcher.utter_template('utter_got_it', tracker)
                 action_return = True
 
+            # Intent: stakeholder
+            # Caution: This is assumed to be a misunderstanding by the bot, when he asked for a name but recognized the users
+            # response as 'stakeholder'. The same stepts are performed as for intent 'name'.
+            # TODO: Refactor this code into a method called for each intent that uses it, given this implementation works as intended
+            elif (tracker.latest_message['intent'].get('name') == 'stakeholder'):
+                name = next(tracker.get_latest_entity_values('name'), None)
+                if name == None:
+                    name = next(tracker.get_latest_entity_values('stakeholder'), None)
+
+                # Assure that the name is not already assigned
+                if not mind.get_stakeholder_by_name(tracker.sender_id, name) == None:
+                    name = None
+
+                if not name == None:
+                    sh.set_name(s_id=tracker.sender_id, name=name).memorize(tracker.sender_id)
+                    dispatcher.utter_message('Alright, from now on I will use the name "{}"!'.format(sh['name']))
+                else:
+                    sh.set_name(s_id=tracker.sender_id).memorize(tracker.sender_id)
+                    dispatcher.utter_message('I am not sure if I understood the name correctly. To avoid misunderstandings I will just use the name "{}"!'.format(sh['name']))
+
+                if (sh['decider'] == True):
+                    events.append(SlotSet('decider', sh['name']))
+                events.append(SlotSet('name', sh['name']))
+
+                action_return = True
+
         except (AttributeError, TypeError) as e:
             logging.warning('Exception updating Stakeholder: ' + str(e))
             events.append(SlotSet('name', None))
@@ -664,10 +690,13 @@ class ChooseDecider(Action):
         message = "Out of this persons, who is the one to make the moral decision?"
         buttons = []
 
-        for sh in mind.get_stakeholders(tracker.sender_id):
-            buttons.append({ 'title': sh['name'], 'payload': '/decider{"name": "' + sh['name'] + '"}'})
-        buttons.append({ "title": "Some other person", "payload": '/decider' })
-        dispatcher.utter_button_message(message, buttons)
+        try:
+            for sh in mind.get_stakeholders(tracker.sender_id):
+                buttons.append({ 'title': sh['name'], 'payload': '/decider{"name": "' + sh['name'] + '"}'})
+            buttons.append({ "title": "Some other person", "payload": '/decider' })
+            dispatcher.utter_button_message(message, buttons)
+        except (KeyError, AttributeError):
+            pass
 
         return []
 
