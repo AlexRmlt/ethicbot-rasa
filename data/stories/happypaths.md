@@ -221,7 +221,7 @@
     - action_update_stakeholder
     - slot{"action_return": true}
     - utter_next_stakeholder
-* stakeholdergroup{"stakeholder": "a patient", "name": "Ken", "moralstatus": "human"}
+* stakeholdergroup{"name": "Ken", "moralstatus": "human"}
     - slot{"name": "Ken"}
     - slot{"moralstatus": "human"}
     - action_create_stakeholder
@@ -751,7 +751,7 @@
     - action_update_stakeholder
     - slot{"action_return": true}
     - utter_next_stakeholder
-* stakeholder{"stakeholder": "a", "name": "Mary", "moralstatus": "human"}
+* stakeholder{"name": "Mary", "moralstatus": "human"}
     - slot{"name": "Mary"}
     - slot{"moralstatus": "human"}
     - action_create_stakeholder
@@ -995,7 +995,7 @@
 ## Generated Story 3846139624378699522
 * greeting
     - action_intro
-* stakeholdergroup{"stakeholder": "the first person", "name": "Jane", "quantity": "two", "moralstatus": "human"}
+* stakeholdergroup{"name": "Jane", "quantity": "two", "moralstatus": "human"}
     - slot{"name": "Jane"}
     - slot{"moralstatus": "human"}
     - action_create_stakeholder

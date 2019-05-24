@@ -1106,6 +1106,7 @@
 - /moralstatus[{"moralstatus": "human"}](moralstatus:human)
 
 ## intent:name
+- You can call him [Buck](name)
 - Her name is [Andrea](name)
 - [Shopkeeper](stakeholder)
 - [Andrea](name)

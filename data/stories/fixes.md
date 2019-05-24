@@ -236,3 +236,23 @@
     - slot{"name": "Katharina"}
     - slot{"action_return": true}
     - utter_ask_moral_status
+
+## Don't ask identified name if it was found to be already assigned
+* stakeholder{"name": "jane"}
+    - slot{"name": "jane"}
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 2}
+    - slot{"action_return": true}
+    - action_check_identified_name
+    - slot{"action_return": true}
+    - utter_ask_name_singular
+
+## Don't ask identified name if there was no name found
+* stakeholder{"stakeholder": "the shopkeeper"}
+    - slot{"name": "jane"}
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 2}
+    - slot{"action_return": true}
+    - utter_ask_name_singular
