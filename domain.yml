@@ -86,6 +86,8 @@ intents:
 - moralquestion
 - goodbye
 - thanks
+- smalltalk:
+    triggers: action_handle_smalltalk
 slots:
   action_return:
     type: bool

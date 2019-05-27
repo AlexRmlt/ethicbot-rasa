@@ -1,6 +1,8 @@
 docker-images/
 models/
 
+reverseproxy/certbot/
+
 __pycache__/
 modules/__pycache__/
 modules/datamodel/__pycache__/

@@ -672,7 +672,25 @@ class CheckIdentifiedName(Action):
             # If no name was identified, it is better to initiate a question for the actual name
             action_return = True
 
-        return [SlotSet("action_return", action_return)]        
+        return [SlotSet("action_return", action_return)]
+
+class HandleSmalltalk(Action):
+    """
+    Provide an appropriate reaction to smalltalk independently of the current dialogue context!
+    That means:
+    1. Use Mapping Policy
+    2. Rewind after utterance in order to avoid creating an unknown storyline
+    
+    Returns:
+    * UserUtteranceReverted() - do not disturb the current story!
+    """
+    def name(self):
+        return 'action_handle_smalltalk'
+        
+    def run(self, dispatcher, tracker, domain):
+        dispatcher.utter_template("utter_smalltalk_1", tracker)
+        dispatcher.utter_template("utter_smalltalk_2", tracker)
+        return [UserUtteranceReverted()]
 
 #########################
 #                       #
