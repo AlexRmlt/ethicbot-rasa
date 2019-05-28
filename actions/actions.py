@@ -10,7 +10,9 @@ from typing import Dict, Text, Any, List, Union
 from rasa_sdk import Tracker
 from rasa_sdk import Action
 from rasa_sdk.events import SlotSet
+from rasa_sdk.events import UserUtteranceReverted
 from rasa_sdk.forms import FormAction
+from rasa_sdk.executor import CollectingDispatcher
 
 import modules.constants as const
 import modules.nlu_helper as nlu
@@ -116,7 +118,8 @@ class CreateStakeholder(Action):
             sources = [ next(tracker.get_latest_entity_values('stakeholder'), None) ]
                         #next(tracker.get_latest_entity_values('quantity'), -1) ]
             quantity = nlu.get_quantity_from_sources(sources)
-            sh['amount'] = int(quantity)
+            if not quantity == -1:
+                sh['amount'] = int(quantity)
 
         # Is a moral status identified?
         moralstatus = next(tracker.get_latest_entity_values('moralstatus'), None)
@@ -690,7 +693,66 @@ class HandleSmalltalk(Action):
     def run(self, dispatcher, tracker, domain):
         dispatcher.utter_template("utter_smalltalk_1", tracker)
         dispatcher.utter_template("utter_smalltalk_2", tracker)
-        return [UserUtteranceReverted()]
+        
+        dispatcher.utter_message(tracker.events[-3].get('text'))
+        
+        return [UserUtteranceReverted()] 
+
+class ActionDefaultAskAffirmation(Action):
+    """Asks for an affirmation of the intent if NLU threshold is not met."""
+
+    def name(self) -> Text:
+        return "action_default_ask_affirmation"
+
+    def __init__(self) -> None:
+        self.ignored_intents = ['deny', 'affirm', 'neutral', 'moralstatus', 'dontknow', 'greeting', 'correct', 'quantity', 'wrong', 
+                                'utilitarism', 'deontology', 'moralquestion', 'goodbye', 'thanks']
+
+        import csv
+
+        self.intent_mappings = {}
+        with open('data/intent_description_mapping.csv',
+                  newline='',
+                  encoding='utf-8') as file:
+            csv_reader = csv.reader(file)
+            for row in csv_reader:
+                self.intent_mappings[row[0]] = row[1]
+
+    def run(self,
+            dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]
+            ) -> List['Event']:
+
+        intent_ranking = tracker.latest_message.get('intent_ranking', [])
+        if len(intent_ranking) > 1:
+            diff_intent_confidence = (intent_ranking[0].get("confidence") -
+                                      intent_ranking[1].get("confidence"))
+            if diff_intent_confidence < 0.2:
+                intent_ranking = intent_ranking[:2]
+            else:
+                intent_ranking = intent_ranking[:1]
+        first_intent_names = [intent.get('name', '')
+                              for intent in intent_ranking
+                              if not intent.get('name', '') in self.ignored_intents]
+
+        message_title = "Sorry, I'm not sure I've understood " \
+                        "you correctly. Do you want to..."
+
+        mapped_intents = [(name, self.intent_mappings.get(name, name))
+                          for name in first_intent_names]
+
+        buttons = []
+        for intent in mapped_intents:
+            buttons.append({'title': intent[1],
+                            'payload': '/{}'.format(intent[0])})
+
+        buttons.append({'title': 'Something else',
+                        'payload': '/deny'})
+
+        dispatcher.utter_button_message(message_title, buttons=buttons)
+
+        return []
 
 #########################
 #                       #

@@ -1,83 +1,88 @@
 %YAML 1.1
 ---
 actions:
-- utter_reflect_single_person 
-- utter_starting_evaluation_1
-- utter_starting_evaluation_2
-- utter_ask_universalizable
-- utter_ask_impact_negative
-- action_update_consequence
-- utter_too_bad
-- utter_ask_stakeholders
-- action_update_stakeholder
-- utter_goodbye
-- utter_ask_identified_name
-- utter_ask_impact
-- utter_ask_name_singular
-- utter_ask_consequence_probability
-- action_evaluation_utilitarism
-- utter_ask_moral_status
-- utter_ask_method
+- action_check_identified_name
+- action_choose_affected_stakeholder
+- action_choose_decider
 - action_create_consequence
-- action_update_context
+- action_create_deed
 - action_create_option
 - action_create_stakeholder
+- action_default_ask_affirmation
+- action_evaluation_deontology
+- action_evaluation_utilitarism
+- action_handle_smalltalk
+- action_intro
+- action_update_consequence
+- action_update_context
+- action_update_deed
+- action_update_option
+- action_update_stakeholder
+- utter_ask_consequence_definite
+- utter_ask_consequence_probability
+- utter_ask_consequences
+- utter_ask_deed
+- utter_ask_guess_quantity
+- utter_ask_identified_deed
+- utter_ask_identified_name
+- utter_ask_impact
+- utter_ask_impact_negative
+- utter_ask_impact_positive
+- utter_ask_impact_weight
+- utter_ask_inherent_evil
+- utter_ask_method
+- utter_ask_moral_question
+- utter_ask_moral_status
+- utter_ask_moral_status_weight
+- utter_ask_name_plural
+- utter_ask_name_singular
+- utter_ask_options
+- utter_ask_quantity
+- utter_ask_stakeholders
+- utter_ask_universalizable
+- utter_confirm_decider
+- utter_confirm_stakeholders
+- utter_goodbye
+- utter_got_everything
+- utter_greet
 - utter_intro_1
 - utter_intro_2
-- utter_confirm_stakeholders
-- utter_ask_moral_question
-- utter_ask_identified_deed
-- utter_ask_impact_weight
-- utter_ask_consequences
-- utter_ask_impact_positive
-- utter_ask_options
-- utter_ask_moral_status_weight
-- action_intro
-- utter_next_option
-- utter_ask_guess_quantity
-- utter_next_method
-- action_check_identified_name
-- action_update_option
-- utter_ask_name_plural
-- utter_confirm_decider
-- utter_ask_quantity
 - utter_next_consequence
-- action_choose_decider
-- action_create_deed
-- utter_ask_consequence_definite
 - utter_next_deed
-- utter_ask_inherent_evil
-- action_choose_affected_stakeholder
+- utter_next_method
+- utter_next_option
 - utter_next_stakeholder
-- action_update_deed
-- utter_got_everything
-- utter_thanks
-- utter_ask_deed
 - utter_reflect_choose_affected_stakeholder
-- action_evaluation_deontology
+- utter_reflect_single_person
+- utter_smalltalk_1
+- utter_smalltalk_2
+- utter_starting_evaluation_1
+- utter_starting_evaluation_2
+- utter_thanks
+- utter_too_bad
 entities:
-- sentiment
 - deed
 - moralstatus
 - name
 - quantity
+- sentiment
 - stakeholder
 intents:
+- deny
+- stakeholder
+- quantity
+- greeting
+- moralstatus
+- stakeholdergroup
+- name
 - affirm
 - deed
 - neutral
-- moralstatus
 - dontknow
-- name
-- greeting
-- stakeholdergroup
 - correct
-- quantity
 - option
-- stakeholder
 - consequence
 - wrong
-- deny
 - negative
 - utilitarism
 - deontology
@@ -86,8 +91,7 @@ intents:
 - moralquestion
 - goodbye
 - thanks
-- smalltalk:
-    triggers: action_handle_smalltalk
+- smalltalk
 slots:
   action_return:
     type: bool
@@ -128,35 +132,50 @@ templates:
       title: It's definitely going to be the case
     - payload: /wrong
       title: It's not 100% sure
-    text: Can I assume that this will definitely be the case, or is there a possibility that this consequence does not actually become true.
+    text: Can I assume that this will definitely be the case, or is there a possibility
+      that this consequence does not actually become true.
   - buttons:
     - payload: /correct
       title: It's certain
     - payload: /wrong
       title: It's not 100% sure
-    text: Is there a possibility that the consequence will not occur, or is it already certain?
+    text: Is there a possibility that the consequence will not occur, or is it already
+      certain?
   utter_ask_consequence_probability:
   - text: How high would you estimate the probability in percent?
-  - text: Can you give me an estimation in percent of the probability that this will eventuate?
-  - text: What probability in percent would you estimate that this consequence becomes real?
-  - text: How high would you estimate the likelihood that this will actually happen in percent?
+  - text: Can you give me an estimation in percent of the probability that this will
+      eventuate?
+  - text: What probability in percent would you estimate that this consequence becomes
+      real?
+  - text: How high would you estimate the likelihood that this will actually happen
+      in percent?
   utter_ask_consequences:
-  - text: For which of these persons would this decision have consequences? Can you describe to me the first effect you can think of? 
-  - text: I'd like to know for whom this decision would have consequences and what they would look
-      like. Can you give me information on the first consequence coming to your mind?
-  - text: Can you tell me who of the engaged persons would be affected, and what the concrete effect would be? Please tell me one consequence per involved person after the other.
-  - text: Let us talk about the effects this decision would have on the different persons. Can you tell me one consequence and the person it would hold for?
+  - text: For which of these persons would this decision have consequences? Can you
+      describe to me the first effect you can think of?
+  - text: I'd like to know for whom this decision would have consequences and what
+      they would look like. Can you give me information on the first consequence coming
+      to your mind?
+  - text: Can you tell me who of the engaged persons would be affected, and what the
+      concrete effect would be? Please tell me one consequence per involved person
+      after the other.
+  - text: Let us talk about the effects this decision would have on the different
+      persons. Can you tell me one consequence and the person it would hold for?
   utter_ask_deed:
   - text: I am interested in the concrete actions contained in this possibility and
       their moral dimension. Can you think of a morally valid action implied by this
       option? If so, please name it.
-  - text: I want to know about some morally relevant actions that are implied by this option. Can you name one? I'm thinking of basic actions with a moral notion that could be relevant, like "stealing" or "lying" or something like that. 
-  - text: Do you recognize any particular actions in this option that have strong moral relevance? Any generic deed that one would judge intuitively from a moral perspective. If yes, please name it briefly.
+  - text: I want to know about some morally relevant actions that are implied by this
+      option. Can you name one? I'm thinking of basic actions with a moral notion
+      that could be relevant, like "stealing" or "lying" or something like that.
+  - text: Do you recognize any particular actions in this option that have strong
+      moral relevance? Any generic deed that one would judge intuitively from a moral
+      perspective. If yes, please name it briefly.
   utter_ask_guess_quantity:
   - text: Could you please have a rough guess?
   - text: Could you estimate the number roughly?
   - text: Can you give me an approximate number? That would be helpful.
-  - text: Can you give me an idea of the number? So that I have an imagination of the order of magnitude.
+  - text: Can you give me an idea of the number? So that I have an imagination of
+      the order of magnitude.
   utter_ask_identified_deed:
   - buttons:
     - payload: /correct
@@ -177,13 +196,16 @@ templates:
       title: Relevant
     - payload: /wrong
       title: Unimportant
-    text: When you are talking about "{deed}" - Can I consider this relevant for the ethical evaluation? I mean in a sense that you could come to a moral verdict about this particular action.
+    text: When you are talking about "{deed}" - Can I consider this relevant for the
+      ethical evaluation? I mean in a sense that you could come to a moral verdict
+      about this particular action.
   - buttons:
     - payload: /correct
       title: Relevant
     - payload: /wrong
       title: Unimportant
-    text: The term "{deed}" you were referring to has caught my attention. Is that an action that can be morally judged, or is it irrelevant in this context?
+    text: The term "{deed}" you were referring to has caught my attention. Is that
+      an action that can be morally judged, or is it irrelevant in this context?
   utter_ask_identified_name:
   - buttons:
     - payload: /correct
@@ -196,7 +218,7 @@ templates:
       title: 'Yes'
     - payload: /wrong
       title: 'No'
-    text: 'The person you are describing is called "{name}", correct?'
+    text: The person you are describing is called "{name}", correct?
   - buttons:
     - payload: /correct
       title: 'Yes'
@@ -208,16 +230,21 @@ templates:
       title: 'Yes'
     - payload: /wrong
       title: 'No'
-    text: 'Do I understand you correctly that the person you are referring to is called "{name}"?'
+    text: Do I understand you correctly that the person you are referring to is called
+      "{name}"?
   utter_ask_impact:
   - text: Would the effects be more positive or more negative for {name}?
   - text: Would that be more positive or more negative for {name}?
   - text: Would you consider the effects on {name} to be more negative or more positive?
   - text: Would you describe the effects on {name} as more positive or more negative?
-  - text: Would you characterize the effects on {name} as somewhat positive or rather negative?
-  - text: I'm not quite sure what to think about this. Can you tell me if the consequence would be more positive or more negative?
-  - text: I don't know how to think about this. Would you tend to rate the consequence more positively or negatively?
-  - text: I'm not sure what that would mean for {name}. Can I consider this effect positive, or is it negative?
+  - text: Would you characterize the effects on {name} as somewhat positive or rather
+      negative?
+  - text: I'm not quite sure what to think about this. Can you tell me if the consequence
+      would be more positive or more negative?
+  - text: I don't know how to think about this. Would you tend to rate the consequence
+      more positively or negatively?
+  - text: I'm not sure what that would mean for {name}. Can I consider this effect
+      positive, or is it negative?
   utter_ask_impact_negative:
   - buttons:
     - payload: /correct
@@ -236,7 +263,8 @@ templates:
       title: Correct
     - payload: /wrong
       title: Wrong
-    text: As far as I understand it this would not mean anything good for {name}, correct?
+    text: As far as I understand it this would not mean anything good for {name},
+      correct?
   - buttons:
     - payload: /correct
       title: Correct
@@ -261,7 +289,8 @@ templates:
       title: Correct
     - payload: /wrong
       title: Wrong
-    text: As far as I understand it, this seems quite desirable for {name}. Is that correct?
+    text: As far as I understand it, this seems quite desirable for {name}. Is that
+      correct?
   - buttons:
     - payload: /correct
       title: Correct
@@ -269,11 +298,16 @@ templates:
       title: Wrong
     text: I'd say that's pretty positive for {name}. Did I understand that right?
   utter_ask_impact_weight:
-  - text: Could you estimate how severe the impact would be? On a scale of 1 to 10, with 10 being most severe?
-  - text: I'd like to hear an estimation from you of how significant the effects would be. Could you provide a rating of 1 to 10, with 10 being the most weighty?
-  - text: I wonder how drastic the impact would be. Can you give me an estimation in a range from 1 to 10?
-  - text: I need to know the severity of the impact of this consequence if it were to occur. Could you make a rough assessment on a scale of 1 to 10?
-  - text: I need to know the severity of the impact of this consequence if it were to occur. Could you give me a rough rating on a scale of 1 to 10?
+  - text: Could you estimate how severe the impact would be? On a scale of 1 to 10,
+      with 10 being most severe?
+  - text: I'd like to hear an estimation from you of how significant the effects would
+      be. Could you provide a rating of 1 to 10, with 10 being the most weighty?
+  - text: I wonder how drastic the impact would be. Can you give me an estimation
+      in a range from 1 to 10?
+  - text: I need to know the severity of the impact of this consequence if it were
+      to occur. Could you make a rough assessment on a scale of 1 to 10?
+  - text: I need to know the severity of the impact of this consequence if it were
+      to occur. Could you give me a rough rating on a scale of 1 to 10?
   utter_ask_inherent_evil:
   - buttons:
     - payload: /affirm
@@ -306,8 +340,12 @@ templates:
   utter_ask_moral_status_weight:
   - text: Compared to a human, how high would you rate the moral significance of {name}
       on a scale of 1 to 10, with 10 being equal to a human?
-  - text: If you compare {name} to a human, using a scale of 1 to 10, how significant would you rate his moral status? 10 would mean that it is equal to a humans status.
-  - text: I'm inclined to say that {name} would not be treated equally to a human from a moral perspective. Could you provide a rating, on a scale of 1 to 10, how significant {name} is compared to a human?
+  - text: If you compare {name} to a human, using a scale of 1 to 10, how significant
+      would you rate his moral status? 10 would mean that it is equal to a humans
+      status.
+  - text: I'm inclined to say that {name} would not be treated equally to a human
+      from a moral perspective. Could you provide a rating, on a scale of 1 to 10,
+      how significant {name} is compared to a human?
   utter_ask_name_plural:
   - text: Can you give me a name? That would make it easier for me to recognize who
       you are talking about.
@@ -331,20 +369,39 @@ templates:
   - text: And what would be the most obvious option that {decider} could choose?
   - text: Could you describe the first option coming to your mind that {decider} could
       choose?
-  - text: I need to know which options {decider} can choose from. Could you describe the first one?
-  - text: I am interested in the different possibilities that might be available in this matter. Can you describe the first option {decider} could pick?
+  - text: I need to know which options {decider} can choose from. Could you describe
+      the first one?
+  - text: I am interested in the different possibilities that might be available in
+      this matter. Can you describe the first option {decider} could pick?
   utter_ask_quantity:
-  - text: It seems to me you are referring to a group of people. Can you tell me approximately how many persons the group you are talking
-      about consists?
-  - text: I assume you are describing a group of people. From how many persons does this group consist exactly?
-  - text: If I understand you correctly we are talking about more than one person here. How many people are there in the group you're describing?
-  - text: I registered that you are talking about a group of several people. Can you tell me how many people this group consists of?
+  - text: It seems to me you are referring to a group of people. Can you tell me approximately
+      how many persons the group you are talking about consists?
+  - text: I assume you are describing a group of people. From how many persons does
+      this group consist exactly?
+  - text: If I understand you correctly we are talking about more than one person
+      here. How many people are there in the group you're describing?
+  - text: I registered that you are talking about a group of several people. Can you
+      tell me how many people this group consists of?
+  utter_ask_rephrase:
+  - text: Sorry, I didn't catch that. Can you please repeat it in other words?
+  - text: Could you please rephrase that?
+  - text: Excuse me, I'm having trouble to understand you. Could you please reformulate
+      what you said before?
+  - text: Sorry, I don't quite get what you are telling me, could you phrase that
+      differently, please?
   utter_ask_stakeholders:
-  - text: 'First: Which persons or groups of people are all involved in the situation?
-      Please tell me in one sentence, one after the other.'
-  - text: First of all, I'd like to know who is engaged in the situation. Please name me all persons or groups of persons one after the other, starting with the first.
-  - text: The first aspect I am interested in is which persons are all involved in the situation. Please describe each person or group one by one to me in a single short sentences, starting with the first.
-  - text: My first question to you is which people are involved in the situation. I need a short description for each person or group of people in one sentence, one at a time. Please start with the first one.
+  - text: "First: Which persons or groups of people are all involved in the situation?\
+      \ Please tell me in one sentence, one after the other, including the person's\
+      \ name."
+  - text: First of all, I'd like to know who is engaged in the situation. Please name
+      me all persons or groups of persons including their names one after the other,
+      starting with the first.
+  - text: The first aspect I am interested in is which persons are all involved in
+      the situation. Please describe each person or group one by one to me in a single
+      short sentences including their name, starting with the first.
+  - text: My first question to you is which people are involved in the situation.
+      I need a short description for each person or group of people in one sentence
+      including their name, one at a time. Please start with the first one.
   utter_ask_universalizable:
   - buttons:
     - payload: /correct
@@ -356,23 +413,23 @@ templates:
   - text: The moral decision is made by {decider}.
   - text: Obviously {decider} is responsible for making the moral decision.
   - text: It is also clear to me that {decider} is the one to make the moral decision.
-  - text: I understood that {decider} is the one who is obligated to decide what to do.
+  - text: I understood that {decider} is the one who is obligated to decide what to
+      do.
   - text: In my understanding, {decider} is the one who bears to make the moral decision.
   utter_confirm_stakeholders:
   - text: All right. As far as I understand {amount_stakeholders} different people
       or groups of people are involved.
-  - text: As of now, I registered {amount_stakeholders} different parties who are involved in the situation.
-  - text: Well, as far as I have understood it there are {amount_stakeholders} different people or groups engaged in the situation.
-  - text: Okay, I have noted {amount_stakeholders} different persons or groups of persons who are relevant for the situation.
-  utter_default:
-  - text: Sorry, I didn't catch that. Can you please repeat it in other words?
-  - text: Could you please rephrase that?
-  - text: Excuse me, I'm having trouble to understand you. Could you please reformulate what you said before?
-  - text: Sorry, I don't quite get what you are telling me, could you phrase that differently, please?
+  - text: As of now, I registered {amount_stakeholders} different parties who are
+      involved in the situation.
+  - text: Well, as far as I have understood it there are {amount_stakeholders} different
+      people or groups engaged in the situation.
+  - text: Okay, I have noted {amount_stakeholders} different persons or groups of
+      persons who are relevant for the situation.
   utter_evaluation_failure:
   - text: I am currently not able to process your request. Sorry for that!
   - text: I'm sorry, I can't process your request in the moment.
-  - text: Sorry, I am experiencing technical difficulties. Right now I can't perform the evaluation.
+  - text: Sorry, I am experiencing technical difficulties. Right now I can't perform
+      the evaluation.
   - text: Please excuse me, there is something wrong right now. Please try again later.
   utter_goodbye:
   - text: See you later
@@ -402,34 +459,50 @@ templates:
   - text: Alright, I'm gonna keep that in mind.
   - text: I'll keep that in mind.
   - text: Got it!
+  utter_greet:
+  - text: Hi!
+  - text: Good day!
+  - text: Hello!
+  - text: Pleased to meet you.
   utter_intro_1:
-  - text: Hello! I am a chatbot designed to understand ethical problems. 
+  - text: Hello! I am a chatbot designed to understand ethical problems.
   - text: Hi! My task is to understand and evaluate ethical dillemata.
   - text: Hi! I'm here to understand any ethical decision situation you are facing.
-  - text: Hello! My purpose is to understand ethical situations that you describe to me.
+  - text: Hello! My purpose is to understand ethical situations that you describe
+      to me.
   - text: Hi! I was created to understand decision situations with an ethical dimension.
   utter_intro_2:
   - text: I'll try my best to understand the situation you're describing.
-  - text: I will ask you questions about your situation and try to understand it as good as I can.
-  - text: Let us work together to gain a better understanding of the different aspects of the situation you describe to me.
-  - text: I'm going to ask you some questions about any ethical dillemma and will hopefully gain an insight into the different aspects of the situation you are describing.
-  - text: I will ask you about several aspects of the moral decision situation you are facing and hopefully get to understand the details.
+  - text: I will ask you questions about your situation and try to understand it as
+      good as I can.
+  - text: Let us work together to gain a better understanding of the different aspects
+      of the situation you describe to me.
+  - text: I'm going to ask you some questions about any ethical dillemma and will
+      hopefully gain an insight into the different aspects of the situation you are
+      describing.
+  - text: I will ask you about several aspects of the moral decision situation you
+      are facing and hopefully get to understand the details.
   utter_next_consequence:
   - text: Would this have any consequences for anybody else?
   - text: Would that affect anyone else?
-  - text: Is there another consequence for anybody else to be named? 
+  - text: Is there another consequence for anybody else to be named?
   - text: Is there any other consequence for anybody else to be named?
-  - text: Is anyone else affected by this, and if so, what would the consequences be?
-  - text: Is anyone else affected by this, and if so, what would the consequences look like?
+  - text: Is anyone else affected by this, and if so, what would the consequences
+      be?
+  - text: Is anyone else affected by this, and if so, what would the consequences
+      look like?
   - text: Can you think of another consequence for anyone else, or is that all?
   - text: Do I need to know about any other consequence for another involved person?
   - text: Is there a consequence for anyone left we did not talk about yet?
   utter_next_deed:
   - text: Are there any further actions of moral relevance implied by this option?
       If so, please name me the next one.
-  - text: Is there any morally relevant action implied by this option left that you did not come up with yet?
-  - text: Is there any other action in connection with this option that could be morally assessed?
-  - text: Do I need to know about another important action implied by this option or is that all?
+  - text: Is there any morally relevant action implied by this option left that you
+      did not come up with yet?
+  - text: Is there any other action in connection with this option that could be morally
+      assessed?
+  - text: Do I need to know about another important action implied by this option
+      or is that all?
   - text: Do you want to name another morally relevant activity that I should consider?
   utter_next_method:
   - buttons:
@@ -463,6 +536,45 @@ templates:
   - text: I admit I'm a little confused right now.
   - text: Well, I need to sort a little.
   - text: Okay, I don't quite get it right now.
+  utter_reflect_choose_affected_stakeholder:
+  - text: I did not quite understand which person is affected by the consequence you
+      are describing.
+  - text: I did not quite understand who would be affected by the consequence you
+      are describing.
+  - text: I find it hard to understand who would be affected by this consequence.
+  - text: I'm having a hard time identifying the person who would be affected.
+  - text: I'm having trouble understanding the person for whom this would have consequences.
+  - text: I think you pointed out who would be affected by this but I did not quite
+      get it.
+  - text: As far as I understood this consequence would have an impact on someone,
+      but I did not understand exactly who it is.
+  utter_reflect_single_person:
+  - text: Okay, so its only one single person. Got that wrong at first.
+  - text: Well, I thought there were multiple people. So it's only one person, alright.
+  - text: I see, it's just one. Apparently I confused this person with a group of
+      people.
+  - text: Apparently I confused this person with a group of people. I'll keep in mind
+      that it's only one person.
+  utter_smalltalk_1:
+  - text: That's a bit off-topic, isn't it?
+  - text: That's going a little off the subject, isn't it?
+  - text: Please do not turn away from the topic.
+  - text: I don't think I'm exactly meant to find an answer to that.
+  utter_smalltalk_2:
+  - text: Let's proceed with the situation.
+  - text: Let us continue with the situation.
+  - text: Let's focus on the ethical matter.
+  - text: I'd rather stick to the ethics topic.
+  utter_starting_evaluation_1:
+  - text: Okay, I'm starting the evaluation now.
+  - text: I'm going to evaluate the information you gave to me.
+  - text: Alright, I'm now starting my analysis.
+  - text: I'll think about it for a short while.
+  utter_starting_evaluation_2:
+  - text: Please have a moment of patience as I'm sorting things out.
+  - text: Please have a moment of patience.
+  - text: It could just take a moment.
+  - text: Please wait a moment.
   utter_thanks:
   - text: No problem!
   - text: Never mind
@@ -478,26 +590,3 @@ templates:
   - text: Okay, we will manage to proceed without this information anyway.
   - text: Well, I will just exclude this part when I'm evaluating.
   - text: No big deal, let's just move on.
-  utter_reflect_choose_affected_stakeholder:
-  - text: I did not quite understand which person is affected by the consequence you are describing.
-  - text: I did not quite understand who would be affected by the consequence you are describing.
-  - text: I find it hard to understand who would be affected by this consequence.
-  - text: I'm having a hard time identifying the person who would be affected.
-  - text: I'm having trouble understanding the person for whom this would have consequences.
-  - text: I think you pointed out who would be affected by this but I did not quite get it.
-  - text: As far as I understood this consequence would have an impact on someone, but I did not understand exactly who it is.
-  utter_reflect_single_person:
-  - text: Okay, so its only one single person. Got that wrong at first.
-  - text: Well, I thought there were multiple people. So it's only one person, alright.
-  - text: I see, it's just one. Apparently I confused this person with a group of people.
-  - text: Apparently I confused this person with a group of people. I'll keep in mind that it's only one person.
-  utter_starting_evaluation_1:
-  - text: Okay, I'm starting the evaluation now. 
-  - text: I'm going to evaluate the information you gave to me. 
-  - text: Alright, I'm now starting my analysis.
-  - text: I'll think about it for a short while. 
-  utter_starting_evaluation_2:
-  - text: Please have a moment of patience as I'm sorting things out.
-  - text: Please have a moment of patience.
-  - text: It could just take a moment.
-  - text: Please wait a moment.

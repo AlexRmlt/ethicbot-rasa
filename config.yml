@@ -13,11 +13,12 @@ pipeline:
 # Configuration for Rasa Core.
 policies:
   - name: KerasPolicy
-    epochs: 100
-    max_history: 5
-  - name: MemoizationPolicy
-    max_history: 5
+    epochs: 200
+    max_history: 10
+  - name: AugmentedMemoizationPolicy
+    max_history: 10
   - name: MappingPolicy
-  - name: FallbackPolicy
-    fallback_action_name: 'action_default_fallback'
-
+  - name: TwoStageFallbackPolicy
+    nlu_threshold: 0.3
+    core_threshold: 0.3
+    deny_suggestion_intent_name: "deny"

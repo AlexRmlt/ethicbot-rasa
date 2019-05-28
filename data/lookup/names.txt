@@ -3220,7 +3220,6 @@ gusta
 gusti
 gustie
 gusty
-guy
 guylain
 guylaine
 gwen
@@ -6984,6 +6983,7 @@ ruby
 ruchel
 ruchi
 rudie
+rüdiger
 rudolf
 rudolph
 rudy

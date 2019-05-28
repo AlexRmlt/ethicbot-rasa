@@ -224,19 +224,6 @@
 * affirm
     - utter_next_stakeholder
 
-## Name is falsly recognized as stakeholder
-* stakeholder
-    - action_create_stakeholder
-    - slot{"moralstatus": null}
-    - slot{"amount_stakeholders": 4}
-    - slot{"action_return": true}
-    - utter_ask_name_singular
-* stakeholder
-    - action_update_stakeholder
-    - slot{"name": "Katharina"}
-    - slot{"action_return": true}
-    - utter_ask_moral_status
-
 ## Don't ask identified name if it was found to be already assigned
 * stakeholder{"name": "jane"}
     - slot{"name": "jane"}
@@ -256,3 +243,120 @@
     - slot{"amount_stakeholders": 2}
     - slot{"action_return": true}
     - utter_ask_name_singular
+
+## Handle greeting as first message
+* greeting
+    - action_intro
+* greeting
+    - utter_greet
+    - utter_ask_stakeholders
+* stakeholder{"name": "Andrea"}
+    - action_create_stakeholder
+
+## Choose evaluation principles twice or more times 1
+* deny
+    - utter_next_option
+* deny
+    - utter_got_everything
+    - utter_ask_method
+* utilitarism
+    - utter_starting_evaluation_1
+    - utter_starting_evaluation_2
+    - action_evaluation_utilitarism
+    - slot{"action_return": true}
+    - utter_next_method
+* affirm
+    - utter_ask_method
+* deontology
+    - utter_starting_evaluation_1
+    - utter_starting_evaluation_2
+    - action_evaluation_deontology
+    - slot{"action_return": true}
+    - utter_next_method
+* utilitarism
+    - utter_starting_evaluation_1
+    - utter_starting_evaluation_2
+    - action_evaluation_utilitarism
+    - slot{"action_return": true}
+    - utter_next_method
+
+## Choose evaluation principles twice or more times 2
+* deny
+    - utter_next_option
+* deny
+    - utter_got_everything
+    - utter_ask_method
+* deontology
+    - utter_starting_evaluation_1
+    - utter_starting_evaluation_2
+    - action_evaluation_deontology
+    - slot{"action_return": true}
+    - utter_next_method
+* affirm
+    - utter_ask_method
+* utilitarism
+    - utter_starting_evaluation_1
+    - utter_starting_evaluation_2
+    - action_evaluation_utilitarism
+    - slot{"action_return": true}
+    - utter_next_method
+* deontology
+    - utter_starting_evaluation_1
+    - utter_starting_evaluation_2
+    - action_evaluation_deontology
+    - slot{"action_return": true}
+    - utter_next_method
+
+## Choose evaluation principles twice or more times 3
+* deny
+    - utter_next_option
+* deny
+    - utter_got_everything
+    - utter_ask_method
+* deontology
+    - utter_starting_evaluation_1
+    - utter_starting_evaluation_2
+    - action_evaluation_deontology
+    - slot{"action_return": true}
+    - utter_next_method
+* affirm
+    - utter_ask_method
+* deontology
+    - utter_starting_evaluation_1
+    - utter_starting_evaluation_2
+    - action_evaluation_deontology
+    - slot{"action_return": true}
+    - utter_next_method
+* utilitarism
+    - utter_starting_evaluation_1
+    - utter_starting_evaluation_2
+    - action_evaluation_utilitarism
+    - slot{"action_return": true}
+    - utter_next_method
+
+## Choose evaluation principles twice or more times 4
+* deny
+    - utter_next_option
+* deny
+    - utter_got_everything
+    - utter_ask_method
+* utilitarism
+    - utter_starting_evaluation_1
+    - utter_starting_evaluation_2
+    - action_evaluation_utilitarism
+    - slot{"action_return": true}
+    - utter_next_method
+* affirm
+    - utter_ask_method
+* deontology
+    - utter_starting_evaluation_1
+    - utter_starting_evaluation_2
+    - action_evaluation_deontology
+    - slot{"action_return": true}
+    - utter_next_method
+* deontology
+    - utter_starting_evaluation_1
+    - utter_starting_evaluation_2
+    - action_evaluation_deontology
+    - slot{"action_return": true}
+    - utter_next_method

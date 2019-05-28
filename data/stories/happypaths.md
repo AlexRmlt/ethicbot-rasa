@@ -1,3 +1,7 @@
+## Smalltalk Mapping
+* smalltalk
+  - action_handle_smalltalk
+
 ## Generated Story 4250896942926339107
 * greeting
     - action_intro
