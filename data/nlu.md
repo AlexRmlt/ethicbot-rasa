@@ -10,6 +10,15 @@
 - /affirm
 
 ## intent:consequence
+- [Christian](name) will suffer, too
+- [Yves](name) will be dead
+- [Peter](name) will feel bad
+- [Thomas](name) will get money for the murder
+- [The victim](stakeholder) will be dead
+- Yes, [Thomas](name) could get into trouble, too
+- The victim, [Blue](name), would die
+- [Thomas](name) could get trouble
+- there could be trouble
 - [Andrea](name) would be disappointed
 - [The Swabians](name) will be disappointed
 - [Rüdiger](name) is disappointed
@@ -353,6 +362,11 @@
 - It also means [saving the lives](deed) of [5](quantity) people
 
 ## intent:deny
+- No, fine, this was all
+- These are the only two. He must decide.
+- none
+- no, this was all
+- no, no other consequences
 - no, thank you
 - I don't care which name you use
 - No, there is no one else involved
@@ -797,6 +811,10 @@
 - /moralstatus[{"moralstatus": "human"}](moralstatus:human)
 
 ## intent:name
+- [Thomas](name) is the acting person here
+- Yes, [Thomas](name)
+- [Victim](stakeholder) is the name
+- Let us call him [victim](stakeholder)
 - [Jones](name)
 - You can call him [Buck](name)
 - Her name is [Andrea](name)
@@ -861,10 +879,11 @@
 - My name is [Alex](name)
 - You can use the name "[the patients](stakeholder)"
 - Call him by the name [Michael](name:michael)
-- You can use the name the supporters
+- You can use the name [the supporters](stakeholder)
 - Call them "[the board](stakeholder)"
 
 ## intent:negative
+- they are rather negative
 - That would be really bad for [Benjamin](name)!
 - That would be extremely bad for him
 - negative
@@ -913,6 +932,13 @@
 - It would not matter that much actually
 
 ## intent:option
+- Yes, we can [allow Yves to continue living](deed)
+- Peter was asked by Christian to [kill](deed) his dog.
+- Yes, [Thomas](name) can [refuse to commit the murder](deed)
+- He can [kill](deed) someone
+- Yes, [Thomas](name) was asked by [Dirk](name) to [kill](deed) someone. This is the other option
+- yes. He can [kill](deed) someone
+- To continue his life as before
 - [keep the lost property](deed)
 - [Be honest](deed), as always
 - Yes, [Andrea](name) could [go into the shop](deed) and [steal](deed).
@@ -1346,6 +1372,14 @@
 - can we chat
 
 ## intent:stakeholder
+- there is happy the dog
+- [Christian](name), [the dog owner](stakeholder)
+- [Peter](name) is involved
+- Yes, there is [Django](name), [the dog owner](stakeholder)
+- [Thomas](name) was asked to kill the dog of [Django](name)
+- Yes, there is [Django](name)
+- Yes, there is also [the victim](stakeholder)
+- There is also [Dirk](name) who belongs to the swebian Mafia
 - [The looser](stakeholder)
 - [the victim](stakeholder)
 - There is [me](stakeholder), lets say my name is [Thomas](name)
@@ -1536,6 +1570,7 @@
 - first there is [the manager](stakeholder) of a big football club
 
 ## intent:stakeholdergroup
+- Yes, there is also [Happy](name) the dog
 - [the familiy](stakeholder)
 - [A large group of people](stakeholder) is threatened by the potential explosions of the bombs
 - With her are [10 people](stakeholder) who follow behind her
@@ -1718,11 +1753,10 @@
 - {"name": "heather"}
 
 ## synonym:Inga
-- {"name": "Inga"}
 - inga
 
 ## synonym:Jane
-- {"name": "Jane"}
+- jane
 
 ## synonym:Jones
 - jones
@@ -1849,10 +1883,6 @@
 
 ## synonym:human
 - {"moralstatus": "human"}
-
-## synonym:jane
-- {"name": "jane"}
-- Jane
 
 ## synonym:killing
 - Killing

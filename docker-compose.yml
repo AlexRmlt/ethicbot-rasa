@@ -18,6 +18,7 @@ services:
     volumes:
       - ./actions:/app/actions
       - ./modules:/app/modules
+      - ./data:/app/data
   nginx:
     image: nginx:latest
     ports:
