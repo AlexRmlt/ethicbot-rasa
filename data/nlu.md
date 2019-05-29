@@ -8,8 +8,13 @@
 - Ok
 - Okay
 - /affirm
+- yes
 
 ## intent:consequence
+- If people find out he murdered her the consequences would be severe.
+- If he makes it look like she died on natural causes it wouldn't have any consequences at all for him.
+- If he doesn't kill her, it only has an impact on [the children](stakeholder).
+- If he decides to kill her it would have an impact on both [Burgl](name) and [the children](stakeholder) he wants to help with the money.
 - [Christian](name) will suffer, too
 - [Yves](name) will be dead
 - [Peter](name) will feel bad
@@ -224,6 +229,17 @@
 - [Glenn](name) would die immediately when his medication is suspended
 - [Glenn](name) would live a few days longer
 - [The patients](stakeholder:the patients) would not get any organs and die sooner or later
+- there could be trouble
+- [The victim](stakeholder:the victim), [Blue](name:Blue), would die
+- Yes, [Thomas](name:Thomas) could get into trouble, too
+- [The victim](stakeholder:the victim) will be dead
+- [Thomas](name:Thomas) will get money for the murder
+- [Thomas](name:Thomas) could get trouble
+- [Thomas](name:Thomas) will get into trouble
+- [Peter](name:peter) will feel bad
+- [Yves](name:yves) will be dead
+- [Yves](name:yves) will be killed
+- [Christian](name:christian) will suffer, too
 
 ## intent:correct
 - /correct
@@ -360,8 +376,10 @@
 - [Saving people](deed) on the ground who are possibly threatened can be considered a moral action
 - It means [letting Glenn die](deed:letting glenn die)
 - It also means [saving the lives](deed) of [5](quantity) people
+- [lying](deed)
 
 ## intent:deny
+- I think that's all
 - No, fine, this was all
 - These are the only two. He must decide.
 - none
@@ -455,7 +473,6 @@
 - no
 - no
 - there is no other option
-- /deny
 - no
 - no other people
 - No, I can't tell it
@@ -475,7 +492,6 @@
 - No, thats it
 - No
 - No, there are no other options
-- /deny
 - No, there is no name
 - No, thats all
 - No
@@ -483,24 +499,19 @@
 - Not at all
 - No, that was all
 - There is no other option
-- /deny
 - No, thats all
 - No thats all
 - No one I can think of
 - Not at all
 - No one else would be affected
 - That was the last option
-- /deny
 - Thats all
 - That was it
 - No, that was it
-- /deny
 - no
 - No one else is affected
 - No further options
-- /deny
 - That was all
-- /deny
 - No further actions
 - There are no other consequences.
 - I don't think so
@@ -509,7 +520,6 @@
 - That was all
 - Thats all
 - No, thats all
-- /deny
 - No thats all
 - No thats all
 - No thats all
@@ -525,7 +535,6 @@
 - no other persons
 - no
 - no thats all
-- /deny
 - no i don't think so
 - That was it
 - No further actions
@@ -535,7 +544,6 @@
 - No thats all
 - there is no next one
 - Thats all for the consequences
-- /deny
 - thats all
 - Thats all for now
 - no there are not
@@ -548,7 +556,6 @@
 - thats all i can think of
 - None I can think of
 - These are all involved persons
-- /deny
 - No further actions I can think of
 - I don't think so
 - Thats all for now
@@ -560,17 +567,14 @@
 - It would not have any consequences for anybody else
 - There no other consequences
 - I don't think so
-- /deny
 - No
 - That were all relevant persons
 - That were all consequences
 - I don't think so
 - No
 - There is no third option
-- /deny
 - No other persons
 - No
-- /deny
 - I can't think of any more consequences
 - I can't imagine any other possibility
 - No
@@ -592,7 +596,6 @@
 - Actually I can't think of any moral action in this context
 - Those were indeed all possible consequences
 - There is no other option
-- /deny
 - Of course not
 - No other people are involved
 - [The person](stakeholder:the person) has no name
@@ -601,7 +604,6 @@
 - No
 - No it would not
 - There is no other option
-- /deny
 - No idea how to call them
 - No other persons
 - No, there are no further morally relevant actions
@@ -611,7 +613,6 @@
 - I think this were all possible options
 - No that was it
 - No one else is involved
-- /deny
 - No
 - I can'T think of any more
 - That would not affect anyone else
@@ -621,6 +622,23 @@
 - No
 - No
 - No further options
+- no
+- no
+- no, no other consequences
+- no
+- no
+- none
+- no
+- no
+- no, this was all
+- no
+- no
+- These are the only two. He must decide.
+- no
+- no, this is all
+- /deny
+- no
+- no
 - no
 
 ## intent:deontology
@@ -712,6 +730,9 @@
 - ok bye
 
 ## intent:greeting
+- welcome back!
+- welcome back
+- welcome
 - good day
 - Good day
 - hallo
@@ -757,14 +778,6 @@
 - hey
 - hi
 - hi
-- hi
-- hi
-- hi
-- hi
-- hi
-- hi
-- hi
-- hi
 - Hi!
 - Hi
 - Hi
@@ -775,25 +788,6 @@
 - hi
 - hi
 - hey
-- hi
-- hi
-- hi
-- hi
-- hi
-- hi
-- hi
-- hi
-- hi
-- hi
-- hi
-- hi
-- hi
-- hi
-- hi
-- hi
-- hi
-- hi
-- hi
 - hi
 - hi
 - hi
@@ -808,9 +802,11 @@
 - /moralstatus{"moralstatus": "human"}
 - /moralstatus{"moralstatus": "other"}
 - /moralstatus{"moralstatus": "machine"}
-- /moralstatus[{"moralstatus": "human"}](moralstatus:human)
 
 ## intent:name
+- The dog's name is [Cleopatra](name)
+- Only his aunt, [Burgl](name)
+- The name of the guy who wants to help the children is [Anton](name).
 - [Thomas](name) is the acting person here
 - Yes, [Thomas](name)
 - [Victim](stakeholder) is the name
@@ -878,9 +874,12 @@
 - You can call him "[Jane's husband](stakeholder)"
 - My name is [Alex](name)
 - You can use the name "[the patients](stakeholder)"
-- Call him by the name [Michael](name:michael)
+- Call him by the name [Michael](name:Michael)
 - You can use the name [the supporters](stakeholder)
 - Call them "[the board](stakeholder)"
+- Let us call him [victim](stakeholder)
+- [Victim](stakeholder:victim) is the name
+- The name is Happy
 
 ## intent:negative
 - they are rather negative
@@ -923,6 +922,7 @@
 - The effects would be fatal
 - The effects would be more negative
 - Extremely negative
+- the are rather negative
 
 ## intent:neutral
 - It would be ok, neither positive nor negative consequences
@@ -932,6 +932,9 @@
 - It would not matter that much actually
 
 ## intent:option
+- [Anton](name) could also [see whether there's anything he would be able to do]() for the children without his aunts money
+- A morally valid action for [Anton](name) would be to [try and persuade his aunt](deed) to [help the children](deed) with her money while she's still alive
+- If [Anton](name) [killed](deed) Burgl now he would get her money instantly
 - Yes, we can [allow Yves to continue living](deed)
 - Peter was asked by Christian to [kill](deed) his dog.
 - Yes, [Thomas](name) can [refuse to commit the murder](deed)
@@ -1058,6 +1061,12 @@
 - She could also [refuse to give the antidote](deed) to her husband and [let him die](deed)
 - He could [stop giving medicine](deed) to Glenn in order to [take his organs](deed) for the [five](quantity:5) patients
 - He could also [continue giving medication](deed) to Glenn
+- To continue his life as before
+- yes. He can [kill](deed) someone
+- He can [kill](deed) someone
+- Yes, [Thomas](name:Thomas) can [refuse to commit the murder](deed)
+- [Peter](name) was asked by [Christian](name) to [kill](deed) his dog.
+- Yes, we can [allow Yves to continue living](deed:allow yves to continue living)
 
 ## intent:positive
 - That would be positive for him
@@ -1311,8 +1320,25 @@
 - [9](quantity)
 - Around [50000](quantity)
 - It should be [ten](quantity)
+- [8](quantity)
+- [8](quantity)
+- [3](quantity)
+- [10](quantity)
+- [10](quantity)
+- [10](quantity)
+- [30](quantity)
+- [10](quantity)
+- [80](quantity)
+- [5](quantity)
+- [6](quantity)
+- [5](quantity)
+- [3](quantity)
+- [10](quantity)
+- [3](quantity)
+- [2](quantity)
 
 ## intent:smalltalk
+- Just being nice
 - What is your name?
 - tell me about your personality
 - talk about yourself
@@ -1372,7 +1398,12 @@
 - can we chat
 
 ## intent:stakeholder
-- there is happy the dog
+- There is also his friend [Dirk](name)
+- Yes, there is [the dog](stakeholder).
+- [Anton](name) knows that he is going to inherit the money some time, but there are some pressing social issues he would like to attend to as soon as possible.
+- [Burgl](name) has a lot of money, but is refusing to use it to do some good in the world.
+- [Anton](name) has [a rich aunt](stakeholder), named [Burgl](name).
+- there is happy [the dog](stakeholder)
 - [Christian](name), [the dog owner](stakeholder)
 - [Peter](name) is involved
 - Yes, there is [Django](name), [the dog owner](stakeholder)
@@ -1555,8 +1586,8 @@
 - [My boss](stakeholder) is involved
 - [I](stakeholder) am involved myself
 - [Me](stakeholder)
-- There is [Tom](name:tom), hating his wife and wanting her dead.
-- Then there is [Tom's wife](stakeholder:tom's wife) who he hates.
+- There is [Tom](name:Tom), hating his wife and wanting her dead.
+- Then there is [Tom's wife](stakeholder:Tom's wife) who he hates.
 - [Jane](name) hates her husband and would like to see him dead
 - [Jane's husband](stakeholder) one day puts accidentally poison in his coffee, thinking it is cream
 - [I](stakeholder) am a skilled doctor
@@ -1568,9 +1599,22 @@
 - Then there is [myself](stakeholder) and I witnessed the robbery
 - [I](stakeholder) witnessed a robbery
 - first there is [the manager](stakeholder) of a big football club
+- There is [Thomas](name:Thomas)
+- There is also [Dirk](name:Dirk) who belongs to the swebian Mafia
+- Yes, there is also [the victim](stakeholder)
+- There is [Thomas](name:Thomas)
+- Yes, there is [Django](name:Django)
+- There is also [the victim](stakeholder)
+- [Thomas](name:Thomas) was asked to [kill](deed) the dog of [Django](name:Django)
+- Yes, there is [Django](name:Django), [the dog owner](stakeholder)
+- Yes, there is also Happy [the dog](stakeholder)
+- [Peter](name:Peter) is involved
+- [Christian](name:Christian), [the dog owner](stakeholder)
+- there is happy [the dog](stakeholder)
+- Yes, there is also Happy [the dog](stakeholder)
 
 ## intent:stakeholdergroup
-- Yes, there is also [Happy](name) the dog
+- There are [three](quantity) parties involved
 - [the familiy](stakeholder)
 - [A large group of people](stakeholder) is threatened by the potential explosions of the bombs
 - With her are [10 people](stakeholder) who follow behind her
@@ -1753,6 +1797,7 @@
 - {"name": "heather"}
 
 ## synonym:Inga
+- {"name": "Inga"}
 - inga
 
 ## synonym:Jane
@@ -1815,6 +1860,9 @@
 - {"name": "Werner"}
 - werner
 
+## synonym:Will
+- will
+
 ## synonym:Zoe
 - zoe
 
@@ -1866,8 +1914,20 @@
 ## synonym:an Overseer
 - An overseer
 
+## synonym:animal
+- {"moralstatus": "animal"}
+
 ## synonym:another person
 - Another person
+
+## synonym:Blue
+- blue
+
+## synonym:Dirk
+- dirk
+
+## synonym:Django
+- django
 
 ## synonym:five people
 - Five people
@@ -1880,6 +1940,9 @@
 
 ## synonym:four of her patients
 - Four of her patients
+
+## synonym:happy
+- Happy
 
 ## synonym:human
 - {"moralstatus": "human"}
@@ -1898,6 +1961,9 @@
 
 ## synonym:many people
 - Many people
+
+## synonym:Michael
+- michael
 
 ## synonym:one other person
 - One other person
@@ -1991,17 +2057,26 @@
 ## synonym:the third person
 - The third person
 
+## synonym:the victim
+- The victim
+
 ## synonym:the weaker people
 - The weaker people
+
+## synonym:thomas
+- Thomas
 
 ## synonym:three people
 - Three people
 
-## synonym:tom
-- Tom
+## synonym:Tom
+- tom
 
-## synonym:tom's wife
-- Tom's wife
+## synonym:Tom's wife
+- tom's wife
+
+## synonym:victim
+- Victim
 
 ## synonym:we
 - We

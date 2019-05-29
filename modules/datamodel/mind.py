@@ -53,8 +53,11 @@ def get_stakeholders(s_id):
 		stakeholders.append(Stakeholder(sh))
 	return stakeholders
 
-def get_amount_stakeholders(s_id):
+def get_num_stakeholders(s_id):
 	return current(s_id).count(q.type == 'Stakeholder')
+
+def get_num_options(s_id):
+	return current(s_id).count(q.type == 'Option')
 
 def stakeholder_exists(s_id, name):
 	return current(s_id).contains(q.name == name)

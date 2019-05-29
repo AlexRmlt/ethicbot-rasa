@@ -18,6 +18,7 @@ actions:
 - action_update_deed
 - action_update_option
 - action_update_stakeholder
+- utter_ask_identified_moralstatus
 - utter_ask_consequence_definite
 - utter_ask_consequence_probability
 - utter_ask_consequences
@@ -32,8 +33,8 @@ actions:
 - utter_ask_inherent_evil
 - utter_ask_method
 - utter_ask_moral_question
-- utter_ask_moral_status
-- utter_ask_moral_status_weight
+- utter_ask_moralstatus
+- utter_ask_moralstatus_weight
 - utter_ask_name_plural
 - utter_ask_name_singular
 - utter_ask_options
@@ -68,30 +69,30 @@ entities:
 - sentiment
 - stakeholder
 intents:
-- deny
-- stakeholder
-- quantity
-- greeting
+- decider
 - moralstatus
-- stakeholdergroup
+- deny
+- correct
+- wrong
+- consequence
 - name
+- quantity
 - affirm
+- stakeholder
+- option
+- negative
 - deed
+- greeting
+- stakeholdergroup
 - neutral
 - dontknow
-- correct
-- option
-- consequence
-- wrong
-- negative
 - utilitarism
 - deontology
-- decider
 - positive
 - moralquestion
 - goodbye
 - thanks
-- smalltalk
+- smalltalk: {triggers: action_handle_smalltalk}
 slots:
   action_return:
     type: bool
@@ -150,16 +151,17 @@ templates:
   - text: How high would you estimate the likelihood that this will actually happen
       in percent?
   utter_ask_consequences:
-  - text: For which of these persons would this decision have consequences? Can you
-      describe to me the first effect you can think of?
+  - text: For which of these persons would this decision have consequences? Please
+      describe to me the first effect you can think of and which person would be affected.
   - text: I'd like to know for whom this decision would have consequences and what
-      they would look like. Can you give me information on the first consequence coming
-      to your mind?
-  - text: Can you tell me who of the engaged persons would be affected, and what the
-      concrete effect would be? Please tell me one consequence per involved person
-      after the other.
+      they would look like. Please inform me about the first consequence coming
+      to your mind.
+  - text: Please tell me who of the engaged persons would be affected, and what the
+      concrete effect would be.
   - text: Let us talk about the effects this decision would have on the different
-      persons. Can you tell me one consequence and the person it would hold for?
+      persons. Please tell me one consequence per involved person after the other.
+  - text: Could you please tell me one consequence and the person it would hold for.
+  - text: Please describe a consequence to me, including the person who would be affected.
   utter_ask_deed:
   - text: I am interested in the concrete actions contained in this possibility and
       their moral dimension. Can you think of a morally valid action implied by this
@@ -176,6 +178,13 @@ templates:
   - text: Can you give me an approximate number? That would be helpful.
   - text: Can you give me an idea of the number? So that I have an imagination of
       the order of magnitude.
+  utter_ask_identified_moralstatus:
+  - buttons:
+    - payload: /correct
+      title: 'Yes'
+    - payload: /wrong
+      title: 'No'
+    text: 'I am assuming that {name} can be assigned to the class "{moralstatus}". Is that correct?'
   utter_ask_identified_deed:
   - buttons:
     - payload: /correct
@@ -230,8 +239,8 @@ templates:
       title: 'Yes'
     - payload: /wrong
       title: 'No'
-    text: Do I understand you correctly that the person you are referring to is called
-      "{name}"?
+    text: 'Do I understand you correctly that the person you are referring to is called
+      "{name}"?'
   utter_ask_impact:
   - text: Would the effects be more positive or more negative for {name}?
   - text: Would that be more positive or more negative for {name}?
@@ -312,10 +321,12 @@ templates:
   - buttons:
     - payload: /affirm
       title: It is inherently evil.
-    - payload: /deny
-      title: It would cause other problems.
+    - payload: '/deny{"name": "too_specific"}'
+      title: The rule rule would be too specific for being applied generally
+    - payload: '/deny{"name": "needs_conditions"}'
+      title: The rule can be applied under certain conditions only
     text: Is that because you'd feel the action was evil in itself? Or is it just
-      not suitable for becoming a general rule because that would cause certain problems?
+      not suitable for becoming a general rule because that would cause other problems?
   utter_ask_method:
   - buttons:
     - payload: /utilitarism
@@ -326,7 +337,7 @@ templates:
   utter_ask_moral_question:
   - text: Now, if you had to break it down to one sentence - How would you define
       the moral question?
-  utter_ask_moral_status:
+  utter_ask_moralstatus:
   - buttons:
     - payload: '/moralstatus{"moralstatus": "human"}'
       title: Human
@@ -337,7 +348,7 @@ templates:
     - payload: '/moralstatus{"moralstatus": "other"}'
       title: Other
     text: Can you tell me what kind of class {name} would belong to?
-  utter_ask_moral_status_weight:
+  utter_ask_moralstatus_weight:
   - text: Compared to a human, how high would you rate the moral significance of {name}
       on a scale of 1 to 10, with 10 being equal to a human?
   - text: If you compare {name} to a human, using a scale of 1 to 10, how significant
@@ -369,10 +380,10 @@ templates:
   - text: And what would be the most obvious option that {decider} could choose?
   - text: Could you describe the first option coming to your mind that {decider} could
       choose?
-  - text: I need to know which options {decider} can choose from. Could you describe
-      the first one?
+  - text: I need to know which options {decider} can choose from. Please describe
+      the first one.
   - text: I am interested in the different possibilities that might be available in
-      this matter. Can you describe the first option {decider} could pick?
+      this matter. Please describe the first option {decider} could pick.
   utter_ask_quantity:
   - text: It seems to me you are referring to a group of people. Can you tell me approximately
       how many persons the group you are talking about consists?
@@ -483,51 +494,53 @@ templates:
   - text: I will ask you about several aspects of the moral decision situation you
       are facing and hopefully get to understand the details.
   utter_next_consequence:
-  - text: Would this have any consequences for anybody else?
-  - text: Would that affect anyone else?
-  - text: Is there another consequence for anybody else to be named?
-  - text: Is there any other consequence for anybody else to be named?
+  - text: Are there any consequences for anybody else? If so, please name the next one.
+  - text: Would that affect anyone else? If yes, please describe the next consequence.
+  - text: What would be another consequence for anybody else you could name?
+  - text: Can you please name another consequence for anybody else?
+  - text: Can you please name another consequence that would affect anyone else?
   - text: Is anyone else affected by this, and if so, what would the consequences
       be?
   - text: Is anyone else affected by this, and if so, what would the consequences
       look like?
-  - text: Can you think of another consequence for anyone else, or is that all?
-  - text: Do I need to know about any other consequence for another involved person?
-  - text: Is there a consequence for anyone left we did not talk about yet?
+  - text: Can you think of another consequence for anyone else? Please proceed if that's the case.
+  - text: Do I need to know about any other consequence for another involved person? Please name it if there is still one you didn't mention.
+  - text: Is there a consequence for anyone left we did not talk about yet? If yes, please tell me.
   utter_next_deed:
   - text: Are there any further actions of moral relevance implied by this option?
       If so, please name me the next one.
   - text: Is there any morally relevant action implied by this option left that you
-      did not come up with yet?
-  - text: Is there any other action in connection with this option that could be morally
+      did not come up with yet? Name it, if that's the case.
+  - text: Can you please name any other action in connection with this option that could be morally
       assessed?
-  - text: Do I need to know about another important action implied by this option
-      or is that all?
-  - text: Do you want to name another morally relevant activity that I should consider?
+  - text: Do I need to know about another important action implied by this option? If that was all, please tell me. Otherwise, proceed.
+  - text: Please name another morally relevant activity for me to consider, if there is still one left.
   utter_next_method:
   - buttons:
     - payload: /affirm
       title: 'Yes'
     - payload: /deny
       title: Not this time
+    - payload: /restart
+      title: Start over the dialog
     text: Do you want me to evaluate using another ethics principle?
   utter_next_option:
-  - text: Are there any further options?
-  - text: What could be another option?
-  - text: Which possibility could you imagine as well?
+  - text: Can you describe any further options to me?
+  - text: If there is still another option, please tell me.
+  - text: Could you imagine another possibility as well? If so, please describe it to me.
   - text: What would be another option that {decider} could choose?
-  - text: Can you think of another option {decider} could pick?
-  - text: Is there any other way {decider} could decide?
+  - text: Can you think of another option {decider} could pick? If so, please describe it.
+  - text: Can you describe to me any other way {decider} could decide?
   - text: What other possibility would {decider} also have?
-  - text: Are there still other options left?
+  - text: If there are still other options left, please name the one.
   utter_next_stakeholder:
   - text: Are there any other people involved? Please name the next one.
   - text: Are further people involved? If so, name the next one.
-  - text: Any other persons?
-  - text: Any other persons I need to know about?
-  - text: Other persons to be named?
+  - text: Any other persons? If yes, describe the next one.
+  - text: Any other persons I need to know about? If so, tell me the next one.
+  - text: Other persons to be named? Tell me the next one, if there are still relevant persons left.
   - text: Is there anyone left that you haven't named yet? If so, please proceed.
-  - text: Is there still anyone left who is important for the situation?
+  - text: Is there still anyone left who is important for the situation? Tell me the next person.
   utter_not_sure:
   - text: Hmmm...
   - text: Hm, that's a bit tricky.

@@ -1112,6 +1112,7 @@ bunni
 bunnie
 bunny
 burgess
+burgl
 burt
 burton
 business
@@ -8322,7 +8323,6 @@ wilhelmine
 wilhelmus
 wilie
 wilkin
-will
 willa
 willabella
 willamina

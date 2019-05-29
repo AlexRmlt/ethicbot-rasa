@@ -7,10 +7,8 @@ from __future__ import unicode_literals
 import logging
 import requests, json
 from typing import Dict, Text, Any, List, Union
-from rasa_sdk import Tracker
-from rasa_sdk import Action
-from rasa_sdk.events import SlotSet
-from rasa_sdk.events import UserUtteranceReverted
+from rasa_sdk import Tracker, Action
+from rasa_sdk.events import SlotSet, UserUtteranceReverted, FollowupAction
 from rasa_sdk.forms import FormAction
 from rasa_sdk.executor import CollectingDispatcher
 
@@ -139,7 +137,7 @@ class CreateStakeholder(Action):
 
         sh.memorize(tracker.sender_id) 
 
-        events.append(SlotSet("amount_stakeholders", mind.get_amount_stakeholders(tracker.sender_id)))
+        events.append(SlotSet("amount_stakeholders", mind.get_num_stakeholders(tracker.sender_id)))
         events.append(SlotSet("action_return", sh['amount'] != -1))
 
         return events
@@ -348,7 +346,16 @@ class CreateOption(Action):
 
     def run(self, dispatcher, tracker, domain):
         deeds = list(tracker.get_latest_entity_values('deed'))
-        opt = Option({"deeds": deeds})
+
+        if len(deeds) > 0:
+            label = deeds[0]
+        else:
+            label = 'Option {}'.format(mind.get_num_options(tracker.sender_id) + 1)
+
+        opt = Option({
+            "deeds": deeds,
+            "label": label
+        })
         option_id = opt.memorize(tracker.sender_id).doc_id
 
         if len(deeds) > 0:
@@ -492,6 +499,13 @@ class UpdateDeed(Action):
                 deed['inherent_evil'] = True
                 action_return = True
             elif (tracker.latest_message['intent'].get('name') == 'deny'):
+                # The 'name' entity is abused in this case
+                reason = next(tracker.get_latest_entity_values('name'), None)
+                if reason == 'too_specific':
+                    deed['no_rule_reason'] = 'a more general formulated rule could apply in this case!'
+                elif reason == 'needs_conditions':
+                    deed['no_rule_reason'] = 'a general rule could be applied under certain conditions!'
+
                 deed['inherent_evil'] = False
                 action_return = True
             
@@ -667,7 +681,7 @@ class CheckIdentifiedName(Action):
         
     def run(self, dispatcher, tracker, domain):
         action_return = False
-        name = next(tracker.get_latest_entity_values('name'), None)
+        name = tracker.get_slot('name')
         if not name == None:
             if not mind.get_stakeholder_by_name(tracker.sender_id, name) == None:
                 action_return = True
@@ -705,8 +719,8 @@ class ActionDefaultAskAffirmation(Action):
         return "action_default_ask_affirmation"
 
     def __init__(self) -> None:
-        self.ignored_intents = ['deny', 'affirm', 'neutral', 'moralstatus', 'dontknow', 'greeting', 'correct', 'quantity', 'wrong', 
-                                'utilitarism', 'deontology', 'moralquestion', 'goodbye', 'thanks']
+        self.ignored_intents = ['deny', 'affirm', 'neutral', 'moralstatus', 'dontknow', 'greeting', 'correct', 'wrong', 
+                                'utilitarism', 'deontology', 'moralquestion', 'goodbye', 'thanks', 'smalltalk']
 
         import csv
 
@@ -725,34 +739,32 @@ class ActionDefaultAskAffirmation(Action):
             ) -> List['Event']:
 
         intent_ranking = tracker.latest_message.get('intent_ranking', [])
-        if len(intent_ranking) > 1:
-            diff_intent_confidence = (intent_ranking[0].get("confidence") -
-                                      intent_ranking[1].get("confidence"))
-            if diff_intent_confidence < 0.2:
-                intent_ranking = intent_ranking[:2]
-            else:
-                intent_ranking = intent_ranking[:1]
         first_intent_names = [intent.get('name', '')
                               for intent in intent_ranking
                               if not intent.get('name', '') in self.ignored_intents]
 
-        message_title = "Sorry, I'm not sure I've understood " \
-                        "you correctly. Do you want to..."
+        if len(first_intent_names) > 0:
+            message_title = "Sorry, I'm not sure I've understood " \
+                            "you correctly. Do you want to..."
 
-        mapped_intents = [(name, self.intent_mappings.get(name, name))
-                          for name in first_intent_names]
+            mapped_intents = [(name, self.intent_mappings.get(name, name))
+                              for name in first_intent_names]
 
-        buttons = []
-        for intent in mapped_intents:
-            buttons.append({'title': intent[1],
-                            'payload': '/{}'.format(intent[0])})
+            entities = tracker.latest_message.get("entities", [])
+            entities = {e["entity"]: e["value"] for e in entities}
+            entities_json = json.dumps(entities)
 
-        buttons.append({'title': 'Something else',
-                        'payload': '/deny'})
+            buttons = []
+            for intent in mapped_intents:
+                buttons.append({'title': intent[1],
+                                'payload': '/{}{}'.format(intent[0], entities_json)})
 
-        dispatcher.utter_button_message(message_title, buttons=buttons)
+            buttons.append({'title': 'Something else',
+                            'payload': '/deny'})
 
-        return []
+            dispatcher.utter_button_message(message_title, buttons=buttons)
+        else:
+            return [FollowupAction("action_default_ask_rephrase")]
 
 #########################
 #                       #
@@ -767,7 +779,7 @@ class ChooseDecider(Action):
         return 'action_choose_decider'
         
     def run(self, dispatcher, tracker, domain):
-        message = "Out of this persons, who is the one to make the moral decision?"
+        message = "Out of these persons, whose moral decision do you want to analyse?"  # On request (Google table entry #5)
         buttons = []
 
         try:

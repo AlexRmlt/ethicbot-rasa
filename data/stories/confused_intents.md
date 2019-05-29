@@ -9,7 +9,7 @@
     - action_update_stakeholder
     - slot{"name": "Katharina"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 
 ## Handle possible confusion of intents stakeholder and name 2
 * greeting
@@ -27,7 +27,7 @@
     - action_update_stakeholder
     - slot{"name": "Molly"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -73,6 +73,8 @@
     - action_update_stakeholder
     - slot{"name": "Samuel"}
     - slot{"action_return": true}
+    - utter_ask_identified_moralstatus
+* correct
     - utter_next_stakeholder
 * name{"name": "Samuel"}
     - slot{"name": "Samuel"}

@@ -15,6 +15,8 @@
     - action_update_stakeholder
     - slot{"name": "the Palatines"}
     - slot{"action_return": true}
+    - utter_ask_identified_moralstatus
+* correct
     - utter_next_stakeholder
 * stakeholder{"name": "Molly", "quantity": "5", "moralstatus": "human"}
     - slot{"name": "Molly"}
@@ -29,6 +31,8 @@
     - action_update_stakeholder
     - slot{"name": "Molly"}
     - slot{"action_return": true}
+    - utter_ask_identified_moralstatus
+* correct
     - utter_next_stakeholder
 * stakeholder{"name": "Molly"}
     - action_create_stakeholder
@@ -42,7 +46,7 @@
     - action_update_stakeholder
     - slot{"name": "Nathan"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -219,7 +223,7 @@
     - action_update_stakeholder
     - slot{"name": "Ken"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -242,6 +246,12 @@
     - action_update_stakeholder
     - slot{"name": "Inga"}
     - slot{"action_return": true}
+    - utter_ask_identified_moralstatus
+* wrong
+    - utter_ask_moralstatus
+* moralstatus{"moralstatus": "machine"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
     - utter_next_stakeholder
 * stakeholdergroup{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
@@ -259,6 +269,8 @@
     - action_update_stakeholder
     - slot{"name": "Inga"}
     - slot{"action_return": true}
+    - utter_ask_identified_moralstatus
+* correct
     - utter_next_stakeholder
 * deny
     - utter_confirm_stakeholders
@@ -449,7 +461,7 @@
     - action_update_stakeholder
     - slot{"name": "Patrick"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -469,6 +481,8 @@
     - action_update_stakeholder
     - slot{"name": "the Rhinelanders"}
     - slot{"action_return": true}
+    - utter_ask_identified_moralstatus
+* correct
     - utter_next_stakeholder
 * stakeholdergroup
     - action_create_stakeholder
@@ -486,7 +500,7 @@
     - action_update_stakeholder
     - slot{"name": "the Saxons"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -510,7 +524,7 @@
     - action_update_stakeholder
     - slot{"name": "Esther"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -530,7 +544,7 @@
     - action_update_stakeholder
     - slot{"name": "Amelie"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -749,7 +763,7 @@
     - action_update_stakeholder
     - slot{"name": "Mary"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -768,6 +782,10 @@
     - action_update_stakeholder
     - slot{"name": "Samuel"}
     - slot{"action_return": true}
+    - utter_ask_identified_moralstatus
+* wrong
+    - action_update_stakeholder
+    - slot{"action_return": true}
     - utter_next_stakeholder
 * stakeholder{"name": "Samuels"}
     - slot{"name": "Samuels"}
@@ -782,7 +800,7 @@
     - action_update_stakeholder
     - slot{"name": "Greta"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -798,7 +816,7 @@
     - action_update_stakeholder
     - slot{"name": "Amelie"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -1016,6 +1034,8 @@
     - action_update_stakeholder
     - slot{"name": "Jane"}
     - slot{"action_return": true}
+    - utter_ask_identified_moralstatus
+* correct
     - utter_next_stakeholder
 * stakeholdergroup{"stakeholder": "a group of other people", "moralstatus": "human"}
     - slot{"moralstatus": "human"}
@@ -1033,6 +1053,8 @@
     - action_update_stakeholder
     - slot{"name": "the Swabians"}
     - slot{"action_return": true}
+    - utter_ask_identified_moralstatus
+* correct
     - utter_next_stakeholder
 * stakeholder{"name": "Jane"}
     - slot{"name": "Jane"}
@@ -1047,7 +1069,7 @@
     - action_update_stakeholder
     - slot{"name": "Amelie"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -1067,7 +1089,7 @@
     - action_update_stakeholder
     - slot{"name": "the Bavarians"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -1265,6 +1287,8 @@
     - action_update_stakeholder
     - slot{"name": "mark"}
     - slot{"action_return": true}
+    - utter_ask_identified_moralstatus
+* correct
     - utter_next_stakeholder
 * stakeholdergroup{"stakeholder": "a group"}
     - action_create_stakeholder
@@ -1280,7 +1304,7 @@
     - action_update_stakeholder
     - slot{"name": "the Palatines"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -1296,7 +1320,7 @@
     - action_update_stakeholder
     - slot{"name": "J\u00f6rg"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -1521,6 +1545,8 @@
     - action_update_stakeholder
     - slot{"name": "the Swabians"}
     - slot{"action_return": true}
+    - utter_ask_identified_moralstatus
+* correct
     - utter_next_stakeholder
 * stakeholdergroup{"name": "Molly", "quantity": "5", "moralstatus": "human"}
     - slot{"name": "molly"}
@@ -1539,6 +1565,8 @@
     - action_update_stakeholder
     - slot{"name": "molly"}
     - slot{"action_return": true}
+    - utter_ask_identified_moralstatus
+* correct
     - utter_next_stakeholder
 * stakeholder
     - action_create_stakeholder
@@ -1550,7 +1578,7 @@
     - action_update_stakeholder
     - slot{"name": "Tanja"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -1577,6 +1605,8 @@
     - action_update_stakeholder
     - slot{"name": "the Palatines"}
     - slot{"action_return": true}
+    - utter_ask_identified_moralstatus
+* correct
     - utter_next_stakeholder
 * stakeholder{"name": "Molly"}
     - slot{"name": "molly"}
@@ -1591,7 +1621,7 @@
     - action_update_stakeholder
     - slot{"name": "molly"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -1607,7 +1637,7 @@
     - action_update_stakeholder
     - slot{"name": "Katharina"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -1807,6 +1837,13 @@
     - action_update_stakeholder
     - slot{"name": "heather"}
     - slot{"action_return": true}
+    - utter_ask_identified_moralstatus
+* wrong
+    - utter_ask_moralstatus
+* moralstatus{"moralstatus": "machine"}
+    - slot{"moralstatus": "machine"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
     - utter_next_stakeholder
 * stakeholder{"quantity": "two"}
     - action_create_stakeholder
@@ -1818,7 +1855,7 @@
     - action_update_stakeholder
     - slot{"name": "Zoe"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -1835,7 +1872,7 @@
     - action_update_stakeholder
     - slot{"name": "Herbert"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -2026,7 +2063,7 @@
     - action_update_stakeholder
     - slot{"name": "Doug"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -2046,6 +2083,8 @@
     - action_update_stakeholder
     - slot{"name": "the Hessians"}
     - slot{"action_return": true}
+    - utter_ask_identified_moralstatus
+* correct
     - utter_next_stakeholder
 * stakeholder{"stakeholder": "a group of old people", "name": "Doug"}
     - slot{"name": "Doug"}
@@ -2060,7 +2099,7 @@
     - action_update_stakeholder
     - slot{"name": "the Rhinelanders"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -2290,7 +2329,7 @@
     - action_update_stakeholder
     - slot{"name": "Carrie"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -2307,7 +2346,7 @@
     - action_update_stakeholder
     - slot{"name": "the Hessians"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -2324,7 +2363,7 @@
     - action_update_stakeholder
     - slot{"name": "frank"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -2494,7 +2533,7 @@
     - action_update_stakeholder
     - slot{"name": "Inga"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -2513,7 +2552,7 @@
     - action_update_stakeholder
     - slot{"name": "Carla"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -2532,7 +2571,7 @@
     - action_update_stakeholder
     - slot{"name": "Viola"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -2713,7 +2752,7 @@
     - action_update_stakeholder
     - slot{"name": "Inga"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -2729,7 +2768,7 @@
     - action_update_stakeholder
     - slot{"name": "Roswitha"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -2745,6 +2784,8 @@
     - action_update_stakeholder
     - slot{"name": "Michelle"}
     - slot{"action_return": true}
+    - utter_ask_identified_moralstatus
+* correct
     - utter_next_stakeholder
 * deny
     - utter_confirm_stakeholders
@@ -2914,6 +2955,8 @@
     - action_update_stakeholder
     - slot{"name": "mark"}
     - slot{"action_return": true}
+    - utter_ask_identified_moralstatus
+* correct
     - utter_next_stakeholder
 * stakeholder{"name": "mark"}
     - slot{"name": "mark"}
@@ -2928,7 +2971,7 @@
     - action_update_stakeholder
     - slot{"name": "Viola"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -2947,7 +2990,7 @@
     - action_update_stakeholder
     - slot{"name": "Zoe"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -3105,6 +3148,8 @@
     - action_update_stakeholder
     - slot{"name": "the Rhinelanders"}
     - slot{"action_return": true}
+    - utter_ask_identified_moralstatus
+* correct
     - utter_next_stakeholder
 * stakeholdergroup{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
@@ -3121,6 +3166,8 @@
     - action_update_stakeholder
     - slot{"name": "carla"}
     - slot{"action_return": true}
+    - utter_ask_identified_moralstatus
+* correct
     - utter_next_stakeholder
 * deny
     - utter_confirm_stakeholders
@@ -3266,6 +3313,8 @@
     - action_update_stakeholder
     - slot{"name": "Inga"}
     - slot{"action_return": true}
+    - utter_ask_identified_moralstatus
+* correct
     - utter_next_stakeholder
 * stakeholder{"quantity": "7"}
     - action_create_stakeholder
@@ -3277,7 +3326,7 @@
     - action_update_stakeholder
     - slot{"name": "Werner"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -3293,7 +3342,7 @@
     - action_update_stakeholder
     - slot{"name": "Carla"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -3443,7 +3492,7 @@
     - action_update_stakeholder
     - slot{"name": "Carl"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -3459,7 +3508,7 @@
     - action_update_stakeholder
     - slot{"name": "Esther"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -3475,6 +3524,8 @@
     - action_update_stakeholder
     - slot{"name": "Patrick"}
     - slot{"action_return": true}
+    - utter_ask_identified_moralstatus
+* correct
     - utter_next_stakeholder
 * deny
     - utter_confirm_stakeholders
@@ -3654,6 +3705,8 @@
     - action_update_stakeholder
     - slot{"name": "Olga"}
     - slot{"action_return": true}
+    - utter_ask_identified_moralstatus
+* correct
     - utter_next_stakeholder
 * stakeholdergroup{"quantity": "Hundreds", "moralstatus": "human"}
     - slot{"moralstatus": "human"}
@@ -3671,6 +3724,8 @@
     - action_update_stakeholder
     - slot{"name": "the Swabians"}
     - slot{"action_return": true}
+    - utter_ask_identified_moralstatus
+* correct
     - utter_next_stakeholder
 * stakeholder
     - action_create_stakeholder
@@ -3682,7 +3737,7 @@
     - action_update_stakeholder
     - slot{"name": "the Saxons"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -3702,7 +3757,7 @@
     - slot{"decider": "Roswitha"}
     - slot{"name": "Roswitha"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -3842,6 +3897,17 @@
     - action_update_stakeholder
     - slot{"name": "Lars"}
     - slot{"action_return": true}
+    - utter_ask_identified_moralstatus
+* wrong
+    - utter_ask_moralstatus
+* moralstatus{"moralstatus": "other"}
+    - slot{"moralstatus": "other"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_ask_moralstatus_weight
+* quantity
+    - action_update_stakeholder
+    - slot{"action_return": true}
     - utter_next_stakeholder
 * stakeholdergroup{"stakeholder": "a group of passengers"}
     - action_create_stakeholder
@@ -3857,7 +3923,7 @@
     - action_update_stakeholder
     - slot{"name": "the passengers"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -4020,6 +4086,13 @@
     - slot{"decider": "the captain"}
     - slot{"name": "the captain"}
     - slot{"action_return": true}
+    - utter_ask_identified_moralstatus
+* wrong
+    - utter_ask_moralstatus
+* moralstatus{"moralstatus": "machine"}
+    - slot{"moralstatus": "machine"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
     - utter_next_stakeholder
 * stakeholdergroup{"stakeholder": "30 people", "quantity": "7", "moralstatus": "human"}
     - slot{"moralstatus": "human"}
@@ -4030,6 +4103,17 @@
 * name{"stakeholder": "the passengers"}
     - action_update_stakeholder
     - slot{"name": "the passengers"}
+    - slot{"action_return": true}
+    - utter_ask_identified_moralstatus
+* wrong
+    - utter_ask_moralstatus
+* moralstatus{"moralstatus": "other"}
+    - slot{"moralstatus": "other"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_ask_moralstatus_weight
+* quantity
+    - action_update_stakeholder
     - slot{"action_return": true}
     - utter_next_stakeholder
 * stakeholder{"stakeholder": "the weaker people"}
@@ -4042,7 +4126,7 @@
     - action_update_stakeholder
     - slot{"name": "the Palatines"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -4175,12 +4259,12 @@
     - action_update_stakeholder
     - slot{"name": "Nathan"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "other"}
     - slot{"moralstatus": "other"}
     - action_update_stakeholder
     - slot{"action_return": true}
-    - utter_ask_moral_status_weight
+    - utter_ask_moralstatus_weight
 * dontknow
     - utter_too_bad
     - utter_next_stakeholder
@@ -4194,7 +4278,7 @@
     - action_update_stakeholder
     - slot{"name": "Uwe"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -4214,6 +4298,13 @@
     - action_update_stakeholder
     - slot{"name": "the child"}
     - slot{"action_return": true}
+    - utter_ask_identified_moralstatus
+* wrong
+    - utter_ask_moralstatus
+* moralstatus{"moralstatus": "machine"}
+    - slot{"moralstatus": "machine"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
     - utter_next_stakeholder
 * deny
     - utter_confirm_stakeholders
@@ -4229,7 +4320,7 @@
     - slot{"decider": "Werner"}
     - slot{"name": "Werner"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -4408,6 +4499,17 @@
     - action_update_stakeholder
     - slot{"name": "Greta"}
     - slot{"action_return": true}
+    - utter_ask_identified_moralstatus
+* wrong
+    - utter_ask_moralstatus
+* moralstatus{"moralstatus": "other"}
+    - slot{"moralstatus": "other"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_ask_moralstatus_weight
+* quantity
+    - action_update_stakeholder
+    - slot{"action_return": true}
     - utter_next_stakeholder
 * stakeholdergroup{"quantity": "150", "moralstatus": "human"}
     - slot{"moralstatus": "human"}
@@ -4422,6 +4524,17 @@
 * name
     - action_update_stakeholder
     - slot{"name": "the Palatines"}
+    - slot{"action_return": true}
+    - utter_ask_identified_moralstatus
+* wrong
+    - utter_ask_moralstatus
+* moralstatus{"moralstatus": "other"}
+    - slot{"moralstatus": "other"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_ask_moralstatus_weight
+* quantity
+    - action_update_stakeholder
     - slot{"action_return": true}
     - utter_next_stakeholder
 * stakeholdergroup{"stakeholder": "a lot of people", "moralstatus": "human"}
@@ -4439,6 +4552,17 @@
 * deny
     - action_update_stakeholder
     - slot{"name": "the Swabians"}
+    - slot{"action_return": true}
+    - utter_ask_identified_moralstatus
+* wrong
+    - utter_ask_moralstatus
+* moralstatus{"moralstatus": "other"}
+    - slot{"moralstatus": "other"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_ask_moralstatus_weight
+* quantity
+    - action_update_stakeholder
     - slot{"action_return": true}
     - utter_next_stakeholder
 * deny
@@ -4576,7 +4700,7 @@
     - action_update_stakeholder
     - slot{"name": "tom"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -4593,7 +4717,7 @@
     - action_update_stakeholder
     - slot{"name": "tom"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -4619,7 +4743,7 @@
     - action_update_stakeholder
     - slot{"name": "jane"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -4639,7 +4763,7 @@
     - action_update_stakeholder
     - slot{"name": "jane"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -4783,7 +4907,7 @@
     - action_update_stakeholder
     - slot{"name": "Yves"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -4799,7 +4923,7 @@
     - action_update_stakeholder
     - slot{"name": "the patients"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -4815,7 +4939,7 @@
     - action_update_stakeholder
     - slot{"name": "Glenn"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder

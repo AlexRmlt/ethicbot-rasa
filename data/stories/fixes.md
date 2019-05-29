@@ -10,7 +10,7 @@
     - slot{"decider": "Roswitha"}
     - slot{"name": "Roswitha"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -29,7 +29,7 @@
     - slot{"decider": "Roswitha"}
     - slot{"name": "Roswitha"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
@@ -48,7 +48,7 @@
     - slot{"decider": "Roswitha"}
     - slot{"name": "Roswitha"}
     - slot{"action_return": true}
-    - utter_ask_moral_status
+    - utter_ask_moralstatus
 * moralstatus{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
