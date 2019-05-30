@@ -1,0 +1,24 @@
+# Configuration for Rasa NLU.
+language: "en"
+pipeline:
+- name: "SpacyNLP"
+- name: "SpacyTokenizer"
+- name: "RegexFeaturizer"
+- name: "SpacyFeaturizer"
+- name: "CRFEntityExtractor"
+- name: "EntitySynonymMapper"
+- name: "SklearnIntentClassifier"
+- name: "components.intent_information.IntentInformation"
+
+# Configuration for Rasa Core.
+policies:
+  - name: MemoizationPolicy
+    max_history: 10
+  - name: KerasPolicy
+    epochs: 200
+    max_history: 10
+  - name: MappingPolicy
+  - name: TwoStageFallbackPolicy
+    nlu_threshold: 0.3
+    core_threshold: 0.3
+    deny_suggestion_intent_name: "deny"
