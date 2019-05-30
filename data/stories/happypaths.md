@@ -18,7 +18,7 @@
     - utter_ask_identified_moralstatus
 * correct
     - utter_next_stakeholder
-* stakeholder{"name": "Molly", "quantity": "5", "moralstatus": "human"}
+* stakeholder{"name": "Molly", "moralstatus": "human"}
     - slot{"name": "Molly"}
     - slot{"moralstatus": "human"}
     - action_create_stakeholder
@@ -472,12 +472,8 @@
     - action_create_stakeholder
     - slot{"amount_stakeholders": 2}
     - slot{"action_return": true}
-    - utter_ask_quantity
-* quantity{"quantity": "8"}
-    - action_update_stakeholder
-    - slot{"action_return": true}
     - utter_ask_name_plural
-* name{"quantity": "eight"}
+* name{"name": "eight"}
     - action_update_stakeholder
     - slot{"name": "the Rhinelanders"}
     - slot{"action_return": true}
@@ -506,16 +502,12 @@
     - action_update_stakeholder
     - slot{"action_return": true}
     - utter_next_stakeholder
-* stakeholdergroup{"quantity": "One", "name": "Tom", "deed": "kill him"}
+* stakeholdergroup{"quantity": "eight", "name": "Tom", "deed": "kill him"}
     - slot{"name": "Tom"}
     - slot{"deed": "kill him"}
     - action_create_stakeholder
     - slot{"moralstatus": null}
     - slot{"amount_stakeholders": 4}
-    - slot{"action_return": true}
-    - utter_ask_quantity
-* quantity{"quantity": "only one"}
-    - action_update_stakeholder
     - slot{"action_return": true}
     - action_check_identified_name
     - slot{"action_return": false}
@@ -806,13 +798,16 @@
     - action_update_stakeholder
     - slot{"action_return": true}
     - utter_next_stakeholder
-* stakeholder{"quantity": "7", "name": "Samuel"}
+* stakeholder{"name": "Samuel"}
+    - slot{"name": "Samuel"}
     - action_create_stakeholder
     - slot{"moralstatus": null}
     - slot{"amount_stakeholders": 4}
     - slot{"action_return": true}
-    - utter_ask_name_singular
-* name
+    - action_check_identified_name
+    - slot{"action_return": false}
+    - utter_ask_identified_name
+* correct
     - action_update_stakeholder
     - slot{"name": "Amelie"}
     - slot{"action_return": true}
@@ -1022,10 +1017,6 @@
     - slot{"moralstatus": "human"}
     - action_create_stakeholder
     - slot{"amount_stakeholders": 1}
-    - slot{"action_return": true}
-    - utter_ask_quantity
-* quantity{"quantity": "only one"}
-    - action_update_stakeholder
     - slot{"action_return": true}
     - action_check_identified_name
     - slot{"action_return": false}
@@ -1536,10 +1527,6 @@
     - action_create_stakeholder
     - slot{"amount_stakeholders": 2}
     - slot{"action_return": true}
-    - utter_ask_quantity
-* quantity{"quantity": "5"}
-    - action_update_stakeholder
-    - slot{"action_return": true}
     - utter_ask_name_plural
 * name
     - action_update_stakeholder
@@ -1553,10 +1540,6 @@
     - slot{"moralstatus": "human"}
     - action_create_stakeholder
     - slot{"amount_stakeholders": 3}
-    - slot{"action_return": true}
-    - utter_ask_quantity
-* quantity{"quantity": "only one"}
-    - action_update_stakeholder
     - slot{"action_return": true}
     - action_check_identified_name
     - slot{"action_return": false}
@@ -1595,10 +1578,6 @@
     - slot{"moralstatus": "human"}
     - action_create_stakeholder
     - slot{"amount_stakeholders": 1}
-    - slot{"action_return": true}
-    - utter_ask_quantity
-* quantity{"stakeholder": "five persons", "quantity": "5"}
-    - action_update_stakeholder
     - slot{"action_return": true}
     - utter_ask_name_plural
 * name
@@ -1673,8 +1652,6 @@
     - utter_next_deed
 * deed{"deed": "saving the lives"}
     - slot{"deed": "saving the lives"}
-    - utter_ask_identified_deed
-* correct
     - action_create_deed
     - slot{"action_return": true}
     - utter_ask_universalizable
@@ -1824,7 +1801,7 @@
 ## Generated Story 5900225719431929188
 * greeting
     - action_intro
-* stakeholder{"name": "Heather", "quantity": "four", "moralstatus": "human"}
+* stakeholder{"name": "Heather", "moralstatus": "human"}
     - slot{"name": "heather"}
     - slot{"moralstatus": "human"}
     - action_create_stakeholder
@@ -1845,7 +1822,7 @@
     - action_update_stakeholder
     - slot{"action_return": true}
     - utter_next_stakeholder
-* stakeholder{"quantity": "two"}
+* stakeholder
     - action_create_stakeholder
     - slot{"moralstatus": null}
     - slot{"amount_stakeholders": 2}
@@ -2319,13 +2296,15 @@
 * greeting
     - action_intro
 * stakeholder{"name": "Carrie"}
+    - slot{"name": "Carrie"}
     - action_create_stakeholder
     - slot{"moralstatus": null}
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": true}
-    - utter_ask_name_singular
-* name{"name": "Carrie"}
-    - slot{"name": "Carrie"}
+    - action_check_identified_name
+    - slot{"action_return": false}
+    - utter_ask_identified_name
+* correct
     - action_update_stakeholder
     - slot{"name": "Carrie"}
     - slot{"action_return": true}
@@ -3713,12 +3692,6 @@
     - action_create_stakeholder
     - slot{"amount_stakeholders": 2}
     - slot{"action_return": false}
-    - utter_ask_quantity
-* dontknow
-    - utter_ask_guess_quantity
-* quantity{"quantity": "500"}
-    - action_update_stakeholder
-    - slot{"action_return": true}
     - utter_ask_name_plural
 * deny
     - action_update_stakeholder
@@ -4076,10 +4049,6 @@
     - action_create_stakeholder
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": false}
-    - utter_ask_quantity
-* quantity{"quantity": "1"}
-    - action_update_stakeholder
-    - slot{"action_return": true}
     - utter_ask_name_singular
 * name{"stakeholder": "the captain"}
     - action_update_stakeholder
@@ -4515,10 +4484,6 @@
     - slot{"moralstatus": "human"}
     - action_create_stakeholder
     - slot{"amount_stakeholders": 2}
-    - slot{"action_return": true}
-    - utter_ask_quantity
-* quantity{"quantity": "150"}
-    - action_update_stakeholder
     - slot{"action_return": true}
     - utter_ask_name_plural
 * name

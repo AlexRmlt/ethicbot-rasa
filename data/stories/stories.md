@@ -643,3 +643,70 @@
 * affirm
     - utter_next_option
 
+## Generated Story -3455233882383967956
+* greeting
+    - action_intro
+* stakeholder{"name": "Thomas"}
+    - slot{"name": "Thomas"}
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 1}
+    - slot{"action_return": true}
+    - action_check_identified_name
+    - slot{"action_return": false}
+    - utter_ask_identified_name
+* correct
+    - action_update_stakeholder
+    - slot{"name": "Thomas"}
+    - slot{"action_return": true}
+    - utter_ask_moralstatus
+* moralstatus{"moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* stakeholder{"name": "Dirk"}
+    - slot{"name": "Dirk"}
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 2}
+    - slot{"action_return": true}
+    - action_check_identified_name
+    - slot{"action_return": false}
+    - utter_ask_identified_name
+* correct
+    - action_update_stakeholder
+    - slot{"name": "Dirk"}
+    - slot{"action_return": true}
+    - utter_ask_moralstatus
+* moralstatus{"moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* stakeholder{"stakeholder": "the victim"}
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 3}
+    - slot{"action_return": true}
+    - utter_ask_name_singular
+* name{"stakeholder": "victim"}
+    - action_update_stakeholder
+    - slot{"name": "victim"}
+    - slot{"action_return": true}
+    - utter_ask_moralstatus
+* moralstatus{"moralstatus": "machine"}
+    - slot{"moralstatus": "machine"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* deny
+    - utter_confirm_stakeholders
+    - action_choose_decider
+* decider{"name": "Thomas"}
+    - slot{"name": "Thomas"}
+    - action_update_stakeholder
+    - slot{"decider": "Thomas"}
+    - slot{"action_return": true}
+    - utter_ask_options
+

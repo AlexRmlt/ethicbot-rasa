@@ -230,18 +230,24 @@
 - [Glenn](name) would live a few days longer
 - [The patients](stakeholder:the patients) would not get any organs and die sooner or later
 - there could be trouble
-- [The victim](stakeholder:the victim), [Blue](name:Blue), would die
-- Yes, [Thomas](name:Thomas) could get into trouble, too
+- [The victim](stakeholder:the victim), [Blue](name), would die
+- Yes, [Thomas](name) could get into trouble, too
 - [The victim](stakeholder:the victim) will be dead
-- [Thomas](name:Thomas) will get money for the murder
-- [Thomas](name:Thomas) could get trouble
-- [Thomas](name:Thomas) will get into trouble
+- [Thomas](name) will get money for the murder
+- [Thomas](name) could get trouble
+- [Thomas](name) will get into trouble
 - [Peter](name:peter) will feel bad
 - [Yves](name:yves) will be dead
 - [Yves](name:yves) will be killed
 - [Christian](name:christian) will suffer, too
 
 ## intent:correct
+- That is correct
+- correct
+- True
+- true
+- Thats true
+- Correct
 - /correct
 - /correct
 - /correct
@@ -379,6 +385,7 @@
 - [lying](deed)
 
 ## intent:deny
+- /deny
 - I think that's all
 - No, fine, this was all
 - These are the only two. He must decide.
@@ -412,7 +419,6 @@
 - That was all
 - No, no one else would be affected
 - Thats all
-- I don't know it exactly
 - That was it
 - That is all
 - Thats all
@@ -636,10 +642,6 @@
 - These are the only two. He must decide.
 - no
 - no, this is all
-- /deny
-- no
-- no
-- no
 
 ## intent:deontology
 - /deontology
@@ -647,6 +649,7 @@
 - /deontology
 
 ## intent:dontknow
+- I don't know it exactly
 - Unfortunately I don't know her name
 - I have no idea, but there are really many
 - I don't know it exactly
@@ -782,15 +785,6 @@
 - Hi
 - Hi
 - hi
-- hi
-- Hi
-- hi
-- hi
-- hi
-- hey
-- hi
-- hi
-- hi
 
 ## intent:moralquestion
 - Should you take action in killing a person if it can prevent the death of a larger number of people?
@@ -874,12 +868,13 @@
 - You can call him "[Jane's husband](stakeholder)"
 - My name is [Alex](name)
 - You can use the name "[the patients](stakeholder)"
-- Call him by the name [Michael](name:Michael)
+- Call him by the name [Michael](name)
 - You can use the name [the supporters](stakeholder)
 - Call them "[the board](stakeholder)"
 - Let us call him [victim](stakeholder)
 - [Victim](stakeholder:victim) is the name
 - The name is Happy
+- Call him [victim](stakeholder)
 
 ## intent:negative
 - they are rather negative
@@ -1064,7 +1059,7 @@
 - To continue his life as before
 - yes. He can [kill](deed) someone
 - He can [kill](deed) someone
-- Yes, [Thomas](name:Thomas) can [refuse to commit the murder](deed)
+- Yes, [Thomas](name) can [refuse to commit the murder](deed)
 - [Peter](name) was asked by [Christian](name) to [kill](deed) his dog.
 - Yes, we can [allow Yves to continue living](deed:allow yves to continue living)
 
@@ -1480,7 +1475,6 @@
 - [A single person](stakeholder:a single person) is standing on a side track
 - [The last person](stakeholder:the last person) is standing in front of a switch
 - [One person](stakeholder:one person) stands on the side tracks where no train would normally come up
-- There is [a group of eight people](stakeholder) standing on the tracks
 - [Another person](stakeholder:another person) is standing on a side track
 - There is [a person](stakeholder) named [Jones](name) in the studio of a TV broadcast who has been injured
 - There is [a bunch of people](stakeholder) standing on a railway track
@@ -1491,7 +1485,6 @@
 - [The next person](stakeholder:the next person) hides Werner in his house
 - There is [a person](stakeholder) who lies on the ground injured in a TV station
 - There is [a person](stakeholder) who is injured in a TV station
-- First, there is [a group of people](stakeholder) standing on the tracks
 - [Another person](stakeholder:another person) stands on a side track where no train would normally appear
 - [another person](stakeholder) is standing on a side track
 - first there is [jones](name:Jones), who lies injured in a tv broadcasting station
@@ -1586,8 +1579,8 @@
 - [My boss](stakeholder) is involved
 - [I](stakeholder) am involved myself
 - [Me](stakeholder)
-- There is [Tom](name:Tom), hating his wife and wanting her dead.
-- Then there is [Tom's wife](stakeholder:Tom's wife) who he hates.
+- There is [Tom](name), hating his wife and wanting her dead.
+- Then there is [Tom's wife](stakeholder) who he hates.
 - [Jane](name) hates her husband and would like to see him dead
 - [Jane's husband](stakeholder) one day puts accidentally poison in his coffee, thinking it is cream
 - [I](stakeholder) am a skilled doctor
@@ -1599,21 +1592,26 @@
 - Then there is [myself](stakeholder) and I witnessed the robbery
 - [I](stakeholder) witnessed a robbery
 - first there is [the manager](stakeholder) of a big football club
-- There is [Thomas](name:Thomas)
-- There is also [Dirk](name:Dirk) who belongs to the swebian Mafia
+- There is [Thomas](name)
+- There is also [Dirk](name) who belongs to the swebian Mafia
 - Yes, there is also [the victim](stakeholder)
-- There is [Thomas](name:Thomas)
-- Yes, there is [Django](name:Django)
+- There is [Thomas](name)
+- Yes, there is [Django](name)
 - There is also [the victim](stakeholder)
-- [Thomas](name:Thomas) was asked to [kill](deed) the dog of [Django](name:Django)
-- Yes, there is [Django](name:Django), [the dog owner](stakeholder)
+- [Thomas](name) was asked to [kill](deed) the dog of [Django](name)
+- Yes, there is [Django](name), [the dog owner](stakeholder)
 - Yes, there is also Happy [the dog](stakeholder)
-- [Peter](name:Peter) is involved
-- [Christian](name:Christian), [the dog owner](stakeholder)
+- [Peter](name) is involved
+- [Christian](name), [the dog owner](stakeholder)
 - there is happy [the dog](stakeholder)
 - Yes, there is also Happy [the dog](stakeholder)
+- There is [Thomas](name)
+- There is [Dirk](name) as well who belongs to the sicilian mafia
+- There is [the victim](stakeholder) of the crime as well
 
 ## intent:stakeholdergroup
+- First, there is [a group of people](stakeholder) standing on the tracks
+- There is [a group of eight people](stakeholder) standing on the tracks
 - There are [three](quantity) parties involved
 - [the familiy](stakeholder)
 - [A large group of people](stakeholder) is threatened by the potential explosions of the bombs
@@ -1758,6 +1756,9 @@
 - five
 - Five
 
+## synonym:Blue
+- blue
+
 ## synonym:Carl
 - {"name": "Carl"}
 
@@ -1769,6 +1770,12 @@
 
 ## synonym:Daniel
 - {"name": "Daniel"}
+
+## synonym:Dirk
+- dirk
+
+## synonym:Django
+- django
 
 ## synonym:Doug
 - {"name": "Doug"}
@@ -1825,6 +1832,9 @@
 ## synonym:Mary
 - {"name": "Mary"}
 
+## synonym:Michael
+- michael
+
 ## synonym:Michelle
 - michelle
 
@@ -1848,6 +1858,15 @@
 ## synonym:Tanja
 - {"name": "Tanja"}
 - {"stakeholder":"Tanja"}
+
+## synonym:Thomas
+- thomas
+
+## synonym:Tom
+- tom
+
+## synonym:Tom's wife
+- tom's wife
 
 ## synonym:Uwe
 - {"name": "Uwe"}
@@ -1911,6 +1930,9 @@
 ## synonym:a third person
 - A third person
 
+## synonym:allow yves to continue living
+- allow Yves to continue living
+
 ## synonym:an Overseer
 - An overseer
 
@@ -1920,14 +1942,8 @@
 ## synonym:another person
 - Another person
 
-## synonym:Blue
-- blue
-
-## synonym:Dirk
-- dirk
-
-## synonym:Django
-- django
+## synonym:christian
+- Christian
 
 ## synonym:five people
 - Five people
@@ -1962,9 +1978,6 @@
 ## synonym:many people
 - Many people
 
-## synonym:Michael
-- michael
-
 ## synonym:one other person
 - One other person
 
@@ -1973,6 +1986,9 @@
 
 ## synonym:other
 - {"moralstatus": "other"}
+
+## synonym:peter
+- Peter
 
 ## synonym:protecting
 - Protecting
@@ -2063,20 +2079,14 @@
 ## synonym:the weaker people
 - The weaker people
 
-## synonym:thomas
-- Thomas
-
 ## synonym:three people
 - Three people
-
-## synonym:Tom
-- tom
-
-## synonym:Tom's wife
-- tom's wife
 
 ## synonym:victim
 - Victim
 
 ## synonym:we
 - We
+
+## synonym:yves
+- Yves
