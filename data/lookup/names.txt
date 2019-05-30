@@ -3181,6 +3181,7 @@ griet
 grietje
 griselda
 grissel
+grisu
 grover
 grzegorz
 guanyun
@@ -3290,6 +3291,7 @@ hanna
 hannah
 hanneke
 hanni
+hannibal
 hannie
 hannis
 hanns
@@ -3737,6 +3739,7 @@ jaimie
 jaine
 jak
 jake
+jakob
 jamal
 jaman
 james
@@ -5036,6 +5039,7 @@ luis
 luisa
 luise
 lujanka
+lukas
 luke
 lula
 lulita

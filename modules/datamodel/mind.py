@@ -81,6 +81,14 @@ def get_recent_stakeholder(s_id):
 		return None
 	return Stakeholder(sh) if sh != None else None
 
+def get_recent_consequence(s_id):
+	from . import Consequence
+	try:
+		cons = current(s_id).search(q.type == 'Consequence')[-1]
+	except IndexError:
+		return None
+	return Consequence(cons) if cons != None else None
+
 def get_stakeholders_by_synonym(s_id, synonym):
 	from . import Stakeholder
 	stakeholders = []

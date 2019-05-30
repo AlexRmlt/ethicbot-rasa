@@ -18,9 +18,8 @@ import modules.nlu_helper as nlu
 import modules.datamodel.mind as mind
 from modules.datamodel import Stakeholder, Option, Consequence, Deed, Context
 
+logging.basicConfig(format='%(asctime)s %(message)s', level=logging.DEBUG)
 logger = logging.getLogger(__name__)
-logging.basicConfig(format='%(asctime)s %(message)s', filename='rasa.log', level=logging.DEBUG)
-
 
 class Intro(Action):
     """ 
@@ -207,7 +206,7 @@ class UpdateStakeholder(Action):
                         else:
                             dispatcher.utter_template('utter_reflect_single_person', tracker)
                     else:
-                        logging.warning('Could not determine amount of stakeholders in message classified as quantity')
+                        logger.warning('Could not determine amount of stakeholders in message classified as quantity')
                         action_return = False
                         dispatcher.utter_template('utter_not_sure', tracker)
                     
@@ -313,7 +312,7 @@ class UpdateStakeholder(Action):
                 action_return = True
 
         except (AttributeError, TypeError) as e:
-            logging.warning('Exception updating Stakeholder: ' + str(e))
+            logger.warning('Exception updating Stakeholder: ' + str(e))
             events.append(SlotSet('name', None))
             action_return = False
 
@@ -405,7 +404,7 @@ class UpdateOption(Action):
                 events.append(SlotSet("deed", current_deed))
                 dispatcher.utter_template('utter_got_it', tracker)
         except (AttributeError, TypeError) as e:
-            logging.warning('Exception updating Option: ' + str(e))
+            logger.warning('Exception updating Option: ' + str(e))
             action_return = False
             dispatcher.utter_template('utter_not_sure', tracker)
 
@@ -528,7 +527,7 @@ class UpdateDeed(Action):
                     del option['deeds']
 
         except (AttributeError, TypeError) as e:
-            logging.warning('Exception updating deed: ' + str(e))
+            logger.warning('Exception updating deed: ' + str(e))
             action_return = False
             dispatcher.utter_template('utter_not_sure', tracker)
 
@@ -552,8 +551,8 @@ class CreateConsequence(Action):
     * sentiment == sentiment of the last sentence (pos/neu/neg)
 
     Returns:
-    * action_return = True if consequence was created with correct impact
-    * action_return = False if consequence was created with unknown impact (0)
+    * action_return = True if consequence was created
+    * action_return = False if consequence was not created (propably because affected stakeholder is unknown)
     """
     def name(self):
         return 'action_create_consequence'
@@ -572,22 +571,42 @@ class CreateConsequence(Action):
 
         # Find out, which stakeholder is affected by this consequence
         try:
-            sh = mind.get_stakeholder_by_name(tracker.sender_id, next(tracker.get_latest_entity_values('name'), None))
-            if sh == None:
-                sh = mind.get_stakeholder_by_name(tracker.sender_id, next(tracker.get_latest_entity_values('stakeholder'), None))
-                events.append(SlotSet('name', sh['name']))
+            names = list(tracker.get_latest_entity_values('name'))
+            aff_stkhs = []
+            # If we find multiple names, assume that they are all affected
+            if len(names) > 1:
+                for name in names:
+                    sh = mind.get_stakeholder_by_name(tracker.sender_id, name)
+                    if not sh == None:
+                        aff_stkhs.append(sh['name'])
+                if len(aff_stkhs) > 1:
+                    events.append(SlotSet('name', 'them'))
+            # else take a single name, if it is unknown try a potentially found stakeholder
+            else:
+                sh = mind.get_stakeholder_by_name(tracker.sender_id, names[0])
+                if not sh == None:
+                    aff_stkhs.append(sh['name'])
+                else:
+                    sh = mind.get_stakeholder_by_name(tracker.sender_id, next(tracker.get_latest_entity_values('stakeholder'), None))
+                    if not sh == None:
+                        aff_stkhs.append(sh['name'])
+                        events.append(SlotSet('name', sh['name']))
 
-            consequence = Consequence({
-                "option": option, 
-                "affected_stakeholder": sh['name'], 
-                "impact": impact,
-                "probability": 1
-            }).memorize(tracker.sender_id)
+            if len(aff_stkhs) > 0:
+                consequence = Consequence({
+                    "option": option, 
+                    "affected_stakeholders": aff_stkhs, 
+                    "impact": impact,
+                    "probability": 1
+                }).memorize(tracker.sender_id)
 
-            action_return = True
-        except (AttributeError, TypeError) as e:
-            logging.warning('Exception creating consequence: ' + str(e))
-            # If we do not find a distinct name, let the user choose from possible stakeholders
+                action_return = True
+            else:
+                # If we do not find a distinct name, let the user choose from possible stakeholders
+                events.append(SlotSet('name', None))
+                action_return = False
+        except (AttributeError, TypeError, KeyError, IndexError) as e:
+            logger.warning('Exception creating consequence: ' + str(e))
             events.append(SlotSet('name', None))
             action_return = False
             
@@ -620,7 +639,8 @@ class UpdateConsequence(Action):
         intent = tracker.latest_message['intent'].get('name')
 
         try:
-            consequence = mind.get_consequence(tracker.sender_id, tracker.get_slot('name'), tracker.get_slot('option'))
+            #consequence = mind.get_consequence(tracker.sender_id, tracker.get_slot('name'), tracker.get_slot('option'))
+            consequence = mind.get_recent_consequence(tracker.sender_id)
             old_impact = consequence['impact']
 
             # Update impact
@@ -657,7 +677,7 @@ class UpdateConsequence(Action):
                 dispatcher.utter_template('utter_got_it', tracker)
                 action_return = True
         except (AttributeError, TypeError) as e:
-            logging.warning('Exception updating consequence: ' + str(e))
+            logger.warning('Exception updating consequence: ' + str(e))
             action_return = False
             dispatcher.utter_template('utter_not_sure', tracker)
 

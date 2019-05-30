@@ -13,9 +13,9 @@ pipeline:
 # Configuration for Rasa Core.
 policies:
   - name: MemoizationPolicy
-    max_history: 10
+    max_history: 3
   - name: KerasPolicy
-    epochs: 200
+    epochs: 100
     max_history: 10
   - name: MappingPolicy
   - name: TwoStageFallbackPolicy

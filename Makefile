@@ -48,7 +48,7 @@ actions:
 	rasa run actions --actions actions
 
 test:
-	rasa shell --endpoints endpoints_local.yml
+	rasa shell --endpoints endpoints_local.yml --debug
 
 test-nlu:
 	rasa shell nlu

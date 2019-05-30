@@ -1393,6 +1393,7 @@
 - can we chat
 
 ## intent:stakeholder
+- Then there is [a dog](stakeholder) called [Grisu](name)
 - There is also his friend [Dirk](name)
 - Yes, there is [the dog](stakeholder).
 - [Anton](name) knows that he is going to inherit the money some time, but there are some pressing social issues he would like to attend to as soon as possible.
