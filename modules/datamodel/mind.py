@@ -89,6 +89,22 @@ def get_recent_consequence(s_id):
 		return None
 	return Consequence(cons) if cons != None else None
 
+def get_recent_option(s_id):
+	from . import Option
+	try:
+		opt = current(s_id).search(q.type == 'Option')[-1]
+	except IndexError:
+		return None
+	return Option(opt) if opt != None else None
+
+def get_recent_deed(s_id):
+	from . import Deed
+	try:
+		deed = current(s_id).search(q.type == 'Deed')[-1]
+	except IndexError:
+		return None
+	return Deed(deed) if deed != None else None
+
 def get_stakeholders_by_synonym(s_id, synonym):
 	from . import Stakeholder
 	stakeholders = []
@@ -98,7 +114,8 @@ def get_stakeholders_by_synonym(s_id, synonym):
 
 def get_deed(s_id, label):
 	from . import Deed
-	d = current(s_id).get(q.label.matches(label, flags=re.IGNORECASE))
+	d = current(s_id).get((q.label.matches(label, flags=re.IGNORECASE)) \
+		& (q.type == 'Deed'))
 	return Deed(d) if d != None else None
 
 def get_consequence(s_id, stakeholder, option):

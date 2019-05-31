@@ -64,13 +64,12 @@
     - slot{"deed": "do nothing"}
     - action_create_option
     - slot{"deed": "do nothing"}
-    - slot{"option": 4}
     - slot{"action_return": true}
     - utter_ask_identified_deed
 * correct
     - action_create_deed
     - slot{"action_return": true}
-    - utter_ask_universalizable
+    - utter_ask_deed_universalizable
 * wrong
     - action_update_deed
     - slot{"action_return": true}
@@ -79,8 +78,6 @@
     - action_update_deed
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* deny
     - utter_ask_consequences
 * consequence{"stakeholder": "the five workmen", "quantity": "5", "sentiment": "neg"}
     - slot{"sentiment": "neg"}
@@ -123,34 +120,17 @@
 * option
     - action_create_option
     - slot{"deed": null}
-    - slot{"option": 8}
     - slot{"action_return": true}
-    - utter_ask_deed
-* deed{"deed": "Killing Nathan"}
-    - action_create_deed
-    - slot{"deed": "Killing Nathan by pushing him off the bridge"}
-    - slot{"action_return": true}
-    - utter_ask_universalizable
-* wrong
-    - action_update_deed
+    - utter_ask_option_universalizable
+* wrong{"name": "option"}
+    - slot{"name": "option"}
+    - action_update_option
     - slot{"action_return": true}
     - utter_ask_inherent_evil
 * affirm
-    - action_update_deed
+    - action_update_option
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* deed{"deed": "saving the lives", "quantity": "5"}
-    - slot{"deed": "saving the lives"}
-    - action_create_deed
-    - slot{"action_return": true}
-    - utter_ask_universalizable
-* correct
-    - action_update_deed
-    - slot{"deed": null}
-    - slot{"action_return": true}
-    - utter_next_deed
-* deny
     - utter_ask_consequences
 * consequence{"name": "Nathan", "sentiment": "neg"}
     - slot{"name": "Nathan"}
@@ -284,35 +264,17 @@
     - slot{"name": "Ken"}
     - action_create_option
     - slot{"deed": null}
-    - slot{"option": 4}
     - slot{"action_return": true}
-    - utter_ask_deed
-* deed{"name": "Inga"}
-    - slot{"name": "Inga"}
-    - action_create_deed
-    - slot{"deed": "This would imply actively killing Inga."}
-    - slot{"action_return": true}
-    - utter_ask_universalizable
-* wrong
-    - action_update_deed
+    - utter_ask_option_universalizable
+* wrong{"name": "option"}
+    - slot{"name": "option"}
+    - action_update_option
     - slot{"action_return": true}
     - utter_ask_inherent_evil
 * affirm
-    - action_update_deed
+    - action_update_option
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* deed{"deed": "saving the lives"}
-    - slot{"deed": "saving the lives"}
-    - action_create_deed
-    - slot{"action_return": true}
-    - utter_ask_universalizable
-* correct
-    - action_update_deed
-    - slot{"deed": null}
-    - slot{"action_return": true}
-    - utter_next_deed
-* deny
     - utter_ask_consequences
 * consequence{"name": "Inga"}
     - slot{"name": "Inga"}
@@ -351,34 +313,12 @@
     - slot{"name": "Inga"}
     - action_create_option
     - slot{"deed": null}
-    - slot{"option": 9}
     - slot{"action_return": true}
-    - utter_ask_deed
-* deed
-    - action_create_deed
-    - slot{"deed": "Refraining from abusing the patient-doctor mutual trust would be a morally relevant action"}
-    - slot{"action_return": true}
-    - utter_ask_universalizable
+    - utter_ask_option_universalizable
 * correct
-    - action_update_deed
+    - action_update_option
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* deed
-    - action_create_deed
-    - slot{"deed": "One must also consider the action of not saving many people from the threat of being infected with HIV."}
-    - slot{"action_return": true}
-    - utter_ask_universalizable
-* wrong
-    - action_update_deed
-    - slot{"action_return": true}
-    - utter_ask_inherent_evil
-* affirm
-    - action_update_deed
-    - slot{"deed": null}
-    - slot{"action_return": true}
-    - utter_next_deed
-* deny
     - utter_ask_consequences
 * consequence{"name": "the saxons", "sentiment": "neg"}
     - slot{"name": "the saxons"}
@@ -555,13 +495,12 @@
     - slot{"deed": "kill one"}
     - action_create_option
     - slot{"deed": "kill one"}
-    - slot{"option": 6}
     - slot{"action_return": true}
     - utter_ask_identified_deed
 * correct
     - action_create_deed
     - slot{"action_return": true}
-    - utter_ask_universalizable
+    - utter_ask_deed_universalizable
 * wrong
     - action_update_deed
     - slot{"action_return": true}
@@ -570,32 +509,6 @@
     - action_update_deed
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* deed
-    - action_create_deed
-    - slot{"deed": "Torturing his fellow hostage"}
-    - slot{"action_return": true}
-    - utter_ask_universalizable
-* wrong
-    - action_update_deed
-    - slot{"action_return": true}
-    - utter_ask_inherent_evil
-* affirm
-    - action_update_deed
-    - slot{"deed": null}
-    - slot{"action_return": true}
-    - utter_next_deed
-* deed{"deed": "saving", "quantity": "eight"}
-    - slot{"deed": "saving"}
-    - action_create_deed
-    - slot{"action_return": true}
-    - utter_ask_universalizable
-* correct
-    - action_update_deed
-    - slot{"deed": null}
-    - slot{"action_return": true}
-    - utter_next_deed
-* deny
     - utter_ask_consequences
 * consequence{"name": "Amelie", "sentiment": "neg"}
     - slot{"name": "Amelie"}
@@ -651,29 +564,22 @@
     - slot{"deed": "kill one"}
     - action_create_option
     - slot{"deed": "kill one"}
-    - slot{"option": 13}
     - slot{"action_return": true}
     - utter_ask_identified_deed
 * wrong
     - action_update_option
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* deed
-    - action_create_deed
-    - slot{"deed": "It would mean refraining from saving himself and the children"}
-    - slot{"action_return": true}
-    - utter_ask_universalizable
-* wrong
-    - action_update_deed
+    - utter_ask_option_universalizable
+* wrong{"name": "option"}
+    - slot{"name": "option"}
+    - action_update_option
     - slot{"action_return": true}
     - utter_ask_inherent_evil
 * deny
-    - action_update_deed
+    - action_update_option
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* deny
     - utter_ask_consequences
 * consequence{"name": "the Saxons", "sentiment": "neg"}
     - slot{"name": "the saxons"}
@@ -829,39 +735,17 @@
     - slot{"name": "samuel"}
     - action_create_option
     - slot{"deed": null}
-    - slot{"option": 5}
     - slot{"action_return": true}
-    - utter_ask_deed
-* deed
-    - action_create_deed
-    - slot{"deed": "This implies killing a person"}
-    - slot{"action_return": true}
-    - utter_ask_universalizable
-* wrong
-    - action_update_deed
+    - utter_ask_option_universalizable
+* wrong{"name": "option"}
+    - slot{"name": "option"}
+    - action_update_option
     - slot{"action_return": true}
     - utter_ask_inherent_evil
 * affirm
-    - action_update_deed
+    - action_update_option
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* deed{"name": "Samuels"}
-    - slot{"name": "Samuels"}
-    - action_create_deed
-    - slot{"deed": "It also means helping Samuels family"}
-    - slot{"action_return": true}
-    - utter_ask_universalizable
-* wrong
-    - action_update_deed
-    - slot{"action_return": true}
-    - utter_ask_inherent_evil
-* deny
-    - action_update_deed
-    - slot{"deed": null}
-    - slot{"action_return": true}
-    - utter_next_deed
-* deny
     - utter_ask_consequences
 * consequence{"name": "Amelie", "sentiment": "neg"}
     - slot{"name": "Amelie"}
@@ -922,19 +806,16 @@
     - slot{"deed": "refrain from killing"}
     - action_create_option
     - slot{"deed": "refrain from killing"}
-    - slot{"option": 11}
     - slot{"action_return": true}
     - utter_ask_identified_deed
 * correct
     - action_create_deed
     - slot{"action_return": true}
-    - utter_ask_universalizable
+    - utter_ask_deed_universalizable
 * correct
     - action_update_deed
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* deny
     - utter_ask_consequences
 * consequence{"name": "Amelie", "sentiment": "neu"}
     - slot{"name": "Amelie"}
@@ -1098,34 +979,17 @@
     - slot{"name": "Jane"}
     - action_create_option
     - slot{"deed": null}
-    - slot{"option": 5}
     - slot{"action_return": true}
-    - utter_ask_deed
-* deed
-    - action_create_deed
-    - slot{"deed": "It would mean killing her baby because the heat of the furnace would overheat the child."}
-    - slot{"action_return": true}
-    - utter_ask_universalizable
-* wrong
-    - action_update_deed
+    - utter_ask_option_universalizable
+* wrong{"name": "option"}
+    - slot{"name": "option"}
+    - action_update_option
     - slot{"action_return": true}
     - utter_ask_inherent_evil
 * affirm
-    - action_update_deed
+    - action_update_option
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* deed
-    - action_create_deed
-    - slot{"deed": "There is also the action of saving her and the others life."}
-    - slot{"action_return": true}
-    - utter_ask_universalizable
-* correct
-    - action_update_deed
-    - slot{"deed": null}
-    - slot{"action_return": true}
-    - utter_next_deed
-* deny
     - utter_ask_consequences
 * consequence{"name": "Amelie", "sentiment": "neg"}
     - slot{"name": "Amelie"}
@@ -1179,13 +1043,12 @@
     - slot{"deed": "do nothing"}
     - action_create_option
     - slot{"deed": "do nothing"}
-    - slot{"option": 11}
     - slot{"action_return": true}
     - utter_ask_identified_deed
 * correct
     - action_create_deed
     - slot{"action_return": true}
-    - utter_ask_universalizable
+    - utter_ask_deed_universalizable
 * wrong
     - action_update_deed
     - slot{"action_return": true}
@@ -1194,8 +1057,6 @@
     - action_update_deed
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* deny
     - utter_ask_consequences
 * consequence{"name": "the swabians", "sentiment": "neg"}
     - slot{"name": "the swabians"}
@@ -1329,35 +1190,12 @@
     - slot{"name": "mark"}
     - action_create_option
     - slot{"deed": null}
-    - slot{"option": 4}
     - slot{"action_return": true}
-    - utter_ask_deed
-* deed{"deed": "saving the lives"}
-    - slot{"deed": "saving the lives"}
-    - action_create_deed
-    - slot{"action_return": true}
-    - utter_ask_universalizable
+    - utter_ask_option_universalizable
 * correct
-    - action_update_deed
+    - action_update_option
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* deed{"name": "J\u00f6rg"}
-    - slot{"name": "J\u00f6rg"}
-    - action_create_deed
-    - slot{"deed": "It would also mean killing J\u00f6rg because his body would get crushed by the emergency access hatch."}
-    - slot{"action_return": true}
-    - utter_ask_universalizable
-* wrong
-    - action_update_deed
-    - slot{"action_return": true}
-    - utter_ask_inherent_evil
-* affirm
-    - action_update_deed
-    - slot{"deed": null}
-    - slot{"action_return": true}
-    - utter_next_deed
-* deny
     - utter_ask_consequences
 * consequence{"name": "J\u00f6rg", "sentiment": "neg"}
     - slot{"name": "J\u00f6rg"}
@@ -1417,29 +1255,22 @@
     - slot{"deed": "refrain from"}
     - action_create_option
     - slot{"deed": "refrain from"}
-    - slot{"option": 10}
     - slot{"action_return": true}
     - utter_ask_identified_deed
 * wrong
     - action_update_option
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* deed
-    - action_create_deed
-    - slot{"deed": "The option implies letting his crew and himself die by lack of oxygen."}
-    - slot{"action_return": true}
-    - utter_ask_universalizable
-* wrong
-    - action_update_deed
+    - utter_ask_option_universalizable
+* wrong{"name": "option"}
+    - slot{"name": "option"}
+    - action_update_option
     - slot{"action_return": true}
     - utter_ask_inherent_evil
 * affirm
-    - action_update_deed
+    - action_update_option
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* deny
     - utter_ask_consequences
 * consequence{"name": "J\u00f6rg", "sentiment": "neu"}
     - slot{"name": "J\u00f6rg"}
@@ -1633,34 +1464,17 @@
 * option
     - action_create_option
     - slot{"deed": null}
-    - slot{"option": 4}
     - slot{"action_return": true}
-    - utter_ask_deed
-* deed
-    - action_create_deed
-    - slot{"deed": "It would imply killing Katharina."}
-    - slot{"action_return": true}
-    - utter_ask_universalizable
-* wrong
-    - action_update_deed
+    - utter_ask_option_universalizable
+* wrong{"name": "option"}
+    - slot{"name": "option"}
+    - action_update_option
     - slot{"action_return": true}
     - utter_ask_inherent_evil
 * affirm
-    - action_update_deed
+    - action_update_option
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* deed{"deed": "saving the lives"}
-    - slot{"deed": "saving the lives"}
-    - action_create_deed
-    - slot{"action_return": true}
-    - utter_ask_universalizable
-* correct
-    - action_update_deed
-    - slot{"deed": null}
-    - slot{"action_return": true}
-    - utter_next_deed
-* deny
     - utter_ask_consequences
 * consequence{"name": "Katharina", "sentiment": "neg"}
     - slot{"sentiment": "neg"}
@@ -1708,33 +1522,16 @@
     - slot{"deed": "refrain from pushing"}
     - action_create_option
     - slot{"deed": "refrain from pushing"}
-    - slot{"option": 9}
     - slot{"action_return": true}
     - utter_ask_identified_deed
 * correct
     - action_create_deed
     - slot{"action_return": true}
-    - utter_ask_universalizable
+    - utter_ask_deed_universalizable
 * correct
     - action_update_deed
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* deed
-    - action_create_deed
-    - slot{"deed": "Also it would imply letting the workmen die."}
-    - slot{"action_return": true}
-    - utter_ask_universalizable
-* wrong
-    - action_update_deed
-    - slot{"action_return": true}
-    - utter_ask_inherent_evil
-* affirm
-    - action_update_deed
-    - slot{"deed": null}
-    - slot{"action_return": true}
-    - utter_next_deed
-* deny
     - utter_ask_consequences
 * consequence{"name": "the Palatines", "sentiment": "neg"}
     - slot{"sentiment": "neg"}
@@ -1867,39 +1664,22 @@
     - slot{"deed": "refuse to"}
     - action_create_option
     - slot{"deed": "refuse to"}
-    - slot{"option": 4}
     - slot{"action_return": true}
     - utter_ask_identified_deed
 * wrong
     - action_update_option
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* deed
-    - action_create_deed
-    - slot{"deed": "Letting the crewmember die is for sure an action of moral relevance."}
-    - slot{"action_return": true}
-    - utter_ask_universalizable
-* wrong
-    - action_update_deed
+    - utter_ask_option_universalizable
+* wrong{"name": "option"}
+    - slot{"name": "option"}
+    - action_update_option
     - slot{"action_return": true}
     - utter_ask_inherent_evil
 * affirm
-    - action_update_deed
+    - action_update_option
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* deed{"deed": "saving"}
-    - slot{"deed": "saving"}
-    - action_create_deed
-    - slot{"action_return": true}
-    - utter_ask_universalizable
-* correct
-    - action_update_deed
-    - slot{"deed": null}
-    - slot{"action_return": true}
-    - utter_next_deed
-* deny
     - utter_ask_consequences
 * consequence{"name": "Herbert", "sentiment": "neg"}
     - slot{"name": "Herbert"}
@@ -1950,27 +1730,19 @@
 * deny
     - utter_next_option
 * option
-    - slot{"name": "Herbert"}
     - action_create_option
     - slot{"deed": null}
-    - slot{"option": 10}
     - slot{"action_return": true}
-    - utter_ask_deed
-* deed{"deed": "saving the life"}
-    - slot{"deed": "saving the life"}
-    - action_create_deed
-    - slot{"action_return": true}
-    - utter_ask_universalizable
-* wrong
-    - action_update_deed
+    - utter_ask_option_universalizable
+* wrong{"name": "option"}
+    - slot{"name": "option"}
+    - action_update_option
     - slot{"action_return": true}
     - utter_ask_inherent_evil
 * deny
-    - action_update_deed
+    - action_update_option
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* deny
     - utter_ask_consequences
 * consequence{"name": "Herbert", "sentiment": "neu"}
     - slot{"name": "Herbert"}
@@ -2094,13 +1866,12 @@
     - slot{"deed": "refuse"}
     - action_create_option
     - slot{"deed": "refuse"}
-    - slot{"option": 8}
     - slot{"action_return": true}
     - utter_ask_identified_deed
 * correct
     - action_create_deed
     - slot{"action_return": true}
-    - utter_ask_universalizable
+    - utter_ask_deed_universalizable
 * wrong
     - action_update_deed
     - slot{"action_return": true}
@@ -2109,18 +1880,6 @@
     - action_update_deed
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* deed{"deed": "saving his life"}
-    - slot{"deed": "saving his life"}
-    - action_create_deed
-    - slot{"action_return": true}
-    - utter_ask_universalizable
-* correct
-    - action_update_deed
-    - slot{"deed": null}
-    - slot{"action_return": true}
-    - utter_next_deed
-* deny
     - utter_ask_consequences
 * consequence{"name": "the Rhinelanders", "sentiment": "neg"}
     - slot{"name": "the Rhinelanders"}
@@ -2190,34 +1949,12 @@
 * option
     - action_create_option
     - slot{"deed": null}
-    - slot{"option": 14}
     - slot{"action_return": true}
-    - utter_ask_deed
-* deed{"deed": "saving"}
-    - slot{"deed": "saving"}
-    - action_create_deed
-    - slot{"action_return": true}
-    - utter_ask_universalizable
+    - utter_ask_option_universalizable
 * correct
-    - action_update_deed
+    - action_update_option
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* deed
-    - action_create_deed
-    - slot{"deed": "It also implies bringing the lives of all passengers in the lifeboat in danger."}
-    - slot{"action_return": true}
-    - utter_ask_universalizable
-* wrong
-    - action_update_deed
-    - slot{"action_return": true}
-    - utter_ask_inherent_evil
-* affirm
-    - action_update_deed
-    - slot{"deed": null}
-    - slot{"action_return": true}
-    - utter_next_deed
-* deny
     - utter_ask_consequences
 * consequence{"name": "the Rhinelanders", "sentiment": "neu"}
     - slot{"name": "the Rhinelanders"}
@@ -2359,34 +2096,12 @@
 * option{"quantity": "four"}
     - action_create_option
     - slot{"deed": null}
-    - slot{"option": 4}
     - slot{"action_return": true}
-    - utter_ask_deed
-* deed{"quantity": "four"}
-    - action_create_deed
-    - slot{"deed": "It means avoiding the death of the four patients."}
-    - slot{"action_return": true}
-    - utter_ask_universalizable
+    - utter_ask_option_universalizable
 * correct
-    - action_update_deed
+    - action_update_option
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* deed
-    - action_create_deed
-    - slot{"deed": "It also means killing the single person in the other room."}
-    - slot{"action_return": true}
-    - utter_ask_universalizable
-* wrong
-    - action_update_deed
-    - slot{"action_return": true}
-    - utter_ask_inherent_evil
-* affirm
-    - action_update_deed
-    - slot{"deed": null}
-    - slot{"action_return": true}
-    - utter_next_deed
-* deny
     - utter_ask_consequences
 * consequence{"name": "frank", "deed": "kill him", "sentiment": "neg"}
     - slot{"name": "frank"}
@@ -2430,13 +2145,12 @@
     - slot{"deed": "do nothing"}
     - action_create_option
     - slot{"deed": "do nothing"}
-    - slot{"option": 9}
     - slot{"action_return": true}
     - utter_ask_identified_deed
 * correct
     - action_create_deed
     - slot{"action_return": true}
-    - utter_ask_universalizable
+    - utter_ask_deed_universalizable
 * wrong
     - action_update_deed
     - slot{"action_return": true}
@@ -2445,8 +2159,6 @@
     - action_update_deed
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* deny
     - utter_ask_consequences
 * consequence{"sentiment": "neg"}
     - slot{"sentiment": "neg"}
@@ -2568,34 +2280,17 @@
 * option
     - action_create_option
     - slot{"deed": null}
-    - slot{"option": 4}
     - slot{"action_return": true}
-    - utter_ask_deed
-* deed
-    - action_create_deed
-    - slot{"deed": "Killing her own son"}
-    - slot{"action_return": true}
-    - utter_ask_universalizable
-* wrong
-    - action_update_deed
+    - utter_ask_option_universalizable
+* wrong{"name": "option"}
+    - slot{"name": "option"}
+    - action_update_option
     - slot{"action_return": true}
     - utter_ask_inherent_evil
 * affirm
-    - action_update_deed
+    - action_update_option
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* deed
-    - action_create_deed
-    - slot{"deed": "Saving an innocent persons life."}
-    - slot{"action_return": true}
-    - utter_ask_universalizable
-* correct
-    - action_update_deed
-    - slot{"deed": null}
-    - slot{"action_return": true}
-    - utter_next_deed
-* deny
     - utter_ask_consequences
 * consequence{"name": "Carla", "sentiment": "neg"}
     - slot{"name": "Carla"}
@@ -2650,24 +2345,17 @@
     - slot{"name": "inga"}
     - action_create_option
     - slot{"deed": null}
-    - slot{"option": 10}
     - slot{"action_return": true}
-    - utter_ask_deed
-* deed
-    - action_create_deed
-    - slot{"deed": "It would mean letting an innocent person get killed"}
-    - slot{"action_return": true}
-    - utter_ask_universalizable
-* wrong
-    - action_update_deed
+    - utter_ask_option_universalizable
+* wrong{"name": "option"}
+    - slot{"name": "option"}
+    - action_update_option
     - slot{"action_return": true}
     - utter_ask_inherent_evil
 * affirm
-    - action_update_deed
+    - action_update_option
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* deny
     - utter_ask_consequences
 * consequence{"name": "Carla", "sentiment": "neg"}
     - slot{"name": "Carla"}
@@ -2778,35 +2466,12 @@
 * option
     - action_create_option
     - slot{"deed": null}
-    - slot{"option": 4}
     - slot{"action_return": true}
-    - utter_ask_deed
-* deed{"deed": "saving her life"}
-    - slot{"deed": "saving her life"}
-    - action_create_deed
-    - slot{"action_return": true}
-    - utter_ask_universalizable
+    - utter_ask_option_universalizable
 * correct
-    - action_update_deed
+    - action_update_option
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* deed{"name": "Ignoring Michelle"}
-    - slot{"name": "Ignoring Michelle"}
-    - action_create_deed
-    - slot{"deed": "Ignoring Michelle could be a morally condemnable action as she needs also medical attention"}
-    - slot{"action_return": true}
-    - utter_ask_universalizable
-* wrong
-    - action_update_deed
-    - slot{"action_return": true}
-    - utter_ask_inherent_evil
-* affirm
-    - action_update_deed
-    - slot{"deed": null}
-    - slot{"action_return": true}
-    - utter_next_deed
-* deny
     - utter_ask_consequences
 * consequence{"name": "inga", "sentiment": "pos"}
     - slot{"name": "inga"}
@@ -2853,21 +2518,12 @@
     - slot{"name": "Michelle"}
     - action_create_option
     - slot{"deed": null}
-    - slot{"option": 9}
     - slot{"action_return": true}
-    - utter_ask_deed
-* deed{"deed": "saving the life", "name": "Michelle"}
-    - slot{"name": "Michelle"}
-    - slot{"deed": "saving the life"}
-    - action_create_deed
-    - slot{"action_return": true}
-    - utter_ask_universalizable
+    - utter_ask_option_universalizable
 * correct
-    - action_update_deed
+    - action_update_option
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* deny
     - utter_ask_consequences
 * consequence{"name": "Roswitha", "sentiment": "neg"}
     - slot{"name": "Roswitha"}
@@ -2988,13 +2644,12 @@
     - slot{"deed": "tell his friend"}
     - action_create_option
     - slot{"deed": "tell his friend"}
-    - slot{"option": 4}
     - slot{"action_return": true}
     - utter_ask_identified_deed
 * correct
     - action_create_deed
     - slot{"action_return": true}
-    - utter_ask_universalizable
+    - utter_ask_deed_universalizable
 * wrong
     - action_update_deed
     - slot{"action_return": true}
@@ -3003,22 +2658,6 @@
     - action_update_deed
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* deed
-    - action_create_deed
-    - slot{"deed": "Violating the companies policy of information security"}
-    - slot{"action_return": true}
-    - utter_ask_universalizable
-* wrong
-    - action_update_deed
-    - slot{"action_return": true}
-    - utter_ask_inherent_evil
-* affirm
-    - action_update_deed
-    - slot{"deed": null}
-    - slot{"action_return": true}
-    - utter_next_deed
-* deny
     - utter_ask_consequences
 * consequence{"name": "mark"}
     - slot{"name": "mark"}
@@ -3073,34 +2712,12 @@
     - slot{"name": "Mark"}
     - action_create_option
     - slot{"deed": null}
-    - slot{"option": 10}
     - slot{"action_return": true}
-    - utter_ask_deed
-* deed
-    - action_create_deed
-    - slot{"deed": "Complying to the companies laws"}
-    - slot{"action_return": true}
-    - utter_ask_universalizable
+    - utter_ask_option_universalizable
 * correct
-    - action_update_deed
+    - action_update_option
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* deed
-    - action_create_deed
-    - slot{"deed": "Hiding information from a good friend"}
-    - slot{"action_return": true}
-    - utter_ask_universalizable
-* wrong
-    - action_update_deed
-    - slot{"action_return": true}
-    - utter_ask_inherent_evil
-* affirm
-    - action_update_deed
-    - slot{"deed": null}
-    - slot{"action_return": true}
-    - utter_next_deed
-* deny
     - utter_ask_consequences
 * deny
     - utter_next_option
@@ -3160,24 +2777,17 @@
 * stakeholder{"quantity": "one"}
     - action_create_option
     - slot{"deed": null}
-    - slot{"option": 3}
     - slot{"action_return": true}
-    - utter_ask_deed
-* deed
-    - action_create_deed
-    - slot{"deed": "Using the dynamite means killing the pregnant woman"}
-    - slot{"action_return": true}
-    - utter_ask_universalizable
-* wrong
-    - action_update_deed
+    - utter_ask_option_universalizable
+* wrong{"name": "option"}
+    - slot{"name": "option"}
+    - action_update_option
     - slot{"action_return": true}
     - utter_ask_inherent_evil
 * affirm
-    - action_update_deed
+    - action_update_option
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* deny
     - utter_ask_consequences
 * consequence{"name": "Carla", "sentiment": "neg"}
     - slot{"name": "Carla"}
@@ -3214,10 +2824,17 @@
 * option
     - action_create_option
     - slot{"deed": null}
-    - slot{"option": 7}
     - slot{"action_return": true}
-    - utter_ask_deed
-* dontknow
+    - utter_ask_option_universalizable
+* wrong{"name": "option"}
+    - slot{"name": "option"}
+    - action_update_option
+    - slot{"action_return": true}
+    - utter_ask_inherent_evil
+* affirm
+    - action_update_option
+    - slot{"deed": null}
+    - slot{"action_return": true}
     - utter_ask_consequences
 * consequence{"name": "carla", "sentiment": "neu"}
     - slot{"name": "carla"}
@@ -3339,20 +2956,12 @@
 * option
     - action_create_option
     - slot{"deed": null}
-    - slot{"option": 4}
     - slot{"action_return": true}
-    - utter_ask_deed
-* deed{"deed": "rescuing"}
-    - slot{"deed": "rescuing"}
-    - action_create_deed
-    - slot{"action_return": true}
-    - utter_ask_universalizable
+    - utter_ask_option_universalizable
 * correct
-    - action_update_deed
+    - action_update_option
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* dontknow
     - utter_ask_consequences
 * consequence{"name": "Werner", "sentiment": "pos"}
     - slot{"name": "Werner"}
@@ -3392,20 +3001,12 @@
 * option
     - action_create_option
     - slot{"deed": null}
-    - slot{"option": 8}
     - slot{"action_return": true}
-    - utter_ask_deed
-* deed{"deed": "rescuing"}
-    - slot{"deed": "rescuing"}
-    - action_create_deed
-    - slot{"action_return": true}
-    - utter_ask_universalizable
+    - utter_ask_option_universalizable
 * correct
-    - action_update_deed
+    - action_update_option
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* deny
     - utter_ask_consequences
 * consequence{"name": "Werner", "sentiment": "neg"}
     - slot{"name": "Werner"}
@@ -3518,34 +3119,12 @@
 * option
     - action_create_option
     - slot{"deed": null}
-    - slot{"option": 4}
     - slot{"action_return": true}
-    - utter_ask_deed
-* deed
-    - action_create_deed
-    - slot{"deed": "Protecting his son"}
-    - slot{"action_return": true}
-    - utter_ask_universalizable
+    - utter_ask_option_universalizable
 * correct
-    - action_update_deed
+    - action_update_option
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* deed
-    - action_create_deed
-    - slot{"deed": "This would also mean lying to the police"}
-    - slot{"action_return": true}
-    - utter_ask_universalizable
-* wrong
-    - action_update_deed
-    - slot{"action_return": true}
-    - utter_ask_inherent_evil
-* affirm
-    - action_update_deed
-    - slot{"deed": null}
-    - slot{"action_return": true}
-    - utter_next_deed
-* deny
     - utter_ask_consequences
 * consequence{"name": "Carl", "deed": "lead to a life"}
     - slot{"name": "Carl"}
@@ -3596,13 +3175,12 @@
     - slot{"deed": "remain silent"}
     - action_create_option
     - slot{"deed": "remain silent"}
-    - slot{"option": 9}
     - slot{"action_return": true}
     - utter_ask_identified_deed
 * correct
     - action_create_deed
     - slot{"action_return": true}
-    - utter_ask_universalizable
+    - utter_ask_deed_universalizable
 * wrong
     - action_update_deed
     - slot{"action_return": true}
@@ -3611,8 +3189,6 @@
     - action_update_deed
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* dontknow
     - utter_ask_consequences
 * consequence{"name": "esther"}
     - slot{"name": "esther"}
@@ -3739,34 +3315,17 @@
 * option
     - action_create_option
     - slot{"deed": null}
-    - slot{"option": 6}
     - slot{"action_return": true}
-    - utter_ask_deed
-* deed
-    - action_create_deed
-    - slot{"deed": "Torturing"}
-    - slot{"action_return": true}
-    - utter_ask_universalizable
-* wrong
-    - action_update_deed
+    - utter_ask_option_universalizable
+* wrong{"name": "option"}
+    - slot{"name": "option"}
+    - action_update_option
     - slot{"action_return": true}
     - utter_ask_inherent_evil
 * affirm
-    - action_update_deed
+    - action_update_option
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* deed{"deed": "saving the lives"}
-    - slot{"deed": "saving the lives"}
-    - action_create_deed
-    - slot{"action_return": true}
-    - utter_ask_universalizable
-* correct
-    - action_update_deed
-    - slot{"deed": null}
-    - slot{"action_return": true}
-    - utter_next_deed
-* deny
     - utter_ask_consequences
 * consequence{"name": "the Saxons", "sentiment": "neg"}
     - slot{"name": "the Saxons"}
@@ -3821,34 +3380,12 @@
     - slot{"name": "Olga"}
     - action_create_option
     - slot{"deed": null}
-    - slot{"option": 12}
     - slot{"action_return": true}
-    - utter_ask_deed
-* deed
-    - action_create_deed
-    - slot{"deed": "Obeying the law"}
-    - slot{"action_return": true}
-    - utter_ask_universalizable
+    - utter_ask_option_universalizable
 * correct
-    - action_update_deed
+    - action_update_option
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* deed
-    - action_create_deed
-    - slot{"deed": "On the other hand it would mean letting many innocent people die"}
-    - slot{"action_return": true}
-    - utter_ask_universalizable
-* wrong
-    - action_update_deed
-    - slot{"action_return": true}
-    - utter_ask_inherent_evil
-* affirm
-    - action_update_deed
-    - slot{"deed": null}
-    - slot{"action_return": true}
-    - utter_next_deed
-* deny
     - utter_ask_consequences
 * consequence{"sentiment": "neg"}
     - slot{"sentiment": "neg"}
@@ -3914,24 +3451,17 @@
 * option
     - action_create_option
     - slot{"deed": null}
-    - slot{"option": 3}
     - slot{"action_return": true}
-    - utter_ask_deed
-* deed{"deed": "leaving behind the other passengers"}
-    - slot{"deed": "leaving behind the other passengers"}
-    - action_create_deed
-    - slot{"action_return": true}
-    - utter_ask_universalizable
-* wrong
-    - action_update_deed
+    - utter_ask_option_universalizable
+* wrong{"name": "option"}
+    - slot{"name": "option"}
+    - action_update_option
     - slot{"action_return": true}
     - utter_ask_inherent_evil
 * affirm
-    - action_update_deed
+    - action_update_option
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* deny
     - utter_ask_consequences
 * consequence{"name": "the passengers", "sentiment": "neu"}
     - slot{"name": "the passengers"}
@@ -3977,20 +3507,12 @@
 * option
     - action_create_option
     - slot{"deed": null}
-    - slot{"option": 7}
     - slot{"action_return": true}
-    - utter_ask_deed
-* deed
-    - action_create_deed
-    - slot{"deed": "Being loyal to people relying on him"}
-    - slot{"action_return": true}
-    - utter_ask_universalizable
+    - utter_ask_option_universalizable
 * correct
-    - action_update_deed
+    - action_update_option
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* deny
     - utter_ask_consequences
 * consequence{"name": "the passengers", "sentiment": "pos"}
     - slot{"name": "the passengers"}
@@ -4108,34 +3630,17 @@
 * option
     - action_create_option
     - slot{"deed": null}
-    - slot{"option": 5}
     - slot{"action_return": true}
-    - utter_ask_deed
-* deed{"deed": "killing"}
-    - slot{"deed": "killing"}
-    - action_create_deed
-    - slot{"action_return": true}
-    - utter_ask_universalizable
-* wrong
-    - action_update_deed
+    - utter_ask_option_universalizable
+* wrong{"name": "option"}
+    - slot{"name": "option"}
+    - action_update_option
     - slot{"action_return": true}
     - utter_ask_inherent_evil
 * affirm
-    - action_update_deed
+    - action_update_option
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* deed{"deed": "saving the rest of the people"}
-    - slot{"deed": "saving the rest of the people"}
-    - action_create_deed
-    - slot{"action_return": true}
-    - utter_ask_universalizable
-* correct
-    - action_update_deed
-    - slot{"deed": null}
-    - slot{"action_return": true}
-    - utter_next_deed
-* deny
     - utter_ask_consequences
 * consequence{"name": "the Palatines", "sentiment": "neg"}
     - slot{"name": "the Palatines"}
@@ -4179,10 +3684,17 @@
 * option
     - action_create_option
     - slot{"deed": null}
-    - slot{"option": 10}
     - slot{"action_return": true}
-    - utter_ask_deed
-* deny
+    - utter_ask_option_universalizable
+* wrong{"name": "option"}
+    - slot{"name": "option"}
+    - action_update_option
+    - slot{"action_return": true}
+    - utter_ask_inherent_evil
+* affirm
+    - action_update_option
+    - slot{"deed": null}
+    - slot{"action_return": true}
     - utter_ask_consequences
 * consequence{"stakeholder": "the passengers", "sentiment": "neg"}
     - slot{"sentiment": "neg"}
@@ -4298,34 +3810,17 @@
 * option
     - action_create_option
     - slot{"deed": null}
-    - slot{"option": 5}
     - slot{"action_return": true}
-    - utter_ask_deed
-* deed{"deed": "letting the child"}
-    - slot{"deed": "letting the child"}
-    - action_create_deed
-    - slot{"action_return": true}
-    - utter_ask_universalizable
-* wrong
-    - action_update_deed
+    - utter_ask_option_universalizable
+* wrong{"name": "option"}
+    - slot{"name": "option"}
+    - action_update_option
     - slot{"action_return": true}
     - utter_ask_inherent_evil
 * affirm
-    - action_update_deed
+    - action_update_option
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* deed{"deed": "saving"}
-    - slot{"deed": "saving"}
-    - action_create_deed
-    - slot{"action_return": true}
-    - utter_ask_universalizable
-* correct
-    - action_update_deed
-    - slot{"deed": null}
-    - slot{"action_return": true}
-    - utter_next_deed
-* deny
     - utter_ask_consequences
 * consequence
     - action_create_consequence
@@ -4378,20 +3873,12 @@
 * option
     - action_create_option
     - slot{"deed": null}
-    - slot{"option": 10}
     - slot{"action_return": true}
-    - utter_ask_deed
-* deed{"deed": "protecting"}
-    - slot{"deed": "protecting"}
-    - action_create_deed
-    - slot{"action_return": true}
-    - utter_ask_universalizable
+    - utter_ask_option_universalizable
 * correct
-    - action_update_deed
+    - action_update_option
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* deny
     - utter_ask_consequences
 * consequence{"sentiment": "pos"}
     - slot{"sentiment": "pos"}
@@ -4543,13 +4030,12 @@
     - slot{"deed": "kill the attackers"}
     - action_create_option
     - slot{"deed": "kill the attackers"}
-    - slot{"option": 4}
     - slot{"action_return": true}
     - utter_ask_identified_deed
 * correct
     - action_create_deed
     - slot{"action_return": true}
-    - utter_ask_universalizable
+    - utter_ask_deed_universalizable
 * wrong
     - action_update_deed
     - slot{"action_return": true}
@@ -4558,18 +4044,6 @@
     - action_update_deed
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* deed
-    - action_create_deed
-    - slot{"deed": "Saving people on the ground who are possibly threatened can be considered a moral action"}
-    - slot{"action_return": true}
-    - utter_ask_universalizable
-* correct
-    - action_update_deed
-    - slot{"deed": null}
-    - slot{"action_return": true}
-    - utter_next_deed
-* deny
     - utter_ask_consequences
 * consequence{"name": "the Palatines", "sentiment": "neg"}
     - slot{"name": "the Palatines"}
@@ -4594,10 +4068,12 @@
 * option
     - action_create_option
     - slot{"deed": null}
-    - slot{"option": 8}
     - slot{"action_return": true}
-    - utter_ask_deed
-* deny
+    - utter_ask_option_universalizable
+* correct
+    - action_update_option
+    - slot{"deed": null}
+    - slot{"action_return": true}
     - utter_ask_consequences
 * consequence
     - action_create_consequence
@@ -4747,13 +4223,12 @@
     - slot{"deed": "hand over the antidote"}
     - action_create_option
     - slot{"deed": "hand over the antidote"}
-    - slot{"option": 3}
     - slot{"action_return": true}
     - utter_ask_identified_deed
 * correct
     - action_create_deed
     - slot{"action_return": true}
-    - utter_ask_universalizable
+    - utter_ask_deed_universalizable
 * wrong
     - action_update_deed
     - slot{"action_return": true}
@@ -4762,8 +4237,6 @@
     - action_update_deed
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* dontknow
     - utter_ask_consequences
 * consequence{"sentiment": "pos"}
     - slot{"sentiment": "pos"}
@@ -4806,13 +4279,12 @@
     - slot{"deed": "refuse to give the antidote"}
     - action_create_option
     - slot{"deed": "refuse to give the antidote"}
-    - slot{"option": 7}
     - slot{"action_return": true}
     - utter_ask_identified_deed
 * correct
     - action_create_deed
     - slot{"action_return": true}
-    - utter_ask_universalizable
+    - utter_ask_deed_universalizable
 * wrong
     - action_update_deed
     - slot{"action_return": true}
@@ -4821,8 +4293,6 @@
     - action_update_deed
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* deny
     - utter_ask_consequences
 * consequence{"name": "jane"}
     - slot{"name": "jane"}
@@ -4920,34 +4390,17 @@
 * option{"quantity": "5"}
     - action_create_option
     - slot{"deed": null}
-    - slot{"option": 4}
     - slot{"action_return": true}
-    - utter_ask_deed
-* deed{"deed": "letting glenn die"}
-    - slot{"deed": "letting glenn die"}
-    - action_create_deed
-    - slot{"action_return": true}
-    - utter_ask_universalizable
-* wrong
-    - action_update_deed
+    - utter_ask_option_universalizable
+* wrong{"name": "option"}
+    - slot{"name": "option"}
+    - action_update_option
     - slot{"action_return": true}
     - utter_ask_inherent_evil
 * affirm
-    - action_update_deed
+    - action_update_option
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* deed{"deed": "saving the lives", "quantity": "5"}
-    - slot{"deed": "saving the lives"}
-    - action_create_deed
-    - slot{"action_return": true}
-    - utter_ask_universalizable
-* correct
-    - action_update_deed
-    - slot{"deed": null}
-    - slot{"action_return": true}
-    - utter_next_deed
-* deny
     - utter_ask_consequences
 * consequence{"sentiment": "pos"}
     - slot{"sentiment": "pos"}
@@ -4992,10 +4445,17 @@
 * option
     - action_create_option
     - slot{"deed": null}
-    - slot{"option": 9}
     - slot{"action_return": true}
-    - utter_ask_deed
-* dontknow
+    - utter_ask_option_universalizable
+* wrong{"name": "option"}
+    - slot{"name": "option"}
+    - action_update_option
+    - slot{"action_return": true}
+    - utter_ask_inherent_evil
+* affirm
+    - action_update_option
+    - slot{"deed": null}
+    - slot{"action_return": true}
     - utter_ask_consequences
 * consequence{"sentiment": "neu"}
     - slot{"sentiment": "neu"}

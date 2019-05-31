@@ -117,6 +117,15 @@ class CreateStakeholder(Action):
             quantity = nlu.get_quantity_from_sources(sources)
             if not quantity == -1:
                 sh['amount'] = int(quantity)
+        else:
+            # Misclassified intent - try to retrieve a quantity, else assume a single person
+            sources = [ next(tracker.get_latest_entity_values('stakeholder'), None),
+                        next(tracker.get_latest_entity_values('quantity'), -1) ]
+            quantity = nlu.get_quantity_from_sources(sources)
+            if not quantity == -1:
+                sh['amount'] = int(quantity)
+            else:
+                sh['amount'] = 1
 
         # Is a moral status identified?
         moralstatus = next(tracker.get_latest_entity_values('moralstatus'), None)
@@ -137,7 +146,7 @@ class CreateStakeholder(Action):
         sh.memorize(tracker.sender_id) 
 
         events.append(SlotSet("amount_stakeholders", mind.get_num_stakeholders(tracker.sender_id)))
-        events.append(SlotSet("action_return", sh['amount'] != -1))
+        events.append(SlotSet("action_return", sh['amount'] != -1.1))
 
         return events
 
@@ -222,7 +231,8 @@ class UpdateStakeholder(Action):
 
             # Intent: name or correct
             elif (tracker.latest_message['intent'].get('name') == 'name') \
-                or (tracker.latest_message['intent'].get('name') == 'correct'):
+                or (tracker.latest_message['intent'].get('name') == 'correct') \
+                or (tracker.latest_message['intent'].get('name') == 'stakeholder'):
 
                 if tracker.latest_message['intent'].get('name') == 'correct':
                     name = tracker.get_slot('name')
@@ -285,32 +295,6 @@ class UpdateStakeholder(Action):
                 dispatcher.utter_template('utter_got_it', tracker)
                 action_return = True
 
-            # Intent: stakeholder
-            # Caution: This is assumed to be a misunderstanding by the bot, when he asked for a name but recognized the users
-            # response as 'stakeholder'. The same stepts are performed as for intent 'name'.
-            # TODO: Refactor this code into a method called for each intent that uses it, given this implementation works as intended
-            elif (tracker.latest_message['intent'].get('name') == 'stakeholder'):
-                name = next(tracker.get_latest_entity_values('name'), None)
-                if name == None:
-                    name = next(tracker.get_latest_entity_values('stakeholder'), None)
-
-                # Assure that the name is not already assigned
-                if not mind.get_stakeholder_by_name(tracker.sender_id, name) == None:
-                    name = None
-
-                if not name == None:
-                    sh.set_name(s_id=tracker.sender_id, name=name).memorize(tracker.sender_id)
-                    dispatcher.utter_message('Alright, from now on I will use the name "{}"!'.format(sh['name']))
-                else:
-                    sh.set_name(s_id=tracker.sender_id).memorize(tracker.sender_id)
-                    dispatcher.utter_message('I am not sure if I understood the name correctly. To avoid misunderstandings I will just use the name "{}"!'.format(sh['name']))
-
-                if (sh['decider'] == True):
-                    events.append(SlotSet('decider', sh['name']))
-                events.append(SlotSet('name', sh['name']))
-
-                action_return = True
-
         except (AttributeError, TypeError) as e:
             logger.warning('Exception updating Stakeholder: ' + str(e))
             events.append(SlotSet('name', None))
@@ -337,8 +321,7 @@ class CreateOption(Action):
     Returns:
     * action_return = True if an option was successfully created
     * action_return = False if no option was created
-    * option = ID of the created option
-    * deeds = list of possible deeds associated with the option to be commented by the user
+    * deed = next deed to be commented by the user
     """
     def name(self):
         return 'action_create_option'
@@ -351,18 +334,14 @@ class CreateOption(Action):
         else:
             label = 'Option {}'.format(mind.get_num_options(tracker.sender_id) + 1)
 
-        opt = Option({
-            "deeds": deeds,
-            "label": label
-        })
-        option_id = opt.memorize(tracker.sender_id).doc_id
-
-        if len(deeds) > 0:
+        Option({ "deeds_tmp": deeds, "label": label }).memorize(tracker.sender_id)
+        
+        try:
             current_deed = deeds[0]
-        else:
+        except IndexError:
             current_deed = None
 
-        return [SlotSet("deed", current_deed), SlotSet("option", option_id), SlotSet("action_return", True)]
+        return [SlotSet("deed", current_deed), SlotSet("action_return", True)]
 
 
 class UpdateOption(Action):
@@ -370,7 +349,10 @@ class UpdateOption(Action):
     Update an existing Option
 
     Triggered by:
-    * Intent 'wrong' after 'utter_ask_deed'
+    * Intent 'correct' after 'utter_ask_option_universalizable'
+    * Intent 'wrong' after 'utter_ask_option_universalizable' OR 'utter_ask_identified_deed' (check if relevant or not)
+    * Intent 'affirm' after 'utter_ask_option_inherent_evil'
+    * Intent 'deny' after 'utter_ask_option_inherent_evil'
 
     Required slots: 
     * deed == deed the bot is currently talking about
@@ -388,20 +370,50 @@ class UpdateOption(Action):
         events = []
 
         try:
-            option = mind.by_id(tracker.sender_id, int(tracker.get_slot('option')))
+            option = mind.get_recent_option(tracker.sender_id)
 
-            if (tracker.latest_message['intent'].get('name') == 'wrong'):
-                option['deeds'].remove(tracker.get_slot('deed'))
-                option.memorize(tracker.sender_id)
-
-                if len(option['deeds']) > 0:
-                    current_deed = option['deeds'][0]
-                else:
-                    current_deed = None
-                    del option['deeds']
-
+            # Update universalizability and inherent_evil
+            if (tracker.latest_message['intent'].get('name') == 'correct'):
+                option['universalizable'] = True
+                option['inherent_evil'] = False
                 action_return = True
-                events.append(SlotSet("deed", current_deed))
+            
+            elif (tracker.latest_message['intent'].get('name') == 'wrong'):
+                # The 'name' entity is abused in this case
+                deed_or_option = next(tracker.get_latest_entity_values('name'), None)
+
+                if deed_or_option == 'deed':
+                    option['deeds_tmp'].remove(tracker.get_slot('deed'))
+                    
+                    if len(option['deeds_tmp']) > 0:
+                        current_deed = option['deeds_tmp'][0]
+                    else:
+                        current_deed = None
+                        del option['deeds_tmp']
+
+                    action_return = True
+                    events.append(SlotSet("deed", current_deed))
+                elif deed_or_option == 'option':
+                    option['universalizable'] = False
+                    action_return = True
+
+            elif (tracker.latest_message['intent'].get('name') == 'affirm'):
+                option['inherent_evil'] = True
+                action_return = True
+                
+            elif (tracker.latest_message['intent'].get('name') == 'deny'):
+                # The 'name' entity is abused in this case once again
+                reason = next(tracker.get_latest_entity_values('name'), None)
+                if reason == 'too_specific':
+                    option['no_rule_reason'] = 'a more general formulated rule could apply in this case!'
+                elif reason == 'needs_conditions':
+                    option['no_rule_reason'] = 'a general rule could be applied under certain conditions!'
+
+                option['inherent_evil'] = False
+                action_return = True
+            
+            if action_return == True:
+                option.memorize(tracker.sender_id)
                 dispatcher.utter_template('utter_got_it', tracker)
         except (AttributeError, TypeError) as e:
             logger.warning('Exception updating Option: ' + str(e))
@@ -450,7 +462,8 @@ class CreateDeed(Action):
             label = tracker.get_slot('deed')
 
         if not label == None:
-            deed = Deed({"label": label, "option": tracker.get_slot('option')}).memorize(tracker.sender_id)
+            recent_option = mind.get_recent_option(tracker.sender_id)
+            Deed({"label": label, "option": recent_option.doc_id}).memorize(tracker.sender_id)
             action_return = True
         else:
             dispatcher.utter_template('utter_not_sure', tracker)
@@ -464,10 +477,10 @@ class UpdateDeed(Action):
     Update an existing Deed
 
     Triggered by:
-    * Intent 'correct' after 'utter_ask_universalizable'
-    * Intent 'wrong' after 'utter_ask_universalizable'
-    * Intent 'affirm' after 'utter_ask_inherent_evil'
-    * Intent 'deny' after 'utter_ask_inherent_evil'
+    * Intent 'correct' after 'utter_ask_deed_universalizable'
+    * Intent 'wrong' after 'utter_ask_deed_universalizable'
+    * Intent 'affirm' after 'utter_ask_deed_inherent_evil'
+    * Intent 'deny' after 'utter_ask_deed_inherent_evil'
 
     Required slots: /
 
@@ -514,17 +527,17 @@ class UpdateDeed(Action):
 
             # Remove current and select next deed from list, if available
             if ('universalizable' in deed and 'inherent_evil' in deed):
-                option = mind.by_id(tracker.sender_id, int(tracker.get_slot('option')))
+                option = mind.get_recent_option(tracker.sender_id)
 
-                if deed['label'] in option['deeds']:
-                    option['deeds'].remove(deed['label'])
+                if deed['label'] in option['deeds_tmp']:
+                    option['deeds_tmp'].remove(deed['label'])
                     option.memorize(tracker.sender_id)
 
-                if len(option['deeds']) > 0:
-                    events.append(SlotSet("deed", option['deeds'][0]))
+                if len(option['deeds_tmp']) > 0:
+                    events.append(SlotSet("deed", option['deeds_tmp'][0]))
                 else:
                     events.append(SlotSet("deed", None))
-                    del option['deeds']
+                    del option['deeds_tmp']
 
         except (AttributeError, TypeError) as e:
             logger.warning('Exception updating deed: ' + str(e))
@@ -547,7 +560,6 @@ class CreateConsequence(Action):
     * Intent 'consequence'
 
     Required slots:
-    * option == the ID of the option the user is currently talking about
     * sentiment == sentiment of the last sentence (pos/neu/neg)
 
     Returns:
@@ -560,7 +572,7 @@ class CreateConsequence(Action):
     def run(self, dispatcher, tracker, domain):
         events = []
         action_return = False
-        option = int(tracker.get_slot('option'))
+        option = mind.get_recent_option(tracker.sender_id)
 
         if tracker.get_slot('sentiment') == 'pos':
             impact = 1
@@ -594,7 +606,7 @@ class CreateConsequence(Action):
 
             if len(aff_stkhs) > 0:
                 consequence = Consequence({
-                    "option": option, 
+                    "option": option.doc_id, 
                     "affected_stakeholders": aff_stkhs, 
                     "impact": impact,
                     "probability": 1
@@ -639,7 +651,6 @@ class UpdateConsequence(Action):
         intent = tracker.latest_message['intent'].get('name')
 
         try:
-            #consequence = mind.get_consequence(tracker.sender_id, tracker.get_slot('name'), tracker.get_slot('option'))
             consequence = mind.get_recent_consequence(tracker.sender_id)
             old_impact = consequence['impact']
 
@@ -740,7 +751,7 @@ class ActionRestart(Action):
         return 'action_restart'
 
     def run(self, dispatcher, tracker, domain):
-        mind.amnesia()
+        mind.amnesia(tracker.sender_id)
         return [Restarted(), FollowupAction("action_intro")]
        
 
@@ -814,13 +825,15 @@ class ChooseDecider(Action):
         message = "Out of these persons, whose moral decision do you want to analyse?"  # On request (Google table entry #5)
         buttons = []
 
-        try:
-            for sh in mind.get_stakeholders(tracker.sender_id):
+        
+        for sh in mind.get_stakeholders(tracker.sender_id):
+            try:
                 buttons.append({ 'title': sh['name'], 'payload': '/decider{"name": "' + sh['name'] + '"}'})
-            buttons.append({ "title": "Some other person", "payload": '/decider' })
-            dispatcher.utter_button_message(message, buttons)
-        except (KeyError, AttributeError):
-            pass
+            except (KeyError, AttributeError):
+                logger.warning('Exception creating buttons for stakeholders, it appears that some stakeholder does not have a name')
+                dispatcher.utter_template('utter_not_sure', tracker)
+        buttons.append({ "title": "Some other person", "payload": '/decider' })
+        dispatcher.utter_button_message(message, buttons)
 
         return []
 

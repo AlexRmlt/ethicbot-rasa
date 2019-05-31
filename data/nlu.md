@@ -11,6 +11,13 @@
 - yes
 
 ## intent:consequence
+- That would imply leaving [the larger group](stakeholder) behind
+- [Cleopatra](name) will suffer because she is ill
+- [Mike](name) will loose his money
+- But the consequences would be that [the Bavarians](name) are rich
+- [Mike](name) gets back his money!
+- [the Bavarians](name) loose the money, but could get a reward from [Mike](name)
+- for [the Bavarians](name) and for [Mike](name)
 - If people find out he murdered her the consequences would be severe.
 - If he makes it look like she died on natural causes it wouldn't have any consequences at all for him.
 - If he doesn't kill her, it only has an impact on [the children](stakeholder).
@@ -236,10 +243,16 @@
 - [Thomas](name) will get money for the murder
 - [Thomas](name) could get trouble
 - [Thomas](name) will get into trouble
-- [Peter](name:peter) will feel bad
-- [Yves](name:yves) will be dead
-- [Yves](name:yves) will be killed
-- [Christian](name:christian) will suffer, too
+- [Peter](name:Peter) will feel bad
+- [Yves](name:Yves) will be dead
+- [Yves](name:Yves) will be killed
+- [Christian](name:Christian) will suffer, too
+- For [Mike](name:Mike) and [Alex](name)
+- [Mike](name:Mike) gets back the money he lost
+- The consequence would be that [Alex](name:Alex) would become rich
+- [Cleopatra](name:Cleopatra) would then be dead
+- This would make [Thomas](name) feel really bad
+- This would mean great suffering for [Cleopatra](name:cleopatra) due to her illness
 
 ## intent:correct
 - That is correct
@@ -299,92 +312,12 @@
 - There is [a robot](stakeholder) who must decide to take either path A or path B to attempt to rescue persons after a natural disaster
 - [A robot](stakeholder) must decide to take either Path A or Path B to attempt to rescue persons after a natural disaster.
 - [A robot](stakeholder) must decide to take either Path A or Path B to attempt to rescue persons after a natural disaster.
-- A captain is on an overcrowded lifeboat and has to decide if he forces some people to go over board in order to save the rest
-
-## intent:deed
-- [murder](deed)
-- [being honest](deed)
-- [stealing](deed)
-- to [steal](deed)
-- [steal](deed)
-- Yes, [stealing](deed)
-- [refuse to steal](deed)
-- [Saving the guards life](deed)
-- It would mean [tolerating her fraud attempt](deed)
-- [Reporting a crime](deed) would be a moral action
-- [Lying](deed) to Katharina
-- The option implies most propably [saving the patients life](deed)
-- I would say, [trying to prevent the patient from losing a limb](deed)
-- [Refusing to prevent the limb loss](deed) can be considered an action of moral relevance
-- [Accepting ones decision](deed) is also a moral act
-- The act of [rescuing people](deed)
-- Also, [leaving the group with fewer persons behind](deed)
-- That would imply [leaving the larger group behind](deed)
-- [Saving the other group](deed)
-- [Rescuing ten people](deed)
-- [Leaving the other group behind](deed).
-- It would mean crushing [Achmed](name) and [killing](deed) him
-- [Rescuing himself](deed) and his crewmembers
-- It would also mean [saving the rest of the crew](deed)
-- [Saving Jörgs live](deed) would be a moral action
-- [Killing](deed) [Nathan](name) by pushing him off the bridge
-- [Saving the lives](deed:saving the lives) of the five workmen[](quantity:5)
-- This would imply actively [killing](deed) [Inga](name).
-- It could also mean [saving the lives](deed) of many people.
-- Refraining from [abusing](deed) the patient-doctor mutual trust would be a morally relevant action
-- One must also consider the action of [not saving many people](deed) from the threat of being infected with HIV.
-- [Torturing](deed) his fellow hostage
-- [Saving the eight children](deed) is also implied by this option
-- It would mean [refraining from saving](deed) himself and the children
-- This implies [killing](deed) a person
-- It also means [helping](deed) [Samuels](name) family
-- It would mean [killing](deed) her baby because the heat of the furnace would overheat the child.
-- There is also the action of [saving her and the others life](deed).
-- It would mean [saving the lives](deed) of his crewmembers and himself
-- It would also mean [killing](deed) [Jörg](name) because his body would get crushed by the emergency access hatch.
-- The option implies [letting his crew and himself die](deed) by lack of oxygen.
-- It would imply [killing](deed) [Katharina](name).
-- It would also mean [saving the lives](deed) of the Palatines.
-- Also it would imply [letting the workmen die](deed).
-- [Letting the crewmember die](deed) is for sure an action of moral relevance.
-- [Saving the rest of her crews lives](deed)
-- [Saving the life](deed:saving the life) of her fellow crewmember
-- Also [saving his life](deed) and the lives of the other passengers.
-- [Saving the old peoples lives](deed).
-- It also implies [bringing the lives of all passengers in the lifeboat in danger](deed).
-- It means [avoiding the death](deed) of the [four](quantity) patients.
-- It also means [killing](deed) the single person in the other room.
-- [Killing](deed:killing) her own son
-- [Saving an innocent persons life](deed).
-- It would mean [letting an innocent person get killed](deed)
-- [Saving her life](deed:saving her life)
-- [Ignoring](deed) [Michelle](name) could be a morally condemnable action as she needs also medical attention
-- [Saving the life](deed:saving the life) of [Michelle](name)
-- [Violating the companies policy](deed) of information security
-- [Complying to the companies laws](deed)
-- [Hiding information](deed) from a good friend
-- Using the dynamite means [killing](deed) the pregnant woman
-- [Rescuing](deed:rescuing) her daughter from drowning
-- [Rescuing](deed:rescuing) the more threatened child
-- [Protecting](deed) his son
-- This would also mean [lying](deed) to the police
-- [Torturing](deed)
-- [Saving the lives](deed:saving the lives) of many innocent people
-- [Obeying the law](deed)
-- On the other hand it would mean [letting many innocent people die](deed)
-- It would mean [leaving behind the other passengers](deed)
-- [Being loyal](deed) to people relying on him
-- It would essentially mean [killing](deed) this people
-- It also implies [saving the rest of the people](deed) on the boat
-- [Letting the child gettin tormented](deed) by the alien
-- [Saving humanity](deed)
-- [Protecting](deed:protecting) an innocent child from great suffering
-- [Saving people](deed) on the ground who are possibly threatened can be considered a moral action
-- It means [letting Glenn die](deed:letting glenn die)
-- It also means [saving the lives](deed) of [5](quantity) people
-- [lying](deed)
+- [A captain](stakeholder) is on an overcrowded lifeboat and has to decide if he forces some people to go over board in order to save the rest
 
 ## intent:deny
+- no, thank you, this should be all
+- no, I have already named them all
+- It is all
 - /deny
 - I think that's all
 - No, fine, this was all
@@ -642,6 +575,14 @@
 - These are the only two. He must decide.
 - no
 - no, this is all
+- no
+- theres none
+- no
+- there is none
+- no
+- no one else is affected
+- thats all
+- These are the only options available
 
 ## intent:deontology
 - /deontology
@@ -784,7 +725,6 @@
 - Hi!
 - Hi
 - Hi
-- hi
 
 ## intent:moralquestion
 - Should you take action in killing a person if it can prevent the death of a larger number of people?
@@ -798,6 +738,7 @@
 - /moralstatus{"moralstatus": "machine"}
 
 ## intent:name
+- [Mike](name)
 - The dog's name is [Cleopatra](name)
 - Only his aunt, [Burgl](name)
 - The name of the guy who wants to help the children is [Anton](name).
@@ -875,6 +816,8 @@
 - [Victim](stakeholder:victim) is the name
 - The name is Happy
 - Call him [victim](stakeholder)
+- My name is [Alex](name:Alex)
+- [Mike](name:Mike)
 
 ## intent:negative
 - they are rather negative
@@ -918,6 +861,7 @@
 - The effects would be more negative
 - Extremely negative
 - the are rather negative
+- totally negative
 
 ## intent:neutral
 - It would be ok, neither positive nor negative consequences
@@ -927,11 +871,96 @@
 - It would not matter that much actually
 
 ## intent:option
+- [murder](deed)
+- [being honest](deed)
+- [stealing](deed)
+- to [steal](deed)
+- [steal](deed)
+- Yes, [stealing](deed)
+- [refuse to steal](deed)
+- [Saving the guards life](deed)
+- It would mean [tolerating her fraud attempt](deed)
+- [Reporting a crime](deed) would be a moral action
+- [Lying](deed) to Katharina
+- The option implies most propably [saving the patients life](deed)
+- I would say, [trying to prevent the patient from losing a limb](deed)
+- [Refusing to prevent the limb loss](deed) can be considered an option
+- [Accepting ones decision](deed) is also a possibility
+- The act of [rescuing people](deed)
+- Also, [leaving the group with fewer persons behind](deed)
+- [Saving the other group](deed)
+- [Rescuing ten people](deed)
+- [Leaving the other group behind](deed).
+- It would mean crushing [Achmed](name) and [killing](deed) him
+- [Rescuing himself](deed) and his crewmembers
+- It would also be possible to [save the rest of the crew](deed)
+- [Saving Jörgs live](deed) would be an option
+- [Killing](deed) [Nathan](name) by pushing him off the bridge
+- [Saving the lives](deed:saving the lives) of [the five workmen](stakeholder)
+- An option would be actively [killing](deed) [Inga](name).
+- It could also be a possibility to [save the lives](deed) of many people.
+- Refraining from [abusing](deed) the patient-doctor mutual trust
+- One must also consider the option of [not saving many people](deed) from the threat of being infected with HIV.
+- [Torturing](deed) his fellow hostage
+- [Saving the eight children](deed) is also an option
+- [refraining from saving](deed) himself and [the children](stakeholder)
+- [killing](deed) a person
+- [helping](deed) [Samuels](name) family
+- [killing](deed) her baby because the heat of the furnace would overheat the child.
+- There is also the option of [saving her and the others life](deed).
+- [saving the lives](deed) of his crewmembers and himself
+- [killing](deed) [Jörg](name) because his body would get crushed by the emergency access hatch.
+- The option of [letting his crew and himself die](deed) by lack of oxygen.
+- [killing](deed) [Katharina](name).
+- [saving the lives](deed) of the [Palatines](name).
+- Also it would be possible [letting the workmen die](deed).
+- [Letting the crewmember die](deed) is for sure an option
+- [Saving the rest of her crews lives](deed)
+- [Saving the life](deed:saving the life) of her fellow crewmember
+- Also [saving his life](deed) and the lives of the other passengers.
+- [Saving the old peoples lives](deed).
+- [bringing the lives of all passengers in the lifeboat in danger](deed).
+- [avoiding the death](deed) of the [four](quantity) patients.
+- [killing](deed) the single person in the other room.
+- [Killing](deed:killing) her own son
+- [Saving an innocent persons life](deed).
+- [letting an innocent person get killed](deed)
+- [Saving her life](deed:saving her life)
+- [Ignoring](deed) [Michelle](name) could be a morally condemnable option as she needs also medical attention
+- [Saving the life](deed:saving the life) of [Michelle](name)
+- [Violating the companies policy](deed) of information security
+- [Complying to the companies laws](deed)
+- [Hiding information](deed) from a good friend
+- Using the dynamite means [killing](deed) the pregnant woman
+- [Rescuing](deed:rescuing) her daughter from drowning
+- [Rescuing](deed:rescuing) the more threatened child
+- [Protecting](deed) his son
+- [lying](deed) to the police
+- [Torturing](deed)
+- [Saving the lives](deed:saving the lives) of many innocent people
+- [Obeying the law](deed)
+- [letting many innocent people die](deed)
+- [leaving behind the other passengers](deed)
+- [Being loyal](deed) to people relying on him
+- [killing](deed) this people
+- [saving the rest of the people](deed) on the boat
+- [Letting the child gettin tormented](deed) by the alien
+- [Saving humanity](deed)
+- [Protecting](deed:protecting) an innocent child from great suffering
+- [Saving people](deed) on the ground who are possibly threatened can be considered a moral action
+- [letting Glenn die](deed:letting glenn die)
+- [saving the lives](deed) of [5](quantity) people
+- [lying](deed)
+- [Thomas](name) can [kill](deed) [Cloeptra](name). This is what [Dirk](name) wants him to do
+- [The Bavarians](name) [keep the money](deed)
+- They can [keep the money](deed)
+- the alternativ option is to [return the purse](deed) to the owner Mike
+- [Keep the found purse](deed)
 - [Anton](name) could also [see whether there's anything he would be able to do]() for the children without his aunts money
 - A morally valid action for [Anton](name) would be to [try and persuade his aunt](deed) to [help the children](deed) with her money while she's still alive
 - If [Anton](name) [killed](deed) Burgl now he would get her money instantly
 - Yes, we can [allow Yves to continue living](deed)
-- Peter was asked by Christian to [kill](deed) his dog.
+- [Peter](name) was asked by Christian to [kill](deed) his dog.
 - Yes, [Thomas](name) can [refuse to commit the murder](deed)
 - He can [kill](deed) someone
 - Yes, [Thomas](name) was asked by [Dirk](name) to [kill](deed) someone. This is the other option
@@ -1050,29 +1079,34 @@
 - Otherwise he could [keep everyone on board](deed)
 - He could [hand over the child](deed) for the alien to [torture](deed) it
 - Another option would be [not to hand over the child](deed) to alien
-- It would be an option [to damage the ventilation system](deed) causing poisonous fumes to fill the cockpit in order to [kill the attackers](deed)
-- She could [not take any action](deed) and hope that the attackers don't harm any uninvolved persons
+- It would be an option [to damage the ventilation system](deed) causing poisonous fumes to [fill the cockpit](deed) in order to [kill the attackers](deed)
+- She could [not take any action](deed) and [hope](deed) that the attackers don't harm any uninvolved persons
 - She could [hand over the antidote](deed) to her husband to [save him](deed)
 - She could also [refuse to give the antidote](deed) to her husband and [let him die](deed)
 - He could [stop giving medicine](deed) to Glenn in order to [take his organs](deed) for the [five](quantity:5) patients
 - He could also [continue giving medication](deed) to Glenn
-- To continue his life as before
+- To [continue his life](deed) as before
 - yes. He can [kill](deed) someone
 - He can [kill](deed) someone
 - Yes, [Thomas](name) can [refuse to commit the murder](deed)
 - [Peter](name) was asked by [Christian](name) to [kill](deed) his dog.
 - Yes, we can [allow Yves to continue living](deed:allow yves to continue living)
+- [Keep the purse](deed:keep the purse) he found on the street
+- He can [keep the money](deed)
+- [Dirk](name) wants [Thomas](name) to [kill](deed) [Cleopatra](name:Cleopatra), and he could [do that](deed).
+- [Thomas](name) can also [refuse to kill the dog](deed) and [let her live](deed)
 
 ## intent:positive
+- It would be positive to keep the money
 - That would be positive for him
 - positive
 - This would be very positive
-- For [the Swabians](name) this would be rather positive
+- For the [Swabians](name) this would be rather positive
 - This would be absolutely positive for [the five people](stakeholder)
 - For them it would be really good
 - This would be good
 - That would be very positive for him
-- For [the Rhinelanders](name) this would be very positive
+- For the [Rhinelanders](name) this would be very positive
 - No, it would be absolutely good
 - That would be very positive for [Daniel](name)
 - That would be positive for them
@@ -1109,6 +1143,8 @@
 - positive of course
 - I would consider them positive
 - The effects would be extremely positive
+- more positive
+- thats positive for [mike](name)
 
 ## intent:quantity
 - It's not a group, only [one](quantity) person
@@ -1331,6 +1367,15 @@
 - [10](quantity)
 - [3](quantity)
 - [2](quantity)
+- [8](quantity)
+- [4](quantity)
+- [8](quantity)
+- [5](quantity)
+- [5](quantity)
+- [10](quantity)
+- [6](quantity)
+- [60](quantity)
+- [9](quantity)
 
 ## intent:smalltalk
 - Just being nice
@@ -1393,6 +1438,11 @@
 - can we chat
 
 ## intent:stakeholder
+- [The owner](stakeholder) of the purse
+- Yes, there is [Cleopatra](name), [the dog](stakeholder)
+- Yes, there is also [Thomas](name), his friend
+- [Thomas](name) has a friend named [Dirk](name)
+- [I](stakeholder) have found a purse
 - Then there is [a dog](stakeholder) called [Grisu](name)
 - There is also his friend [Dirk](name)
 - Yes, there is [the dog](stakeholder).
@@ -1609,6 +1659,11 @@
 - There is [Thomas](name)
 - There is [Dirk](name) as well who belongs to the sicilian mafia
 - There is [the victim](stakeholder) of the crime as well
+- [I](stakeholder) have found a purse
+- [The owner](stakeholder:the owner) of the purse
+- [Thomas](name) has a friend whose name is [Dirk](name)
+- There is also his friend whose name is [Thomas](name)
+- Also there is [a dog](stakeholder) named [Cleopatra](name:Cleopatra)
 
 ## intent:stakeholdergroup
 - First, there is [a group of people](stakeholder) standing on the tracks
@@ -1931,20 +1986,22 @@
 ## synonym:a third person
 - A third person
 
+## synonym:Alex
+- alex
+- {"name": "alex"}
+
 ## synonym:allow yves to continue living
 - allow Yves to continue living
 
 ## synonym:an Overseer
 - An overseer
 
-## synonym:animal
-- {"moralstatus": "animal"}
 
 ## synonym:another person
 - Another person
 
-## synonym:christian
-- Christian
+## synonym:Christian
+- christian
 
 ## synonym:five people
 - Five people
@@ -1958,11 +2015,11 @@
 ## synonym:four of her patients
 - Four of her patients
 
-## synonym:happy
-- Happy
+## synonym:Happy
+- happy
 
-## synonym:human
-- {"moralstatus": "human"}
+## synonym:keep the purse
+- Keep the purse
 
 ## synonym:killing
 - Killing
@@ -1973,11 +2030,11 @@
 ## synonym:letting the child
 - Letting the child
 
-## synonym:machine
-- {"moralstatus": "machine"}
-
 ## synonym:many people
 - Many people
+
+## synonym:Mike
+- mike
 
 ## synonym:one other person
 - One other person
@@ -1985,11 +2042,8 @@
 ## synonym:one person
 - One person
 
-## synonym:other
-- {"moralstatus": "other"}
-
-## synonym:peter
-- Peter
+## synonym:Peter
+- peter
 
 ## synonym:protecting
 - Protecting
@@ -2040,6 +2094,9 @@
 ## synonym:the child
 - {"name": "the child"}
 
+## synonym:the consequence
+- The consequence
+
 ## synonym:the first person
 - The first person
 
@@ -2057,6 +2114,9 @@
 
 ## synonym:the overseer
 - The overseer
+
+## synonym:the owner
+- The owner
 
 ## synonym:the passengers
 - The passengers
@@ -2089,5 +2149,5 @@
 ## synonym:we
 - We
 
-## synonym:yves
-- Yves
+## synonym:Yves
+- yves

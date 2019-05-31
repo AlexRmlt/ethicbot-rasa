@@ -16,7 +16,7 @@ policies:
     max_history: 3
   - name: KerasPolicy
     epochs: 200
-    max_history: 10
+    max_history: 9
   - name: MappingPolicy
   - name: TwoStageFallbackPolicy
     nlu_threshold: 0.3

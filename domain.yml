@@ -1,7 +1,6 @@
 %YAML 1.1
 ---
 actions:
-- action_restart
 - action_check_identified_name
 - action_choose_affected_stakeholder
 - action_choose_decider
@@ -14,6 +13,7 @@ actions:
 - action_evaluation_utilitarism
 - action_handle_smalltalk
 - action_intro
+- action_restart
 - action_update_consequence
 - action_update_context
 - action_update_deed
@@ -23,6 +23,7 @@ actions:
 - utter_ask_consequence_probability
 - utter_ask_consequences
 - utter_ask_deed
+- utter_ask_deed_universalizable
 - utter_ask_guess_quantity
 - utter_ask_identified_deed
 - utter_ask_identified_moralstatus
@@ -38,10 +39,10 @@ actions:
 - utter_ask_moralstatus_weight
 - utter_ask_name_plural
 - utter_ask_name_singular
+- utter_ask_option_universalizable
 - utter_ask_options
 - utter_ask_quantity
 - utter_ask_stakeholders
-- utter_ask_universalizable
 - utter_confirm_decider
 - utter_confirm_stakeholders
 - utter_goodbye
@@ -70,26 +71,25 @@ entities:
 - sentiment
 - stakeholder
 intents:
-- deny
+- quantity
+- option
 - greeting
+- utilitarism
+- deontology
+- deny
+- affirm
 - decider
-- name
 - correct
+- consequence
+- negative
+- wrong
 - stakeholder
 - moralstatus
-- wrong
-- consequence
-- quantity
-- affirm
-- option
-- negative
-- deed
+- positive
+- name
 - stakeholdergroup
 - neutral
 - dontknow
-- utilitarism
-- deontology
-- positive
 - moralquestion
 - goodbye
 - thanks
@@ -111,8 +111,6 @@ slots:
     - animal
     - other
   name:
-    type: text
-  option:
     type: text
   sentiment:
     type: categorical
@@ -152,8 +150,9 @@ templates:
   - text: How high would you estimate the likelihood that this will actually happen
       in percent?
   utter_ask_consequences:
-  - text: For which of these persons would this decision have consequences? Please
-      describe to me the first effect you can think of and which person would be affected.
+  - text: I'm wondering for which of these persons this decision would have consequences.
+      Please describe to me the first effect you can think of and which person would
+      be affected.
   - text: I'd like to know for whom this decision would have consequences and what
       they would look like. Please inform me about the first consequence coming to
       your mind.
@@ -173,6 +172,13 @@ templates:
   - text: Do you recognize any particular actions in this option that have strong
       moral relevance? Any generic deed that one would judge intuitively from a moral
       perspective. If yes, please name it briefly.
+  utter_ask_deed_universalizable:
+  - buttons:
+    - payload: /correct
+      title: 'Yes'
+    - payload: /wrong
+      title: 'No'
+    text: Could you want this particular action to become a general rule for everyone?
   utter_ask_guess_quantity:
   - text: Could you please have a rough guess?
   - text: Could you estimate the number roughly?
@@ -183,21 +189,21 @@ templates:
   - buttons:
     - payload: /correct
       title: Relevant
-    - payload: /wrong
+    - payload: '/wrong{"name": "deed"}'
       title: Unimportant
     text: '"{deed}" - that sounds to me like an act which is associated with this
       option. Can I consider this an action of moral relevance or is it unimportant?'
   - buttons:
     - payload: /correct
       title: Relevant
-    - payload: /wrong
+    - payload: '/wrong{"name": "deed"}'
       title: Unimportant
     text: I am wondering if "{deed}" is an action of moral relevance in this context.
       Should I consider it relevant or is it unimportant?
   - buttons:
     - payload: /correct
       title: Relevant
-    - payload: /wrong
+    - payload: '/wrong{"name": "deed"}'
       title: Unimportant
     text: When you are talking about "{deed}" - Can I consider this relevant for the
       ethical evaluation? I mean in a sense that you could come to a moral verdict
@@ -205,7 +211,7 @@ templates:
   - buttons:
     - payload: /correct
       title: Relevant
-    - payload: /wrong
+    - payload: '/wrong{"name": "deed"}'
       title: Unimportant
     text: The term "{deed}" you were referring to has caught my attention. Is that
       an action that can be morally judged, or is it irrelevant in this context?
@@ -378,6 +384,13 @@ templates:
   - text: Can you give me a name?
   - text: Any name I can use for this person?
   - text: Do you want me to call this person by a certain name?
+  utter_ask_option_universalizable:
+  - buttons:
+    - payload: /correct
+      title: 'Yes'
+    - payload: '/wrong{"name": "option"}'
+      title: 'No'
+    text: Could you want that choosing this option becomes a general rule for everyone?
   utter_ask_options:
   - text: And what would be the most obvious option that {decider} could choose?
   - text: Could you describe the first option coming to your mind that {decider} could
@@ -415,13 +428,6 @@ templates:
   - text: My first question to you is which people are involved in the situation.
       I need a short description for each person or group of people in one sentence
       including their name, one at a time. Please start with the first one.
-  utter_ask_universalizable:
-  - buttons:
-    - payload: /correct
-      title: 'Yes'
-    - payload: /wrong
-      title: 'No'
-    text: Could you want this particular action to become a general rule for everyone?
   utter_confirm_decider:
   - text: The moral decision is made by {decider}.
   - text: Obviously {decider} is responsible for making the moral decision.

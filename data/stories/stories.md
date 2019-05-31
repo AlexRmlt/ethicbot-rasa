@@ -121,19 +121,13 @@
 * option
     - action_create_option
     - slot{"deed": null}
-    - slot{"option": 4}
     - slot{"action_return": true}
-    - utter_ask_deed
-* deed
-    - action_create_deed
-    - slot{"deed": "lying"}
-    - slot{"action_return": true}
-    - utter_ask_universalizable
+    - utter_ask_option_universalizable
 * correct
-    - action_update_deed
+    - action_update_option
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
+    - utter_ask_consequences
 * consequence{"sentiment": "neg"}
     - slot{"sentiment": "neg"}
     - action_create_consequence
@@ -161,13 +155,12 @@
     - slot{"deed": "kill"}
     - action_create_option
     - slot{"deed": "kill"}
-    - slot{"option": 7}
     - slot{"action_return": true}
     - utter_ask_identified_deed
 * correct
     - action_create_deed
     - slot{"action_return": true}
-    - utter_ask_universalizable
+    - utter_ask_deed_universalizable
 * wrong
     - action_update_deed
     - slot{"action_return": true}
@@ -176,8 +169,6 @@
     - action_update_deed
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* deny
     - utter_ask_consequences
 * consequence{"stakeholder": "the victim", "name": "blue", "sentiment": "neg"}
     - slot{"name": "blue"}
@@ -284,13 +275,12 @@
     - slot{"deed": "kill"}
     - action_create_option
     - slot{"deed": "kill"}
-    - slot{"option": 4}
     - slot{"action_return": true}
     - utter_ask_identified_deed
 * correct
     - action_create_deed
     - slot{"action_return": true}
-    - utter_ask_universalizable
+    - utter_ask_deed_universalizable
 * wrong
     - action_update_deed
     - slot{"action_return": true}
@@ -299,8 +289,6 @@
     - action_update_deed
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* deny
     - utter_ask_consequences
 * consequence{"stakeholder": "the victim", "sentiment": "neg", "name": "Will"}
     - slot{"name": "Will"}
@@ -358,19 +346,16 @@
     - slot{"name": "thomas"}
     - action_create_option
     - slot{"deed": "refuse to commit the murder"}
-    - slot{"option": 9}
     - slot{"action_return": true}
     - utter_ask_identified_deed
 * correct
     - action_create_deed
     - slot{"action_return": true}
-    - utter_ask_universalizable
+    - utter_ask_deed_universalizable
 * correct
     - action_update_deed
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* deny
     - utter_ask_consequences
 * consequence{"name": "thomas", "sentiment": "neg"}
     - slot{"name": "thomas"}
@@ -430,8 +415,10 @@
     - action_update_stakeholder
     - slot{"name": "django"}
     - slot{"action_return": true}
-    - utter_ask_moralstatus_weight
-* quantity{"quantity": "5"}
+    - utter_ask_identified_moralstatus
+* wrong
+    - utter_ask_moralstatus
+* moralstatus{"moralstatus": "human"}
     - action_update_stakeholder
     - slot{"action_return": true}
     - utter_next_stakeholder
@@ -493,8 +480,10 @@
     - action_update_stakeholder
     - slot{"name": "christian"}
     - slot{"action_return": true}
-    - utter_ask_moralstatus_weight
-* quantity{"quantity": "6"}
+    - utter_ask_identified_moralstatus
+* wrong
+    - utter_ask_moralstatus
+* moralstatus{"moralstatus": "human"}
     - action_update_stakeholder
     - slot{"action_return": true}
     - utter_next_stakeholder
@@ -532,13 +521,12 @@
     - slot{"deed": "kill"}
     - action_create_option
     - slot{"deed": "kill"}
-    - slot{"option": 4}
     - slot{"action_return": true}
     - utter_ask_identified_deed
 * correct
     - action_create_deed
     - slot{"action_return": true}
-    - utter_ask_universalizable
+    - utter_ask_deed_universalizable
 * wrong
     - action_update_deed
     - slot{"action_return": true}
@@ -547,8 +535,6 @@
     - action_update_deed
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
-* deny
     - utter_ask_consequences
 * consequence{"name": "peter", "sentiment": "neg"}
     - slot{"name": "peter"}
@@ -590,18 +576,17 @@
     - slot{"deed": "allow yves to continue living"}
     - action_create_option
     - slot{"deed": "allow yves to continue living"}
-    - slot{"option": 8}
     - slot{"action_return": true}
     - utter_ask_identified_deed
 * correct
     - action_create_deed
     - slot{"action_return": true}
-    - utter_ask_universalizable
+    - utter_ask_deed_universalizable
 * correct
     - action_update_deed
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_next_deed
+    - utter_ask_consequences
 * consequence{"name": "yves", "sentiment": "neg"}
     - slot{"name": "yves"}
     - slot{"sentiment": "neg"}
@@ -709,4 +694,330 @@
     - slot{"decider": "Thomas"}
     - slot{"action_return": true}
     - utter_ask_options
+
+## Generated Story 1206486904248161554
+* greeting
+    - action_intro
+* stakeholder
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 1}
+    - slot{"action_return": true}
+    - utter_ask_name_singular
+* name{"name": "alex"}
+    - slot{"name": "alex"}
+    - action_update_stakeholder
+    - slot{"name": "alex"}
+    - slot{"action_return": true}
+    - utter_ask_moralstatus
+* moralstatus{"moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* stakeholder{"stakeholder": "the owner"}
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 2}
+    - slot{"action_return": true}
+    - utter_ask_name_singular
+* name{"name": "mike"}
+    - slot{"name": "mike"}
+    - action_update_stakeholder
+    - slot{"name": "mike"}
+    - slot{"action_return": true}
+    - utter_ask_moralstatus
+* moralstatus{"moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* deny
+    - utter_confirm_stakeholders
+    - action_choose_decider
+* decider{"name": "alex"}
+    - slot{"name": "alex"}
+    - action_update_stakeholder
+    - slot{"decider": "alex"}
+    - slot{"action_return": true}
+    - utter_ask_options
+* option{"deed": "keep the purse"}
+    - slot{"deed": "keep the purse"}
+    - action_create_option
+    - slot{"deed": "keep the purse"}
+    - slot{"action_return": true}
+    - utter_ask_identified_deed
+* correct
+    - action_create_deed
+    - slot{"action_return": true}
+    - utter_ask_deed_universalizable
+* correct
+    - action_update_deed
+    - slot{"deed": null}
+    - slot{"action_return": true}
+    - utter_ask_consequences
+* consequence{"name": "mike"}
+    - slot{"name": "mike"}
+    - action_create_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact
+* positive
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact_weight
+* quantity{"quantity": "8"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_consequence_definite
+* correct
+    - utter_next_consequence
+* consequence{"name": "mike"}
+    - slot{"name": "mike"}
+    - action_create_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact
+* positive{"name": "mike"}
+    - slot{"name": "mike"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact_weight
+* quantity{"quantity": "4"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_consequence_definite
+* correct
+    - utter_next_consequence
+* deny
+    - utter_next_option
+* option{"deed": "keep the money"}
+    - slot{"deed": "keep the money"}
+    - action_create_option
+    - slot{"deed": "keep the money"}
+    - slot{"action_return": true}
+    - utter_ask_identified_deed
+* wrong{"name": "deed"}
+    - slot{"name": "deed"}
+    - action_update_option
+    - slot{"deed": null}
+    - slot{"action_return": true}
+    - utter_ask_option_universalizable
+* wrong{"name": "option"}
+    - slot{"name": "option"}
+    - action_update_option
+    - slot{"action_return": true}
+    - utter_ask_inherent_evil
+* affirm
+    - action_update_option
+    - slot{"action_return": true}
+    - utter_ask_consequences
+* consequence{"stakeholder": "the consequence", "name": "alex", "sentiment": "pos"}
+    - slot{"name": "alex"}
+    - slot{"sentiment": "pos"}
+    - action_create_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact_positive
+* correct
+    - utter_ask_impact_weight
+* quantity{"quantity": "8"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_consequence_definite
+* wrong
+    - utter_ask_consequence_probability
+* quantity{"quantity": "5"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_next_consequence
+* deny
+    - utter_next_option
+* deny
+    - utter_got_everything
+    - utter_ask_method
+* utilitarism
+    - utter_starting_evaluation_1
+    - utter_starting_evaluation_2
+    - action_evaluation_utilitarism
+    - slot{"action_return": true}
+    - utter_next_method
+
+## Generated Story -9080873729863372859
+* greeting
+    - action_intro
+* stakeholder{"name": "Dirk"}
+    - slot{"name": "Dirk"}
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 1}
+    - slot{"action_return": true}
+    - action_check_identified_name
+    - slot{"action_return": false}
+    - utter_ask_identified_name
+* correct
+    - action_update_stakeholder
+    - slot{"name": "Dirk"}
+    - slot{"action_return": true}
+    - utter_ask_moralstatus
+* moralstatus{"moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* stakeholder{"name": "Thomas"}
+    - slot{"name": "Thomas"}
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 2}
+    - slot{"action_return": true}
+    - action_check_identified_name
+    - slot{"action_return": false}
+    - utter_ask_identified_name
+* correct
+    - action_update_stakeholder
+    - slot{"name": "Thomas"}
+    - slot{"action_return": true}
+    - utter_ask_moralstatus
+* moralstatus{"moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* stakeholder{"stakeholder": "a dog", "name": "cleopatra", "moralstatus": "animal"}
+    - slot{"moralstatus": "animal"}
+    - slot{"name": "cleopatra"}
+    - action_create_stakeholder
+    - slot{"amount_stakeholders": 3}
+    - slot{"action_return": true}
+    - action_check_identified_name
+    - slot{"action_return": false}
+    - utter_ask_identified_name
+* correct
+    - action_update_stakeholder
+    - slot{"name": "cleopatra"}
+    - slot{"action_return": true}
+    - utter_ask_identified_moralstatus
+* correct
+    - utter_ask_moralstatus_weight
+* quantity{"quantity": "5"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* deny
+    - utter_confirm_stakeholders
+    - action_choose_decider
+* decider{"name": "Thomas"}
+    - slot{"name": "Thomas"}
+    - action_update_stakeholder
+    - slot{"decider": "Thomas"}
+    - slot{"action_return": true}
+    - utter_ask_options
+* option{"name": "cleopatra", "deed": "kill"}
+    - slot{"deed": "kill"}
+    - slot{"name": "cleopatra"}
+    - action_create_option
+    - slot{"deed": "kill"}
+    - slot{"action_return": true}
+    - utter_ask_identified_deed
+* correct
+    - action_create_deed
+    - slot{"action_return": true}
+    - utter_ask_deed_universalizable
+* wrong
+    - action_update_deed
+    - slot{"action_return": true}
+    - utter_ask_inherent_evil
+* deny{"name": "needs_conditions"}
+    - slot{"name": "needs_conditions"}
+    - action_update_deed
+    - slot{"deed": null}
+    - slot{"action_return": true}
+    - utter_ask_consequences
+* consequence{"name": "cleopatra", "sentiment": "neg"}
+    - slot{"name": "cleopatra"}
+    - slot{"sentiment": "neg"}
+    - action_create_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact_negative
+* correct
+    - utter_ask_impact_weight
+* quantity{"quantity": "10"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_consequence_definite
+* correct
+    - utter_next_consequence
+* consequence{"name": "Thomas", "sentiment": "neg"}
+    - slot{"name": "Thomas"}
+    - slot{"sentiment": "neg"}
+    - action_create_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact_negative
+* correct
+    - utter_ask_impact_weight
+* quantity{"quantity": "6"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_consequence_definite
+* wrong
+    - utter_ask_consequence_probability
+* quantity{"quantity": "60"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_next_consequence
+* deny
+    - utter_next_option
+* option{"name": "Thomas", "deed": "refuse to kill the dog"}
+    - slot{"deed": "refuse to kill the dog"}
+    - slot{"name": "Thomas"}
+    - action_create_option
+    - slot{"deed": "refuse to kill the dog"}
+    - slot{"action_return": true}
+    - utter_ask_identified_deed
+* correct
+    - action_create_deed
+    - slot{"action_return": true}
+    - utter_ask_deed_universalizable
+* wrong
+    - action_update_deed
+    - slot{"action_return": true}
+    - utter_ask_inherent_evil
+* deny{"name": "too_specific"}
+    - slot{"name": "too_specific"}
+    - action_update_deed
+    - slot{"deed": null}
+    - slot{"action_return": true}
+    - utter_ask_consequences
+* consequence{"name": "cleopatra"}
+    - slot{"name": "cleopatra"}
+    - action_create_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact
+* negative
+    - action_update_consequence
+    - slot{"action_return": false}
+    - utter_ask_impact_weight
+* quantity{"quantity": "9"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_consequence_definite
+* correct
+    - utter_next_consequence
+* deny
+    - utter_next_option
+* deny
+    - utter_got_everything
+    - utter_ask_method
+* utilitarism
+    - utter_starting_evaluation_1
+    - utter_starting_evaluation_2
+    - action_evaluation_utilitarism
+    - slot{"action_return": true}
+    - utter_next_method
+* affirm
+    - utter_ask_method
+* deontology
+    - utter_starting_evaluation_1
+    - utter_starting_evaluation_2
+    - action_evaluation_deontology
+    - slot{"action_return": true}
+    - utter_next_method
 
