@@ -852,7 +852,11 @@ class ChooseAffectedStakeholder(Action):
         message = "On which person would this decision have an impact?"
         
         for sh in mind.get_stakeholders(tracker.sender_id):
-            buttons.append({ 'title': sh['name'], 'payload': '/consequence{"name": "' + sh['name'] + '"}'})
+            try:
+                buttons.append({ 'title': sh['name'], 'payload': '/consequence{"name": "' + sh['name'] + '"}'})
+            except (KeyError, AttributeError):
+                logger.warning('Exception creating buttons for stakeholders, it appears that some stakeholder does not have a name')
+                dispatcher.utter_template('utter_not_sure', tracker)
         dispatcher.utter_button_message(message, buttons)
         return []
 
