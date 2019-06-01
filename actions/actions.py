@@ -232,7 +232,8 @@ class UpdateStakeholder(Action):
             # Intent: name or correct
             elif (tracker.latest_message['intent'].get('name') == 'name') \
                 or (tracker.latest_message['intent'].get('name') == 'correct') \
-                or (tracker.latest_message['intent'].get('name') == 'stakeholder'):
+                or (tracker.latest_message['intent'].get('name') == 'stakeholder') \
+                or (tracker.latest_message['intent'].get('name') == 'stakeholdergroup'):
 
                 if tracker.latest_message['intent'].get('name') == 'correct':
                     name = tracker.get_slot('name')

@@ -1666,6 +1666,7 @@
 - Also there is [a dog](stakeholder) named [Cleopatra](name:Cleopatra)
 
 ## intent:stakeholdergroup
+- Also [Adrians family](stakeholder) is involved
 - First, there is [a group of people](stakeholder) standing on the tracks
 - There is [a group of eight people](stakeholder) standing on the tracks
 - There are [three](quantity) parties involved

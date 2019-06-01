@@ -11,8 +11,7 @@ services:
       - run
       - --connector
       - socketio
-      - --endpoints
-      - config/endpoints.yml
+      - --debug
   action_server:
     image: aroemelt/ethicbot:actions
     volumes:
