@@ -925,18 +925,3 @@ class EvaluationDeontology(Action):
 
         events.append(SlotSet('action_return', action_return))
         return events
-
-
-###############################################################################
-##################### --- DO NOT CALL FROM RASA --- ###########################
-###############################################################################
-class GetDataModel(Action):
-    """
-    Retrieve datamodel for a distinct sender
-    """
-    def name(self):
-        return 'getdatamodel'
-
-    def run(self, dispatcher, tracker, domain):
-        data = mind.get_full_model(tracker.sender_id)
-        return data
