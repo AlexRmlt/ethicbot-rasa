@@ -71,29 +71,29 @@ entities:
 - sentiment
 - stakeholder
 intents:
-- quantity
-- option
-- greeting
-- utilitarism
-- deontology
-- deny
-- affirm
 - decider
-- correct
-- consequence
 - negative
+- option
+- consequence
 - wrong
+- positive
+- greeting
+- quantity
+- correct
 - stakeholder
 - moralstatus
-- positive
 - name
+- deny
+- utilitarism
+- deontology
+- affirm
 - stakeholdergroup
 - neutral
 - dontknow
 - moralquestion
 - goodbye
 - thanks
-- smalltalk: {triggers: action_handle_smalltalk}
+- smalltalk
 slots:
   action_return:
     type: bool
@@ -150,18 +150,17 @@ templates:
   - text: How high would you estimate the likelihood that this will actually happen
       in percent?
   utter_ask_consequences:
-  - text: I'm wondering for which of these persons this decision would have consequences.
-      Please describe to me the first effect you can think of and which person would
-      be affected.
+  - text: I'm wondering for which of these agents this decision would have consequences.
+      Please describe to me the first effect you can think of and who would be affected.
   - text: I'd like to know for whom this decision would have consequences and what
       they would look like. Please inform me about the first consequence coming to
       your mind.
-  - text: Please tell me who of the engaged persons would be affected, and what the
+  - text: Please tell me who of the engaged agents would be affected, and what the
       concrete effect would be.
   - text: Let us talk about the effects this decision would have on the different
-      persons. Please tell me one consequence per involved person after the other.
-  - text: Could you please tell me one consequence and the person it would hold for.
-  - text: Please describe a consequence to me, including the person who would be affected.
+      agents. Please tell me one consequence per involved agent after the other.
+  - text: Could you please tell me one consequence and the agent it would hold for.
+  - text: Please describe a consequence to me, including the agent who would be affected.
   utter_ask_deed:
   - text: I am interested in the concrete actions contained in this possibility and
       their moral dimension. Can you think of a morally valid action implied by this
@@ -229,25 +228,25 @@ templates:
       title: 'Yes'
     - payload: /wrong
       title: 'No'
-    text: '"{name}" is the name of the person you are talking about, right?'
+    text: '"{name}" is the name of the agent you are talking about, right?'
   - buttons:
     - payload: /correct
       title: 'Yes'
     - payload: /wrong
       title: 'No'
-    text: The person you are describing is called "{name}", correct?
+    text: The agent you are describing is called "{name}", correct?
   - buttons:
     - payload: /correct
       title: 'Yes'
     - payload: /wrong
       title: 'No'
-    text: '"{name}" - ist that the name of the person you are talking about?'
+    text: '"{name}" - ist that the name of the agent you are talking about?'
   - buttons:
     - payload: /correct
       title: 'Yes'
     - payload: /wrong
       title: 'No'
-    text: Do I understand you correctly that the person you are referring to is called
+    text: Do I understand you correctly that the agent you are referring to is called
       "{name}"?
   utter_ask_impact:
   - text: Would the effects be more positive or more negative for {name}?
@@ -377,13 +376,13 @@ templates:
   - text: Is there a name or term you can tell me that I can assign to this group?
   - text: Can you give me a name or a title I can use for them?
   utter_ask_name_singular:
-  - text: Does this person have a name? If so, please tell me.
-  - text: Can you give me a name for this person? Then I will use it later on.
-  - text: Do you have a name I can assign to this person? That would make it easier
+  - text: Does this agent have a name? If so, please tell me.
+  - text: Can you give me a name for this agent? Then I will use it later on.
+  - text: Do you have a name I can assign to this agent? That would make it easier
       for me to recognize who we are talking about.
   - text: Can you give me a name?
-  - text: Any name I can use for this person?
-  - text: Do you want me to call this person by a certain name?
+  - text: Any name I can use for this agent?
+  - text: Do you want me to call this agent by a certain name?
   utter_ask_option_universalizable:
   - buttons:
     - payload: /correct
@@ -442,8 +441,8 @@ templates:
       involved in the situation.
   - text: Well, as far as I have understood it there are {amount_stakeholders} different
       people or groups engaged in the situation.
-  - text: Okay, I have noted {amount_stakeholders} different persons or groups of
-      persons who are relevant for the situation.
+  - text: Okay, I have noted {amount_stakeholders} different agents or groups who
+      are relevant for the situation.
   utter_evaluation_failure:
   - text: I am currently not able to process your request. Sorry for that!
   - text: I'm sorry, I can't process your request in the moment.
@@ -514,7 +513,7 @@ templates:
       look like?
   - text: Can you think of another consequence for anyone else? Please proceed if
       that's the case.
-  - text: Do I need to know about any other consequence for another involved person?
+  - text: Do I need to know about any other consequence for another involved agent?
       Please name it if there is still one you didn't mention.
   - text: Is there a consequence for anyone left we did not talk about yet? If yes,
       please tell me.
@@ -552,13 +551,13 @@ templates:
   utter_next_stakeholder:
   - text: Are there any other people involved? Please name the next one.
   - text: Are further people involved? If so, name the next one.
-  - text: Any other persons? If yes, describe the next one.
-  - text: Any other persons I need to know about? If so, tell me the next one.
-  - text: Other persons to be named? Tell me the next one, if there are still relevant
-      persons left.
+  - text: Any other agents? If yes, describe the next one.
+  - text: Any other agents I need to know about? If so, tell me the next one.
+  - text: Other agents to be named? Tell me the next one, if there are still relevant
+      agents left.
   - text: Is there anyone left that you haven't named yet? If so, please proceed.
   - text: Is there still anyone left who is important for the situation? Tell me the
-      next person.
+      next agent.
   utter_not_sure:
   - text: Hmmm...
   - text: Hm, that's a bit tricky.
@@ -568,24 +567,23 @@ templates:
   - text: Well, I need to sort a little.
   - text: Okay, I don't quite get it right now.
   utter_reflect_choose_affected_stakeholder:
-  - text: I did not quite understand which person is affected by the consequence you
+  - text: I did not quite understand which agent is affected by the consequence you
       are describing.
   - text: I did not quite understand who would be affected by the consequence you
       are describing.
   - text: I find it hard to understand who would be affected by this consequence.
-  - text: I'm having a hard time identifying the person who would be affected.
-  - text: I'm having trouble understanding the person for whom this would have consequences.
+  - text: I'm having a hard time identifying the agent who would be affected.
+  - text: I'm having trouble understanding the agent for whom this would have consequences.
   - text: I think you pointed out who would be affected by this but I did not quite
       get it.
   - text: As far as I understood this consequence would have an impact on someone,
       but I did not understand exactly who it is.
   utter_reflect_single_person:
-  - text: Okay, so its only one single person. Got that wrong at first.
-  - text: Well, I thought there were multiple people. So it's only one person, alright.
-  - text: I see, it's just one. Apparently I confused this person with a group of
-      people.
-  - text: Apparently I confused this person with a group of people. I'll keep in mind
-      that it's only one person.
+  - text: Okay, so its only one single agent. Got that wrong at first.
+  - text: Well, I thought there were multiple people. So it's only one agent, alright.
+  - text: I see, it's just one. Apparently I confused this agent with a group of people.
+  - text: Apparently I confused this agent with a group of people. I'll keep in mind
+      that it's only one agent.
   utter_smalltalk_1:
   - text: That's a bit off-topic, isn't it?
   - text: That's going a little off the subject, isn't it?

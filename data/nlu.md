@@ -11,6 +11,41 @@
 - yes
 
 ## intent:consequence
+- [Maxi](name) will get back her ring
+- [Maxi](name) will loose her ring
+- [Charlie](name) would have to pay the reward
+- [Charlie](name) will get back the ring, hurray!
+- [Hauke](name) can get a reward from Charlie
+- [Charlie](name) will loose the ring.
+- [Hauke](name) would have the ring
+- [Julio](name) might get trouble and will be reinstalled
+- For [Isabel](name) it would mean that she'd have to wait longer for a new kidney.
+- Another consequence could be that [Derek](name) persuades [George](name) to give [Isabel](name) his kidney voluntarily. It would have consequences for both of them
+- Another consequence would be that [Derek](name) doesn't use [George](name) as an organ donator, so [Isabel](name) doesn't get the kidney she needs
+- The first consequence that comes to my mind is that if [Derek](name) just takes a kidney from [George](name) to donate it to [Isabel](name), [George](name) wouldn't know about it and it could be dangerous for his health.
+- [Florin](name) believes it would destroy the secret project, which she believes is essential for humanity's survival
+- For [Florin](name), the information would compromise a secret project she has worked on all her life.
+- [Peter](name) would get trouble with Mark
+- [Peter](name) might get trouble and go to prison
+- [Peter](name) will get paid for the murder
+- [Peter](name) has more work
+- the rights of their housework goes to america
+- The [palatines](name) will get trouble
+- The [palatines](name) will have consequences, too
+- [Peter](name) saves time when correcting homework
+- [Mike](name) will pay the reward
+- [Mike](name) will get back his money
+- [Andrea](name) would feel good
+- [I](stakeholder) will maybe get a reward
+- [Andrea](name) will have the money
+- [Mike](name) will loose his money and I will have it
+- [Thomas](name) would get trouble
+- [Thomas](name) would get trouble and go to prison
+- [Thomas](name) will get paid
+- [Maxi](name) will be dead
+- [The cat](stakeholder) would suffer
+- [Peter](name) will feel guilty
+- [The cat](stakeholder) would be dead
 - That would imply leaving [the larger group](stakeholder) behind
 - [Cleopatra](name) will suffer because she is ill
 - [Mike](name) will loose his money
@@ -243,16 +278,18 @@
 - [Thomas](name) will get money for the murder
 - [Thomas](name) could get trouble
 - [Thomas](name) will get into trouble
-- [Peter](name:Peter) will feel bad
-- [Yves](name:Yves) will be dead
-- [Yves](name:Yves) will be killed
-- [Christian](name:Christian) will suffer, too
-- For [Mike](name:Mike) and [Alex](name)
-- [Mike](name:Mike) gets back the money he lost
-- The consequence would be that [Alex](name:Alex) would become rich
-- [Cleopatra](name:Cleopatra) would then be dead
+- [Peter](name) will feel bad
+- [Yves](name) will be dead
+- [Yves](name) will be killed
+- [Christian](name) will suffer, too
+- For [Mike](name) and [Alex](name)
+- [Mike](name) gets back the money he lost
+- The consequence would be that [Alex](name) would become rich
+- [Cleopatra](name) would then be dead
 - This would make [Thomas](name) feel really bad
-- This would mean great suffering for [Cleopatra](name:cleopatra) due to her illness
+- This would mean great suffering for [Cleopatra](name:Cleopatra) due to her illness
+- For [Erskine](name:Erskine) this would mean that a very important project would be compromised
+- [Erskine](name:Erskine) has the strong belief that this would destroy a project essential for the survival of the human race!
 
 ## intent:correct
 - That is correct
@@ -266,6 +303,7 @@
 - /correct
 
 ## intent:decider
+- [Erskine](name) has to decide whether to save half of the people in the town, or try to save everyone by giving away secrets to the enemy.
 - [The first person](stakeholder:the first person) makes the moral decision
 - [A person](stakeholder:a person) who makes a moral decision
 - [A person](stakeholder:a person) who has to decide whether to flip a switch
@@ -313,8 +351,15 @@
 - [A robot](stakeholder) must decide to take either Path A or Path B to attempt to rescue persons after a natural disaster.
 - [A robot](stakeholder) must decide to take either Path A or Path B to attempt to rescue persons after a natural disaster.
 - [A captain](stakeholder) is on an overcrowded lifeboat and has to decide if he forces some people to go over board in order to save the rest
+- [Solomon](name) must decide if he disobeys the orders of [Erskine](name:Erskine)
+- [Erskine](name:Erskine) has to decide whether her saves most of the people in his town or tries to achieve the same by giving information to the enemy
 
 ## intent:deny
+- It would not effect anyone else
+- No more people involved
+- No, not for this option
+- No, these are the three
+- No, these are all
 - no, thank you, this should be all
 - no, I have already named them all
 - It is all
@@ -583,6 +628,10 @@
 - no one else is affected
 - thats all
 - These are the only options available
+- [The person](stakeholder:the person)'s name is not known
+- I sincerely doubt that
+- No more people are involved
+- no thats all for now
 
 ## intent:deontology
 - /deontology
@@ -714,17 +763,10 @@
 - hihi
 - hi
 - hi
-- hi
-- hi
-- hi
-- hi
-- hi
 - hey
 - hi
 - hi
 - Hi!
-- Hi
-- Hi
 
 ## intent:moralquestion
 - Should you take action in killing a person if it can prevent the death of a larger number of people?
@@ -738,6 +780,11 @@
 - /moralstatus{"moralstatus": "machine"}
 
 ## intent:name
+- [The Town](stakeholder)
+- [Mum](stakeholder)
+- [Kitty](name)
+- Yes, they are the students!
+- Let us call him [Mike](name)
 - [Mike](name)
 - The dog's name is [Cleopatra](name)
 - Only his aunt, [Burgl](name)
@@ -816,10 +863,18 @@
 - [Victim](stakeholder:victim) is the name
 - The name is Happy
 - Call him [victim](stakeholder)
-- My name is [Alex](name:Alex)
-- [Mike](name:Mike)
+- My name is [Alex](name)
+- [Mike](name)
+- [Graziella](name:Graziella)
+- [Mum](stakeholder:mum)
+- [Chris](name)
+- [Solomon](name)
+- [Kim](name)
+- The name is [Kim](name)
+- [Dan](name)
 
 ## intent:negative
+- It could be negative if he isn't one of those saved.
 - they are rather negative
 - That would be really bad for [Benjamin](name)!
 - That would be extremely bad for him
@@ -862,8 +917,11 @@
 - Extremely negative
 - the are rather negative
 - totally negative
+- rather negative
+- Could be negative, considering the possibility that he might not be saved
 
 ## intent:neutral
+- Nothing will happen. It will be the status quo
 - It would be ok, neither positive nor negative consequences
 - That would have neither positive nor negative effects
 - It would be okay for him, no negative or positive consequences
@@ -871,6 +929,27 @@
 - It would not matter that much actually
 
 ## intent:option
+- [Andrea](name) can return the ring to a found things office
+- [Hauke](name) can give back the ring. However, it should be difficult to find Charlie
+- [Hauke](name) can [keep the ring](deed)
+- [Julio](name) can [refuse to kill](deed) Quinn
+- [Julio](name) was asked to [kill](deed) Maxi
+- [Derek](name) could also just [let George go](deed) and [continue his vacation](deed) and [wait for another donator](deed)
+- [Derek](name) could also [talk to George](deed) and [persuade him](deed) to [give his kidney](deed) to Isabel by his own free will.
+- The first option that [Derek](name) could choose is to [use George as an organe donator](deed) for Isabel, against his will.
+- [Florin](name) can [give the enemy information](deed) in exchange for saving everyone's life
+- [Peter](name) can [refuse to accept the job](deed)
+- [Peter](name) was asked to [kill](deed) Maxi.
+- I can [ignore the loss](deed)
+- [Andrea](name) can [punish the cat](deed)
+- He can [correct homework by hand](deed), as before
+- [Peter](name) wants to [do a plagiarism check](deed) of his students'  homework
+- Yes, I can [return the purse](deed)
+- I can [keep the purse](deed)
+- Yes, he can [refuse to kill](deed) Maxi
+- [Thomas](name) will [kill](deed) Maxi
+- Yes, [Peter](name) can [refuse to kill](deed) the cat
+- [Peter](name) can [kill](deed) the cat. [Marc](name) has asked him to do so, because the cat is ill.
 - [murder](deed)
 - [being honest](deed)
 - [stealing](deed)
@@ -1093,10 +1172,12 @@
 - Yes, we can [allow Yves to continue living](deed:allow yves to continue living)
 - [Keep the purse](deed:keep the purse) he found on the street
 - He can [keep the money](deed)
-- [Dirk](name) wants [Thomas](name) to [kill](deed) [Cleopatra](name:Cleopatra), and he could [do that](deed).
+- [Dirk](name) wants [Thomas](name) to [kill](deed) [Cleopatra](name), and he could [do that](deed).
 - [Thomas](name) can also [refuse to kill the dog](deed) and [let her live](deed)
+- [Erskine](name:Erskine) has the option to [hand over information](deed) to the enemy, which would lead to [everyone's life being saved](deed)
 
 ## intent:positive
+- For [Isabel](name) it would be positive, becayshe gets a new kidney
 - It would be positive to keep the money
 - That would be positive for him
 - positive
@@ -1144,7 +1225,8 @@
 - I would consider them positive
 - The effects would be extremely positive
 - more positive
-- thats positive for [mike](name)
+- thats positive for [mike](name:Mike)
+- positive
 
 ## intent:quantity
 - It's not a group, only [one](quantity) person
@@ -1376,6 +1458,9 @@
 - [6](quantity)
 - [60](quantity)
 - [9](quantity)
+- [8](quantity)
+- [6](quantity)
+- [6](quantity)
 
 ## intent:smalltalk
 - Just being nice
@@ -1438,6 +1523,37 @@
 - can we chat
 
 ## intent:stakeholder
+- [Charlie](name) is the owner of the ring
+- [Andrea](name) found a golden bracelet
+- Yes, there is [the person](stakeholder) who lost the ring. But I do not know her name.
+- [I](stakeholder) have found a golden ring at the train station. I think it is real gold. Wow!
+- [The person](stakeholder) who lost the ring
+- [I](stakeholder) have found a golden ring at the train station
+- [Julio](name) is a robot
+- [Maxi](name) is [the victim](stakeholder) that Julio will kill
+- [One of the patients](stakeholder), a woman by the name of [Isabel](name), needs a new kidney.
+- There is [a tourist](stakeholder) called [George](name), who comes to the hospital to get a minor injury treated.
+- [A surgeon](stakeholder), by the name of [Derek](name) Shepherd, has five patients who need an organ donation.
+- [Solomon](name) has to make a decision about whether to disobey [Erskine](name)
+- Well, [I](stakeholder) found a bluetooth headset somebody had lost
+- an [unknown person](stakeholder)
+- [Me](stakeholder) and my daughter.
+- Yes, there is poor [Maxi](name) who has the largest problem of us all
+- [Mark](name) is the other person
+- [Peter](name) has a problem
+- [I](stakeholder) am involved myself
+- There is [me](stakeholder) and [my cat](stakeholder)
+- [My kitten](stakeholder) has broken my favourite plate
+- [Peter](name) is teacher at a school
+- There is [the person](stakeholder) who lost the purse
+- [The person](stakeholder) who lost the purse
+- [I](stakeholder) have found a purse at the train station
+- There is [Maxi](name)
+- There is [Peter](name)
+- [Thomas](name) is a professional killer
+- Yes, there is also [a cat](stakeholder)
+- Yes, there is also [Marc](name)
+- [Peter](name) is the first person
 - [The owner](stakeholder) of the purse
 - Yes, there is [Cleopatra](name), [the dog](stakeholder)
 - Yes, there is also [Thomas](name), his friend
@@ -1663,9 +1779,14 @@
 - [The owner](stakeholder:the owner) of the purse
 - [Thomas](name) has a friend whose name is [Dirk](name)
 - There is also his friend whose name is [Thomas](name)
-- Also there is [a dog](stakeholder) named [Cleopatra](name:Cleopatra)
+- Also there is [a dog](stakeholder) named [Cleopatra](name)
+- [Me](stakeholder:me) and my daughter are involved
+- also there is an [unknown person](stakeholder)
+- [Me](stakeholder:me)
+- [Erskine](name:Erskine), Chris, Solomon, Kim
 
 ## intent:stakeholdergroup
+- [His students](stakeholder)
 - Also [Adrians family](stakeholder) is involved
 - First, there is [a group of people](stakeholder) standing on the tracks
 - There is [a group of eight people](stakeholder) standing on the tracks
@@ -1798,6 +1919,7 @@
 - /wrong
 - /wrong
 - /wrong
+- /wrong
 
 ## synonym:1
 - one
@@ -1813,6 +1935,10 @@
 - five
 - Five
 
+## synonym:Alex
+- alex
+- {"name": "alex"}
+
 ## synonym:Blue
 - blue
 
@@ -1824,6 +1950,9 @@
 
 ## synonym:Carrie
 - {"name": "Carrie"}
+
+## synonym:Christian
+- christian
 
 ## synonym:Daniel
 - {"name": "Daniel"}
@@ -1852,6 +1981,9 @@
 ## synonym:Hans
 - hans
 - Hans
+
+## synonym:Happy
+- happy
 
 ## synonym:Harald
 - {"stakeholder": "Harald"}
@@ -1895,6 +2027,9 @@
 ## synonym:Michelle
 - michelle
 
+## synonym:Mike
+- mike
+
 ## synonym:Molly
 - {"name": "Molly"}
 - molly
@@ -1908,6 +2043,9 @@
 ## synonym:Patrick
 - {"name": "Patrick"}
 - patrick
+
+## synonym:Peter
+- peter
 
 ## synonym:Samuel
 - samuel
@@ -1938,6 +2076,9 @@
 
 ## synonym:Will
 - will
+
+## synonym:Yves
+- yves
 
 ## synonym:Zoe
 - zoe
@@ -1987,22 +2128,17 @@
 ## synonym:a third person
 - A third person
 
-## synonym:Alex
-- alex
-- {"name": "alex"}
-
 ## synonym:allow yves to continue living
 - allow Yves to continue living
 
 ## synonym:an Overseer
 - An overseer
 
-
 ## synonym:another person
 - Another person
 
-## synonym:Christian
-- christian
+## synonym:cleopatra
+- Cleopatra
 
 ## synonym:five people
 - Five people
@@ -2016,8 +2152,9 @@
 ## synonym:four of her patients
 - Four of her patients
 
-## synonym:Happy
-- happy
+## synonym:graziella
+- {"name": "graziella"}
+- Graziella
 
 ## synonym:keep the purse
 - Keep the purse
@@ -2034,17 +2171,17 @@
 ## synonym:many people
 - Many people
 
-## synonym:Mike
-- mike
+## synonym:me
+- Me
+
+## synonym:mum
+- Mum
 
 ## synonym:one other person
 - One other person
 
 ## synonym:one person
 - One person
-
-## synonym:Peter
-- peter
 
 ## synonym:protecting
 - Protecting
@@ -2149,6 +2286,3 @@
 
 ## synonym:we
 - We
-
-## synonym:Yves
-- yves

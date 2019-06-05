@@ -1282,7 +1282,6 @@ cassi
 cassie
 cassondra
 cassy
-cat
 catarina
 cate
 caterina
@@ -2554,6 +2553,7 @@ ernie
 erning
 ernst
 errol
+erskine
 ertan
 ertha
 erv
@@ -6675,7 +6675,6 @@ rchisn
 rchlab
 rea
 reagan
-real
 reba
 rebbecca
 rebe
