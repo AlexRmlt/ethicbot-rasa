@@ -18,7 +18,7 @@ services:
       - ./actions:/app/actions
       - ./modules:/app/modules
       - ./data:/app/data
-      - db.json:/app/db.json
+      - ./db.json:/app/db.json
   nginx:
     image: nginx:latest
     ports:
