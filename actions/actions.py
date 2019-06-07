@@ -8,7 +8,7 @@ import logging
 import requests, json
 from typing import Dict, Text, Any, List, Union
 from rasa_sdk import Tracker, Action
-from rasa_sdk.events import SlotSet, UserUtteranceReverted, FollowupAction, Restarted
+from rasa_sdk.events import SlotSet, UserUtteranceReverted, FollowupAction, Restarted, UserUttered
 from rasa_sdk.forms import FormAction
 from rasa_sdk.executor import CollectingDispatcher
 
@@ -112,15 +112,14 @@ class CreateStakeholder(Action):
             (tracker.latest_message['intent'].get('name') == 'decider'):
             sh['amount'] = 1
         elif (tracker.latest_message['intent'].get('name') == 'stakeholdergroup'):
-            sources = [ next(tracker.get_latest_entity_values('stakeholder'), None) ]
-                        #next(tracker.get_latest_entity_values('quantity'), -1) ]
+            sources = list(tracker.get_latest_entity_values('stakeholder'))
             quantity = nlu.get_quantity_from_sources(sources)
             if not quantity == -1:
                 sh['amount'] = int(quantity)
         else:
             # Misclassified intent - try to retrieve a quantity, else assume a single person
-            sources = [ next(tracker.get_latest_entity_values('stakeholder'), None),
-                        next(tracker.get_latest_entity_values('quantity'), -1) ]
+            sources = list(tracker.get_latest_entity_values('stakeholder'))
+            sources.extend(list(tracker.get_latest_entity_values('quantity')))
             quantity = nlu.get_quantity_from_sources(sources)
             if not quantity == -1:
                 sh['amount'] = int(quantity)
@@ -199,9 +198,9 @@ class UpdateStakeholder(Action):
                 # We always ask for the amount of stakeholders before we ask for moral status
                 # Therefore: If the amount is still set to -1.1, we did not ask yet
                 if sh['amount'] == -1.1:
-                    sources = [ next(tracker.get_latest_entity_values('quantity'), -1),
-                                next(tracker.get_latest_entity_values('stakeholder'), None),
-                                tracker.latest_message['text'] ]
+                    sources = list(tracker.get_latest_entity_values('quantity'))
+                    sources.extend(list(tracker.get_latest_entity_values('stakeholder')))
+                    sources.append(tracker.latest_message['text'])
                     quantity = nlu.get_quantity_from_sources(sources)
 
                     sh['amount'] = quantity
@@ -221,8 +220,8 @@ class UpdateStakeholder(Action):
                     
                 # Else we asked for the moral status weight
                 else:
-                    sources = [ next(tracker.get_latest_entity_values('quantity'), -1),
-                                tracker.latest_message['text'] ]
+                    sources = list(tracker.get_latest_entity_values('quantity'))
+                    sources.append(tracker.latest_message['text'])
                     weight = nlu.get_quantity_from_sources(sources)
                     
                     sh.set_moral_status_weight(weight).memorize(tracker.sender_id)
@@ -666,8 +665,8 @@ class UpdateConsequence(Action):
                 consequence['impact'] = consequence['impact'] * -1
                 
             elif (intent == 'quantity'):
-                sources = [ next(tracker.get_latest_entity_values('quantity'), -1),
-                            tracker.latest_message['text'] ]
+                sources = list(tracker.get_latest_entity_values('quantity'))
+                sources.append(tracker.latest_message['text'])
                 quantity = nlu.get_quantity_from_sources(sources)
 
                 if quantity != -1:
@@ -753,7 +752,7 @@ class ActionRestart(Action):
 
     def run(self, dispatcher, tracker, domain):
         mind.amnesia(tracker.sender_id)
-        return [Restarted(), FollowupAction("action_intro")]
+        return [Restarted(), UserUttered('/greeting'), FollowupAction("action_intro")]
        
 
 class ActionDefaultAskAffirmation(Action):

@@ -29,6 +29,11 @@
     - action_update_stakeholder
     - slot{"name": "the Palatines"}
     - slot{"action_return": true}
+    - utter_ask_moralstatus
+* moralstatus{"moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
     - utter_next_stakeholder
 * stakeholdergroup{"stakeholder": "The members of the club's board"}
     - action_create_stakeholder

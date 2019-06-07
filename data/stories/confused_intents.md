@@ -1,3 +1,71 @@
+## name | stakeholdergroup 1
+* stakeholdergroup
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 2}
+    - slot{"action_return": true}
+    - utter_ask_quantity
+* quantity{"quantity": "24"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_ask_name_plural
+* stakeholdergroup
+    - action_update_stakeholder
+    - slot{"name": "the Palatines"}
+    - slot{"action_return": true}
+    - utter_ask_moralstatus
+
+## name | stakeholdergroup 2
+* stakeholdergroup{"stakeholder": "The members of the club's board"}
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 3}
+    - slot{"action_return": true}
+    - utter_ask_quantity
+* quantity{"quantity": "ten"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_ask_name_plural
+* stakeholdergroup{"stakeholder": "the board"}
+    - action_update_stakeholder
+    - slot{"name": "the board"}
+    - slot{"action_return": true}
+    - utter_ask_moralstatus
+
+## name | stakeholdergroup 3
+* stakeholdergroup{"stakeholder": "The members of the club's board"}
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 3}
+    - slot{"action_return": true}
+    - utter_ask_quantity
+* quantity{"quantity": "ten"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_ask_name_plural
+* stakeholdergroup
+    - action_update_stakeholder
+    - slot{"name": "the board"}
+    - slot{"action_return": true}
+    - utter_ask_moralstatus
+
+## name | stakeholdergroup 4
+* stakeholdergroup
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 3}
+    - slot{"action_return": true}
+    - utter_ask_quantity
+* quantity{"quantity": "ten"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_ask_name_plural
+* stakeholdergroup{"stakeholder": "the board"}
+    - action_update_stakeholder
+    - slot{"name": "the board"}
+    - slot{"action_return": true}
+    - utter_ask_moralstatus
+
 ## name | stakeholder 1
 * stakeholder
     - action_create_stakeholder

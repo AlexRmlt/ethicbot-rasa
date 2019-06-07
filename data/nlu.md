@@ -1229,6 +1229,10 @@
 - positive
 
 ## intent:quantity
+- [50.5](quantity)
+- [6,5](quantity)
+- [50,5](quantity)%
+- The probability would be [50](quantity)
 - It's not a group, only [one](quantity) person
 - [5](quantity)
 - [five](quantity)
@@ -1236,13 +1240,6 @@
 - there are [5](quantity) altogether
 - [five](quantity:5)
 - About [ten people](stakeholder)
-- [5](quantity)
-- [10](quantity)
-- [5](quantity)
-- [10](quantity)
-- [10](quantity)
-- [10](quantity)
-- [4](quantity)
 - about [7](quantity) i guess
 - i think [10](quantity)
 - about [5](quantity)
@@ -1353,16 +1350,6 @@
 - Maybe [30](quantity)%
 - [6](quantity)
 - Maybe [80](quantity)%
-- [10](quantity)
-- [8](quantity)
-- [10](quantity)
-- [7](quantity)
-- [10](quantity)
-- [9](quantity)
-- [7](quantity)
-- [10](quantity)
-- [10](quantity)
-- [8](quantity)
 - Maybe she has a [20](quantity)% chance
 - [10](quantity)
 - Might be a [90](quantity)% probability
@@ -1433,34 +1420,6 @@
 - [9](quantity)
 - Around [50000](quantity)
 - It should be [ten](quantity)
-- [8](quantity)
-- [8](quantity)
-- [3](quantity)
-- [10](quantity)
-- [10](quantity)
-- [10](quantity)
-- [30](quantity)
-- [10](quantity)
-- [80](quantity)
-- [5](quantity)
-- [6](quantity)
-- [5](quantity)
-- [3](quantity)
-- [10](quantity)
-- [3](quantity)
-- [2](quantity)
-- [8](quantity)
-- [4](quantity)
-- [8](quantity)
-- [5](quantity)
-- [5](quantity)
-- [10](quantity)
-- [6](quantity)
-- [60](quantity)
-- [9](quantity)
-- [8](quantity)
-- [6](quantity)
-- [6](quantity)
 
 ## intent:smalltalk
 - Just being nice

@@ -85,11 +85,19 @@ def get_quantity_from_sources(sources):
     return -1
 
 def get_quantity(entity):
+    # First, check for float values as w2n will not handle those
+    if not entity.find(',') == -1:
+        entity = entity.replace(',', '.')
+
+    if not entity.find('.') == -1:
+        try:
+            return float(entity)
+        except ValueError: pass
+
     # If a cardinal entity was supplied, it should be convertable to a number
     try:
         return w2n.word_to_num(entity)
-    except ValueError:
-        pass
+    except ValueError: pass
 
     # If it is a larger text, analyze tokens (prone to errors, because numbers can consist of multiple tokens)
     doc = nlp(str(entity))
