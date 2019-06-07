@@ -227,3 +227,335 @@
 * deny
     - utter_next_option
 
+## Generated Story 5647621002996390469
+* greeting
+    - action_intro
+* stakeholder{"name": "anton"}
+    - slot{"name": "anton"}
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 1}
+    - slot{"action_return": true}
+    - action_check_identified_name
+    - slot{"action_return": false}
+    - utter_ask_identified_name
+* correct
+    - action_update_stakeholder
+    - slot{"name": "anton"}
+    - slot{"action_return": true}
+    - utter_ask_moralstatus
+* moralstatus{"moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* stakeholdergroup
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 2}
+    - slot{"action_return": false}
+    - utter_ask_quantity
+* quantity{"quantity": "24"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_ask_name_plural
+* name
+    - action_update_stakeholder
+    - slot{"name": "the Hessians"}
+    - slot{"action_return": true}
+    - utter_ask_moralstatus
+* moralstatus{"moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* name
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 3}
+    - slot{"action_return": true}
+    - utter_ask_name_singular
+* name
+    - action_update_stakeholder
+    - slot{"name": "Toni"}
+    - slot{"action_return": true}
+    - utter_ask_moralstatus
+* moralstatus{"moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* deny
+    - utter_confirm_stakeholders
+    - action_choose_decider
+* decider{"name": "anton"}
+    - slot{"name": "anton"}
+    - action_update_stakeholder
+    - slot{"decider": "anton"}
+    - slot{"action_return": true}
+    - utter_ask_options
+* stakeholder{"name": "anton"}
+    - slot{"name": "anton"}
+    - action_create_option
+    - slot{"deed": null}
+    - slot{"action_return": true}
+    - utter_ask_option_universalizable
+* wrong{"name": "option"}
+    - slot{"name": "option"}
+    - action_update_option
+    - slot{"action_return": true}
+    - utter_ask_inherent_evil
+* deny{"name": "too_specific"}
+    - slot{"name": "too_specific"}
+    - action_update_option
+    - slot{"action_return": true}
+    - utter_ask_consequences
+* consequence{"sentiment": "pos", "name": "Anton"}
+    - slot{"name": "Anton"}
+    - slot{"sentiment": "pos"}
+    - action_create_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact_positive
+* correct
+    - utter_ask_impact_weight
+* quantity{"quantity": "7"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_consequence_definite
+* correct
+    - utter_next_consequence
+* name{"name": "the Hessians"}
+    - slot{"name": "the Hessians"}
+    - action_create_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact_positive
+* wrong
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact_weight
+* quantity{"quantity": "4"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_consequence_definite
+* correct
+    - utter_next_consequence
+* consequence{"name": "the Hessians", "sentiment": "pos"}
+    - slot{"name": "the Hessians"}
+    - slot{"sentiment": "pos"}
+    - action_create_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact_positive
+* wrong
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact_weight
+* quantity{"quantity": "3"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_consequence_definite
+* wrong
+    - utter_ask_consequence_probability
+* quantity{"quantity": "60"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_next_consequence
+* consequence{"sentiment": "pos"}
+    - slot{"sentiment": "pos"}
+    - action_create_consequence
+    - slot{"name": null}
+    - slot{"action_return": false}
+    - action_choose_affected_stakeholder
+* consequence{"name": "the Hessians"}
+    - slot{"name": "the Hessians"}
+    - action_create_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact_positive
+* wrong
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact_weight
+* quantity{"quantity": "6"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_consequence_definite
+* correct
+    - utter_next_consequence
+* deny
+    - utter_next_option
+
+## Generated Story -261531004980772878
+* greeting
+    - action_intro
+* stakeholder{"stakeholder": "my kitten"}
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 1}
+    - slot{"action_return": true}
+    - utter_ask_name_singular
+* name{"name": "kitty"}
+    - slot{"name": "kitty"}
+    - action_update_stakeholder
+    - slot{"name": "kitty"}
+    - slot{"action_return": true}
+    - utter_ask_moralstatus
+* moralstatus{"moralstatus": "animal"}
+    - slot{"moralstatus": "animal"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_ask_moralstatus_weight
+* quantity{"quantity": "9"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* stakeholder{"stakeholder": "my cat", "moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_create_stakeholder
+    - slot{"amount_stakeholders": 2}
+    - slot{"action_return": true}
+    - utter_ask_name_singular
+* name
+    - action_update_stakeholder
+    - slot{"name": "Alex"}
+    - slot{"action_return": true}
+    - utter_ask_identified_moralstatus
+* correct
+    - utter_next_stakeholder
+* deny
+    - utter_confirm_stakeholders
+    - action_choose_decider
+* decider{"name": "Alex"}
+    - slot{"name": "Alex"}
+    - action_update_stakeholder
+    - slot{"decider": "Alex"}
+    - slot{"action_return": true}
+    - utter_ask_options
+* option{"name": "Alex", "deed": "punish the cat"}
+    - slot{"deed": "punish the cat"}
+    - slot{"name": "Alex"}
+    - action_create_option
+    - slot{"deed": "punish the cat"}
+    - slot{"action_return": true}
+    - utter_ask_identified_deed
+* wrong{"name": "deed"}
+    - slot{"name": "deed"}
+    - action_update_option
+    - slot{"deed": null}
+    - slot{"action_return": true}
+    - utter_ask_option_universalizable
+* correct
+    - action_update_option
+    - slot{"action_return": true}
+    - utter_ask_consequences
+
+## Generated Story 8273658228823907417
+* greeting
+    - action_intro
+* stakeholder{"stakeholder": "a man", "moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_create_stakeholder
+    - slot{"amount_stakeholders": 1}
+    - slot{"action_return": true}
+    - utter_ask_name_singular
+* name
+    - action_update_stakeholder
+    - slot{"name": "Quinn"}
+    - slot{"action_return": true}
+    - utter_ask_identified_moralstatus
+* correct
+    - utter_next_stakeholder
+* stakeholder
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 2}
+    - slot{"action_return": true}
+    - utter_ask_name_singular
+* name{"name": "kilian"}
+    - slot{"name": "kilian"}
+    - action_update_stakeholder
+    - slot{"name": "kilian"}
+    - slot{"action_return": true}
+    - utter_ask_moralstatus
+* moralstatus{"moralstatus": "other"}
+    - slot{"moralstatus": "other"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_ask_moralstatus_weight
+* quantity{"quantity": "5"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* deny
+    - utter_confirm_stakeholders
+    - action_choose_decider
+* decider{"name": "Quinn"}
+    - slot{"name": "Quinn"}
+    - action_update_stakeholder
+    - slot{"decider": "Quinn"}
+    - slot{"action_return": true}
+    - utter_ask_options
+
+## Generated Story 6770686197240496771
+* greeting
+    - action_intro
+* stakeholder
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 1}
+    - slot{"action_return": true}
+    - utter_ask_name_singular
+* name{"name": "Kevin"}
+    - slot{"name": "Kevin"}
+    - action_update_stakeholder
+    - slot{"name": "Kevin"}
+    - slot{"action_return": true}
+    - utter_ask_moralstatus
+* moralstatus{"name": "human"}
+    - slot{"name": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* stakeholder{"stakeholder": "a tourist", "name": "george", "moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - slot{"name": "george"}
+    - action_create_stakeholder
+    - slot{"amount_stakeholders": 2}
+    - slot{"action_return": true}
+    - action_check_identified_name
+    - slot{"action_return": false}
+    - utter_ask_identified_name
+* correct
+    - action_update_stakeholder
+    - slot{"name": "george"}
+    - slot{"action_return": true}
+    - utter_ask_identified_moralstatus
+* correct
+    - utter_next_stakeholder
+* stakeholder{"name": "isabel"}
+    - slot{"name": "isabel"}
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 3}
+    - slot{"action_return": true}
+    - action_check_identified_name
+    - slot{"action_return": false}
+    - utter_ask_identified_name
+* correct
+    - action_update_stakeholder
+    - slot{"name": "isabel"}
+    - slot{"action_return": true}
+    - utter_ask_moralstatus
+* moralstatus{"moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* deny
+    - utter_confirm_stakeholders
+    - action_choose_decider
+* decider{"name": "Kevin"}
+    - slot{"name": "Kevin"}
+    - action_update_stakeholder
+    - slot{"decider": "Kevin"}
+    - slot{"action_return": true}
+    - utter_ask_options
+

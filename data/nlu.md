@@ -11,6 +11,8 @@
 - yes
 
 ## intent:consequence
+- [Jesse](name) will pay Andrea a reward
+- For [Andrea](name), it would be positive, for [Jesse](name) negative
 - [Maxi](name) will get back her ring
 - [Maxi](name) will loose her ring
 - [Charlie](name) would have to pay the reward
@@ -287,9 +289,12 @@
 - The consequence would be that [Alex](name) would become rich
 - [Cleopatra](name) would then be dead
 - This would make [Thomas](name) feel really bad
-- This would mean great suffering for [Cleopatra](name:Cleopatra) due to her illness
-- For [Erskine](name:Erskine) this would mean that a very important project would be compromised
-- [Erskine](name:Erskine) has the strong belief that this would destroy a project essential for the survival of the human race!
+- This would mean great suffering for [Cleopatra](name) due to her illness
+- For [Erskine](name) this would mean that a very important project would be compromised
+- [Erskine](name) has the strong belief that this would destroy a project essential for the survival of the human race!
+- The installation of this method would save [Anton](name) a lot of time
+- [The Hessians](name:the Hessians) will have consequences as well
+- The copyright for his method goes to the United States
 
 ## intent:correct
 - That is correct
@@ -351,8 +356,8 @@
 - [A robot](stakeholder) must decide to take either Path A or Path B to attempt to rescue persons after a natural disaster.
 - [A robot](stakeholder) must decide to take either Path A or Path B to attempt to rescue persons after a natural disaster.
 - [A captain](stakeholder) is on an overcrowded lifeboat and has to decide if he forces some people to go over board in order to save the rest
-- [Solomon](name) must decide if he disobeys the orders of [Erskine](name:Erskine)
-- [Erskine](name:Erskine) has to decide whether her saves most of the people in his town or tries to achieve the same by giving information to the enemy
+- [Solomon](name) must decide if he disobeys the orders of [Erskine](name)
+- [Erskine](name) has to decide whether her saves most of the people in his town or tries to achieve the same by giving information to the enemy
 
 ## intent:deny
 - It would not effect anyone else
@@ -632,6 +637,11 @@
 - I sincerely doubt that
 - No more people are involved
 - no thats all for now
+- no
+- None I could tell you
+- I have named them all
+- Those were the only ones
+- that were all involved persons
 
 ## intent:deontology
 - /deontology
@@ -780,6 +790,7 @@
 - /moralstatus{"moralstatus": "machine"}
 
 ## intent:name
+- [the familiy](stakeholder)
 - [The Town](stakeholder)
 - [Mum](stakeholder)
 - [Kitty](name)
@@ -865,13 +876,22 @@
 - Call him [victim](stakeholder)
 - My name is [Alex](name)
 - [Mike](name)
-- [Graziella](name:Graziella)
+- [Graziella](name)
 - [Mum](stakeholder:mum)
 - [Chris](name)
 - [Solomon](name)
 - [Kim](name)
 - The name is [Kim](name)
 - [Dan](name)
+- students
+- students
+- Yes, they are [the students](stakeholder)
+- [The Hessians](name:the Hessians)
+- [Kitty](name:Kitty)
+- You can call me by the name [Ansgar](name)
+- I told you the name [Leander](name)
+- Yes, you can call him [Kilian](name:Kilian)
+- The doctors name is [Kevin](name)
 
 ## intent:negative
 - It could be negative if he isn't one of those saved.
@@ -1174,7 +1194,8 @@
 - He can [keep the money](deed)
 - [Dirk](name) wants [Thomas](name) to [kill](deed) [Cleopatra](name), and he could [do that](deed).
 - [Thomas](name) can also [refuse to kill the dog](deed) and [let her live](deed)
-- [Erskine](name:Erskine) has the option to [hand over information](deed) to the enemy, which would lead to [everyone's life being saved](deed)
+- [Erskine](name) has the option to [hand over information](deed) to the enemy, which would lead to [everyone's life being saved](deed)
+- The first possibility [Alex](name) has is to [punish the cat](deed)
 
 ## intent:positive
 - For [Isabel](name) it would be positive, becayshe gets a new kidney
@@ -1229,6 +1250,13 @@
 - positive
 
 ## intent:quantity
+- [Five](quantity) people
+- [five](quantity) dogs
+- [Five](quantity) people
+- There are [five](quantity) people
+- [Five](quantity) people
+- [three](quantity) persons
+- [Five](quantity) persons
 - [50.5](quantity)
 - [6,5](quantity)
 - [50,5](quantity)%
@@ -1420,8 +1448,17 @@
 - [9](quantity)
 - Around [50000](quantity)
 - It should be [ten](quantity)
+- [24](quantity)
+- the effects can be estimated [7](quantity)
+- [4](quantity) is the impact
+- I'd estimate it [3](quantity)
+- The likelihood is about [60](quantity)%
+- Like [6](quantity) on the drastic-scala
+- [9](quantity)
+- The level would be [5](quantity)
 
 ## intent:smalltalk
+- can you help me with something?
 - Just being nice
 - What is your name?
 - tell me about your personality
@@ -1742,28 +1779,30 @@
 - [Me](stakeholder:me) and my daughter are involved
 - also there is an [unknown person](stakeholder)
 - [Me](stakeholder:me)
-- [Erskine](name:Erskine), Chris, Solomon, Kim
+- [Erskine](name), Chris, Solomon, Kim
+- [Anton](name:anton) happens to be a teacher who teaches at a school
+- [Anton](name:anton) considers the installation of a new method for teaching his students
+- [My kitten](stakeholder:my kitten) has made a mess out of my living room
+- It is [me](stakeholder) and [my cat](stakeholder)
+- [A man](stakeholder:a man) whose name is Leander has found something
+- What he found belonged to some other guy
+- I know a doctor who does organ transplations and has five patients waiting for an organ
+- [A tourist](stakeholder:a tourist) named [George](name:George)
+- [Isabel](name:Isabel), who is in desperate need of a new kidney
 
 ## intent:stakeholdergroup
+- Hi. I'm facing a situation with [a lot of people](stakeholder) who support a football club
 - [His students](stakeholder)
 - Also [Adrians family](stakeholder) is involved
 - First, there is [a group of people](stakeholder) standing on the tracks
 - There is [a group of eight people](stakeholder) standing on the tracks
 - There are [three](quantity) parties involved
-- [the familiy](stakeholder)
 - [A large group of people](stakeholder) is threatened by the potential explosions of the bombs
 - With her are [10 people](stakeholder) who follow behind her
 - [The group of people](stakeholder) following her
 - There are [the children](stakeholder) of the orphanage which is struggling for funding
 - [Four expedition agents](stakeholder) are trapped in a mine.
 - [Four other persons](stakeholder) are trapped in the mine.
-- [Five people](stakeholder:five people)
-- [five dogs](stakeholder)
-- [Five people](stakeholder:five people)
-- There are [five people](stakeholder)
-- [Five people](stakeholder:five people)
-- [three persons](stakeholder)
-- [Five persons](stakeholder:five persons)
 - [Five persons](stakeholder:five persons) lie on the tracks and get overrun if the switch is not flipped
 - [Five persons](stakeholder:five persons), who lie on a track
 - [Five persons](stakeholder:five persons) lay on the tracks and get killed by a train if the switch is not flipped
@@ -1831,6 +1870,7 @@
 - There are [five patients](stakeholder) who all need different organ transplants.
 - [The supporters](stakeholder) of the respective football club
 - [The members of the club's board](stakeholder)
+- His [students](stakeholder)
 
 ## intent:thanks
 - you helped a lot thank you
@@ -1895,6 +1935,7 @@
 - Five
 
 ## synonym:Alex
+- {"name": "Alex"}
 - alex
 - {"name": "alex"}
 
@@ -2006,6 +2047,9 @@
 ## synonym:Peter
 - peter
 
+## synonym:Quinn
+- {"name": "Quinn"}
+
 ## synonym:Samuel
 - samuel
 
@@ -2072,6 +2116,9 @@
 ## synonym:a lot of people
 - A lot of people
 
+## synonym:a man
+- A man
+
 ## synonym:a patient
 - A patient
 
@@ -2093,11 +2140,21 @@
 ## synonym:an Overseer
 - An overseer
 
+## synonym:animal
+- {"moralstatus": "animal"}
+
 ## synonym:another person
 - Another person
 
-## synonym:cleopatra
-- Cleopatra
+## synonym:anton
+- {"name": "anton"}
+- Anton
+
+## synonym:Cleopatra
+- cleopatra
+
+## synonym:deed
+- {"name": "deed"}
 
 ## synonym:five people
 - Five people
@@ -2115,11 +2172,20 @@
 - {"name": "graziella"}
 - Graziella
 
+## synonym:human
+- {"moralstatus": "human"}
+
 ## synonym:keep the purse
 - Keep the purse
 
+## synonym:kilian
+- Kilian
+
 ## synonym:killing
 - Killing
+
+## synonym:Kitty
+- kitty
 
 ## synonym:letting glenn die
 - letting Glenn die
@@ -2135,6 +2201,9 @@
 
 ## synonym:mum
 - Mum
+
+## synonym:my kitten
+- My kitten
 
 ## synonym:one other person
 - One other person

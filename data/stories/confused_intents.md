@@ -1,3 +1,81 @@
+## stakeholdergroup | quantity 1
+* greeting
+    - action_intro
+* quantity
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 1}
+    - slot{"action_return": true}
+    - utter_ask_quantity
+* quantity{"quantity": "24"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_ask_name_plural
+
+## stakeholdergroup | quantity 2
+* greeting
+    - action_intro
+* quantity{"quantity": "ten"}
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 1}
+    - slot{"action_return": true}
+    - utter_ask_name_plural
+
+## stakeholdergroup | quantity 3
+* stakeholder{"name": "Molly"}
+    - slot{"name": "Molly"}
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 1}
+    - slot{"action_return": true}
+    - action_check_identified_name
+    - slot{"action_return": false}
+    - utter_ask_identified_name
+* correct
+    - action_update_stakeholder
+    - slot{"name": "Molly"}
+    - slot{"action_return": true}
+    - utter_ask_moralstatus
+* moralstatus{"moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* quantity{"quantity": "three"}
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 1}
+    - slot{"action_return": true}
+    - utter_ask_name_plural
+
+## stakeholdergroup | quantity 4
+* stakeholder{"name": "Molly"}
+    - slot{"name": "Molly"}
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 1}
+    - slot{"action_return": true}
+    - action_check_identified_name
+    - slot{"action_return": false}
+    - utter_ask_identified_name
+* correct
+    - action_update_stakeholder
+    - slot{"name": "Molly"}
+    - slot{"action_return": true}
+    - utter_ask_moralstatus
+* moralstatus{"moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* quantity
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 1}
+    - slot{"action_return": true}
+    - utter_ask_quantity
+
 ## name | stakeholdergroup 1
 * stakeholdergroup
     - action_create_stakeholder

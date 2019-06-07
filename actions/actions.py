@@ -112,6 +112,7 @@ class CreateStakeholder(Action):
             (tracker.latest_message['intent'].get('name') == 'decider'):
             sh['amount'] = 1
         elif (tracker.latest_message['intent'].get('name') == 'stakeholdergroup'):
+            # Only the stakeholder entity is considered, because a quantity entity might be unrelated to the actual amount
             sources = list(tracker.get_latest_entity_values('stakeholder'))
             quantity = nlu.get_quantity_from_sources(sources)
             if not quantity == -1:
@@ -578,8 +579,12 @@ class CreateConsequence(Action):
             impact = 1
         elif tracker.get_slot('sentiment') == 'neg':
             impact = -1
+        elif tracker.get_slot('sentiment') == 'neu':
+            impact = 0
         else:
             impact = 0
+            # Delete sentiment value possibly saved from earlier consequence
+            events.append(SlotSet('sentiment', None))
 
         # Find out, which stakeholder is affected by this consequence
         try:
@@ -752,7 +757,7 @@ class ActionRestart(Action):
 
     def run(self, dispatcher, tracker, domain):
         mind.amnesia(tracker.sender_id)
-        return [Restarted(), UserUttered('/greeting'), FollowupAction("action_intro")]
+        return [Restarted(), FollowupAction("action_intro")]
        
 
 class ActionDefaultAskAffirmation(Action):

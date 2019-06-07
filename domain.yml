@@ -71,29 +71,29 @@ entities:
 - sentiment
 - stakeholder
 intents:
-- decider
-- negative
-- option
-- consequence
-- wrong
-- positive
-- greeting
-- quantity
-- correct
-- stakeholder
 - moralstatus
+- correct
 - name
 - deny
+- decider
+- stakeholder
+- greeting
+- quantity
+- wrong
+- option
+- stakeholdergroup
+- consequence
+- negative
+- positive
 - utilitarism
 - deontology
 - affirm
-- stakeholdergroup
 - neutral
 - dontknow
 - moralquestion
 - goodbye
 - thanks
-- smalltalk
+- smalltalk: {triggers: action_handle_smalltalk}
 slots:
   action_return:
     type: bool
@@ -534,8 +534,6 @@ templates:
       title: 'Yes'
     - payload: /deny
       title: Not this time
-    - payload: /restart
-      title: Start over the dialog
     text: Do you want me to evaluate using another ethics principle?
   utter_next_option:
   - text: Can you describe any further options to me?

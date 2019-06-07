@@ -69,7 +69,7 @@ def get_stakeholder_by_name(s_id, name):
 
 		if sh == None and name.lower().startswith('the'):
 			sh = current(s_id).get(q.name.matches(name.split(' ')[1], flags=re.IGNORECASE))
-	except TypeError:
+	except (TypeError, AttributeError):
 		return None
 	return Stakeholder(sh) if sh != None else None
 
