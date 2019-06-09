@@ -11,7 +11,7 @@
     - slot{"name": "Roswitha"}
     - slot{"action_return": true}
     - utter_ask_moralstatus
-* moralstatus{"moralstatus": "human"}
+* inform{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
     - slot{"action_return": true}
@@ -30,7 +30,7 @@
     - slot{"name": "Roswitha"}
     - slot{"action_return": true}
     - utter_ask_moralstatus
-* moralstatus{"moralstatus": "human"}
+* inform{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
     - slot{"action_return": true}
@@ -49,7 +49,7 @@
     - slot{"name": "Roswitha"}
     - slot{"action_return": true}
     - utter_ask_moralstatus
-* moralstatus{"moralstatus": "human"}
+* inform{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
     - slot{"action_return": true}
@@ -181,7 +181,7 @@
     - utter_ask_name_plural
 
 ## User answers affirm instead of telling the next stakeholder 1
-* moralstatus{"moralstatus": "human"}
+* inform{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
     - slot{"action_return": true}

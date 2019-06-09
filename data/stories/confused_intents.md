@@ -37,7 +37,7 @@
     - slot{"name": "Molly"}
     - slot{"action_return": true}
     - utter_ask_moralstatus
-* moralstatus{"moralstatus": "human"}
+* inform{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
     - slot{"action_return": true}
@@ -64,7 +64,7 @@
     - slot{"name": "Molly"}
     - slot{"action_return": true}
     - utter_ask_moralstatus
-* moralstatus{"moralstatus": "human"}
+* inform{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
     - slot{"action_return": true}
@@ -174,7 +174,7 @@
     - slot{"name": "Molly"}
     - slot{"action_return": true}
     - utter_ask_moralstatus
-* moralstatus{"moralstatus": "human"}
+* inform{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
     - slot{"action_return": true}
@@ -190,7 +190,7 @@
     - utter_ask_identified_name
 
 ## stakeholder | name 2
-* moralstatus{"moralstatus": "human"}
+* inform{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
     - slot{"action_return": true}
@@ -269,7 +269,7 @@
     - slot{"name": "Ken"}
     - slot{"action_return": true}
     - utter_ask_moralstatus
-* moralstatus{"moralstatus": "human"}
+* inform{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
     - slot{"action_return": true}
@@ -298,7 +298,7 @@
     - slot{"name": "Ken"}
     - slot{"action_return": true}
     - utter_ask_moralstatus
-* moralstatus{"moralstatus": "human"}
+* inform{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
     - slot{"action_return": true}
@@ -327,7 +327,7 @@
     - slot{"name": "Ken"}
     - slot{"action_return": true}
     - utter_ask_moralstatus
-* moralstatus{"moralstatus": "human"}
+* inform{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
     - slot{"action_return": true}
@@ -376,7 +376,7 @@
     - action_create_option
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_ask_option_universalizable
+    - utter_ask_deontic_modality
 
 ## option | stakeholder 3
 * decider{"name": "Thomas"}
@@ -389,7 +389,7 @@
     - action_create_option
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_ask_option_universalizable
+    - utter_ask_deontic_modality
 
 ## option | stakeholder 4
 * deny
@@ -410,7 +410,7 @@
     - action_create_option
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_ask_option_universalizable
+    - utter_ask_deontic_modality
 
 ## option | consequence 1
 * deny
@@ -421,7 +421,7 @@
     - action_create_option
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_ask_option_universalizable
+    - utter_ask_deontic_modality
 * correct
     - action_update_option
     - slot{"deed": null}
@@ -436,11 +436,11 @@
     - action_create_option
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_ask_option_universalizable
+    - utter_ask_deontic_modality
 * wrong
     - action_update_option
     - slot{"action_return": true}
-    - utter_ask_inherent_evil
+    - utter_ask_no_rule_reason
 
 ## option | consequence 3
 * decider{"name": "thomas"}
@@ -454,7 +454,7 @@
     - action_create_option
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_ask_option_universalizable
+    - utter_ask_deontic_modality
 
 ## option | consequence 4
 * decider{"name": "thomas"}
@@ -469,7 +469,7 @@
     - action_create_option
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_ask_option_universalizable
+    - utter_ask_deontic_modality
 
 ## consequence | stakeholder 1
 * correct

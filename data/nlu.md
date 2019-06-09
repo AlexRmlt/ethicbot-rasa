@@ -894,6 +894,7 @@
 - The doctors name is [Kevin](name)
 
 ## intent:negative
+- negativ
 - It could be negative if he isn't one of those saved.
 - they are rather negative
 - That would be really bad for [Benjamin](name)!
@@ -1198,6 +1199,7 @@
 - The first possibility [Alex](name) has is to [punish the cat](deed)
 
 ## intent:positive
+- positiv
 - For [Isabel](name) it would be positive, becayshe gets a new kidney
 - It would be positive to keep the money
 - That would be positive for him
@@ -1250,6 +1252,18 @@
 - positive
 
 ## intent:quantity
+- [12.3](quantity)
+- [55,5](quantity)
+- [78.9](quantity)
+- [23,3](quantity)
+- [11.4](quantity)
+- [44,4](quantity)
+- [33.3](quantity)
+- [33,3](quantity)
+- [66.6](quantity)
+- [66,6](quantity)
+- [99.9](quantity)
+- [99,9](quantity)
 - [Five](quantity) people
 - [five](quantity) dogs
 - [Five](quantity) people

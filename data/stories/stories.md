@@ -71,7 +71,7 @@
     - slot{"name": "erskine"}
     - slot{"action_return": true}
     - utter_ask_moralstatus
-* moralstatus{"moralstatus": "human"}
+* inform{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
     - slot{"action_return": true}
@@ -90,7 +90,7 @@
     - slot{"name": "Chris"}
     - slot{"action_return": true}
     - utter_ask_moralstatus
-* moralstatus{"moralstatus": "human"}
+* inform{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
     - slot{"action_return": true}
@@ -109,7 +109,7 @@
     - slot{"name": "Solomon"}
     - slot{"action_return": true}
     - utter_ask_moralstatus
-* moralstatus{"moralstatus": "human"}
+* inform{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
     - slot{"action_return": true}
@@ -140,7 +140,7 @@
     - slot{"name": "Dan"}
     - slot{"action_return": true}
     - utter_ask_moralstatus
-* moralstatus{"moralstatus": "human"}
+* inform{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
     - slot{"action_return": true}
@@ -161,16 +161,19 @@
     - slot{"deed": "hand over information"}
     - slot{"action_return": true}
     - utter_ask_identified_deed
-* correct
+* affirm
     - action_create_deed
     - slot{"action_return": true}
-    - utter_ask_deed_universalizable
+    - utter_ask_deontic_modality
+* inform{"deonticmodality": "permission"}
+    - action_update_deed
+    - slot{"action_return": true}
+    - utter_ask_universalizable
 * wrong
     - action_update_deed
     - slot{"action_return": true}
-    - utter_ask_inherent_evil
-* deny{"name": "too_specific"}
-    - slot{"name": "too_specific"}
+    - utter_ask_no_rule_reason
+* inform{"reason": "inherently_evil"}
     - action_update_deed
     - slot{"deed": null}
     - slot{"action_return": true}
@@ -244,7 +247,7 @@
     - slot{"name": "anton"}
     - slot{"action_return": true}
     - utter_ask_moralstatus
-* moralstatus{"moralstatus": "human"}
+* inform{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
     - slot{"action_return": true}
@@ -264,7 +267,7 @@
     - slot{"name": "the Hessians"}
     - slot{"action_return": true}
     - utter_ask_moralstatus
-* moralstatus{"moralstatus": "human"}
+* inform{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
     - slot{"action_return": true}
@@ -280,7 +283,7 @@
     - slot{"name": "Toni"}
     - slot{"action_return": true}
     - utter_ask_moralstatus
-* moralstatus{"moralstatus": "human"}
+* inform{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
     - slot{"action_return": true}
@@ -299,14 +302,16 @@
     - action_create_option
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_ask_option_universalizable
-* wrong{"name": "option"}
-    - slot{"name": "option"}
+    - utter_ask_deontic_modality
+* inform{"deonticmodality": "permission"}
     - action_update_option
     - slot{"action_return": true}
-    - utter_ask_inherent_evil
-* deny{"name": "too_specific"}
-    - slot{"name": "too_specific"}
+    - utter_ask_universalizable
+* wrong
+    - action_update_option
+    - slot{"action_return": true}
+    - utter_ask_no_rule_reason
+* inform{"reason": "inherently_evil"}
     - action_update_option
     - slot{"action_return": true}
     - utter_ask_consequences
@@ -398,7 +403,7 @@
     - slot{"name": "kitty"}
     - slot{"action_return": true}
     - utter_ask_moralstatus
-* moralstatus{"moralstatus": "animal"}
+* inform{"moralstatus": "animal"}
     - slot{"moralstatus": "animal"}
     - action_update_stakeholder
     - slot{"action_return": true}
@@ -436,12 +441,15 @@
     - slot{"deed": "punish the cat"}
     - slot{"action_return": true}
     - utter_ask_identified_deed
-* wrong{"name": "deed"}
-    - slot{"name": "deed"}
+* deny
     - action_update_option
     - slot{"deed": null}
     - slot{"action_return": true}
-    - utter_ask_option_universalizable
+    - utter_ask_deontic_modality
+* inform{"deonticmodality": "permission"}
+    - action_update_option
+    - slot{"action_return": true}
+    - utter_ask_universalizable
 * correct
     - action_update_option
     - slot{"action_return": true}
@@ -475,7 +483,7 @@
     - slot{"name": "kilian"}
     - slot{"action_return": true}
     - utter_ask_moralstatus
-* moralstatus{"moralstatus": "other"}
+* inform{"moralstatus": "other"}
     - slot{"moralstatus": "other"}
     - action_update_stakeholder
     - slot{"action_return": true}
@@ -509,7 +517,7 @@
     - slot{"name": "Kevin"}
     - slot{"action_return": true}
     - utter_ask_moralstatus
-* moralstatus{"name": "human"}
+* inform{"name": "human"}
     - slot{"name": "human"}
     - action_update_stakeholder
     - slot{"action_return": true}
@@ -544,7 +552,7 @@
     - slot{"name": "isabel"}
     - slot{"action_return": true}
     - utter_ask_moralstatus
-* moralstatus{"moralstatus": "human"}
+* inform{"moralstatus": "human"}
     - slot{"moralstatus": "human"}
     - action_update_stakeholder
     - slot{"action_return": true}

@@ -163,7 +163,7 @@ class UpdateStakeholder(Action):
     * Intent 'wrong'        (user rejected name recognized by the bot)
     * Intent 'dontknow'     (user does not know the proposed stakeholders name)
     * Intent 'deny'         (user does not tell the proposed stakeholders name)
-    * Intent 'moralstatus'  
+    * Intent 'inform'       (user informs about moral status)  
 
     Required slots: /
 
@@ -290,8 +290,8 @@ class UpdateStakeholder(Action):
 
                     action_return = True
 
-            # Intent: moralstatus
-            elif (tracker.latest_message['intent'].get('name') == 'moralstatus'):
+            # Intent: inform
+            elif (tracker.latest_message['intent'].get('name') == 'inform'):
                 sh.set_moral_status(tracker.get_slot('moralstatus')).memorize(tracker.sender_id)
                 dispatcher.utter_template('utter_got_it', tracker)
                 action_return = True
@@ -351,9 +351,9 @@ class UpdateOption(Action):
 
     Triggered by:
     * Intent 'correct' after 'utter_ask_option_universalizable'
-    * Intent 'wrong' after 'utter_ask_option_universalizable' OR 'utter_ask_identified_deed' (check if relevant or not)
-    * Intent 'affirm' after 'utter_ask_option_inherent_evil'
-    * Intent 'deny' after 'utter_ask_option_inherent_evil'
+    * Intent 'deny' after 'utter_ask_identified_deed' (check if relevant or not)
+    * Intent 'wrong' after 'utter_ask_option_universalizable'
+    * Intent 'inform' after 'utter_ask_no_rule_reason' OR after 'utter_ask_deontic_modality'
 
     Required slots: 
     * deed == deed the bot is currently talking about
@@ -373,45 +373,49 @@ class UpdateOption(Action):
         try:
             option = mind.get_recent_option(tracker.sender_id)
 
-            # Update universalizability and inherent_evil
+            # Update universalizability
             if (tracker.latest_message['intent'].get('name') == 'correct'):
                 option['universalizable'] = True
-                option['inherent_evil'] = False
+                option['no_rule_reason'] = None
                 action_return = True
             
-            elif (tracker.latest_message['intent'].get('name') == 'wrong'):
-                # The 'name' entity is abused in this case
-                deed_or_option = next(tracker.get_latest_entity_values('name'), None)
-
-                if deed_or_option == 'deed':
-                    option['deeds_tmp'].remove(tracker.get_slot('deed'))
-                    
-                    if len(option['deeds_tmp']) > 0:
-                        current_deed = option['deeds_tmp'][0]
-                    else:
-                        current_deed = None
-                        del option['deeds_tmp']
-
-                    action_return = True
-                    events.append(SlotSet("deed", current_deed))
-                elif deed_or_option == 'option':
-                    option['universalizable'] = False
-                    action_return = True
-
-            elif (tracker.latest_message['intent'].get('name') == 'affirm'):
-                option['inherent_evil'] = True
-                action_return = True
-                
             elif (tracker.latest_message['intent'].get('name') == 'deny'):
-                # The 'name' entity is abused in this case once again
-                reason = next(tracker.get_latest_entity_values('name'), None)
-                if reason == 'too_specific':
-                    option['no_rule_reason'] = 'a more general formulated rule could apply in this case!'
-                elif reason == 'needs_conditions':
-                    option['no_rule_reason'] = 'a general rule could be applied under certain conditions!'
+                option['deeds_tmp'].remove(tracker.get_slot('deed'))
+                    
+                if len(option['deeds_tmp']) > 0:
+                    current_deed = option['deeds_tmp'][0]
+                else:
+                    current_deed = None
+                    del option['deeds_tmp']
 
-                option['inherent_evil'] = False
                 action_return = True
+                events.append(SlotSet("deed", current_deed))
+            
+            elif (tracker.latest_message['intent'].get('name') == 'wrong'):
+                option['universalizable'] = False
+                action_return = True
+
+            elif (tracker.latest_message['intent'].get('name') == 'inform'):
+                reason = next(tracker.get_latest_entity_values('reason'), None)
+                deontic_mod = next(tracker.get_latest_entity_values('deonticmodality'), None)
+
+                if not reason == None:
+                    # The user informs the bot about the reason why there cannot be a general rule
+                    if not reason == 'no_reason':
+                        option['no_rule_reason'] = reason
+                    else:
+                        option['no_rule_reason'] = None
+                        dispatcher.utter_template('utter_will_not_consider', tracker)
+                    action_return = True
+
+                if not deontic_mod == None:
+                    # The user informs the bot about the suitable deontic category
+                    if not deontic_mod == 'no_modality':
+                        option['deontic_modality'] = deontic_mod
+                    else:
+                        option['deontic_modality'] = None
+                        dispatcher.utter_template('utter_will_not_consider', tracker)
+                    action_return = True
             
             if action_return == True:
                 option.memorize(tracker.sender_id)
@@ -480,8 +484,7 @@ class UpdateDeed(Action):
     Triggered by:
     * Intent 'correct' after 'utter_ask_deed_universalizable'
     * Intent 'wrong' after 'utter_ask_deed_universalizable'
-    * Intent 'affirm' after 'utter_ask_deed_inherent_evil'
-    * Intent 'deny' after 'utter_ask_deed_inherent_evil'
+    * Intent 'inform' after 'utter_ask_no_rule_reason' OR after 'utter_ask_deontic_modality'
 
     Required slots: /
 
@@ -500,34 +503,42 @@ class UpdateDeed(Action):
         try:
             deed = mind.get_deed(tracker.sender_id, tracker.get_slot('deed'))
         
-            # Update universalizability and inherent_evil
+            # Update universalizability
             if (tracker.latest_message['intent'].get('name') == 'correct'):
                 deed['universalizable'] = True
-                deed['inherent_evil'] = False
+                deed['no_rule_reason'] = None
                 action_return = True
             elif (tracker.latest_message['intent'].get('name') == 'wrong'):
                 deed['universalizable'] = False
                 action_return = True
-            elif (tracker.latest_message['intent'].get('name') == 'affirm'):
-                deed['inherent_evil'] = True
-                action_return = True
-            elif (tracker.latest_message['intent'].get('name') == 'deny'):
-                # The 'name' entity is abused in this case
-                reason = next(tracker.get_latest_entity_values('name'), None)
-                if reason == 'too_specific':
-                    deed['no_rule_reason'] = 'a more general formulated rule could apply in this case!'
-                elif reason == 'needs_conditions':
-                    deed['no_rule_reason'] = 'a general rule could be applied under certain conditions!'
+            elif (tracker.latest_message['intent'].get('name') == 'inform'):
+                reason = next(tracker.get_latest_entity_values('reason'), None)
+                deontic_mod = next(tracker.get_latest_entity_values('deonticmodality'), None)
 
-                deed['inherent_evil'] = False
-                action_return = True
+                if not reason == None:
+                    # The user informs the bot about the reason why there cannot be a general rule
+                    if not reason == 'no_reason':
+                        option['no_rule_reason'] = reason
+                    else:
+                        option['no_rule_reason'] = None
+                        dispatcher.utter_template('utter_will_not_consider', tracker)
+                    action_return = True
+
+                if not deontic_mod == None:
+                    # The user informs the bot about the suitable deontic category
+                    if not deontic_mod == 'no_modality':
+                        option['deontic_modality'] = deontic_mod
+                    else:
+                        option['deontic_modality'] = None
+                        dispatcher.utter_template('utter_will_not_consider', tracker)
+                    action_return = True
             
             if action_return == True:
                 deed.memorize(tracker.sender_id)
                 dispatcher.utter_template('utter_got_it', tracker)
 
             # Remove current and select next deed from list, if available
-            if ('universalizable' in deed and 'inherent_evil' in deed):
+            if ('universalizable' in deed and 'no_rule_reason' in deed and 'deontic_modality' in deed):
                 option = mind.get_recent_option(tracker.sender_id)
 
                 if deed['label'] in option['deeds_tmp']:
@@ -767,7 +778,7 @@ class ActionDefaultAskAffirmation(Action):
         return "action_default_ask_affirmation"
 
     def __init__(self) -> None:
-        self.ignored_intents = ['deny', 'affirm', 'neutral', 'moralstatus', 'dontknow', 'greeting', 'correct', 'wrong', 
+        self.ignored_intents = ['deny', 'affirm', 'neutral', 'inform', 'dontknow', 'greeting', 'correct', 'wrong', 
                                 'utilitarism', 'deontology', 'moralquestion', 'goodbye', 'thanks', 'smalltalk']
 
         import csv
