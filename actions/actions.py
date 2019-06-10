@@ -410,8 +410,8 @@ class UpdateOption(Action):
 
                 if not deontic_mod == None:
                     # The user informs the bot about the suitable deontic category
-                    if not deontic_mod == 'no_modality':
-                        option['deontic_modality'] = deontic_mod
+                    if not deontic_mod == 'indifference':
+                        deed['deontic_modality'] = deontic_mod
                     else:
                         option['deontic_modality'] = None
                         dispatcher.utter_template('utter_will_not_consider', tracker)
@@ -519,7 +519,7 @@ class UpdateDeed(Action):
 
                 if not deontic_mod == None:
                     # The user informs the bot about the suitable deontic category
-                    if not deontic_mod == 'no_modality':
+                    if not deontic_mod == 'indifference':
                         deed['deontic_modality'] = deontic_mod
                     else:
                         deed['deontic_modality'] = None

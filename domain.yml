@@ -182,9 +182,7 @@ templates:
       title: Forbidden
     - payload: '/inform{"deonticmodality": "obligation"}'
       title: Obligatory
-    - payload: '/inform{"deonticmodality": "option"}'
-      title: Optional
-    - payload: '/inform{"deonticmodality": "no_modality"}'
+    - payload: '/inform{"deonticmodality": "indifference"}'
       title: Neither of these categories applies
     text: Which of these categories would you intuitively associate with the considered
       action?
