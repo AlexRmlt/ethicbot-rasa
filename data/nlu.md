@@ -268,13 +268,13 @@
 - [Olga](name) would also suffer if she knows her wife is being tortured.
 - If [Olga](name) acts as expected and tells the police the location of the bombs then many innocent lives could be saved
 - If the police does not succeed in finding the bombs, [the Swabians](name) will die
-- [The passengers](stakeholder:the passengers) would have less people trying to prevent the boat from sinking and might therefore drown
-- Lars would be saved
-- [The passengers](name:the passengers) would have a better chance of surviving on the lifeboat
+- [the passengers](stakeholder) would have less people trying to prevent the boat from sinking and might therefore drown
+- [Lars](name) would be saved
+- [the passengers](name) would have a better chance of surviving on the lifeboat
 - [Lars](name) would have the same chance of surviving as the other passengers
 - [The Palatines](name:the Palatines) would drown in the ocean
-- [The passengers](stakeholder:the passengers) would have a better chance to survive
-- [The passengers](stakeholder:the passengers) would possibly die in the overcrowded lifeboat
+- [the passengers](stakeholder) would have a better chance to survive
+- [the passengers](stakeholder) would possibly die in the overcrowded lifeboat
 - [The child](stakeholder) would suffer unimaginable pain
 - For humanity it would mean that nearly everything bad would come to an end if the alien keeps its promise
 - [The child](stakeholder) would be kept save and would not have to suffer
@@ -923,6 +923,7 @@
 - identify them by the name [the terrorists](stakeholder)
 - [the city people](stakeholder)
 - Use the name [the commander](stakeholder)!
+- [the passengers](stakeholder)
 
 ## intent:negative
 - negatively
