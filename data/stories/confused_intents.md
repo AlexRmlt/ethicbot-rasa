@@ -471,6 +471,52 @@
     - slot{"action_return": true}
     - utter_ask_deontic_modality
 
+## option | name 1
+* deny
+    - utter_next_option
+* name{"name": "Thomas"}
+    - slot{"name": "Thomas"}
+    - action_create_option
+    - slot{"deed": null}
+    - slot{"action_return": true}
+    - utter_ask_deontic_modality
+
+## option | name 2
+* deny
+    - utter_next_option
+* name
+    - action_create_option
+    - slot{"deed": null}
+    - slot{"action_return": true}
+    - utter_ask_deontic_modality
+
+## option | name 3
+* decider{"name": "Thomas"}
+    - slot{"name": "Thomas"}
+    - action_update_stakeholder
+    - slot{"decider": "Thomas"}
+    - slot{"action_return": true}
+    - utter_ask_options
+* name{"name": "Thomas"}
+    - slot{"name": "Thomas"}
+    - action_create_option
+    - slot{"deed": null}
+    - slot{"action_return": true}
+    - utter_ask_deontic_modality
+
+## option | name 4
+* decider{"name": "Thomas"}
+    - slot{"name": "Thomas"}
+    - action_update_stakeholder
+    - slot{"decider": "Thomas"}
+    - slot{"action_return": true}
+    - utter_ask_options
+* name
+    - action_create_option
+    - slot{"deed": null}
+    - slot{"action_return": true}
+    - utter_ask_deontic_modality
+
 ## consequence | stakeholder 1
 * correct
     - action_update_option

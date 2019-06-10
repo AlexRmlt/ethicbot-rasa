@@ -13,6 +13,7 @@ sid = SentimentIntensityAnalyzer()
 def lookup_names(message):
     """ Return name from lookup table
         Caution: Only the first found name is returned! """
+
     entities = message.get("entities")
     names = [ent for ent in entities if ent.get('entity') == 'name']
         

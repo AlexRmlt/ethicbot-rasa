@@ -244,7 +244,7 @@
     - slot{"action_return": true}
     - utter_ask_name_singular
 
-## Handle greeting as first message
+## Handle greeting as first message 1
 * greeting
     - action_intro
 * greeting
@@ -252,6 +252,13 @@
     - utter_ask_stakeholders
 * stakeholder{"name": "Andrea"}
     - action_create_stakeholder
+
+## Handle greeting as first message 2
+* greeting
+    - action_intro
+* greeting
+    - utter_greet
+    - utter_ask_stakeholders
 
 ## Choose evaluation principles twice or more times 1
 * deny

@@ -11,6 +11,22 @@
 - yes
 
 ## intent:consequence
+- [Peter](name) will take more time
+- [Patrice](name) wil get trouble due to plagiarism
+- [Peter](name) will save time
+- [Sascha](name) will be hungry
+- [simon](name:Simon) will get complains from Sascha
+- [simon](name:Simon) will enjoy spaghetti, too
+- [Simon](name) will be hungry
+- [the Fans](stakeholder) will have fun with the game
+- [jones](name:Jones) will suffer pain
+- [the fans](stakeholder) would miss 20 minutes out of the current football game
+- [Jones](name) will have pain
+- [The Bavarians](name:the Bavarians) would miss 20 minutes out of the football game
+- [Blue](name) will lose their rights on their homework
+- [Blue](name) would get caught with plagiarism and get a bad grade
+- [Manfred](name) will save time
+- [Manfred](name) will have a lot of work
 - [Jesse](name) will pay Andrea a reward
 - For [Andrea](name), it would be positive, for [Jesse](name) negative
 - [Maxi](name) will get back her ring
@@ -295,6 +311,9 @@
 - The installation of this method would save [Anton](name) a lot of time
 - [The Hessians](name:the Hessians) will have consequences as well
 - The copyright for his method goes to the United States
+- [the city people](stakeholder) would most likely survive
+- [the Bavarians](name) would die in the airplane
+- [The Bavarians](name:the Bavarians) and [the city people](stakeholder) would both die
 
 ## intent:correct
 - That is correct
@@ -358,8 +377,10 @@
 - [A captain](stakeholder) is on an overcrowded lifeboat and has to decide if he forces some people to go over board in order to save the rest
 - [Solomon](name) must decide if he disobeys the orders of [Erskine](name)
 - [Erskine](name) has to decide whether her saves most of the people in his town or tries to achieve the same by giving information to the enemy
+- [One commander](stakeholder:one commander) must make a decision if it is appropriate to shoot the airplane
 
 ## intent:deny
+- non
 - It would not effect anyone else
 - No more people involved
 - No, not for this option
@@ -642,6 +663,10 @@
 - I have named them all
 - Those were the only ones
 - that were all involved persons
+- that were all agents
+- that wouldn't affect anyone else
+- No I can't
+- There is not another option
 
 ## intent:deontology
 - /deontology
@@ -695,6 +720,7 @@
 - I don't know
 - I don't know the name
 - I don't know any action
+- I don't know it exactly
 
 ## intent:goodbye
 - okay see you later
@@ -766,10 +792,6 @@
 - hi
 - /greeting
 - Hi
-- hi
-- hi
-- hi
-- hi
 - hihi
 - hi
 - hi
@@ -777,24 +799,29 @@
 - hi
 - hi
 - Hi!
+- hi
+- Hello
+
+## intent:inform
+- /inform{"moralstatus": "human"}
+- /inform{"moralstatus": "human"}
+- /inform{"deonticmodality": "prohibition"}
+- /inform{"reason": "needs_conditions"}
+- /inform{"deonticmodality": "option"}
 
 ## intent:moralquestion
 - Should you take action in killing a person if it can prevent the death of a larger number of people?
 - How should the robot decide which path he has to take?
 - What are the important parameters to decide which group the robot tries to rescue?
 
-## intent:moralstatus
-- /moralstatus{"moralstatus": "animal"}
-- /moralstatus{"moralstatus": "human"}
-- /moralstatus{"moralstatus": "other"}
-- /moralstatus{"moralstatus": "machine"}
-
 ## intent:name
+- [Mizi](name)
+- [director](stakeholder)
+- [fans](stakeholder)
 - [the familiy](stakeholder)
 - [The Town](stakeholder)
 - [Mum](stakeholder)
 - [Kitty](name)
-- Yes, they are the students!
 - Let us call him [Mike](name)
 - [Mike](name)
 - The dog's name is [Cleopatra](name)
@@ -883,17 +910,22 @@
 - [Kim](name)
 - The name is [Kim](name)
 - [Dan](name)
-- students
-- students
+- [students](stakeholder)
+- [students](stakeholder)
 - Yes, they are [the students](stakeholder)
 - [The Hessians](name:the Hessians)
-- [Kitty](name:Kitty)
+- [Kitty](name)
 - You can call me by the name [Ansgar](name)
 - I told you the name [Leander](name)
-- Yes, you can call him [Kilian](name:Kilian)
+- Yes, you can call him [Kilian](name)
 - The doctors name is [Kevin](name)
+- [the fans](stakeholder)
+- identify them by the name [the terrorists](stakeholder)
+- [the city people](stakeholder)
+- Use the name [the commander](stakeholder)!
 
 ## intent:negative
+- negatively
 - negativ
 - It could be negative if he isn't one of those saved.
 - they are rather negative
@@ -950,8 +982,19 @@
 - It would not matter that much actually
 
 ## intent:option
-- [Andrea](name) can return the ring to a found things office
-- [Hauke](name) can give back the ring. However, it should be difficult to find Charlie
+- [Peter](name) can corect homework as before
+- [Peter](name) can [use a software to detect plagiarism](deed)
+- [simon](name:Simon) can [eat his lunch himself](deed)
+- [Simon](name) can [give away his lunch](deed)
+- [Simon](name) can [give Sascha his lunch](deed)
+- [Nicki](name) can [make Jones suffer](deed)
+- He can [save Jones](deed)
+- we can [let Jones suffer](deed)
+- We can [save Jones](deed)
+- [Manfred](name) can [use a software](deed) for checking plagiarism
+- [Manfred](name) [corrects the homework by hand](deed).
+- [Andrea](name) can [return the ring](deed) to a found things office
+- [Hauke](name) can [give back the ring](deed). However, it should be difficult to find Charlie
 - [Hauke](name) can [keep the ring](deed)
 - [Julio](name) can [refuse to kill](deed) Quinn
 - [Julio](name) was asked to [kill](deed) Maxi
@@ -1197,8 +1240,11 @@
 - [Thomas](name) can also [refuse to kill the dog](deed) and [let her live](deed)
 - [Erskine](name) has the option to [hand over information](deed) to the enemy, which would lead to [everyone's life being saved](deed)
 - The first possibility [Alex](name) has is to [punish the cat](deed)
+- [Shooting the plane](deed) as it would propably save a lot of lives
+- He can [refuse to shoot](deed) the plane as well
 
 ## intent:positive
+- positively
 - positiv
 - For [Isabel](name) it would be positive, becayshe gets a new kidney
 - It would be positive to keep the money
@@ -1250,8 +1296,12 @@
 - more positive
 - thats positive for [mike](name:Mike)
 - positive
+- Mostly positive
 
 ## intent:quantity
+- [80,5](quantity)
+- [2,5](quantity)
+- [99,5](quantity)
 - [12.3](quantity)
 - [55,5](quantity)
 - [78.9](quantity)
@@ -1470,6 +1520,12 @@
 - Like [6](quantity) on the drastic-scala
 - [9](quantity)
 - The level would be [5](quantity)
+- from [10](quantity) terrorists
+- Maybe around [10000](quantity)
+- [8.5](quantity)
+- [80.4](quantity)%
+- [5,6](quantity)
+- [9,99](quantity)
 
 ## intent:smalltalk
 - can you help me with something?
@@ -1533,6 +1589,15 @@
 - can we chat
 
 ## intent:stakeholder
+- [Peter](name) is a [teacher](stakeholder)
+- [Teacher](stakeholder) [Peter](name) has a problem with plagiarism in this class specifically
+- there is [the cat](stakeholder) named [Mizi](name)
+- [Simon](name) has a cat
+- Yes, there is [the TV director](stakeholder)
+- [Jones](name) has had an accident at the TV station
+- There are also [the football fans](stakeholder)
+- [Jones](name) has had an accident
+- There is [teacher](stakeholder) named [Manfred](name)
 - [Charlie](name) is the owner of the ring
 - [Andrea](name) found a golden bracelet
 - Yes, there is [the person](stakeholder) who lost the ring. But I do not know her name.
@@ -1801,10 +1866,13 @@
 - [A man](stakeholder:a man) whose name is Leander has found something
 - What he found belonged to some other guy
 - I know a doctor who does organ transplations and has five patients waiting for an organ
-- [A tourist](stakeholder:a tourist) named [George](name:George)
-- [Isabel](name:Isabel), who is in desperate need of a new kidney
+- [A tourist](stakeholder:a tourist) named [George](name)
+- [Isabel](name), who is in desperate need of a new kidney
 
 ## intent:stakeholdergroup
+- He has [24](quantity) [students](stakeholder) in his class
+- yes, there are [the football fans](stakeholder) all around the world
+- Yes, there are his [students](stakeholder)
 - Hi. I'm facing a situation with [a lot of people](stakeholder) who support a football club
 - [His students](stakeholder)
 - Also [Adrians family](stakeholder) is involved
@@ -1885,6 +1953,8 @@
 - [The supporters](stakeholder) of the respective football club
 - [The members of the club's board](stakeholder)
 - His [students](stakeholder)
+- [Terrorists](stakeholder) have captured an airplane and threaten to fly it into a crowded city.
+- [Plenty of people](stakeholder:plenty of people) at the ground are in danger if the airplane was to crash near them.
 
 ## intent:thanks
 - you helped a lot thank you
@@ -1932,7 +2002,6 @@
 - /wrong
 - /wrong
 - /wrong
-- /wrong
 
 ## synonym:1
 - one
@@ -1967,6 +2036,9 @@
 
 ## synonym:Christian
 - christian
+
+## synonym:Cleopatra
+- cleopatra
 
 ## synonym:Daniel
 - {"name": "Daniel"}
@@ -2025,6 +2097,9 @@
 ## synonym:Ken
 - {"name": "Ken"}
 
+## synonym:Kitty
+- kitty
+
 ## synonym:Lars
 - {"name": "Lars"}
 
@@ -2066,6 +2141,9 @@
 
 ## synonym:Samuel
 - samuel
+
+## synonym:Simon
+- simon
 
 ## synonym:Tanja
 - {"name": "Tanja"}
@@ -2148,6 +2226,9 @@
 ## synonym:a third person
 - A third person
 
+## synonym:a tourist
+- A tourist
+
 ## synonym:allow yves to continue living
 - allow Yves to continue living
 
@@ -2161,11 +2242,8 @@
 - Another person
 
 ## synonym:anton
-- {"name": "anton"}
 - Anton
-
-## synonym:Cleopatra
-- cleopatra
+- {"name": "anton"}
 
 ## synonym:deed
 - {"name": "deed"}
@@ -2197,9 +2275,6 @@
 
 ## synonym:killing
 - Killing
-
-## synonym:Kitty
-- kitty
 
 ## synonym:letting glenn die
 - letting Glenn die

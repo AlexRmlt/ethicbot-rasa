@@ -23,7 +23,7 @@ actions:
 - utter_ask_consequence_probability
 - utter_ask_consequences
 - utter_ask_deed
-- utter_ask_universalizable
+- utter_ask_deontic_modality
 - utter_ask_guess_quantity
 - utter_ask_identified_deed
 - utter_ask_identified_moralstatus
@@ -32,17 +32,17 @@ actions:
 - utter_ask_impact_negative
 - utter_ask_impact_positive
 - utter_ask_impact_weight
-- utter_ask_no_rule_reason
-- utter_ask_deontic_modality
 - utter_ask_method
 - utter_ask_moral_question
 - utter_ask_moralstatus
 - utter_ask_moralstatus_weight
 - utter_ask_name_plural
 - utter_ask_name_singular
+- utter_ask_no_rule_reason
 - utter_ask_options
 - utter_ask_quantity
 - utter_ask_stakeholders
+- utter_ask_universalizable
 - utter_confirm_decider
 - utter_confirm_stakeholders
 - utter_goodbye
@@ -66,37 +66,37 @@ actions:
 - utter_will_not_consider
 entities:
 - deed
-- moralstatus
-- reason
 - deonticmodality
+- moralstatus
 - name
 - quantity
+- reason
 - sentiment
 - stakeholder
 intents:
-- inform
-- correct
-- name
-- deny
-- decider
-- stakeholder
-- greeting
-- quantity
-- wrong
-- option
-- stakeholdergroup
-- consequence
-- negative
-- positive
-- utilitarism
 - deontology
 - affirm
-- neutral
+- stakeholdergroup
+- option
+- greeting
+- name
+- correct
+- positive
+- quantity
+- decider
+- utilitarism
+- wrong
 - dontknow
+- deny
+- inform
+- consequence
+- stakeholder
+- negative
+- neutral
 - moralquestion
 - goodbye
 - thanks
-- smalltalk: {triggers: action_handle_smalltalk}
+- smalltalk
 slots:
   action_return:
     type: bool
@@ -122,24 +122,6 @@ slots:
     - neg
     - neu
 templates:
-  utter_will_not_consider:
-  - text: Okay, I will refrain from considering this.
-  - text: Well, then I'm going to leave this out.
-  - text: I'll keep that out of my evaluation.
-  - text: Alright, then that won't be part of my analysis.
-  utter_ask_deontic_modality:
-  - buttons:
-    - payload: '/inform{"deonticmodality": "permission"}'
-      title: Permitted
-    - payload: '/inform{"deonticmodality": "prohibition"}'
-      title: Forbidden
-    - payload: '/inform{"deonticmodality": "obligation"}'
-      title: Obligatory
-    - payload: '/inform{"deonticmodality": "option"}'
-      title: Optional
-    - payload: '/inform{"deonticmodality": "no_modality"}'
-      title: Neither of these categories applies
-    text: Which of these categories would you intuitively associate with the considered action?
   utter_ask_consequence_definite:
   - buttons:
     - payload: /correct
@@ -192,13 +174,20 @@ templates:
   - text: Do you recognize any particular actions in this option that have strong
       moral relevance? Any generic deed that one would judge intuitively from a moral
       perspective. If yes, please name it briefly.
-  utter_ask_universalizable:
+  utter_ask_deontic_modality:
   - buttons:
-    - payload: /correct
-      title: 'Yes'
-    - payload: /wrong
-      title: 'No'
-    text: Could you want this action to become a general rule for everyone?
+    - payload: '/inform{"deonticmodality": "permission"}'
+      title: Permitted
+    - payload: '/inform{"deonticmodality": "prohibition"}'
+      title: Forbidden
+    - payload: '/inform{"deonticmodality": "obligation"}'
+      title: Obligatory
+    - payload: '/inform{"deonticmodality": "option"}'
+      title: Optional
+    - payload: '/inform{"deonticmodality": "no_modality"}'
+      title: Neither of these categories applies
+    text: Which of these categories would you intuitively associate with the considered
+      action?
   utter_ask_guess_quantity:
   - text: Could you please have a rough guess?
   - text: Could you estimate the number roughly?
@@ -345,18 +334,6 @@ templates:
       to occur. Could you make a rough assessment on a scale of 1 to 10?
   - text: I need to know the severity of the impact of this consequence if it were
       to occur. Could you give me a rough rating on a scale of 1 to 10?
-  utter_ask_no_rule_reason:
-  - buttons:
-    - payload: '/inform{"reason": "inherently_evil"}'
-      title: It is inherently evil.
-    - payload: '/inform{"reason": "too_specific"}'
-      title: The rule rule would be too specific for being applied generally
-    - payload: '/inform{"reason": "needs_conditions"}'
-      title: The rule can be applied under certain conditions only
-    - payload: '/inform{"reason": "no_reason"}'
-      title: Neither of these reasons applies.
-    text: Is that because you'd feel the action was evil in itself? Or is it just
-      not suitable for becoming a general rule because that would cause other problems?
   utter_ask_method:
   - buttons:
     - payload: /utilitarism
@@ -406,6 +383,18 @@ templates:
   - text: Can you give me a name?
   - text: Any name I can use for this agent?
   - text: Do you want me to call this agent by a certain name?
+  utter_ask_no_rule_reason:
+  - buttons:
+    - payload: '/inform{"reason": "inherently_evil"}'
+      title: It is inherently evil.
+    - payload: '/inform{"reason": "too_specific"}'
+      title: The rule rule would be too specific for being applied generally
+    - payload: '/inform{"reason": "needs_conditions"}'
+      title: The rule can be applied under certain conditions only
+    - payload: '/inform{"reason": "no_reason"}'
+      title: Neither of these reasons applies.
+    text: Is that because you'd feel the action was evil in itself? Or is it just
+      not suitable for becoming a general rule because that would cause other problems?
   utter_ask_options:
   - text: And what would be the most obvious option that {decider} could choose?
   - text: Could you describe the first option coming to your mind that {decider} could
@@ -443,6 +432,13 @@ templates:
   - text: My first question to you is which people are involved in the situation.
       I need a short description for each person or group of people in one sentence
       including their name, one at a time. Please start with the first one.
+  utter_ask_universalizable:
+  - buttons:
+    - payload: /correct
+      title: 'Yes'
+    - payload: /wrong
+      title: 'No'
+    text: Could you want this action to become a general rule for everyone?
   utter_confirm_decider:
   - text: The moral decision is made by {decider}.
   - text: Obviously {decider} is responsible for making the moral decision.
@@ -633,3 +629,8 @@ templates:
   - text: Okay, we will manage to proceed without this information anyway.
   - text: Well, I will just exclude this part when I'm evaluating.
   - text: No big deal, let's just move on.
+  utter_will_not_consider:
+  - text: Okay, I will refrain from considering this.
+  - text: Well, then I'm going to leave this out.
+  - text: I'll keep that out of my evaluation.
+  - text: Alright, then that won't be part of my analysis.

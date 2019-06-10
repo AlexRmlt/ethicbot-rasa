@@ -439,8 +439,7 @@ class CreateDeed(Action):
     Create a deed which is associated with an option
 
     Triggered by:
-    * Intent 'correct' after 'utter_ask_deed'
-    * Intent 'deed'
+    * Intent 'affirm' after 'utter_ask_deed'
 
     Required slots:
     * deed == the deed the bot is currently talking about
@@ -457,23 +456,17 @@ class CreateDeed(Action):
         action_return = False
         events = []
 
-        if (tracker.latest_message['intent'].get('name') == 'deed'):
-            label = next(tracker.get_latest_entity_values('deed'), None)
-            if label == None:
-                label = tracker.latest_message['text']
-                events.append(SlotSet('deed', label))
+        label = tracker.get_slot('deed')
+        if label == None:
+            label = tracker.latest_message['text']
+            events.append(SlotSet('deed', label))
 
-        elif (tracker.latest_message['intent'].get('name') == 'correct'):
-            label = tracker.get_slot('deed')
-
-        if not label == None:
-            recent_option = mind.get_recent_option(tracker.sender_id)
-            Deed({"label": label, "option": recent_option.doc_id}).memorize(tracker.sender_id)
-            action_return = True
-        else:
-            dispatcher.utter_template('utter_not_sure', tracker)
-
+        recent_option = mind.get_recent_option(tracker.sender_id)
+        Deed({"label": label, "option": recent_option.doc_id}).memorize(tracker.sender_id)
+       
+        action_return = True
         events.append(SlotSet('action_return', action_return))
+        dispatcher.utter_template('utter_got_it', tracker)
         return events
 
 
@@ -518,18 +511,18 @@ class UpdateDeed(Action):
                 if not reason == None:
                     # The user informs the bot about the reason why there cannot be a general rule
                     if not reason == 'no_reason':
-                        option['no_rule_reason'] = reason
+                        deed['no_rule_reason'] = reason
                     else:
-                        option['no_rule_reason'] = None
+                        deed['no_rule_reason'] = None
                         dispatcher.utter_template('utter_will_not_consider', tracker)
                     action_return = True
 
                 if not deontic_mod == None:
                     # The user informs the bot about the suitable deontic category
                     if not deontic_mod == 'no_modality':
-                        option['deontic_modality'] = deontic_mod
+                        deed['deontic_modality'] = deontic_mod
                     else:
-                        option['deontic_modality'] = None
+                        deed['deontic_modality'] = None
                         dispatcher.utter_template('utter_will_not_consider', tracker)
                     action_return = True
             
@@ -600,6 +593,17 @@ class CreateConsequence(Action):
         # Find out, which stakeholder is affected by this consequence
         try:
             names = list(tracker.get_latest_entity_values('name'))
+
+            # check if an assigned name is mentioned, maybe the entity was not captured
+            stakeholders = mind.get_stakeholders(tracker.sender_id)
+            for sh in stakeholders:
+                if sh['name'] in tracker.latest_message['text'] and not sh['name'] in names:
+                        names.append(sh['name'])
+                else:
+                    if 'synonym' in sh:
+                        if sh['synonym'] in tracker.latest_message['text'] and not sh['name'] in names:
+                            names.append(sh['name'])
+
             aff_stkhs = []
             # If we find multiple names, assume that they are all affected
             if len(names) > 1:
@@ -614,6 +618,7 @@ class CreateConsequence(Action):
                 sh = mind.get_stakeholder_by_name(tracker.sender_id, names[0])
                 if not sh == None:
                     aff_stkhs.append(sh['name'])
+                    events.append(SlotSet('name', sh['name']))
                 else:
                     sh = mind.get_stakeholder_by_name(tracker.sender_id, next(tracker.get_latest_entity_values('stakeholder'), None))
                     if not sh == None:

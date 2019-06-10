@@ -56,7 +56,7 @@ class IntentInformation(Component):
             name = nlu.lookup_names(message)
             if not name == None:
                 extracted.append(self.convert_to_rasa('name', name[0], start=name[1], end=name[2]))
-        elif (intent == 'stakeholder' or intent == 'decider'):
+        elif (intent == 'stakeholder' or intent == 'decider' or intent == 'stakeholdergroup'):
             entities = message.get("entities")
 
             stakeholder = None
