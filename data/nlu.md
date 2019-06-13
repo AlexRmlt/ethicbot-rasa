@@ -11,6 +11,13 @@
 - yes
 
 ## intent:consequence
+- [Dominique](name) will feel good because he did not harm Sascha and solve the problem
+- [Dominique](name) will feel bad because he did not tell his boss
+- The company - [the Saxons](name) - would have a loss of information
+- [the colleagues](stakeholder) would be upset
+- [Sascha](name) would loose his job, definitively
+- Everything will be as before.
+- More students will get caught due to plagiarism
 - [Peter](name) will take more time
 - [Patrice](name) wil get trouble due to plagiarism
 - [Peter](name) will save time
@@ -314,6 +321,9 @@
 - [the city people](stakeholder) would most likely survive
 - [the Bavarians](name) would die in the airplane
 - [The Bavarians](name:the Bavarians) and [the city people](stakeholder) would both die
+- Choosing this option would lead to severe danger for [Michael](name)
+- The consequence for [Alex](name) would be, that he would not be able to go to the city anymore without having to be extra careful
+- Another consequence would be that [the Hessians](name) were to look for a new employee for this particular task
 
 ## intent:correct
 - That is correct
@@ -380,7 +390,9 @@
 - [One commander](stakeholder:one commander) must make a decision if it is appropriate to shoot the airplane
 
 ## intent:deny
+- Yes, but I will not tell you his name
 - non
+- no, thank you
 - It would not effect anyone else
 - No more people involved
 - No, not for this option
@@ -667,6 +679,10 @@
 - that wouldn't affect anyone else
 - No I can't
 - There is not another option
+- there are no other agents
+- It would not be any of the two, just normal
+- No it would not affect anyone else
+- No, I can't imagine another possibility
 
 ## intent:deontology
 - /deontology
@@ -801,6 +817,7 @@
 - Hi!
 - hi
 - Hello
+- hi
 
 ## intent:inform
 - /inform{"moralstatus": "human"}
@@ -815,6 +832,8 @@
 - What are the important parameters to decide which group the robot tries to rescue?
 
 ## intent:name
+- [Company](stakeholder)
+- [Anonymous](name)
 - [Mizi](name)
 - [director](stakeholder)
 - [fans](stakeholder)
@@ -924,6 +943,9 @@
 - [the city people](stakeholder)
 - Use the name [the commander](stakeholder)!
 - [the passengers](stakeholder)
+- You can refer to me as [Alex](name)
+- [The company](stakeholder)
+- [Michael](name)
 
 ## intent:negative
 - negatively
@@ -973,6 +995,8 @@
 - totally negative
 - rather negative
 - Could be negative, considering the possibility that he might not be saved
+- certainly more negative
+- The consequence would be more negative
 
 ## intent:neutral
 - Nothing will happen. It will be the status quo
@@ -983,6 +1007,10 @@
 - It would not matter that much actually
 
 ## intent:option
+- [Sascha](name) can [save his neck](deed)
+- [Dominique](name) can [talk to Sascha](deed)
+- I can [keep my knowledge](deed) to myself and [not tell anyone](deed)
+- I have hear that my colleague is [giving information to others](deed), and [he copied data](deed). I would [tell my company](deed), you know, the Saxons
 - [Peter](name) can corect homework as before
 - [Peter](name) can [use a software to detect plagiarism](deed)
 - [simon](name:Simon) can [eat his lunch himself](deed)
@@ -1243,6 +1271,9 @@
 - The first possibility [Alex](name) has is to [punish the cat](deed)
 - [Shooting the plane](deed) as it would propably save a lot of lives
 - He can [refuse to shoot](deed) the plane as well
+- [I](stakeholder:i) am aware of a crime and I am hesitating to [go to the police and tell them](deed)
+- He can [keep his knowledge to himself](deed) and [not tell anyone](deed)
+- They can as well [leave things as they are](deed)
 
 ## intent:positive
 - positively
@@ -1298,8 +1329,10 @@
 - thats positive for [mike](name:Mike)
 - positive
 - Mostly positive
+- For them this would be more positive
 
 ## intent:quantity
+- [50,5](quantity)
 - [80,5](quantity)
 - [2,5](quantity)
 - [99,5](quantity)
@@ -1527,6 +1560,10 @@
 - [80.4](quantity)%
 - [5,6](quantity)
 - [9,99](quantity)
+- [1](quantity)
+- [3,6](quantity)
+- [4,56](quantity)
+- [4.78](quantity)
 
 ## intent:smalltalk
 - can you help me with something?
@@ -1590,6 +1627,8 @@
 - can we chat
 
 ## intent:stakeholder
+- [My colleague](stakeholder)
+- [I](stakeholder) have a problem and do not know what to do
 - [Peter](name) is a [teacher](stakeholder)
 - [Teacher](stakeholder) [Peter](name) has a problem with plagiarism in this class specifically
 - there is [the cat](stakeholder) named [Mizi](name)
@@ -1869,8 +1908,10 @@
 - I know a doctor who does organ transplations and has five patients waiting for an organ
 - [A tourist](stakeholder:a tourist) named [George](name)
 - [Isabel](name), who is in desperate need of a new kidney
+- [I](stakeholder:i) am in big trouble
 
 ## intent:stakeholdergroup
+- Yes, [our company](stakeholder) as such
 - He has [24](quantity) [students](stakeholder) in his class
 - yes, there are [the football fans](stakeholder) all around the world
 - Yes, there are his [students](stakeholder)
@@ -1953,9 +1994,10 @@
 - There are [five patients](stakeholder) who all need different organ transplants.
 - [The supporters](stakeholder) of the respective football club
 - [The members of the club's board](stakeholder)
-- His [students](stakeholder)
 - [Terrorists](stakeholder) have captured an airplane and threaten to fly it into a crowded city.
 - [Plenty of people](stakeholder:plenty of people) at the ground are in danger if the airplane was to crash near them.
+- [A group of 100 people](stakeholder:a group of 100 people) is chasing me
+- Also there are [a lot of people](stakeholder) watching the scene
 
 ## intent:thanks
 - you helped a lot thank you
@@ -2295,11 +2337,17 @@
 ## synonym:my kitten
 - My kitten
 
+## synonym:one commander
+- One commander
+
 ## synonym:one other person
 - One other person
 
 ## synonym:one person
 - One person
+
+## synonym:plenty of people
+- Plenty of people
 
 ## synonym:protecting
 - Protecting

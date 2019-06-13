@@ -74,29 +74,30 @@ entities:
 - sentiment
 - stakeholder
 intents:
-- deontology
-- affirm
-- stakeholdergroup
-- option
 - greeting
-- name
-- correct
-- positive
-- quantity
-- decider
-- utilitarism
 - wrong
-- dontknow
-- deny
 - inform
-- consequence
 - stakeholder
+- stakeholdergroup
+- name
+- option
+- consequence
+- affirm
+- deny
+- decider
+- correct
+- quantity
 - negative
+- positive
+- deontology
+- utilitarism
+- dontknow
 - neutral
 - moralquestion
 - goodbye
 - thanks
-- smalltalk
+- smalltalk: {triggers: action_handle_smalltalk}
+#- smalltalk: {triggers: action_handle_smalltalk}
 slots:
   action_return:
     type: bool
@@ -121,6 +122,7 @@ slots:
     - pos
     - neg
     - neu
+    - None
 templates:
   utter_ask_consequence_definite:
   - buttons:

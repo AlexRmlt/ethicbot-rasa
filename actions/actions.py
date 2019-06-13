@@ -411,7 +411,7 @@ class UpdateOption(Action):
                 if not deontic_mod == None:
                     # The user informs the bot about the suitable deontic category
                     if not deontic_mod == 'indifference':
-                        deed['deontic_modality'] = deontic_mod
+                        option['deontic_modality'] = deontic_mod
                     else:
                         option['deontic_modality'] = None
                         dispatcher.utter_template('utter_will_not_consider', tracker)
@@ -599,10 +599,6 @@ class CreateConsequence(Action):
             for sh in stakeholders:
                 if sh['name'] in tracker.latest_message['text'] and not sh['name'] in names:
                         names.append(sh['name'])
-                else:
-                    if 'synonym' in sh:
-                        if sh['synonym'] in tracker.latest_message['text'] and not sh['name'] in names:
-                            names.append(sh['name'])
 
             aff_stkhs = []
             # If we find multiple names, assume that they are all affected

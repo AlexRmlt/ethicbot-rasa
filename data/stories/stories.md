@@ -179,3 +179,181 @@
     - slot{"action_return": true}
     - utter_next_method
 
+## Generated Story 7168840357583075545
+* greeting
+    - action_intro
+* stakeholder{"stakeholder": "i"}
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 1}
+    - slot{"action_return": true}
+    - utter_ask_name_singular
+* name{"name": "Alex"}
+    - slot{"name": "Alex"}
+    - action_update_stakeholder
+    - slot{"name": "Alex"}
+    - slot{"action_return": true}
+    - utter_ask_moralstatus
+* inform{"moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* stakeholdergroup{"stakeholder": "a group of 100 people", "moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_create_stakeholder
+    - slot{"amount_stakeholders": 2}
+    - slot{"action_return": true}
+    - utter_ask_name_plural
+* name
+    - action_update_stakeholder
+    - slot{"name": "the Hessians"}
+    - slot{"action_return": true}
+    - utter_ask_identified_moralstatus
+* correct
+    - utter_next_stakeholder
+* stakeholdergroup{"stakeholder": "a lot of people", "moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_create_stakeholder
+    - slot{"amount_stakeholders": 3}
+    - slot{"action_return": false}
+    - utter_ask_quantity
+* quantity{"quantity": "1"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_ask_name_singular
+* name{"name": "Michael"}
+    - slot{"name": "Michael"}
+    - action_update_stakeholder
+    - slot{"name": "Michael"}
+    - slot{"action_return": true}
+    - utter_ask_identified_moralstatus
+* correct
+    - utter_next_stakeholder
+* deny
+    - utter_confirm_stakeholders
+    - action_choose_decider
+* decider{"name": "Alex"}
+    - slot{"name": "Alex"}
+    - action_update_stakeholder
+    - slot{"decider": "Alex"}
+    - slot{"action_return": true}
+    - utter_ask_options
+* option{"stakeholder": "i"}
+    - action_create_option
+    - slot{"deed": null}
+    - slot{"action_return": true}
+    - utter_ask_deontic_modality
+* inform{"deonticmodality": "obligation"}
+    - action_update_option
+    - slot{"action_return": true}
+    - utter_ask_universalizable
+* correct
+    - action_update_option
+    - slot{"action_return": true}
+    - utter_ask_consequences
+* consequence{"name": "Michael"}
+    - slot{"name": "Michael"}
+    - action_create_consequence
+    - slot{"sentiment": null}
+    - slot{"name": "them"}
+    - slot{"action_return": true}
+    - utter_ask_impact
+* negative
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact_weight
+* quantity{"quantity": "3,6"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_consequence_definite
+* correct
+    - utter_next_consequence
+* consequence{"name": "Alex", "sentiment": "neu"}
+    - slot{"name": "Alex"}
+    - slot{"sentiment": "neu"}
+    - action_create_consequence
+    - slot{"name": "Alex"}
+    - slot{"action_return": true}
+    - utter_ask_impact
+* deny
+    - utter_next_option
+* option{"deed": "not tell anyone"}
+    - slot{"deed": "not tell anyone"}
+    - action_create_option
+    - slot{"deed": "keep his knowledge to himself"}
+    - slot{"action_return": true}
+    - utter_ask_identified_deed
+* affirm
+    - action_create_deed
+    - slot{"action_return": true}
+    - utter_ask_deontic_modality
+* inform{"deonticmodality": "permission"}
+    - action_update_deed
+    - slot{"action_return": true}
+    - utter_ask_universalizable
+* wrong
+    - action_update_deed
+    - slot{"action_return": true}
+    - utter_ask_no_rule_reason
+* inform{"reason": "no_reason"}
+    - action_update_deed
+    - slot{"deed": "not tell anyone"}
+    - slot{"action_return": true}
+    - utter_ask_identified_deed
+* affirm
+    - action_create_deed
+    - slot{"action_return": true}
+    - utter_ask_deontic_modality
+* inform{"deonticmodality": "obligation"}
+    - action_update_deed
+    - slot{"action_return": true}
+    - utter_ask_universalizable
+* correct
+    - action_update_deed
+    - slot{"deed": null}
+    - slot{"action_return": true}
+    - utter_ask_consequences
+* consequence{"sentiment": "neu", "name": "Hessians"}
+    - slot{"name": "Hessians"}
+    - slot{"sentiment": "neu"}
+    - action_create_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact
+* negative
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact_weight
+* quantity{"quantity": "4,56"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_consequence_definite
+* correct
+    - utter_next_consequence
+* option
+    - action_create_consequence
+    - slot{"name": null}
+    - slot{"action_return": false}
+    - action_choose_affected_stakeholder
+* consequence{"name": "the Hessians"}
+    - slot{"name": "the Hessians"}
+    - action_create_consequence
+    - slot{"name": "the Hessians"}
+    - slot{"action_return": true}
+    - utter_ask_impact
+* positive
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact_weight
+* quantity{"quantity": "4.78"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_consequence_definite
+* correct
+    - utter_next_consequence
+* deny
+    - utter_next_option
+* deny
+    - utter_got_everything
+    - utter_ask_method
+
