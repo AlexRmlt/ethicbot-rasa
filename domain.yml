@@ -11,6 +11,7 @@ actions:
 - action_default_ask_affirmation
 - action_evaluation_deontology
 - action_evaluation_utilitarism
+- action_handle_question_id
 - action_handle_smalltalk
 - action_intro
 - action_restart
@@ -74,30 +75,30 @@ entities:
 - sentiment
 - stakeholder
 intents:
-- greeting
-- wrong
+- correct
 - inform
-- stakeholder
 - stakeholdergroup
+- stakeholder
+- deny
+- greeting
+- smalltalk: {triggers: action_handle_smalltalk}
+- decider
 - name
+- quantity
+- dontknow
+- wrong
 - option
 - consequence
 - affirm
-- deny
-- decider
-- correct
-- quantity
 - negative
 - positive
 - deontology
 - utilitarism
-- dontknow
 - neutral
 - moralquestion
 - goodbye
 - thanks
-- smalltalk: {triggers: action_handle_smalltalk}
-#- smalltalk: {triggers: action_handle_smalltalk}
+- questionid: {triggers: action_handle_question_id}
 slots:
   action_return:
     type: bool
@@ -122,7 +123,7 @@ slots:
     - pos
     - neg
     - neu
-    - None
+    - none
 templates:
   utter_ask_consequence_definite:
   - buttons:
@@ -627,10 +628,10 @@ templates:
   - text: Okay, let's keep going anyway.
   - text: Alright, let's keep going, though.
   - text: Okay, we will manage to proceed without this information anyway.
-  - text: Well, I will just exclude this part when I'm evaluating.
   - text: No big deal, let's just move on.
   utter_will_not_consider:
   - text: Okay, I will refrain from considering this.
   - text: Well, then I'm going to leave this out.
   - text: I'll keep that out of my evaluation.
   - text: Alright, then that won't be part of my analysis.
+  - text: Well, I will just exclude this part when I'm evaluating.

@@ -630,3 +630,150 @@
     - action_create_consequence
     - slot{"action_return": true}
     - utter_ask_impact
+
+## option | decider 1
+* deny
+    - utter_next_option
+* decider
+    - action_create_option
+    - slot{"deed": null}
+    - slot{"action_return": true}
+    - utter_ask_deontic_modality
+
+## option | decider 2
+* deny
+    - utter_next_option
+* decider{"name": "mia"}
+    - slot{"name": "mia"}
+    - action_create_option
+    - slot{"deed": null}
+    - slot{"action_return": true}
+    - utter_ask_deontic_modality
+
+## option | decider 3
+* decider{"name": "Thomas"}
+    - slot{"name": "Thomas"}
+    - action_update_stakeholder
+    - slot{"decider": "Thomas"}
+    - slot{"action_return": true}
+    - utter_ask_options
+* decider{"name": "Thomas"}
+    - slot{"name": "Thomas"}
+    - action_create_option
+    - slot{"deed": null}
+    - slot{"action_return": true}
+    - utter_ask_deontic_modality
+
+## option | decider 4
+* decider{"name": "Thomas"}
+    - slot{"name": "Thomas"}
+    - action_update_stakeholder
+    - slot{"decider": "Thomas"}
+    - slot{"action_return": true}
+    - utter_ask_options
+* decider
+    - action_create_option
+    - slot{"deed": null}
+    - slot{"action_return": true}
+    - utter_ask_deontic_modality
+
+## option | decider 5
+* decider{"name": "Thomas"}
+    - slot{"name": "Thomas"}
+    - action_update_stakeholder
+    - slot{"decider": "Thomas"}
+    - slot{"action_return": true}
+    - utter_ask_options
+* decider{"deed": "save mia"}
+    - slot{"deed": "save mia"}
+    - action_create_option
+    - slot{"deed": null}
+    - slot{"action_return": true}
+    - utter_ask_deontic_modality
+
+## option | decider 6
+* decider
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 4}
+    - slot{"action_return": true}
+    - utter_ask_name_singular
+* name{"name": "mia"}
+    - action_update_stakeholder
+    - slot{"decider": "Roswitha"}
+    - slot{"name": "Roswitha"}
+    - slot{"action_return": true}
+    - utter_ask_moralstatus
+* inform{"moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_ask_options
+* decider
+    - action_create_option
+    - slot{"deed": null}
+    - slot{"action_return": true}
+    - utter_ask_deontic_modality
+
+## consequence | decider 1
+* wrong
+    - utter_ask_consequence_probability
+* quantity{"quantity": "5"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_next_consequence
+* decider{"name": "Andrea"}
+    - slot{"name": "Andrea"}
+    - action_create_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact
+
+## consequence | decider 2
+* wrong
+    - utter_ask_consequence_probability
+* quantity{"quantity": "5"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_next_consequence
+* decider{"deed": "kill"}
+    - slot{"deed": "kill"}
+    - action_create_consequence
+    - slot{"action_return": false}
+    - action_choose_affected_stakeholder
+
+## consequence | decider 3
+* correct
+    - action_update_option
+    - slot{"deed": null}
+    - slot{"action_return": true}
+    - utter_ask_consequences
+* decider{"name": "Andrea"}
+    - slot{"name": "Andrea"}
+    - action_create_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact
+
+## consequence | option 4
+* correct
+    - action_update_option
+    - slot{"deed": null}
+    - slot{"action_return": true}
+    - utter_ask_consequences
+* decider{"name": "Andrea", "deed": "killing"}
+    - slot{"name": "Andrea"}
+    - slot{"deed": "killing"}
+    - action_create_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact
+
+## consequence | decider 5
+* wrong
+    - utter_ask_consequence_probability
+* quantity{"quantity": "5"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_next_consequence
+* decider
+    - action_create_consequence
+    - slot{"action_return": false}
+    - action_choose_affected_stakeholder

@@ -5639,12 +5639,9 @@ merv
 mervin
 mervyn
 meryl
-message
 mesut
 meta
-meter
 methi
-metrics
 metyn
 mewa
 mfgeng
@@ -5977,7 +5974,6 @@ naveen
 nawa
 nayan
 nayneshkumar
-nazi
 nazib
 neal
 neala
@@ -5994,7 +5990,7 @@ neile
 neill
 neilla
 neille
-nel
+nele
 nelda
 nelia
 nelie
@@ -6308,8 +6304,6 @@ pansy
 paola
 paolina
 papagena
-paper
-papers
 paqs
 par
 pardeep
@@ -6334,11 +6328,7 @@ pascale
 pasiedb
 pat
 patadm
-patch
-patches
-patching
 patchit
-patience
 patra
 patrica
 patrice

@@ -112,8 +112,8 @@ class CreateStakeholder(Action):
             (tracker.latest_message['intent'].get('name') == 'decider'):
             sh['amount'] = 1
         elif (tracker.latest_message['intent'].get('name') == 'stakeholdergroup'):
-            # Only the stakeholder entity is considered, because a quantity entity might be unrelated to the actual amount
             sources = list(tracker.get_latest_entity_values('stakeholder'))
+            sources.extend(list(tracker.get_latest_entity_values('quantity')))
             quantity = nlu.get_quantity_from_sources(sources)
             if not quantity == -1:
                 sh['amount'] = int(quantity)
@@ -274,6 +274,7 @@ class UpdateStakeholder(Action):
             elif (tracker.latest_message['intent'].get('name') == 'dontknow') \
                 or (tracker.latest_message['intent'].get('name') == 'deny'):
 
+                # It is asked for the stakeholder amount
                 if sh['amount'] == -1.1:
                     # Flag amount such that we know the question is through
                     sh['amount'] = -1
@@ -760,6 +761,26 @@ class HandleSmalltalk(Action):
         
         return [UserUtteranceReverted()] 
 
+class HandleQuestionId(Action):
+    """
+    Provide the id of the current tracker for debugging purposes.
+    Users should ask the bot for his ID whenever something goes wrong
+    so that they can provide an identifier for the conversation to
+    refer to when debugging.
+    
+    Returns:
+    * UserUtteranceReverted() - do not disturb the current story!
+    """
+    def name(self):
+        return 'action_handle_question_id'
+        
+    def run(self, dispatcher, tracker, domain):
+        dispatcher.utter_message("Your ID for the current conversation is: {}".format(tracker.sender_id))
+        dispatcher.utter_message("Please name this ID when reporting an error or referring to a conversation in general.")
+        
+        return [UserUtteranceReverted()] 
+
+
 class ActionRestart(Action):
     """
     Restart dialogue on user request
@@ -780,7 +801,7 @@ class ActionDefaultAskAffirmation(Action):
 
     def __init__(self) -> None:
         self.ignored_intents = ['deny', 'affirm', 'neutral', 'inform', 'dontknow', 'greeting', 'correct', 'wrong', 
-                                'utilitarism', 'deontology', 'moralquestion', 'goodbye', 'thanks', 'smalltalk']
+                                'utilitarism', 'deontology', 'moralquestion', 'goodbye', 'thanks', 'smalltalk', 'questionid']
 
         import csv
 

@@ -11,6 +11,13 @@
 - yes
 
 ## intent:consequence
+- A consequence would be that [Isabel](name) would have to wait longer for a new kidney
+- [Derek](name) is affected by this. If he gives Georges kidney to Isabel although George is not an organ donator he is acting against the law and could get sued for it.
+- The consequences for [Isabel](name) would be that she gets a new kidney and can live a healthy life again.
+- The first consequence would be that [George](name) from now on would have to live with just one kidney without having a choice and being able to prepare for it before.
+- 50% chance that [karl](name) dies
+- [karl](name) or [mia](name) could die
+- There is no money for [Luan](name) in this case
 - [Dominique](name) will feel good because he did not harm Sascha and solve the problem
 - [Dominique](name) will feel bad because he did not tell his boss
 - The company - [the Saxons](name) - would have a loss of information
@@ -335,6 +342,7 @@
 - /correct
 - /correct
 - /correct
+- /correct
 
 ## intent:decider
 - [Erskine](name) has to decide whether to save half of the people in the town, or try to save everyone by giving away secrets to the enemy.
@@ -390,6 +398,10 @@
 - [One commander](stakeholder:one commander) must make a decision if it is appropriate to shoot the airplane
 
 ## intent:deny
+- He doesn´t have another option
+- There are no consequences left
+- No I can´t think of another
+- I can´t think of another consequence
 - Yes, but I will not tell you his name
 - non
 - no, thank you
@@ -448,28 +460,22 @@
 - there are no other consequences
 - There is no other option than the two
 - No other persons are involved
-- No
 - no other consequences to be named
 - there is no other option
 - Thats all
 - not at all
 - No further consequences
 - No I don't think so
-- no
 - no other consequences
 - no other consequences
 - there are no other options
-- no
-- no
 - No one else would be affected
 - THere are no other options
 - thats all
 - There are no other consequences
-- no
 - there are no other options
 - Thats all
 - No I don't think so
-- No
 - There are no other options
 - no
 - No other consequences
@@ -479,9 +485,6 @@
 - No, i do not know it exactly
 - no
 - No, that was all
-- No
-- No
-- no
 - no other actions i could think of
 - no
 - no other actions to be named
@@ -642,15 +645,9 @@
 - no thats all
 - I can't think of more actions
 - No
-- No
 - No further options
-- no
-- no
 - no, no other consequences
-- no
-- no
 - none
-- no
 - no
 - no, this was all
 - no
@@ -660,7 +657,6 @@
 - no, this is all
 - no
 - theres none
-- no
 - there is none
 - no
 - no one else is affected
@@ -683,6 +679,9 @@
 - It would not be any of the two, just normal
 - No it would not affect anyone else
 - No, I can't imagine another possibility
+- no i can't
+- no there is no one left
+- I don't have a name or title for them all
 
 ## intent:deontology
 - /deontology
@@ -737,6 +736,7 @@
 - I don't know the name
 - I don't know any action
 - I don't know it exactly
+- I have no idea what his name is
 
 ## intent:goodbye
 - okay see you later
@@ -818,13 +818,14 @@
 - hi
 - Hello
 - hi
+- hi
 
 ## intent:inform
 - /inform{"moralstatus": "human"}
 - /inform{"moralstatus": "human"}
 - /inform{"deonticmodality": "prohibition"}
 - /inform{"reason": "needs_conditions"}
-- /inform{"deonticmodality": "option"}
+- /inform{"deonticmodality": "obligation"}
 
 ## intent:moralquestion
 - Should you take action in killing a person if it can prevent the death of a larger number of people?
@@ -832,6 +833,11 @@
 - What are the important parameters to decide which group the robot tries to rescue?
 
 ## intent:name
+- "[Robi](stakeholder)"
+- the name is [nele](name)
+- his name is [robot](stakeholder)
+- the name is [mia](name)
+- [mia](name)
 - [Company](stakeholder)
 - [Anonymous](name)
 - [Mizi](name)
@@ -946,6 +952,7 @@
 - You can refer to me as [Alex](name)
 - [The company](stakeholder)
 - [Michael](name)
+- You can assign the name [Akin](name)
 
 ## intent:negative
 - negatively
@@ -999,6 +1006,7 @@
 - The consequence would be more negative
 
 ## intent:neutral
+- it depends on how george decides
 - Nothing will happen. It will be the status quo
 - It would be ok, neither positive nor negative consequences
 - That would have neither positive nor negative effects
@@ -1007,6 +1015,11 @@
 - It would not matter that much actually
 
 ## intent:option
+- Derek could also just [treat George´s minor injury](deed), [send him home](deed) and [wait for another match](deed) for Isabel to come up
+- Derek could ask George to [give his kidney](deed) to Isabel voluntarily although George is not an organ donator
+- Derek treats Georges minor injury and notices that he would be a match for Isabel. But he´s not an organ donator. Now he could [tell George](deed) he needs an operation and [give his kidney](deed) to Isabel.
+- "[Quinn](name)" can [save "Nele"](deed) from drowning
+- decide to [save mia](deed)
 - [Sascha](name) can [save his neck](deed)
 - [Dominique](name) can [talk to Sascha](deed)
 - I can [keep my knowledge](deed) to myself and [not tell anyone](deed)
@@ -1278,7 +1291,7 @@
 ## intent:positive
 - positively
 - positiv
-- For [Isabel](name) it would be positive, becayshe gets a new kidney
+- For [Isabel](name) it would be positive, because she gets a new kidney
 - It would be positive to keep the money
 - That would be positive for him
 - positive
@@ -1564,6 +1577,15 @@
 - [3,6](quantity)
 - [4,56](quantity)
 - [4.78](quantity)
+- [1000](quantity) people at least
+
+## intent:questionid
+- What is your ID?
+- Tell me your ID
+- What is the ID of the current conversation?
+- Tell me the ID of the current conversation!
+- Please tell me your ID
+- Please give me the ID
 
 ## intent:smalltalk
 - can you help me with something?
@@ -1625,8 +1647,22 @@
 - I need to talk to you
 - I want to speak with you
 - can we chat
+- I've got a problem to tell you
 
 ## intent:stakeholder
+- There´s [Isabel](name) who is a resident in the hospital where Derek works. She needs a new kidney
+- First there´s [a surgeon](stakeholder) by the name of [Derek](name)
+- "[Flori](name)" is a plant
+- "[Robi](name)" is a "Machine"
+- "[Paul](name)" is a human
+- "[Nele](name)" is a "Human"
+- [nele](name) is a little girl
+- [Robi](stakeholder) is a robot
+- [max](name) has to take a decision
+- [karl](name) is another human
+- [max](name) is [a doctor](stakeholder)
+- [olivia](name) is [a patient](stakeholder) and is 16 years old
+- [karl](name) is [a patient](stakeholder) as well and is 70 years old
 - [My colleague](stakeholder)
 - [I](stakeholder) have a problem and do not know what to do
 - [Peter](name) is a [teacher](stakeholder)
@@ -1909,6 +1945,8 @@
 - [A tourist](stakeholder:a tourist) named [George](name)
 - [Isabel](name), who is in desperate need of a new kidney
 - [I](stakeholder:i) am in big trouble
+- Okay, I'm talking about [some person](stakeholder) who seriously threatens me
+- [One of this](stakeholder:one of this) [5](quantity) people is [a guy](stakeholder) whose name is [Johann](name)
 
 ## intent:stakeholdergroup
 - Yes, [our company](stakeholder) as such
@@ -1998,6 +2036,8 @@
 - [Plenty of people](stakeholder:plenty of people) at the ground are in danger if the airplane was to crash near them.
 - [A group of 100 people](stakeholder:a group of 100 people) is chasing me
 - Also there are [a lot of people](stakeholder) watching the scene
+- Then there is [a crowd of people](stakeholder) who do not do anything
+- [5](quantity) people are involved in the situation altogether
 
 ## intent:thanks
 - you helped a lot thank you
@@ -2230,6 +2270,9 @@
 ## synonym:a group
 - A group
 
+## synonym:a group of 100 people
+- A group of 100 people
+
 ## synonym:a group of old people
 - A group of old people
 
@@ -2309,6 +2352,9 @@
 
 ## synonym:human
 - {"moralstatus": "human"}
+
+## synonym:i
+- I
 
 ## synonym:keep the purse
 - Keep the purse

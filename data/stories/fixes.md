@@ -367,3 +367,75 @@
     - action_evaluation_deontology
     - slot{"action_return": true}
     - utter_next_method
+
+## Create decider when user says it is someone else 1
+* greeting
+    - action_intro
+* stakeholder{"stakeholder": "some person"}
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 1}
+    - slot{"action_return": true}
+    - utter_ask_name_singular
+* dontknow
+    - action_update_stakeholder
+    - slot{"name": "Robin"}
+    - slot{"action_return": true}
+    - utter_ask_moralstatus
+* inform{"moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* stakeholdergroup{"stakeholder": "a crowd of people"}
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 2}
+    - slot{"action_return": false}
+    - utter_ask_quantity
+* quantity{"quantity": "1000"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_ask_name_plural
+* deny
+    - action_update_stakeholder
+    - slot{"name": "the Saxons"}
+    - slot{"action_return": true}
+    - utter_ask_moralstatus
+* inform{"moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* deny
+    - utter_confirm_stakeholders
+    - action_choose_decider
+* decider
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 3}
+    - slot{"action_return": true}
+    - utter_ask_name_singular
+* name{"name": "Akin"}
+    - slot{"name": "Akin"}
+    - action_update_stakeholder
+    - slot{"decider": "Akin"}
+    - slot{"name": "Akin"}
+    - slot{"action_return": true}
+    - utter_ask_moralstatus
+* inform{"moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_ask_options
+
+## Create decider when user says it is someone else 2
+* deny
+    - utter_confirm_stakeholders
+    - action_choose_decider
+* decider
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 3}
+    - slot{"action_return": true}
+    - utter_ask_name_singular

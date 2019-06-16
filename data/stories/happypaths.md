@@ -2,6 +2,10 @@
 * smalltalk
   - action_handle_smalltalk
 
+## Question ID Mapping
+* questionid
+  - action_handle_question_id
+
 ## Generated Story 4250896942926339107
 * greeting
     - action_intro

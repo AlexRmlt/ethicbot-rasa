@@ -357,3 +357,51 @@
     - utter_got_everything
     - utter_ask_method
 
+## Generated Story -6793579357886827193
+* greeting
+    - action_intro
+* stakeholdergroup{"quantity": "5"}
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 1}
+    - slot{"action_return": false}
+
+## Generated Story -4803877908768115130
+* greeting
+    - action_intro
+* stakeholdergroup{"quantity": "5"}
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 2}
+    - slot{"action_return": true}
+    - utter_ask_name_plural
+* deny
+    - action_update_stakeholder
+    - slot{"name": "the Hessians"}
+    - slot{"action_return": true}
+    - utter_ask_moralstatus
+* inform{"moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* stakeholder{"stakeholder": "a guy", "quantity": "5", "name": "Johann"}
+    - slot{"name": "Johann"}
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 3}
+    - slot{"action_return": true}
+    - action_check_identified_name
+    - slot{"action_return": false}
+    - utter_ask_identified_name
+* correct
+    - action_update_stakeholder
+    - slot{"name": "Johann"}
+    - slot{"action_return": true}
+    - utter_ask_moralstatus
+* inform{"moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+
