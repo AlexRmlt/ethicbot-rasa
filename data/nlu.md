@@ -11,6 +11,11 @@
 - yes
 
 ## intent:consequence
+- [Vivian](name) will not know the truth
+- [Tina](name) might get punished
+- [Tom](name) might get caught.
+- It would affect society.
+- [Paul](name) would be affected. He would go to prison.
 - A consequence would be that [Isabel](name) would have to wait longer for a new kidney
 - [Derek](name) is affected by this. If he gives Georges kidney to Isabel although George is not an organ donator he is acting against the law and could get sued for it.
 - The consequences for [Isabel](name) would be that she gets a new kidney and can live a healthy life again.
@@ -333,13 +338,13 @@
 - Another consequence would be that [the Hessians](name) were to look for a new employee for this particular task
 
 ## intent:correct
+- It will actually become true.
 - That is correct
 - correct
 - True
 - true
 - Thats true
 - Correct
-- /correct
 - /correct
 - /correct
 - /correct
@@ -1006,6 +1011,7 @@
 - The consequence would be more negative
 
 ## intent:neutral
+- Depends
 - it depends on how george decides
 - Nothing will happen. It will be the status quo
 - It would be ok, neither positive nor negative consequences
@@ -1015,6 +1021,8 @@
 - It would not matter that much actually
 
 ## intent:option
+- He can [lie](deed) to his mother
+- [Tell the police](deed) what he knows about Paul
 - Derek could also just [treat George´s minor injury](deed), [send him home](deed) and [wait for another match](deed) for Isabel to come up
 - Derek could ask George to [give his kidney](deed) to Isabel voluntarily although George is not an organ donator
 - Derek treats Georges minor injury and notices that he would be a match for Isabel. But he´s not an organ donator. Now he could [tell George](deed) he needs an operation and [give his kidney](deed) to Isabel.
@@ -1650,6 +1658,8 @@
 - I've got a problem to tell you
 
 ## intent:stakeholder
+- I´m talking about [Tom](name). Tom is a social worker.
+- [Tom](name) is a social worker.
 - There´s [Isabel](name) who is a resident in the hospital where Derek works. She needs a new kidney
 - First there´s [a surgeon](stakeholder) by the name of [Derek](name)
 - "[Flori](name)" is a plant
@@ -1949,6 +1959,7 @@
 - [One of this](stakeholder:one of this) [5](quantity) people is [a guy](stakeholder) whose name is [Johann](name)
 
 ## intent:stakeholdergroup
+- The [local police](stakeholder)
 - Yes, [our company](stakeholder) as such
 - He has [24](quantity) [students](stakeholder) in his class
 - yes, there are [the football fans](stakeholder) all around the world
