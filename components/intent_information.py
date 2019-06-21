@@ -57,16 +57,8 @@ class IntentInformation(Component):
             if not name == None:
                 extracted.append(self.convert_to_rasa('name', name[0], start=name[1], end=name[2]))
         elif (intent == 'stakeholder' or intent == 'decider' or intent == 'stakeholdergroup'):
-            entities = message.get("entities")
-
-            stakeholder = None
-            for ent in entities:
-                if (ent['entity'] == 'stakeholder'):  
-                    stakeholder = ent['value']
-                    break
-
             # Get moral status
-            moralstatus = nlu.get_moral_status(stakeholder)
+            moralstatus = nlu.get_moral_status(message.text)
             if not moralstatus == None: 
                 extracted.append(self.convert_to_rasa('moralstatus', moralstatus))
 
