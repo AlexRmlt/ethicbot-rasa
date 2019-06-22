@@ -753,7 +753,7 @@
     - slot{"action_return": true}
     - utter_ask_impact
 
-## consequence | option 4
+## consequence | decider 4
 * correct
     - action_update_option
     - slot{"deed": null}
@@ -777,3 +777,123 @@
     - action_create_consequence
     - slot{"action_return": false}
     - action_choose_affected_stakeholder
+
+## consequence | negative 1
+* wrong
+    - utter_ask_consequence_probability
+* quantity{"quantity": "5"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_next_consequence
+* negative{"name": "Kilian"}
+    - slot{"name": "Kilian"}
+    - action_create_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact_negative
+
+## consequence | negative 2
+* wrong
+    - utter_ask_consequence_probability
+* quantity{"quantity": "5"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_next_consequence
+* negative
+    - action_create_consequence
+    - slot{"action_return": false}
+    - action_choose_affected_stakeholder
+* consequence{"name": "Kilian"}
+    - slot{"name": "Kilian"}
+    - action_create_consequence
+    - slot{"name": "Kilian"}
+    - slot{"action_return": true}
+    - utter_ask_impact_negative
+
+## consequence | negative 3
+* correct
+    - action_update_option
+    - slot{"deed": null}
+    - slot{"action_return": true}
+    - utter_ask_consequences
+* negative{"name": "Kilian"}
+    - slot{"name": "Kilian"}
+    - action_create_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact_negative
+
+## consequence | negative 4
+* correct
+    - action_update_option
+    - slot{"deed": null}
+    - slot{"action_return": true}
+    - utter_ask_consequences
+* negative
+    - action_create_consequence
+    - slot{"action_return": false}
+    - action_choose_affected_stakeholder
+* consequence{"name": "Kilian"}
+    - slot{"name": "Kilian"}
+    - action_create_consequence
+    - slot{"name": "Kilian"}
+    - slot{"action_return": true}
+    - utter_ask_impact_negative
+
+## consequence | positive 1
+* wrong
+    - utter_ask_consequence_probability
+* quantity{"quantity": "5"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_next_consequence
+* positive{"name": "Kilian"}
+    - slot{"name": "Kilian"}
+    - action_create_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact_positive
+
+## consequence | positive 2
+* wrong
+    - utter_ask_consequence_probability
+* quantity{"quantity": "5"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_next_consequence
+* positive
+    - action_create_consequence
+    - slot{"action_return": false}
+    - action_choose_affected_stakeholder
+* consequence{"name": "Kilian"}
+    - slot{"name": "Kilian"}
+    - action_create_consequence
+    - slot{"name": "Kilian"}
+    - slot{"action_return": true}
+    - utter_ask_impact_positive
+
+## consequence | positive 3
+* correct
+    - action_update_option
+    - slot{"deed": null}
+    - slot{"action_return": true}
+    - utter_ask_consequences
+* positive{"name": "Kilian"}
+    - slot{"name": "Kilian"}
+    - action_create_consequence
+    - slot{"action_return": true}
+    - utter_ask_impact_positive
+
+## consequence | positive 4
+* correct
+    - action_update_option
+    - slot{"deed": null}
+    - slot{"action_return": true}
+    - utter_ask_consequences
+* positive
+    - action_create_consequence
+    - slot{"action_return": false}
+    - action_choose_affected_stakeholder
+* consequence{"name": "Kilian"}
+    - slot{"name": "Kilian"}
+    - action_create_consequence
+    - slot{"name": "Kilian"}
+    - slot{"action_return": true}
+    - utter_ask_impact_positive

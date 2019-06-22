@@ -12,6 +12,10 @@
 
 ## intent:consequence
 - For [Kilian](name)
+- For [Leon](name)
+- For [Andrea](name)
+- It would have consequences for [Luis](name)
+- [Harald](name) would be affected
 - [Ike](name) and [Luis](name) would also face the consequences
 ⁻ They would miss an important meeting
 - [Robi](stakeholder) would die
