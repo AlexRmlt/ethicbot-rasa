@@ -98,7 +98,7 @@ intents:
 - moralquestion
 - goodbye
 - thanks
-- smalltalk: {triggers: action_handle_question_id}
+- questionid: {triggers: action_handle_question_id}
 slots:
   action_return:
     type: bool
