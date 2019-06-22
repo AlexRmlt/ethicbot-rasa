@@ -635,10 +635,12 @@ class CreateConsequence(Action):
                 action_return = True
             else:
                 # If we do not find a distinct name, let the user choose from possible stakeholders
+                events.append(FollowupAction('action_choose_affected_stakeholder'))
                 events.append(SlotSet('name', None))
                 action_return = False
         except (AttributeError, TypeError, KeyError, IndexError) as e:
             logger.warning('Exception creating consequence: ' + str(e))
+            events.append(FollowupAction('action_choose_affected_stakeholder'))
             events.append(SlotSet('name', None))
             action_return = False
             
@@ -792,7 +794,7 @@ class ActionRestart(Action):
 
     def run(self, dispatcher, tracker, domain):
         mind.amnesia(tracker.sender_id)
-        return [Restarted(), FollowupAction("action_intro")]
+        return [Restarted(), FollowupAction('action_intro')]
        
 
 class ActionDefaultAskAffirmation(Action):

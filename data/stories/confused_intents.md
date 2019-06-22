@@ -537,6 +537,7 @@
     - utter_ask_consequences
 * stakeholder
     - action_create_consequence
+    - followup{"name": "action_choose_affected_stakeholder"}
     - slot{"name": null}
     - slot{"action_return": false}
     - action_choose_affected_stakeholder
@@ -549,6 +550,7 @@
     - utter_ask_consequences
 * stakeholder{"stakeholder": "the victim"}
     - action_create_consequence
+    - followup{"name": "action_choose_affected_stakeholder"}
     - slot{"name": null}
     - slot{"action_return": false}
     - action_choose_affected_stakeholder
@@ -562,6 +564,7 @@
     - utter_next_consequence
 * stakeholder{"stakeholder": "the victim"}
     - action_create_consequence
+    - followup{"name": "action_choose_affected_stakeholder"}
     - slot{"name": null}
     - slot{"action_return": false}
     - action_choose_affected_stakeholder
@@ -603,6 +606,8 @@
 * option{"deed": "kill"}
     - slot{"deed": "kill"}
     - action_create_consequence
+    - followup{"name": "action_choose_affected_stakeholder"}
+    - slot{"name": null}
     - slot{"action_return": false}
     - action_choose_affected_stakeholder
 
@@ -738,6 +743,8 @@
 * decider{"deed": "kill"}
     - slot{"deed": "kill"}
     - action_create_consequence
+    - followup{"name": "action_choose_affected_stakeholder"}
+    - slot{"name": null}
     - slot{"action_return": false}
     - action_choose_affected_stakeholder
 
@@ -775,6 +782,8 @@
     - utter_next_consequence
 * decider
     - action_create_consequence
+    - followup{"name": "action_choose_affected_stakeholder"}
+    - slot{"name": null}
     - slot{"action_return": false}
     - action_choose_affected_stakeholder
 
@@ -800,6 +809,8 @@
     - utter_next_consequence
 * negative
     - action_create_consequence
+    - followup{"name": "action_choose_affected_stakeholder"}
+    - slot{"name": null}
     - slot{"action_return": false}
     - action_choose_affected_stakeholder
 * consequence{"name": "Kilian"}
@@ -829,6 +840,8 @@
     - utter_ask_consequences
 * negative
     - action_create_consequence
+    - followup{"name": "action_choose_affected_stakeholder"}
+    - slot{"name": null}
     - slot{"action_return": false}
     - action_choose_affected_stakeholder
 * consequence{"name": "Kilian"}
@@ -860,6 +873,8 @@
     - utter_next_consequence
 * positive
     - action_create_consequence
+    - followup{"name": "action_choose_affected_stakeholder"}
+    - slot{"name": null}
     - slot{"action_return": false}
     - action_choose_affected_stakeholder
 * consequence{"name": "Kilian"}
@@ -889,6 +904,8 @@
     - utter_ask_consequences
 * positive
     - action_create_consequence
+    - followup{"name": "action_choose_affected_stakeholder"}
+    - slot{"name": null}
     - slot{"action_return": false}
     - action_choose_affected_stakeholder
 * consequence{"name": "Kilian"}

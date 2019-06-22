@@ -90,6 +90,7 @@
 * consequence{"stakeholder": "the five workmen", "quantity": "5", "sentiment": "neg"}
     - slot{"sentiment": "neg"}
     - action_create_consequence
+    - followup{"name": "action_choose_affected_stakeholder"}    
     - slot{"name": null}
     - slot{"action_return": false}
     - action_choose_affected_stakeholder
@@ -159,7 +160,8 @@
     - utter_next_consequence
 * consequence{"name": "the Palatines", "sentiment": "pos"}
     - slot{"sentiment": "pos"}
-    - action_create_consequence
+    - action_create_consequence    
+    - followup{"name": "action_choose_affected_stakeholder"}
     - slot{"name": null}
     - slot{"action_return": false}
     - action_choose_affected_stakeholder
@@ -359,6 +361,7 @@
 * consequence{"sentiment": "neu"}
     - slot{"sentiment": "neu"}
     - action_create_consequence
+    - followup{"name": "action_choose_affected_stakeholder"}
     - slot{"name": null}
     - slot{"action_return": false}
     - action_choose_affected_stakeholder
@@ -550,6 +553,7 @@
     - slot{"name": "Tom"}
     - slot{"sentiment": "pos"}
     - action_create_consequence
+    - followup{"name": "action_choose_affected_stakeholder"}
     - slot{"name": null}
     - slot{"action_return": false}
     - action_choose_affected_stakeholder
@@ -1261,6 +1265,7 @@
 * consequence{"name": "the Palatines", "sentiment": "neu"}
     - slot{"sentiment": "neu"}
     - action_create_consequence
+    - followup{"name": "action_choose_affected_stakeholder"}
     - slot{"name": null}
     - slot{"action_return": false}
     - action_choose_affected_stakeholder
@@ -1346,6 +1351,7 @@
 * consequence{"name": "the Palatines", "sentiment": "neg"}
     - slot{"sentiment": "neg"}
     - action_create_consequence
+    - followup{"name": "action_choose_affected_stakeholder"}
     - slot{"name": null}
     - slot{"action_return": false}
     - action_choose_affected_stakeholder
@@ -1532,6 +1538,7 @@
 * consequence{"name": "Katharina", "sentiment": "neg"}
     - slot{"sentiment": "neg"}
     - action_create_consequence
+    - followup{"name": "action_choose_affected_stakeholder"}
     - slot{"name": null}
     - slot{"action_return": false}
     - action_choose_affected_stakeholder
@@ -1551,6 +1558,7 @@
 * consequence{"name": "the Palatines", "sentiment": "neu"}
     - slot{"sentiment": "neu"}
     - action_create_consequence
+    - followup{"name": "action_choose_affected_stakeholder"}
     - slot{"name": null}
     - slot{"action_return": false}
     - action_choose_affected_stakeholder
@@ -1593,6 +1601,7 @@
 * consequence{"name": "the Palatines", "sentiment": "neg"}
     - slot{"sentiment": "neg"}
     - action_create_consequence
+    - followup{"name": "action_choose_affected_stakeholder"}
     - slot{"name": null}
     - slot{"action_return": false}
     - action_choose_affected_stakeholder
@@ -1612,6 +1621,7 @@
 * consequence{"name": "Katharina", "sentiment": "neu"}
     - slot{"sentiment": "neu"}
     - action_create_consequence
+    - followup{"name": "action_choose_affected_stakeholder"}
     - slot{"name": null}
     - slot{"action_return": false}
     - action_choose_affected_stakeholder
@@ -1969,6 +1979,7 @@
 * consequence{"sentiment": "neu"}
     - slot{"sentiment": "neu"}
     - action_create_consequence
+    - followup{"name": "action_choose_affected_stakeholder"}
     - slot{"name": null}
     - slot{"action_return": false}
     - action_choose_affected_stakeholder
@@ -2050,6 +2061,7 @@
 * consequence{"sentiment": "neg"}
     - slot{"sentiment": "neg"}
     - action_create_consequence
+    - followup{"name": "action_choose_affected_stakeholder"}
     - slot{"name": null}
     - slot{"action_return": false}
     - action_choose_affected_stakeholder
@@ -2196,6 +2208,7 @@
 * consequence{"sentiment": "neu"}
     - slot{"sentiment": "neu"}
     - action_create_consequence
+    - followup{"name": "action_choose_affected_stakeholder"}
     - slot{"name": null}
     - slot{"action_return": false}
     - action_choose_affected_stakeholder
@@ -2242,6 +2255,7 @@
 * consequence{"sentiment": "neg"}
     - slot{"sentiment": "neg"}
     - action_create_consequence
+    - followup{"name": "action_choose_affected_stakeholder"}
     - slot{"name": null}
     - slot{"action_return": false}
     - action_choose_affected_stakeholder
@@ -2405,6 +2419,7 @@
 * consequence{"sentiment": "pos"}
     - slot{"sentiment": "pos"}
     - action_create_consequence
+    - followup{"name": "action_choose_affected_stakeholder"}
     - slot{"name": null}
     - slot{"action_return": false}
     - action_choose_affected_stakeholder
@@ -2459,6 +2474,7 @@
 * consequence{"sentiment": "neg"}
     - slot{"sentiment": "neg"}
     - action_create_consequence
+    - followup{"name": "action_choose_affected_stakeholder"}
     - slot{"name": null}
     - slot{"action_return": false}
     - action_choose_affected_stakeholder
@@ -2778,6 +2794,7 @@
 * consequence{"sentiment": "neu"}
     - slot{"sentiment": "neu"}
     - action_create_consequence
+    - followup{"name": "action_choose_affected_stakeholder"}
     - slot{"name": null}
     - slot{"action_return": false}
     - action_choose_affected_stakeholder
@@ -3268,6 +3285,7 @@
 * consequence{"sentiment": "pos"}
     - slot{"sentiment": "pos"}
     - action_create_consequence
+    - followup{"name": "action_choose_affected_stakeholder"}
     - slot{"name": null}
     - slot{"action_return": false}
     - action_choose_affected_stakeholder
@@ -3520,6 +3538,7 @@
 * consequence{"sentiment": "neg"}
     - slot{"sentiment": "neg"}
     - action_create_consequence
+    - followup{"name": "action_choose_affected_stakeholder"}
     - slot{"name": null}
     - slot{"action_return": false}
     - action_choose_affected_stakeholder
@@ -3619,6 +3638,7 @@
 * consequence{"sentiment": "pos"}
     - slot{"sentiment": "pos"}
     - action_create_consequence
+    - followup{"name": "action_choose_affected_stakeholder"}
     - slot{"name": null}
     - slot{"action_return": false}
     - action_choose_affected_stakeholder
@@ -3672,6 +3692,7 @@
 * consequence{"sentiment": "pos"}
     - slot{"sentiment": "pos"}
     - action_create_consequence
+    - followup{"name": "action_choose_affected_stakeholder"}
     - slot{"name": null}
     - slot{"action_return": false}
     - action_choose_affected_stakeholder
@@ -3799,6 +3820,7 @@
 * consequence{"stakeholder": "the passengers", "sentiment": "pos"}
     - slot{"sentiment": "pos"}
     - action_create_consequence
+    - followup{"name": "action_choose_affected_stakeholder"}
     - slot{"name": null}
     - slot{"action_return": false}
     - action_choose_affected_stakeholder
@@ -3970,6 +3992,7 @@
     - utter_ask_consequences
 * consequence
     - action_create_consequence
+    - followup{"name": "action_choose_affected_stakeholder"}
     - slot{"name": null}
     - slot{"action_return": false}
     - action_choose_affected_stakeholder
@@ -3990,6 +4013,7 @@
     - utter_next_consequence
 * consequence
     - action_create_consequence
+    - followup{"name": "action_choose_affected_stakeholder"}
     - slot{"name": null}
     - slot{"action_return": false}
     - action_choose_affected_stakeholder
@@ -4033,6 +4057,7 @@
 * consequence{"sentiment": "pos"}
     - slot{"sentiment": "pos"}
     - action_create_consequence
+    - followup{"name": "action_choose_affected_stakeholder"}
     - slot{"name": null}
     - slot{"action_return": false}
     - action_choose_affected_stakeholder
@@ -4052,6 +4077,7 @@
 * consequence{"sentiment": "pos"}
     - slot{"sentiment": "pos"}
     - action_create_consequence
+    - followup{"name": "action_choose_affected_stakeholder"}
     - slot{"name": null}
     - slot{"action_return": false}
     - action_choose_affected_stakeholder
@@ -4235,6 +4261,7 @@
     - utter_ask_consequences
 * consequence
     - action_create_consequence
+    - followup{"name": "action_choose_affected_stakeholder"}
     - slot{"name": null}
     - slot{"action_return": false}
     - action_choose_affected_stakeholder
@@ -4403,6 +4430,7 @@
 * consequence{"sentiment": "pos"}
     - slot{"sentiment": "pos"}
     - action_create_consequence
+    - followup{"name": "action_choose_affected_stakeholder"}
     - slot{"name": null}
     - slot{"action_return": false}
     - action_choose_affected_stakeholder
@@ -4574,6 +4602,7 @@
 * consequence{"sentiment": "pos"}
     - slot{"sentiment": "pos"}
     - action_create_consequence
+    - followup{"name": "action_choose_affected_stakeholder"}
     - slot{"name": null}
     - slot{"action_return": false}
     - action_choose_affected_stakeholder
@@ -4593,6 +4622,7 @@
 * consequence{"sentiment": "neg"}
     - slot{"sentiment": "neg"}
     - action_create_consequence
+    - followup{"name": "action_choose_affected_stakeholder"}
     - slot{"name": null}
     - slot{"action_return": false}
     - action_choose_affected_stakeholder
@@ -4632,6 +4662,7 @@
 * consequence{"sentiment": "neu"}
     - slot{"sentiment": "neu"}
     - action_create_consequence
+    - followup{"name": "action_choose_affected_stakeholder"}
     - slot{"name": null}
     - slot{"action_return": false}
     - action_choose_affected_stakeholder

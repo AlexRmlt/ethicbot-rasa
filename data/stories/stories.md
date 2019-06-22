@@ -332,6 +332,7 @@
     - utter_next_consequence
 * option
     - action_create_consequence
+    - followup{"name": "action_choose_affected_stakeholder"}
     - slot{"name": null}
     - slot{"action_return": false}
     - action_choose_affected_stakeholder
@@ -404,4 +405,131 @@
     - action_update_stakeholder
     - slot{"action_return": true}
     - utter_next_stakeholder
+
+## Generated Story -500919905742562163
+* greeting
+    - action_intro
+* stakeholder{"name": "leon"}
+    - slot{"name": "leon"}
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 1}
+    - slot{"action_return": true}
+    - action_check_identified_name
+    - slot{"action_return": false}
+    - utter_ask_identified_name
+* correct
+    - action_update_stakeholder
+    - slot{"name": "leon"}
+    - slot{"action_return": true}
+    - utter_ask_moralstatus
+* inform{"moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* stakeholder{"name": "kilian", "moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - slot{"name": "kilian"}
+    - action_create_stakeholder
+    - slot{"amount_stakeholders": 2}
+    - slot{"action_return": true}
+    - action_check_identified_name
+    - slot{"action_return": false}
+    - utter_ask_identified_name
+* correct
+    - action_update_stakeholder
+    - slot{"name": "kilian"}
+    - slot{"action_return": true}
+    - utter_ask_identified_moralstatus
+* correct
+    - utter_next_stakeholder
+* stakeholder{"name": "luis", "moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - slot{"name": "luis"}
+    - action_create_stakeholder
+    - slot{"amount_stakeholders": 3}
+    - slot{"action_return": true}
+    - action_check_identified_name
+    - slot{"action_return": false}
+    - utter_ask_identified_name
+* correct
+    - action_update_stakeholder
+    - slot{"name": "luis"}
+    - slot{"action_return": true}
+    - utter_ask_identified_moralstatus
+* correct
+    - utter_next_stakeholder
+* deny
+    - utter_confirm_stakeholders
+    - action_choose_decider
+* decider
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 4}
+    - slot{"action_return": true}
+    - utter_ask_name_singular
+* name{"name": "Harald"}
+    - slot{"name": "Harald"}
+    - action_update_stakeholder
+    - slot{"decider": "Harald"}
+    - slot{"name": "Harald"}
+    - slot{"action_return": true}
+    - utter_ask_moralstatus
+* inform{"moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_ask_options
+* option
+    - action_create_option
+    - slot{"deed": null}
+    - slot{"action_return": true}
+    - utter_ask_deontic_modality
+* inform{"deonticmodality": "indifference"}
+    - action_update_option
+    - slot{"action_return": true}
+    - utter_ask_universalizable
+* correct
+    - action_update_option
+    - slot{"action_return": true}
+    - utter_ask_consequences
+* option
+    - action_create_consequence
+    - slot{"sentiment": null}
+    - followup{"name": "action_choose_affected_stakeholder"}
+    - slot{"name": null}
+    - slot{"action_return": false}
+    - action_choose_affected_stakeholder
+* consequence{"name": "leon"}
+    - slot{"name": "leon"}
+    - action_create_consequence
+    - slot{"sentiment": null}
+    - slot{"name": "leon"}
+    - slot{"action_return": true}
+    - utter_ask_impact
+* neutral
+    - utter_next_consequence
+* consequence{"name": "harry", "sentiment": "neg"}
+    - slot{"name": "harry"}
+    - slot{"sentiment": "neg"}
+    - action_create_consequence
+    - followup{"name": "action_choose_affected_stakeholder"}
+    - slot{"name": null}
+    - slot{"action_return": false}
+    - action_choose_affected_stakeholder
+* consequence{"name": "Harald"}
+    - slot{"name": "Harald"}
+    - action_create_consequence
+    - slot{"name": "Harald"}
+    - slot{"action_return": true}
+    - utter_ask_impact_negative
+* correct
+    - utter_ask_impact_weight
+* quantity{"quantity": "10"}
+    - action_update_consequence
+    - slot{"action_return": true}
+    - utter_ask_consequence_definite
+* correct
+    - utter_next_consequence
 

@@ -75,30 +75,30 @@ entities:
 - sentiment
 - stakeholder
 intents:
-- correct
-- inform
-- stakeholdergroup
-- stakeholder
+- quantity
+- option
 - deny
 - greeting
-- smalltalk: {triggers: action_handle_smalltalk}
-- decider
 - name
-- quantity
+- consequence
+- decider
+- correct
+- stakeholder
+- inform
+- neutral
+- stakeholdergroup
+- smalltalk: {triggers: action_handle_smalltalk}
 - dontknow
 - wrong
-- option
-- consequence
 - affirm
 - negative
 - positive
 - deontology
 - utilitarism
-- neutral
 - moralquestion
 - goodbye
 - thanks
-- questionid: {triggers: action_handle_question_id}
+- smalltalk: {triggers: action_handle_question_id}
 slots:
   action_return:
     type: bool
@@ -592,7 +592,8 @@ templates:
   utter_reflect_single_person:
   - text: Okay, so its only one single person. Got that wrong at first.
   - text: Well, I thought there were multiple people. So it's only one person, alright.
-  - text: I see, it's just one. Apparently I confused this person with a group of people.
+  - text: I see, it's just one. Apparently I confused this person with a group of
+      people.
   - text: Apparently I confused this person with a group of people. I'll keep in mind
       that it's only one person.
   utter_smalltalk_1:

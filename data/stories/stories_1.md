@@ -367,6 +367,7 @@
 * consequence{"sentiment": "pos"}
     - slot{"sentiment": "pos"}
     - action_create_consequence
+    - followup{"name": "action_choose_affected_stakeholder"}
     - slot{"name": null}
     - slot{"action_return": false}
     - action_choose_affected_stakeholder

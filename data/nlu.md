@@ -17,7 +17,6 @@
 - It would have consequences for [Luis](name)
 - [Harald](name) would be affected
 - [Ike](name) and [Luis](name) would also face the consequences
-⁻ They would miss an important meeting
 - [Robi](stakeholder) would die
 - [Paula](name) would survive. [Robi](stakeholder) would die
 - [Paula](name) would die
@@ -350,6 +349,7 @@
 - Choosing this option would lead to severe danger for [Michael](name)
 - The consequence for [Alex](name) would be, that he would not be able to go to the city anymore without having to be extra careful
 - Another consequence would be that [the Hessians](name) were to look for a new employee for this particular task
+- [Harry](name) would also violate his responsibilities
 
 ## intent:correct
 - It will actually become true.
@@ -703,6 +703,7 @@
 - no i can't
 - no there is no one left
 - I don't have a name or title for them all
+- No more persons are involved
 
 ## intent:deontology
 - /deontology
@@ -840,6 +841,7 @@
 - Hello
 - hi
 - hi
+- hi
 
 ## intent:inform
 - /inform{"moralstatus": "human"}
@@ -974,6 +976,7 @@
 - [The company](stakeholder)
 - [Michael](name)
 - You can assign the name [Akin](name)
+- [Harald](name)
 
 ## intent:negative
 - negatively
@@ -1035,6 +1038,7 @@
 - It would be okay for him, no negative or positive consequences
 - It would be neither completely good nor completely bad. He would most definitely be angry but also thankful for knowing it.
 - It would not matter that much actually
+- it does not matter actually for him
 
 ## intent:option
 - [Go to bed](deed) early but [miss out on the fun](deed)
@@ -1319,6 +1323,8 @@
 - [I](stakeholder:i) am aware of a crime and I am hesitating to [go to the police and tell them](deed)
 - He can [keep his knowledge to himself](deed) and [not tell anyone](deed)
 - They can as well [leave things as they are](deed)
+- Take Luis side
+- [missing an important meeting](deed)
 
 ## intent:positive
 - positively
@@ -1611,6 +1617,7 @@
 - [4,56](quantity)
 - [4.78](quantity)
 - [1000](quantity) people at least
+- [2](quantity)
 
 ## intent:questionid
 - What is your ID?
@@ -1994,6 +2001,9 @@
 - [I](stakeholder:i) am in big trouble
 - Okay, I'm talking about [some person](stakeholder) who seriously threatens me
 - [One of this](stakeholder:one of this) [5](quantity) people is [a guy](stakeholder) whose name is [Johann](name)
+- The youngest of us, [Leon](name)
+- The name of the next Person is [Kilian](name)
+- [Luis](name) is the last person
 
 ## intent:stakeholdergroup
 - The [local police](stakeholder)
@@ -2407,8 +2417,8 @@
 ## synonym:keep the purse
 - Keep the purse
 
-## synonym:kilian
-- Kilian
+## synonym:Kilian
+- kilian
 
 ## synonym:killing
 - Killing
@@ -2433,6 +2443,9 @@
 
 ## synonym:one commander
 - One commander
+
+## synonym:one of this
+- One of this
 
 ## synonym:one other person
 - One other person
