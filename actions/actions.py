@@ -334,7 +334,9 @@ class CreateOption(Action):
         if len(deeds) > 0:
             label = deeds[0]
         else:
-            label = 'Option {}'.format(mind.get_num_options(tracker.sender_id) + 1)
+            #label = 'Option {}'.format(mind.get_num_options(tracker.sender_id) + 1)
+            # The label will be written to the moral data set -> avoid "Option n"
+            label = tracker.latest_message['text']
 
         Option({ "deeds_tmp": deeds, "label": label }).memorize(tracker.sender_id)
         

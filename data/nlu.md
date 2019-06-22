@@ -11,6 +11,16 @@
 - yes
 
 ## intent:consequence
+- For [Kilian](name)
+- [Ike](name) and [Luis](name) would also face the consequences
+⁻ They would miss an important meeting
+- [Robi](stakeholder) would die
+- [Paula](name) would survive. [Robi](stakeholder) would die
+- [Paula](name) would die
+- [Robi](stakeholder) would survive
+- "[Robi](stakeholder)" would die
+- "[Paula](name)" would survive
+- "[Maria](name)" would be affected. The concrete effect would be to save Maria from drowning.
 - [Vivian](name) will not know the truth
 - [Tina](name) might get punished
 - [Tom](name) might get caught.
@@ -403,6 +413,8 @@
 - [One commander](stakeholder:one commander) must make a decision if it is appropriate to shoot the airplane
 
 ## intent:deny
+- There are no more People involved
+- No other possibilitys
 - He doesn´t have another option
 - There are no consequences left
 - No I can´t think of another
@@ -1021,6 +1033,14 @@
 - It would not matter that much actually
 
 ## intent:option
+- [Go to bed](deed) early but [miss out on the fun](deed)
+- Take Luis's Side
+- [Rescuing](deed) [Robi](stakeholder) from a burning house
+- [Rescuing](deed) [Paula](name) from a burning house
+- [Ben](name) could [save Robi](deed) from a burning house
+- [Ben](name) can [save Paula](deed) from a burning house.
+- The next possibility is to [save "Leon"](deed) from drowning
+- "[Robi](name)" can [save "Maria"](deed) from drowning.
 - He can [lie](deed) to his mother
 - [Tell the police](deed) what he knows about Paul
 - Derek could also just [treat George´s minor injury](deed), [send him home](deed) and [wait for another match](deed) for Isabel to come up
@@ -1303,6 +1323,7 @@
 - It would be positive to keep the money
 - That would be positive for him
 - positive
+- positiv
 - This would be very positive
 - For the [Swabians](name) this would be rather positive
 - This would be absolutely positive for [the five people](stakeholder)
@@ -1658,6 +1679,18 @@
 - I've got a problem to tell you
 
 ## intent:stakeholder
+- The Last Person is called [Luis](name)
+- The next Person is called [Kilian](name)
+- [Leon](name), he is the youngest
+- [Leon](name), he is the joungest
+- [Robi](stakeholder) is a Machine
+- [Ben](name) is a Human
+- [Paula](name) is a Human
+- "[Paula](name)" is a Human
+- "[Ben](name)" is a Human
+- "[Robi](stakeholder)" is a Machine
+- "[Leon](name)" is a "Human"
+- "[Maria](name)" is a Human
 - I´m talking about [Tom](name). Tom is a social worker.
 - [Tom](name) is a social worker.
 - There´s [Isabel](name) who is a resident in the hospital where Derek works. She needs a new kidney
