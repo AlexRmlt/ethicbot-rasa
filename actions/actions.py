@@ -596,11 +596,13 @@ class CreateConsequence(Action):
         # Find out, which stakeholder is affected by this consequence
         try:
             names = list(tracker.get_latest_entity_values('name'))
+            names = [name.lower() for name in names]
 
             # check if an assigned name is mentioned, maybe the entity was not captured
             stakeholders = mind.get_stakeholders(tracker.sender_id)
             for sh in stakeholders:
-                if sh['name'] in tracker.latest_message['text'] and not sh['name'] in names:
+                sh['name'] = sh['name'].lower()
+                if sh['name'] in tracker.latest_message['text'].lower() and not sh['name'] in names:
                         names.append(sh['name'])
 
             aff_stkhs = []
@@ -625,6 +627,9 @@ class CreateConsequence(Action):
                         events.append(SlotSet('name', sh['name']))
 
             if len(aff_stkhs) > 0:
+                # remove duplicates, just in case
+                aff_stkhs = list(dict.fromkeys(aff_stkhs))
+
                 consequence = Consequence({
                     "option": option.doc_id, 
                     "affected_stakeholders": aff_stkhs, 

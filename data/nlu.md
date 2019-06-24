@@ -11,6 +11,9 @@
 - yes
 
 ## intent:consequence
+- [Hänsel](name) and [Gretel](name) might live happily ever after
+- If [Hänsel](name) runs away, only Gretel might be killed
+- If [Hänsel](name) stays and fights they might both not be killed
 - For [Kilian](name)
 - For [Leon](name)
 - For [Andrea](name)
@@ -1041,6 +1044,7 @@
 - it does not matter actually for him
 
 ## intent:option
+- A miracle might occur
 - [Go to bed](deed) early but [miss out on the fun](deed)
 - Take Luis's Side
 - [Rescuing](deed) [Robi](stakeholder) from a burning house
