@@ -256,6 +256,7 @@
     - utter_ask_guess_quantity
 * quantity
     - action_update_stakeholder
+    - followup{"name": "utter_ask_name_plural"}
     - slot{"action_return": true}
     - utter_ask_name_plural
 * name
@@ -959,6 +960,7 @@
     - utter_ask_guess_quantity
 * quantity{"quantity": "10"}
     - action_update_stakeholder
+    - followup{"name": "utter_ask_name_plural"}
     - slot{"action_return": true}
     - utter_ask_name_plural
 * name
@@ -995,6 +997,7 @@
     - utter_ask_quantity
 * quantity{"quantity": "about 5"}
     - action_update_stakeholder
+    - followup{"name": "utter_ask_name_plural"}
     - slot{"action_return": true}
     - utter_ask_name_plural
 * name
@@ -1197,6 +1200,7 @@
     - utter_ask_quantity
 * quantity{"quantity": "6"}
     - action_update_stakeholder
+    - followup{"name": "utter_ask_name_plural"}
     - slot{"action_return": true}
     - utter_ask_name_plural
 * name
@@ -1899,6 +1903,7 @@
     - utter_ask_quantity
 * quantity{"quantity": "About 20"}
     - action_update_stakeholder
+    - followup{"name": "utter_ask_name_plural"}
     - slot{"action_return": true}
     - utter_ask_name_plural
 * dontknow
@@ -3576,6 +3581,7 @@
     - utter_ask_quantity
 * quantity{"quantity": "9"}
     - action_update_stakeholder
+    - followup{"name": "utter_ask_name_plural"}
     - slot{"action_return": true}
     - utter_ask_name_plural
 * name{"stakeholder": "the passengers"}
@@ -4175,6 +4181,7 @@
     - utter_ask_guess_quantity
 * quantity{"quantity": "200"}
     - action_update_stakeholder
+    - followup{"name": "utter_ask_name_plural"}
     - slot{"action_return": true}
     - utter_ask_name_plural
 * deny

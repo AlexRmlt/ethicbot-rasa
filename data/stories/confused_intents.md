@@ -9,6 +9,7 @@
     - utter_ask_quantity
 * quantity{"quantity": "24"}
     - action_update_stakeholder
+    - followup{"name": "utter_ask_name_plural"}
     - slot{"action_return": true}
     - utter_ask_name_plural
 
@@ -85,6 +86,7 @@
     - utter_ask_quantity
 * quantity{"quantity": "24"}
     - action_update_stakeholder
+    - followup{"name": "utter_ask_name_plural"}
     - slot{"action_return": true}
     - utter_ask_name_plural
 * stakeholdergroup
@@ -102,6 +104,7 @@
     - utter_ask_quantity
 * quantity{"quantity": "ten"}
     - action_update_stakeholder
+    - followup{"name": "utter_ask_name_plural"}
     - slot{"action_return": true}
     - utter_ask_name_plural
 * stakeholdergroup{"stakeholder": "the board"}
@@ -119,6 +122,7 @@
     - utter_ask_quantity
 * quantity{"quantity": "ten"}
     - action_update_stakeholder
+    - followup{"name": "utter_ask_name_plural"}
     - slot{"action_return": true}
     - utter_ask_name_plural
 * stakeholdergroup
@@ -136,6 +140,7 @@
     - utter_ask_quantity
 * quantity{"quantity": "ten"}
     - action_update_stakeholder
+    - followup{"name": "utter_ask_name_plural"}
     - slot{"action_return": true}
     - utter_ask_name_plural
 * stakeholdergroup{"stakeholder": "the board"}

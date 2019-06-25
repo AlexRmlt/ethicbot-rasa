@@ -12,6 +12,7 @@
     - utter_ask_quantity
 * quantity{"quantity": "10"}
     - action_update_stakeholder
+    - followup{"name": "utter_ask_name_plural"}
     - slot{"action_return": true}
     - utter_ask_name_plural
 * name
@@ -34,6 +35,7 @@
     - utter_ask_guess_quantity
 * quantity{"quantity": "10000"}
     - action_update_stakeholder
+    - followup{"name": "utter_ask_name_plural"}
     - slot{"action_return": true}
     - utter_ask_name_plural
 * name{"stakeholder": "the city people"}
@@ -532,4 +534,86 @@
     - utter_ask_consequence_definite
 * correct
     - utter_next_consequence
+
+## Generated Story -1956901734285764416
+* greeting
+    - action_intro
+* stakeholdergroup{"stakeholder": "a lot of people", "moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_create_stakeholder
+    - slot{"amount_stakeholders": 1}
+    - slot{"action_return": false}
+    - utter_ask_quantity
+* quantity{"quantity": "20"}
+    - action_update_stakeholder
+    - followup{"name": "utter_ask_name_plural"}
+    - slot{"action_return": true}
+    - utter_ask_name_plural
+* name{"stakeholder": "the terrorists"}
+    - action_update_stakeholder
+    - slot{"name": "the terrorists"}
+    - slot{"action_return": true}
+    - utter_ask_identified_moralstatus
+* correct
+    - utter_next_stakeholder
+* stakeholdergroup{"stakeholder": "many people", "moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_create_stakeholder
+    - slot{"amount_stakeholders": 2}
+    - slot{"action_return": false}
+    - utter_ask_quantity
+* quantity
+    - action_update_stakeholder
+    - followup{"name": "utter_ask_name_plural"}
+    - slot{"action_return": true}
+    - utter_ask_name_plural
+* name{"stakeholder": "the passengers"}
+    - action_update_stakeholder
+    - slot{"name": "the passengers"}
+    - slot{"action_return": true}
+    - utter_ask_identified_moralstatus
+* correct
+    - utter_next_stakeholder
+* decider{"stakeholder": "one person"}
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 3}
+    - slot{"action_return": true}
+    - utter_ask_name_singular
+* name
+    - action_update_stakeholder
+    - slot{"decider": "Hauke"}
+    - slot{"name": "Hauke"}
+    - slot{"action_return": true}
+    - utter_ask_moralstatus
+* inform{"moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* stakeholdergroup{"stakeholder": "a large crowd of people"}
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 4}
+    - slot{"action_return": false}
+    - utter_ask_quantity
+* quantity{"quantity": "10000"}
+    - action_update_stakeholder
+    - followup{"name": "utter_ask_name_plural"}
+    - slot{"action_return": true}
+    - utter_ask_name_plural
+* dontknow
+    - action_update_stakeholder
+    - slot{"name": "the Hessians"}
+    - slot{"action_return": true}
+    - utter_ask_moralstatus
+* inform{"moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* deny
+    - utter_confirm_stakeholders
+    - utter_confirm_decider
+    - utter_ask_options
 

@@ -418,6 +418,7 @@
 - [Solomon](name) must decide if he disobeys the orders of [Erskine](name)
 - [Erskine](name) has to decide whether her saves most of the people in his town or tries to achieve the same by giving information to the enemy
 - [One commander](stakeholder:one commander) must make a decision if it is appropriate to shoot the airplane
+- [One person](stakeholder:one person) must decide if he gives the order to shoot the plane
 
 ## intent:deny
 - There are no more People involved
@@ -525,7 +526,7 @@
 - no
 - no other people
 - No, I can't tell it
-- No, I don't have [one](quantity)
+- No, I don't have one
 - No, the robot does not have a name.
 - No.
 - No, that was all.
@@ -647,7 +648,7 @@
 - There is no other option
 - Of course not
 - No other people are involved
-- [The person](stakeholder:the person) has no name
+- The person has no name
 - No
 - No that were all affected people
 - No
@@ -686,7 +687,7 @@
 - no one else is affected
 - thats all
 - These are the only options available
-- [The person](stakeholder:the person)'s name is not known
+- The person's name is not known
 - I sincerely doubt that
 - No more people are involved
 - no thats all for now
@@ -707,6 +708,7 @@
 - no there is no one left
 - I don't have a name or title for them all
 - No more persons are involved
+- that were all relevant persons
 
 ## intent:deontology
 - /deontology
@@ -762,6 +764,7 @@
 - I don't know any action
 - I don't know it exactly
 - I have no idea what his name is
+- I don't know any name for them
 
 ## intent:goodbye
 - okay see you later
@@ -842,9 +845,6 @@
 - Hi!
 - hi
 - Hello
-- hi
-- hi
-- hi
 
 ## intent:inform
 - /inform{"moralstatus": "human"}
@@ -980,6 +980,9 @@
 - [Michael](name)
 - You can assign the name [Akin](name)
 - [Harald](name)
+- Use the name [the terrorists](stakeholder)
+- [The passengers](stakeholder:the passengers)
+- You can call him [the commander](stakeholder)
 
 ## intent:negative
 - negatively
@@ -1044,6 +1047,7 @@
 - it does not matter actually for him
 
 ## intent:option
+- He can [shoot the plane](deed) in order to [save the people](deed) on the ground
 - A miracle might occur
 - [Go to bed](deed) early but [miss out on the fun](deed)
 - Take Luis's Side
@@ -1181,7 +1185,7 @@
 - They can [keep the money](deed)
 - the alternativ option is to [return the purse](deed) to the owner Mike
 - [Keep the found purse](deed)
-- [Anton](name) could also [see whether there's anything he would be able to do]() for the children without his aunts money
+- [Anton](name) could also [see whether there's anything he would be able to do](deed) for the children without his aunts money
 - A morally valid action for [Anton](name) would be to [try and persuade his aunt](deed) to [help the children](deed) with her money while she's still alive
 - If [Anton](name) [killed](deed) Burgl now he would get her money instantly
 - Yes, we can [allow Yves to continue living](deed)
@@ -1622,6 +1626,9 @@
 - [4.78](quantity)
 - [1000](quantity) people at least
 - [2](quantity)
+- [20](quantity) terrorists
+- Maybe [200](quantity) persons
+- It could be more than [10000](quantity)
 
 ## intent:questionid
 - What is your ID?
@@ -2100,6 +2107,9 @@
 - Also there are [a lot of people](stakeholder) watching the scene
 - Then there is [a crowd of people](stakeholder) who do not do anything
 - [5](quantity) people are involved in the situation altogether
+- [A group of terrorists](stakeholder:a group of terrorists) has hijacked a plane with [a lot of people](stakeholder)
+- On the plane, there are [many people](stakeholder)
+- On the ground there is [a large crowd of people](stakeholder) who are threatened by a possible plane crash
 
 ## intent:thanks
 - you helped a lot thank you
@@ -2211,7 +2221,6 @@
 
 ## synonym:Hans
 - hans
-- Hans
 
 ## synonym:Happy
 - happy
@@ -2241,6 +2250,9 @@
 
 ## synonym:Ken
 - {"name": "Ken"}
+
+## synonym:Kilian
+- kilian
 
 ## synonym:Kitty
 - kitty
@@ -2420,9 +2432,6 @@
 
 ## synonym:keep the purse
 - Keep the purse
-
-## synonym:Kilian
-- kilian
 
 ## synonym:killing
 - Killing

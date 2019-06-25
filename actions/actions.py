@@ -212,6 +212,12 @@ class UpdateStakeholder(Action):
 
                         if quantity > 1:
                             dispatcher.utter_message('I see, {} are involved.'.format(sh['amount']))
+
+                            # This is important for deciding whether it should be asked for a plural or singular name.
+                            # From the sole actions output, this can not be determined in the stories without the followup action
+                            # Asking for the plural name after plural quantity is deterministic - for singular there could be an
+                            # identified name to be checked
+                            events.append(FollowupAction('utter_ask_name_plural'))
                         else:
                             dispatcher.utter_template('utter_reflect_single_person', tracker)
                     else:

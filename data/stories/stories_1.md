@@ -260,6 +260,7 @@
     - utter_ask_quantity
 * quantity{"quantity": "24"}
     - action_update_stakeholder
+    - followup{"name": "utter_ask_name_plural"}
     - slot{"action_return": true}
     - utter_ask_name_plural
 * name

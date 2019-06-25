@@ -23,6 +23,7 @@
     - utter_ask_quantity
 * quantity{"quantity": "50000"}
     - action_update_stakeholder
+    - followup{"name": "utter_ask_name_plural"}
     - slot{"action_return": true}
     - utter_ask_name_plural
 * name
@@ -43,6 +44,7 @@
     - utter_ask_quantity
 * quantity{"quantity": "ten"}
     - action_update_stakeholder
+    - followup{"name": "utter_ask_name_plural"}
     - slot{"action_return": true}
     - utter_ask_name_plural
 * name{"stakeholder": "the board"}
