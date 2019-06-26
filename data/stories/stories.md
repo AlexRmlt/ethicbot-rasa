@@ -748,3 +748,74 @@
 * correct
     - utter_next_stakeholder
 
+## Generated Story -6483728836843920675
+* greeting
+    - action_intro
+* stakeholder{"name": "Ken", "stakeholder": "a doctor", "moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - slot{"name": "Ken"}
+    - action_create_stakeholder
+    - slot{"amount_stakeholders": 1}
+    - slot{"action_return": true}
+    - action_check_identified_name
+    - followup{"name": "utter_ask_identified_name"}
+    - utter_ask_identified_name
+* correct
+    - action_update_stakeholder
+    - slot{"name": "Ken"}
+    - slot{"action_return": true}
+    - utter_ask_identified_moralstatus
+* correct
+    - utter_next_stakeholder
+* stakeholder{"name": "Ken", "stakeholder": "a patient", "moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - slot{"name": "Ken"}
+    - action_create_stakeholder
+    - slot{"amount_stakeholders": 2}
+    - slot{"action_return": true}
+    - action_check_identified_name
+    - followup{"name": "utter_ask_name_singular"}
+    - utter_ask_name_singular
+* name{"name": "Tyrone"}
+    - slot{"name": "Tyrone"}
+    - action_update_stakeholder
+    - slot{"name": "Tyrone"}
+    - slot{"action_return": true}
+    - utter_ask_identified_moralstatus
+* wrong
+    - utter_ask_moralstatus
+* inform{"moralstatus": "animal"}
+    - slot{"moralstatus": "animal"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_ask_moralstatus_weight
+* quantity{"quantity": "1"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* deny
+    - utter_confirm_stakeholders
+    - action_choose_decider
+* decider
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 3}
+    - slot{"action_return": true}
+    - utter_ask_name_singular
+* name{"name": "Jamal"}
+    - slot{"name": "Jamal"}
+    - action_update_stakeholder
+    - slot{"decider": "Jamal"}
+    - slot{"name": "Jamal"}
+    - slot{"action_return": true}
+    - utter_ask_moralstatus
+* inform{"moralstatus": "animal"}
+    - slot{"moralstatus": "animal"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_ask_moralstatus_weight
+* quantity{"quantity": "3"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_ask_options
+

@@ -366,7 +366,6 @@
 - Correct
 - /correct
 - /correct
-- /correct
 
 ## intent:decider
 - [Erskine](name) has to decide whether to save half of the people in the town, or try to save everyone by giving away secrets to the enemy.
@@ -713,6 +712,7 @@
 - No more persons are involved
 - that were all relevant persons
 - no others
+- no further people
 
 ## intent:deontology
 - /deontology
@@ -852,6 +852,7 @@
 - Hello
 - good morning, chatbot!
 - hello ethicbot
+- good evening
 
 ## intent:inform
 - /inform{"moralstatus": "human"}
@@ -997,6 +998,8 @@
 - [Mister B](stakeholder)
 - The patient's name is [Simon](name)
 - [The employees](stakeholder)
+- His name is [Tyrone](name)
+- [Jamal](name) is the name
 
 ## intent:negative
 - negatively
@@ -1646,6 +1649,8 @@
 - It could be more than [10000](quantity)
 - [5](quantity)
 - [10](quantity) employees
+- [1](quantity)
+- [3](quantity) ...
 
 ## intent:questionid
 - What is your ID?
@@ -2036,6 +2041,8 @@
 - [Trundle](stakeholder) the tortoise
 - [Ken](name) is a skilled doctor who works at the town's main hospital
 - [Ken](name) has [a patient](stakeholder) who was diagnosed with HIV and threatens to infect innocent people
+- [Ken](name) is [a doctor](stakeholder) who works in a hospital. He is very skilled.
+- [Ken](name) has [a patient](stakeholder) who has AIDS. He threatened to infect other people
 
 ## intent:stakeholdergroup
 - The [local police](stakeholder)
