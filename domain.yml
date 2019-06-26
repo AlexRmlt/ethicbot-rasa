@@ -422,17 +422,14 @@ templates:
       differently, please?
   utter_ask_stakeholders:
   - text: "First: Which persons or groups of people are all involved in the situation?\
-      \ Please tell me in one sentence, one after the other, including the person's\
-      \ name."
+      \ Please describe to me the first relevant person, including the name."
   - text: First of all, I'd like to know who is engaged in the situation. Please name
-      me all persons or groups of persons including their names one after the other,
-      starting with the first.
-  - text: The first aspect I am interested in is which persons are all involved in
-      the situation. Please describe each person or group one by one to me in a single
-      short sentences including their name, starting with the first.
+      me the first person or group of persons, including the name, that is involved.
+  - text: The first aspect I am interested in is which persons or groups are all involved in
+      the situation. Please describe the first one to me in a single short sentences, including the name.
   - text: My first question to you is which people are involved in the situation.
       I need a short description for each person or group of people in one sentence
-      including their name, one at a time. Please start with the first one.
+      including the name, one at a time. Please start with the first one.
   utter_ask_universalizable:
   - buttons:
     - payload: /correct

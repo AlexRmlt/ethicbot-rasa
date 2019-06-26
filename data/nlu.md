@@ -11,6 +11,8 @@
 - yes
 
 ## intent:consequence
+- On the neighbour
+- If I got up at 6 am and did exercise with music in the garden Mister H would wake up
 - [Hänsel](name) and [Gretel](name) might live happily ever after
 - If [Hänsel](name) runs away, only Gretel might be killed
 - If [Hänsel](name) stays and fights they might both not be killed
@@ -803,6 +805,7 @@
 - ok bye
 
 ## intent:greeting
+- good evening, chatbot
 - welcome back!
 - welcome back
 - welcome
@@ -859,6 +862,7 @@
 - What are the important parameters to decide which group the robot tries to rescue?
 
 ## intent:name
+- [Mister H](name)
 - "[Robi](stakeholder)"
 - the name is [nele](name)
 - his name is [robot](stakeholder)
@@ -1047,6 +1051,7 @@
 - it does not matter actually for him
 
 ## intent:option
+- Melissa could [get up at 6 am](deed) and [do exercise with music in the garden](deed)
 - He can [shoot the plane](deed) in order to [save the people](deed) on the ground
 - A miracle might occur
 - [Go to bed](deed) early but [miss out on the fun](deed)
