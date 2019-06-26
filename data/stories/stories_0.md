@@ -69,7 +69,7 @@
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": true}
     - action_check_identified_name
-    - slot{"action_return": false}
+    - followup{"name": "utter_ask_identified_name"}
     - utter_ask_identified_name
 * correct
     - action_update_stakeholder
@@ -88,7 +88,7 @@
     - slot{"amount_stakeholders": 2}
     - slot{"action_return": true}
     - action_check_identified_name
-    - slot{"action_return": false}
+    - followup{"name": "utter_ask_identified_name"}
     - utter_ask_identified_name
 * correct
     - action_update_stakeholder
@@ -231,7 +231,7 @@
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": true}
     - action_check_identified_name
-    - slot{"action_return": false}
+    - followup{"name": "utter_ask_identified_name"}
     - utter_ask_identified_name
 * correct
     - action_update_stakeholder
@@ -250,7 +250,7 @@
     - slot{"amount_stakeholders": 2}
     - slot{"action_return": true}
     - action_check_identified_name
-    - slot{"action_return": false}
+    - followup{"name": "utter_ask_identified_name"}
     - utter_ask_identified_name
 * correct
     - action_update_stakeholder
@@ -414,7 +414,7 @@
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": true}
     - action_check_identified_name
-    - slot{"action_return": false}
+    - followup{"name": "utter_ask_identified_name"}
     - utter_ask_identified_name
 * wrong
     - action_update_stakeholder
@@ -433,7 +433,7 @@
     - slot{"amount_stakeholders": 2}
     - slot{"action_return": true}
     - action_check_identified_name
-    - slot{"action_return": false}
+    - followup{"name": "utter_ask_identified_name"}
     - utter_ask_identified_name
 * correct
     - action_update_stakeholder
@@ -479,7 +479,7 @@
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": true}
     - action_check_identified_name
-    - slot{"action_return": false}
+    - followup{"name": "utter_ask_identified_name"}
     - utter_ask_identified_name
 * correct
     - action_update_stakeholder
@@ -498,7 +498,7 @@
     - slot{"amount_stakeholders": 2}
     - slot{"action_return": true}
     - action_check_identified_name
-    - slot{"action_return": false}
+    - followup{"name": "utter_ask_identified_name"}
     - utter_ask_identified_name
 * correct
     - action_update_stakeholder
@@ -672,7 +672,7 @@
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": true}
     - action_check_identified_name
-    - slot{"action_return": false}
+    - followup{"name": "utter_ask_identified_name"}
     - utter_ask_identified_name
 * correct
     - action_update_stakeholder
@@ -691,7 +691,7 @@
     - slot{"amount_stakeholders": 2}
     - slot{"action_return": true}
     - action_check_identified_name
-    - slot{"action_return": false}
+    - followup{"name": "utter_ask_identified_name"}
     - utter_ask_identified_name
 * correct
     - action_update_stakeholder
@@ -890,7 +890,7 @@
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": true}
     - action_check_identified_name
-    - slot{"action_return": false}
+    - followup{"name": "utter_ask_identified_name"}
     - utter_ask_identified_name
 * correct
     - action_update_stakeholder
@@ -909,7 +909,7 @@
     - slot{"amount_stakeholders": 2}
     - slot{"action_return": true}
     - action_check_identified_name
-    - slot{"action_return": false}
+    - followup{"name": "utter_ask_identified_name"}
     - utter_ask_identified_name
 * correct
     - action_update_stakeholder
@@ -928,7 +928,7 @@
     - slot{"amount_stakeholders": 3}
     - slot{"action_return": true}
     - action_check_identified_name
-    - slot{"action_return": false}
+    - followup{"name": "utter_ask_identified_name"}
     - utter_ask_identified_name
 * correct
     - action_update_stakeholder

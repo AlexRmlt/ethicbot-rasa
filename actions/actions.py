@@ -737,23 +737,35 @@ class CheckIdentifiedName(Action):
     Check if an identified name is already assigned to a stakeholder
     
     Returns:
-    * action_return = True if the identified name is already in use
-    * action_return = False if the name is still unassigned
+    * FollowupAction utter_ask_identified_name if name is not yet in use
+    * FollowupAction utter_ask_name_singular if name is already in use and last added stakeholder is a single person
+    * FollowupAction utter_ask_name_plural if name is already in use and last added stakeholder is a group
     """
     def name(self):
         return 'action_check_identified_name'
         
     def run(self, dispatcher, tracker, domain):
-        action_return = False
-        name = tracker.get_slot('name')
-        if not name == None:
-            if not mind.get_stakeholder_by_name(tracker.sender_id, name) == None:
-                action_return = True
-        else:
-            # If no name was identified, it is better to initiate a question for the actual name
-            action_return = True
+        followup = 'utter_ask_name_singular'
 
-        return [SlotSet("action_return", action_return)]
+        last_stakeholder = mind.get_recent_stakeholder(tracker.sender_id)
+        name = tracker.get_slot('name')
+        if name == None:
+            # If no name was identified, it is better to initiate a question for the actual name
+            if last_stakeholder['amount'] > 1:
+                followup = 'utter_ask_name_plural'
+            else:
+                followup = 'utter_ask_name_singular'
+        else:
+            if mind.get_stakeholder_by_name(tracker.sender_id, name) == None:
+                followup = 'utter_ask_identified_name'
+            else:
+                if last_stakeholder['amount'] > 1:
+                    followup = 'utter_ask_name_plural'
+                else:
+                    followup = 'utter_ask_name_singular'
+
+
+        return [FollowupAction(followup)]
 
 class HandleSmalltalk(Action):
     """

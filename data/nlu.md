@@ -851,6 +851,7 @@
 - hi
 - Hello
 - good morning, chatbot!
+- hello ethicbot
 
 ## intent:inform
 - /inform{"moralstatus": "human"}
@@ -994,6 +995,8 @@
 - [Misses X](stakeholder)
 - [The neighbor](stakeholder)
 - [Mister B](stakeholder)
+- The patient's name is [Simon](name)
+- [The employees](stakeholder)
 
 ## intent:negative
 - negatively
@@ -1642,6 +1645,7 @@
 - Maybe [200](quantity) persons
 - It could be more than [10000](quantity)
 - [5](quantity)
+- [10](quantity) employees
 
 ## intent:questionid
 - What is your ID?
@@ -2030,6 +2034,8 @@
 - [Luis](name) is the last person
 - [My neighbor](stakeholder:my neighbor) is engaged in the situation
 - [Trundle](stakeholder) the tortoise
+- [Ken](name) is a skilled doctor who works at the town's main hospital
+- [Ken](name) has [a patient](stakeholder) who was diagnosed with HIV and threatens to infect innocent people
 
 ## intent:stakeholdergroup
 - The [local police](stakeholder)
@@ -2125,6 +2131,7 @@
 - [A group of terrorists](stakeholder:a group of terrorists) has hijacked a plane with [a lot of people](stakeholder)
 - On the plane, there are [many people](stakeholder)
 - On the ground there is [a large crowd of people](stakeholder) who are threatened by a possible plane crash
+- There are [a lot of people](stakeholder) working in the hospital who ask [Ken](name) for ethical advice
 
 ## intent:thanks
 - you helped a lot thank you
@@ -2230,6 +2237,10 @@
 - {"name": "Frank"}
 - frank
 
+## synonym:Graziella
+- {"name": "graziella"}
+- graziella
+
 ## synonym:Greta
 - {"name": "Greta"}
 - greta
@@ -2265,6 +2276,7 @@
 
 ## synonym:Ken
 - {"name": "Ken"}
+- ken
 
 ## synonym:Kilian
 - kilian
@@ -2438,10 +2450,6 @@
 ## synonym:four of her patients
 - Four of her patients
 
-## synonym:Graziella
-- {"name": "graziella"}
-- graziella
-
 ## synonym:human
 - {"moralstatus": "human"}
 
@@ -2471,6 +2479,9 @@
 
 ## synonym:my kitten
 - My kitten
+
+## synonym:my neighbor
+- My neighbor
 
 ## synonym:one commander
 - One commander

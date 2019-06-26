@@ -395,7 +395,7 @@
     - slot{"amount_stakeholders": 3}
     - slot{"action_return": true}
     - action_check_identified_name
-    - slot{"action_return": false}
+    - followup{"name": "utter_ask_identified_name"}
     - utter_ask_identified_name
 * correct
     - action_update_stakeholder
@@ -418,7 +418,7 @@
     - slot{"amount_stakeholders": 1}
     - slot{"action_return": true}
     - action_check_identified_name
-    - slot{"action_return": false}
+    - followup{"name": "utter_ask_identified_name"}
     - utter_ask_identified_name
 * correct
     - action_update_stakeholder
@@ -437,7 +437,7 @@
     - slot{"amount_stakeholders": 2}
     - slot{"action_return": true}
     - action_check_identified_name
-    - slot{"action_return": false}
+    - followup{"name": "utter_ask_identified_name"}
     - utter_ask_identified_name
 * correct
     - action_update_stakeholder
@@ -453,7 +453,7 @@
     - slot{"amount_stakeholders": 3}
     - slot{"action_return": true}
     - action_check_identified_name
-    - slot{"action_return": false}
+    - followup{"name": "utter_ask_identified_name"}
     - utter_ask_identified_name
 * correct
     - action_update_stakeholder
@@ -692,4 +692,59 @@
     - slot{"action_return": true}
     - utter_ask_options
 
-    
+## Generated Story 3479221795695379615
+* greeting
+    - action_intro
+* stakeholder{"name": "ken", "moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - slot{"name": "ken"}
+    - action_create_stakeholder
+    - slot{"amount_stakeholders": 1}
+    - slot{"action_return": true}
+    - action_check_identified_name
+    - followup{"name": "utter_ask_identified_name"}
+    - utter_ask_identified_name
+* correct
+    - action_update_stakeholder
+    - slot{"name": "ken"}
+    - slot{"action_return": true}
+    - utter_ask_identified_moralstatus
+* correct
+    - utter_next_stakeholder
+* stakeholder{"name": "ken", "moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - slot{"name": "ken"}
+    - action_create_stakeholder
+    - slot{"amount_stakeholders": 2}
+    - slot{"action_return": true}
+    - action_check_identified_name
+    - followup{"name": "utter_ask_name_singular"}
+    - utter_ask_name_singular
+* name{"name": "Simon"}
+    - slot{"name": "Simon"}
+    - action_update_stakeholder
+    - slot{"name": "Simon"}
+    - slot{"action_return": true}
+    - utter_ask_identified_moralstatus
+* correct
+    - utter_next_stakeholder
+* stakeholdergroup{"stakeholder": "a lot of people", "name": "ken", "moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - slot{"name": "ken"}
+    - action_create_stakeholder
+    - slot{"amount_stakeholders": 3}
+    - slot{"action_return": false}
+    - utter_ask_quantity
+* quantity{"quantity": "10"}
+    - action_update_stakeholder
+    - followup{"name": "utter_ask_name_plural"}
+    - slot{"action_return": true}
+    - utter_ask_name_plural
+* name
+    - action_update_stakeholder
+    - slot{"name": "the Bavarians"}
+    - slot{"action_return": true}
+    - utter_ask_identified_moralstatus
+* correct
+    - utter_next_stakeholder
+
