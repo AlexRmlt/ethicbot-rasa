@@ -440,3 +440,204 @@
     - slot{"amount_stakeholders": 3}
     - slot{"action_return": true}
     - utter_ask_name_singular
+
+## Create non-human decider with moral status weight 1
+* greeting
+    - action_intro
+* stakeholder{"stakeholder": "my neighbor"}
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 1}
+    - slot{"action_return": true}
+    - utter_ask_name_singular
+* name
+    - action_update_stakeholder
+    - slot{"name": "Yves"}
+    - slot{"action_return": true}
+    - utter_ask_moralstatus
+* inform{"moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* name
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 2}
+    - slot{"action_return": true}
+    - utter_ask_name_singular
+* name
+    - action_update_stakeholder
+    - slot{"name": "Charlie"}
+    - slot{"action_return": true}
+    - utter_ask_moralstatus
+* inform{"moralstats": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* name
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 3}
+    - slot{"action_return": true}
+    - utter_ask_name_singular
+* name
+    - action_update_stakeholder
+    - slot{"name": "Xiao"}
+    - slot{"action_return": true}
+    - utter_ask_moralstatus
+* inform{"moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* deny
+    - utter_confirm_stakeholders
+    - action_choose_decider
+* decider
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 4}
+    - slot{"action_return": true}
+    - utter_ask_name_singular
+* stakeholder
+    - action_update_stakeholder
+    - slot{"decider": "Kim"}
+    - slot{"name": "Kim"}
+    - slot{"action_return": true}
+    - utter_ask_moralstatus
+* inform{"moralstatus": "other"}
+    - slot{"moralstatus": "other"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_ask_moralstatus_weight
+* quantity{"quantity": "5"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_ask_options
+
+## Create non-human decider with moral status weight 2
+* inform{"moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* deny
+    - utter_confirm_stakeholders
+    - action_choose_decider
+* decider
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 4}
+    - slot{"action_return": true}
+    - utter_ask_name_singular
+* name
+    - action_update_stakeholder
+    - slot{"decider": "Kim"}
+    - slot{"name": "Kim"}
+    - slot{"action_return": true}
+    - utter_ask_moralstatus
+* inform{"moralstatus": "animal"}
+    - slot{"moralstatus": "animal"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_ask_moralstatus_weight
+* quantity{"quantity": "5"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_ask_options
+
+## Create non-human decider with moral status weight 3
+* inform{"moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* deny
+    - utter_confirm_stakeholders
+    - action_choose_decider
+* decider
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 4}
+    - slot{"action_return": true}
+    - utter_ask_name_singular
+* name
+    - action_update_stakeholder
+    - slot{"decider": "Kim"}
+    - slot{"name": "Kim"}
+    - slot{"action_return": true}
+    - utter_ask_moralstatus
+* inform{"moralstatus": "other"}
+    - slot{"moralstatus": "other"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_ask_moralstatus_weight
+* quantity{"quantity": "5"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_ask_options
+
+## Create non-human decider with moral status weight 4
+* inform{"moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* deny
+    - utter_confirm_stakeholders
+    - action_choose_decider
+* decider
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 4}
+    - slot{"action_return": true}
+    - utter_ask_name_singular
+* name{"name": "Hans"}
+    - slot{"name": "Hans"}
+    - action_update_stakeholder
+    - slot{"decider": "Kim"}
+    - slot{"name": "Kim"}
+    - slot{"action_return": true}
+    - utter_ask_moralstatus
+* inform{"moralstatus": "animal"}
+    - slot{"moralstatus": "animal"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_ask_moralstatus_weight
+* quantity{"quantity": "5"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_ask_options
+
+## Create non-human decider with moral status weight 5
+* inform{"moralstatus": "human"}
+    - slot{"moralstatus": "human"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_next_stakeholder
+* deny
+    - utter_confirm_stakeholders
+    - action_choose_decider
+* decider
+    - action_create_stakeholder
+    - slot{"moralstatus": null}
+    - slot{"amount_stakeholders": 4}
+    - slot{"action_return": true}
+    - utter_ask_name_singular
+* name{"name": "Hans"}
+    - slot{"name": "Hans"}
+    - action_update_stakeholder
+    - slot{"decider": "Kim"}
+    - slot{"name": "Kim"}
+    - slot{"action_return": true}
+    - utter_ask_moralstatus
+* inform{"moralstatus": "other"}
+    - slot{"moralstatus": "other"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_ask_moralstatus_weight
+* quantity{"quantity": "5"}
+    - action_update_stakeholder
+    - slot{"action_return": true}
+    - utter_ask_options

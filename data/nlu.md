@@ -421,6 +421,7 @@
 - [Erskine](name) has to decide whether her saves most of the people in his town or tries to achieve the same by giving information to the enemy
 - [One commander](stakeholder:one commander) must make a decision if it is appropriate to shoot the airplane
 - [One person](stakeholder:one person) must decide if he gives the order to shoot the plane
+- /decider
 
 ## intent:deny
 - There are no more People involved
@@ -711,6 +712,7 @@
 - I don't have a name or title for them all
 - No more persons are involved
 - that were all relevant persons
+- no others
 
 ## intent:deontology
 - /deontology
@@ -848,6 +850,7 @@
 - Hi!
 - hi
 - Hello
+- good morning, chatbot!
 
 ## intent:inform
 - /inform{"moralstatus": "human"}
@@ -862,7 +865,7 @@
 - What are the important parameters to decide which group the robot tries to rescue?
 
 ## intent:name
-- [Mister H](name)
+- [Mister H](stakeholder)
 - "[Robi](stakeholder)"
 - the name is [nele](name)
 - his name is [robot](stakeholder)
@@ -987,6 +990,10 @@
 - Use the name [the terrorists](stakeholder)
 - [The passengers](stakeholder:the passengers)
 - You can call him [the commander](stakeholder)
+- [Mister X](stakeholder)
+- [Misses X](stakeholder)
+- [The neighbor](stakeholder)
+- [Mister B](stakeholder)
 
 ## intent:negative
 - negatively
@@ -1634,6 +1641,7 @@
 - [20](quantity) terrorists
 - Maybe [200](quantity) persons
 - It could be more than [10000](quantity)
+- [5](quantity)
 
 ## intent:questionid
 - What is your ID?
@@ -2020,6 +2028,8 @@
 - The youngest of us, [Leon](name)
 - The name of the next Person is [Kilian](name)
 - [Luis](name) is the last person
+- [My neighbor](stakeholder:my neighbor) is engaged in the situation
+- [Trundle](stakeholder) the tortoise
 
 ## intent:stakeholdergroup
 - The [local police](stakeholder)
@@ -2361,6 +2371,9 @@
 ## synonym:a group of seven people
 - A group of seven people
 
+## synonym:a group of terrorists
+- A group of terrorists
+
 ## synonym:a healthcare aide
 - has to supervise
 
@@ -2425,9 +2438,9 @@
 ## synonym:four of her patients
 - Four of her patients
 
-## synonym:graziella
+## synonym:Graziella
 - {"name": "graziella"}
-- Graziella
+- graziella
 
 ## synonym:human
 - {"moralstatus": "human"}
