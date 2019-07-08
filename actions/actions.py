@@ -600,22 +600,20 @@ class CreateConsequence(Action):
             events.append(SlotSet('sentiment', None))
 
         # Find out, which stakeholder is affected by this consequence
+        names = list(tracker.get_latest_entity_values('name'))
+        names = [name.lower() for name in names]
+
+        # check if an assigned name is mentioned, maybe the entity was not captured
+        stakeholders = mind.get_stakeholders(tracker.sender_id)
+        try: 
+            for sh in stakeholders:
+                sh['name'] = sh['name'].lower()
+                if sh['name'] in tracker.latest_message['text'].lower() and not sh['name'] in names:
+                    names.append(sh['name'])
+        except AttributeError as e:
+            logger.warning('Exception creating consequence: {} - Continuing nevertheless.'.format(str(e)))
+
         try:
-            names = list(tracker.get_latest_entity_values('name'))
-            names = [name.lower() for name in names]
-            logger.warning('Found names: {}'.format(str(names)))
-
-            # check if an assigned name is mentioned, maybe the entity was not captured
-            stakeholders = mind.get_stakeholders(tracker.sender_id)
-            try: 
-                for sh in stakeholders:
-                    sh['name'] = sh['name'].lower()
-                    if sh['name'] in tracker.latest_message['text'].lower() and not sh['name'] in names:
-                            names.append(sh['name'])
-            except AttributeError:
-                logger.warning('Exception creating consequence: {} \
-                    It seems a stakeholder has not got a name. Continuing anyway.'.format(str(e)))
-
             aff_stkhs = []
             # If we find multiple names, assume that they are all affected
             if len(names) > 1:
@@ -636,8 +634,6 @@ class CreateConsequence(Action):
                     if not sh == None:
                         aff_stkhs.append(sh['name'])
                         events.append(SlotSet('name', sh['name']))
-
-            logger.warning('Affected stakeholders: {}'.format(str(aff_stkhs)))
 
             if len(aff_stkhs) > 0:
                 # remove duplicates, just in case
