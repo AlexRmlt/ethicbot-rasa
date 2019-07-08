@@ -606,10 +606,14 @@ class CreateConsequence(Action):
 
             # check if an assigned name is mentioned, maybe the entity was not captured
             stakeholders = mind.get_stakeholders(tracker.sender_id)
-            for sh in stakeholders:
-                sh['name'] = sh['name'].lower()
-                if sh['name'] in tracker.latest_message['text'].lower() and not sh['name'] in names:
-                        names.append(sh['name'])
+            
+            try: 
+                for sh in stakeholders:
+                    sh['name'] = sh['name'].lower()
+                    if sh['name'] in tracker.latest_message['text'].lower() and not sh['name'] in names:
+                            names.append(sh['name'])
+            except AttributeError:
+                pass
 
             aff_stkhs = []
             # If we find multiple names, assume that they are all affected
@@ -649,7 +653,7 @@ class CreateConsequence(Action):
                 events.append(FollowupAction('action_choose_affected_stakeholder'))
                 events.append(SlotSet('name', None))
                 action_return = False
-        except (AttributeError, TypeError, KeyError, IndexError) as e:
+        except (TypeError, KeyError, IndexError) as e:
             logger.warning('Exception creating consequence: ' + str(e))
             events.append(FollowupAction('action_choose_affected_stakeholder'))
             events.append(SlotSet('name', None))

@@ -389,7 +389,7 @@ templates:
     - payload: '/inform{"reason": "inherently_evil"}'
       title: It is inherently evil.
     - payload: '/inform{"reason": "too_specific"}'
-      title: The rule rule would be too specific for being applied generally
+      title: The rule would be too specific for being applied generally
     - payload: '/inform{"reason": "needs_conditions"}'
       title: The rule can be applied under certain conditions only
     - payload: '/inform{"reason": "no_reason"}'
