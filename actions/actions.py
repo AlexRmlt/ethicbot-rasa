@@ -603,17 +603,18 @@ class CreateConsequence(Action):
         try:
             names = list(tracker.get_latest_entity_values('name'))
             names = [name.lower() for name in names]
+            logger.warning('Found names: {}'.format(str(names)))
 
             # check if an assigned name is mentioned, maybe the entity was not captured
             stakeholders = mind.get_stakeholders(tracker.sender_id)
-            
             try: 
                 for sh in stakeholders:
                     sh['name'] = sh['name'].lower()
                     if sh['name'] in tracker.latest_message['text'].lower() and not sh['name'] in names:
                             names.append(sh['name'])
             except AttributeError:
-                pass
+                logger.warning('Exception creating consequence: {} \
+                    It seems a stakeholder has not got a name. Continuing anyway.'.format(str(e)))
 
             aff_stkhs = []
             # If we find multiple names, assume that they are all affected
@@ -636,6 +637,8 @@ class CreateConsequence(Action):
                         aff_stkhs.append(sh['name'])
                         events.append(SlotSet('name', sh['name']))
 
+            logger.warning('Affected stakeholders: {}'.format(str(aff_stkhs)))
+
             if len(aff_stkhs) > 0:
                 # remove duplicates, just in case
                 aff_stkhs = list(dict.fromkeys(aff_stkhs))
@@ -653,6 +656,7 @@ class CreateConsequence(Action):
                 events.append(FollowupAction('action_choose_affected_stakeholder'))
                 events.append(SlotSet('name', None))
                 action_return = False
+                logger.warning('Did not find a distinct name!')
         except (TypeError, KeyError, IndexError) as e:
             logger.warning('Exception creating consequence: ' + str(e))
             events.append(FollowupAction('action_choose_affected_stakeholder'))
