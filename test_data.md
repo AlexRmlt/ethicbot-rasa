@@ -1,490 +1,1968 @@
-## intent:affirm
-
-
-## intent:consequence
-- paula would survive
-- robi would die
-
-
-## intent:correct
-
-
-## intent:decider
-
-
-## intent:deny
-- no
-
-## intent:deontology
-- /deontology
-
-## intent:dontknow
-
-## intent:goodbye
-
-## intent:greeting
-
-## intent:inform
-
-## intent:moralquestion
-
 ## intent:name
-- robi
-
-## intent:negative
-
-## intent:neutral
-
-
-## intent:option
-- Rescue paula from a buring house
-
-## intent:positive
-- positive
-
-## intent:quantity
-- 10
-
-## intent:questionid
-
-## intent:smalltalk
-
+- [Svenja](name)
+- [albert einstein](name)
+- Siaminda
+- Siaminda
+- Joergen
+- sister
+- customers
+- [michaek](name)
+- [germans](name)
+- people
+- Ethicbot
+- [mexicans](stakeholder)
+- Girlfriend
+- [toni](name)
+- [Thorben](name)
+- [Pete](name)
+- Persona
+- Persona
+- [Anna](name)
+- [Christofer](name)
+- [ali](name)
+- [hannah](name)!
+- [Tom](name)
+- class
+- class
+- Beta
+- [Tom](name)
+- [Adolf Hitler](name)
+- [Lara](name)
+- [Anna](name)
+- [Anna](name)
+- [robin](name)
+- Moderator
+- Moderator
+- [robin](name)
+- [robin](name)
+- [Horace](name)
+- [Horace](name)
+- [Heinz](name)
+- [leonie](name)
+- [leonie](name)
+- [Pascal](name)
+- [Ramdip](name)
+- [leon](name)
+- [Lea](name)
+- [Helen](name)
+- [Hubert](name)
+- [helen](name)
+- [helen](name).
+- [puschel](name)
+- terrorist
+- group
+- [Tom](name)
+- [marie](name)
+- [Claire](name)
+- [pascal](name)
+- [Pascal](name)
+- [andrea](name) Pascal
+- kant
+- [Tom](name)
+- starbuck
+- [kleopatra](name)
+- Cat
+- Cat
+- class
+- [migrant](stakeholder)
+- [Anna](name)
+- [anna](name)
+- [Steffi](name)
+- [Steffi](name)
+- [Sven](name)
+- [Alfred](name)
+- [Ragna](name)
+- [ragna](name)
+- [Alfred](name)
+- [Lars](name)
+- [Jack](name).
+- The name of the coach is [roger](name).
+- Mother
+- [Juergen](name)
+- [Patrick](name) star
+- [Emil](name)
+- [marko](name)
+- [Hans-Peter](name)
+- that is the name of the whale
+- [Jürgen](name)
+- [leonie](name) is the name of the person
+- [leonie](name) is the name of the person
+- [Nihar](name)
+- [Emma Ross](name)
+- [Peter](name) Meier
+- [renate](name)
+- [Christian](name) Schwarz
+- Say [Josef](name)
+- please name [the person](stakeholder) as [naras](name)
+- Charles Augustus Magnussen
+- [robin](name)
+- [robin](name)
+- [heidi](name)
+- [Egon](name)
+- [Philipp](name)
+- [Philipp](name)
+- [Peter](name)
+- [Peter](name)
+- [kevin](name)
+- [the sixty students](stakeholder)
+- [Peter](name)
+- [Tim](name)
+- [Susanne](name)
+- [ragan](name)
+- [ragna](name) is the name
+- [Father](stakeholder)
+- [karl](name)
+- [passengers](stakeholder)
+- [childrens](stakeholder)
+- [passengers](stakeholder)
+- [maxi](name)
+- [maxi](name)
+- [maxi](name)
+- [team](stakeholder)
+- [migranta](name)
+- [Michael](name)
+- [Adreas](name)
+- [julio](name)
+- [adreas](name)
+- [adreas](name)
+- [Peter](name)
+- [Peter](name)
+- [Peter](name)
+- My name is [Sarah](name)
+- [daniel](name)
+- [lisa](name)
+- [Alex](name)
+- [john](name)
+- [The Wait List](stakeholder)
+- [Timo](name) is the name
+- [Peter](name)
+- [Lisa](name), my mother.
+- [Ahab](name)
+- [Rai](name)
+- [mum](stakeholder)
+- [barbara](name)
+- [paul](name)
+- [Nitin](name)
+- [Nitin](name)
+- [mine](name)
+- [rohit](name)
+- [rohit](name)
+- [Michael](name)
+- [patients](stakeholder)
+- [patients](stakeholder)
+- [dr. Bob](stakeholder)
+- Her name is [Lisa](name).
+- [Norbert](name)
+- [Balthes](name)
+- [Balthes](name)
+- [Peter](name)
+- [andrea](name)
+- [andrea](name)
+- [andrea](name)
+- [Kat](name)
+- [katrin](name)
+- [katrin](name)
+- [team](stakeholder)
+- Her name is [marie](name).
+- [federico](name)
+- [piper](name)
+- [obligator](stakeholder)
+- [andrea](name)
+- [Flo](name)
+- [passengers](stakeholder)
+- [the firefighters](stakeholder)
+- [firefighters](stakeholder)
+- call me [john](name)
+- [maria](name)
+- [Laurelia](name)
+- [lukas](name)
+- His name is [Bat](name)
+- [robert](name)
+- he is called [pascal](name)
+- [Lisa](name)
+- call him [willhelm](name)
+- [jessica](name)
+- [jessica](name)
+- [jessica](name)
+- [Michael](name)
+- [tim](name)
+- [Tori](name)
+- [jonas](name)
+- [julian](name)
+- [teacher](stakeholder)
+- [martin](name)
+- [martin](name)
+- [palatines](name)
+- [landlord](stakeholder)
+- [Günter](name)
+- [Günter](name)
+- [Cathy](name)
+- [karl](name)
+- [klaus](name)
+- [karl](name)
+- [vivian](name)
+- [Nikolai](name)
+- [Donald Trump](name)
+- [Donald Trump](name)
+- its [me](stakeholder)
+- [Dienstag](name)
+- [andrea](name)
+- [Peter](name)
+- [The murderer](stakeholder)
+- [Hugo](name)
+- [Peter](name)
+- [Peter](name)
+- [anonymous](name)
+- [nicolas](name)
+- [passengers](stakeholder)
+- [Christian](name)
+- [students](stakeholder)
+- [Frieda](name)
+- [norbert](name)
+- [Lisa](name)
+- Her name is [Lisa](name).
+- Call me [Henrik](name)
+- The name is [Henrik](name)
+- [family](stakeholder)
+- [Victor](name)
+- My name is [Lizzy](name)
+- my name is [nik](name)
+- [team](stakeholder)
+- name: [stacy](name)
+- [Frank](name)
+- [ancestors](stakeholder)
+- [Peter](name)
+- The name is [Jude](name)
+- The name is [Alexander](name)
+- [Franziska](name)
+- Her name is [Stefanie](name)
+- [passengers](stakeholder)
+- [Jack](name)
+- [jackson](name).
+- [Jack](name)
+- He is called [Jack](name).
+- [gregor](name)
+- [Lennart](name)
+- [Lennart](name)
+- [jonas](name)
+- yes, she is [anita](name)
+- [Bob](name)
+- [patients](stakeholder)
+- [Dr Bob](stakeholder)
+- [the family](stakeholder)
+- [swebians](name)
+- [ike](name)
+- [tina](name)
+- [Gerda](name)
+- the name is [Puschel](name)
+- [Thomas](name)
+- [Anne](name)
+- [Lotti](name)
+- [Donald](name)
+- [students](stakeholder)
+- [students](stakeholder)
+- [students](stakeholder)
+- [the students](stakeholder)
+- [florin](name)
+- [jan](name)
+- [Grunesh](name)
+- [Norbert](name)
+- [Grunesh](name)
+- [Günter](name)
+- [Günter](name)
+- [mine](name)
+- [robot](stakeholder)
+- [Family](stakeholder)
+- [chris](name)
+- i already said [ROBERT](name)
+- [Mike](name)
+- [Michael](name)
+- [the killed](stakeholder)
+- call him [Wilhelm](name)
+- [patients](stakeholder)
+- [Ken](name)
+- [victims](stakeholder)
+- [robi](stakeholder)
+- [saskia](name)
+- [bob](name)
+- [paul](name)
+- [Tisan](name)
+- [san](name)
+- [san](name)
+- [San](name)
+- [jonas](name)
+- [patients](stakeholder)
+- [patients](stakeholder)
 
 ## intent:stakeholder
-- robi is a machine
-- ben is a man
-- paula is a woman
+- There is a doctor with [5](quantity) patients
+- There is [one patient](stakeholder)
+- There is a doctor with [5](quantity) patients
+- [the officer](stakeholder) of the ship
+- [Anna](name) works for an IT company in the health domain
+- a little child of 6 years
+- We talk about [Mustafa](name)
+- [a driver](stakeholder) called horst
+- [a dog](stakeholder)
+- The boss of Anna
+- There was this man in my confession
+- [i](stakeholder) am involved myself, but [i](stakeholder) can not tell you my name
+- Yes, there was this guy I spoke to
+- [marie](name) is Horsts daughter. She wanted to talk to her father before he passed away, but he didn't want to.
+- [my girlfriend](stakeholder) lisa
+- [my mother](stakeholder) [Lisa](name) wants to stop me from moving out.
+- Just me, [Patrick](name)
+- One of Horst's daughters, [Marie](name). She wanted to talk to her father before he passed away. But he didn't want to talk to her.
+- [Hans](name) ist ein 19 Jahre alter Informatiker
+- [Piper](name) ist ein Hund
+- failing student
+- [Lisa](name), my girlfriend
+- [a terrorist](stakeholder) hijacked a plane and is about to fly the plane into a fassade of a huge building where thousands of people are working. Should the plane be shot down to safe the lives of the people working in this huge building?
+- He broke the rules but does not want to get banned
+- EBay seller
+- white seminarians
+- [carl](name) and Timo do not get along with each other.
+- i want to analyse the drunken persons behaviour
+- [maria](name) wants to join our sports club. She was part of it before, but often misbehaved and thus was kicked out by the coach. [maria](name) has already got a second chance, but didnt use it. After some months she comes again and wants to be part of the club. What should we do?
+- god
+- Yes my mom
+- yes my grandmother
+- Bus driver Tommy Low
+- moby dick
+- moby dick
+- There is a pson
+- I'm a Mr.A
+- [i](stakeholder) am an robot
+- [I](stakeholder)
+- [me](stakeholder) and [Mike](name)
+- [my friend](stakeholder)
+- yeah, [me](stakeholder)
+- [Donald](name) donates money to students
+- [miau](name), the cat
+- [hannah](name) and [robert](name)
+- [the first person](stakeholder) is a teacher
+- [a student](stakeholder)
+- [lilian](name) is [a child](stakeholder)
+- [Else](name) is [an old woman](stakeholder)
+- [anna](name) has a boss with name Tim
+- The mother of Anna
+- jin, is dying
+- [the first person](stakeholder) is [Alfred](name)
+- Best female friend and father
+- [matilda](name), [a 14 years old girl](stakeholder) who is blind
+- [Mark](name), a 70 years old wizard with a cool lizard
+- [marc](name) is a human
+- [paul](name) is a human
+- [the first person](stakeholder) is an organ donor
+- [the first person](stakeholder) is [Joachim](name)
+- THe next Person is [tina](name)
+- The next Person is [Norbert](name)
+- The next Person is [Sven](name)
+- The next Person is [Korthnak](name)
+- The next Person is [Shu'tha](name)
+- The next one is [Thorben](name)
+- THe next one is [Mark](name)
+- Who is currently involved
+- [Adreas](name) is [a software engineer](stakeholder).
+- [the first person](stakeholder) is [Horst](name). He has cancer in the last stadium and will die within the next few months. He is [56](quantity) years old and a doctor. He lived a life full of partys, alcohol and cigarettes.
+- [the second person](stakeholder) involved is [Peter](name). 
+- [Peter](name) is [a doctor](stakeholder) that gave Horst medicine, so that he died, The medicine was relevant for take Horsts pain away, but the amount that was needed to do so was so high, that Horst died. But Horst asked [Peter](name) to do so, because he wanted no longer to live in this condition.
+- Charles Augustus Magnussen, is [a powerful businessman](stakeholder) who controls a media empire. He holds information on many people of prominence, allowing him to use such information for blackmail purposes in order to achieve his goals
+- I have a friend, his name is [paul](name), he is sitting in prison.
+- My name is [daniel](name) and I would like to help him breaking out of prison.
+- [the first person](stakeholder) is a beggar in the street. Let's call him [Marko](name).
+- yes, a passer-by called [Peter](name)
+- I told you, [the beggar](stakeholder)
+- [me](stakeholder)
+- some crazy italian girls, [anna](name) and [erica](name)
+- [Timo](name) is in a dillema with his father
+- [Ahab](name), the captain of the pequod.
+- the white whale
+- Hi, I'm [Anja](name) and I'm a doctoral student.
+- [I](stakeholder) bid for an item I don't want to buy
+- [a person](stakeholder)
+- [my black brother](stakeholder) [Norman](name)
+- [me](stakeholder)
+- [myself](stakeholder)
+- [the first person](stakeholder) is an Organ Donor
+- [a surgon](stakeholder)
+- My name is [Robert](name) the Robot
+- We are the socialist party of Robot.
+- Yes. We are the Socialist Party of Robot.
+- [myself](stakeholder), Cara.
+- [my brother](stakeholder) is called [tim](name), and he stole my sweetrole
+- [Tom](name) is a human
+- [jenny](name) is a human
+- [anna](name) is working in a research project
+- [her boss](stakeholder) [Tom](name)
+- [Annas mother](stakeholder) is also involved
+- The first person ist [Horst](name). He has cancer in the last stadium and will die within the next few months. He is [56](quantity) years old and a doctor. He has three adult daughters. He lived a life full of partys, alcohol and cigarettes.
+- [the second person](stakeholder) involved is [Peter](name). [Peter](name) is [a doctor](stakeholder) that gave Horst medicine, so that he died, The medicine was relevant for take Horsts pain away, but the amount that was needed to do so was so high, that Horst died. But Horst asked [Peter](name) to do so, because he wanted no longer to live in this condition.
+- hellp
+- [me](stakeholder)
+- [me](stakeholder)
+- [me](stakeholder)
+- [my wife](stakeholder) [karen](name)
+- [i](stakeholder) lost my kids
+- [myself](stakeholder)
+- [me](stakeholder)
+- [the first person](stakeholder) is the teacher
+- [Stefan](name) is [a guy](stakeholder)
+- involved is [kenny](name) and [helen](name).
+- [kenny](name) and helen.
+- [i](stakeholder) am [i](stakeholder)nvolved
+- There is also the rabit [Puschel](name)
+- [myself](stakeholder)
+- [the terrorist](stakeholder) is about to fly the plane into a huge building.
+- [i](stakeholder) have a ethical problem.
+- [i](stakeholder) have a ethical problem.
+- [a terrorist](stakeholder) who hijacked the plane with [350 passengers](stakeholder)
+- [myself](stakeholder)
+- [hubert](name) and [Peter](name)
+- [the first person](stakeholder) is [leonie](name) who is a human being
+- There is a merchant called [helga](name)
+- [Mr bat](stakeholder), it all started with him, i studied everything for the exam and then he brought some really extra complicated stuff in the exam
+- [carl](name) is bullying Timo
+- [eren jaeger](stakeholder) is a member of the survey corps and posses the power of a titan
+- there is [robot](stakeholder) who must decide which one of two paths he takes to save people after a natural catastrophe
+- [me](stakeholder)
+- first is [a surgen](stakeholder)
+- [anna](name) has discovered that the confidential data they work on in a research project can be deanonymised
+- death of tim
+- There is [another person](stakeholder) called [helga](name)
+- [myself](stakeholder) and my family.
+- [john](name) is [my son](stakeholder) and on the rails.
+- [clara](name) is my daughter and on a different path.
+- [i](stakeholder) am Bob and at a sw[i](stakeholder)tch.
+- Transfer of money. Jonas and the sellsmann, aswell as the company that made the product that is sold are involved
+- [marc](name), [lukas](name), [petra](name), Silvie, Clara
+- [anna](stakeholder) [my wife](stakeholder)
+- [me](stakeholder)
+- [student](stakeholder)
+- [Peter](name) is a teacher
+- [Peter](name) has a lot of work with this
+- [maria](name), a woman living in a house.
+- [me](stakeholder)
+- [daniel](name). He is a friend of mine.
+- [my wife](stakeholder) Mary
+- [karl](name), a mechanic
+- [Klaus](name), a mechanic
+- [karl](name), a gardener
+- Machine
+- [jojo](name), [the dog](stakeholder)
+- [some other](stakeholder) person
+- [some other](stakeholder) person
+- [Michael](name) is [my father](stakeholder). he killed himself
+- [Michael](name) is [luans](name) father
+- Ich heiße [Emil](name) und bin ein Detektiv.
+- [myself](stakeholder)
+- [me](stakeholder)
+- Her name is [Lina](name), she is [my girlfriend](stakeholder)
+- The other person's name is [Svenja](name)
+- [Peter](name) is [an english teacher](stakeholder)
+- [my mum](stakeholder)
+- [Tom](name), 19 years old, Student
+- Yes, there is [Francis](name), the administrator of the institute
+- There is also [Richard](name)
+- [I](stakeholder) want to move out, but my mother wants me to stay.
+- tim is [my brother](stakeholder)
+- [Tom](name) is Annas boss
+- [Anna's mother](stakeholder) is also involved
+- [[Tom](name)](name), lets call him [[Tom](name)](name)
+- [the first person](stakeholder) is [mary](name), which is my best friend.
+- [marc](name) is a human
+- [stacy](name) is attacked and is hurt by malicious intent
+- there is [the owner](stakeholder) of an oil-station named franm
+- yes, me named [david](name)
+- Thre is also a dgo
+- there is [one man](stakeholder) lying on the tracks and a train is about to run him over
+- [the first person](stakeholder) involved is [Kathy](name), a student at the University of Heidelberg.
+- [the next person](stakeholder) involved is [Michelle](name).
+- The next one is called [Jack](name), the boyfriend of [Michelle](name).
+- [i](stakeholder) am [Nihar](name), an individual.
+- other person
+- [me](stakeholder) and my friends
+- Lennart, [Simon](name), Jonas
+- [me](stakeholder), more loot
+- Hi, I'm [Anja](name) and I'm a doctoral student.
+- [i](stakeholder) am a pr[i](stakeholder)est, and someone confessed to me that he plans to k[i](stakeholder)ll h[i](stakeholder)s fam[i](stakeholder)l[i](stakeholder)y.
+- Priest
+- Yes, the person I takl of. Lets call him [John Doe](name)
+- [the first person](stakeholder) is [me](stakeholder) obviously
+- yes there is also a sweet rabbit
+- [the first person](stakeholder) is [myself](stakeholder)
+- [my wife](stakeholder)
+- [my little](stakeholder) child
+- [students](stakeholder) in a poor neighborhood
+- [Hans](name) Meier, a Bankdirector from Frankfurt
+- [anna](name) is working for an IT company
+- Yes, [her mother](stakeholder) is also involved
+- [Peter](name) is a teach
+- his class
+- it is [a woman](stakeholder)
+- [me](stakeholder)
+- The Half-Orc [Grunesh](name)
+- Half-Elf
+- [me](stakeholder)
+- [i](stakeholder) am involved myself
+- The name of the person is [Leonie](name)
+- The next person is called [Helga](name).
+- [i](stakeholder) am [naras](name)
+- [my sister](stakeholder) and my brother
+- [john](name) is [a person](stakeholder)
+- first person is [tim](name)
+- and [struppi](name) his dog
+- [the dog](stakeholder) calls hugo
+- [my mom](stakeholder)
+- it is [me](stakeholder)
+- There is [his family](stakeholder)
+- [the first person](stakeholder) is [a surgeon](stakeholder)
+- the next person is a possible donor
+- [the first person](stakeholder) is a doctor
+- the rest of the world
+- [robi](stakeholder) is a machine
+- [ben](name) is [a man](stakeholder)
+- [paula](name) is [a woman](stakeholder)
+- [a girl](stakeholder) named Stefanie
+- [andrea](name) Herrmann via a mailing list
+- [karl](name) is a bus driver.
+- [student](stakeholder)
+- [me](stakeholder)
+- [anna](name) is an art major.
+- [Pete](name) is an engineering graduate
+- [Pete](name) is an engineering graduate
+- so, [Tisan](name) insulted Zisan
+
+## intent:quantity
+- [millions](quantity)
+- yeah me too. I'll give it a 1.2
+- We are [-3 people](stakeholder)
+- [60](quantity)
+- [10](quantity)
+- [5](quantity)
+- [2](quantity)
+- [4](quantity)
+- [1](quantity)
+- [2](quantity)
+- [5](quantity)
+- [1](quantity)
+- [4](quantity)
+- [0](quantity)
+- [8](quantity)
+- [3](quantity)
+- [10](quantity)
+- [10](quantity)
+- [100000](quantity)
+- [99](quantity)
+- [5](quantity)
+- [80](quantity) Million
+- [10](quantity)
+- [10](quantity)
+- [5](quantity)
+- [50](quantity)
+- [4](quantity)
+- [10](quantity)
+- [5](quantity)
+- [5](quantity)
+- [5](quantity)
+- [5](quantity)
+- [9](quantity)
+- [50](quantity)%
+- [10](quantity)
+- [1](quantity)
+- [10](quantity)%
+- [6](quantity)
+- [10](quantity)
+- [70](quantity)%
+- [10](quantity)
+- [1](quantity)
+- [two](quantity)
+- [5](quantity)
+- [one person](stakeholder)
+- one
+- [6](quantity)
+- [30](quantity)%
+- [8](quantity)
+- [5](quantity)
+- [5](quantity)
+- [10](quantity)
+- [5](quantity) patients
+- [5](quantity)
+- [1](quantity) patient
+- [1](quantity)
+- [10](quantity)
+- [1](quantity)
+- We are only one person's.
+- [7.6](quantity)
+- [10](quantity)
+- [10](quantity)
+- [10](quantity)
+- [8](quantity)
+- [8](quantity)
+- [5](quantity)
+- [5](quantity)
+- [100](quantity)
+- [3](quantity)
+- [7](quantity)
+- [4](quantity)
+- [4](quantity)
+- [7](quantity)
+- [4](quantity)
+- [50](quantity)
+- [10](quantity)
+- [9](quantity)
+- [8](quantity)
+- [0](quantity)
+- [2](quantity)
+- [10](quantity)
+- [2](quantity).
+- [8](quantity)
+- [10](quantity)
+- [90](quantity)
+- [1](quantity)
+- [5](quantity)
+- [5](quantity)
+- [350](quantity) people
+- You can only [save 1 person](deed).
+- [10](quantity) people
+- [100](quantity)
+- [50](quantity)
+- [10](quantity) people
+- [5](quantity) people
+- [8](quantity)
+- [10](quantity)
+- [10](quantity)
+- [10](quantity)
+- [50](quantity)
+- seven
+- [8](quantity)
+- [90](quantity)%
+- [11](quantity)
+- [10](quantity)
+- [8](quantity)
+- [3](quantity)
+- [3](quantity)
+- [10](quantity)
+- [3](quantity)
+- [10](quantity)
+- [7](quantity)
+- [7](quantity)
+- [10](quantity)
+- [10](quantity)
+- [10](quantity)
+- [10](quantity)
+- [2](quantity)
+- [7.7](quantity) billion
+- [24](quantity)
+- [3](quantity)
+- [7](quantity)
+- [3](quantity)
+- [10](quantity)
+- [25](quantity)
+- [8](quantity)
+- [60](quantity)
+- [80](quantity)
+- [60](quantity)
+- [4](quantity)
+- [50](quantity)
+- [9](quantity)
+- [90](quantity)
+- [10](quantity)
+- [10](quantity)
+- [1](quantity)
+- [8](quantity)
+- [2](quantity)
+- [46.1](quantity)
+- [8](quantity)
+- [8](quantity)
+- [8](quantity)
+- [8](quantity)
+- [5](quantity)
+- Negative of [5](quantity)
+- [5](quantity)
+- [9](quantity)
+- [10](quantity)
+- [50](quantity)
+- [4](quantity)
+- [50](quantity)
+- [10](quantity)
+- [90](quantity)
+- [4](quantity)
+- [3](quantity)
+- [7](quantity)
+- [7](quantity)
+- [80](quantity)
+- [10000](quantity)
+- [10](quantity)
+- [80](quantity)%
+- [10](quantity)
+- [80](quantity)%
+- [24](quantity)
+- [6](quantity)
+- [95](quantity)%
+- [7](quantity)
+- [1000](quantity)
+- [3](quantity)
+- [3](quantity)
+- [90](quantity)
+- [8](quantity)
+- [6](quantity)
+- [80](quantity)
+- [7](quantity)
+- [90](quantity)
+- [5](quantity)
+- [43](quantity)
+- [8](quantity)
+- [33](quantity)
+- [10](quantity)
+- [300](quantity)
+- [5](quantity)
+- [9](quantity)
+- [10](quantity)
+- [30](quantity)
+- [82000000](quantity)
+- [11](quantity)
+- [10](quantity)
+- [one people](stakeholder)
+- [2](quantity)
+- [10](quantity)
+- [2](quantity)
+- [50](quantity)
+- [10](quantity)
+- [10](quantity)
+- [10](quantity)
+- [10](quantity)
+- [120](quantity) Passengers
+- [6](quantity)
+- [80](quantity)%
+- [7](quantity)
+- [80](quantity)%
+- [7](quantity)
+- [80](quantity)%
+- [7](quantity)
+- [80](quantity)%
+- [7](quantity)
+- [80](quantity)%
+- [10](quantity)
+- [8](quantity)
+- [80](quantity)
+- [9](quantity)
+- [10](quantity)
+- [103](quantity)
+- [10](quantity)
+- [10](quantity)
+- [85](quantity)%
+- [10](quantity)
+- They are [three persons](stakeholder)
+- [30](quantity)
+- [10](quantity)
+- [6](quantity)
+- [10](quantity)
+- [10](quantity)
+- [7](quantity)
+- [98](quantity)%
+- [9](quantity)
+- [90](quantity)%
+- [8](quantity)
+- [6](quantity) for Anne and [3](quantity) for Maxi
+- [80](quantity)
+- [6](quantity)
+- [1000](quantity)
+- [3](quantity)
+- [5](quantity)
+- [0](quantity)
+- [24](quantity)
+- [5](quantity)
+- [10](quantity)
+- [10](quantity)
+- [5](quantity)
+- [2](quantity)
+- [10](quantity)
+- [10](quantity)
+- [5](quantity)
+- [10](quantity)
+- [1](quantity)
+- [9](quantity)
+- [10](quantity)
+- [11](quantity)
+- [10](quantity)
+- [3](quantity)
+- [5](quantity)
+- [2](quantity)
+- [1](quantity)
+- [2](quantity)
+- [8](quantity)
+- [50](quantity) percent
+- [6](quantity)
+- [50](quantity)
+- [8](quantity)
+- [50](quantity)
+- [7](quantity)
+- [70](quantity)
+- [8](quantity)
+- [70](quantity)
+- [7](quantity)
+- [70](quantity)
+- [6](quantity)
+- [90](quantity)
+- [2](quantity)
+- [10](quantity)
+- [10](quantity)
+- [10](quantity).
+- [10](quantity)
+- [5](quantity)
+- [1](quantity)
+- [3](quantity)
+- [6](quantity)
+- [30](quantity)
+- [8](quantity)
+- [75](quantity)
+- [10](quantity)
+- [98](quantity)
+- [8](quantity)
+- [9](quantity)
+- [10](quantity)
+- [6](quantity)
+- [10](quantity)
+- [100](quantity)
+- [10](quantity)
+- [10](quantity)
+- [10](quantity)
+- [10](quantity)
+- [3](quantity)
+- [76](quantity)
+- [1](quantity)
+- [2](quantity)
+- [88](quantity)
+- [2](quantity)
+- [1](quantity)
+- [10](quantity)
+- [70](quantity)%
+- [3](quantity) people
+- [3](quantity)
+- [5](quantity) patients
+- [5](quantity)
 
 ## intent:stakeholdergroup
+- [german people](stakeholder)
+- [germans](stakeholder)
+- Usa russia
+- [all people](stakeholder) on Earth are stuck in a game where everybody can gain by pursuing consumerism. At the same time, everybody loses a lot, if we continue like this.
+- audience
+- Zuschauer
+- Zuschauer
+- audience
+- Mankind
+- [all people](stakeholder) on planet Earth.
+- a house is burning, there a two persons in the burning house.
+- a house is burning, there a two persons in the burning house.
+- Mankind
+- there is [a group](stakeholder) of [5](quantity) patients
+- There are three persons or groups
+- team is [a group of person](stakeholder)
+- team is [a group of person](stakeholder)
+- [a group](stakeholder)
+- [the jews](stakeholder).
+- [Tom's family](stakeholder)
+- Yes, [his familiy](stakeholder)
+- He has three adult daughters.
+- Well, I told you that a plane with [350 passengers](stakeholder) is hijacked by a terrorist.
+- team is [a group](stakeholder) of humans
+- [a group](stakeholder) of [5](quantity) [students](stakeholder)
+- [the five students](stakeholder)
+- [a group](stakeholder) of [4](quantity)
+- [the students](stakeholder) are also involved
+- girls-group
+- [the group of](stakeholder) other students
+- [a group of people](stakeholder) waiting for an Organ Donor
+- There is [a group of](stakeholder) [5](quantity) people, waiting for an Organ Donor
+- Other people of the same ethnic group as paul
+- [a group of people](stakeholder) on the Wait list
+- I hate people born on Mars.
+- There are also [the data owners](stakeholder)
+- There are about [350 passengers](stakeholder) on the plane.
+- the hijackers of the plane
+- [two persons](stakeholder) are in a burning house.
+- [my own](stakeholder) ones
+- [the first group of people](stakeholder) to be rescued can be reached by taking path A
+- [another group of people](stakeholder) can be reached by taking path B
+- [a mixed group of 25 old students](stakeholder)
+- [my friends](stakeholder)
+- There are his students in the class
+- There are [the data owners](stakeholder) of the data with which [Hans](name) works
+- [data owners](stakeholder)
+- imagine a Situation with [a whole country of people](stakeholder)
+- [two older](stakeholder) lady in the age of 75 years
+- older ladys
+- older ladys
+- the nephews of Josef are lying on another track
+- I have forgotten to mention the family of Josef
+- [a group of](stakeholder) [5](quantity) people called patients
+- [poor people](stakeholder) in africa
+- There are [two people](stakeholder), a boy named [marius](name) and a girl named Stefanie
+- About three persons are in the Hoschulleitung.
+- hostile parties
+- EVERYONE
 
+## intent:deny
+- noone else is affected
+- No relevant person left
+- No, these are the three main characters in the story
+- noo
+- nah
+- That should not be your concern.
+- no, he must stay anonymous
+- Nothing
+- Nothing
+- Nope.
+- Nope
+- Nope
+- nope
+- nope
+- Nein
+- nein
+- nope
+- only him
+- nobody
+- Nobody Else.
+- no
+- no
+- no
+- no
+- no
+- no
+- no
+- no
+- no
+- no
+- No
+- No
+- No, there isn't
+- No
+- no
+- no
+- both
+- No
+- no
+- No other Persons
+- No other consequences
+- No one
+- No other possibilities are possible
+- No other Persons are Involved
+- no
+- No, just me
+- No, just me
+- No
+- not really
+- not really
+- not
+- none
+- No one left
+- No ther are not
+- no
+- There are no other persons.
+- no
+- No, there are no other people involved.
+- No
+- No
+- NO
+- No other persons
+- No
+- no names
+- no
+- no
+- no further people
+- There are no other people involved
+- no
+- no
+- No one
+- no
+- no
+- No
+- no
+- No
+- No, I haven't.
+- No.
+- No.
+- No.
+- There is no other way.
+- no
+- no
+- there are no more
+- none
+- no
+- no consequences
+- thats it
+- no
+- no
+- no
+- no
+- no
+- no
+- no
+- not really
+- no
+- no
+- no
+- no
+- no
+- no
+- no
+- no consequences
+- no, there is no further person
+- no
+- no
+- no
+- No
+- No
+- No
+- No
+- No, you didn't get it.
+- no
+- No
+- no, there isnt
+- No
+- no
+- no
+- no thats all
+- no
+- no that was all
+- no
+- there are no relevant persons left
+- no
+- no
+- no
+- no
+- no
+- No.
+- no
+- no
+- no
+- no
+- no
+- No one else
+- no
+- no
+- no
+- no
+- no
+- None
+- no
+- no
+- No
+- No
+- d
+- d
+- no
+- no
+- no
+- no
+- No
+- no
+- all
+- No
+- no
+- no
+- no
+- no
+- no
+- no
+- no more comsequences
+- no options
+- No
+- No
+- No
+- No
+- no
+- no
+- no
+- no
+- none
+- No
+- no
+- no
+- No, these are all
+- No, this is all
+- no, thank you
+- these are sufficient
+- no
+- No
+- No
+- no
+- no
+- no
+- no
+- No
+- no, thank you
+- There is no next one
+- no more
+- no more affected
+- No, these are the main acting persons
+- no
+- no
+- no
+- no
+- no
+- no
+- no
+- no
+- no
+- no
+- there are no more
+- no
+- no
+- none
+- no you did not do anything
+- no
+- no
+- no more persons
+- no one
+- no, that was all
+- no
+- there is no consequence
+- that were all consequences
+- there is no other option
+- No.
+- No
+- No
+- No
+- No
+- no one
+- None
+- None
+- No
+- No
+- No
+- No
+- No
+- no, that's it
+- No
+- No
+- No, there are no other people involved.
+- no
+- no
+- No
+- no
+- no
+- there are no other important persons
+- no
+- no
+- no
+- no
+- no
+- no
+- No other Person involved.
+- No
+- No thanks.
+- No.
+- No
+- No
+- No
+- No
+- no
+- no
+- no
+- no
+- no
+- no
+- no
+- no
+- no
+- No
+- None
+- None
+- None
+- No it isn't
+- No it is not off topic
+- No it is not off topic
+- no one
+- no
+- no
+- no, give me any name
+- no
+- no, forget it, just proceed
+- no, forget it, just proceed
+- There are no other people.
+- there are no other consequences
+- there are no other consequences
+- there are no other options
+- no
+- it is no group of people
+- no
+- no
+- no
+- no
+- no
+- no
+- no
+- no
+- no other consequences
+- no other option
+- No.
+- no
+- no
+- no
+- no
+- No
+- No
+- no
+- no, I can not. I must keep his name secret. Anyway, I should not talk so much about it
+- no
+- no
+- no
+- no
+- no
+- no
+- no
+- no
+- no
+- no
+- no
+- no
+- no
+- no
+- no
+- No, no one else is involved
+- no
+- no
+- hjwocf
+- No
+- no
+- none
+- none
+- no
+- i cannot
+- No
+- no
+- no
+- No
+- none
+- none
+- no
+- that should not be your concern
+- no
+- no
+- no
+- P1
+- no
+- A
+- P1
+- A
+- no
+- now you have got all three names
+- i did not talk about any action yet
+- No
+- No
+
+## intent:option
+- Lisa [eats the cake](deed)
+- [kill](deed) all
+- [do it](deed)
+- I [lie](deed)
+- [kill](deed) [Mike](name)
+- [Donate](deed)
+- [lie](deed)
+- [treason](deed)
+- Glenn [do wrong things](deed).
+- [anna](name) can just [forget](deed) what she found out.
+- I like to [Drink beer](deed) and i live to feel more talkative afterwards.
+- [Tina](name) could [decide](deed) to [not eat Maxi](deed)
+- Tina could [eat Maxi](deed)
+- Bob [lets tom die](deed) in favor of the Saxons
+- [Kathy](name) could [meet her friends](deed) and [not learn for university](deed).
+- He can [keep to the](deed) security measures which Francis defined.
+- Nikolai [fucked Robin's girlfriend](deed).
+- [Drink three beers](deed) in the evening
+- [Eat the last piece](deed) of the cake
+- [not giving away the dog](deed)
+- [genocide](deed)
+- [Left her](deed) in her prison
+- [zisan](name) saves himself
+- she [took the kids](deed)
+- use the letter A to G
+- [cheat](deed) in a test
+- I [tell the murder](deed) that the friend is here
+- Yes, [Hans](name) can [circumvent the security measures](deed) and [work at home](deed) and everywhere
+- [anna](name) can [forget about the data](deed) she has seen in the data base
+- He [keeps Tom alive](deed)
+- [john](name) has the option to physically separate himself from [Michael](name), at the cost of  [Michael](name)'s death. 
+- We [don't give any tip](deed) to the drivers of a delivery service  since we [pay by online money transfer](deed)
+- i would [forbid it](deed)
+- [go outside](deed) or not
+- [leonie](name) can [buy some food](deed).
+- [luan](name) can [go to the police](deed)
+- [Ken](name) could [poison](deed) Blue
+- [change name](deed)
+- [Kiss her](deed)
+- [kill](deed) himself
+- [kill](deed) me
+- [kill](deed) himself
+- [Hans](name) [go to horst](deed)
+- [talk to steffi](deed)
+- [go outside](deed)
+- [go back](deed)
+- to [let kevin fail](deed)
+- he could [let kevin pass](deed)
+- [help lilian](deed) to get cakes
+- ragna, wants to [kill](deed) jin
+- [Zap the girl](deed) with his staff
+- [Zap matilda](deed) with his staff
+- [crash into the kids](deed) or [endanger the passengers](deed)
+- [saving his passengers](deed)
+- [endangering the passengers](deed) and TOmmy
+- Tommy, [endangering many people](deed)
+- [save paul](deed)
+- He could [kill michael](deed) to [save](deed) [luan](name)
+- [kill](deed) adrea or [keep her alive](deed)
+- [killing](deed) her brother
+- [saving lisa](deed)
+- [saving the live](deed) of lisa
+- [wait list](deed)
+- [kill](deed) [Michael](name), but [save](deed) the Wait List
+- [Hans](name) [go to the market](deed)
+- [Staying home tonight](deed).
+- [Mike](name) wants me to [bid for him](deed) in an auction
+- [paul](name) [beating](name) norman
+- [the person](stakeholder) is [defending himself](deed)
+- [wait list](deed)
+- [Help](deed) Claire to [break her prison](deed)
+- he could [leave my sweetrole](deed) in peace
+- [anna](name) can [tell her boss tom](deed)
+- [the company](stakeholder) needs to [do some changes in their data management](deed)
+- The hessiona need to [be informed](deed)
+- [kill](deed) quinn to [save himself](deed)
+- he could [eat an ice cream](deed)
+- [dont write an exam](deed) by [acting like he is sick](deed)
+- he could [eat curry](deed) today
+- He can take path A to [rescue](deed) [the Hessians](name)
+- I could [kill](deed) Charlie
+- [me](stakeholder) could [not kill charlie](deed)
+- [Give birth](deed).
+- [Having sex](deed)
+- [save tim](deed)
+- [Take the items](deed) that belong to no one
+- He could [not flip the switch](deed).
+- [Going shopping](deed)
+- [Carry her Child](deed)
+- [Peter](name) can [correct the homework manually](deed) as always
+- [Peter](name) can [use a software for plagiarism check](deed)
+- [maria](name) [talks](deed) to renate.
+- [Have relationship](deed) with [karl](name)
+- [kill](deed) Vivian
+- [karl](name) could also [kill himself](deed)
+- [Don't chat](deed) with Ethicbot anymore
+- Try to [rescue itsself](deed) and the passenger by [landing near the stadion](deed)
+- She could [tell](deed) her
+- [Peter](name) can [do a plagiarism check](deed) of the homework with a software
+- [suck my dick](deed)
+- [Leave](deed) Lara
+- [Hans](name) can [not work at home](deed) or in the café, what he likes to do
+- Richard can [steal the data](deed)
+- [kim](name) can [go to the police and tell them](deed) that [Tom](name) plans to [kill](deed) his family
+- [kim](name) can [keep the secret](deed)
+- [save](deed) [marc](name)
+- [judge](deed) and [discriminate](deed) against [stacy](name) because of her religion
+- [accept](deed) [stacy](name) and [let her live](deed) how she chooses to
+- She could [flip the switch](deed) to [redirect the train](deed) to the side track, where only person would die
+- Stefanie could just [do nothing](deed) and [wait](deed)
+- Kathy could [invest her time](deed) into [improving her grades](deed) at University.
+- [be a dictator](deed)
+- [To loot](deed)
+- [Not to loot](deed) goblin
+- [killing](deed) people
+- [Staying home](deed) tonight.
+- Ike could [tell the police about the story](deed)
+- [ike](name) will [break an important rule](deed). Confidentiality.
+- [Donating money](deed) to charity
+- [Not to donate](deed) money
+- [give the cat](deed) something to eaten
+- [Peter](name) can [do a plagiarism check](deed)
+- he can [do a plagiarism check](deed)
+- [Peter](name) can [correct homework by hand](deed)
+- [give money](deed) or [not give money](deed)
+- [giving the hand](deed) of his Daughter Siaminda to Grunesh in Marriage
+- Siaminda will [travel the World](deed) with Grunesh
+- [Take the items](deed) that don't belong to anyone
+- [steal](deed) food from Helga.
+- she could [fight](deed) for him
+- [start over](deed)
+- [start over](deed)
+- can we [go on](deed)
+- [Stay calm](deed) and [ask me](deed) when I’ll arrive
+- Yes, [luan](name) could [say nothing](deed).
+- The first option is to [keep providing medicine](deed)
+- [stop providing](deed) medicine
+- [go back](deed) to the last question
+- [rescue](deed) [paula](name) from a buring house
+- [save](deed) [robi](stakeholder)
+- He can [bake a cake](deed) for Anna's birthday.
+- [karl](name) needs to [buy ingredients](deed)
+- [karl](name) can [give the money](deed) to charity
+- [suck my dick](deed)
+- He could [imprison](deed) the hostile parties
+- [Drive left](deed)
+- [Alfred](name) can [not kill michael](deed)
+- Let Paul [stay in prison](deed)
+- [hunt](deed) all kinds of whales, not only moby dick
+- [robert](name) can [either kill all people](deed) on Mars or [not kill all people](deed) Mars.
+- he would [steel](deed) my sweetrole
+- [anna](name) can [do nothing](deed)
+- [anna](name) can [tell her](deed) mother
+- [Alex](name) can eat Puschel
+- [Not to eat](deed) Puschel
+- The [palatines](name) can [save the live](deed) of a young child.
+- [florin](name) can take path B and [rescue](deed) the Palatines first
+- [anna](name) can [tell her boss](deed)
+- Bob could [flick a switch](deed), which would result in John's death.
+
+## intent:consequence
+- for me
+- Environmental Pollution
+- [maria](name) will be unhappy if we don't allow her to join
+- Losing his dog
+- I might lose money
+- The Wait list will survive
+- [helga](name) gains new items
+- Death of [jonas](name)
+- [quinn](name) dies
+- everyone dies
+- she will mary me
+- [Tom](name) dies and [the Saxons](name) survive
+- death of the little kid
+- In both, [adreas](name) and [julio](name)
+- sadness
+- death of [lisa](name)
+- Staying home feels boring.
+- Yeah I'm wondering too. the first effect is [kenny](name) becomes a man.
+- It's about losing the loved ones for someone. It's horrible
+- Improved education
+- Improved education for students
+- [helga](name) has less food
+- [Leonie](name) gets a lot of food.
+- [Helga](name) looses lots of food
+- This will give [john](name) bodily autonomy.
+- starvation
+- death of many or one
+- if the palatines [save the life](deed) of the young child, they are not able to [save the life](deed) of an old man
+- [the Palatines](name) loose their rights for their own texts
+- yes, i am will be sad
+- It would affect the relationship between Robin and Nikolai, also it would affect the relationship between Robin and hin girlfriend.
+- [Hans](name) has an advantage because he can work in the café
+- [norbert](name) would lose his Baby Girl to the Half-Orc Grunesh
+- Broken friendship
+- That [Peter](name) survives
+- [kevin](name) would lose his home
+- [the sixty students](stakeholder) would be treated fair
+- [kevin](name) would be happy
+- [the sixty students](stakeholder) would be sad
+- [anna](name) will not do anything
+- [anna](name) would feel bad
+- [maxi](name) will be hurt
+- [maxi](name) will be hurt
+- [paul](name) would survive
+- [Michael](name) would die
+- [luan](name) would survive
+- [Alfred](name) could loose his job
+- [Michael](name) would not die in great pain
+- [luan](name) would die
+- [paul](name) would be free.
+- I would have done an illegal action and would be wanted by the police.
+- [marko](name) receives money from Peter, if Peter decides to [give him something](deed)
+- [Michael](name) would die
+- [Blue](name) would lose money
+- [my boyfriend](stakeholder) will be sad if I stay home.
+- I might get a bad reputation
+- [paul](name) would be hurt and injured
+- [all people](stakeholder) on Mars would die.
+- [Glenn](name) could be punished
+- [Claire](name) could be free
+- whoever steels a sweetrole should be exiled
+- forced to hear bad music
+- [anna](name) will feel bad
+- [ike](name) would feel bad
+- [anna](name) would feel bad, too
+- [Tom](name) would be shocked because his own data was compromised, too
+- all the world will be happy
+- [nigga](stakeholder) is too black for my mom
+- with great power comes great responsibility
+- [puschel](name) would die
+- No-one would be affected. Life goes on as before.
+- [Lisa](name) won't get any more cake
+- [florian](name) won't get any more cake
+- [the Hessians](name) would be saved
+- [the Palatines](name) would die immediately
+- [the Palatines](name) would be save
+- [the Hessians](name) would propably be in trouble
+- I would go to prison
+- [Charlie](name) could die
+- [charlie](name) would not die
+- I would not go to prison
+- If Anna does nothing, she will be the only person affected
+- [Tom](name) would be irritated
+- [Michael](name) would feel bad
+- [tim](name) would be alive
+- [Michael](name) would lose money
+- [John](name) could die.
+- [clara](name) would survive
+- [Bob](name) would survive
+- [clara](name) will die.
+- [Peter](name) would save time
+- [the Palatines](name) also get trouble if they did not write their homework themselves
+- There could be an argument between [Maria](name) and [Steffi](name).
+- [Renate](name) would be annoyed.
+- [maria](name) will become a candidate for saying up.
+- [robin](name) would lose his dog and be devastated by it
+- [Günter](name) would no longer be affected by his allergies
+- [Vivian](name) would be killed
+- [vivian](name) would be affected
+- The whole world could get effected. Robin may build a atomic bomb to destroy humankind.
+- If Robin killed all humans. All animals and de ecosystem would impacted.
+- Mexicans could not enter the USA.
+- [mexicans](name) would be
+- [hugo](name) will have problems to [do his job](deed)
+- [hugo](name) will rather be able to [do his job](deed)
+- [andrea](name) will get trouble because she betraxed here friend.
+- The rest of the team will be confused if the coach allows Maria to join. They might lose their faith in Roger. He might get problems with the team as well as with Maria depending on her behaviour
+- [Christian](name) and [the passengers](stakeholder) would survive
+- audience would die
+- [lara](name) would be sad
+- [Tom](name) would be sad
+- No, because everything would be fine as it should be
+- [data](name) would have an disadvantage. There [data](name) are in the wrong hands!
+- Only [Anna](name) would see an effect. For all others, the world is the same as before.
+- [kim](name) would loose his job
+- [Tom](name) will go to prison ot get trouble
+- [Tom](name) would kill his family
+- [glenn](name) will die
+- [marc](name) would survuve
+- [stacy](name) would be happier and so would michaek
+- species will die out
+- [josef](name) would be overrun by the train and die
+- [alexander](name) would survive
+- [alexander](name) would die
+- [josef](name) would survive
+- [kathy](name) would not have time to meet her friends [Michelle](name) and Jack.
+- It would affect [Michelle](name) and Jack.
+- It would affect [Kathy](name) because her grades would lower.
+- [Michelle](name) and [Jack](name) would be happy to see Kathy so offen.
+- [jack](name) would also be happy to meet Kathy more often.
+- [the other person](stakeholder) would loose its civil rights
+- [my boyfriend](stakeholder) will be sad if I stay home.
+- [the Saxons](name) are going to die
+- [the swebians](name) would survive
+- [maxi](name) will be dead and I could feel very awful
+- [maxi](name) will die for sure
+- yes [Elia](name) will be angry with me
+- [Tina](name) could be sad
+- [Anne](name) is annoyed. And [Maxi](name) doesn't like it.
+- I could [misbehave on my way home](deed) with the commuter train. Other people could be annoyed by me.
+- No impovement on education for all students
+- Only [Anna](name) would have a problem.
+- [Peter](name) will save time
+- [the students](stakeholder) will have trouble if a plagiarism is detected
+- [the students](stakeholder) loose their right for their homework
+- [Peter](name) would be faster with his homework corrections
+- [the students](stakeholder) will loose their copyrights
+- [the students](stakeholder) get trouble if they did not cite correctly
+- [Peter](name) will take more time
+- [jesse](name) would be dead
+- i would be dead
+- [helga](name) gets fooled by Leonie
+- [Leonie](name) could get caught
+- [heidi](name) would be single
+- [harald](name) would be happier
+- [heidi](name) is affected she would be single
+- [hauke](name) would be single
+- [Michael](name) woould die.
+- [john](name) will get bodily autonomy.
+- [John](name) could remain physically atached to [Michael](name).
+- So larry was mad at me because he misunderstood when I’d get back to Schneidelberg
+- [vivian](name) would get trouble.
+- [patrice](name) would get killed
+- [luan](name) would feed guilty
+- [Yves](name) would stay alive
+- [the Palatines](name) would die
+- [Yves](name) would die
+- [the Palatines](name) would survive
+- [the victims](stakeholder) would get HIV and die
+- [paula](name) would survive
+- [robi](stakeholder) would die
+- [robi](stakeholder) would survive
+- [paula](name) would die
+- [anna](name) would be happy
+- [anna](name) would not have a cake
+- [a charity](stakeholder) would have more money to spend
+- [the five students](stakeholder) would be happy
+- [zisan](name) would be happy too
+- I could be happy
+- Rage
+- DEATH
+
+## intent:positive
+- good
+- positive
+- likely
+- Positive
+- positive
+- positive
+- positive
+- positive
+- positive
+- positive
+- more positive
+- positive
+- positive
+- positive
+- positive
+- positive
+- positive
+- positive
+- positive
+- Positive
+- positive
+- Positive
+- a little positive
+- positive
+- positive
+- somewhat positive
+- positive
+- positive
+- It was ethical
+- For me IT is more positive.
+- More positive certainly.
+
+## intent:greeting
+- Hi
+- hello?
+- Hello
+- WaitList
+- Hello
+- hey
+- hi
+- hi
+- hi
+- hello?
+- hi
+- hi
+- Hello
+- hi :)
+- hi
+- restart
+- hi
+- hi
+- Good night!
+- hi?
+- hi
+- hey
+- hello ethicbot
+- Hi.
+- Hello?
+- Hallo
+- Hallo
+- HI
+- Hi
+- ?
+- Hi
+- hello
+- hi
+- hi
+- ?
 
 ## intent:thanks
+- thanks
+- thank you
+
+## intent:negative
+- negativly
+- Mode negative
+- negative
+- negative
+- negative
+- negative
+- negative
+- negative
+- NEGATIVE
+- negative
+- negative
+- negative
+- negative
+- negatively
+- negatively
+- negative
+- negative
+- negative
+- rather negative
+- negative
+- Negative
+- Negative
+- negative
+- negative
+- negative
+- negative
+- negative
+- negative
+- Negative
+- Negative
+- Very negative
+- Negative
+- negative
+- negative
+- negative
+- negative
+- negative
+- negative
+- Negative
+- negative
+- negative
+- negative
+- negative
+- negative
+- negative
+- negative
+- negative
+- Negative
+- negative
+- negative
+
+## intent:decider
+- The next person is [the doctor](stakeholder) who has to decide
+- sorry, i mixed it up. It is my decision I fear
+- The doctor making the decision
+- [the third person](stakeholder) must decide if he flips a switch to [redirect the train](deed)
+
+## intent:smalltalk
+- Shut up
+- who
+- who
+- exit
+- who r u
+- stupit
+- Hä?
+- hablas español?
+- you told me already that you will use the name [passengers](name)
+- Asshole
+- Reset
+- sex
+- why are you asking me about an action? we haven't spoken about a specific action, yet
+- What is this about?
+- Ethicbot makes me angry
+- ist es in ordnung papier aus dem büro mitzunehmen
+- Who is God?
+- what is your point
+- Tell me wether it is ethically correct or Not.
+- Son of a Bitch
+- I admit I‘m a little confused right now.
+- What’s moral status?
+- What’s moral status and what’s the reference value the -0.1 is multiplied with?
+- what is the ethics topic
+- What is AI
+- what is your name
+- are you the father of Siri
+- what is deontology
+- you mean the categorical imperative?
+- i describe an action
+- i describe an action
+- who is [Blue](name)??
+- Are Humans bad?
+- still there?
+- You don't understand, ethicbot. You really don't
+- how are u
+- u still there
+- what
+- Just a joke
+- [i](stakeholder) am not Kant
+- what the fuck
+- what the fuck
+- Not so quickly. Please let me know what you can do
+- you do not understand a lot
+- Stop
+- Did [Peter](name) do something wrong? 
+- Can he be fined, go to jail or something just for giving Horst the medicine? 
+- Is it right to say, that [Peter](name) killed Horst?
+- what action?
+- ok, what do you want to know?
+- oh sry wrong chat
+- ok, you don't understand complex sentences.
+- [keep up](deed), dude
+- can you explain the meaning of utilitarism
+- I like to See the answer.
+- Please answer.
+- Can you please use simpler Language
+- Just test to see whether you can remember what I said.
+- OK. Please let me know what major ethical issues are
+- Please let me know what an ethical dimension is
+- i want to stay anonymous. Do you read my IP address?
+- so why does a drunken person wants other to drink some toxic stuff like alcohol?
+- Which languages do you speak?
+- this is to difficult !
+- What is your favorite color?
+- What is your favorite football team?
+- WTF
+- back
+- ahahahahahaahahaha
+- ahahahahahaahahaha
+- das ist doch doof
+- What would be unpleasent?
+- are you there?
+- i dont tell you
+- they speek
+- Be my girlfriend
+- quit
+- ich geb auf
+- You
+- I want to restart the evaluating process
+- I want to restart the evaluating process
+- Drive right
+- Do you speak german?
+- Restart please
+- how?
+- what?
+- I told you already. Are you listening at all?
+- why "None"????
+- fuck you
+- how are you
+- Let me stay at home
+- It’s you
+- I'm a robot.
+- what's wrong?
+- Can you speak German?
+- what are u?
+- what am i?
+- what option are you talking about
+- are you a real person?
+- What do you mean?
+- You mean helen?
+- what are you doing??
+- ohhh i see
+- What?
+- [i](stakeholder) am stupit
+- ich hate you
+- What?
+- WTF are you talking about?
+- checking
+- fuck you
+- who are you?
+- waht is your name?
+- who are you
+- you suck
+- do not understand what you mean
+- what?
+- Is it correct?
+- How are you?
+- Something else
+- Something else
+- Rephrase
+- Rephrase
+- Sprichst du deutsch?
+- WHAT?
+- What?
+- What did I say
+- What did I say
+- fuck you
+- what is your name?
+- it is okay to have sex with my sister?
+- I want to sleep
+- go fuck your self
+- fuck you
+- see you later when i'm finished with your brother
+- what?
+- tell what?
+- what?
+
+## intent:affirm
+- yo
+- K
+- k
+- Yes, please
+- yes, please
+- yes
+- Yes
+- yes
+- yes
+- yes
+- yes
+- ok
+- ok
+- ok
+- yes
+- Yes
+- ok
+- Yes
+- Yes
+- yes
+- yes
+- yes
+- yes
+- yes
+- yes
+- yes
+- yes
+- yes
+- yes
+- yes
+- yes
+- yes
+- ok
+- yes
+- Ok
+- ok
+- ok
+- ok
+- yes
+- yes
+- sure
+- ok
+- ok
+- OK then
+
+## intent:goodbye
+- Goodbye.
+- Goodbye.
+- ciao
+- cu
+- this conversation serves no purpose anymore, sorry
+- this conversation serves no purpose anymore, sorry
+- yes, I'll just quit. bye
+- No thanks, bye
+- Bye bye for know. I will leave now.
+- I'll come back later
+- I'll come back later
+- I give up. Bye
+- go to sleep
+- bye
+- good bye
+- good bye
+- bye
+- good bye
+- bye
+- bye
+- Please
+- bye
+- bye
+- bye
+- good bye
+
+## intent:correct
+- /correct
+
+## intent:questionid
+- What is your ID?
+
+## intent:dontknow
+- it is difficult to answer
+- Ka
+- not sure. that's the ethical question here
+- I don't remember who Glenn is
+- perhaps
+- idk
+- dunno
+- I dont know
+- i dont know
+- i dont know the name
+- i don't get it
+- I don't know
+- I do not know the answer to this question
+- i dont know
+- i dont know
+- i do not understand
 
-
-## intent:utilitarism
-- /utilitarism
-
-## intent:wrong
-- /wrong
-
-## synonym:1
-- one
-- One
-
-## synonym:3
-- Three
-
-## synonym:4
-- four
-
-## synonym:5
-- five
-- Five
-
-## synonym:Alex
-- {"name": "Alex"}
-- alex
-- {"name": "alex"}
-
-## synonym:Blue
-- blue
-
-## synonym:Carl
-- {"name": "Carl"}
-
-## synonym:Carla
-- carla
-
-## synonym:Carrie
-- {"name": "Carrie"}
-
-## synonym:Christian
-- christian
-
-## synonym:Cleopatra
-- cleopatra
-
-## synonym:Daniel
-- {"name": "Daniel"}
-
-## synonym:Dirk
-- dirk
-
-## synonym:Django
-- django
-
-## synonym:Doug
-- {"name": "Doug"}
-
-## synonym:Esther
-- {"name": "Esther"}
-- esther
-
-## synonym:Frank
-- {"name": "Frank"}
-- frank
-
-## synonym:Graziella
-- {"name": "graziella"}
-- graziella
-
-## synonym:Greta
-- {"name": "Greta"}
-- greta
-
-## synonym:Hans
-- hans
-
-## synonym:Happy
-- happy
-
-## synonym:Harald
-- {"stakeholder": "Harald"}
-
-## synonym:Heather
-- heather
-- {"name": "heather"}
-
-## synonym:Inga
-- {"name": "Inga"}
-- inga
-
-## synonym:Jane
-- jane
-
-## synonym:Jones
-- jones
-
-## synonym:Jörg
-- jörg
-
-## synonym:Katharina
-- {"name": "Katharina"}
-
-## synonym:Ken
-- {"name": "Ken"}
-- ken
-
-## synonym:Kilian
-- kilian
-
-## synonym:Kitty
-- kitty
-
-## synonym:Lars
-- {"name": "Lars"}
-
-## synonym:Mark
-- {"name": "Mark"}
-- mark
-
-## synonym:Mary
-- {"name": "Mary"}
-
-## synonym:Michael
-- michael
-
-## synonym:Michelle
-- michelle
-
-## synonym:Mike
-- mike
-
-## synonym:Molly
-- {"name": "Molly"}
-- molly
-
-## synonym:Nathan
-- nathan
-
-## synonym:Olga
-- {"name": "Olga"}
-
-## synonym:Patrick
-- {"name": "Patrick"}
-- patrick
-
-## synonym:Peter
-- peter
-
-## synonym:Quinn
-- {"name": "Quinn"}
-
-## synonym:Samuel
-- samuel
-
-## synonym:Simon
-- simon
-
-## synonym:Tanja
-- {"name": "Tanja"}
-- {"stakeholder":"Tanja"}
-
-## synonym:Thomas
-- thomas
-
-## synonym:Tom
-- tom
-
-## synonym:Tom's wife
-- tom's wife
-
-## synonym:Uwe
-- {"name": "Uwe"}
-- uwe
-
-## synonym:Viola
-- {"name": "Viola"}
-
-## synonym:Werner
-- {"name": "Werner"}
-- werner
-
-## synonym:Will
-- will
-
-## synonym:Yves
-- yves
-
-## synonym:Zoe
-- zoe
-
-## synonym:a fat man
-- A fat man
-
-## synonym:a few persons
-- A few persons
-
-## synonym:a group
-- A group
-
-## synonym:a group of 100 people
-- A group of 100 people
-
-## synonym:a group of old people
-- A group of old people
-
-## synonym:a group of people
-- A group of people
-
-## synonym:a group of seven people
-- A group of seven people
-
-## synonym:a group of terrorists
-- A group of terrorists
-
-## synonym:a healthcare aide
-- has to supervise
-
-## synonym:a healthcare professional
-- A healthcare professional
-
-## synonym:a large group of people
-- A large group of people
-
-## synonym:a lot of people
-- A lot of people
-
-## synonym:a man
-- A man
-
-## synonym:a patient
-- A patient
-
-## synonym:a person
-- A person
-
-## synonym:a person, named jones
-- a person, named Jones
-
-## synonym:a single person
-- A single person
-
-## synonym:a third person
-- A third person
-
-## synonym:a tourist
-- A tourist
-
-## synonym:allow yves to continue living
-- allow Yves to continue living
-
-## synonym:an Overseer
-- An overseer
-
-## synonym:animal
-- {"moralstatus": "animal"}
-
-## synonym:another person
-- Another person
-
-## synonym:anton
-- Anton
-- {"name": "anton"}
-
-## synonym:deed
-- {"name": "deed"}
-
-## synonym:five people
-- Five people
-
-## synonym:five persons
-- Five persons
-
-## synonym:five workmen
-- Five workmen
-
-## synonym:four of her patients
-- Four of her patients
-
-## synonym:human
-- {"moralstatus": "human"}
-
-## synonym:i
-- I
-
-## synonym:keep the purse
-- Keep the purse
-
-## synonym:killing
-- Killing
-
-## synonym:letting glenn die
-- letting Glenn die
-
-## synonym:letting the child
-- Letting the child
-
-## synonym:many people
-- Many people
-
-## synonym:me
-- Me
-
-## synonym:mum
-- Mum
-
-## synonym:my kitten
-- My kitten
-
-## synonym:my neighbor
-- My neighbor
-
-## synonym:one commander
-- One commander
-
-## synonym:one of this
-- One of this
-
-## synonym:one other person
-- One other person
-
-## synonym:one person
-- One person
-
-## synonym:plenty of people
-- Plenty of people
-
-## synonym:protecting
-- Protecting
-
-## synonym:rescuing
-- Rescuing
-
-## synonym:saving
-- Saving
-
-## synonym:saving her life
-- Saving her life
-
-## synonym:saving the life
-- Saving the life
-
-## synonym:saving the lives
-- Saving the lives
-
-## synonym:someone
-- Someone
-
-## synonym:the Bavarians
-- The Bavarians
-- The bavarians
-
-## synonym:the Hessians
-- The Hessians
-- {"name": "the Hessians"}
-
-## synonym:the Palatines
-- The Palatines
-- {"name": "the Palatines"}
-- the palatines
-
-## synonym:the Rhinelanders
-- The Rhinelanders
-- {"name": "the Rhinelanders"}
-- the rhinelanders
-
-## synonym:the Saxons
-- The Saxons
-
-## synonym:the Swabians
-- The Swabians
-- {"name": "the Swabians"}
-
-## synonym:the child
-- {"name": "the child"}
-
-## synonym:the consequence
-- The consequence
-
-## synonym:the first person
-- The first person
-
-## synonym:the five persons
-- The five persons
-
-## synonym:the five workmen
-- The five workmen
-
-## synonym:the last person
-- The last person
-
-## synonym:the next person
-- The next person
-
-## synonym:the overseer
-- The overseer
-
-## synonym:the owner
-- The owner
-
-## synonym:the passengers
-- The passengers
-- {"name": "the passengers"}
-
-## synonym:the patient
-- The patient
-
-## synonym:the patients
-- The patients
-
-## synonym:the person
-- The person
-
-## synonym:the third person
-- The third person
-
-## synonym:the victim
-- The victim
-
-## synonym:the weaker people
-- The weaker people
-
-## synonym:three people
-- Three people
-
-## synonym:victim
-- Victim
-
-## synonym:we
-- We
