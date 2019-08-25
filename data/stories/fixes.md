@@ -460,7 +460,7 @@
     - slot{"name": "Charlie"}
     - slot{"action_return": true}
     - utter_ask_moralstatus
-* inform{"moralstats": "human"}
+* inform{"moralstatus": "human"}
     - action_update_stakeholder
     - slot{"action_return": true}
     - utter_next_stakeholder

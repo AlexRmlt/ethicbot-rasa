@@ -3334,6 +3334,7 @@ henrie
 henrieta
 henrietta
 henriette
+henrik
 henrika
 henry
 henryetta
@@ -7512,7 +7513,7 @@ suzette
 suzi
 suzie
 suzy
-svend
+sven
 svenn-erik
 swact
 swandi
@@ -8193,6 +8194,7 @@ wileen
 wilf
 wilford
 wilfred
+wilhelm
 wilhelmina
 wilhelmine
 wilhelmus
