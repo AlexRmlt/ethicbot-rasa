@@ -8,7 +8,7 @@ pipeline:
 - name: "CRFEntityExtractor"
 - name: "EntitySynonymMapper"
 - name: "SklearnIntentClassifier"
-#- name: "components.intent_information.IntentInformation"
+- name: "components.intent_information.IntentInformation"
 
 # Configuration for Rasa Core.
 policies:
